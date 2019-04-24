@@ -20,11 +20,11 @@
 ##############################################################################
 
 {
-    "name": "${module_name}",
-    "version": "${version}",
+    "name": "jyinspur",
+    "version": "v1.0",
     "depends": ["base"],
-    "author": "${author}",
-    "category": "${category}",
+    "author": "cao",
+    "category": "Tools",
     "description": """
     """,
     "init_xml": [],
