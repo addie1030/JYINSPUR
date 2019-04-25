@@ -12,7 +12,7 @@
                     <field name="product_id"/>
                     <field name="name"/>
                     <field name="ps_date_done"/>
-                    <field name="product_uom_qty"/>
+                    <!--<field name="product_uom_qty"/>-->
                     <field name="qty_delivered"/>
                     <field name="qty_invoiced"/>
                     <field name="price_unit"/>
