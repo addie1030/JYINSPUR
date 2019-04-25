@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="0">
+        <!--  product_template demo  -->
+        <record id="test_product_template_demo_1" model="product.template">
+            <field name="name">Banana</field>
+        </record>
+
+        <!--  product_pricelist demo  -->
+        <record id="test_pricelist_demo_1" model="product.pricelist">
+            <field name="name">Test PriceList</field>
+            <field name="currency_id" ref="base.CNY"/>
+        </record>
+
+       <!--  product_pricelist_item demo  -->
+        <record id="test_product_pricelist_item_demo_1" model="product.pricelist.item">
+            <field name="product_tmpl_id" ref="test_product_template_demo_1"/>
+            <field name="pricelist_id" ref="test_pricelist_demo_1"/>
+        </record>
+
+        <!--  product_pricelist_change demo  -->
+        <record id="test_product_pricelist_change_demo_1" model="ps.product.pricelist.change">
+            <field name="name">调价方案1</field>
+            <field name="pricelist_id" ref="test_pricelist_demo_1"/>
+        </record>
+
+        <!--  product_pricelist_change_line demo  -->
+        <!--<record id="test_product_pricelist_change_line_demo_1" model="ps_sale.ps.product.pricelist.change.line">-->
+            <!--<field name="pricelist_id" ref="test_pricelist_demo_1"/>-->
+        <!--</record>-->
+
+
+    </data>
+</odoo>

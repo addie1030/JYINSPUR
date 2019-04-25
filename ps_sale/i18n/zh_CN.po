@@ -1,0 +1,614 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 16:31+0000\n"
+"PO-Revision-Date: 2019-01-22 16:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_sale
+#: model:ir.model,name:ps_sale.model_ps_product_pricelist_change
+msgid " Product PriceList Change"
+msgstr "调价方案"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_needaction
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_needaction
+msgid "Action Needed"
+msgstr "前置操作"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__activity_ids
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__activity_state
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change.line,type:0
+msgid "Add"
+msgstr "新增"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change.line,type:0
+msgid "Adjust"
+msgstr "调整"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change,state:0
+msgid "Assigned"
+msgstr "已审批"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_attachment_count
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数量"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change,state:0
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_form_ps_product_pricelist_change
+msgid "Cancer"
+msgstr "取消"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_form_ps_product_pricelist_change
+msgid "Close"
+msgstr "关闭"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change,state:0
+msgid "Closed"
+msgstr "已关闭"
+
+#. module: ps_sale
+#: model:ir.model,name:ps_sale.model_res_company
+msgid "Companies"
+msgstr "公司"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.ps_sale_res_config_settings_view_form
+msgid "Company"
+msgstr "公司"
+
+#. module: ps_sale
+#: model:ir.model,name:ps_sale.model_res_config_settings
+msgid "Config Settings"
+msgstr "配置设定"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change,state:0
+msgid "Confirmed"
+msgstr "已确认"
+
+#. module: ps_sale
+#: model:ir.model,name:ps_sale.model_res_partner
+msgid "Contact"
+msgstr "联系人"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__create_uid
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__create_date
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__currency_id
+msgid "Currency"
+msgstr "币种"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_product_pricelist__ps_customer_ids
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_ps_sales_order_line_filter
+msgid "Customer"
+msgstr "客户"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__date
+msgid "Date"
+msgstr "日期"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_sale_order_line__ps_date_done
+msgid "Date Done"
+msgstr "交货日期"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__description
+msgid "Description"
+msgstr "描述"
+
+#. module: ps_sale
+#: model:ir.actions.act_window,name:ps_sale.action_window_ps_sale_line
+#: model:ir.ui.menu,name:ps_sale.menu_account_details
+msgid "Details"
+msgstr "销售订单明细"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__display_name
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.ps_sale_pricelist_res_config_settings_view_form
+msgid "Enable Price Adjustment Order"
+msgstr "启用调价菜单"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_res_config_settings__group_sale_price_change
+#: model_terms:ir.ui.view,arch_db:ps_sale.ps_sale_pricelist_res_config_settings_view_form
+#: model:res.groups,name:ps_sale.group_price_change_user
+msgid "Enable Price Change Order"
+msgstr "启用调价菜单"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__factor
+msgid "Factor"
+msgstr "调价幅度"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change.line,method:0
+msgid "Fixed"
+msgstr "数值"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_follower_ids
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_channel_ids
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "关注者(渠道)"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_partner_ids
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(业务伙伴)"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__id
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_sale
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change__message_unread
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change_line__message_unread
+msgid "If checked new messages require your attention."
+msgstr "查看是否有需要留意的新消息。"
+
+#. module: ps_sale
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change__message_needaction
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change_line__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "确认后, 出现提示消息."
+
+#. module: ps_sale
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change__message_has_error
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change_line__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾选此项， 某些消息将会产生传递错误。"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__is_add_pricelsit
+msgid "Is Add Pricelsit"
+msgstr "是否加载价格明细"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_is_follower
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_is_follower
+msgid "Is Follower"
+msgstr "关注者"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change____last_update
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line____last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__write_uid
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__write_date
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_form_ps_product_pricelist_change
+msgid "Load Price Detail"
+msgstr "加载价格明细"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_main_attachment_id
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "附件"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_has_error
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_has_error
+msgid "Message Delivery error"
+msgstr "消息递送错误"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_ids
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__end_date_new
+msgid "New End Date"
+msgstr "调后失效日"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__min_qty_new
+msgid "New Minimum Number"
+msgstr "调后最小数量"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__price_new
+msgid "New Price"
+msgstr "调后单价"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__start_date_new
+msgid "New Start Date"
+msgstr "调后生效日"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__activity_date_deadline
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活动截止日期"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__activity_summary
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活动摘要"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__activity_type_id
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活动类型"
+
+#. module: ps_sale
+#: model_terms:ir.actions.act_window,help:ps_sale.action_window_ps_sale_line
+msgid "No record."
+msgstr "无数据可显示。"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_res_config_settings__ps_is_overpass_initial_ordered_sale
+msgid "Not Exceeding Sale/Return"
+msgstr "不允许超量发货/发货退回"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.ps_sale_res_config_settings_view_form
+msgid "Not allow to sell/return more than initially planned"
+msgstr "不允许超出计划发货/发货退回"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__name
+msgid "Number"
+msgstr "编号"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_needaction_counter
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作次数"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_has_error_counter
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_has_error_counter
+msgid "Number of error"
+msgstr "错误个数"
+
+#. module: ps_sale
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change__message_needaction_counter
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要操作消息数量"
+
+#. module: ps_sale
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change__message_has_error_counter
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "递送错误消息数量"
+
+#. module: ps_sale
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change__message_unread_counter
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读消息数量"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__end_date_old
+msgid "Old End Date"
+msgstr "调前失效日"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__min_qty_old
+msgid "Old Minimum Number"
+msgstr "调前最小数量"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__price_old
+msgid "Old Price"
+msgstr "调前单价"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__start_date_old
+msgid "Old Start Date"
+msgstr "调前生效日"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change,activity_state:0
+#: selection:ps.product.pricelist.change.line,activity_state:0
+msgid "Overdue"
+msgstr "逾期"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change.line,method:0
+msgid "Percentage"
+msgstr "百分比"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change,activity_state:0
+#: selection:ps.product.pricelist.change.line,activity_state:0
+msgid "Planned"
+msgstr "已安排"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__lines_id
+msgid "Price Change"
+msgstr "调价"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__change_lines_ids
+msgid "Price Change Details"
+msgstr "调价明细"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__method
+msgid "Price Change Method"
+msgstr "调价方法"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__type
+msgid "Price Change Type"
+msgstr "调价类型"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__pricelist_id
+msgid "Price List"
+msgstr "价格表"
+
+#. module: ps_sale
+#: model:ir.actions.act_window,name:ps_sale.action_ps_product_pricelist_change
+#: model:ir.ui.menu,name:ps_sale.menu_ps_product_pricelist_change
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_form_ps_product_pricelist_change
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_form_ps_product_pricelist_change_line
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_tree_ps_product_pricelist_change
+msgid "Price adjustment plan"
+msgstr "调价方案"
+
+#. module: ps_sale
+#: model:ir.model,name:ps_sale.model_product_pricelist
+msgid "Pricelist"
+msgstr "价格表"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.inherit_ps_priclist_product_view
+msgid "Pricelist Items"
+msgstr "价格表项目"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_product_pricelist__ps_product_ids
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__product_id
+msgid "Product"
+msgstr "产品"
+
+#. module: ps_sale
+#: model:ir.model,name:ps_sale.model_ps_product_pricelist_change_line
+msgid "Product PriceList ChangeLine"
+msgstr "调整方案明细"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__product_tmpl_id
+msgid "Product Template"
+msgstr "产品模板"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.inherit_ps_priclist_product_view
+msgid "Production"
+msgstr "生产"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_res_company__ps_is_overpass_initial_ordered_sale
+msgid "Ps Is Overpass Initial Ordered Sale"
+msgstr "Ps 是否超量发货"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__activity_user_id
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__activity_user_id
+msgid "Responsible User"
+msgstr "责任用户"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_form_ps_product_pricelist_change
+msgid "Review"
+msgstr "审批"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.sales_order_tree
+msgid "Sale Order"
+msgstr "销售订单"
+
+#. module: ps_sale
+#: model:ir.model,name:ps_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "销售订单行"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_product_pricelist_change_filter
+msgid "Search product_pricelist_change"
+msgstr ""
+
+#. module: ps_sale
+#: code:addons/ps_sale/models/ps_stock_move.py:16
+#, python-format
+msgid "Selling/Returning more than what was initially planned for the product is not allowed."
+msgstr "不允许超出原有计划发货/发货退回。"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.ps_sale_res_config_settings_view_form
+msgid "Selling/Returning more than what was initially planned for the product will not be allowed if this is selected."
+msgstr "如果被勾选，则不允许进行超量发货/发货退回。"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_form_ps_product_pricelist_change
+msgid "Set Draft"
+msgstr "设置草稿"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__state
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__state
+msgid "State"
+msgstr "状态"
+
+#. module: ps_sale
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change__activity_state
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change_line__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "基于活动的状态 \n"
+" 逾期：已经超过截止日期 \n"
+" 现今：活动日期是当天 \n"
+" 计划：未来的活动。"
+
+#. module: ps_sale
+#: model:ir.model,name:ps_sale.model_stock_move
+msgid "Stock Move"
+msgstr "库存移动"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.view_form_ps_product_pricelist_change
+msgid "Submit"
+msgstr "提交"
+
+#. module: ps_sale
+#: selection:ps.product.pricelist.change,activity_state:0
+#: selection:ps.product.pricelist.change.line,activity_state:0
+msgid "Today"
+msgstr "今日"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_unread
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_unread
+msgid "Unread Messages"
+msgstr "未读消息"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__message_unread_counter
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读消息计数器"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__uom_id
+msgid "Uom"
+msgstr "单位"
+
+#. module: ps_sale
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change__website_message_ids
+#: model:ir.model.fields,field_description:ps_sale.field_ps_product_pricelist_change_line__website_message_ids
+msgid "Website Messages"
+msgstr "网站消息"
+
+#. module: ps_sale
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change__website_message_ids
+#: model:ir.model.fields,help:ps_sale.field_ps_product_pricelist_change_line__website_message_ids
+msgid "Website communication history"
+msgstr "网站沟通记录"
+
+#. module: ps_sale
+#: model:ir.model.fields,help:ps_sale.field_res_config_settings__ps_is_overpass_initial_ordered_sale
+msgid "Whether processing more than initial ordered is permitted or not"
+msgstr "判断是否允许超量收货/收货退回"
+
+#. module: ps_sale
+#: code:addons/ps_sale/models/ps_product_pricelist_change.py:81
+#, python-format
+msgid "You can't delete a non-draft status adjustment plan, please set it to draft status first!"
+msgstr "您无法删除非草稿状态调价方案，请先将其设置为草稿状态！"
+
+#. module: ps_sale
+#: model_terms:ir.ui.view,arch_db:ps_sale.inherit_product_pricelist_form
+msgid "customer"
+msgstr "客户"
+
+#. module: ps_sale
+#: code:addons/ps_sale/models/ps_product_pricelist_change_line.py:72
+#: code:addons/ps_sale/models/ps_product_pricelist_change_line.py:81
+#: code:addons/ps_sale/models/ps_product_pricelist_change_line.py:91
+#, python-format
+msgid "end_date_new cannot be less than start_date_new"
+msgstr "调后失效日不能早于调后生效日"
+
+#. module: ps_sale
+#: code:addons/ps_sale/models/ps_product_pricelist_change_line.py:63
+#, python-format
+msgid "min_qty_new cannot be less than 0"
+msgstr "调后最小数量不能小于0"
+
+#. module: ps_sale
+#: code:addons/ps_sale/models/ps_product_pricelist_change_line.py:44
+#: code:addons/ps_sale/models/ps_product_pricelist_change_line.py:57
+#, python-format
+msgid "price_new cannot be less than 0"
+msgstr "调后单价不能小于0"
+
