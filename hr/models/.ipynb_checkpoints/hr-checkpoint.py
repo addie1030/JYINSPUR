@@ -130,6 +130,7 @@ class Employee(models.Model):
         ('married', 'Married'),
         ('cohabitant', 'Legal Cohabitant'),
         ('widower', 'Widower'),
+        ('test', 'Test'),
         ('divorced', 'Divorced')
     ], string='Marital Status', groups="hr.group_hr_user", default='single')
     spouse_complete_name = fields.Char(string="Spouse Complete Name", groups="hr.group_hr_user")

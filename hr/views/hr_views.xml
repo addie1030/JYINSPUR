@@ -104,7 +104,7 @@
                                         <field name="km_home_work" groups="hr.group_hr_user"/>
                                     </group>
                                     <group string="Status">
-                                        <!--<field name="gender"/>-->
+                                        <field name="gender"/>
                                         <field name="marital"/>
                                         <field name="spouse_complete_name" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
                                         <field name="spouse_birthdate" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
