@@ -1,15 +1,12 @@
-# -*- coding: utf-8 -*-
+class EmployeeCategory(models.Model):
 
+    _name = "hr.employee.category"
+    _description = "Employee Category"
 
+    name = fields.Char(string="Employee Tag", required=True)
+    color = fields.Integer(string='Color Index')
+   
 
- class test(models.Model):
-     _name = 'test.test'
-
-     name = fields.Char()
-    value = fields.Integer()
-     value2 = fields.Float(compute="_value_pc", store=True)
-     description = fields.Text()
-
-     @api.depends('value')
-     def _value_pc(self):
-         self.value2 = float(self.value) / 100
+    _sql_constraints = [
+        ('name_uniq', 'unique (name)', "Tag name already exists !"),
+    ]
