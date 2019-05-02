@@ -7,7 +7,7 @@ class Test(http.Controller):
          return "Hello, world"
 
      @http.route('/test/test/objects/', auth='public')
-    def list(self, **kw):
+     def list(self, **kw):
          return http.request.render('test.listing', {
              'root': '/test/test',
              'objects': http.request.env['test.test'].search([]),
