@@ -10,6 +10,7 @@
           <field name="name"/>
           <field name="ggxh"/>
           <field name="price"/>
+          <field name="jldw"/>  
           <field name="description"/>
         </tree>
       </field>

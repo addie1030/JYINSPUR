@@ -10,6 +10,7 @@ class soft(models.Model):
     price = fields.Float()
     #price = fields.Float(compute="_value_pc", store=True)
     description = fields.Text()
+    jldw = fields.Many2one('uom.uom',string='name')
 
     #@api.depends('value')
     #def _value_pc(self):
