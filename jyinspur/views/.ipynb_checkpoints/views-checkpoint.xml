@@ -35,7 +35,7 @@
         action = {
           "type": "ir.actions.act_window",
           "view_mode": "tree,form",
-          "res_model": self._name,
+          "res_model": jyinspur.soft,
         }
       </field>
     </record>
