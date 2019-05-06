@@ -16,7 +16,7 @@ class soft(models.Model):
     
     
     @api.depends('name','ggxh')
-    def qm_compute(self);
+    def qm_compute(self):
         self.qm = self.name+'-'+self.ggxh
 
     #@api.depends('value')
