@@ -17,7 +17,7 @@ class soft(models.Model):
     
     @api.depends('name','ggxh')
     def qm_compute(self):
-        self.qm = self.name + '-' 
+        self.qm = char(self.name) + '-' + char(self.ggxh)
 
     #@api.depends('value')
     #def _value_pc(self):
