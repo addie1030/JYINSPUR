@@ -12,6 +12,12 @@ class soft(models.Model):
     #price = fields.Float(compute="_value_pc", store=True)
     description = fields.Text('描述')
     jldw = fields.Many2one('uom.uom',string='单位')
+    qm = fields.Char(string='全名',compute='qm_compute')
+    
+    
+    @api.depends('name','ggxh')
+    def qm_compute(self);
+        self.qm = self.name+'-'+self.ggxh
 
     #@api.depends('value')
     #def _value_pc(self):
