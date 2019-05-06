@@ -5,11 +5,12 @@ from odoo import models, fields, api
 class soft(models.Model):
     _name = 'jyinspur.soft'
 
-    name = fields.Char()
-    ggxh = fields.Char()
-    price = fields.Float()
+    name = fields.Char('名称')
+    ggxh = fields.Char('规格型号')
+    price = fields.Float('价格')
+    soft_type = fields.Selection([('single','单组织'),('multiple','多组织')],'类型')
     #price = fields.Float(compute="_value_pc", store=True)
-    description = fields.Text()
+    description = fields.Text('描述')
     jldw = fields.Many2one('uom.uom',string='单位')
 
     #@api.depends('value')
