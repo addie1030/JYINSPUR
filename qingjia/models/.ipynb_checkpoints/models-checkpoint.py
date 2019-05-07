@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api ,datetime
 
 class qingjiadan(models.Model):
     _name = 'qingjia.qingjiadan'
@@ -17,4 +17,4 @@ class qingjiadan(models.Model):
 #
     @api.depends('stardate','enddate')
     def c_days(self):
-        self.days = (date(self.enddate)-date(self.stardate)).days
+        self.days = (datetime.date(self.enddate)-datetime.date(self.stardate)).days
