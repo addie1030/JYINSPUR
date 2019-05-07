@@ -51,11 +51,11 @@
     
     
     <!-- actions -->
-    <!--
-    <menuitem name="List" id="qingjia.menu_1_list" parent="qingjia.menu_1"
-              action="qingjia.action_window"/>
-    <menuitem name="Server to list" id="qingjia" parent="qingjia.menu_2"
-              action="qingjia.action_server"/>
-    -->
+    
+    <menuitem name="List" id="qingjia.menu_1_list" parent="qingjia_menu_1"
+              action="qingjia_action_window"/>
+    <!--<menuitem name="Server to list" id="qingjia" parent="qingjia.menu_2"
+              action="qingjia.action_server"/>-->
+    
   </data>
 </odoo>
