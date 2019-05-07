@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api ,datetime
+from odoo import models, fields, api 
 
 class qingjiadan(models.Model):
     _name = 'qingjia.qingjiadan'
