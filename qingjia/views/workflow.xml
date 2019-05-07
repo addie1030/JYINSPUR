@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+    <record id="workflow_qingjia_qingjiadan" model="workflow">
+    <field name="name">请假单工作流</field>
+    <field name="osv">qingjia.qingjiadan</field>
+    <field name="on_create">True</field>
+</record>
+      
+      <!-- 工作流活动 -->
+<record id="activity_draft" model="workflow.activity">
+    <field name="name">草稿</field>
+    <field name="wkf_id">workflow_qingjia_qingjiadan</field>
+    <field name="kind">dummy</field>
+    <field name="flow_start">True</field>
+</record>
+<record id="activity_confirm" model="workflow.activity">
+    <field name="name">待审核</field>
+    <field name="wkf_id">workflow_qingjia_qingjiadan</field>
+    <field name="kind">function</field>
+    <field name="action">do_confirm()</field>
+</record>
+<record id="activity_complete" model="workflow.activity">
+    <field name="name">已完成</field>
+    <field name="wkf_id">workflow_qingjia_qingjiadan</field>
+    <field name="kind">function</field>
+    <field name="action">do_complete()</field>
+</record>
+      
+      <!-- 工作流流转 -->
+<record id="transition_draft2confirm" model="workflow.transition">
+    <field name="act_from">activity_draft</field>
+    <field name="act_to">activity_confirm</field>
+    <field name="signal">button_confirm</field>
+</record>
+<record id="transition_confirm2complete" model="workflow.transition">
+    <field name="act_from">activity_confirm</field>
+    <field name="act_to">activity_complete</field>
+    <field name="signal">button_complete</field>
+</record>
+      
+  </data>
+</odoo>

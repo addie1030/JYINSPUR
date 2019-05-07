@@ -7,11 +7,21 @@
       <field name="model">qingjia.qingjiadan</field>
       <field name="arch" type="xml">
         <tree>
+            <header>
+            <button name="button_confirm" states="draft"
+                    string="提交" type="workflow" class="oe_highlight"/>
+            <button name="button_complete" states="confirm"
+                    string="批准" type="workflow" class="oe_highlight"
+                    groups="base.group_user"/>
+            <!-- 右上角 进度显示。-->
+            <field name="state" widget="statusbar"/>
+          </header>
           <field name="name"/>
           <field name="days"/>
           <field name="stardate"/>
           <field name="enddate"/>
           <field name="reason"/>
+           <field name="state"/> 
         </tree>
       </field>
     </record>
