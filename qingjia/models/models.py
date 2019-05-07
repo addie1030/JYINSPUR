@@ -5,14 +5,15 @@ from odoo import models, fields, api
 class qingjiadan(models.Model):
     _name = 'qingjia.qingjiadan'
 
-    name = fields.Char(string='申请人')
-    days = fields.Integer(string='天数')
+    name = fields.Many2one('res.users',string='申请人',required=True)
+    days = fields.Integer(compute="c_days",store=True,string='天数',readonly=True)
     stardate = fields.Date(string='开始时间')
     reason = fields.Text(string='请假事由')
+    enddate = fields.Date(string='结束时间')
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
 #     description = fields.Text()
 #
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+    @api.depends('stardate','enddate')
+    def _value_pc(self):
+        self.days = self.enddate-self.stardate

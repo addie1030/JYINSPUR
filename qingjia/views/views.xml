@@ -10,6 +10,7 @@
           <field name="name"/>
           <field name="days"/>
           <field name="stardate"/>
+          <field name="enddate"/>
           <field name="reason"/>
         </tree>
       </field>
