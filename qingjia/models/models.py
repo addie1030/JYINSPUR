@@ -17,4 +17,4 @@ class qingjiadan(models.Model):
 #
     @api.depends('stardate','enddate')
     def c_days(self):
-        self.days = (self.enddate-self.stardate).days
+        self.days = (date(self.enddate)-date(self.stardate)).days
