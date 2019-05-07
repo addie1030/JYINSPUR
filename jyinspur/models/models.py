@@ -12,12 +12,12 @@ class soft(models.Model):
     #price = fields.Float(compute="_value_pc", store=True)
     description = fields.Text('描述')
     jldw = fields.Many2one('uom.uom',string='单位')
-    qm = fields.Char(string='全名',compute='qm_compute')
+    qm = fields.Char(string='全名',compute='qm_compute')  #compute为调用函数名
     
     
-    @api.depends('name','ggxh')
+    @api.depends('name','ggxh')  #填入需要的参数
     def qm_compute(self):
-        self.qm = str(self.name) + '-' + str(self.ggxh)
+        self.qm = str(self.name) + '-' + str(self.ggxh)  #需要加上str()函数不然提示数据类型错误
 
     #@api.depends('value')
     #def _value_pc(self):

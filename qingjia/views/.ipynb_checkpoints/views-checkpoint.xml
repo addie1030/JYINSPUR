@@ -1,0 +1,61 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition列表视图 -->
+    
+    <record model="ir.ui.view" id="qingjia_list">
+      <field name="name">请假单列表</field>
+      <field name="model">qingjia.qingjiadan</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="days"/>
+          <field name="stardate"/>
+          <field name="reason"/>
+        </tree>
+      </field>
+    </record>
+    
+
+    <!-- actions opening views on models  FORM视图动作 -->
+    
+    <record model="ir.actions.act_window" id="qingjia_action_window">
+      <field name="name">请假单</field>
+      <field name="res_model">qingjia.qingjiadan</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="qingjia.action_server">
+      <field name="name">qingjia server</field>
+      <field name="model_id" ref="model_qingjia_qingjia"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    
+    <menuitem name="请假" id="qingjia_menu_root"/>
+    
+    <!-- menu categories -->
+    
+    <menuitem name="请假单" id="qingjia_menu_1" parent="qingjia_menu_root"/>
+    
+    
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="qingjia.menu_1_list" parent="qingjia.menu_1"
+              action="qingjia.action_window"/>
+    <menuitem name="Server to list" id="qingjia" parent="qingjia.menu_2"
+              action="qingjia.action_server"/>
+    -->
+  </data>
+</odoo>
