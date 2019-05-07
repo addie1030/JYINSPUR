@@ -56,6 +56,13 @@
               action="qingjia_action_window"/>
     <!--<menuitem name="Server to list" id="qingjia" parent="qingjia.menu_2"
               action="qingjia.action_server"/>-->
+      
+      <record id="rule_user_qingjia_qingjiadan" model="ir.rule">
+      <field name="name">自己编辑自己的请假单</field>
+      <field name="model_id" ref="model_qingjia_qingjiadan" />
+      <field name="domain_force">[('create_uid','=',user.id)]</field>
+      <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+    </record>
     
   </data>
 </odoo>
