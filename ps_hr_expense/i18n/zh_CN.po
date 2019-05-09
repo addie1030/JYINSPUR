@@ -1,0 +1,722 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_hr_expense
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-21 03:16+0000\n"
+"PO-Revision-Date: 2019-01-21 03:16+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:105
+#, python-format
+msgid " and cannot be deleted."
+msgstr " 不能被删除."
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_needaction
+msgid "Action Needed"
+msgstr "前置操作"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__amount_return_actual
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_returned_amount__amount_return_actual
+msgid "Actual refund amount"
+msgstr "实际退款金额"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__amount_actual
+msgid "Amount Actual"
+msgstr "实际借款金额"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__amount_approved
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__amount_approved
+msgid "Amount Approved"
+msgstr "核定金额"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__amount_loan
+msgid "Amount Loan"
+msgstr "借款金额"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__amount_reimburse
+msgid "Amount Reimburse"
+msgstr "已报销金额"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__amount_request
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__amount_request
+msgid "Amount Request"
+msgstr "申请金额"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:201
+#, python-format
+msgid "Application Payment"
+msgstr "费用申请借款"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_approve_form
+msgid "Approve"
+msgstr "批准"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数量"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_form
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_refund_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: ps_hr_expense
+#: model_terms:ir.actions.act_window,help:ps_hr_expense.action_ps_hr_expense_approve
+msgid "Click here to create a new expense request."
+msgstr "点击创建报销申请."
+
+#. module: ps_hr_expense
+#: model_terms:ir.actions.act_window,help:ps_hr_expense.ps_hr_expense
+msgid "Click to create a new request."
+msgstr "创建新的申请"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.search_ps_hr_expense_approve
+msgid "Confirmed Expenses"
+msgstr "已确认的费用"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__create_uid
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__create_uid
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_returned_amount__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__create_date
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__create_date
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_returned_amount__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:18
+#, python-format
+msgid "Current users have no associated employees."
+msgstr "当前用户没有与员工关联."
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__date_return
+msgid "Date"
+msgstr "还款日期"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_search
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.view_ps_loan_analysis_search
+msgid "Department"
+msgstr "部门"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__department_id
+msgid "Department Id"
+msgstr "部门"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_approve_form
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_form
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_refund_form
+msgid "Details of Expense"
+msgstr "申请明细"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__display_name
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__display_name
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_returned_amount__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_form
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_refund_form
+msgid "Draft"
+msgstr "草稿"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_search
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.view_ps_loan_analysis_search
+msgid "Employee"
+msgstr "员工"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__employee_id
+msgid "Employee Id"
+msgstr "员工"
+
+#. module: ps_hr_expense
+#: model:ir.model,name:ps_hr_expense.model_hr_expense
+msgid "Expense"
+msgstr "费用"
+
+#. module: ps_hr_expense
+#: model:ir.model,name:ps_hr_expense.model_hr_expense_sheet_register_payment_wizard
+msgid "Expense Register Payment Wizard"
+msgstr "费用登记付款向导"
+
+#. module: ps_hr_expense
+#: model:ir.model,name:ps_hr_expense.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "费用报告"
+
+#. module: ps_hr_expense
+#: model:ir.actions.act_window,name:ps_hr_expense.ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_account_payment__ps_expense_request_id
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__expense_request_id
+#: model:ir.ui.menu,name:ps_hr_expense.menu_ps_hr_expense
+msgid "Expense Request"
+msgstr "待提交的费用申请"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_account_payment__expense_request_id
+#: model:ir.model.fields,field_description:ps_hr_expense.field_hr_expense__request_id
+msgid "Expense Request Id"
+msgstr "费用申请编号"
+
+#. module: ps_hr_expense
+#: model:ir.ui.menu,name:ps_hr_expense.menu_ps_hr_expense_approve
+msgid "Expense Request To Approve"
+msgstr "待审批的费用申请"
+
+#. module: ps_hr_expense
+#: model:ir.actions.act_window,name:ps_hr_expense.action_ps_hr_expense_approve
+msgid "Expenses Requests To Approve"
+msgstr "费用申请审核"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "关注者(渠道)"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(业务伙伴)"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_search
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.search_ps_hr_expense_approve
+msgid "Group By"
+msgstr "分组"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.search_ps_hr_expense_approve
+msgid "Group By Department"
+msgstr "部门分组"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.search_ps_hr_expense_approve
+msgid "Group By Employee"
+msgstr "员工分组"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__id
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__id
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_returned_amount__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,help:ps_hr_expense.field_ps_hr_expense_request__message_unread
+msgid "If checked new messages require your attention."
+msgstr "查看是否有需要留意的新消息。"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,help:ps_hr_expense.field_ps_hr_expense_request__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "确认后, 出现提示消息."
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,help:ps_hr_expense.field_ps_hr_expense_request__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾选此项， 某些消息将会产生传递错误。"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:230
+#, python-format
+msgid "Involving users without associated employees!"
+msgstr "相关用户没有关联员工！"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_is_follower
+msgid "Is Follower"
+msgstr "关注者"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__is_loan
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_approve_form
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_form
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_refund_form
+msgid "Is Loan"
+msgstr "需要借款"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request____last_update
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line____last_update
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_returned_amount____last_update
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__write_uid
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__write_uid
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_returned_amount__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__write_date
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__write_date
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_returned_amount__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__line_ids
+msgid "Line Ids"
+msgstr "明细编号"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_account_payment__loan
+#: model:ir.model.fields,field_description:ps_hr_expense.field_account_payment__ps_is_loan
+msgid "Loan"
+msgstr "借款"
+
+#. module: ps_hr_expense
+#: model:ir.actions.act_window,name:ps_hr_expense.act_ps_loan_analysis_pivot
+#: model:ir.ui.menu,name:ps_hr_expense.ps_loan_analysis_menu
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_loan_analysis_pivot
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.view_ps_loan_analysis_search
+msgid "Loan Analysis"
+msgstr "借款分析"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "附件"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_has_error
+msgid "Message Delivery error"
+msgstr "消息递送错误"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_search
+msgid "MyExpense"
+msgstr "我的费用"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__name
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__name
+msgid "Name"
+msgstr "名称"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__need_repayment
+msgid "Need Repayment"
+msgstr "需要退款"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_search
+msgid "NeedRepayment"
+msgstr "需要退款"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:139
+#, python-format
+msgid "New"
+msgstr "新建"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活动截止日期"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活动摘要"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活动类型"
+
+#. module: ps_hr_expense
+#: model_terms:ir.actions.act_window,help:ps_hr_expense.ps_hr_expense_refund
+msgid "No record."
+msgstr "没有记录"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作次数"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_has_error_counter
+msgid "Number of error"
+msgstr "错误个数"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,help:ps_hr_expense.field_ps_hr_expense_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要操作消息数量"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,help:ps_hr_expense.field_ps_hr_expense_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "递送错误消息数量"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,help:ps_hr_expense.field_ps_hr_expense_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读消息数量"
+
+#. module: ps_hr_expense
+#: model_terms:ir.actions.act_window,help:ps_hr_expense.action_ps_hr_expense_approve
+msgid "Once you have created your expense, submit it to your manager who will validate it."
+msgstr "当你生成了你的费用申请，发送给你的经理，他会验证。"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:153
+#, python-format
+msgid "Only \"confirmed\" state are allowed to be operate"
+msgstr "只有 \"confirmed\" 状态允许操作"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:329
+#, python-format
+msgid "Only HR Officers can approve expenses"
+msgstr "只有 HR Officers 能审核费用单据"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:254
+#, python-format
+msgid "Only expense request at \"cancelled\" state can be draft"
+msgstr "只有费用申请状态是 \"cancelled\" 能设置草稿"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:266
+#, python-format
+msgid "Only expense request at \"confirmed\" state can be draft"
+msgstr "只有费用申请状态是 \"confirmed\" 能设置草稿"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:245
+#, python-format
+msgid "Only expense request at \"draft\" state can be cancel"
+msgstr "只有费用申请状态是 \"draft\" 能设置取消"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:233
+#, python-format
+msgid "Only expense request at \"draft\" state can be confirm"
+msgstr "只有费用申请状态是 \"draft\" 能设置确认"
+
+#. module: ps_hr_expense
+#: selection:ps.hr.expense.request,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__payment_ids
+msgid "Payment Ids"
+msgstr "付款编号"
+
+#. module: ps_hr_expense
+#: model:ir.model,name:ps_hr_expense.model_account_payment
+msgid "Payments"
+msgstr "付款"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__place
+msgid "Place"
+msgstr "发生地"
+
+#. module: ps_hr_expense
+#: selection:ps.hr.expense.request,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__price
+msgid "Price"
+msgstr "价格"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__price_approved
+msgid "Price Approved"
+msgstr "核定单价"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__qty
+msgid "Qty"
+msgstr "数量"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__qty_approved
+msgid "Qty Approved"
+msgstr "核定数量"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__reason
+msgid "Reason"
+msgstr "原因"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_account_payment__ps_is_repayment
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_approve_form
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_form
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_refund_form
+msgid "Refund"
+msgstr "退款"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_approve_form
+msgid "Refuse"
+msgstr "拒绝"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__report_id
+msgid "Report Id"
+msgstr "费用报销"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__activity_user_id
+msgid "Responsible User"
+msgstr "责任用户"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.view_ps_loan_analysis_search
+msgid "Retrun Date"
+msgstr "预计还款日期"
+
+#. module: ps_hr_expense
+#: model:ir.actions.act_window,name:ps_hr_expense.ps_hr_expense_refund
+#: model:ir.ui.menu,name:ps_hr_expense.menu_ps_refund
+msgid "Return Amount"
+msgstr "我的还款"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__sheet_id
+msgid "Sheet Id"
+msgstr "费用报销报告"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__state
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__state
+msgid "State"
+msgstr "状态"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,help:ps_hr_expense.field_ps_hr_expense_request__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "基于活动的状态 \n"
+" 逾期：已经超过截止日期 \n"
+" 现今：活动日期是当天 \n"
+" 计划：未来的活动。"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_form
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_refund_form
+msgid "Submit"
+msgstr "提交"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request_line__description
+msgid "Text"
+msgstr "费用说明"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:63
+#, python-format
+msgid "The \"Amount Loan\" must be greater than 0 ！"
+msgstr " \"借款金额\" 必须大于0 ！"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:66
+#, python-format
+msgid "The \"Date Return\" cannot be earlier than the current time ！"
+msgstr " \"预计还款日期\" 不能早于当前日期 ！"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:295
+#, python-format
+msgid "The Name or Descrition cannot be None ！"
+msgstr "费用说明不能为空 ！"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:301
+#, python-format
+msgid "The Price or Qty must be greater than 0 ！"
+msgstr "费用单价或数量必须大于0 ！"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:218
+#, python-format
+msgid "The list of "
+msgstr "员工"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__amount_return_theoretical
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_returned_amount__amount_return_theoretical
+msgid "Theoretical refund amount"
+msgstr "理论退款金额"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:75
+#, python-format
+msgid "There is an unconfirmed loan payment form and no refund is allowed."
+msgstr "已存在未确认的退款付款，无法继续创建退款"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:105
+#, python-format
+msgid "This list is in "
+msgstr "单据状态为 "
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.search_ps_hr_expense_approve
+msgid "To Approve"
+msgstr "待批准"
+
+#. module: ps_hr_expense
+#: selection:ps.hr.expense.request,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:189
+#, python-format
+msgid "Unmaintained accounting journal"
+msgstr "未维护会计日记账"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_unread
+msgid "Unread Messages"
+msgstr "未读消息"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读消息计数器"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,field_description:ps_hr_expense.field_ps_hr_expense_request__website_message_ids
+msgid "Website Messages"
+msgstr "网站消息"
+
+#. module: ps_hr_expense
+#: model:ir.model.fields,help:ps_hr_expense.field_ps_hr_expense_request__website_message_ids
+msgid "Website communication history"
+msgstr "网站沟通记录"
+
+#. module: ps_hr_expense
+#: selection:ps.hr.expense.request,state:0
+#: selection:ps.hr.expense.request.line,state:0
+msgid "approved"
+msgstr "已审核"
+
+#. module: ps_hr_expense
+#: code:addons/ps_hr_expense/models/ps_expense_request.py:218
+#, python-format
+msgid "been submitted, please review them."
+msgstr "的单据已经提交，请审核"
+
+#. module: ps_hr_expense
+#: selection:ps.hr.expense.request,state:0
+#: selection:ps.hr.expense.request.line,state:0
+msgid "cancelled"
+msgstr "已取消"
+
+#. module: ps_hr_expense
+#: selection:ps.hr.expense.request,state:0
+#: selection:ps.hr.expense.request.line,state:0
+msgid "closed"
+msgstr "已关闭"
+
+#. module: ps_hr_expense
+#: selection:ps.hr.expense.request,state:0
+#: selection:ps.hr.expense.request.line,state:0
+msgid "confirmed"
+msgstr "已提交"
+
+#. module: ps_hr_expense
+#: selection:ps.hr.expense.request,state:0
+#: selection:ps.hr.expense.request.line,state:0
+msgid "draft"
+msgstr "草稿"
+
+#. module: ps_hr_expense
+#: model:ir.model,name:ps_hr_expense.model_ps_hr_expense_request
+msgid "ps.hr.expense.request"
+msgstr "费用申请"
+
+#. module: ps_hr_expense
+#: model:ir.model,name:ps_hr_expense.model_ps_hr_expense_request_line
+msgid "ps.hr.expense.request.line"
+msgstr "费用申请明细"
+
+#. module: ps_hr_expense
+#: model:ir.model,name:ps_hr_expense.model_ps_returned_amount
+msgid "ps.returned.amount"
+msgstr "退款"
+
+#. module: ps_hr_expense
+#: selection:ps.hr.expense.request,state:0
+#: selection:ps.hr.expense.request.line,state:0
+msgid "refused"
+msgstr "已退回"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_hr_expense_search
+msgid "search"
+msgstr "查询"
+
+#. module: ps_hr_expense
+#: model_terms:ir.ui.view,arch_db:ps_hr_expense.ps_return_amount_from
+msgid "退款付款"
+msgstr "退款付款"
+

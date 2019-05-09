@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="print_design_bill2model_view" model="ir.ui.view">
+            <field name="name">print.design.bill2model.list</field>
+            <field name="model">print.design.bill2model</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="print_design_bill_id"></field>
+                    <field name="model_id"></field>
+                    <!--<field name="name"></field>-->
+                    <field name="table_description"></field>
+                    <field name="symbol"></field>
+                    <field name="location"></field>
+                    <field name="relation"></field>
+                    <!--<button string="维护" name="set_field" type="object"-->
+                            <!--context="{'id':id}" class="btn-primary" />-->
+                </tree>
+            </field>
+        </record>
+        <record id="print_design_bill2model_form" model="ir.ui.view">
+            <field name="name">print.design.bill2model.form</field>
+            <field name="model">print.design.bill2model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="print_design_bill_id"></field>
+                            <field name="model_id"></field>
+                            <field name="name"></field>
+                            <field name="table_description"></field>
+                            <field name="symbol"></field>
+                            <field name="location"></field>
+                            <field name="relation"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="print_design_bill2model" model="ir.actions.act_window">
+            <field name="name">单据对应模型</field>
+            <field name="res_model">print.design.bill2model</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_print_design_bill2model" name="单据对应模型" parent="menu_print_root" action="print_design_bill2model" groups="base.group_user"></menuitem>
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets" name="ps pos assets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/ps_pos/static/src/css/ps_pos.css"/>
+            <script type="text/javascript" src="/ps_pos/static/src/js/pos_require_set_customer.js"></script>
+            <script type="text/javascript" src="/ps_pos/static/src/js/pos_models.js"></script>
+            <script type="text/javascript" src="/ps_pos/static/src/js/ps_pos_popups.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

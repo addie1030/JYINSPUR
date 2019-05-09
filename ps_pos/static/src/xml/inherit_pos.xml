@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" inherit_id="point_of_sale.template">
+    <t t-extend="ActionpadWidget">
+        <t t-jquery=".pay" t-operation="replace">
+            <button class='button ps-pay'>
+                <div class='pay-circle'>
+                    <i class='fa fa-chevron-right' />
+                </div>
+                Payment
+            </button>
+        </t>
+    </t>
+    <!--客户信息添加会员编号字段-->
+    <t t-extend="ClientDetailsEdit">
+        <t t-jquery=".client-details-left div:last" t-operation="after">
+            <div class='client-detail'>
+                <span class='label'>Member No.</span>
+                <input class='detail client-address-zip' name='ps_member_no' t-att-value='partner.ps_member_no || ""'
+                       placeholder='Member No.'></input>
+            </div>
+        </t>
+        <t t-jquery=".client-details-right div:last" t-operation="after">
+            <div class='client-detail'>
+                <span class='label'>Member category</span>
+                <select class='detail needsclick' name='ps_member_category_id'>
+                    <option value=''>None</option>
+                    <t t-foreach='widget.pos.ps_member_categories' t-as='member_category'>
+                        <option t-att-value='member_category.id' t-att-selected="partner.ps_member_category_id ? ((member_category.id === partner.ps_member_category_id[0]) ? true : undefined) : undefined">
+                            <t t-esc='member_category.name'/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </t>
+    </t>
+    <t t-extend="ClientDetails">
+        <t t-jquery=".client-details-left div:last" t-operation="after">
+            <div class='client-detail'>
+                <span class='label'>Member No.</span>
+                <t t-if='partner.ps_member_no'>
+                    <span class='detail client-phone'><t t-esc='partner.ps_member_no' /></span>
+                </t>
+                <t t-if='!partner.ps_member_no'>
+                    <span class='detail client-phone empty'>N/A</span>
+                </t>
+            </div>
+        </t>
+    </t>
+    <!--票据打印增加优惠金额-->
+    <t t-extend="PosTicket">
+        <t t-jquery=".receipt-orderlines" t-operation="replace">
+            <table class='receipt-orderlines'>
+                <colgroup>
+                    <col width='40%' />
+                    <col width='20%' />
+                    <col width='40%' />
+                </colgroup>
+                <tr t-foreach="orderlines" t-as="orderline">
+                    <td>
+                        <t t-esc="orderline.get_product().display_name"/>
+                         <t t-if="orderline.get_discount() > 0">
+                            <div class="pos-disc-font">
+                                With a <t t-esc="orderline.get_discount()"/>% discount
+                            </div>
+                        </t>
+                    </td>
+                    <td class="pos-right-align">
+                        <t t-esc="orderline.get_quantity_str_with_unit()"/> *
+                    </td>
+                    <td class="pos-right-align">
+                        <t t-esc="widget.format_currency(orderline.product.list_price)"/>
+                        <t t-if="orderline.product.list_price != orderline.get_unit_display_price()">
+                            <div>
+                                Offer <t t-esc="widget.format_currency(orderline.product.list_price - orderline.get_unit_display_price())"/>
+                            </div>
+                        </t>
+                    </td>
+                </tr>
+            </table>
+        </t>
+        <t t-jquery=".emph" t-operation="before">
+            <tr>
+                <t t-if="order.get_total_offer() > 0">
+                    <td>Total offer:</td>
+                    <td class="pos-right-align">
+                        <t t-esc="widget.format_currency(order.get_total_offer())"/>
+                    </td>
+                </t>
+            </tr>
+        </t>
+    </t>
+    <!--POS付款验证页面的选择客户功能隐藏掉-->
+    <t t-extend="PaymentScreenWidget">
+        <t t-jquery=".payment-numpad" t-operation="replace">
+            <section class='payment-numpad' style="width:100%;"></section>
+        </t>
+        <t t-jquery=".payment-buttons" t-operation="replace">
+            <div class='payment-buttons'></div>
+        </t>
+    </t>
+</templates>

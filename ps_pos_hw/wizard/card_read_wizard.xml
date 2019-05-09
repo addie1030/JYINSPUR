@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_ps_member_card_read_wizard" model="ir.ui.view">
+            <field name="name">Membership card information</field>
+            <field name="model">ps.member.card.read.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Wizard">
+                    <group>
+                        <group>
+                            <field name="card_id" readonly="1" invisible="1"/>
+                            <field name="name" readonly="1"/>
+                            <field name="partner_id" readonly="1"  options='{"no_open":True}'/>
+                            <field name="card_create_date" readonly="1"/>
+                            <field name="card_write_date" readonly="1"/>
+                            <field name="state" readonly="1"/>
+                            <button name="card_lost" type="object" string="Report loss" states="normal" class="oe_highlight"/>
+                            <button name="card_normal" type="object" string="Cancel report loss" states="lost" class="oe_highlight"/>
+                        </group>
+                        <group>
+                            <field name="card_serial" readonly="1"/>
+                            <field name="card_no" readonly="1"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ps_member_card_read_wizard" model="ir.actions.act_window">
+            <field name="name">Membership card information</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.member.card.read.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_ps_member_card_read_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</openerp>
+

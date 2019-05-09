@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="ps_pos_member_menu"
+        name="Pos Member"
+        parent="point_of_sale.menu_point_root"
+        sequence="99"
+        groups="point_of_sale.group_pos_manager"/>
+
+</odoo>

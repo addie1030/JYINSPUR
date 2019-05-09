@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--损益结转参数设置-->
+        <record id="setup_profit_loss_parameters_form" model="ir.ui.view">
+            <field name="name">setup.profit.loss.parameters.view.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <form string="Setting of profit and loss transfer parameters" >
+                    <sheet>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-xs-12 col-md-6 o_setting_box">
+                                <div class="o_setting_left_pane">
+                                    <field name="ps_profit_loss_same_user_approval"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="ps_profit_loss_same_user_approval"/>
+                                    <div class="text-muted">
+                                        Carry the generated credentials directly to the audit / accounting status.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-xs-12 col-md-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="ps_account_profit_id"/>
+                                    <div class="text-muted">
+                                        Profit (profit and loss account transfer)
+                                    </div>
+                                    <field name="ps_account_profit_id" />
+                                </div>
+                            </div>
+                        </div>
+                    </sheet>
+                    <footer>
+                        <button string="Save" type="object" name="save_profit_loss_parameter" class="oe_highlight" />
+                        <button string="Close" type="action" name="ps_account.setup_wizard_close" class="oe_highlight" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

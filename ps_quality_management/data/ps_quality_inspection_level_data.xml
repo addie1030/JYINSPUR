@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="ps.quality.inspection.level" id="level_value1">
+            <field name="code">S-1</field>
+            <field name="category">special</field>
+        </record>
+
+        <record model="ps.quality.inspection.level" id="level_value2">
+            <field name="code">S-2</field>
+            <field name="category">special</field>
+        </record>
+
+
+        <record model="ps.quality.inspection.level" id="level_value3">
+            <field name="code">S-3</field>
+            <field name="category">special</field>
+        </record>
+
+        <record model="ps.quality.inspection.level" id="level_value4">
+            <field name="code">S-4</field>
+            <field name="category">special</field>
+        </record>
+
+
+        <record model="ps.quality.inspection.level" id="level_value5">
+            <field name="code">Ⅰ</field>
+            <field name="category">normal</field>
+        </record>
+
+        <record model="ps.quality.inspection.level" id="level_value6">
+            <field name="code">Ⅱ</field>
+            <field name="category">normal</field>
+        </record>
+
+        <record model="ps.quality.inspection.level" id="level_value7">
+            <field name="code">Ⅲ</field>
+            <field name="category">normal</field>
+        </record>
+
+    </data>
+</odoo>

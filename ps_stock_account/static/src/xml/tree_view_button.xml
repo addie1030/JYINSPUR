@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_save" t-operation="after">
+            <button type="button" class="btn btn-sm btn-primary o_list_tender_button_cancel_move" style="display:none;">Cancel Move</button>
+        </t>
+        <t t-jquery="button.o_list_button_save" t-operation="after">
+            <button type="button" class="btn btn-sm btn-primary o_list_tender_button_cost_maintenance" style="display:none;">Import Price</button>
+        </t>
+    </t>
+    <t t-extend="FormView.buttons">
+        <t t-jquery="button.o_form_button_cancel" t-operation="after">
+            <button type="button" class="btn btn-sm btn-primary o_form_button_stock_create_move" style="display:none;">Create Move</button>
+        </t>
+        <t t-jquery="button.o_form_button_cancel" t-operation="after">
+            <button type="button" class="btn btn-sm btn-primary o_form_button_purchase_stock_verification_auto"
+                    style="display:none;">Auto Validate</button>
+            <button type="button" class="btn btn-sm btn-primary o_form_button_purchase_stock_verification_manual"
+                    style="display:none;">Manual Validate</button>
+        </t>
+    </t>
+</template>

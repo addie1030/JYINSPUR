@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="credit_level_tree" model="ir.ui.view">
+            <!--credit level view-->
+            <field name="name">ps.credit.level.tree</field>
+            <field name="model">ps.credit.level</field>
+            <field name="arch" type="xml">
+                <tree string="Credit Level" create="false" edit="false" delete="false">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_window_credit_level" model="ir.actions.act_window">
+            <!--action to credit_level_tree-->
+            <field name="name">Credit Level</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.credit.level</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="credit_level_tree"/>
+        </record>
+    </data>
+</odoo>

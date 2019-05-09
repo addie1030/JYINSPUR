@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ps_credit_profile_officer,ps_credit_profile.officer,model_ps_credit_profile,ps_credit_management.group_credit_officer,1,1,1,1
+access_ps_credit_profile_user,ps_credit_profile_user,model_ps_credit_profile,base.group_user,1,0,0,0
+access_ps_credit_check_scheme,ps_credit_check.ps_credit_check_scheme,model_ps_credit_check_scheme,ps_credit_management.group_credit_officer,1,1,1,1
+access_ps_credit_check_rule,ps_credit_check.ps_credit_check_rule,model_ps_credit_check_rule,ps_credit_management.group_credit_officer,1,1,1,1
+access_credit_usage,ps.credit.usage,model_ps_credit_usage,ps_credit_management.group_credit_officer,1,1,1,1
+access_ps_credit_level,ps_credit_level,model_ps_credit_level,ps_credit_management.group_credit_officer,1,0,0,0
+access_ps_credit_check_scheme_user,ps_credit_check.ps_credit_check_scheme_user,model_ps_credit_check_scheme,base.group_user,1,0,0,0
+access_ps_credit_check_rule_user,ps_credit_check.ps_credit_check_rule_user,model_ps_credit_check_rule,base.group_user,1,0,0,0
+access_credit_usage_user,ps.credit.usage_user,model_ps_credit_usage,base.group_user,1,0,0,0
+access_ps_credit_level_user,ps_credit_level_user,model_ps_credit_level,base.group_user,1,0,0,0

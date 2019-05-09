@@ -1,0 +1,307 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_ps_member_category_tree" model="ir.ui.view">
+            <field name="name">ps.member.category.tree</field>
+            <field name="model">ps.member.category</field>
+            <field name="arch" type="xml">
+                <tree string="Ps Member Category Items" >
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="expiry_date"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="is_use_deposit" widget="checkbox"/>
+                    <field name="is_use_point" widget="checkbox"/>
+                    <field name="is_default_category" widget="checkbox"/>
+                    <field name="product_pricelist_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_ps_member_category_form" model="ir.ui.view">
+            <field name="name">ps.member.category.form</field>
+            <field name="model">ps.member.category</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>
+                            <group>
+                                <field name="product_pricelist_id" required="1"/>
+                            </group>
+                            <group col="6">
+                                <field name="is_use_deposit"/>
+                                <field name="is_use_point"/>
+                                <field name="is_default_category"/>
+                            </group>
+                        </group>
+                        <separator/>
+                        <notebook>
+                            <page string="Basic Setting">
+                                <group>
+                                    <group>
+                                        <field name="expiry_date"/>
+                                        <field name="company_id" groups="base.group_multi_company"/>
+                                        <field name="is_use_password"/>
+                                        <field name="member_password"
+                                               password="True"
+                                               attrs="{'invisible': [('is_use_password', '=', False)], 'required': [('is_use_password', '=', True)]}"
+                                        />
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Deposit Setting" attrs="{'invisible': [('is_use_deposit', '=', False)]}">
+                                <separator name='deposit_bonus_setting' string="Bonus Setting"/>
+                                <field name="member_gift_set_ids" nolabel="1">
+                                    <tree>
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="date_begin"/>
+                                        <field name="date_end"/>
+                                        <field name="min_deposit"/>
+                                        <field name="gift_formula"/>
+                                    </tree>
+                                </field>
+                                <separator string="Bonus Usage Setting"/>
+                                <field name="member_gift_amount_use_ids" nolabel="1">
+                                    <tree>
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="date_begin"/>
+                                        <field name="date_end"/>
+                                        <field name="min_consumption"/>
+                                        <field name="use_formula"/>
+                                    </tree>
+                                </field>
+                                <group string="Journal Items ">
+                                    <group >
+                                        <field name="property_account_deposit_id"
+                                               options="{'no_create': True}"
+                                               attrs="{'required': [('is_use_deposit', '=', True)]}"
+                                        />
+                                    </group>
+                                    <group>
+                                        <field name="property_account_present_id"
+                                               options="{'no_create': True}"
+                                               attrs="{'required': [('is_use_deposit', '=', True)]}"
+                                        />
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Point Setting" attrs="{'invisible': [('is_use_point', '=', False)]}">
+                                <separator string="Point detail setting"/>
+                                <field name="item_ids" nolabel="1">
+                                <tree>
+                                    <field name="sequence" widget="handle" />
+                                    <field name="name" string="Applicable On"/>
+                                    <field name="date_start"/>
+                                    <field name="date_end"/>
+                                    <field name="expense"/>
+                                    <field name="total_point" string="Give away points"/>
+                                    <field name="point" invisible="1"/>
+                                    <field name="multiple" invisible="1"/>
+                                    <field name="applied_on" invisible="1"/>
+                                </tree>
+                            </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="ps_member_category_action_id" model="ir.actions.act_window">
+            <field name="name">Member Category</field>
+            <field name="res_model">ps.member.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Please create a member category record.
+              </p>
+            </field>
+        </record>
+        <menuitem id="ps_member_category_menu"
+              name="Member Category"
+              parent="ps_pos.ps_pos_member_menu"
+              action="ps_member_category_action_id"
+              sequence="3"
+              groups="point_of_sale.group_pos_manager"/>
+
+        <record id="view_ps_member_category_gift_rule_form" model="ir.ui.view">
+            <field name="name">ps.member.category.gift.rule.form</field>
+            <field name="model">ps.member.category.gift.rule</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="date_begin"/>
+                                <field name="min_deposit"/>
+                            </group>
+                            <group>
+                                <field name="date_end"/>
+                            </group>
+                            <group>
+                                <field name="give_way" widget="radio"/>
+                            </group>
+                            <group col="4">
+                                <label for="percent_amount" attrs="{'invisible':[('give_way', '!=', 'percentage')]}"/>
+                                <div class="o_row" attrs="{'invisible':[('give_way', '!=', 'percentage')]}">
+                                    <field name="percent_amount"/>
+                                    <span>%%</span>
+                                </div>
+                                <label for="percent_point" attrs="{'invisible':[('give_way', '!=', 'percentage')]}"/>
+                                <div class="o_row" attrs="{'invisible':[('give_way', '!=', 'percentage')]}">
+                                    <field name="percent_point"/>
+                                    <span>%%</span>
+                                </div>
+
+                            </group>
+                            <group col="6">
+                                    <label for="formula_deposit" attrs="{'invisible':[('give_way', '!=', 'formula')]}"/>
+                                        <div class="o_row" attrs="{'invisible':[('give_way', '!=', 'formula')]}">
+                                            <field name="formula_deposit" />
+                                        </div>
+                                    <label for="formula_amount" attrs="{'invisible':[('give_way', '!=', 'formula')]}"/>
+                                        <div class="o_row" attrs="{'invisible':[('give_way', '!=', 'formula')]}">
+                                            <field name="formula_amount" />
+                                        </div>
+                                    <label for="formula_point" attrs="{'invisible':[('give_way', '!=', 'formula')]}"/>
+                                        <div class="o_row" attrs="{'invisible':[('give_way', '!=', 'formula')]}">
+                                            <field name="formula_point" />
+                                        </div>
+                            </group>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_ps_member_category_amount_use_set_form" model="ir.ui.view">
+            <field name="name">ps.member.category.bonus.use.set.form</field>
+            <field name="model">ps.member.category.bonus.use.set</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="date_begin"/>
+                                <field name="min_consumption"/>
+                            </group>
+                            <group>
+                                <field name="date_end"/>
+                            </group>
+                            <group>
+                                <field name="consumption_method" widget="radio"/>
+                            </group>
+                            <group col="4">
+                                <label for="percentage_deposit" attrs="{'invisible':[('consumption_method', '!=', 'percentage')]}"/>
+                                <div class="o_row" attrs="{'invisible':[('consumption_method', '!=', 'percentage')]}">
+                                    <field name="percentage_deposit"/>
+                                    <span>%%</span>
+                                </div>
+                                <label for="percentage_bonus" attrs="{'invisible':[('consumption_method', '!=', 'percentage')]}"/>
+                                <div class="o_row" attrs="{'invisible':[('consumption_method', '!=', 'percentage')]}">
+                                    <field name="percentage_bonus"/>
+                                    <span>%%</span>
+                                </div>
+                                <label for="formula_deposit" attrs="{'invisible':[('consumption_method', '!=', 'formula')]}"/>
+                                <div class="o_row" attrs="{'invisible':[('consumption_method', '!=', 'formula')]}">
+                                    <field name="formula_deposit"/>
+                                </div>
+                                <label for="formula_present" attrs="{'invisible':[('consumption_method', '!=', 'formula')]}"/>
+                                <div class="o_row" attrs="{'invisible':[('consumption_method', '!=', 'formula')]}">
+                                    <field name="formula_present"/>
+                                </div>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_ps_member_category_item_tree" model="ir.ui.view">
+            <field name="name">ps.member.category.item.tree</field>
+            <field name="model">ps.member.category.point.rule</field>
+            <field name="arch" type="xml">
+                <tree string="Point detail setting">
+                    <field colspan="4" name="name"/>
+                    <field name="product_id" groups="product.group_product_variant"/>
+                    <field name="product_template_id"/>
+                    <field name="categ_id"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="expense"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_ps_member_category_item_form" model="ir.ui.view">
+            <field name="name">ps.member.category.item.form</field>
+            <field name="model">ps.member.category.point.rule</field>
+            <field name="arch" type="xml">
+                <form string="Point detail setting">
+                    <group>
+                        <group>
+                            <field name="applied_on" widget="radio"/>
+                            <field name="categ_id" attrs="{'invisible':[('applied_on', '!=', '2_product_category')], 'required':[('applied_on', '=', '2_product_category')]}" string="Product Category"/>
+                            <field name="product_template_id" attrs="{'invisible':[('applied_on', '!=', '1_product')],'required':[('applied_on', '=', '1_product')]}" string="Product"/>
+                            <field name="product_id" attrs="{'invisible':[('applied_on', '!=', '0_product_variant')],'required':[('applied_on', '=', '0_product_variant')]}" string="Product Variant"/>
+                        </group>
+                        <group>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group col="6" style="width:100%">
+                            <field name="expense"/>
+                            <field name="point"/>
+                            <field name="multiple"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_report_member_usage_statistics_tree" model="ir.ui.view">
+            <field name="name">ps.member.cashflow.account.summary.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Member Usage Statistics" create="false" name="member_usage_statistics">
+                    <field name="ps_member_no"/>
+                    <field name="name"/>
+                    <field name="ps_sum_deposit_amount"/>
+                    <field name="ps_sum_bonus_amount"/>
+                    <field name="ps_sum_bonus_point"/>
+                    <field name="ps_consume_count"/>
+                    <field name="ps_consume_amount"/>
+                    <field name="ps_sum_consume_cash"/>
+                    <field name="ps_sum_consume_deposit_amount"/>
+                    <field name="ps_sum_consume_bonus_amount"/>
+                    <field name="ps_sum_consume_bonus_point"/>
+                    <field name="ps_member_balance_deposit"/>
+                    <field name="ps_member_balance_bonus"/>
+                    <field name="ps_member_balance_point"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_report_member_usage_statistics" model="ir.actions.act_window">
+            <field name="name">Member Usage Statistics</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_report_member_usage_statistics_tree"/>
+            <field name="domain">[('ps_member_no','!=','')]</field>
+            <field name="context">{'remove_name': 'all_remove'}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create" style="display:block;">
+                No record.
+              </p>
+            </field>
+        </record>
+        <menuitem id="menu_report_member_usage_statistics" name="Member Usage Statistics" action="action_report_member_usage_statistics" parent="point_of_sale.menu_point_rep" sequence="5"/>
+    </data>
+</odoo>

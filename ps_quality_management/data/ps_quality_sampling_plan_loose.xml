@@ -1,0 +1,3177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="quality_sampling_plan_53" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/53</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value1"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_54" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/54</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value2"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_55" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/55</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value3"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_56" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/56</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value4"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_57" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/57</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value5"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_58" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/58</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value6"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_59" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/59</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value7"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_60" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/60</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value8"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_61" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/61</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value9"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_62" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/62</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value10"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_63" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/63</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value11"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_64" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/64</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value12"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_65" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/65</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value13"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_66" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/66</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value14"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_67" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/67</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value15"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 0,
+                'quantity_reject': 1,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_68" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/68</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value16"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_69" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/69</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value17"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_70" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/70</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value18"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 1,
+                'quantity_reject': 2,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_71" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/71</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value19"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 2,
+                'quantity_reject': 3,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_72" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/72</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value20"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 3,
+                'quantity_reject': 4,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_73" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/73</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value21"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 5,
+                'quantity_reject': 6,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 6,
+                'quantity_reject': 7,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_74" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/74</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value22"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 7,
+                'quantity_reject': 8,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 7,
+                'quantity_reject': 8,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 8,
+                'quantity_reject': 9,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_75" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/75</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value23"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 10,
+                'quantity_reject': 11,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 21,
+                'quantity_reject': 22
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_76" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/76</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value24"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 14,
+                'quantity_reject': 15,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_77" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/77</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value25"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 21,
+                'quantity_reject': 22,
+            })
+            ]"/>
+        </record>
+
+        <record id="quality_sampling_plan_78" model="ps.quality.sampling.plan">
+            <field name="name">GB/T2828.1-2012/78</field>
+            <field name="type">gb</field>
+            <field name="strictness">reduced</field>
+            <field name="aql" ref="value26"/>
+            <field name="state">confirmed</field>
+            <field name="line_ids" model="ps.quality.sampling.plan.line" eval="[
+            (0, 0, {
+                'sample_size_code': 'A',
+				'sequence': 1,
+                'sample_size': 2,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'B',
+				'sequence': 2,
+                'sample_size': 2,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'C',
+				'sequence': 3,
+                'sample_size': 2,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'D',
+				'sequence': 4,
+                'sample_size': 3,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'E',
+				'sequence': 5,
+                'sample_size': 5,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'F',
+				'sequence': 6,
+                'sample_size': 8,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'G',
+				'sequence': 7,
+                'sample_size': 13,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'H',
+				'sequence': 8,
+                'sample_size': 20,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'J',
+				'sequence': 9,
+                'sample_size': 32,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'K',
+				'sequence': 10,
+                'sample_size': 50,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'L',
+				'sequence': 11,
+                'sample_size': 80,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'M',
+				'sequence': 12,
+                'sample_size': 125,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'N',
+				'sequence': 13,
+                'sample_size': 200,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'P',
+				'sequence': 14,
+                'sample_size': 315,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'Q',
+				'sequence': 15,
+                'sample_size': 500,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            }),
+            (0, 0, {
+                'sample_size_code': 'R',
+				'sequence': 16,
+                'sample_size': 800,
+                'quantity_accept': 30,
+                'quantity_reject': 31,
+            })
+            ]"/>
+        </record>
+
+    </data>
+</odoo>

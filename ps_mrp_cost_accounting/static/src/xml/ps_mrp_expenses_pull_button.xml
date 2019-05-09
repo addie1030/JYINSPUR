@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_add" t-operation="after">
+            <button type="button" class="btn btn-primary o_button_expenses_pull" style="display:none;">
+                Pull
+            </button>
+            <button type="button" class="btn btn-primary o_button_invest_yield_collect" style="display:none;">
+                Invest Yield Collect
+            </button>
+            <button type="button" class="btn btn-primary o_button_complete_warehouse_qty" style="display:none;">
+                Complete Warehouse Quantity
+            </button>
+            <button type="button" class="btn btn-primary o_button_expense_distribution" style="display:none;">
+                Distribution
+            </button>
+            <button type="button" class="btn btn-primary o_button_cost_allocation" style="display:none;">
+                CostAllocation
+            </button>
+            <button type="button" class="btn btn-primary o_button_cost_calculation" style="display:none;">
+                In Product Cost Calculation
+            </button>
+        </t>
+    </t>
+</template>

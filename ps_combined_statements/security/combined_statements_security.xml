@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- 应用系统分类设置 -->
+	<record model="ir.module.category" id="module_category_combined_statements">
+		<field name="name">Combined Statements</field>
+		<field name="description">Help you manage your consolidated reports.</field>
+		<field name="sequence">99</field>
+	</record>
+
+	<!--角色定义-->
+	<record id="group_combined_statements_user" model="res.groups">
+		<field name="name">User</field>
+		<field name="category_id" ref="module_category_combined_statements" />
+		<field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+	</record>
+
+	<record id="group_combined_statements_financial_manager" model="res.groups">
+		<field name="name">Financial Manager</field>
+		<field name="category_id" ref="module_category_combined_statements" />
+		<field name="implied_ids" eval="[(4, ref('group_combined_statements_user'))]" />
+	</record>
+
+	<record id="group_combined_statements_manager" model="res.groups">
+		<field name="name">Manager</field>
+		<field name="category_id" ref="module_category_combined_statements" />
+		<field name="implied_ids" eval="[(4, ref('group_combined_statements_financial_manager'))]" />
+		<!--<field name="users" eval="[(4, ref('base.user_root'))]" />-->
+		<field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+	</record>
+
+	<data>
+
+		<!-- 默认用户权限 -->
+		<record id="base.default_user" model="res.users">
+			<field name="groups_id" eval="[(4, ref('group_combined_statements_user'))]" />
+		</record>
+
+		<!-- 集团树架构过滤规则 -->
+		<record id="combined_statements_organization_rule" model="ir.rule">
+			<field name="name">Group Tree Architecture Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_organization" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_organization_manager_rule" model="ir.rule">
+			<field name="name">Group Tree Architecture Filtration Rule Administrator</field>
+			<field name="model_id" ref="model_ps_combined_statements_organization" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+		<!-- 投资表过滤规则 -->
+		<record id="combined_statements_equity_investment_rule" model="ir.rule">
+			<field name="name">Investment Statement Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_equity_investment" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('investment_organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_equity_investment_manager_rule" model="ir.rule">
+			<field name="name">Investment Statement Filtration Rule Manager</field>
+			<field name="model_id" ref="model_ps_combined_statements_equity_investment" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--被投资表过滤-->
+		<record id="combined_statements_equity_investment_reverse_rule" model="ir.rule">
+			<field name="name">FILTERING RULES OF INVESTMENT TABLE</field>
+			<field name="model_id" ref="model_ps_combined_statements_equity_investment_reverse" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('investment_organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_equity_investment_reverse_manager_rule" model="ir.rule">
+			<field name="name">Invested Statement Filter Rule Manager</field>
+			<field name="model_id" ref="model_ps_combined_statements_equity_investment_reverse" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--子公司净利润表-->
+		<record id="subsidiary_profit_statement_rule" model="ir.rule">
+			<field name="name">Subsidiary Company Profit Statement Filtering Rules</field>
+			<field name="model_id" ref="model_ps_subsidiary_profit_statement" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('investment_organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="subsidiary_profit_statement_manager_rule" model="ir.rule">
+			<field name="name">Subsidiary Profit Statement Filtration Rule Manager</field>
+			<field name="model_id" ref="model_ps_subsidiary_profit_statement" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--公允价值差异表-->
+		<record id="combined_statements_fair_rule" model="ir.rule">
+			<field name="name">Filtering Rules for Fair Value Difference Statement</field>
+			<field name="model_id" ref="model_ps_combined_statements_fair_value_difference" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('investment_organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_fair_manager_rule" model="ir.rule">
+			<field name="name">Fair Value Difference Table Filtration Manager Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_fair_value_difference" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--内部长期资产交易明细表-->
+		<record id="combined_statements_inside_asset_deal_rule" model="ir.rule">
+			<field name="name">Internal Long-Term Assets Transaction Detailed List Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_inside_asset_deal" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('investment_organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_inside_asset_deal_manager_rule" model="ir.rule">
+			<field name="name">Internal Long-Term Asset Transaction Details Administrator's Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_inside_asset_deal" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--内部存货交易明细表-->
+		<record id="combined_statements_inside_familiar_deal_rule" model="ir.rule">
+			<field name="name">Internal Inventory Transaction Detailed List Filtering Rules</field>
+			<field name="model_id" ref="model_combined_statements_inside_inventory_deal" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('investment_organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_inside_familiar_deal_manager_rule" model="ir.rule">
+			<field name="name">Internal Inventory Transaction List Administrator's Filtering Rules</field>
+			<field name="model_id" ref="model_combined_statements_inside_inventory_deal" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--内部现金流量明细表-->
+		<record id="combined_statements_inside_cash_detail_rule" model="ir.rule">
+			<field name="name">Internal Cash Flow Schedule Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_inside_cash_detail" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('investment_organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_inside_cash_detail_manager_rule" model="ir.rule">
+			<field name="name">Internal Cash Flow Schedule Administrator's Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_inside_cash_detail" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--内部债权债务表-->
+		<record id="combined_statements_inside_credit_debt_rule" model="ir.rule">
+			<field name="name">Internal Credit and Debt Statement Filtration Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_inside_credit_debt" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('investment_organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_inside_credit_debt_manager_rule" model="ir.rule">
+			<field name="name">Internal Credit and Debt Statement Administrator's Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_inside_credit_debt" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--内部常见交易表-->
+		<record id="combined_statements_inside_familiar_deal_rule" model="ir.rule">
+			<field name="name">Internal Common Transaction Table Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_inside_familiar_deal" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('investment_organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_inside_familiar_deal_manager_rule" model="ir.rule">
+			<field name="name">Internal Common Transaction Table Administrator Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_inside_familiar_deal" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+		<!--个别报表-->
+		<record id="respective_statements_project_rule" model="ir.rule">
+			<field name="name">Individual report filtering rules</field>
+			<field name="model_id" ref="model_ps_respective_statements_project" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('app_company', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="respective_statements_project_manager_rule" model="ir.rule">
+			<field name="name">Individual Report Administrator Filtering Rules</field>
+			<field name="model_id" ref="model_ps_respective_statements_project" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--调整工作底稿规律规则-->
+		<record id="combined_statements_adjust_working_paper_project_rule" model="ir.rule">
+			<field name="name">Adjustment of filter rules for working manuscripts</field>
+			<field name="model_id" ref="model_ps_combined_statements_adjust_working_paper_project" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('organization_id', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_adjust_working_paper_project_manager_rule" model="ir.rule">
+			<field name="name">Adjust Work Manuscript Administrator's Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_adjust_working_paper_project" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--工作底稿查询-->
+		<record id="combined_statements_working_paper_project_rule" model="ir.rule">
+			<field name="name">Work manuscript filtering rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_working_paper_project" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('merger_organization', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_working_paper_project_manager_rule" model="ir.rule">
+			<field name="name">Work Manuscript Administrator Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_working_paper_project" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+
+
+		<!--合并报表查询-->
+		<record id="combined_statements_merge_project_rule" model="ir.rule">
+			<field name="name">Merged Report Filtration Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_merge_project" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_user')),(4, ref('ps_combined_statements.group_combined_statements_financial_manager'))]" />
+			<field name="domain_force">[('merge_organization', 'in', [x.id for x in user.organization_ids])]</field>
+		</record>
+
+		<record id="combined_statements_merge_project_manager_rule" model="ir.rule">
+			<field name="name">Merge Report Administrator Filtering Rules</field>
+			<field name="model_id" ref="model_ps_combined_statements_merge_project" />
+			<field name="groups" eval="[(4, ref('ps_combined_statements.group_combined_statements_manager'))]" />
+			<field name="domain_force">[(1 ,'=', 1)]</field>
+		</record>
+
+
+	</data>
+</odoo>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ps_quality_data_dict_tree_directory" model="ir.ui.view">
+            <field name="name">ps.quality.data.dict.tree</field>
+            <field name="model">ps.quality.data_dict</field>
+            <field name="arch" type="xml">
+                <tree string="Data Directory">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="application"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ps_quality_data_dict_tree" model="ir.ui.view">
+            <field name="name">ps.quality.data.dict.tree</field>
+            <field name="model">ps.quality.data_dict</field>
+            <field name="arch" type="xml">
+                <tree string="Data Directory" editable="bottom" >
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="application" invisible="True"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="action_ps_quality_data_dictionary" model="ir.actions.act_window">
+            <field name="name">Data Dictionary</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.data_dict</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ps_quality_data_dict_tree_directory"/>
+        </record>
+
+
+        <record id="action_ps_quality_quality_criterion" model="ir.actions.act_window">
+            <field name="name">Quality Criterion</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.data_dict</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ps_quality_data_dict_tree"/>
+            <field name="domain">[('application','=','quality_criterion')]</field>
+            <field name="context">{'application':'quality_criterion'}</field>
+        </record>
+
+
+        <record id="action_ps_quality_testing_method" model="ir.actions.act_window">
+            <field name="name">Inspection Method</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.data_dict</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ps_quality_data_dict_tree"/>
+            <field name="domain">[('application','=','testing_method')]</field>
+            <field name="context">{'application':'testing_method'}</field>
+        </record>
+
+
+        <record id="action_ps_quality_testing_equipment" model="ir.actions.act_window">
+            <field name="name">Inspection Equipment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.data_dict</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ps_quality_data_dict_tree"/>
+            <field name="domain">[('application','=','testing_equipment')]</field>
+            <field name="context">{'application':'testing_equipment'}</field>
+        </record>
+
+
+        <record id="action_ps_quality_basis" model="ir.actions.act_window">
+            <field name="name">Basis</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.data_dict</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ps_quality_data_dict_tree"/>
+            <field name="domain">[('application','=','basis')]</field>
+            <field name="context">{'application':'basis'}</field>
+        </record>
+
+
+        <record id="action_ps_quality_defect_type" model="ir.actions.act_window">
+            <field name="name">Defect Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.data_dict</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ps_quality_data_dict_tree"/>
+            <field name="domain">[('application','=','defect_type')]</field>
+            <field name="context">{'application':'defect_type'}</field>
+        </record>
+
+        <record id="action_ps_quality_defect_cause" model="ir.actions.act_window">
+            <field name="name">Defect Cause</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.data_dict</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ps_quality_data_dict_tree"/>
+            <field name="domain">[('application','=','defect_cause')]</field>
+            <field name="context">{'application':'defect_cause'}</field>
+        </record>
+
+        <record id="action_ps_quality_defect_consequence" model="ir.actions.act_window">
+            <field name="name">Defect Consequence</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.data_dict</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="ps_quality_data_dict_tree"/>
+            <field name="domain">[('application','=','defect_consequence')]</field>
+            <field name="context">{'application':'defect_consequence'}</field>
+        </record>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="combined_statements_elimination_entry_form" model="ir.ui.view">
+			<field name="name">elimination entry</field>
+			<field name="model">ps.combined.statements.elimination.entry</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<!--<button name="post" states="draft" string="Post" type="object" class="oe_highlight" />-->
+						<field name="state" widget="statusbar" statusbar_visible="draft,confirm" />
+					</header>
+					<sheet>
+
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active"
+									type="object"
+									confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?"
+									class="oe_stat_button"
+									icon="fa-archive">
+								<field name="active" widget="boolean_button" options="{'terminology': 'archive'}" />
+							</button>
+						</div>
+
+						<group>
+							<group>
+								<field name="code" />
+								<field name="generation_type" options="{'horizontal': true}" class="oe_edit_only" widget="radio" />
+								<field name="date" />
+								<field name="amount" attrs="{'invisible': True}" />
+								<field name="business_type" />
+
+							</group>
+							<group>
+								<field name="type" options="{'horizontal': true}" class="oe_edit_only" widget="radio"/>
+								<field name="ref_company" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'adjustment')], 'required': [('type', '!=', 'adjustment')]}"/>
+								<field name="organization_id" attrs="{'invisible': [('type', '=', 'counteract')], 'required': [('type', '!=', 'counteract')]}"/>
+								<field name="description" />
+							</group>
+						</group>
+
+						<notebook>
+							<page>
+								<field name="line_ids">
+									<tree editable="bottom">
+										<field name="subject" string="Subject" />
+										<field name="label" />
+										<field name="debit" />
+										<field name="credit" />
+										<field name="date" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+
+						<!--<group>-->
+							<!--<field name="company_id" groups="base.group_multi_company" options="{'no_create_edit': True}" />-->
+							<!--<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}" />-->
+						<!--</group>-->
+
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="combined_statements_elimination_line_form" model="ir.ui.view">
+			<field name="name">elimination line</field>
+			<field name="model">ps.combined.statements.elimination.line</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<group>
+								<field name="parent_id" attrs="{'invisible': True}" />
+								<field name="subject" />
+								<field name="label" />
+								<field name="summary" />
+							</group>
+							<group>
+								<field name="date" />
+								<field name="debit" />
+								<field name="credit" />
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="combined_statements_elimination_entry_tree" model="ir.ui.view">
+			<field name="name">elimination entry</field>
+			<field name="model">ps.combined.statements.elimination.entry</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="code" />
+					<field name="generation_type" />
+					<field name="date" />
+					<field name="type" />
+					<field name="amount" />
+					<field name="ref_company" />
+					<field name="organization_id" />
+					<field name="business_type" />
+					<field name="description" />
+					<field name="currency_id" />
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+				</tree>
+			</field>
+		</record>
+
+		<record id="combined_statements_elimination_entry_act_window" model="ir.actions.act_window">
+			<field name="name">elimination entry</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">ps.combined.statements.elimination.entry</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<!-- Offset entries menu -->
+		<menuitem id="combined_statements_elimination_entry_menu"
+				  name="Offset entry"
+				  parent="combined_statements_merger_business"
+				  action="combined_statements_elimination_entry_act_window"
+				  sequence="1" />
+
+		<!-- Combine the entry list menu -->
+		<!--<menuitem id="combined_statements_elimination_entry_table_menu"-->
+				  <!--name="Combine the entry list "-->
+				  <!--parent="combined_statements_merger_related_search"-->
+				  <!--action="combined_statements_elimination_entry_act_window"-->
+				  <!--sequence="5" />-->
+
+
+		<record id="merge_elimination_entry_type_tree" model="ir.ui.view">
+			<field name="name">ps.merge.elimination.entry.type.tree</field>
+			<field name="model">ps.merge.elimination.entry.type</field>
+			<field name="arch" type="xml">
+				<tree string="">
+					<field name="name" />
+					<field name="model" />
+					<field name="re_selection" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="merge_elimination_entry_type_form" model="ir.ui.view">
+			<field name="name">ps.merge.elimination.entry.type.form</field>
+			<field name="model">ps.merge.elimination.entry.type</field>
+			<field name="arch" type="xml">
+				<form string="">
+					<sheet>
+						<group>
+							<field name="name" />
+							<field name="model" />
+							<field name="re_selection" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="merge_elimination_entry_type_act_window" model="ir.actions.act_window">
+			<field name="name">Offset Type</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">ps.merge.elimination.entry.type</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="merge_elimination_entry_type_menu" name="Merge Offset Type" parent="combined_statements_merger_basic_record" action="merge_elimination_entry_type_act_window" sequence="5" />
+
+
+	</data>
+</odoo>

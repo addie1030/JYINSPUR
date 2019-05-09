@@ -1,0 +1,869 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_sale_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 22:41+0000\n"
+"PO-Revision-Date: 2019-01-22 22:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__is_invoice
+msgid "? is invoice"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.actions.act_window,name:ps_sale_contract.add_advances_action
+msgid "Add Advances"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.actions.act_window,name:ps_sale_contract.add_sales_order_action
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+msgid "Add Sales Order"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_advances_received_wizard
+msgid "Add advances"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:328
+#, python-format
+msgid "Advances payment(origin:%s,amount:%s) must be reconciled first"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount
+msgid "Amount"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_deliveried
+msgid "Amount Deliveried"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_ordered
+msgid "Amount Ordered"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_prepaid
+msgid "Amount Prepaid"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_tax
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__amount_tax
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__amount_tax
+msgid "Amount Tax"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_untaxed
+msgid "Amount Untax"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__amount_prepaid
+msgid "Amount prepaid"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Approve"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+#: selection:ps.sale.contract,state:0
+msgid "Approved"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Arrange Delivery"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_advances_received_wizard
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Cancel"
+msgstr ""
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Close"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+#: selection:ps.sale.contract,state:0
+msgid "Closed"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+msgid "Confirm"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+#: selection:ps.sale.contract,state:0
+msgid "Confirmed"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__content
+msgid "Content"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__contract_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__contract_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__contract_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_sale_order__contract_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_sale_order_line__contract_id
+msgid "Contract"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__amount
+msgid "Contract Amount"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_sale_order_line__contract_line_id
+msgid "Contract Line"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Contract Number"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.actions.act_window,help:ps_sale_contract.action_orders_all
+msgid "Create a Quotation, the first step of a new sale."
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__customer_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__customer_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__customer_id
+msgid "Customer"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__customer_representative_id
+msgid "Customer Representative"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__date_confirmed
+msgid "Date Confirmed"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract_line__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__delivery
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__delivery_count
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Delivery"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__description
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__description
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__show_description
+msgid "Description"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:344
+#, python-format
+msgid "Don't delete contracts."
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_advances_received.py:69
+#, python-format
+msgid "Down Payment"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__product_id
+msgid "Down Payment Product"
+msgstr ""
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__validity_date
+msgid "Expiration Date"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__fiscal_position_id
+msgid "Fiscal Position"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+msgid "Group By"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__invoice
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Invoice"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__invoice_address_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__invoice_address_id
+msgid "Invoice Address"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__invoice_count
+msgid "Invoices"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__is_expired
+msgid "Is Expired"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__is_reconciled
+msgid "Is Reconciled"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__line_ids
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Line"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_contract_sales_order_wizard__validity_date
+msgid "Manually set the expiration date of your quotation (offer), or it will set the date automatically based on the template if online quotation is installed."
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__name
+msgid "Name"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:13
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:133
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:137
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:139
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_has_error_counter
+msgid "Number of error"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__order
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Order"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__contract_line
+msgid "Order Line"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__order_remaining
+msgid "Order Remaining"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_contract_sales_order.py:115
+#, python-format
+msgid "Order quantity of %s must less than remaining quantity"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__order_count
+msgid "Orders"
+msgstr ""
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__paid_amount_prepaid
+msgid "Paid Amount Prepaid"
+msgstr ""
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:363
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:366
+#, python-format
+msgid "Please add some contract details."
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:323
+#, python-format
+msgid "Please confirm all invoice have confirmed"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:333
+#, python-format
+msgid "Please confirm all invoice have created"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__price
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__price
+msgid "Price"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__pricelist_id
+msgid "Pricelist"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__product_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__product_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__show_product_id
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+msgid "Product"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__product_no_variant_attribute_value_ids
+msgid "Product attribute values that do not create variants"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_contract_sales_order.py:117
+#, python-format
+msgid "Product quantity can not less than zero."
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__qty_delivered
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__qty_delivered
+msgid "Qty Delivered"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__qty_invoiced
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__qty_invoiced
+msgid "Qty Invoiced"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__qty_ordered
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__qty_ordered
+msgid "Qty Ordered"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__qty_remaining
+msgid "Qty Remaining"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__quantity
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.actions.act_window,name:ps_sale_contract.action_window_sale_contract
+#: model:ir.ui.menu,name:ps_sale_contract.menu_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_tree
+msgid "Sale Contract"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_sale_order
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__sale_order_ids
+msgid "Sale Order"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__sale_order_line_ids
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__sale_order_line_ids
+msgid "Sale Order Line"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__sale_person_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__sale_person_id
+msgid "Sale Person"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__sale_team_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__sale_team_id
+msgid "Sale Team"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+msgid "Sales Order Lines"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.actions.act_window,name:ps_sale_contract.action_orders_all
+msgid "Sales Orders"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+msgid "Search Sale Contract"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__state
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__state
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__state
+msgid "Status"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__stock_move_ids
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__stock_move_ids
+msgid "Stock Move"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__stock_picking_ids
+msgid "Stock Picking"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Submit"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__subtotal
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__subtotal
+msgid "Subtotal"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__tax_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__tax_id
+msgid "Tax"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__term_ids
+msgid "Term"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:350
+#, python-format
+msgid "The amount prepaid can not less than zero."
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:352
+#, python-format
+msgid "The amount prepaid can not more than contract amount."
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:357
+#, python-format
+msgid "The number is error."
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_advances_received.py:59
+#, python-format
+msgid "The value of the down payment amount must be positive."
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_advances_received.py:36
+#, python-format
+msgid "The value of the prepaid amount must be positive."
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_advances_received.py:51
+#, python-format
+msgid "There is no income account defined for this product: \"%s\".You may have to install a chart of account from Accounting app, settings menu."
+msgstr ""
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__uom_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__show_uom_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__uom_id
+msgid "Uom"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__valid_days
+msgid "Valid Days"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__valid_from
+msgid "Valid From"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__valid_to
+msgid "Valid To"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__wizard_contract_id
+msgid "Wizard Contract"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_contract_sales_order_wizard
+msgid "Wizard contract to add sales order"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_advances_received_wizard
+msgid "Wizard to add advances received"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__customer_id
+msgid "You can find a customer by its Name, TIN, Email or Internal Reference."
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "action_draft"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_contract_sales_order.py:25
+#, python-format
+msgid "arrange date must late than current date"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_advances_received_wizard
+msgid "create invoice"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__wizard_line_id
+msgid "line number"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+msgid "or"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_sale_contract
+msgid "ps sale contract"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_sale_contract_term
+msgid "sale contract term"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_sale_contract_line
+msgid "sale contract.line"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_sale_contract_line_wizard
+msgid "sale contract.line.wizard"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "sale.contract.line"
+msgstr ""
+

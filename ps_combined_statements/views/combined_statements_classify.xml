@@ -1,0 +1,95 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<odoo>-->
+    <!--<data>-->
+		<!--<record id="combined_statements_classify_form" model="ir.ui.view">-->
+			<!--<field name="name">Classify</field>-->
+			<!--<field name="model">ps.combined.statements.classify</field>-->
+			<!--<field name="arch" type="xml">-->
+				<!--<form>-->
+					<!--<sheet>-->
+						<!--<div class="oe_button_box" name="button_box">-->
+							<!--<button name="toggle_active"-->
+									<!--type="object"-->
+									<!--confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?"-->
+									<!--class="oe_stat_button"-->
+									<!--icon="fa-archive">-->
+								<!--<field name="active" widget="boolean_button" options='{"terminology": "archive"}' />-->
+							<!--</button>-->
+						<!--</div>-->
+
+						<!--<div class="oe_title">-->
+						    <!--<label for="name" class="oe_edit_only"/>-->
+						    <!--<h1>-->
+						        <!--<field name="name" placeholder="e.g. Big merger..."/>-->
+						    <!--</h1>-->
+						<!--</div>-->
+
+						<!--<group>-->
+							<!--<group>-->
+								<!--<field name="code" />-->
+							<!--</group>-->
+							<!--<group>-->
+
+								<!--<field name="tree_id" />-->
+							<!--</group>-->
+						<!--</group>-->
+
+						<!--<notebook>-->
+							<!--<page string="With the company ">-->
+								<!--<field name="organization_ids" widget="many2many_kanban">-->
+									<!--<kanban quick_create="false" create="true" delete="true">-->
+										<!--<field name="ref_company_name" />-->
+										<!--<templates>-->
+											<!--<t t-name="kanban-box">-->
+												<!--<div class="oe_kanban_global_click" style="position: relative">-->
+													<!--<a t-if="! read_only_mode" type="delete" style="position: absolute; right: 0; padding: 4px; diplay: inline-block">X</a>-->
+													<!--<div class="oe_module_vignette">-->
+														<!--<div class="oe_module_desc">-->
+															<!--<field name="ref_company_name" />-->
+														<!--</div>-->
+													<!--</div>-->
+												<!--</div>-->
+											<!--</t>-->
+										<!--</templates>-->
+									<!--</kanban>-->
+								<!--</field>-->
+							<!--</page>-->
+						<!--</notebook>-->
+
+
+						<!--<group>-->
+							<!--<field name="company_id" groups="base.group_multi_company"/>-->
+						<!--</group>-->
+					<!--</sheet>-->
+				<!--</form>-->
+			<!--</field>-->
+		<!--</record>-->
+
+		<!--<record id="combined_statements_classify_tree" model="ir.ui.view">-->
+		    <!--<field name="name">Classify List</field>-->
+		    <!--<field name="model">ps.combined.statements.classify</field>-->
+		    <!--<field name="arch" type="xml">-->
+		        <!--<tree>-->
+					<!--<field name="code" />-->
+					<!--<field name="name"/>-->
+					<!--<field name="organization_ids" />-->
+					<!--<field name="tree_id" />-->
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+				<!--</tree>-->
+		    <!--</field>-->
+		<!--</record>-->
+
+		<!--<record id="combined_statements_classify_act_window" model="ir.actions.act_window">-->
+		    <!--<field name="name">Merging classification</field>-->
+		    <!--<field name="type">ir.actions.act_window</field>-->
+		    <!--<field name="res_model">ps.combined.statements.classify</field>-->
+		    <!--<field name="view_mode">tree,form</field>-->
+		<!--</record>-->
+
+		<!--<menuitem id="combined_statements_classify_menu"-->
+				  <!--name="Merged classification definition"-->
+				  <!--parent="combined_statements_setting"-->
+				  <!--action="combined_statements_classify_act_window"-->
+				  <!--sequence="99"/>-->
+    <!--</data>-->
+<!--</odoo>-->

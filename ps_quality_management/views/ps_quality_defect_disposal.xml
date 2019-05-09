@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- Tree View-->
+        <record id="ps_quality_defect_disposal_tree_view" model="ir.ui.view">
+            <field name="name">quality_defect_disposal_tree_view</field>
+            <field name="model">ps.quality.defect.disposal</field>
+            <field name="arch" type="xml">
+                <tree string="quality defect disposal tree view" create="false">
+                    <field name="name" readonly="True"/>
+                    <field name="type_id" readonly="True" required="True"/>
+                    <field name="document" required="True" readonly="True"/>
+                    <field name="comments"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View-->
+        <record id="ps_quality_defect_disposal_form_view" model="ir.ui.view">
+            <field name="name">quality_defect_disposal_form_view</field>
+            <field name="model">ps.quality.defect.disposal</field>
+            <field name="arch" type="xml">
+                <form string="quality defect disposal form view" create="false" delete="false">
+                    <header>
+                        <button name="action_approve" states="draft" type="object" string="Confirmed"
+                                 class="btn-primary" groups="quality.group_quality_manager"/>
+                        <button name="action_validated" states="confirmed" type="object" string="validated"
+                                class="btn-primary" groups="quality.group_quality_manager"/>
+                        <button name="action_cancel" states="confirmed" type="object" string="Cancel"
+                                class="btn-primary" groups="quality.group_quality_manager"/>
+                        <button name="action_draft" states="cancel" type="object" string="Set Draft"
+                                groups="quality.group_quality_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,validated,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+
+                            <button name="action_view_stock_move" type="object"
+                                    class="oe_stat_button" icon="fa-pencil-square-o"
+                                    attrs="{'invisible': [('state', '!=', 'validated')]}">
+                                 <field name="picking_count" widget="statinfo" string="Picking Orders"/>
+                            </button>
+                        </div>
+
+                        <h1 class="d-none d-md-block">
+                            <field name="name" readonly="1" required="True" string="name"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="type_id" readonly="True"/>
+                                <field name="lot_id" readonly="True" groups="stock.group_production_lot"/>
+                            </group>
+                            <group>
+                                <field name="document" readonly="True"/>
+                                <field name="comments"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="quality defect disposal line">
+                                <field name="quality_defect_disposal_line_ids"
+                                       attrs="{'readonly':[('state', 'not in', ['draft', 'confirmed'])]}">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="product_id" readonly="True"/>
+                                        <field name="partner_id" readonly="True"/>
+                                        <!--<field name="workshop_id" readonly="True"/>-->
+                                        <!--<field name="operation_id" readonly="True"/>-->
+                                        <!--<field name="decision_check_id" readonly="True"/>-->
+                                        <field name="qty_ng" readonly="True"/>
+                                        <field name="decision_id" required="True"/>
+                                        <field name="qty" required="True"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="product_id" readonly="True"/>
+                                            <field name="partner_id" readonly="True"/>
+                                            <!--<field name="decision_check_id" readonly="True"/>-->
+                                            <field name="qty_ng" readonly="True"/>
+                                            <field name="decision_id" required="True"/>
+                                            <field name="qty" required="True"/>
+                                        </group>
+                                    </form>
+                                </field>
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="ps_quality_defect_disposal_search_view" model="ir.ui.view">
+            <field name="name">quality_defect_disposal_search_view</field>
+            <field name="model">ps.quality.defect.disposal</field>
+            <field name="arch" type="xml">
+                <search string="Quality Defect Disposal Search View">
+                    <field name="name" string="name"/>
+                    <filter name="Confirmed" string="Confirmed" domain="[('state','=','confirmed')]"/>
+                    <filter name="Cancel" string="Cancel" domain="[('state','=','cancel')]"/>
+                    <filter name="Closed" string="Closed" domain="[('state','=','closed')]"/>
+                    <filter name="Draft" string="Draft" domain="[('state','=','closed')]"/>
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter string="States" domain="" context="{'group_by':'state'}"
+                                name="state_group"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_window_ps_quality_defect_disposal" model="ir.actions.act_window">
+            <!--action to ps quality defect disposal view-->
+            <field name="name">Quality Defect Disposal</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.defect.disposal</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

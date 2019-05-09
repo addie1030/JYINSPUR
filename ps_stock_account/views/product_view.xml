@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_window_account_china_center_product_accounting_view1" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="product.product_template_kanban_view"/>
+            <field name="act_window_id" ref="stock.product_template_action_product"/>
+        </record>
+
+        <record id="action_window_account_china_center_product_accounting_view2" model="ir.actions.act_window.view">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="product.product_template_tree_view"/>
+            <field name="act_window_id" ref="stock.product_template_action_product"/>
+        </record>
+
+        <record id="action_window_account_china_center_product_accounting_view3" model="ir.actions.act_window.view">
+            <field name="sequence" eval="3"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="product.product_template_only_form_view"/>
+            <field name="act_window_id" ref="stock.product_template_action_product"/>
+        </record>
+
+		<!--产品类别科目对应tree视图继承-->
+        <record id="product_category_stock_account_china_center_tree_view" model="ir.ui.view">
+            <field name="name">product.category.accounting.tree.inherit</field>
+            <field name="model">product.category</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="ps_account_center.product_category_accounting_tree"/>
+            <field name="arch" type="xml">
+                <field name="property_account_expense_categ_id" position="after">
+                    <field name="property_stock_account_input_categ_id"/>
+                    <field name="property_stock_account_output_categ_id"/>
+                    <field name="property_stock_valuation_account_id"/>
+                    <field name="property_stock_journal"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- 产品类别科目对应form视图继承 -->
+        <record id="product_category_stock_account_china_center_form_view1" model="ir.ui.view">
+            <field name="name">product.category.accounting.form.inherit</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="ps_account_center.view_category_property_form"/>
+            <field name="inherit_id" ref="ps_account_center.view_category_property_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='account_attr_form']" position="after">                     
+                    <group string="Accounting inventory attribute">
+                        <field name="property_stock_account_input_categ_id"
+                               domain="[('deprecated', '=', False)]"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="property_stock_account_output_categ_id"
+                               domain="[('deprecated', '=', False)]"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="property_stock_valuation_account_id"
+                               domain="[('deprecated', '=', False)]"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="property_stock_journal"
+                               options="{'no_create': True, 'no_open': True}"/>
+                    </group>
+                             
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_category_stock_account_china_center_form_view2" model="ir.ui.view">
+            <field name="name">product.category.accounting.form.inherit11</field>
+            <field name="model">ps.product.category.account.bulk.setting.wizard</field>
+            <field name="inherit_id" ref="ps_account_center.product_category_batchsetting_view"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='account_attr_form_batch']" position="after">                     
+                    <group string="Accounting inventory attribute">
+                        <field name="property_stock_account_input_categ_id"
+                               domain="[('deprecated', '=', False)]"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="property_stock_account_output_categ_id"
+                               domain="[('deprecated', '=', False)]"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="property_stock_valuation_account_id"
+                               domain="[('deprecated', '=', False)]"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="property_stock_journal"
+                               options="{'no_create': True, 'no_open': True}"/>
+                    </group>   
+                </xpath>
+            </field>
+        </record>
+
+        <!-- 继承并隐藏掉产品类别设置中库存计价选项 START-->
+        <record id="view_category_property_form_inherit" model="ir.ui.view">
+            <field name="name">product.category.stock.account.form.inherit</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="stock_account.view_category_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_valuation']" position="replace">
+                    <field name="property_valuation" invisible="1" groups="account.group_account_user"/>
+                </xpath>
+            </field>
+        </record>
+        <!--继承并隐藏掉产品类别设置中库存计价选项 END -->
+        
+    </data>
+</odoo>

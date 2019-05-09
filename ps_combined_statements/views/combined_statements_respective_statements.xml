@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!--Individual report project form-->
+		<record id="combined_respective_statements_project_form" model="ir.ui.view">
+			<field name="name">ps.respective.statements.project.form</field>
+			<field name="model">ps.respective.statements.project</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="design_journaling" type="object" string="View report" class="oe_highlight" />
+						<field name="state" string="state" widget="statusbar" statusbar_visible="normal,locking,archive" />
+					</header>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active"
+									type="object"
+									confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?"
+									class="oe_stat_button"
+									icon="fa-archive">
+								<field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+							</button>
+						</div>
+						<div class="oe_title">
+							<label for="code" string="Reporting number" class="oe_edit_only" />
+							<h2>
+								<field name="code"/>
+							</h2>
+						</div>
+						<group>
+							<group>
+								<!--<field name="name" placeholder="e.g. Project Name." string="Report the name "/>-->
+								<field name="period" string="Period"/>
+							</group>
+							<group>
+								<field name="project_id" string="Nest table"/>
+								<field name="app_company" string="Reporting company"/>
+							</group>
+						</group>
+						<group>
+							<!--<field name="currency_id" groups="base.group_multi_company" />-->
+							<!--<field name="company_id" groups="base.group_multi_company" />-->
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!--Individual report project search -->
+		<record id="combined_respective_statements_project_search" model="ir.ui.view">
+			<field name="name">respective statements project Seacrh</field>
+			<field name="model">ps.respective.statements.project</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="code" string="number" domain="[()]"/>
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+					<filter string="draft" name="current" domain="[('active', '=', True)]" />
+					<filter string="complete" name="archived" domain="[('active', '=', False)]" />
+					<filter string="Individual reports" name="statements_type" domain="[('statements_type', '=', 'respective')]" />
+					<filter string="Adjustment table" name="statements_type" domain="[('statements_type', '=', 'adjust')]" />
+				</search>
+			</field>
+		</record>
+
+		<!--Individual report item list -->
+		<record id="combined_respective_statements_project_tree" model="ir.ui.view">
+			<field name="name">respective statements project.tree</field>
+			<field name="model">ps.respective.statements.project</field>
+			<field name="arch" type="xml">
+				<tree create="false" import="false">
+					<field name="state" string="state"/>
+					<field name="statements_type"/>
+					<field name="code" string="number"/>
+					<field name="period" string="Period"/>
+					<field name="project_id" string="Nest table"/>
+					<field name="app_company" string="Reporting company"/>
+					<field name="app_company_code" string="Reporting company" invisible="1"/>
+					<field name="datetime" string="Date of reporting"/>
+					<field name="app_user" string="ReportPerson"/>
+					<!--<field name="company_id" groups="base.group_multi_company" string="The company "/>-->
+				</tree>
+			</field>
+		</record>
+
+
+		<!--Individual items -->
+		<record id="combined_respective_statements_project_act_window" model="ir.actions.act_window">
+			<field name="name">Individual report status query</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">ps.respective.statements.project</field>
+			<field name="view_mode">tree</field>
+			<field name="search_view_id" ref="combined_respective_statements_project_search" />
+			<field name="help" type="html">
+		      <p class="oe_view_nocontent_create">
+		      </p>
+		    </field>
+		</record>
+
+
+		<!-- Individual statements report status query menu  -->
+		<menuitem id="combined_respective_statements_project_menu"
+				  name="Individual report status query"
+				  parent="ps_combined_statements.combined_statements_merger_respective_business"
+				  action="combined_respective_statements_project_act_window"
+				  sequence="10" />
+
+
+	</data>
+</odoo>

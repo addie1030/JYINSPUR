@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_ps_stock_picking_create_move_list" model="ir.ui.view">
+            <field name="name">ps.stock.picking.create.move.list</field>
+            <field name="model">ps.stock.picking.create.move</field>
+            <field name="arch" type="xml">
+                <tree string="Stock Pickings Create Move">
+                    <field name="name"/>
+                    <field name="picking_type_id"/>
+                    <field name="is_merge"/>
+                    <field name="move_date"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_ps_stock_picking_create_move_form" model="ir.ui.view">
+            <field name="name">ps.stock.picking.create.move.form</field>
+            <field name="model">ps.stock.picking.create.move</field>
+            <field name="arch" type="xml">
+                <form string="Stock Pickings Create Move" >
+                    <sheet>
+                        <button name="refresh_data"  string="Refresh" type="object"
+                                  class="oe_highlight"
+                                  groups="account.group_account_manager"
+                        />
+                        <group>
+                            <group>
+                                <field name="picking_type_id"
+                                       string="Operation Type"
+                                       options="{'no_create_edit': True,'no_open': True}"
+                                       domain="[('code', '!=', 'internal')]"
+                                />
+                                <field name="move_date" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="is_merge" />
+                                <field name="date"  attrs="{'invisible': [('is_merge','=',False)]}"/>
+                            </group>
+                        </group>
+                        <!--<notebook>-->
+                            <field name="stock_picking_ids" widget="one2many_list">
+                                <tree delete="false" create="false" editable="false" class="ps_stock_picking_move">
+                                    <field name="name" readonly="1"/>
+                                    <field name="location_dest_id" readonly="1"/>
+                                    <field name="partner_id" readonly="1"/>
+                                    <field name="origin"  readonly="1"/>
+                                    <field name="date"  readonly="1"/>
+                                    <field name="ref" readonly="1"/>
+                                    <field name="stock_picking_id" readonly="1"/>
+                                </tree>
+                            </field>
+                        <!--</notebook>-->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_ps_stock_picking_create_move" model="ir.actions.act_window">
+            <field name="name">Stock Pickings Create Move</field>
+            <field name="res_model">ps.stock.picking.create.move</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click Stock Pickings Create Move.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

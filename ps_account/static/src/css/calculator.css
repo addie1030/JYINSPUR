@@ -1,0 +1,8 @@
+#iCalcluator{position:absolute;left:115px;top:100px;background-color:white;filter:alpha(Opacity=0);-moz-opacity:0;opacity:0}
+ul>li>button{width:61px;height:35px;border:1px solid darkseagreen}
+li{list-style:none;margin-left:8px}
+#last_msg{height:60px;background:#F9F9F9;text-align:right;padding:0 10px 0 10px;line-height:20px;word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow: hidden}
+#Calculation{height:60px;text-align:right;padding:0 10px 0 10px;line-height:20px;word-wrap:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow: hidden}
+#Result{height:30px;text-align:right;padding:0 10px 0 10px;line-height:30px}
+hr{width:240px;color:#F0EFFA;margin:0 auto}
+#button_C{color:red}

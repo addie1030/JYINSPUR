@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="stock_outbound_reports_assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/ps_stock_account/static/src/js/outbound_cost_calculation.js"></script>
+                <script type="text/javascript" src="/ps_stock_account/static/src/js/tree_view_button.js"></script>
+                <script type="text/javascript" src="/ps_stock_account/static/src/js/ps_stock_account_reports.js"></script>
+                <script type="text/javascript" src="/ps_stock_account/static/src/js/ps_stock_summary_reports.js"></script>
+            </xpath>
+        </template>
+
+        <template id='template_outbound_cost_calculation_reports' inherit_id='ps_stock_account.template_outbound_cost_calculation_report' primary="True"></template>
+        <template id='template_inventory_reports' inherit_id='inventory_details_report_template' primary="True"></template>
+        <template id='template_inventory_summary_reports' inherit_id='ps_stock_account.template_stock_summary_report' primary="True"></template>
+    </data>
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Add  Product -->
+
+        <record id="product_product_computer" model="product.product">
+            <field name="name">lenovo L460</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">5005.0</field>
+            <field name="list_price">70000.0</field>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        </record>
+
+
+        <!-- Add  Stock Picking -->
+
+        <record id="quality_incoming_stock_move" model="stock.picking">
+            <field name="picking_type_id" ref="stock.picking_type_in"/>
+            <field name="partner_id" ref="base.res_partner_1"/>
+            <field name="date" eval="DateTime.today()"/>
+            <field name="location_id" ref="stock.stock_location_suppliers"/>
+            <field name="location_dest_id" ref="stock.stock_location_stock"/>
+            <field name="move_lines" model="stock.move" eval="[(0, 0, {
+                'name': 'quality move  stock',
+                'warehouse_id': ref('stock.warehouse0'),
+                'product_id': ref('product_product_computer'),
+                'product_uom': ref('uom.product_uom_unit'),
+                'product_uom_qty': 180.0,
+                'quantity_done': 180.0,
+                'picking_type_id': ref('stock.picking_type_in'),
+                'location_id': ref('stock.stock_location_suppliers'),
+                'location_dest_id': ref('stock.stock_location_stock'),
+            })]"/>
+        </record>
+
+    </data>
+</odoo>

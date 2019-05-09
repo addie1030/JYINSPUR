@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<!--Equity investment table form-->
+		<record id="combined_statements_equity_invested_form" model="ir.ui.view">
+			<field name="name">equity investment</field>
+			<field name="model">ps.combined.statements.equity.investment</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active"
+									type="object"
+									confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?"
+									class="oe_stat_button"
+									icon="fa-archive">
+								<field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+							</button>
+						</div>
+
+						<group>
+							<group>
+								<field name="investment_organization_id" />
+								<field name="investee_organization_id" />
+								<field name="accounting_method" />
+								<field name="period" />
+							</group>
+							<group>
+								<label for="shareholding_ratio" />
+								<div class="o_row">
+									<field name="shareholding_ratio" />
+									<span>%%</span>
+								</div>
+								<field name="currency_id" invisible="1" />
+								<field name="book_value" widget="monetary"/>
+								<field name="impairment_preparation" widget="monetary"/>
+								<!--<field name="investment_day"/>-->
+								<!--<field name="company_id" groups="base.group_multi_company"/>-->
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!--Equity investment table Tree-->
+		<record id="combined_statements_equity_invested_tree" model="ir.ui.view">
+		    <field name="name">equity investment</field>
+		    <field name="model">ps.combined.statements.equity.investment</field>
+		    <field name="arch" type="xml">
+		        <tree>
+					<field name="investment_organization_id" />
+					<field name="investee_organization_id" />
+					<field name="accounting_method" />
+					<field name="period" />
+					<field name="shareholding_ratio" />
+					<field name="currency_id" invisible="1" />
+					<field name="book_value" />
+					<field name="impairment_preparation"/>
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+		        </tree>
+		    </field>
+		</record>
+
+		<!--The invested table Tree-->
+		<record id="combined_statements_equity_invested_reverse_tree" model="ir.ui.view">
+		    <field name="name">Equity Investment Reverse Tree</field>
+		    <field name="model">ps.combined.statements.equity.investment.reverse</field>
+		    <field name="arch" type="xml">
+		        <tree string="">
+					<field name="investment_organization_id" />
+					<field name="investee_organization_id" />
+					<field name="investment_day" />
+					<field name="paid_in_capital" />
+					<field name="capital_reserves" />
+					<field name="surplus_reserve" />
+					<field name="undistributed_profits" />
+					<field name="treasury_stock" />
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+		        </tree>
+		    </field>
+		</record>
+		<!--The invested table form-->
+		<record id="combined_statements_equity_invested_reverse_form" model="ir.ui.view">
+			<field name="name">Equity Investment Reverse Form</field>
+			<field name="model">ps.combined.statements.equity.investment.reverse</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active"
+									type="object"
+									confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?"
+									class="oe_stat_button"
+									icon="fa-archive">
+								<field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+							</button>
+						</div>
+						<group>
+							<group>
+								<field name="investment_organization_id" />
+								<field name="investee_organization_id" />
+								<field name="investment_day" />
+								<field name="paid_in_capital" />
+							</group>
+							<group>
+								<field name="currency_id" invisible="1" />
+								<field name="capital_reserves" widget="monetary" />
+								<field name="surplus_reserve" widget="monetary" />
+								<field name="undistributed_profits" widget="monetary" />
+								<field name="treasury_stock" widget="monetary" />
+								<!--<field name="company_id" groups="base.group_multi_company" />-->
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!--Subsidiary of the income statement Tree-->
+		<record id="subsidiary_profit_statement_tree" model="ir.ui.view">
+		    <field name="name">subsidiary profit statement</field>
+		    <field name="model">ps.subsidiary.profit.statement</field>
+		    <field name="arch" type="xml">
+		        <tree string="">
+					<field name="investment_organization_id" />
+					<field name="investee_organization_id" />
+					<field name="investment_day"/>
+					<field name="cre_type" />
+					<field name="period"/>
+					<field name="current_period_profit"/>
+					<field name="cur_cash_dividends"/>
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+		        </tree>
+		    </field>
+		</record>
+		<!--Subsidiary of the income statement form-->
+		<record id="subsidiary_profit_statement_form" model="ir.ui.view">
+			<field name="name">subsidiary profit statement</field>
+			<field name="model">ps.subsidiary.profit.statement</field>
+			<field name="arch" type="xml">
+				<form string="">
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active"
+									type="object"
+									confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?"
+									class="oe_stat_button"
+									icon="fa-archive">
+								<field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+							</button>
+						</div>
+						<group>
+							<group>
+								<field name="investment_organization_id" />
+								<field name="investee_organization_id" />
+								<field name="investment_day" />
+								<field name="cre_type" />
+							</group>
+							<group>
+								<field name="currency_id" invisible="1" />
+								<field name="period"/>
+								<field name="current_period_profit" widget="monetary"/>
+								<field name="cur_cash_dividends" widget="monetary"/>
+								<!--<field name="company_id" groups="base.group_multi_company" />-->
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!--Change the type -->
+		<record id="change_type_tree" model="ir.ui.view">
+		    <field name="name">change type</field>
+		    <field name="model">ps.change.type</field>
+		    <field name="arch" type="xml">
+		        <tree string="">
+		            <field name="name"/>
+		            <field name="code"/>
+		        </tree>
+		    </field>
+		</record>
+		<!--Change the type window-->
+		<record id="change_type_window" model="ir.actions.act_window">
+		    <field name="name">Change Type</field>
+		    <field name="type">ir.actions.act_window</field>
+		    <field name="res_model">ps.change.type</field>
+		    <field name="view_mode">tree,form</field>
+		</record>
+
+		<!--Equity investment table window-->
+		<record id="combined_statements_equity_invested_act_window" model="ir.actions.act_window">
+		    <field name="name">Investment statement</field>
+		    <field name="type">ir.actions.act_window</field>
+		    <field name="res_model">ps.combined.statements.equity.investment</field>
+		    <field name="view_mode">tree,form</field>
+		</record>
+		<!--The invested table window-->
+		<record id="combined_statements_equity_invested_reverse_act_window" model="ir.actions.act_window">
+		    <field name="name">Bei Investment statement</field>
+		    <field name="type">ir.actions.act_window</field>
+		    <field name="res_model">ps.combined.statements.equity.investment.reverse</field>
+		    <field name="view_mode">tree,form</field>
+		</record>
+		<!--Subsidiary of the income statement window-->
+		<record id="subsidiary_profit_statement_window" model="ir.actions.act_window">
+		    <field name="name">Subsidiary Company Profit Statement</field>
+		    <field name="type">ir.actions.act_window</field>
+		    <field name="res_model">ps.subsidiary.profit.statement</field>
+		    <field name="view_mode">tree,form</field>
+		</record>
+
+		<!-- Equity investment table menu -->
+		<menuitem id="combined_statements_equity_invested_menu"
+				  name="Investment statement"
+				  parent="combined_statements_merger_investment"
+				  action="combined_statements_equity_invested_act_window"
+				  sequence="1"/>
+		<!-- The invested table menu -->
+		<menuitem id="combined_statements_equity_invested_reverse_menu"
+				  name="Bei Investment statement"
+				  parent="combined_statements_merger_investment"
+				  action="combined_statements_equity_invested_reverse_act_window"
+				  sequence="5"/>
+
+		<!-- Subsidiary of the income statement menu -->
+		<menuitem id="subsidiary_profit_statement_menu"
+				  name="Subsidiary Company Profit Statement"
+				  parent="combined_statements_merger_investment"
+				  action="subsidiary_profit_statement_window"
+				  sequence="10"/>
+
+
+		<!-- Change the type menu -->
+		<menuitem id="change_type_menu" name="Change Type" parent="combined_statements_basis_files" action="change_type_window" sequence="8"/>
+    </data>
+</odoo>

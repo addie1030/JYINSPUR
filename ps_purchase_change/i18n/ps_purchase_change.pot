@@ -1,0 +1,356 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_purchase_change
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-19 02:24+0000\n"
+"PO-Revision-Date: 2019-01-19 02:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_purchase_change
+#: code:addons/ps_purchase_change/models/ps_purchase_order_change.py:176
+#, python-format
+msgid " has nothing different with the former one"
+msgstr ""
+
+#. module: ps_purchase_change
+#: code:addons/ps_purchase_change/models/ps_purchase_order_change.py:61
+#, python-format
+msgid " is confirmed, can not be deleted."
+msgstr ""
+
+#. module: ps_purchase_change
+#: code:addons/ps_purchase_change/models/ps_purchase_order_change.py:114
+#, python-format
+msgid "All products in this order has been completely received and thus cannot be changed."
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__qty_invoiced
+msgid "Billed Qty"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__change_reason
+msgid "Change Reason"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__user_id
+msgid "Changer"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.actions.act_window,help:ps_purchase_change.ps_purchase_order_change_action_display_tree
+msgid "Click to create a purchase change order."
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__company_id
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.ps_purchase_order_change_form
+msgid "Confirm Order"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.view_ps_purchase_change_order_search
+#: selection:ps.purchase.order.change,state:0
+msgid "Confirmed"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.view_ps_purchase_change_order_search
+msgid "Confirmed Change Orders"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__create_uid
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__create_date
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__currency_id
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__change_date
+msgid "Date of Change"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,help:ps_purchase_change.field_ps_purchase_order_change__state
+#: model:ir.model.fields,help:ps_purchase_change.field_ps_purchase_order_change_line__state
+msgid "Defines the state of the purchase change order."
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__name
+msgid "Description"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__display_name
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__date
+msgid "Document Date"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__name
+msgid "Document No."
+msgstr ""
+
+#. module: ps_purchase_change
+#: sql_constraint:ps.purchase.order.change:0
+msgid "Document number cannot be repeated"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__state
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__state
+msgid "Document State"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.view_ps_purchase_change_order_search
+#: selection:ps.purchase.order.change,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.view_ps_purchase_change_order_search
+msgid "Draft Change Orders"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.view_ps_purchase_change_order_search
+msgid "Group By"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__id
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change____last_update
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__write_uid
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__write_date
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.view_ps_purchase_change_order_search
+msgid "Order Change Lists"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__order_id
+msgid "Origin Purchase Order"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__pre_product_qty
+msgid "Original Quantity"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__pre_price_unit
+msgid "Original Unit Price"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__product_id
+msgid "Product"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.ps_purchase_order_change_form
+msgid "Products"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model,name:ps_purchase_change.model_ps_purchase_order_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__order_change_id
+msgid "Purchase Change Order"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.actions.act_window,name:ps_purchase_change.ps_purchase_order_change_action_display_tree
+#: model:ir.ui.menu,name:ps_purchase_change.menu_ps_purchase_order_change_action_display_tree
+msgid "Purchase Change Orders"
+msgstr ""
+
+
+#. module: ps_purchase_change
+#: model:ir.model,name:ps_purchase_change.model_ps_purchase_order_change_line
+msgid "Purchase Change Order Line"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.ps_purchase_order_change_form
+msgid "Purchase Change Order Lines"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.ps_purchase_order_change_form
+#: model_terms:ir.ui.view,arch_db:ps_purchase_change.ps_purchase_order_change_tree
+msgid "Purchase Order Change"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__change_line_ids
+msgid "Purchase Order Change Line"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__order_line_id
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__product_qty
+msgid "Quantity"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__qty_received
+msgid "Received Qty"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,help:ps_purchase_change.field_ps_purchase_order_change__partner_ref
+msgid "Reference of the sales order or bid sent by the vendor. It's used to do the matching when you receive the products as this reference is usually written on the delivery order sent by your vendor."
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__price_subtotal
+msgid "Subtotal"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__price_tax
+msgid "Tax"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__amount_tax
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__taxes_id
+msgid "Taxes"
+msgstr ""
+
+#. module: ps_purchase_change
+#: code:addons/ps_purchase_change/models/ps_purchase_order_change.py:61
+#, python-format
+msgid "The change order "
+msgstr ""
+
+#. module: ps_purchase_change
+#: code:addons/ps_purchase_change/models/ps_purchase_order_change.py:182
+#, python-format
+msgid "The changed quantity must larger than quantity received."
+msgstr ""
+
+#. module: ps_purchase_change
+#: code:addons/ps_purchase_change/models/ps_purchase_order_change.py:176
+#, python-format
+msgid "The record containing "
+msgstr ""
+
+#. module: ps_purchase_change
+#: code:addons/ps_purchase_change/models/ps_purchase_order_change.py:42
+#, python-format
+msgid "There no change lines in this order, could not be saved"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,help:ps_purchase_change.field_ps_purchase_order_change_line__product_uom
+msgid "This comes from the purchase order line."
+msgstr ""
+
+#. module: ps_purchase_change
+#: code:addons/ps_purchase_change/models/ps_purchase_order_change.py:110
+#, python-format
+msgid "This order did not create backorder and thus cannot be changed."
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__amount_total
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__price_total
+msgid "Total"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__price_unit
+msgid "Unit Price"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__product_uom
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__amount_untaxed
+msgid "Untaxed Amount"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__partner_id
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change_line__partner_id
+msgid "Vendor"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,field_description:ps_purchase_change.field_ps_purchase_order_change__partner_ref
+msgid "Vendor Reference"
+msgstr ""
+
+#. module: ps_purchase_change
+#: model:ir.model.fields,help:ps_purchase_change.field_ps_purchase_order_change__partner_id
+#: model:ir.model.fields,help:ps_purchase_change.field_ps_purchase_order_change_line__partner_id
+msgid "You can find a vendor by its Name, TIN, Email or Internal Reference."
+msgstr ""
+

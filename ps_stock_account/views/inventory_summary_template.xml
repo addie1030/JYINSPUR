@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="line_template_stock_summary_report">
+            <span class="placeholder"></span>
+        </template>
+
+        <!--Main query framework-->
+        <template id="main_template_stock_summary_report">
+            <div class='o_account_reports_body'>
+                <div class="container o_account_reports_page o_account_reports_no_print">
+                    <!--主标题-->
+                    <h2><t t-esc="report.get('name')"></t></h2>
+                    <div class="table-responsive" style="margin-top:20px;" t-foreach="lines.get('lines')" t-as="row">
+                        <p class="name" t-esc="row['name']" ></p>
+                        <table width="100%" class="o_account_reports_table" border="1px" bordercolor="#ccc" style="margin-bottom:10px">
+                            <thead>
+                                <tr style="height:40px">
+                                    <t t-foreach="lines.get('columns_header')" t-as="column_header">
+                                        <th t-att-class="(column_header.get('class', ''))" t-att-style="column_header.get('style', '')">
+                                            <t t-esc="column_header.get('name')"/>
+                                        </th>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-if="lines.get('lines')">
+                                        <t t-call="ps_stock_account.line_template_stock_summary_report" />
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="js_account_report_footnotes"/>
+                </div>
+            </div>
+        </template>
+        <!--content of the query framework-->
+        <template id="ps_stock_account.template_stock_summary_report" inherit_id="ps_stock_account.main_template_stock_summary_report" primary="True">
+            <!--name of the query framework-->
+            <xpath expr="//p[hasclass('name')]" position="replace"></xpath>
+            <!--header of the query framework-->
+            <xpath expr="//thead" position="replace">
+                <t t-foreach="lines.get('columns_header')" t-as="column_header">
+                    <t t-foreach="column_header" t-as="item">
+                        <tr style="height:40px">
+                            <t t-foreach="item" t-as="o">
+                                <th t-att-class="(o.get('class', ''))" t-att-style="o.get('style', '')" t-att-rowspan="o.get('rowspan', '')"  t-att-colspan="o.get('colspan', '')">
+                                    <t t-esc="o.get('name')"/>
+                                </th>
+                            </t>
+                        </tr>
+                    </t>
+                </t>
+            </xpath>
+            <!--table body of the query framework-->
+            <xpath expr="//tbody" position="replace">
+                <t t-if="lines.get('lines')">
+                    <t t-call="ps_stock_account.template_stock_summary_line_report" />
+                </t>
+            </xpath>
+        </template>
+        <!--details data of body of the query framework-->
+        <template id="template_stock_summary_line_report" inherit_id="ps_stock_account.line_template_stock_summary_report" primary="True">
+            <xpath expr="//span[hasclass('placeholder')]" position="before">
+                <t t-foreach="row['columns']" t-as="line">
+                    <tr style="height:36px;">
+                        <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                            <span t-esc="line['name']" />
+                        </td>
+                        <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                            <span t-esc="line['default_code']" />
+                        </td>
+                        <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                            <span t-esc="line['categ_id']" />
+                        </td>
+                        <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                            <span t-esc="line['company_id']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['begin_qty']==0"></span>
+                            <span t-else="" t-esc="line['begin_qty']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['begin_price']==0"></span>
+                            <span t-else="" t-esc="line['begin_price']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['begin_value']==0"></span>
+                            <span t-else="" t-esc="line['begin_value']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['current_in_qty']==0"></span>
+                            <span t-else="" t-esc="line['current_in_qty']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['current_in_price']==0"></span>
+                            <span t-else="" t-esc="line['current_in_price']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['current_in_value']==0"></span>
+                            <span t-else="" t-esc="line['current_in_value']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['current_out_qty']==0"></span>
+                            <span t-else="" t-esc="line['current_out_qty']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['current_out_price']==0"></span>
+                            <span t-else="" t-esc="line['current_out_price']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['current_out_value']==0"></span>
+                            <span t-else="" t-esc="line['current_out_value']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['final_qty']==0"></span>
+                            <span t-else="" t-esc="line['final_qty']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['final_price']==0"></span>
+                            <span t-else="" t-esc="line['final_price']" />
+                        </td>
+                        <td style="text-align:right;vertical-align:middle;padding-right:5px">
+                            <span t-if="line['final_value']==0"></span>
+                            <span t-else="" t-esc="line['final_value']" />
+                        </td>
+                    </tr>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="assets_backend" name="web_enterprise assets backend" inherit_id="web_enterprise.assets_backend">
+        <xpath expr="//script[@src='/web_enterprise/static/src/js/home_menu.js']" position="replace" >
+            <script type="text/javascript" src="/ps_trial/static/src/js/home_menu.js"></script>
+        </xpath>
+    </template>
+</odoo>

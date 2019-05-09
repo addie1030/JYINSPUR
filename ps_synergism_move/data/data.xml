@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--会员类别编号自动生成-->
+        <record id="sequence_ps_account_move_trade" model="ir.sequence">
+			<field name="name">sequence_ps_trade_no</field>
+			<field name="code">ps.trade.no</field>
+			<field name="prefix">MC</field>
+            <field name="padding">4</field>
+			<field name="number_next">1</field>
+			<field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+		</record>
+    </data>
+</odoo>

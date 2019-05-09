@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="test_ps_credit_usage" model="ps.credit.usage">
+            <field name="partner_id" ref="base.res_partner_2"/>
+        </record>
+
+        <record id="test_ps_credit_check_scheme_id" model="ps.credit.check.scheme">
+            <field name="name">Test credit check scheme</field>
+            <field name="description">Test credit check scheme</field>
+            <field name="is_default">False</field>
+            <field name="state">approved</field>
+            <field name="validate_by">1</field>
+            <field name="validate_date" eval="DateTime.today()"/>
+        </record>
+
+        <record id="test_ps_credit_check_rule" model="ps.credit.check.rule">
+            <field name="document">sales_order</field>
+            <field name="control_strength">warning</field>
+            <field name="check_credit_limit">True</field>
+            <field name="check_credit_ratio">True</field>
+            <field name="check_overdue_days">True</field>
+            <field name="check_overdue_amount">True</field>
+            <field name="check_overdue_ratio">True</field>
+            <field name="excessive_condition">single</field>
+            <field name="scheme_id" ref="test_ps_credit_check_scheme_id"/>
+        </record>
+
+        <record id="test_ps_credit_check_profile" model="ps.credit.profile">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.res_partner_2"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="level_id" ref="ps_credit_management.create_level_id"/>
+            <field name="state">confirmed</field>
+            <field name="check_scheme_id" ref="test_ps_credit_check_scheme_id"/>
+            <field name="ratio">0.1</field>
+            <field name="credit_limit">200</field>
+            <field name="order_limit">500</field>
+            <field name="overdue_days">3</field>
+            <field name="overdue_limit">100</field>
+            <field name="overdue_ratio">0.1</field>
+            <field name="date_start" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="cycle_days">30</field>
+        </record>
+
+    </data>
+</odoo>

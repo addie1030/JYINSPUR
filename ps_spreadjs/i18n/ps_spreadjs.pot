@@ -1,0 +1,1886 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_spreadjs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-19 06:57+0000\n"
+"PO-Revision-Date: 2019-01-19 06:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,help:ps_spreadjs.field_ps_statement_sheet_cells__report_date
+#: model:ir.model.fields,help:ps_spreadjs.field_ps_statement_sheet_columns__report_date
+#: model:ir.model.fields,help:ps_spreadjs.field_ps_statement_sheet_rows__report_date
+#: model:ir.model.fields,help:ps_spreadjs.field_ps_statement_statements__report_date
+msgid "6位年月日期，例如201801"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__cell_coloffset
+msgid "Cell Coloffset"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__cell_formula
+msgid "Cell Formula"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__cell_isprotect
+msgid "Cell Isprotect"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__cell_order
+msgid "Cell Order"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__cell_rowoffset
+msgid "Cell Rowoffset"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__character_data
+msgid "Character Data"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__code
+msgid "Code"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__coefficient
+msgid "Coefficient"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__col_coordinate
+msgid "Col Coordinate"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__col_isadjust
+msgid "Col Isadjust"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__col_isamount
+msgid "Col Isamount"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__col_isitem
+msgid "Col Isitem"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__col_isnumber
+msgid "Col Isnumber"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__col_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__col_name
+msgid "Col Name"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__col_order
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__col_order
+msgid "Col Order"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_base__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify_details__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables__create_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_base__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify_details__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables__create_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__date
+msgid "Date"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end__datefield
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__datefield
+msgid "Datefield"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables__description
+msgid "Description"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_base__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_calculate_temptable__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify_details__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables__display_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__endflag
+msgid "Endflag"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__formula_id
+msgid "Formula"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__formula_design
+msgid "Formula Design"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__formula_level
+msgid "Formula Level"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__formula_note
+msgid "Formula Note"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__formula_object
+msgid "Formula Object"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__formula_params_ids
+msgid "Formula Params"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__formula_scope
+msgid "Formula Scope"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__formula_summary
+msgid "Formula Summary"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__formula_type
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__formula_type
+msgid "Formula Type"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__func_id
+msgid "Func"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__func_design
+msgid "Func Design"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__func_note
+msgid "Func Note"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__func_params_ids
+msgid "Func Params"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__func_scope
+msgid "Func Scope"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__func_summary
+msgid "Func Summary"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__func_type
+msgid "Func Type"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_base__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_calculate_temptable__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify_details__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables__id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end__isdateflag
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__isdateflag
+msgid "Isdateflag"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_base____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_calculate_temptable____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify_details____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables____last_update
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_base__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify_details__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables__write_uid
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_base__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify_details__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables__write_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__monetaryunit
+msgid "Monetaryunit"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formulas__name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_functions__name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables__name
+msgid "Name"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__note
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__note
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__note
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__note
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__note
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__note
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__note
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__note
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_system_variables__note
+msgid "Note"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__numerical_data
+msgid "Numerical Data"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__operator
+msgid "Operator"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__param_id
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__param_id
+msgid "Param"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__param_category
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__param_category
+msgid "Param Category"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__param_description
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__param_description
+msgid "Param Description"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__param_note
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__param_note
+msgid "Param Note"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__param_sysvar
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__param_sysvar
+msgid "Param Sysvar"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__param_type
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__param_type
+msgid "Param Type"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_formula_params__param_value
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_function_params__param_value
+msgid "Param Value"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_monetaryunit_define__precision
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__precision
+msgid "Precision"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_res_company__ps_statement_calculation_contains_unaccounted
+msgid "Ps Statement Calculation Contains Unaccounted"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__report_code
+msgid "Report Code"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_columns__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__report_date
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__report_date
+msgid "Report Date"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_archive__report_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_calculate__report_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_export__report_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_import__report_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_input__report_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_monthend__report_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_output__report_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_unarchive__report_name
+msgid "Report Name"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__row_coordinate
+msgid "Row Coordinate"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_cells__row_order
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_sheet_rows__row_order
+msgid "Row Order"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_res_config_settings__ps_statement_calculation_contains_unaccounted
+msgid "Statement calculation contains unposted voucher"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_month_end__tablename
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_year_end__tablename
+msgid "Tablename"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:281
+#, python-format
+msgid "fx"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_base
+msgid "ps.statement.base"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_calculate_temptable
+msgid "ps.statement.calculate.temptable"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:116
+#, python-format
+msgid "上边框"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:152
+#, python-format
+msgid "下划线"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:121
+#, python-format
+msgid "下边框"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements
+msgid "中国报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_calculate_temptable__ye
+msgid "余额"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_tree
+msgid "作用范围"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__isuse
+msgid "使用中"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:18
+#, python-format
+msgid "保存报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:101
+#, python-format
+msgid "全边框"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:416
+#, python-format
+msgid "全部清除"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__company_id
+msgid "公司"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:399
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_calculate_temptable__formula
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statements_sheet_cells_tree
+#, python-format
+msgid "公式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+msgid "公式参数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_tree
+msgid "公式名称"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_tree
+msgid "公式描述"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:32
+#, python-format
+msgid "公式替换"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+msgid "公式模型"
+msgstr ""
+
+#. module: ps_spreadjs
+#: code:addons/ps_spreadjs/models/ps_statement_base.py:2447
+#, python-format
+msgid "公式模型已经改变，需要点击“生成公式参数”重新生成公式参数。"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:31
+#, python-format
+msgid "公式状态"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_tree
+msgid "公式类型"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:126
+#, python-format
+msgid "内边框"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify__name
+msgid "分类名称"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify__code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify_details__classify_id
+msgid "分类编号"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statements_sheet_cells_tree
+msgid "列位移"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:398
+#, python-format
+msgid "列偏移量"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_tree
+msgid "列名称"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:396
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__col_order
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_tree
+#, python-format
+msgid "列坐标"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statements_sheet_cells_tree
+msgid "列序号"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:238
+#, python-format
+msgid "列操作"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__col_type
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_tree
+msgid "列类型"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:387
+#, python-format
+msgid "删除公式"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:247
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:421
+#, python-format
+msgid "删除列"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:157
+#, python-format
+msgid "删除线"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:212
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:420
+#, python-format
+msgid "删除行"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:65
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:407
+#, python-format
+msgid "剪切"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formulas,formula_scope:0
+#: selection:ps.statement.functions,func_scope:0
+msgid "区域公式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formulas,formula_scope:0
+#: selection:ps.statement.functions,func_scope:0
+msgid "单元公式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statements_sheet_cells_tree
+msgid "单元序号"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_statements_sheet_cells
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statements_sheet_cells_tree
+msgid "单元格信息"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:77
+#, python-format
+msgid "单元格合并"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:424
+#, python-format
+msgid "单元格数据构成"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:59
+#, python-format
+msgid "单元格格式"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:50
+#, python-format
+msgid "单元格背景"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_tree
+msgid "参数内容"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_tree
+msgid "参数名称"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_tree
+msgid "参数序号"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_tree
+msgid "参数描述"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_tree
+msgid "参数类型"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+msgid "取数SQL，使用双#号定义参数，例如，#ACCOUNT#"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__access_coord
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_tree
+msgid "取数坐标"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_tree
+msgid "取数对象"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_newstatement
+msgid "取消"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:91
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:411
+#, python-format
+msgid "取消合并"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:111
+#, python-format
+msgid "右边框"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:86
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:410
+#, python-format
+msgid "合并单元格"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:81
+#, python-format
+msgid "合并后居中"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.pivot.details,col_type:0
+msgid "固定列"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:187
+#, python-format
+msgid "垂直上对齐"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:197
+#, python-format
+msgid "垂直下对齐"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:183
+#, python-format
+msgid "垂直对齐"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:192
+#, python-format
+msgid "垂直居中对齐"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_tree
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_tree
+msgid "备注"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:62
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:408
+#, python-format
+msgid "复制"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:131
+#, python-format
+msgid "外边框"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:44
+#, python-format
+msgid "字体"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:47
+#, python-format
+msgid "字体颜色"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formula.params,param_type:0
+#: selection:ps.statement.function.params,param_type:0
+msgid "字符型"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.statements,category:0
+#: selection:ps.statement.statements.newstatement,category:0
+msgid "季报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements_import
+msgid "导入报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements_export
+msgid "导出报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:21
+#, python-format
+msgid "导出数据"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_statements_archive
+msgid "封存启封"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:106
+#, python-format
+msgid "左边框"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formula.params,param_type:0
+#: selection:ps.statement.function.params,param_type:0
+msgid "布尔型"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.statements,category:0
+#: selection:ps.statement.statements.newstatement,category:0
+msgid "年报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__modelname
+msgid "当前模块"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__total_cols
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__total_cols
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+msgid "总列数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__total_rows
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+msgid "总行数"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:74
+#, python-format
+msgid "恢复"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formula.params,param_category:0
+#: selection:ps.statement.function.params,param_category:0
+msgid "手工录入"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_pivot_template.xml:8
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:16
+#, python-format
+msgid "打印预览"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/tree_view_button.xml:6
+#, python-format
+msgid "打开报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify__classify_details_ids
+msgid "报表分类"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_classify_details
+msgid "报表分类包含报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_classify
+msgid "报表分类字典"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__report_name
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__report_name
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+msgid "报表名称"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.server,name:ps_spreadjs.action_view_statements_unarchive
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements_unarchive
+msgid "报表启封"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.server,name:ps_spreadjs.action_view_statements_archive
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements_archive
+msgid "报表封存"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:36
+#, python-format
+msgid "报表属性"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__report_date
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statements_sheet_cells_tree
+msgid "报表日期"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_statements_query
+msgid "报表查询"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__report_format
+msgid "报表格式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__report_type
+msgid "报表类型"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_classify_details__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__report_code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__report_code
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_tree
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statements_sheet_cells_tree
+msgid "报表编号"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_statements_unlock
+msgid "报表解锁"
+msgstr ""
+
+#. module: ps_spreadjs
+#: code:addons/ps_spreadjs/models/ps_statement_base.py:2446
+#, python-format
+msgid "提示信息"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:419
+#, python-format
+msgid "插入列"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:418
+#, python-format
+msgid "插入行"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:71
+#, python-format
+msgid "撤销"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+msgid "数值列"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formula.params,param_type:0
+#: selection:ps.statement.function.params,param_type:0
+msgid "数值型"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:34
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_pivot
+#, python-format
+msgid "数据透视"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:33
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_pivot_details
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_tree
+#, python-format
+msgid "数据透视定义"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_pivot
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_tree
+msgid "数据透视表"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:148
+#, python-format
+msgid "文字装饰"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:56
+#, python-format
+msgid "斜体"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_newstatement
+msgid "新建"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:386
+#, python-format
+msgid "新建公式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.act_window,name:ps_spreadjs.action_view_statement_statements_newstatement
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements_newstatement
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_newstatement
+msgid "新建报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:136
+#, python-format
+msgid "无边框"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.statements,category:0
+#: selection:ps.statement.statements.newstatement,category:0
+msgid "日报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__detail_id
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_tree
+msgid "明细编号"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__isissued
+msgid "是否下发"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__isarchive
+msgid "是否封存"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__iscurrentfiscalyear
+msgid "是否当前会计年度报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:252
+#, python-format
+msgid "显示列"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:217
+#, python-format
+msgid "显示行"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:388
+#, python-format
+msgid "替换公式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,help:ps_spreadjs.field_ps_statement_statements__report_name
+msgid "最长255位"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.statements,category:0
+#: selection:ps.statement.statements.newstatement,category:0
+msgid "月报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.server,name:ps_spreadjs.action_view_statements_monthend
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements_monthend
+msgid "月末存档"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_pivot_template.xml:12
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:8
+#, python-format
+msgid "期间"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_tree
+msgid "来源方式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__title_rows
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__title_rows
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+msgid "标题行数"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:177
+#, python-format
+msgid "水平右对齐"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:163
+#, python-format
+msgid "水平对齐"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:172
+#, python-format
+msgid "水平居中对齐"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:167
+#, python-format
+msgid "水平左对齐"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+msgid "汇总列"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:242
+#, python-format
+msgid "添加列"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:207
+#, python-format
+msgid "添加行"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:414
+#, python-format
+msgid "清除公式"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:413
+#, python-format
+msgid "清除内容"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:415
+#, python-format
+msgid "清除格式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_form
+msgid "生成公式参数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_form
+msgid "生成透视明细"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:53
+#, python-format
+msgid "粗体"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:68
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:409
+#, python-format
+msgid "粘贴"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formulas,formula_type:0
+#: selection:ps.statement.functions,func_type:0
+msgid "系统"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formula.params,param_category:0
+#: selection:ps.statement.function.params,param_category:0
+msgid "系统参数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_newstatement
+msgid "编号为4位字符"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_details_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_form
+msgid "编号为两位字符"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_form
+msgid "编号为两位字符，生成调整报表后，编号不允许修改"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+msgid "编报时间"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__category
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__category
+msgid "编报类型"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:262
+#, python-format
+msgid "自动列宽"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:273
+#, python-format
+msgid "自动换行"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:227
+#, python-format
+msgid "自动行高"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formulas,formula_type:0
+#: selection:ps.statement.functions,func_type:0
+msgid "自定义"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_statements_custom_formula
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_tree
+msgid "自定义公式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_formulas_params_tree
+msgid "自定义公式参数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statements_sheet_cells_tree
+msgid "行位移"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:397
+#, python-format
+msgid "行偏移量"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:395
+#, python-format
+msgid "行坐标"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statements_sheet_cells_tree
+msgid "行序号"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:203
+#, python-format
+msgid "行操作"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__body_rows
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__body_rows
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+msgid "表体行数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__head_rows
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__head_rows
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+msgid "表头行数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements__tail_rows
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_statements_newstatement__tail_rows
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+msgid "表尾行数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.formula.params,param_category:0
+#: selection:ps.statement.function.params,param_category:0
+msgid "表格取数"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:17
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements_calculate
+#, python-format
+msgid "计算报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:423
+#, python-format
+msgid "计算选中区域"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_statements_settings
+msgid "设置"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:267
+#, python-format
+msgid "设置列宽"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:232
+#, python-format
+msgid "设置行高"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:97
+#, python-format
+msgid "设置边框"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:141
+#, python-format
+msgid "详细设置"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+msgid "调整列"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_tree
+msgid "调整名称"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_tree
+msgid "调整符号"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_tree
+msgid "调整精度"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_tree
+msgid "调整系数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_tree
+msgid "调整编号"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_statements
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_statements_tree
+msgid "财务报表"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_formula_params
+msgid "财务报表公式参数字典"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_formulas
+msgid "财务报表公式字典"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_functions
+msgid "财务报表函数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_function_params
+msgid "财务报表函数参数"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_sheet_columns
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+msgid "财务报表列字典"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_sheet_cells
+msgid "财务报表单元字典"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_year_end
+msgid "财务报表年结信息"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_month_end
+msgid "财务报表月结信息"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_system_variables
+msgid "财务报表系统变量字典"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_sheet_rows
+msgid "财务报表行字典"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements_input
+msgid "转入数据"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:20
+#, python-format
+msgid "转入格式"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_pivot_template.xml:9
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_statements_output
+#, python-format
+msgid "转出数据"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:19
+#, python-format
+msgid "转出格式"
+msgstr ""
+
+#. module: ps_spreadjs
+#: selection:ps.statement.pivot.details,col_type:0
+msgid "透视列"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__name
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_tree
+msgid "透视名称"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__pivot_details_ids
+msgid "透视定义"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_form
+msgid "透视明细"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot__code
+#: model:ir.model.fields,field_description:ps_spreadjs.field_ps_statement_pivot_details__pivot_id
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_pivot_tree
+msgid "透视编号"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_form
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_tree
+msgid "金额单位"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_monetaryunitdefine
+#: model:ir.model,name:ps_spreadjs.model_ps_statement_monetaryunit_define
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.action_window_monetaryunitdefine_tree
+msgid "金额单位定义"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:35
+#: model:ir.actions.act_window,name:ps_spreadjs.action_window_statements_adjust_adjust
+#, python-format
+msgid "金额单位调整"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:257
+#, python-format
+msgid "隐藏列"
+msgstr ""
+
+#. module: ps_spreadjs
+#. openerp-web
+#: code:addons/ps_spreadjs/static/src/xml/statements_template.xml:222
+#, python-format
+msgid "隐藏行"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model_terms:ir.ui.view,arch_db:ps_spreadjs.view_statement_columns_tree
+msgid "项目列"
+msgstr ""
+
+#. module: ps_spreadjs
+#: model:ir.model.fields,help:ps_spreadjs.field_ps_statement_statements__report_code
+msgid "默认4位报表编号，最长20位，不支持特殊字符"
+msgstr ""
+

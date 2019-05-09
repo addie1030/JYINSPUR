@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_contract_tree" model="ir.ui.view">
+        <field name="name">ps.sale.contract.tree</field>
+        <field name="model">ps.sale.contract</field>
+        <field name="arch" type="xml">
+            <tree string="Sale Contract">
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="customer_representative_id"/>
+                <field name="date_confirmed"/>
+                <field name="valid_from"/>
+                <field name="valid_to"/>
+                <field name="amount_prepaid"/>
+                <field name="amount_ordered"/>
+                <field name="amount_deliveried"/>
+                <field name="amount_untaxed"/>
+                <field name="amount_tax"/>
+                <field name="sale_team_id"/>
+                <field name="sale_person_id"/>
+                <field name="company_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sale_contract_filter" model="ir.ui.view">
+        <!--search view-->
+        <field name="name">ps.sale.contract.select</field>
+        <field name="model">ps.sale.contract</field>
+        <field name="arch" type="xml">
+            <search string="Search Sale Contract">
+                <field name="name"/>
+                <field name="state" attrs="{'invisible': True}"/>
+                <field name="customer_id"/>
+                <field name="line_ids" string="Product"/>
+                <group expand="0" name="group_by" string="Group By">
+                    <filter name="Confirmed" string="Confirmed" domain="[('state','=','confirmed')]"/>
+                    <filter name="Approved" string="Approved" domain="[('state','=','approved')]"/>
+                    <filter name="Closed" string="Closed" domain="[('state','=','closed')]"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sale_contract_line_form" model="ir.ui.view">
+        <field name="name">ps.sale.contract.form</field>
+        <field name="model">ps.sale.contract</field>
+        <field name="arch" type="xml">
+            <form string="Contract Number">
+                <header>
+                    <button name="action_submit" states="draft" type="object" string="Submit" class="btn-primary"/>
+                    <button name="action_approve" states="confirmed" type="object" string="Approve" class="btn-primary"
+                            groups="sales_team.group_sale_manager"/>
+                    <button name="action_draft" states="confirmed,cancelled" type="object" string="action_draft"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,confirmed,approved,closed,cancelled"/>
+                    <field name="is_invoice" attrs="{'invisible': True}"/>
+                    <field name="order_remaining" attrs="{'invisible': True}"/>
+                    <field name="is_reconciled" attrs="{'invisible': True}"/>
+                    <field name="is_expired" attrs="{'invisible': True}"/>
+
+                    <button name="%(add_sales_order_action)d" class="btn-primary" type="action" string="Arrange Delivery"
+                            attrs="{'invisible':['|',('state','!=','approved'),'|',('order_remaining','!=',True),('is_expired','=',True)]}"/>
+                    <button name="action_close" states="approved" type="object" string="Close"
+                            groups="sales_team.group_sale_manager"
+                            attrs="{'invisible':['|',('state','!=','approved'),('is_reconciled','!=',True)]}"/>
+                    <button name="action_cancel" states="approved" type="object" string="Cancel"
+                            groups="sales_team.group_sale_manager"/>
+                </header>
+
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_order"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-ticket"
+                                attrs="{'invisible': [('order_count', '=', 0)]}">
+                            <field name="order_count" widget="statinfo" string="Order"/>
+                        </button>
+                        <button name="action_view_delivery"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-truck"
+                                attrs="{'invisible': [('delivery_count', '=', 0)]}">
+                            <field name="delivery_count" widget="statinfo" string="Delivery"/>
+                        </button>
+                        <button name="action_view_invoice"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-pencil-square-o"
+                                attrs="{'invisible': [('invoice_count', '=', 0)]}">
+                            <field name="invoice_count" widget="statinfo" string="Invoice"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <!--Contract Number-->
+                        <group>
+                            <field name="customer_id" domain="[('customer','=',True)]"
+                                   context="{'search_default_customer':1, 'show_address': 1, 'show_vat': True}"
+                                   attrs="{'readonly':[('state','!=','draft')]}" required='True'
+                                   options="{'no_create_edit': 'True','no_create':'True'}"/>
+                            <field name="customer_representative_id" context="{'default_type':'contact'}"
+                                   domain="[('parent_id.id','=',customer_id)]"
+                                   options='{"always_reload": True,"no_create_edit": "True","no_create":"True","no_create":"True"}'
+                                   attrs="{'readonly':[('state','!=','draft')]}" required='True'/>
+                            <field name="invoice_address_id" context="{'default_type':'invoice'}"
+                                   domain="[('parent_id.id','=',customer_id)]"
+                                   options='{"always_reload": True,"no_create_edit": "True","no_create":"True"}'
+                                   attrs="{'readonly':[('state','!=','draft')]}" required='True'/>
+                            <field name="date_confirmed" readonly="True"/>
+                            <field name="valid_from" attrs="{'readonly':[('state','!=','draft')]}" required='True'/>
+                            <field name="valid_days" attrs="{'readonly':[('state','!=','draft')]}" required="True"/>
+                            <field name="valid_to"/>
+                        </group>
+                        <group>
+                            <field name="pricelist_id" attrs="{'readonly':[('state','!=','draft')]}" required="True"
+                                   options="{'no_create_edit': 'True','no_create':'True'}"/>
+                            <field name="currency_id" options="{'no_create_edit': 'True','no_create':'True'}"/>
+                            <field name="sale_person_id" attrs="{'readonly':[('state','!=','draft')]}"
+                                   required='True' options="{'no_create_edit': 'True','no_create':'True'}"/>
+                            <field name="sale_team_id" attrs="{'readonly':[('state','!=','draft')]}"
+                                   required='True' options="{'no_create_edit': 'True','no_create':'True'}"/>
+                            <field name="company_id" attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create_edit': 'True','no_create':'True'}"/>
+                            <field name="amount_prepaid" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            <field name="paid_amount_prepaid" />
+
+                        </group>
+                    </group>
+
+                    <!--<notebook string="Line">-->
+                    <!--<page string="Line">-->
+                    <field name="line_ids" context="{'invoice_address_id':invoice_address_id}"
+                           attrs="{'readonly':[('state','!=','draft')]}" string="Line">
+                        <tree string="Line" editable="bottom">
+                            <field name="state" invisible="1"/>
+                            <field name="product_id" options="{'no_create_edit': 'True','no_create':'True'}"/>
+                            <field name="description"/>
+                            <field name="quantity" required='True'/>
+                            <field name="qty_ordered" readonly="True"/>
+                            <field name="qty_delivered" readonly="True"/>
+                            <field name="qty_invoiced" readonly="True"/>
+                            <field name="uom_id" required='True'/>
+                            <field name="price"/>
+                            <field name="tax_id" options="{'no_create_edit': 'True','no_create':'True'}"/>
+                            <field name="subtotal" readonly="True"/>
+                        </tree>
+                        <form string="sale.contract.line">
+                            <sheet>
+                                <group>
+                                    <group>
+                                        <field name="product_id" readonly="True"/>
+                                        <field name="description" readonly="True"/>
+                                        <field name="quantity" readonly="True"/>
+                                        <field name="qty_ordered" readonly="True"/>
+                                        <field name="qty_delivered" readonly="True"/>
+                                    </group>
+                                    <group>
+                                        <field name="qty_invoiced" readonly="True"/>
+                                        <field name="uom_id" readonly="True"/>
+                                        <field name="price" readonly="True"/>
+                                        <field name="tax_id" readonly="True"/>
+                                        <field name="subtotal" readonly="True"/>
+                                    </group>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                    <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                        <field name="amount_untaxed" widget="monetary" options="{'currency_field': 'currency_id'}" readonly="True"/>
+                        <field name="amount_tax" widget="monetary" options="{'currency_field': 'currency_id'}" readonly="True"/>
+                        <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                            <label for="amount"/>
+                        </div>
+                        <field name="amount" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary"
+                               options="{'currency_field': 'currency_id'}" readonly="True"/>
+                    </group>
+                    <!--</page>-->
+
+                    <!--<page string="Contract Term" invisible='1'>-->
+                        <!--<field name="term_ids">-->
+                            <!--<tree string="Ps Sale Contract Term" editable="bottom">-->
+                                <!--<field name="state" invisible="1"/>-->
+                                <!--<field name="sequence" attrs="{'readonly':[('state','!=','draft')]}"/>-->
+                                <!--<field name="content" attrs="{'readonly':[('state','!=','draft')]}"/>-->
+                            <!--</tree>-->
+                        <!--</field>-->
+                    <!--</page>-->
+                    <!--</notebook>-->
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_window_sale_contract" model="ir.actions.act_window">
+        <field name="name">Sale Contract</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ps.sale.contract</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_sale_contract"
+              name="Sale Contract"
+              parent="sale.sale_order_menu"
+              groups="sales_team.group_sale_salesman"
+              action="action_window_sale_contract"
+              sequence="20"/>
+
+    <record id="action_orders_all" model="ir.actions.act_window">
+        <field name="name">Sales Orders</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,kanban,form,calendar</field>
+        <field name="context">{}</field>
+        <field name="domain"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a Quotation, the first step of a new sale.
+            </p>
+        </field>
+    </record>
+</odoo>

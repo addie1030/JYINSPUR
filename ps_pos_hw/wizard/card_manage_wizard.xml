@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_ps_member_card_manage_wizard" model="ir.ui.view">
+            <field name="name">Membership card management</field>
+            <field name="model">ps.member.card.manage.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Wizard">
+                    <group>
+                        <group>
+                            <button name="card_write" string="Card writing" type="object" class="oe_highlight"/>
+                        </group>
+                        <!--<group>-->
+                            <!--<button name="card_read" string="Card reading" type="object"/>-->
+                        <!--</group>-->
+                    </group>
+
+                    <group>
+                        <group>
+                            <field name="partner_id" invisible="0" readonly="1"  options='{"no_open":True}'/>
+                        </group>
+                        <group>
+                            <field name="number"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="confirm" string="confirm" type="object"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ps_member_card_manage_wizard" model="ir.actions.act_window">
+            <field name="name">Membership card management</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.member.card.manage.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_ps_member_card_manage_wizard"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</openerp>
+

@@ -1,0 +1,723 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_account_taxbill
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-08 08:38+0000\n"
+"PO-Revision-Date: 2019-03-08 08:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_account_taxbill
+#: code:addons/ps_account_taxbill/models/ps_account_taxbill.py:63
+#, python-format
+msgid " state is not draft, can not delete."
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.actions.act_window,name:ps_account_taxbill.action_ps_account_taxbill_window
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill.view_ps_account_taxbill_form
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill.view_ps_account_taxbill_tree
+msgid "Account Tax Bill"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__taxbill_amount_actual
+msgid "Actual Tax Bill Amount"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:res.company,ps_tax_version:0
+msgid "Aisino"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__amount
+msgid "Amount"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__price_tax
+msgid "Amount of Tax"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__price_tax
+msgid "Amount of tax"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__user_id
+msgid "Applicant"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__taxbill_amount_available
+msgid "Available Tax Bill Amount"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:res.company,ps_tax_version:0
+msgid "Baiwang"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_partner__ps_bank_account
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_users__ps_bank_account
+msgid "Bank Account"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_company__ps_bank_account
+msgid "Bank account"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_company__ps_bank_id
+msgid "Bank id"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_partner__ps_bank_name
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_users__ps_bank_name
+msgid "Banks"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill.res_config_settings_view_form
+msgid "Call tax bill wanhong interface to issue tax control paper / electronic invoice"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model_terms:ir.actions.act_window,help:ps_account_taxbill.product_product_action
+msgid "Click to create a new product"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:ps.account.invoice.taxbill,tax_invoice_type:0
+#: selection:ps.account.taxbill,taxbill_type:0
+msgid "Common VAT Invoice"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__company_id
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__company_currency_id
+msgid "Company Currency"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.ui.menu,name:ps_account_taxbill.menu_configuration
+msgid "Configuration"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill.view_ps_account_taxbill_form
+msgid "Confirm"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:ps.account.taxbill,state:0
+msgid "Confirmed"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_company__ps_tax_disk_number
+msgid "Corporate tax disk number"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_company__ps_tax_version
+msgid "Corporate tax version"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__create_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__create_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__create_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__create_date
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__create_date
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__create_date
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__partner_id
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__partner_id
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__partner_id
+#: model:ir.ui.menu,name:ps_account_taxbill.customer_menu
+msgid "Customer"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__invoice_ids
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__invoice_id
+msgid "Customer Invoice"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__invoice_line_id
+msgid "Customer Invoice Details"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__taxbill_id
+msgid "Customer Taxbill Application"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__original_taxbill
+msgid "Customer Taxbill Document No"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__discount
+msgid "Discount (%)"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__display_name
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__display_name
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__display_name
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__date
+msgid "Document Date"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__name
+msgid "Document No"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: sql_constraint:ps.account.taxbill:0
+msgid "Document number cannot be repeated"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:ps.account.taxbill,state:0
+msgid "Done"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__invoice_taxbill_id
+msgid "Download Tax bill"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:ps.account.taxbill,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__drawer_id
+msgid "Drawer"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:ps.account.invoice.taxbill,tax_invoice_type:0
+#: selection:ps.account.taxbill,taxbill_type:0
+msgid "E-invoice"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__invoice_url
+msgid "E-invoice Address"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__email
+msgid "Email"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__id
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__id
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__id
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__invoice_date
+msgid "Invoice Date"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_account_invoice_line
+msgid "Invoice Line"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__is_discard_zero
+msgid "Invoice entries without regard to the amount of 0"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__invoices_available_quantity
+msgid "Invoices Available Quantity"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: code:addons/ps_account_taxbill/models/ps_account_taxbill.py:244
+#, python-format
+msgid "Invoices Available Quantity cannot be greater than Quantity!"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_company__ps_is_email
+msgid "Is Email"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_company__ps_is_sms
+msgid "Is SMS"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_company__ps_is_electronic_invoice
+msgid "Is electronic invoices"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_company__ps_is_information_push
+msgid "Is information push"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill____last_update
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line____last_update
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill____last_update
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__write_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__write_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__write_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__write_date
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__write_date
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__write_date
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.ui.menu,name:ps_account_taxbill.menu_manage
+msgid "Manage"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_company__ps_maximum_amount
+msgid "Maximum amount of invoices(unit:  in ten thousand yuan)"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: code:addons/ps_account_taxbill/models/ps_account_taxbill.py:23
+#: code:addons/ps_account_taxbill/models/ps_account_taxbill.py:52
+#: code:addons/ps_account_taxbill/models/ps_account_taxbill.py:53
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__price_subtotal
+msgid "No tax included in the amount"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:ps.account.invoice.taxbill,taxbill_state:0
+msgid "Normal"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__notes
+msgid "Note"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__notes
+msgid "Notes"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:ps.account.invoice.taxbill,taxbill_state:0
+msgid "Obsolete"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:ps.account.taxbill,state:0
+msgid "Opening"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__payee_id
+msgid "Payee"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model_terms:ir.actions.act_window,help:ps_account_taxbill.action_ps_account_taxbill_window
+msgid "Please create a account tax bill."
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.actions.act_window,name:ps_account_taxbill.product_product_action
+#: model:ir.model,name:ps_account_taxbill.model_product_product
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__product_id
+#: model:ir.ui.menu,name:ps_account_taxbill.product_menu
+msgid "Product"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.ui.menu,name:ps_account_taxbill.product_category_management_menu
+msgid "Product Category "
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_account_invoice__ps_is_taxbill_down
+msgid "Ps Is Taxbill Down"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__quantity
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill.view_ps_account_taxbill_form
+msgid "Receipts"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__reviewer_id
+msgid "Reviewer"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.actions.act_window,name:ps_account_taxbill.action_ps_account_taxbill_config
+msgid "Settings"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.ui.menu,name:ps_account_taxbill.setting_menu
+msgid "Settings "
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__code_number
+msgid "Sorting Code No"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: selection:ps.account.invoice.taxbill,tax_invoice_type:0
+#: selection:ps.account.taxbill,taxbill_type:0
+msgid "Special VAT Invoice"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__specification
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__specification
+msgid "Specification"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__state
+msgid "Status"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__price_subtotal
+msgid "Subtotal"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__tax_amount
+msgid "Tax Amount"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__taxbill_id
+msgid "Tax Bill"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: code:addons/ps_account_taxbill/models/ps_account_taxbill.py:63
+#, python-format
+msgid "Tax Bill "
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill.view_ps_account_taxbill_form
+msgid "Tax Bill Detail"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_account_invoice_line__ps_taxbill_line_qty
+msgid "Tax Bill Quantity"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill.res_config_settings_view_form
+msgid "Tax Bill Settings"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__tax_rate
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__invoice_line_tax_ids
+msgid "Tax Rate"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.module.category,name:ps_account_taxbill.group_vat_management
+msgid "Tax Receipt Management"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:res.groups,name:ps_account_taxbill.group_vat_manager
+msgid "Tax Receipt Manager"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__taxbill_id
+msgid "Tax bill"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__apply_line_ids
+msgid "Tax bill Lines"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.ui.menu,name:ps_account_taxbill.menu_taxbill
+msgid "Tax bill manage"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_res_config_settings__module_ps_account_taxbill_wanhong
+msgid "Tax bill wanhong"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__price_total
+msgid "Tax included in the amount"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: code:addons/ps_account_taxbill/models/ps_res_partner.py:21
+#, python-format
+msgid "Tax number must be 15, 18 or 20 digits in length."
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill.res_config_settings_view_form
+msgid "Taxbill"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.ui.menu,name:ps_account_taxbill.taxbill_appication_menu
+msgid "Taxbill Appication"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__invoice_code
+msgid "Taxbill Code"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__taxbill_date
+msgid "Taxbill Date"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__invoice_taxbill_ids
+msgid "Taxbill Information Line"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__invoice_number
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__taxbill_number
+msgid "Taxbill Number"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.ui.menu,name:ps_account_taxbill.taxbill_query_menu
+msgid "Taxbill Query"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.actions.act_window,name:ps_account_taxbill.taxbill_register_action
+msgid "Taxbill Register"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.ui.menu,name:ps_account_taxbill.taxbill_register_menu
+msgid "Taxbill Register "
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__taxbill_state
+msgid "Taxbill State"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill__tax_invoice_type
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__taxbill_type
+msgid "Taxbill Type"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: code:addons/ps_account_taxbill/models/ps_account_taxbill.py:55
+#, python-format
+msgid "This invoice is unavailable!"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__price_total
+msgid "Total"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__trade_name
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__trade_name
+msgid "Trade Name"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__uom_name
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__uom_id
+msgid "UOM"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__price_unit
+msgid "Unit Price"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__price_unit
+msgid "Unit Price (tax excluded)"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_invoice_taxbill_line__price_unit_tax
+msgid "Unit Price (tax included)"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_ps_account_invoice_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__invoice_bill_ids
+msgid "VAT Information"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_ps_account_invoice_taxbill_line
+msgid "VAT Information Lines"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill__invoice_count
+msgid "VAT Receipts"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: code:addons/ps_account_taxbill/models/ps_account_taxbill.py:116
+#, python-format
+msgid "You must first select a partner."
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_ps_account_taxbill_line__name
+msgid "name"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_ps_account_taxbill
+msgid "ps.account.taxbill"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model,name:ps_account_taxbill.model_ps_account_taxbill_line
+msgid "ps.account.taxbill.line"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_product_product__ps_specification
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_product_template__ps_specification
+msgid "specification"
+msgstr ""
+
+#. module: ps_account_taxbill
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_product_category__ps_trade_name
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_product_product__ps_trade_name
+#: model:ir.model.fields,field_description:ps_account_taxbill.field_product_template__ps_trade_name
+msgid "trade-name"
+msgstr ""
+

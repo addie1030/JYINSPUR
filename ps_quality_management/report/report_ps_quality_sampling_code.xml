@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_quality_sampling_code">
+        <div class="container o_mrp_bom_report_page">
+            <t t-if="data['name']">
+                <table class="table">
+                    <thead>
+                        <tr style=" border: 1px solid;">
+                            <th class="text-center" style=" border: 1px solid;" colspan="8">样本量字码表：
+                                <t t-esc="data['name']"/>
+                            </th>
+                        </tr>
+                        <tr style=" border: 1px solid;">
+                            <th style=" border: 1px solid;"></th>
+                            <th style=" border: 1px solid;" colspan="7" class="text-center">类别</th>
+                        </tr>
+                        <tr>
+                            <th style=" border: 1px solid;"></th>
+                            <t t-foreach="data['type']" t-as="type">
+                                <t t-if="type=='special'">
+                                    <th colspan="3" style=" border: 1px solid;" class="text-center">一般检查水平</th>
+                                </t>
+
+                                <t t-if="type=='normal'">
+                                    <th colspan="4" style=" border: 1px solid;" class="text-center">特殊检查水平</th>
+
+                                </t>
+
+                            </t>
+                        </tr>
+                        <tr>
+                            <th style=" border: 1px solid;" class="text-center">批量范围</th>
+                            <t t-foreach="data['level']" t-as="level">
+                                <th style=" border: 1px solid;" class="text-center">
+                                    <t t-esc="level"/>
+                                </th>
+                            </t>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <t t-foreach="data['scope_codes']" t-as="lines">
+                            <tr style=" border: 1px solid;">
+                                <t t-foreach="lines" t-as="scope_codes">
+                                    <th style=" border: 1px solid;" class="text-center">
+                                        <t t-esc="scope_codes"/>
+                                    </th>
+                                </t>
+                            </tr>
+                        </t>
+
+                    </tbody>
+                </table>
+            </t>
+        </div>
+    </template>
+</odoo>

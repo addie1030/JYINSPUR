@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ps_mrp_expenses_standard_setting_list" model="ir.ui.view">
+            <field name="name">ps.mrp.expenses.standard.setting.list</field>
+            <field name="model">ps.mrp.expenses.standard.setting</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="cost_type"/>
+                    <field name="cost_item"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ps_mrp_expenses_standard_setting_form" model="ir.ui.view">
+            <field name="name">ps.mrp.expenses.standard.setting.form</field>
+            <field name="model">ps.mrp.expenses.standard.setting</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="cost_type"/>
+                            </group>
+                            <group>
+                                <field name="allocation_standard" options="{'no_create': True}"/>
+                                <field name="cost_item"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Send">
+                                <field name="cost_src_ids">
+                                    <tree string="">
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <notebook>
+                            <page string="Receive">
+                                <field name="cost_tar_ids">
+                                    <tree string="">
+                                        <field name="name_id"/>
+                                        <field name="center_product" invisible="1"/>
+                                        <field name="product_id" attrs="{'invisible': [('center_product', '=', False)]}"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ps_mrp_expenses_standard_setting_src_form" model="ir.ui.view">
+            <field name="name">ps.mrp.expenses.standard.setting.src.form</field>
+            <field name="model">ps.mrp.expenses.standard.setting.src</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="cost_src_id" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="company_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ps_mrp_expenses_standard_setting_tar_form" model="ir.ui.view">
+            <field name="name">ps.mrp.expenses.standard.setting.tar.form</field>
+            <field name="model">ps.mrp.expenses.standard.setting.tar</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name_id"/>
+                                <field name="company_id"/>
+                            </group>
+                            <group>
+                                <field name="product_id"/>
+                                <field name="cost_tar_id" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ps_mrp_expenses_standard_setting_act" model="ir.actions.act_window">
+            <field name="name">Mrp Expenses Standard Setting</field>
+            <field name="res_model">ps.mrp.expenses.standard.setting</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--费用分配标准维护菜单-->
+        <menuitem id="menu_ps_mrp_expenses_standard_setting" name="Mrp Expenses Standard Setting" action="ps_mrp_expenses_standard_setting_act" parent="menu_assignment_criteria" groups="base.group_user" sequence="1" />
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inspection_level_1" model="ps.quality.inspection.level">
+            <field name="code">S-2</field>
+        </record>
+
+        <record id="inspection_level_2" model="ps.quality.inspection.level">
+            <field name="category">normal</field>
+        </record>
+    </data>
+</odoo>

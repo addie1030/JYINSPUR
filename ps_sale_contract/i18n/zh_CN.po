@@ -1,0 +1,880 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_sale_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 22:40+0000\n"
+"PO-Revision-Date: 2019-01-22 22:40+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__is_invoice
+msgid "? is invoice"
+msgstr "? is invoice"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_needaction
+msgid "Action Needed"
+msgstr "前置操作"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: ps_sale_contract
+#: model:ir.actions.act_window,name:ps_sale_contract.add_advances_action
+msgid "Add Advances"
+msgstr "建立预收款"
+
+#. module: ps_sale_contract
+#: model:ir.actions.act_window,name:ps_sale_contract.add_sales_order_action
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+msgid "Add Sales Order"
+msgstr "新建销售订单"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_advances_received_wizard
+msgid "Add advances"
+msgstr "建立预收款"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:328
+#, python-format
+msgid "Advances payment(origin:%s,amount:%s) must be reconciled first"
+msgstr "预付款付款 (来源: %s, 金额: %s) 必须先进行调节"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount
+msgid "Amount"
+msgstr "总额"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_deliveried
+msgid "Amount Deliveried"
+msgstr "已发货金额"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_ordered
+msgid "Amount Ordered"
+msgstr "已下单金额"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_prepaid
+msgid "Amount Prepaid"
+msgstr "预付款金额"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_tax
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__amount_tax
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__amount_tax
+msgid "Amount Tax"
+msgstr "税金总计"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__amount_untaxed
+msgid "Amount Untax"
+msgstr "未税金额总计"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__amount_prepaid
+msgid "Amount prepaid"
+msgstr "预付金额"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Approve"
+msgstr "审核"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+#: selection:ps.sale.contract,state:0
+msgid "Approved"
+msgstr "已审批"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Arrange Delivery"
+msgstr "下单"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数量"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_advances_received_wizard
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,state:0
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Close"
+msgstr "关闭"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+#: selection:ps.sale.contract,state:0
+msgid "Closed"
+msgstr "已关闭"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+msgid "Confirm"
+msgstr "确认"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+#: selection:ps.sale.contract,state:0
+msgid "Confirmed"
+msgstr "已确认"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__content
+msgid "Content"
+msgstr "内容"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__contract_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__contract_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__contract_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_sale_order__contract_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_sale_order_line__contract_id
+msgid "Contract"
+msgstr "合同"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__amount
+msgid "Contract Amount"
+msgstr "合同金额"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_sale_order_line__contract_line_id
+msgid "Contract Line"
+msgstr "合同明细"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Contract Number"
+msgstr "合同编号"
+
+#. module: ps_sale_contract
+#: model_terms:ir.actions.act_window,help:ps_sale_contract.action_orders_all
+msgid "Create a Quotation, the first step of a new sale."
+msgstr "创建一个报价，这是新销售的第一步。"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__create_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__create_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__currency_id
+msgid "Currency"
+msgstr "币种"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__customer_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__customer_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__customer_id
+msgid "Customer"
+msgstr "客户"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__customer_representative_id
+msgid "Customer Representative"
+msgstr "客户代表"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__date_confirmed
+msgid "Date Confirmed"
+msgstr "确认日期"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract_line__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "所有库存商品的缺省单位。"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__delivery
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__delivery_count
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Delivery"
+msgstr "交货"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__description
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__description
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__show_description
+msgid "Description"
+msgstr "说明"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__display_name
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:344
+#, python-format
+msgid "Don't delete contracts."
+msgstr "请不要删除合同"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_advances_received.py:69
+#, python-format
+msgid "Down Payment"
+msgstr "预付款"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__product_id
+msgid "Down Payment Product"
+msgstr "预付定金产品"
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__validity_date
+msgid "Expiration Date"
+msgstr "安排日期"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__fiscal_position_id
+msgid "Fiscal Position"
+msgstr "税科目调整"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "关注者(渠道)"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(业务伙伴)"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+msgid "Group By"
+msgstr "分组"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_unread
+msgid "If checked new messages require your attention."
+msgstr "查看是否有需要留意的新消息。"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "确认后, 出现提示消息."
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾选此项， 某些消息将会产生传递错误。"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__invoice
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Invoice"
+msgstr "发票"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__invoice_address_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__invoice_address_id
+msgid "Invoice Address"
+msgstr "开票地址"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__invoice_count
+msgid "Invoices"
+msgstr "发票"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__is_expired
+msgid "Is Expired"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_is_follower
+msgid "Is Follower"
+msgstr "关注者"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__is_reconciled
+msgid "Is Reconciled"
+msgstr "已核销"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard____last_update
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term____last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__write_uid
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_advances_received_wizard__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__write_date
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__line_ids
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Line"
+msgstr "明细"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "附件"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_contract_sales_order_wizard__validity_date
+msgid ""
+"Manually set the expiration date of your quotation (offer), or it will set "
+"the date automatically based on the template if online quotation is "
+"installed."
+msgstr ""
+"手动设置您的报价单的有效期，如果安装在线报价单，它会根据模板自动设置日期。"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_has_error
+msgid "Message Delivery error"
+msgstr "消息递送错误"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__name
+msgid "Name"
+msgstr "名称"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:13
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:133
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:137
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:139
+#, python-format
+msgid "New"
+msgstr "新建"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活动截止日期"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活动摘要"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活动类型"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作次数"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_has_error_counter
+msgid "Number of error"
+msgstr "错误个数"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要操作消息数量"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "递送错误消息数量"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读消息数量"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__order
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Order"
+msgstr "订单"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__contract_line
+msgid "Order Line"
+msgstr "订单行"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__order_remaining
+msgid "Order Remaining"
+msgstr "订单剩余"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_contract_sales_order.py:115
+#, python-format
+msgid "Order quantity of %s must less than remaining quantity"
+msgstr "%s 的订单数量必须小于剩余数量"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__order_count
+msgid "Orders"
+msgstr "订单"
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__paid_amount_prepaid
+msgid "Paid Amount Prepaid"
+msgstr "实际预付款"
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:363
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:366
+#, python-format
+msgid "Please add some contract details."
+msgstr "请添加合同明细"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:323
+#, python-format
+msgid "Please confirm all invoice have confirmed"
+msgstr "请确认所有发票已确认"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:333
+#, python-format
+msgid "Please confirm all invoice have created"
+msgstr "请确认所有发票已创建"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__price
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__price
+msgid "Price"
+msgstr "价格"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__pricelist_id
+msgid "Pricelist"
+msgstr "价格表"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__product_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__product_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__show_product_id
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+msgid "Product"
+msgstr "产品"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__product_no_variant_attribute_value_ids
+msgid "Product attribute values that do not create variants"
+msgstr ""
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_contract_sales_order.py:117
+#, python-format
+msgid "Product quantity can not less than zero."
+msgstr "产品数量不能小于0"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__qty_delivered
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__qty_delivered
+msgid "Qty Delivered"
+msgstr "已交货"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__qty_invoiced
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__qty_invoiced
+msgid "Qty Invoiced"
+msgstr "已开票"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__qty_ordered
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__qty_ordered
+msgid "Qty Ordered"
+msgstr "已下单"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__qty_remaining
+msgid "Qty Remaining"
+msgstr "剩余数量"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__quantity
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__quantity
+msgid "Quantity"
+msgstr "数量"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__activity_user_id
+msgid "Responsible User"
+msgstr "责任用户"
+
+#. module: ps_sale_contract
+#: model:ir.actions.act_window,name:ps_sale_contract.action_window_sale_contract
+#: model:ir.ui.menu,name:ps_sale_contract.menu_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_tree
+msgid "Sale Contract"
+msgstr "销售合同"
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_sale_order
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__sale_order_ids
+msgid "Sale Order"
+msgstr "销售订单"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__sale_order_line_ids
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__sale_order_line_ids
+msgid "Sale Order Line"
+msgstr "销售合同行"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__sale_person_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__sale_person_id
+msgid "Sale Person"
+msgstr "销售代表"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__sale_team_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__sale_team_id
+msgid "Sale Team"
+msgstr "销售组"
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "销售订单行"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+msgid "Sales Order Lines"
+msgstr "销售订单明细"
+
+#. module: ps_sale_contract
+#: model:ir.actions.act_window,name:ps_sale_contract.action_orders_all
+msgid "Sales Orders"
+msgstr "销售订单"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_filter
+msgid "Search Sale Contract"
+msgstr "搜索销售合同"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__sequence
+msgid "Sequence"
+msgstr "序号"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__state
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__state
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_term__state
+msgid "Status"
+msgstr "状态"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "基于活动的状态 \n"
+" 逾期：已经超过截止日期 \n"
+" 现今：活动日期是当天 \n"
+" 计划：未来的活动。"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__stock_move_ids
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__stock_move_ids
+msgid "Stock Move"
+msgstr "库存移动"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__stock_picking_ids
+msgid "Stock Picking"
+msgstr "库存拣货"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "Submit"
+msgstr "提交"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__subtotal
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__subtotal
+msgid "Subtotal"
+msgstr "未含税小计"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__tax_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__tax_id
+msgid "Tax"
+msgstr "税率"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__term_ids
+msgid "Term"
+msgstr "条款"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:350
+#, python-format
+msgid "The amount prepaid can not less than zero."
+msgstr "预付款金额不能小于0"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:352
+#, python-format
+msgid "The amount prepaid can not more than contract amount."
+msgstr "预付款不能大于总金额"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/models/ps_sale_contract.py:357
+#, python-format
+msgid "The number is error."
+msgstr "产品数量错误"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_advances_received.py:59
+#, python-format
+msgid "The value of the down payment amount must be positive."
+msgstr "预付款金额的值必须为正数。"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_advances_received.py:36
+#, python-format
+msgid "The value of the prepaid amount must be positive."
+msgstr "预付款金额的值必须为正数。"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_advances_received.py:51
+#, python-format
+msgid ""
+"There is no income account defined for this product: \"%s\".You may have to "
+"install a chart of account from Accounting app, settings menu."
+msgstr ""
+"此产品没有定义收入账户:“%s”。您可能需要安装一个图表的帐户从会计应用程序，设"
+"置菜单。"
+
+#. module: ps_sale_contract
+#: selection:ps.sale.contract,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_unread
+msgid "Unread Messages"
+msgstr "未读消息"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读消息计数器"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line__uom_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__show_uom_id
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__uom_id
+msgid "Uom"
+msgstr "单位"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__valid_days
+msgid "Valid Days"
+msgstr "有效天数"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__valid_from
+msgid "Valid From"
+msgstr "有效期自"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__valid_to
+msgid "Valid To"
+msgstr "有效期至"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_contract_sales_order_wizard__warehouse_id
+msgid "Warehouse"
+msgstr "仓库"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract__website_message_ids
+msgid "Website Messages"
+msgstr "网站消息"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__website_message_ids
+msgid "Website communication history"
+msgstr "网站沟通记录"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__wizard_contract_id
+msgid "Wizard Contract"
+msgstr "销售合同向导"
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_contract_sales_order_wizard
+msgid "Wizard contract to add sales order"
+msgstr "创建销售订单"
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_advances_received_wizard
+msgid "Wizard to add advances received"
+msgstr "预收款向导"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,help:ps_sale_contract.field_ps_sale_contract__customer_id
+msgid "You can find a customer by its Name, TIN, Email or Internal Reference."
+msgstr "你可以通过姓名、税号、邮箱、内部参照来查找客户"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "action_draft"
+msgstr "设草稿"
+
+#. module: ps_sale_contract
+#: code:addons/ps_sale_contract/wizard/ps_contract_sales_order.py:25
+#, python-format
+msgid "arrange date must late than current date"
+msgstr "交货日期必须晚于当前日期"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_advances_received_wizard
+msgid "create invoice"
+msgstr "确认"
+
+#. module: ps_sale_contract
+#: model:ir.model.fields,field_description:ps_sale_contract.field_ps_sale_contract_line_wizard__wizard_line_id
+msgid "line number"
+msgstr "明细"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.add_sales_order_wizard
+msgid "or"
+msgstr ""
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_sale_contract
+msgid "ps sale contract"
+msgstr "销售合同"
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_sale_contract_term
+msgid "sale contract term"
+msgstr "销售合同条款"
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_sale_contract_line
+msgid "sale contract.line"
+msgstr "销售合同明细"
+
+#. module: ps_sale_contract
+#: model:ir.model,name:ps_sale_contract.model_ps_sale_contract_line_wizard
+msgid "sale contract.line.wizard"
+msgstr "销售合同明细"
+
+#. module: ps_sale_contract
+#: model_terms:ir.ui.view,arch_db:ps_sale_contract.sale_contract_line_form
+msgid "sale.contract.line"
+msgstr "销售合同明细"
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ps_stock_price_dispatch_pivot" model="ir.ui.view">
+        <field name="name">ps.stock.price.dispatch.pivot</field>
+        <field name="model">ps.stock.price.dispatch</field>
+        <field name="arch" type="xml">
+            <pivot string="Stock Price Dispatch">
+                <field name="product_id" type="row"/>
+                <field name="qty_start" type="measure"/>
+                <field name="qty_in" type="measure"/>
+                <field name="qty_out" type="measure"/>
+                <field name="qty_balance" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="ps_stock_price_dispatch_tree" model="ir.ui.view">
+        <field name="name">ps.stock.price.dispatch.tree</field>
+        <field name="model">ps.stock.price.dispatch</field>
+        <field name="arch" type="xml">
+            <tree string="Stock Price Dispatch" create="false" delete="false" import="false">
+                <field name="product_id"/>
+                <field name="location_id"/>
+                <field name="product_uom"/>
+                <field name="qty_start"/>
+                <field name="qty_in"/>
+                <field name="qty_out"/>
+                <field name="qty_balance"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--#库存价格分析-->
+    <menuitem id="menu_ps_stock_price_dispatch_view"
+              name="Stock Dispatch"
+              parent="stock.menu_warehouse_report"
+              sequence="180"
+              action="action_ps_wizard_stock_price_dispatch" groups="stock.group_stock_manager"/>
+
+
+    <record id="action_ps_stock_price_dispatch_report" model="ir.actions.act_window">
+        <field name="name">Action Stock Price Dispatch Report</field>
+        <field name="res_model">ps.stock.price.dispatch</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot</field>
+    </record>
+
+</odoo>

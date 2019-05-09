@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!--Schedule of internal cash flow form-->
+		<record id="combined_statements_inside_cash_detail_form" model="ir.ui.view">
+			<field name="name">inside cash detail</field>
+			<field name="model">ps.combined.statements.inside.cash.detail</field>
+			<field name="arch" type="xml">
+				<form create="false">
+					<sheet>
+
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active"
+									type="object"
+									confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?"
+									class="oe_stat_button"
+									icon="fa-archive">
+								<field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+							</button>
+						</div>
+
+						<group>
+							<group>
+								<field name="investment_organization_id" />
+								<field name="period" />
+								<!--<field name="business_type" />-->
+								<field name="current_period_price" />
+							</group>
+							<group>
+								<field name="investee_organization_id" />
+								<!--<field name="trade_day" />-->
+								<field name="cash_id" />
+								<!--<field name="company_id" groups="base.group_multi_company" />-->
+							</group>
+						</group>
+						<notebook create="false" delete="false">
+							<page string="Offsetting business">
+								<group>
+									<field name="eli_ids" nolabel="1" readonly="1"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!--Schedule of internal cash flow tree-->
+		<record id="combined_statements_inside_cash_detail_tree" model="ir.ui.view">
+			<field name="name">inside cash detail</field>
+			<field name="model">ps.combined.statements.inside.cash.detail</field>
+			<field name="arch" type="xml">
+				<tree create="false" import="True">
+					<field name="investment_organization_id" />
+					<field name="investee_organization_id" />
+					<field name="period" />
+					<!--<field name="trade_day" />-->
+					<!--<field name="business_type" />-->
+					<field name="cash_id" />
+					<field name="current_period_price" />
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+				</tree>
+			</field>
+		</record>
+		<!--Schedule of internal cash flow window-->
+		<record id="combined_statements_inside_cash_detail_window" model="ir.actions.act_window">
+			<field name="name">Detailed statement of internal cash flows</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">ps.combined.statements.inside.cash.detail</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<!--Schedule of internal cash flow menu-->
+		<menuitem id="combined_statements_inside_cash_detail_menu"
+				  name="Detailed statement of internal cash flows"
+				  parent="combined_statements_merger_inside"
+				  action="combined_statements_inside_cash_detail_window"
+				  sequence="10" />
+
+	</data>
+</odoo>

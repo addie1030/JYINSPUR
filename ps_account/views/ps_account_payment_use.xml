@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <!-- 收付款用途视图 START -->
+        <!-- 收付款用途tree视图 START-->
+        <record id="payment_use_view" model="ir.ui.view">
+            <field name="name">Payment Use View</field>
+            <field name="model">payment.use</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="payment_category"/>
+                    <field name="business_type"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+        <!-- 收付款用途tree视图 END-->
+        <!-- 收付款用途form视图 START-->
+        <record id="payment_use_form" model="ir.ui.view">
+            <field name="name">Payment Use Form</field>
+            <field name="model">payment.use</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="business_type" required="1"/>
+                            <field name="payment_category"
+                                   domain="[('','','')]"
+                                   required="1" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="description"/>
+                            <field name="is_send_payment"/>
+                            <field name="contrast_payment_use" attrs="{'invisible': [('is_send_payment', '=', False)]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- 收付款用途form视图 END-->
+        <!-- 收付款动图动作 -->
+        <record id="payment_use_action" model="ir.actions.act_window">
+            <field name="name">Payment Use Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">payment.use</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('payment_use_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('payment_use_form')})]"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a payment use dictionary.
+                </p>
+            </field>
+        </record>
+        <!-- 收付款用途视图 END -->
+
+        <!-- 在采购付款的合作伙伴类型上面增加收付款用途 -->
+        <record id="add_payment_use" model="ir.ui.view">
+            <field name="name">Add Payment Use</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payment_type']" position="after">                   
+                    <field name="payment_use" attrs="{'required':[('state', '=', 'draft')]}"
+                           options="{'no_create': True,'no_open': True}"
+                           domain="[('business_type','=',context.get('business_type'))]"
+                    />
+                </xpath>
+                <xpath expr="//field[@name='payment_type']" position="replace">
+                    <field name="payment_type" widget="radio" invisible="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='partner_type']" position="replace">
+                    <field name="partner_type" widget="selection" invisible="1" attrs="{'required': [('state', '=', 'draft'), ('payment_type', 'in', ('inbound', 'outbound'))]}"/>
+                </xpath>
+            </field>
+        </record>
+        <!-- 判断收付款用途的类型，根据类型显示默认值-->
+        <record id="account.action_account_payments" model="ir.actions.act_window">
+            <field name="name">Receive Payments</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,graph</field>
+            <field name="context">{'business_type': 'sale', 'default_payment_type': 'inbound', 'default_partner_type': 'customer'}</field>
+            <field name="domain">[('partner_type', '=', 'customer')]</field>
+        </record>
+
+        <record id="account.menu_action_account_payments_receivable" model="ir.ui.menu">
+            <field name="name">Receive Payments</field>
+        </record>
+
+        <record id="account.action_account_payments_payable" model="ir.actions.act_window">
+            <field name="name">Payments</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,graph</field>
+            <field name="context">{'business_type': 'purchase', 'default_payment_type': 'outbound', 'default_partner_type': 'supplier'}</field>
+            <field name="domain">[('partner_type', '=', 'supplier')]</field>
+        </record>
+
+        <!--transfer-->
+        <record id="action_internal_transfer" model="ir.actions.act_window">
+            <field name="name">Internal Transfer</field>
+            <field name="res_model">account.payment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form,graph</field>
+            <field name="context">{'business_type': 'transfer', 'default_payment_type': 'transfer'}</field>
+            <field name="domain">[('partner_type', '!=', ('supplier', 'customer'))]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a internal transfer document.
+                </p>
+            </field>
+        </record>
+
+        <!-- Payment Use -->
+        <menuitem id="ps_account_center_payment_use"
+                  name="Payment Use"
+                  parent="payment.root_payment_menu"
+                  action="payment_use_action"
+                  sequence="2"
+                  groups="account.group_account_manager"/>
+
+        <!-- 出纳下增加内部转账 -->
+        <menuitem id="menu_ps_cashier_item"
+                  name="Internal transfer"
+                  parent="ps_account.menu_accounting_cashier"
+                  action="action_internal_transfer"
+                  sequence="10"
+                  groups="account.group_account_manager"/>
+</odoo>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--成本核算菜单-->
+    <menuitem
+            id="menu_cost_root"
+            name="Mrp Cost Accounting"
+            web_icon="ps_mrp_cost_accounting,static/description/icon.png"
+            groups="base.group_user"/>
+
+    <!--产量归集菜单-->
+    <menuitem
+            id="menu_yield_collection"
+            name="Yield collection"
+            parent="menu_cost_root"
+            groups="base.group_user"
+            sequence="1"/>
+
+    <!--产量归集菜单下在产品盘点菜单-->
+    <menuitem
+            id="menu_in_the_product_inventory"
+            name="In the product inventory"
+            parent="menu_yield_collection"
+            groups="base.group_user"
+            sequence="2"/>
+
+    <!--费用归集菜单-->
+    <menuitem
+            id="menu_expenses_collection"
+            name="Expenses Collection"
+            parent="menu_cost_root"
+            groups="base.group_user"
+            sequence="2"/>
+
+    <!--在产品计算菜单-->
+    <menuitem
+            id="menu_in_product_calculation"
+            name="In product calculation"
+            parent="menu_cost_root"
+            groups="base.group_user"
+            sequence="3"/>
+
+    <!--费用分配菜单-->
+    <!--<menuitem-->
+            <!--id="menu_expense_allocation"-->
+            <!--name="Expenses allocation"-->
+            <!--parent="menu_cost_root"-->
+            <!--groups="base.group_user"-->
+            <!--sequence="4"/>-->
+
+    <!--成本分配菜单-->
+    <!--<menuitem-->
+            <!--id="menu_cost_allocation"-->
+            <!--name="Cost Allocation"-->
+            <!--parent="menu_cost_root"-->
+            <!--groups="base.group_user"-->
+            <!--sequence="5"/>-->
+
+    <!--配置-->
+    <menuitem
+            id="menu_settings"
+            name="Mrp Cost Settings"
+            parent="menu_cost_root"
+            groups="base.group_user"
+            sequence="10"/>
+
+        <!--基础资料菜单-->
+    <menuitem
+            id="menu_cost_basic_data"
+            name="Mrp Cost Basic Data"
+            parent="menu_settings"
+            groups="base.group_user"
+            sequence="1"/>
+
+    <!--分配标准菜单-->
+    <menuitem
+            id="menu_assignment_criteria"
+            name="Assignment Criteria"
+            parent="menu_settings"
+            groups="base.group_user"
+            sequence="2"/>
+</odoo>

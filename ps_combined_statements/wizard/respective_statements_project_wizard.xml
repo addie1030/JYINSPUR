@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+
+		<!--The transient model individual statements -->
+		<record id="respective_statements_project_transient_form" model="ir.ui.view">
+			<field name="name">ps.respective.statements.project.wizard</field>
+			<field name="model">ps.respective.statements.project.wizard</field>
+			<field name="arch" type="xml">
+				<form string="">
+					<sheet>
+						<group name="name">
+							<field name="state" widget="radio" options="{'horizontal': true}" />
+						</group>
+						<group>
+							<group>
+								<field name="project_id" options='{"no_open": True, "no_create": True}' attrs="{'invisible':[('state','=','yes')],'required': [('state', '=', 'no')]}" />
+								<field name="app_company" attrs="{'invisible':[('state','=','yes')],'required': [('state', '=', 'no')]}" options='{"no_open": True, "no_create": True}'/>
+								<field name="respective_project" attrs="{'invisible':[('state','=','no')],'required': [('state', '=', 'yes')]}" options='{"no_open": True, "no_create": True}'/>
+							</group>
+							<group>
+								<field name="period" attrs="{'invisible':[('state','=','yes')],'required': [('state', '=', 'no')]}" />
+
+							</group>
+						</group>
+					</sheet>
+					<footer>
+						<button string="Open report"
+								name="design_journaling"
+								type="object"
+								class="btn-primary" />
+						<button string="cancel" class="btn-default" special="cancel" />
+					</footer>
+
+				</form>
+			</field>
+		</record>
+
+		<!--Individual statements report window-->
+		<record id="respective_statements_project_transient_window" model="ir.actions.act_window">
+			<field name="name">Report individual statements</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">ps.respective.statements.project.wizard</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="respective_statements_project_transient_form" />
+			<field name="target">new</field>
+		</record>
+
+		<!-- Individual report project menu transient model  -->
+
+		<menuitem id="respective_statements_project_transient_menu"
+				  name="Report individual statements"
+				  parent="ps_combined_statements.combined_statements_merger_respective_business"
+				  action="respective_statements_project_transient_window"
+				  sequence="4" />
+
+	</data>
+</odoo>

@@ -1,0 +1,451 @@
+<odoo>
+    <data>
+        <!--产品科目对应-->
+        <record model="ir.ui.view" id="view_product_accounting_tree">
+            <field name="name">Product Accounting List</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <tree create="false">
+                    <field name="name" groups="account.group_account_manager"/>
+                    <field name="categ_id" groups="account.group_account_manager"/>
+                    <field name="default_code" groups="account.group_account_manager"/>
+                    <field name="company_id" groups="base.group_multi_company"
+                                        options="{'no_create': True}"/>
+                    <field name="property_account_income_id"
+                           groups="account.group_account_manager"/>
+                    <field name="property_account_expense_id"
+                           groups="account.group_account_manager"/>
+                    <field name="taxes_id" groups="account.group_account_manager" widget="many2many_tags"/>
+                    <field name="supplier_taxes_id" groups="account.group_account_manager" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_product_accounting_form" model="ir.ui.view">
+            <field name="name">Product Accounting Form</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="html">
+                <form string="Product Volume Setting" create="false">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" attrs="{'readonly': 1}"
+                                       groups="account.group_account_manager"/>
+                                <field name="categ_id" attrs="{'readonly': 1}"
+                                       options="{'no_create_edit': 1, 'no_open': 1}"
+                                       groups="account.group_account_manager"/>
+                            </group>
+                            <group>
+                                <field name="default_code" attrs="{'readonly': 1}"
+                                       groups="account.group_account_manager"/>
+                                <field name="company_id" groups="base.group_multi_company"
+                                        options="{'no_create': True}"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group string="Receivables">
+                                <field name="taxes_id" widget="many2many_tags"
+                                       options="{'no_create': True, 'no_open': True}"
+                                       groups="account.group_account_manager"/>
+                                <field name="property_account_income_id"
+                                       domain="[('internal_type','!=',('liquidity','payable','receivable')),('deprecated', '=', False)]"
+                                       options="{'no_create': True, 'no_open': True}"
+                                       groups="account.group_account_manager"/>
+                            </group>
+                            <group string="Payables">
+                                <field name="supplier_taxes_id" widget="many2many_tags"
+                                       options="{'no_create': True, 'no_open': True}"
+                                       groups="account.group_account_manager"/>
+                                <field name="property_account_expense_id"
+                                       domain="[('internal_type','!=',('liquidity','payable','receivable')),('deprecated', '=', False)]"
+                                       options="{'no_create': True, 'no_open': True}"
+                                       groups="account.group_account_manager"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_product_accounting_search" model="ir.ui.view">
+            <field name="name">Product Accounting Search</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="no_set" string="No set"
+                            domain="['|',('property_account_income_id','=',False),('property_account_expense_id','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_window_ps_account_center_product_accounting" model="ir.actions.act_window">
+            <field name="name">Product Accounting</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'search_default_no_set':1, 'remove_name': 'product_accounting_remove', 'form_remove_name': 'all_remove'}"/>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('view_product_accounting_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('view_product_accounting_form')})]"/>
+        </record>
+
+        <!--产品科目批量设置-->
+        <record id="view_product_volume_setting" model="ir.ui.view">
+            <field name="name">ps.product.account.bulk.setting.wizard.form</field>
+            <field name="model">ps.product.account.bulk.setting.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Product Volume Setting">
+                    <group col="2">
+                        <group string="Receivables">
+                            <field name="taxes_id"
+                                   widget="many2many_tags"
+                                   options="{'no_create': True, 'no_open': True}"
+                                   groups="account.group_account_manager"/>
+                            <field name="property_account_income_id"
+                                   domain="[('internal_type','!=',('liquidity','payable','receivable')),('deprecated', '=', False)]"
+                                   options="{'no_create': True, 'no_open': True}"
+                                   groups="account.group_account_manager"/>
+                        </group>
+                        <group string="Payables">
+                            <field name="supplier_taxes_id" widget="many2many_tags"
+                                   options="{'no_create': True, 'no_open': True}"
+                                   groups="account.group_account_manager"/>
+                            <field name="property_account_expense_id"
+                                   domain="[('internal_type','!=',('liquidity','payable','receivable')),('deprecated', '=', False)]"
+                                   options="{'no_create': True, 'no_open': True}"
+                                   groups="account.group_account_manager"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Confirm" name="product_volume_setting" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_view_product_volume_setting" model="ir.actions.act_window">
+            <field name="name">Product Volume Setting</field>
+            <field name="res_model">ps.product.account.bulk.setting.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!--客户科目对应-->
+        <record model="ir.ui.view" id="view_customer_accounting_tree">
+            <field name="name">Customer Accounting List</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree create="false">
+                    <field name="name" groups="account.group_account_manager"/>
+                    <field name="company_type" groups="account.group_account_manager"/>
+                    <field name="company_id" groups="base.group_multi_company"
+                                        options="{'no_create': True}"/>
+                    <field name="category_id" groups="account.group_account_manager"/>
+                    <field name="lang" groups="account.group_account_manager"/>
+                    <field name="property_account_receivable_id"
+                           groups="account.group_account_manager"/>
+                    <field name="property_account_payable_id"
+                           groups="account.group_account_manager"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_customer_accounting_form" model="ir.ui.view">
+            <field name="name">Customer Accounting Form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="html">
+                <form string="Customer Volume Setting" create="false">
+                    <sheet>
+                        <group col="4">
+                            <field name="name" attrs="{'readonly': 1}"
+                                   groups="account.group_account_manager"/>
+                            <field name="company_type" attrs="{'readonly': 1}"
+                                   groups="account.group_account_manager"/>
+                            <field name="company_id" groups="base.group_multi_company"
+                                        options="{'no_create': True}"/>
+                            <field name="category_id" attrs="{'readonly': 1}"
+                                   widget="many2many_tags"
+                                   groups="account.group_account_manager"/>
+                            <field name="lang" attrs="{'readonly': 1}"
+                                   groups="account.group_account_manager"/>
+                            <field name="property_account_receivable_id"
+                                   options="{'no_create': True, 'no_open': True}"
+                                   domain="[('deprecated', '=', False)]"
+                                   groups="account.group_account_manager"/>
+                            <field name="property_account_payable_id"
+                                   options="{'no_create': True, 'no_open': True}"
+                                   domain="[('deprecated', '=', False)]"
+                                   groups="account.group_account_manager"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_customer_accounting_search" model="ir.ui.view">
+            <field name="name">Customer Accounting Search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="no_set" string="No set"
+                            domain="['|',('property_account_receivable_id','=',False),('property_account_payable_id','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_window_ps_account_center_customer_accounting" model="ir.actions.act_window">
+            <field name="name">Customer Accounting</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'remove_name': 'customer_accounting_remove', 'form_remove_name': 'all_remove'}</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('view_customer_accounting_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('view_customer_accounting_form')})]"/>
+        </record>
+
+        <!--客户科目批量设置-->
+        <record id="view_customer_volume_setting" model="ir.ui.view">
+            <field name="name">ps.partner.account.bulk.setting.wizard.form</field>
+            <field name="model">ps.partner.account.bulk.setting.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Customer Volume Setting">
+                    <group col="2">
+                        <group>
+                            <field name="property_account_receivable_id"
+                                   domain="[('internal_type','=','receivable'),('deprecated', '=', False)]"
+                                   options="{'no_create': True, 'no_open': True}"
+                                   groups="account.group_account_manager"/>
+                        </group>
+
+                        <group>
+                            <field name="property_account_payable_id"
+                                   domain="[('internal_type','=','payable'),('deprecated', '=', False)]"
+                                   options="{'no_create': True, 'no_open': True}"
+                                   groups="account.group_account_manager"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Confirm" name="customer_volume_setting" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_view_customer_volume_setting" model="ir.actions.act_window">
+            <field name="name">Customer Volume Setting</field>
+            <field name="res_model">ps.partner.account.bulk.setting.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <record id="view_journal_accounting_search" model="ir.ui.view">
+            <field name="name">Journal Accounting Search</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_search"/>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="no_set" string="No set"
+                            domain="['|',('default_debit_account_id','=',False),('default_credit_account_id','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_journal_accounting_form" model="ir.ui.view">
+            <field name="name">Journal Accounting Form</field>
+            <field name="model">account.journal</field>
+            <field name="arch" type="xml">
+                <form create="false">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" readonly="1"/>
+                                <field name="code" readonly="1"/>
+                                <field name="default_debit_account_id"
+                                       domain="[('deprecated', '=', False)]"
+                                       options="{'no_create': True, 'no_open': True}"
+                                       groups="account.group_account_manager"/>
+                            </group>
+                            <group>
+                                <field name="type" readonly="1"/>
+                                <field name="company_id" groups="base.group_multi_company"
+                                        options="{'no_create': True}"/>
+                                <field name="default_credit_account_id"
+                                       domain="[('deprecated', '=', False)]"
+                                       options="{'no_create': True, 'no_open': True}"
+                                       groups="account.group_account_manager"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_journal_accounting_tree" model="ir.ui.view">
+            <field name="name">Journal Accounting List</field>
+            <field name="model">account.journal</field>
+            <field name="arch" type="xml">
+                <tree create="false">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="code"/>
+                    <field name="company_id" groups="base.group_multi_company"
+                                        options="{'no_create': True}"/>
+                    <field name="default_debit_account_id"/>
+                    <field name="default_credit_account_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_window_ps_account_center_journal_accounting" model="ir.actions.act_window">
+            <field name="name">Journal Accounting</field>
+            <field name="res_model">account.journal</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="content">test</field>
+            <field name="context" eval="{'search_default_no_set':1, 'form_remove_name': 'all_remove', 'remove_name': 'journal_accounting_remove'}"/>
+            <field name="view_ids" eval="[(5, 0, 0),
+        (0, 0, {'view_mode': 'tree', 'view_id': ref('view_journal_accounting_tree')}),
+        (0, 0, {'view_mode': 'form', 'view_id': ref('view_journal_accounting_form')})]"/>
+        </record>
+        <!-- 账簿科目对应批量设置 END-->
+
+        <!-- 定义产品类别科目tree视图 -->
+        <record model="ir.ui.view" id="product_category_accounting_tree">
+            <field name="name">product.category.accounting.tree</field>
+            <field name="model">product.category</field>
+            <field name="arch" type="xml">
+                <tree create="false">
+                    <field name="name"/>
+                    <field name="parent_id"/>
+                    <field name="property_account_income_categ_id"/>
+                    <field name="property_account_expense_categ_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_product_category_search" model="ir.ui.view">
+            <field name="name">Product Category Search</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_search_view"/>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="no_set" string="No set"
+                            domain="['|',('property_account_income_categ_id','=',False),('property_account_expense_categ_id','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- 定义产品类别科目form视图 -->
+        <record id="view_category_property_form" model="ir.ui.view">
+            <field name="name">product.category.stock.property.form.inherit</field>
+            <field name="model">product.category</field>
+            <field name="arch" type="xml">
+                <form create="false">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="parent_id" readonly="1"
+                                       options="{'no_create_edit': 1, 'no_open': 1}"/>
+                            </group>
+                            <group string="Subject attributes" name="account_attr_form">
+                                <field name="property_account_income_categ_id"
+                                       domain="[('internal_type', '!=', ('receivable', 'payable', 'liquidity')),('deprecated', '=', False)]"
+                                       options="{'no_create': True, 'no_open': True}"/>
+                                <field name="property_account_expense_categ_id"
+                                       domain="[('internal_type', '!=', ('receivable', 'payable', 'liquidity')),('deprecated', '=', False)]"
+                                       options="{'no_create': True, 'no_open': True}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+                <!--</xpath>-->
+            </field>
+        </record>
+
+        <!-- 定义产品类别科目对应动作 -->
+        <record model="ir.actions.act_window" id="product_category_accounting_action">
+            <field name="name">Product Category Accounting</field>
+            <field name="res_model">product.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'search_default_no_set':1, 'form_remove_name': 'all_remove', 'remove_name': 'product_category_accounting_remove'}"/>
+            <field name="view_ids" eval="[(5, 0, 0),
+        (0, 0, {'view_mode': 'tree', 'view_id': ref('product_category_accounting_tree')}),
+        (0, 0, {'view_mode': 'form', 'view_id': ref('view_category_property_form')})]"/>
+        </record>
+
+        <!--产品类别科目批量设置form-->
+        <record id="product_category_batchsetting_view" model="ir.ui.view">
+            <field name="name">Batch setup</field>
+            <field name="model">ps.product.category.account.bulk.setting.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Product Category Accounting Setting">
+                    <group>
+                        <group string="Subject attributes" name="account_attr_form_batch">
+                            <field name="property_account_income_categ_id"
+                                   domain="[('internal_type', '!=', ('receivable', 'payable', 'liquidity')),('deprecated', '=', False)]"
+                                   options="{'no_create': True, 'no_open': True}"/>
+                            <field name="property_account_expense_categ_id"
+                                   domain="[('internal_type', '!=', ('receivable', 'payable', 'liquidity')),('deprecated', '=', False)]"
+                                   options="{'no_create': True, 'no_open': True}"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Confirm" name="product_category_batch_setting" type="object" default_focus="1"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_product_category_batchsetting" model="ir.actions.act_window">
+            <field name="name">Batch setup</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.product.category.account.bulk.setting.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="product_category_batchsetting_view"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+            <field name="help">This wizard will validate all journal entries selected. Once journal entries are
+                validated, you can not update them anymore.
+            </field>
+            <field name="binding_model_id" ref="product.model_product_category"/>
+        </record>
+        <!-- 产品类别科目对应设置END -->
+
+        <menuitem name="Account China Center" id="ps_account_center.menu_root"
+                  web_icon="ps_account_center,static/description/icon.png" groups="account.group_account_manager"/>
+        <menuitem name="Create Move" id="ps_account_center.menu_1" parent="ps_account_center.menu_root"
+                  sequence="1" groups="account.group_account_manager"/>
+        <menuitem name="Operation" id="ps_account_center.menu_9" parent="ps_account_center.menu_root"
+                  sequence="4" groups="account.group_account_manager"/>
+        <menuitem name="Configuration" id="ps_account_center.menu_4" parent="ps_account_center.menu_root"
+                  sequence="100" groups="account.group_account_manager"/>
+        <menuitem name="Product Category Accounting" id="ps_account_center.menu_5"
+                  parent="ps_account_center.menu_4" action="product_category_accounting_action"
+                  groups="account.group_account_manager"/>
+        <menuitem name="Product Accounting" id="ps_account_center.menu_6" parent="ps_account_center.menu_4"
+                  action="action_window_ps_account_center_product_accounting"
+                  groups="account.group_account_manager"/>
+        <menuitem name="Customer Accounting" id="ps_account_center.menu_7" parent="ps_account_center.menu_4"
+                  action="action_window_ps_account_center_customer_accounting"
+                  groups="account.group_account_manager"/>
+        <menuitem name="Journal Accounting" id="ps_account_center.menu_8" parent="ps_account_center.menu_4"
+                  action="action_window_ps_account_center_journal_accounting"
+                  groups="account.group_account_manager"/>
+
+
+    </data>
+</odoo>

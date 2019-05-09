@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ps_credit_usage_tree" model="ir.ui.view">
+            <field name="name">ps.credit.usage.tree</field>
+            <field name="model">ps.credit.usage</field>
+            <field name="arch" type="xml">
+                <tree string="Credit Status Data"
+                      decoration-danger="balance &lt; 0"
+                      create="false" edit="false" delete="false" >
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="partner_id"/>
+                    <field name="date_end"/>
+                    <field name="level"/>
+                    <field name="check_scheme_id"/>
+                    <field name="currency_id" groups="base.group_multi_currency"/>
+                    <field name="used_limit"/>
+                    <field name="balance"/>
+                    <field name="credit_limit"/>
+                    <field name="prepaid"/>
+                    <field name="credit_ratio" widget="percentage"/>
+                    <field name="credit_ratio_limit"/>
+                    <field name="order_limit"/>
+                    <field name="temporary_order_limit" invisible="True"/>
+                    <field name="temporary_credit" invisible="True"/>
+                    <field name="temporary_overdue" invisible="True"/>
+                    <field name="temporary_overdue_limit" invisible="True"/>
+                    <field name="temporary_overdue_days" invisible="True"/>
+                    <field name="overdue_limit"/>
+                    <field name="actual_overdue_limit"/>
+                    <field name="actual_overdue_days"/>
+                    <field name="overdue_ratio" widget="percentage"/>
+                    <field name="actual_overdue_ratio" widget="percentage"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="search_ps_credit_usage" model="ir.ui.view">
+            <field name="name">ps.credit.usage.search</field>
+            <field name="model">ps.credit.usage</field>
+            <field name="arch" type="xml">
+                <search string="Search Credit Usage">
+                    <field name="partner_id"/>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="action_ps_credit_usage" model="ir.actions.act_window">
+            <field name="name">Credit Usage</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.credit.usage</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="ps_credit_usage_tree"/>
+        </record>
+
+
+    </data>
+</odoo>

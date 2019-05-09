@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_save" t-operation="after">
+            <button t-if="widget.model == 'ps.combined.statements.elimination.entry'" type="button" class="btn btn-sm btn-primary o_list_elimination_entry">抵消分录删除</button>
+        </t>
+    </t>
+
+	<!--内部现金流更新数据-->
+	<t t-name="EliminationEntryInfo">
+		<div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="organization_option">公司组织</label>
+						<select name="organization_option" id="organization_option" class="form-control">
+							<t t-foreach="data['organization']" t-as="organization">
+								<option t-att-value="organization['code']"><t t-raw="organization['name']"/></option>
+							</t>
+						</select>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="entry_type">抵消业务类型</label>
+					<select name="entry_type" id="entry_type" class="form-control">
+						<t t-foreach="data['entry_type']" t-as="entry_type">
+							<option t-att-value="entry_type['id']"><t t-raw="entry_type['name']"/></option>
+						</t>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="col_index">期间</label>
+					<input type="month" class="form-control" id="period" name="period" />
+				</div>
+			</div>
+		</div>
+	</t>
+
+
+</template>
+
+
+
+

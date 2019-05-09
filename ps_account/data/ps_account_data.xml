@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Precisions -->
+        <record forcecreate="True" id="decimal_cw_price" model="decimal.precision">
+            <field name="name">cw_price</field>
+            <field name="digits">2</field>
+        </record>
+        <record forcecreate="True" id="decimal_cw_amount" model="decimal.precision">
+            <field name="name">cw_amount</field>
+            <field name="digits">2</field>
+        </record>
+        <record forcecreate="True" id="decimal_cw_quantity" model="decimal.precision">
+            <field name="name">cw_quantity</field>
+            <field name="digits">2</field>
+        </record>
+        <record forcecreate="True" id="decimal_cw_rate" model="decimal.precision">
+            <field name="name">cw_rate</field>
+            <field name="digits" eval="3"/>
+        </record>
+        <record forcecreate="True" id="decimal_cw_currency" model="decimal.precision">
+            <field name="name">cw_currency</field>
+            <field name="digits" eval="3"/>
+        </record>
+        <record forcecreate="True" id="ps_unit_price" model="decimal.precision">
+            <field name="name">ps_unit_price</field>
+            <field name="digits" eval="2"/>
+        </record>
+
+    </data>
+    <!--预置科目属性-->
+    <data noupdate="1">
+        <record id="ps_account_attribute_asset" model="ps.account.account.attribute">
+            <field name="name">assets</field>
+            <field name="balance_direction">1</field>
+            <field name="first_character">1</field>
+        </record>
+        <record id="ps_account_attribute_liability" model="ps.account.account.attribute">
+            <field name="name">Liabilities</field>
+            <field name="balance_direction">2</field>
+            <field name="first_character">2</field>
+        </record>
+        <record id="ps_account_attribute_owner" model="ps.account.account.attribute">
+            <field name="name">Equity</field>
+            <field name="balance_direction">2</field>
+            <field name="first_character">3</field>
+        </record>
+        <record id="ps_account_attribute_cost" model="ps.account.account.attribute">
+            <field name="name">cost</field>
+            <field name="balance_direction">1</field>
+            <field name="first_character">4</field>
+        </record>
+        <record id="ps_account_attribute_profit" model="ps.account.account.attribute">
+            <field name="name">profit and loss</field>
+            <field name="balance_direction">0</field>
+            <field name="first_character">5</field>
+        </record>
+    </data>
+
+
+    <!--台账项目-->
+    <data noupdate="1">
+        <!--台账项目-->
+        <record forcecreate="True" id="cash_flow_items1" model="ps.cashflow.item">
+            <field name="name">Cash received from the sale of finished goods, goods, and services</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items2" model="ps.cashflow.item">
+            <field name="name">Received other cash related to operating activities</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items3" model="ps.cashflow.item">
+            <field name="name">Cash for the purchase of raw materials, commodities, and labor services</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items4" model="ps.cashflow.item">
+            <field name="name">Employee compensation paid</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items5" model="ps.cashflow.item">
+            <field name="name">Taxes paid</field>
+        </record>
+		<record forcecreate="True" id="cash_flow_items6" model="ps.cashflow.item">
+            <field name="name">Pay other cash related to business activities</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items7" model="ps.cashflow.item">
+            <field name="name">Net cash flow from operating activities</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items8" model="ps.cashflow.item">
+            <field name="name">Recovery of cash received from short-term investments, long-term bond investments and long-term equity investments</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items9" model="ps.cashflow.item">
+            <field name="name">Cash received from investment income</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items10" model="ps.cashflow.item">
+            <field name="name">Net cash recovered from disposal of fixed assets, intangible assets and other non-current assets</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items11" model="ps.cashflow.item">
+            <field name="name">Cash paid for short-term investments, long-term bond investments and long-term equity investments</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items12" model="ps.cashflow.item">
+            <field name="name">Cash paid for the purchase and construction of fixed assets, intangible assets and other non-current assets</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items13" model="ps.cashflow.item">
+            <field name="name">Net cash flows from investing activities</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items14" model="ps.cashflow.item">
+            <field name="name">Cash received from the loan</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items15" model="ps.cashflow.item">
+            <field name="name">Absorb cash received from investor investments</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items16" model="ps.cashflow.item">
+            <field name="name">Repayment of cash paid by the principal of the loan</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items17" model="ps.cashflow.item">
+            <field name="name">Cash paid for repayment of interest on borrowings</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items18" model="ps.cashflow.item">
+            <field name="name">Cash paid for distribution of profits</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items19" model="ps.cashflow.item">
+            <field name="name">Net cash flow from financing activities</field>
+        </record>
+        <record forcecreate="True" id="cash_flow_items20" model="ps.cashflow.item">
+            <field name="name">Plus: initial cash balance</field>
+        </record>
+    </data>
+    <menuitem name="Accounting"
+            web_icon="ps_account,static/description/icon.png"
+            id="account_accountant.menu_accounting"
+            sequence="40"/>
+    <menuitem id="account.menu_account_config" name="Settings" parent="account.menu_finance_configuration" sequence="0" groups="base.group_system"/>
+
+
+</odoo>

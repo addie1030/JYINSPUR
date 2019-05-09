@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+    <record id="currency_rate_live.res_company_company_1" model="res.company">
+        <field name="vat">983746192847389462</field>
+    </record>
+
+    <record id="currency_rate_live.res_company_company_2" model="res.company">
+        <field name="vat">983746194738946</field>
+    </record>
+
+</data>
+</odoo>

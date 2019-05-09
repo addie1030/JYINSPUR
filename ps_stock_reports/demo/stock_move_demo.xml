@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- Add  Product -->
+
+        <record id="product_product_sugar" model="product.product">
+            <field name="name">China Bang Bang Sugar</field>
+            <field name="categ_id" ref="product.product_category_5"/>
+            <field name="standard_price">55.0</field>
+            <field name="list_price">70.0</field>
+            <field name="type">product</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        </record>
+
+
+        <!-- Add  Stock Picking -->
+
+        <record id="incoming_stock_move" model="stock.picking">
+            <field name="picking_type_id" ref="stock.picking_type_in"/>
+            <field name="partner_id" ref="base.res_partner_1"/>
+            <field name="date" eval="DateTime.today()"/>
+            <field name="location_id" ref="stock.stock_location_suppliers"/>
+            <field name="location_dest_id" ref="stock.stock_location_stock"/>
+            <field name="move_lines" model="stock.move" eval="[(0, 0, {
+                'name': 'move  stock',
+                'warehouse_id': ref('stock.warehouse0'),
+                'product_id': ref('product_product_sugar'),
+                'product_uom': ref('uom.product_uom_unit'),
+                'product_uom_qty': 180.0,
+                'quantity_done': 180.0,
+                'picking_type_id': ref('stock.picking_type_in'),
+                'location_id': ref('stock.stock_location_suppliers'),
+                'location_dest_id': ref('stock.stock_location_stock'),
+            })]"/>
+        </record>
+
+
+        <!-- Confirm  Stock Picking-->
+        <function model="stock.picking" name="action_confirm" eval="[[ref('incoming_stock_move')]]"/>
+        <function model="stock.picking" name="button_validate" eval="[[ref('incoming_stock_move')]]"/>
+
+
+        <record id="outgoing_stock_picking" model="stock.picking">
+            <field name="picking_type_id" ref="stock.picking_type_out"/>
+            <field name="partner_id" ref="base.res_partner_1"/>
+            <field name="date" eval="DateTime.today()"/>
+            <field name="location_id" ref="stock.stock_location_stock"/>
+            <field name="location_dest_id" ref="stock.stock_location_customers"/>
+            <field name="move_lines" model="stock.move" eval="[(0, 0, {
+                'name': 'move stock',
+                'warehouse_id': ref('stock.warehouse0'),
+                'product_id': ref('product_product_sugar'),
+                'product_uom': ref('uom.product_uom_unit'),
+                'product_uom_qty': 100.0,
+                'quantity_done': 100.0,
+                'picking_type_id': ref('stock.picking_type_out'),
+                'location_id': ref('stock.stock_location_stock'),
+                'location_dest_id': ref('stock.stock_location_customers'),
+            })]"/>
+        </record>
+        <!-- Confirm  Stock Picking-->
+        <function model="stock.picking" name="action_confirm" eval="[[ref('outgoing_stock_picking')]]"/>
+        <function model="stock.picking" name="button_validate" eval="[[ref('outgoing_stock_picking')]]"/>
+
+
+    </data>
+</odoo>

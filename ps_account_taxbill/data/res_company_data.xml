@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="base.main_company" model="res.company">
+            <field name="ps_bank_id" ref="ps_account_taxbill.bank_test"/>
+            <field name="ps_bank_account">222</field>
+            <field name="ps_tax_disk_number">222</field>
+            <field name="ps_maximum_amount">222</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,128 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_inter_company_rules
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 16:18+0000\n"
+"PO-Revision-Date: 2019-01-22 16:18+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_inter_company_rules
+#: model:ir.model.fields,field_description:ps_inter_company_rules.field_res_company__send_receipt_and_payment
+msgid "Automatic Push of Receipt or Payment Documents"
+msgstr "自动推送收据或付款凭证"
+
+#. module: ps_inter_company_rules
+#: model:ir.model,name:ps_inter_company_rules.model_res_company
+msgid "Companies"
+msgstr "公司"
+
+#. module: ps_inter_company_rules
+#: model:ir.model,name:ps_inter_company_rules.model_res_config_settings
+msgid "Config Settings"
+msgstr "配置设定"
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_account_payment.py:27
+#, python-format
+msgid "No corresponding journal type has been set by the opposing unit."
+msgstr "对方单位未设置相应的日记账类型"
+
+#. module: ps_inter_company_rules
+#: model:ir.model,name:ps_inter_company_rules.model_account_payment
+msgid "Payments"
+msgstr "付款"
+
+#. module: ps_inter_company_rules
+#: model:ir.model,name:ps_inter_company_rules.model_purchase_order
+msgid "Purchase Order"
+msgstr "采购订单"
+
+#. module: ps_inter_company_rules
+#: model:ir.model,name:ps_inter_company_rules.model_sale_order
+msgid "Sale Order"
+msgstr "销售订单"
+
+#. module: ps_inter_company_rules
+#: model:ir.model.fields,field_description:ps_inter_company_rules.field_res_config_settings__ps_is_send_payment
+#: model_terms:ir.ui.view,arch_db:ps_inter_company_rules.ps_res_config_settings_view_form
+msgid "Send Payment and Receipt Documents"
+msgstr "收付款单推送"
+
+#. module: ps_inter_company_rules
+#: model:ir.model.fields,field_description:ps_inter_company_rules.field_account_payment__src_payment_id
+msgid "Source Payment ID"
+msgstr "原付款编号"
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:30
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:34
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:38
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:42
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:46
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:56
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:58
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:82
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:84
+#, python-format
+msgid "The"
+msgstr "订单第"
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:46
+#, python-format
+msgid "line in the document, Document order date should be within the start and end date of the price list."
+msgstr "行,订单日期与价目表不一致"
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:58
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:84
+#, python-format
+msgid "line in the document, Our company does not set tax on this product. Please contact our company to set tax, and then reconfirm the document."
+msgstr "行,本公司该产品未设置税，请联系本方单位设置税，然后重新确认该单据"
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:38
+#, python-format
+msgid "line in the document, The minimun quantity of the order is not consistent with the list of items."
+msgstr "行,订单数量与价目表不一致"
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:34
+#, python-format
+msgid "line in the document, The order price is not in conformity with the list of items."
+msgstr "行,订单价格与价目表不一致"
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:56
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:82
+#, python-format
+msgid "line in the document, The other company does not set tax on the product. Please contact the other company to set tax, and then reconfirm the document."
+msgstr "行,对方公司该产品未设置税，请联系对方单位设置税，然后重新确认该单据"
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:42
+#, python-format
+msgid "line in the document, The product is not maintained in the supplier's price list."
+msgstr "行,该产品未在供应商价格表中维护时间."
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_sale_purchase_check.py:30
+#, python-format
+msgid "line in the document, The supplier's priceless list, please contact the administrator to reconfirm after maintenance."
+msgstr "行,该供应商无价目表，请联系管理员维护后重新确认"
+
+#. module: ps_inter_company_rules
+#: code:addons/ps_inter_company_rules/models/ps_account_payment.py:29
+#, python-format
+msgid "收付款用途未设置对应的收付款用途，请维护对应的收付款用途"
+msgstr ""
+

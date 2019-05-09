@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record forcecreate="True" id="01" model="ps.asset.state">
+            <field name="name">正常使用</field>
+			<field name="describe"></field>
+            <field name="is_depreciation">True</field>
+            <field name="active">True</field>
+			<field name="company_id"></field>
+        </record>
+        <record forcecreate="True" id="02" model="ps.asset.state">
+            <field name="name">季节性使用</field>
+			<field name="describe"></field>
+            <field name="is_depreciation">True</field>
+            <field name="active">True</field>
+			<field name="company_id"></field>
+        </record>
+        <record forcecreate="True" id="03" model="ps.asset.state">
+            <field name="name">融资租入</field>
+			<field name="describe"></field>
+            <field name="is_depreciation">True</field>
+            <field name="active">True</field>
+			<field name="company_id"></field>
+        </record>
+        <record forcecreate="True" id="04" model="ps.asset.state">
+            <field name="name">经营性租出</field>
+			<field name="describe"></field>
+            <field name="is_depreciation">False</field>
+            <field name="active">True</field>
+			<field name="company_id"></field>
+        </record>
+        <record forcecreate="True" id="05" model="ps.asset.state">
+            <field name="name">大修理停用</field>
+			<field name="describe"></field>
+            <field name="is_depreciation">True</field>
+            <field name="active">True</field>
+			<field name="company_id"></field>
+        </record>
+        <record forcecreate="True" id="06" model="ps.asset.state">
+            <field name="name">未使用</field>
+			<field name="describe"></field>
+            <field name="is_depreciation">False</field>
+            <field name="active">True</field>
+			<field name="company_id"></field>
+        </record>
+        <record forcecreate="True" id="07" model="ps.asset.state">
+            <field name="name">不需要</field>
+			<field name="describe"></field>
+            <field name="is_depreciation">False</field>
+            <field name="active">True</field>
+			<field name="company_id"></field>
+        </record>
+    </data>
+</odoo>

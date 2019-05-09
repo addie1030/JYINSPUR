@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ps_mrp_cost_allocation_list" model="ir.ui.view">
+            <field name="name">ps.mrp.cost.allocation.list</field>
+            <field name="model">ps.mrp.cost.allocation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="period_id"/>
+                    <field name="product_id"/>
+                    <field name="cost_center"/>
+                    <field name="order_number"/>
+                    <field name="plan_quantity"/>
+                    <field name="initial_quantity"/>
+                    <field name="initial_amount"/>
+                    <field name="current_input_quantity"/>
+                    <field name="current_input_amount"/>
+                    <field name="accumulated_input_quantity"/>
+                    <field name="accumulated_input_amount"/>
+                    <field name="cumulative_quantity"/>
+                    <field name="cumulative_amount"/>
+                    <field name="complete_quantity_in"/>
+                    <field name="complete_cost_in"/>
+                    <field name="complete_amount_in"/>
+                    <field name="complete_cumulative_quantity"/>
+                    <field name="complete_cumulative_cost"/>
+                    <field name="complete_cumulative_amount"/>
+                </tree>
+            </field>
+        </record>
+        <record id="ps_mrp_cost_allocation" model="ir.actions.act_window">
+            <field name="name">Mrp Cost Allocation</field>
+            <field name="res_model">ps.mrp.cost.allocation</field>
+            <field name="view_mode">tree</field>
+        </record>
+        <!--<menuitem id="menu_ps_mrp_cost_allocation" name="Mrp Cost Allocation" action="ps_mrp_cost_allocation" parent="menu_cost_allocation" groups="base.group_user" sequence="1" />-->
+    </data>
+</odoo>

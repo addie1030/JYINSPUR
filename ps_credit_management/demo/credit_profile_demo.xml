@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="0">
+        <record id="check_scheme_id" model="ps.credit.check.scheme">
+            <field name="name">test</field>
+            <field name="description">111</field>
+        </record>
+
+        <record id="create_level_id" model="ps.credit.level">
+            <field name="name">test</field>
+            <field name="description">create for test</field>
+        </record>
+
+        <record id="product_credit_profile_0" model="ps.credit.profile">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.res_partner_category_14"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="level_id" ref="ps_credit_management.create_level_id"/>
+            <field name="state">draft</field>
+            <field name="check_scheme_id" ref="ps_credit_management.check_scheme_id"/>
+            <field name="ratio">1.1</field>
+            <field name="credit_limit">20000</field>
+            <field name="order_limit">5000</field>
+            <field name="overdue_days">3</field>
+            <field name="overdue_limit">10000</field>
+            <field name="overdue_ratio">1.1</field>
+            <field name="date_start" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="cycle_days">30</field>
+        </record>
+
+        <record id="product_credit_profile_1" model="ps.credit.profile">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.res_partner_category_2"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="level_id" ref="ps_credit_management.create_level_id"/>
+            <field name="state">draft</field>
+            <field name="check_scheme_id" ref="ps_credit_management.check_scheme_id"/>
+            <field name="ratio">1.1</field>
+            <field name="credit_limit">20000</field>
+            <field name="order_limit">5000</field>
+            <field name="overdue_days">3</field>
+            <field name="overdue_limit">10000</field>
+            <field name="overdue_ratio">1.1</field>
+            <field name="date_start" eval="(DateTime.today() + relativedelta(days=-10)).strftime('%Y-%m-%d')"/>
+            <field name="cycle_days">30</field>
+        </record>
+
+        <record id="product_credit_profile_2" model="ps.credit.profile">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.res_partner_category_12"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="level_id" ref="ps_credit_management.create_level_id"/>
+            <field name="state">draft</field>
+            <field name="check_scheme_id" ref="ps_credit_management.check_scheme_id"/>
+            <field name="ratio">1.1</field>
+            <field name="credit_limit">20000</field>
+            <field name="order_limit">5000</field>
+            <field name="overdue_days">3</field>
+            <field name="overdue_limit">10000</field>
+            <field name="overdue_ratio">1.1</field>
+            <field name="date_start" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="cycle_days">30</field>
+        </record>
+
+        <record id="product_credit_profile_3" model="ps.credit.profile">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.res_partner_category_11"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="level_id" ref="ps_credit_management.create_level_id"/>
+            <field name="state">draft</field>
+            <field name="check_scheme_id" ref="ps_credit_management.check_scheme_id"/>
+            <field name="ratio">1.1</field>
+            <field name="credit_limit">20000</field>
+            <field name="order_limit">5000</field>
+            <field name="overdue_days">3</field>
+            <field name="overdue_limit">10000</field>
+            <field name="overdue_ratio">1.1</field>
+            <field name="date_start" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="cycle_days">30</field>
+        </record>
+
+        <record id="product_credit_profile_4" model="ps.credit.profile">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.res_partner_category_8"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="level_id" ref="ps_credit_management.create_level_id"/>
+            <field name="state">draft</field>
+            <field name="check_scheme_id" ref="ps_credit_management.check_scheme_id"/>
+            <field name="ratio">1.1</field>
+            <field name="credit_limit">20000</field>
+            <field name="order_limit">5000</field>
+            <field name="overdue_days">3</field>
+            <field name="overdue_limit">10000</field>
+            <field name="overdue_ratio">1.1</field>
+            <field name="date_start" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d')"/>
+            <field name="cycle_days">5</field>
+        </record>
+
+        <record id="product_credit_profile_5" model="ps.credit.profile">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.res_partner_category_8"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="level_id" ref="ps_credit_management.create_level_id"/>
+            <field name="state">draft</field>
+            <field name="check_scheme_id" ref="ps_credit_management.check_scheme_id"/>
+            <field name="ratio">1.1</field>
+            <field name="credit_limit">20000</field>
+            <field name="order_limit">5000</field>
+            <field name="overdue_days">3</field>
+            <field name="overdue_limit">10000</field>
+            <field name="overdue_ratio">1.1</field>
+            <field name="date_start" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="cycle_days">3</field>
+        </record>
+
+        <record id="product_credit_profile_6" model="ps.credit.profile">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.res_partner_category_3"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="level_id" ref="ps_credit_management.create_level_id"/>
+            <field name="state">draft</field>
+            <field name="check_scheme_id" ref="ps_credit_management.check_scheme_id"/>
+            <field name="ratio">1.1</field>
+            <field name="credit_limit">20000</field>
+            <field name="order_limit">5000</field>
+            <field name="overdue_days">3</field>
+            <field name="overdue_limit">10000</field>
+            <field name="overdue_ratio">1.1</field>
+            <field name="date_start" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d')"/>
+            <field name="cycle_days">30</field>
+        </record>
+
+        <record id="product_credit_profile_7" model="ps.credit.profile">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="partner_id" ref="base.res_partner_category_3"/>
+            <field name="currency_id" ref="base.CNY"/>
+            <field name="level_id" ref="ps_credit_management.create_level_id"/>
+            <field name="state">draft</field>
+            <field name="check_scheme_id" ref="ps_credit_management.check_scheme_id"/>
+            <field name="ratio">1.1</field>
+            <field name="credit_limit">20000</field>
+            <field name="order_limit">5000</field>
+            <field name="overdue_days">3</field>
+            <field name="overdue_limit">10000</field>
+            <field name="overdue_ratio">1.1</field>
+            <field name="date_start" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d')"/>
+            <field name="cycle_days">30</field>
+            <field name="date_start" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+        </record>
+    </data>
+</odoo>

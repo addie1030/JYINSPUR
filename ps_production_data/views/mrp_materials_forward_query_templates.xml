@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="ps_production_data assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/ps_production_data/static/src/js/mrp_report_materials_forward_query.js"></script>
+        </xpath>
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/ps_production_data/static/src/js/ps_odtree.js"/>
+        </xpath>
+   </template>
+
+    <template id="assets_common" name="ps_production_data common assets" inherit_id="web.assets_common">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss" href="/ps_production_data/static/src/scss/mrp_report_materials_forward_query.scss" />
+        </xpath>
+    </template>
+</odoo>

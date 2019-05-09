@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="print_design_bill_view" model="ir.ui.view">
+            <field name="name">print.design.bill.list</field>
+            <field name="model">print.design.bill</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                    <field name="table_name"></field>
+                </tree>
+            </field>
+        </record>
+        <record id="print_design_bill_form" model="ir.ui.view">
+            <field name="name">print.design.bill.form</field>
+            <field name="model">print.design.bill</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                            <field name="table_name"></field>
+                        </group>
+                        <!--<field name="bills_ids" string="单据模型"/>-->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="print_design_bill" model="ir.actions.act_window">
+            <field name="name">打印单据</field>
+            <field name="res_model">print.design.bill</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_print_design_bill" name="打印单据" parent="menu_print_root" action="print_design_bill" groups="base.group_user"></menuitem>
+    </data>
+</odoo>

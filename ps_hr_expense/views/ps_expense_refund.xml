@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ps_expense_refund_list" model="ir.ui.view">
+            <field name="name">expense.refund.list</field>
+            <field name="model">ps.hr.expense.request</field>
+            <field name="arch" type="xml">
+                <tree create="false">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="reason"/>
+                    <field name="amount_request"/>
+                    <field name="amount_approved"/>
+                    <field name="amount_return_theoretical"/>
+                    <field name="amount_return_actual"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ps_hr_expense_refund_form" model="ir.ui.view">
+            <field name="name">ps.hr.expense.form</field>
+            <field name="model">ps.hr.expense.request</field>
+            <field name="arch" type="xml">
+                <form edit="false" create="false">
+                    <header>
+                        <button name="action_submit" states="draft" invisible="1" class="oe_highlight" string="Submit" type="object"
+                                groups="base.group_user"/>
+                        <button name="action_cancel" states="draft" invisible="1" class="oe_highlight" string="Cancel" type="object"
+                                groups="base.group_user"/>
+                        <button name="open_refund_form" string="Refund" invisible="1" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('need_repayment', '=', False)]}"/>
+                        <button name="action_draft" states="cancelled" invisible="1" class="oe_highlight" string="Draft" type="object"
+                                groups="base.group_user"/>
+                        <field name="state" invisible="1" widget="statusbar"
+                               statusbar_visible="draft,confirmed,approved,refused,cancelled,closed"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="employee_id"/>
+                                <field name="department_id"/>
+                                <field name="reason"/>
+                                <field name="need_repayment" invisible="True"/>
+                            </group>
+                            <group>
+                                <field name="amount_request"/>
+                                <field name="amount_approved"/>
+                                <field name="amount_actual"/>
+                                <field name="amount_reimburse"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details of Expense">
+                                <field name="line_ids">
+                                    <tree string="" editable="bottom">
+                                        <field name="name" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="description" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="place" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="price" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="qty"
+                                               attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="amount_request"/>
+                                        <field name="state" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <group>
+                            <field name="amount_return_theoretical"/>
+                            <field name="amount_return_actual"/>
+                        </group>
+                        <group>
+                            <field name="is_loan" string="Is Loan"/>
+                        </group>
+                        <group attrs="{'invisible': [('is_loan', '=', False)], 'required': [('is_loan', '=', True)]}">
+                            <group>
+                                <field name="amount_loan"/>
+                            </group>
+                            <group>
+                                <field name="date_return" attrs="{'required': [('is_loan', '=', True)]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="ps_hr_expense_refund" model="ir.actions.act_window">
+            <field name="name">Return Amount</field>
+            <field name="res_model">ps.hr.expense.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'expense_refund': False}</field>
+            <field name="domain">[('is_loan', '=', True),('employee_id.user_id', '=', uid)]</field>
+            <field name="view_ids" eval="[(5,0,0),
+                          (0,0,{'view_mode':'tree', 'view_id': ref('ps_expense_refund_list')}),
+                          (0,0,{'view_mode':'form', 'view_id': ref('ps_hr_expense_refund_form')})]"/>
+           <field name="help" type="html">
+                <p class="oe_view_nocontent_create" style="display:block">
+                    No record.
+                </p>
+           </field>
+        </record>
+
+        <menuitem id="menu_ps_refund"
+                  name="Return Amount"
+                  sequence="5"
+                  parent="hr_expense.menu_hr_expense_my_expenses"
+                  action="ps_hr_expense_refund"
+                  groups="base.group_user"/>
+    </data>
+</odoo>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--内部交易类型-->
+    <record id="view_ps_account_trade_type_tree" model="ir.ui.view">
+        <field name="name">ps.account.trade.type.view</field>
+        <field name="model">ps.account.trade.type</field>
+        <field name="arch" type="xml">
+            <tree string="Account Trade Type">
+                <field name="trade_type_number"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ps_account_trade_type_form" model="ir.ui.view">
+        <field name="name">ps.account.trade.type.form</field>
+        <field name="model">ps.account.trade.type</field>
+        <field name="arch" type="xml">
+            <form string="Account Trade Type">
+                <sheet>
+                    <group string="Types of internal transactions">
+                        <group>
+                            <field name="trade_type_number"/>
+                        </group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="act_ps_account_trade_type" model="ir.actions.act_window">
+        <field name="name">ps.account.trade.type.act</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ps.account.trade.type</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+        <field name="view_id" ref="view_ps_account_trade_type_tree"/>
+    </record>
+
+    <!--内部交易科目对照-->
+    <record id="view_ps_account_trade_relate_tree" model="ir.ui.view">
+        <field name="name">ps.account.trade.relate.tree</field>
+        <field name="model">ps.account.trade.relate</field>
+        <field name="arch" type="xml">
+            <tree string="Contrast Of Internal Transaction Subjects">
+                <field name="trade_relate_number"/>
+                <field name="name"/>
+                <field name="src_account_id"/>
+                <field name="src_direction"/>
+                <field name="des_account_id"/>
+                <field name="des_direction"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ps_account_trade_relate_form" model="ir.ui.view">
+        <field name="name">ps.account.trade.relate.form</field>
+        <field name="model">ps.account.trade.relate</field>
+        <field name="arch" type="xml">
+            <form string="Contrast Of Internal Transactions">
+                <sheet>
+                    <group string="Contrast Of Internal Transaction Subjects">
+                        <group>
+                            <field name="trade_relate_number"/>
+                            <field name="name"/>
+                            <field name="src_account_id"/>
+                            <field name="src_direction"/>
+                        </group>
+                        <group>
+                            <field name="des_account_id"/>
+                            <field name="des_direction"/>
+                            <field name="state"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="act_ps_account_trade_relate" model="ir.actions.act_window">
+        <field name="name">ps.account.trade.relate.act</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ps.account.trade.relate</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+        <field name="view_id" ref="view_ps_account_trade_relate_tree"/>
+    </record>
+
+    <menuitem id="ps_account_trade_type_menu" action="act_ps_account_trade_type" name="Types of internal transactions" parent="account.menu_finance_configuration" sequence="13" groups="account.group_account_manager"/>
+    <menuitem id="ps_account_trade_relate_menu" action="act_ps_account_trade_relate" name="Contrast Of Internal Transaction Subjects" parent="account.menu_finance_configuration" sequence="14" groups="account.group_account_manager"/>
+</odoo>

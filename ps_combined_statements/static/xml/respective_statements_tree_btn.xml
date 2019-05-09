@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_save" t-operation="after">
+            <button t-if="widget.model == 'ps.respective.statements.project'" type="button" class="btn btn-sm btn-primary o_list_respective_button_open">查看报表</button>
+        </t>
+    </t>
+</template>

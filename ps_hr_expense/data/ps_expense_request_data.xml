@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--费用申请单编号自动生成-->
+        <record id="sequence_ps_expense_request_id" model="ir.sequence">
+            <field name="name">Expense Request Sequence</field>
+            <field name="code">ps.hr.expense.request</field>
+            <field name="prefix">ER#</field>
+            <field name="padding">6</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

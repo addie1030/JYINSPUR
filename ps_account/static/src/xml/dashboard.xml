@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="dashboard" xml:space="preserve">
+    <t t-name="account.AccountDashboardSetupBar">
+        <div class="o_account_dashboard_header o_form_view" >
+            <div class="o_form_statusbar" style="width:100%;">
+                <div class="row" style="width:100%;">
+                    <div class="col-2" style="padding:10px 30px; text-align:center;">
+                        <a class="btn btn-default btn-lg seepz" id="seepz">
+                            <img src="/ps_account/static/src/img/seepz.png" width="45"/>
+                            <span class="o_highlight " style="vertical-align: middle;">
+                                View Voucher
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-2" style="padding:10px 30px; text-align:center;">
+                        <a class="btn btn-default btn-lg addpz" id="addpz">
+                            <img src="/ps_account/static/src/img/addpz.png" width="45"/>
+                            <span class="o_highlight " style="vertical-align: middle;">
+                                New Voucher
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-2" style="padding:10px 30px; text-align:center;">
+                        <a class="btn btn-default btn-lg trialbalance" id="trialbalance">
+                            <img src="/ps_account/static/src/img/trialbalance.png" width="45"/>
+                            <span class="o_highlight " style="vertical-align: middle;">
+                                Subject Balance Journal
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-2" style="padding:10px 30px; text-align:center;">
+                        <a class="btn btn-default btn-lg detailbalance" id="detailbalance">
+                            <img src="/ps_account/static/src/img/cashflowstatement.png" width="45"/>
+                            <span class="o_highlight " style="vertical-align: middle;">
+                                Subject Detail Journal
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-2" style="padding:10px 30px; text-align:center;">
+                        <a class="btn btn-default btn-lg balancesheet" id="balancesheet">
+                            <img src="/ps_account/static/src/img/balancesheet.png" width="45"/>
+                            <span class="o_highlight " style="vertical-align: middle;">
+                                Balance Sheets
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-2" style="padding:10px 30px; text-align:center;">
+                        <a class="btn btn-default btn-lg incomestatement" id="incomestatement">
+                            <img src="/ps_account/static/src/img/incomestatement.png" width="45"/>
+                            <span class="o_highlight " style="vertical-align: middle;">
+                                Income Statements
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/ps_account/static/src/js/Chart.min.js"></script>
+    </t>
+</template>

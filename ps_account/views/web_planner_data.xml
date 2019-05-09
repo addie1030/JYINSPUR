@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="account_planner" inherit_id="account.account_planner">
+    <!--<template id="account_planner1">-->
+        <xpath expr="//t[@t-call='web_planner.pages']" position="replace">
+        <t t-call="web_planner.pages">
+            <t t-call="web_planner.page">
+                <t t-set="page_title">Operation Guide</t>
+                <t t-set="hide_mark_as_done" t-value="True"/>
+                <div class="o_planner_intro">
+                    <p>
+                        The wizard will help you start the accounting experience of PS Cloud. Once completed, you will easily use the various functions of the accounting module.
+                    </p>
+                    <p>
+                        <ol>
+                            <li><strong>Supplement Company Informatino:</strong> Such as company name, logo, address and tax registration code, etc.</li>
+                            <li><strong>Parameter Settings:</strong> Such as switching subject templates, allowing youself to review your own vouchers and activating multi-currency, etc.</li>
+                            <li><strong>Accounting Period:</strong> Set the accounting period suitable for the company and support the flexible definition of accounting period.</li>
+                            <li><strong>Subject Setting:</strong> Add or delete subjects, set up auxiliary accounts for subjects.</li>
+                            <li><strong>Voucher Entry:</strong> Voucher entry, voucher list, pending review/posting list.</li>
+                            <li><strong>Statements Query:</strong> View general ledger, detail ledger and balance account, etc..</li>
+                            <li><strong>Month-end Processing:</strong> Final profit and loss carryover, month-end closing.</li>
+                            <li><strong>Financial Statements:</strong> View various financial statements such as balance sheets, profit and loss statements, and income statements.</li>
+                        </ol>
+                    </p>
+                    <p>Let's Start!</p>
+                </div>
+            </t>
+            <t t-call="web_planner.category">
+                <t t-set="menu_categorytitle">Start</t>
+                <t t-set="menu_categoryclasses" t-value="'fa fa-flag'"/>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">1.Company Information</t>
+                    <div class="o_planner_intro">
+                        <p class="text-muted">
+                            The first step is to supplement company information. This is mainly used to print your company information on orders and invoices, such as:
+                        </p>
+                        <ul>
+                            <li>Company Logo</li>
+                            <li>Company Formal Name</li>
+                            <li>Company Address</li>
+                            <li>Company Currency</li>
+                        </ul>
+                        <br/>
+                    </div>
+                    <ul>
+                        <a t-attf-href="#{prepare_backend_url('base.action_res_company_form', 'form')}&amp;id=#{company_id.id}" target="_blank">去完善公司信息</a>
+                    </ul>
+                    <div class="alert alert-info info_icon" role="alert">
+                        <span class="fa fa-lightbulb-o fa-lg"/>
+                        <p> PS Cloud supports multiple organizations, but we recommend to complete the information for the first company before setting up other companies.</p>
+                    </div>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">2.Parameter Settings</t>
+                    <div class="o_planner_intro">
+                        <ul>
+                            <li>Firstly, you need to switch the subject to '2017 China Small Business Accounting Chart'</li>
+                            <img class="signature mb8" src="/ps_account/static/src/img/qhkm.png"/>
+                            <li>Set up profit and loss carryover subject</li>
+                            <img class="signature mb8" src="/ps_account/static/src/img/syjz.png"/>
+                        </ul>
+                        <ul>
+                            <!--<a t-attf-href="#{prepare_backend_url('ps_account.res_config_settings_view_form', 'form')}&amp;id=#{company_id.id}" target="_blank">去设置页面</a>-->
+                        </ul>
+                    </div>
+                    <li>Set up the path：<a t-att-href="prepare_backend_url('account.action_account_config')">Configuration-Setting</a></li>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">3.Accounting Period</t>
+                    <div class="o_planner_intro">
+                        <p>
+                            When the system is used for the first time, it is necessary to manually maintain the accounting period, and maintain the complete accounting period even if it is used from the middle of the year,
+                            so that the accounting period of the next year is automatically generated at the end of the fiscal year.
+                        </p>
+                    </div>
+                    <ul>
+                        <a t-att-href="prepare_backend_url('account_china.aciton_ps_fiscalyear')">Initialize Accounting Period</a>
+                    </ul>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">4.Subject Setting</t>
+                    <div class="o_planner_intro">
+                        <ul>
+                            <li>Add, modify and delete subjects; set subject auxiliary accounting,
+                                <!--<a t-att-href="prepare_backend_url('ps_account.view_account_list_new')">科目列表</a>-->
+                            </li>
+                            <li>Firstly, initialize the account balance, <a t-att-href="prepare_backend_url('account_china.action_ps_account_opening')">Initialize the Account Balance</a></li>
+                        </ul>
+                    </div>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">5.Voucher Entry</t>
+                    <div class="o_planner_intro">
+                        <p class="text-muted">
+                            If the previous steps are all set, Congratulations! Let's start making voucher!
+                        </p>
+                    </div>
+                    <p>
+                        <ul>
+                            <a t-att-href="prepare_backend_url('account.action_move_journal_line')">Create a new voucher</a>
+                        </ul>
+                        <!--<ul>-->
+                        <!--<a t-att-href="prepare_backend_url('account.action_move_journal_line')">查看待审核列表</a>-->
+                        <!--</ul>-->
+                        <!--<ul>-->
+                        <!--<a t-att-href="prepare_backend_url('account.action_move_journal_line')">查看待记账列表</a>-->
+                        <!--</ul>-->
+                    </p>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">6.Statements Query</t>
+                    <div class="o_planner_intro">
+                        <div class="o_planner_intro">
+                            <p class="text-muted">
+                                View frequently-used ledgers, such as general ledgers, detail ledgers, balance sheets, etc.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-muted">
+                        Menu->Statements Query
+                    </p>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">7.Month-end Processing</t>
+                    <div class="o_planner_intro">
+                        <p class="text-muted">
+                            At the end of each accounting period, we do the profit and loss carryover, monthly closing, and automatically yearly closing for the last period.
+                        </p>
+                    </div>
+                    <p>
+                        <ul>Menu: Month-end processing - Profit and Loss Carryover
+                            <!--<a t-att-href="prepare_backend_url('account.action_move_journal_line')">损益结转</a>-->
+                        </ul>
+                        <ul>Menu: End of Month Processing - Period End Closing
+                            <!--<a t-att-href="prepare_backend_url('account.action_move_journal_line')">期末结账</a>-->
+                        </ul>
+                    </p>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">8.Financial Statements</t>
+                    <div class="o_planner_intro">
+                        <p class="text-muted">
+                            View frequently-used financial statements such as balance sheets, income statements, cash flow statements
+                        </p>
+                    </div>
+                    <p class="text-muted">
+                        Menu -> Financial Statements
+                    </p>
+                </t>
+            </t>
+            <t t-call="web_planner.category">
+                <t t-set="menu_categorytitle">Configuration</t>
+                <t t-set="menu_categoryclasses" t-value="'fa-cog'"/>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">Journal Type</t>
+                    <div class="o_planner_intro">
+                        <p>
+                            Normally, after switching subjects, you will have a ‘default’ type of journal type, the corresponding voucher word is ‘Note’, and the voucher type is ‘Posting Voucher’.
+                            You can modify or add the journal type according to your company's needs.
+                        </p>
+                        <p>
+                            The voucher number is numbered according to the 'Voucher Character' on the journal type.
+                        </p>
+                        <p>
+                            The 'type' on the journal type is used to distinguish the source of the voucher, such as sales, purchases, other
+                        </p>
+                    </div>
+                    <p>
+                        <ul>Path：Configuration-Accounting-Journal Type
+                            <!--<a t-att-href="prepare_backend_url('account.action_account_fiscal_position_form')">Review Fiscal Positions</a>-->
+                        </ul>
+                    </p>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">Muti-currency</t>
+                    <div class="o_planner_intro">
+                        <p>
+                            To use multiple currencies, you need to enable the "Multi-Currency" parameter in the Configuration - Settings and save it.This will result in a 'foreign currency setting' dictionary in Configuration-Accounting.
+                            PS Cloud has preset the currency of almost all countries. In general, you don't need to add new currency, just activate the currency you need.
+                        </p>
+                        <p>
+                            Note: The list page only displays the currency of the 'activated' state by default. After removing this condition, there are many other currencies.
+                        </p>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>Activate Foreign Currency<a t-att-href="prepare_backend_url('account.action_account_config')">Configuration-Setting</a></li>
+                            <li>View Available Foreign Currency<a t-att-href="prepare_backend_url('base.action_currency_form')">Foreign Currency Dictionary</a></li>
+                        </ol>
+                    </p>
+
+                    <!--<div class="alert alert-info info_icon" role="alert">-->
+                    <!--<span class="fa fa-lightbulb-o fa-lg"/>-->
+                    <!--<p>Exchange rates can be automatically updated once a day from <strong>Yahoo Finance</strong> or the <strong>European Central Bank</strong>. You can activate this feature in the bottom of the <a t-att-href="prepare_backend_url('account.action_account_config')">Accounting Settings</a>.</p>-->
+                    <!--</div>-->
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">Item Dictionary</t>
+                    <div class="o_planner_intro">
+                        <p>
+                            Item categories and item projects are used for item accounting of subjects. If the subject is to be accounted for, you need to select the accounting item on the subject setting page and select the item category.
+                            然后在凭证制单时选则对应的专项类别下的项目就可以了。
+                        </p>
+                    </div>
+                    <p>
+                        <ul>Path：Configuration-Item Information-Item Dictionary
+                            <!--<a t-att-href="prepare_backend_url('account.action_account_fiscal_position_form')">Review Fiscal Positions</a>-->
+                        </ul>
+                    </p>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">Settlement Method</t>
+                    <div class="o_planner_intro">
+                        <p>
+                            When fulfilling in the voucher, the bank account can choose the settlement method, settlement number, and settlement methods, such as cash, transfer, check, etc.
+                        </p>
+                    </div>
+                    <p>
+                        <ul>Path：Configuration-Accounting-Settlement Method
+                            <!--<a t-att-href="prepare_backend_url('account.ps_account_bankpayment_action')">Review Fiscal Positions</a>-->
+                        </ul>
+                    </p>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">Exchange Unit</t>
+                    <p class="text-muted">
+                        Unless you open a new business, you may want to import a list of customers or suppliers.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <span class="panel-title">
+                                        <span class="fa" data-icon="&#xe060;"/>
+                                        <strong> Manually Create</strong><br/>
+                                        <span class="small">&lt; 200 </span>
+                                    </span>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        If you have less than 200 contacts, it is recommended that you create them directly.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <a t-att-href="prepare_backend_url('base.action_partner_form','kanban')">New Customer</a>
+                                        </li><li>
+                                        <a t-att-href="prepare_backend_url('base.action_partner_supplier_form','kanban')">New Supplier</a>, if the Accounting or Purchasing module was installed
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <span class="panel-title">
+                                        <span class="fa" data-icon="&#xe040;"/>
+                                        <strong>Import</strong><br/>
+                                        <span class="small">&gt; 200 </span>
+                                    </span>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        We can handle the entire import process by submitting a CSV file containing all the data to your project manager.
+                                    </p><p>
+                                    If you want to do it yourself:
+                                </p>
+                                    <ul>
+                                        <li>Download <a href="/base_import/static/csv/customers.xls">Excel Template</a></li>
+                                        <li>Import, Use the 'Import' button in the top left corner <a t-att-href="prepare_backend_url('base.action_partner_form','list')">Customer List</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                <t t-call="web_planner.page">
+                    <t t-set="page_title">Product Dictionary</t>
+                    <p>
+                        The products in PS Cloud are what you sell or buy, not necessarily goods, it may be consumables or services.
+                        Please choose the method to create the product:
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <span class="panel-title">
+                                        <span class="fa" data-icon="&#xe060;"/>
+                                        <strong> Manually Create</strong><br/>
+                                        <span class="small">If the product is less than 100, it is recommended to use this method.</span>
+                                    </span>
+                                </div>
+                                <div class="panel-body">
+                                    <ul>
+                                        <li><a t-att-href="prepare_backend_url('product.product_template_action', 'form')">New Product</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <span class="panel-title">
+                                        <span class="fa" data-icon="&#xe040;"/>
+                                        <strong>Importing Files</strong><br/>
+                                        <span class="small">If the product is more than 100, it is recommended to use this method.</span>
+                                    </span>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        We handle the entire import process, you just need to send a CSV file containing all the products to your project manager.
+                                    </p><p>
+                                    If you want to do it yourself:
+                                </p>
+                                    <ul>
+                                        <li>Download <a href="/base_import/static/csv/products.xls">Excel Template</a></li>
+                                        <li>Import, Use the 'Import' button in the top left corner  <a t-att-href="prepare_backend_url('product.product_template_action','list')">Product List</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+        </xpath>
+    </template>
+
+</odoo>

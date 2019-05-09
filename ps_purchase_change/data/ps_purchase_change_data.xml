@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="ps_purchase_change_sequence_purchase_change_order_code" model="ir.sequence">
+            <field name="name">Purchase Change Order Default Code</field>
+            <field name="code">ps.purchase.order.change</field>
+            <field name="prefix">POC</field>
+            <field name="padding">4</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

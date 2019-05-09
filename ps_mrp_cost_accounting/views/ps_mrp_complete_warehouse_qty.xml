@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ps_mrp_complete_warehouse_qty_tree" model="ir.ui.view">
+            <field name="name">ps.mrp.complete.warehouse.qty.tree</field>
+            <field name="model">ps.mrp.completed.warehouse.qty</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="product_id"/>
+                    <field name="cost_account_id"/>
+                    <field name="stock_state"/>
+                    <field name="stock_location_id"/>
+                    <field name="qty_done"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--<record id="ps_mrp_expenses_plan_pull_form" model="ir.ui.view">-->
+            <!--<field name="name">ps.mrp.expenses.plan.pull.form</field>-->
+            <!--<field name="model">ps.mrp.expenses.plan.pull</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form>-->
+                    <!--<sheet>-->
+                        <!--<group>-->
+                            <!--<group>-->
+                                <!--<field name="code"/>-->
+                            <!--</group>-->
+                            <!--<group>-->
+                                <!--<field name="name"/>-->
+                            <!--</group>-->
+                        <!--</group>-->
+                        <!--<field name="plan_ids">-->
+                            <!--<tree editable="bottom">-->
+                                <!--<field name="expenses_id"/>-->
+                                <!--<field name="expenses_src"/>-->
+                                <!--<field name="account_id"/>-->
+                                <!--<field name="account_direction"/>-->
+                                <!--<field name="cost_account_id"/>-->
+                            <!--</tree>-->
+                        <!--</field>-->
+                    <!--</sheet>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record id="act_ps_mrp_complete_warehouse_qty" model="ir.actions.act_window">
+            <field name="name">Complete Warehouse Quantity</field>
+            <field name="res_model">ps.mrp.completed.warehouse.qty</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Complete Warehouse Quantity
+                </p>
+            </field>
+        </record>
+
+        <!--投入产量归集菜单-->
+        <menuitem id="menu_ps_mrp_complete_warehouse_qty" name="Complete Warehouse Quantity"
+                  action="act_ps_mrp_complete_warehouse_qty" parent="menu_yield_collection" groups="base.group_user"
+                  sequence="3"/>
+
+    </data>
+</odoo>

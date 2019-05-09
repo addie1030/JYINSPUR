@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="ps_asset_gdlyzd_view" model="ir.ui.view">
+            <field name="name">ps.asset.gdlyzd.list</field>
+            <field name="model">ps.asset.gdlyzd</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                    <field name="sffc" widget="checkbox"></field>
+                </tree>
+            </field>
+        </record>
+        <record id="ps_asset_gdlyzd_form" model="ir.ui.view">
+            <field name="name">ps.asset.gdlyzd.form</field>
+            <field name="model">ps.asset.gdlyzd</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                            <field name="sffc"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_menu_account_asset_lyzd" model="ir.actions.act_window">
+            <field name="name">资产来源</field>
+            <field name="res_model">ps.asset.gdlyzd</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+
+
+    <data>
+        <record id="ps_asset_zjff_view" model="ir.ui.view">
+            <field name="name">ps.asset.gdzjff.list</field>
+            <field name="model">ps.asset.gdzjff</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                    <!--<field name="zjl" widget="checkbox"></field>-->
+                    <!--<field name="zje" widget="checkbox"></field>-->
+                    <!--<field name="yzje"></field>-->
+                    <!--<field name="jesm"></field>-->
+                    <!--<field name="yzjl"></field>-->
+                    <!--<field name="jlsm"></field>-->
+                    <!--<field name="jszq"></field>-->
+                    <!--<field name="jsgs"></field>-->
+                    <field name="sffc" widget="checkbox"></field>
+                </tree>
+            </field>
+        </record>
+        <record id="ps_asset_zjff_form" model="ir.ui.view">
+            <field name="name">ps.asset.gdzjff.form</field>
+            <field name="model">ps.asset.gdzjff</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                            <field name="zjl" widget="checkbox"></field>
+                            <field name="zje" widget="checkbox"></field>
+                            <field name="yzje"></field>
+                            <field name="jesm"></field>
+                            <field name="yzjl"></field>
+                            <field name="jlsm"></field>
+                            <field name="jszq"></field>
+                            <field name="jsgs"></field>
+                            <field name="sffc"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_menu_account_asset_zjff" model="ir.actions.act_window">
+            <field name="name">折旧方法</field>
+            <field name="res_model">ps.asset.gdzjff</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+
+    <data>
+        <record id="ps_asset_gdzclb_view" model="ir.ui.view">
+            <field name="name">ps.asset.gdzclb.list</field>
+            <field name="model">ps.asset.gdzclb</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                    <field name="zjff"></field>
+                    <field name="zjnx"></field>
+                    <field name="czl"></field>
+                    <field name="zczt"></field>
+                    <field name="sffc" widget="checkbox"></field>
+                </tree>
+            </field>
+        </record>
+        <record id="ps_asset_gdzclb_form" model="ir.ui.view">
+            <field name="name">ps.asset.gdzclb.form</field>
+            <field name="model">ps.asset.gdzclb</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"></field>
+                            <field name="zjff"></field>
+                            <field name="zjnx"></field>
+                            <field name="czl"></field>
+                            <field name="zczt"></field>
+                            <field name="sffc"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_menu_account_asset_zclb" model="ir.actions.act_window">
+            <field name="name">资产类别</field>
+            <field name="res_model">ps.asset.gdzclb</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+
+    <data>
+        <record id="ps_asset_zcjs_view" model="ir.ui.view">
+            <field name="name">ps.asset.zc.zcjs.list</field>
+            <field name="model">ps.asset.zc.zcjs</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                    <field name="jsrq"></field>
+                    <!--<field name="jsbm"></field>-->
+                    <!--<field name="sfbm" widget="checkbox"></field>-->
+                    <!--<field name="jsyz"></field>-->
+                    <!--<field name="jssl"></field>-->
+                    <!--<field name="jszj"></field>-->
+                    <!--<field name="jsjz"></field>-->
+                    <!--<field name="jsyy"></field>-->
+                    <field name="zy"></field>
+                </tree>
+            </field>
+        </record>
+        <record id="ps_asset_zcjs_form" model="ir.ui.view">
+            <field name="name">ps.asset.zc.zcjs.form</field>
+            <field name="model">ps.asset.zc.zcjs</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h2 style="width:100%;text-align:center;text-decoration:underline;"> 资 产 减 少</h2>
+                        <group>
+                            <group>
+                                <field name="name"></field>
+                                <field name="jsyz"></field>
+                                <field name="jsjz"></field>
+                                <field name="sfbm"></field>
+                                <field name="jsyy"></field>
+                            </group>
+                            <group>
+                                <field name="jsrq"></field>
+                                <field name="jssl"></field>
+                                <field name="jszj"></field>
+                                <field name="jsbm"></field>
+                                <field name="zy"></field>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_menu_account_asset_zcjs" model="ir.actions.act_window">
+            <field name="name">资产减少</field>
+            <field name="res_model">ps.asset.zc.zcjs</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+
+    <menuitem id="menu_account_asset_zcjs"
+              name="资产减少"
+              parent="menu_account_asset_asset"
+              sequence="2"
+              groups="account.group_account_manager"/>
+
+    <menuitem id="menu_account_asset_zcjszcjs"
+              name="资产减少"
+              parent="menu_account_asset_zcjs"
+              action="action_menu_account_asset_zcjs"
+              sequence="1"
+              groups="account.group_account_manager"/>
+
+    <menuitem id="menu_account_asset_zjff"
+              name="折旧方法"
+              parent="ps_account_asset.menu_account_asset_initial"
+              action="action_menu_account_asset_zjff"
+              sequence="8"/>
+    <menuitem id="menu_account_asset_zclb"
+              name="资产类别"
+              parent="ps_account_asset.menu_account_asset_initial"
+              action="action_menu_account_asset_zclb"
+              sequence="4"
+              groups="account.group_account_manager"
+    />
+    <menuitem id="menu_account_asset_lyzd"
+              name="资产来源"
+              parent="ps_account_asset.menu_account_asset_initial"
+              action="action_menu_account_asset_lyzd"
+              sequence="5" groups="account.group_account_manager"/>
+</odoo>

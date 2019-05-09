@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_asset_location_tree" model="ir.ui.view">
+        <field name="name">ps.asset.location.tree</field>
+        <field name="model">ps.asset.location</field>
+        <field name="arch" type="xml">
+            <tree string="Asset Location">
+                <field name="name"/>
+                <field name="position"/>
+                <field name="address"/>
+                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_account_asset_location_form" model="ir.ui.view">
+        <field name="name">ps.asset.location.form</field>
+        <field name="model">ps.asset.location</field>
+        <field name="arch" type="xml">
+            <form string="Asset Location">
+                <sheet>
+                    <group>
+                        <field name="name" required="True"/>
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        <field name="position" required="True"/>
+                        <field name="address"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_account_asset_location" model="ir.actions.act_window">
+        <field name="name">Asset Location</field>
+        <field name="res_model">ps.asset.location</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_account_asset_location_tree"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+                Please create a asset location record.
+          </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_account_asset_location"
+              name="Asset Location"
+              parent="menu_account_asset_configuration"
+              action="action_account_asset_location"/>
+
+
+</odoo>

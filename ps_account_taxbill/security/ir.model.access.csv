@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ps_account_taxbill,ps.account.taxbill,model_ps_account_taxbill,ps_account_taxbill.group_vat_manager,1,1,1,1
+access_ps_account_taxbill_line,ps.account.taxbill.line,model_ps_account_taxbill_line,ps_account_taxbill.group_vat_manager,1,1,1,1
+access_ps_account_invoice_taxbill,ps.account.invoice.taxbill,model_ps_account_invoice_taxbill,ps_account_taxbill.group_vat_manager,1,1,1,1
+access_ps_account_invoice_taxbill_line,ps.account.invoice.taxbill.line,model_ps_account_invoice_taxbill_line,ps_account_taxbill.group_vat_manager,1,1,1,1

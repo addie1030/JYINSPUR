@@ -1,0 +1,9 @@
+[0523/145125:ERROR:renderer_main.cc(203)] Running without renderer sandbox
+[0523/145126:ERROR:block_files.cc(477)] Failed to open C:\Users\sunxiaoxia\AppData\Local\Tencent\Minibrowser\UserData\data_0
+[0523/145126:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0523/145126:ERROR:cache_util.cc(132)] Unable to move cache folder C:\Users\sunxiaoxia\AppData\Local\Tencent\Minibrowser\UserData to C:\Users\sunxiaoxia\AppData\Local\Tencent\Minibrowser\old_UserData_000
+[0523/145126:ERROR:cache_creator.cc(133)] Unable to create cache
+[0523/145127:INFO:CONSOLE(56)] "将根据已有的meta标签来设置缩放比例", source: https://www.lagou.com/center/jobMobile_4121051.html (56)
+[0523/145138:INFO:CONSOLE(160)] "Uncaught ReferenceError: require is not defined", source: https://www.lagou.com/center/jobMobile_4121051.html (160)
+[0523/145141:INFO:CONSOLE(112)] "Uncaught RangeError: Maximum call stack size exceeded", source:  (112)
+[0523/145142:ERROR:child_discardable_shared_memory_manager.cc(266)] size: 4194304

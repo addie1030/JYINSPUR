@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record id="view_ps_quality_stock_warehouse" model="ir.ui.view">
+        <field name="name">ps.quality.stock.warehouse.inherit.form</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+            <field name="wh_output_stock_loc_id" position="after">
+                <field name="ps_inspect_wh_id" readonly="1"/>
+                <field name="ps_pending_wh_id" readonly="1"/>
+            </field>
+        </field>
+    </record>
+
+
+    </data>
+</odoo>

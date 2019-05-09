@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="preview_template" xml:space="preserve">
+        <t t-name="preview.template">
+            <div id="reportbro"></div>
+        </t>
+</templates>

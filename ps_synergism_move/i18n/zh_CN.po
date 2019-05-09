@@ -1,0 +1,409 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_synergism_move
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 19:54+0000\n"
+"PO-Revision-Date: 2019-01-22 19:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:65
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:69
+#, python-format
+msgid " is already exists in the internal transaction record and cannot be created repeatedly."
+msgstr " 已在内部交易记录中存在,无法重复创建."
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:197
+#, python-format
+msgid " receiver has generated credentials and needs to cancel internal transactions. "
+msgstr " 接收方已经生成凭证，需要接收方先取消内部交易."
+
+#. module: ps_synergism_move
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.view_ps_account_trade_type_form
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.view_ps_account_trade_type_tree
+msgid "Account Trade Type"
+msgstr "内部交易类型"
+
+#. module: ps_synergism_move
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_cancle_move_trade_view
+msgid "Are you sure you want to cancel this internal transaction?"
+msgstr "确定要取消本次内部交易吗?"
+
+#. module: ps_synergism_move
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_mark_move_trade_view
+msgid "Are you sure you want to confirm this internal transaction??"
+msgstr "确定要确认本次内部交易吗?"
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:197
+#, python-format
+msgid "Business number: "
+msgstr "业务号: "
+
+#. module: ps_synergism_move
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_synergism_view_account_move_form
+msgid "Cancellation of internal transactions"
+msgstr "取消内部交易"
+
+#. module: ps_synergism_move
+#: model:ir.ui.menu,name:ps_synergism_move.ps_account_trade_relate_menu
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.view_ps_account_trade_relate_form
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.view_ps_account_trade_relate_tree
+msgid "Contrast Of Internal Transaction Subjects"
+msgstr "内部交易科目对照"
+
+#. module: ps_synergism_move
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.view_ps_account_trade_relate_form
+msgid "Contrast Of Internal Transactions"
+msgstr "内部交易科目对照"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__create_uid
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__create_uid
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_type__create_uid
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_cancle_move_trade_wizard__create_uid
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_mark_move_trade_wizard__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__create_date
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__create_date
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_type__create_date
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_cancle_move_trade_wizard__create_date
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_mark_move_trade_wizard__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ps_synergism_move
+#: selection:ps.account.trade.relate,des_direction:0
+#: selection:ps.account.trade.relate,src_direction:0
+msgid "Credit"
+msgstr "贷方"
+
+#. module: ps_synergism_move
+#: selection:ps.account.trade.relate,des_direction:0
+#: selection:ps.account.trade.relate,src_direction:0
+msgid "Debit"
+msgstr "借方"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__des_account_id
+msgid "Des Account Id"
+msgstr "接收方科目"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__des_company_id
+msgid "Des Company Id"
+msgstr "关联公司"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__des_direction
+msgid "Des Direction"
+msgstr "接收科目方向"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__display_name
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__display_name
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_type__display_name
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_cancle_move_trade_wizard__display_name
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_mark_move_trade_wizard__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ps_synergism_move
+#: selection:ps.account.move.trade,state:0
+msgid "Done"
+msgstr "已发送已接收"
+
+#. module: ps_synergism_move
+#: selection:ps.account.move.trade,state:0
+msgid "Draft"
+msgstr "已发送未接收"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__id
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__id
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_type__id
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_cancle_move_trade_wizard__id
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_mark_move_trade_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:90
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:96
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:99
+#, python-format
+msgid "In voucher"
+msgstr "凭证中第"
+
+#. module: ps_synergism_move
+#: model:ir.ui.menu,name:ps_synergism_move.menu_action_ps_account_move_trade_tree
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.view_ps_account_move_trade_tree
+msgid "Internal Transaction Records"
+msgstr "内部交易记录"
+
+#. module: ps_synergism_move
+#: model:ir.model,name:ps_synergism_move.model_account_move
+msgid "Journal Entries"
+msgstr "日记账分录"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade____last_update
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate____last_update
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_type____last_update
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_cancle_move_trade_wizard____last_update
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_mark_move_trade_wizard____last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__write_uid
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__write_uid
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_type__write_uid
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_cancle_move_trade_wizard__write_uid
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_mark_move_trade_wizard__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__write_date
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__write_date
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_type__write_date
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_cancle_move_trade_wizard__write_date
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_mark_move_trade_wizard__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ps_synergism_move
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_synergism_view_account_move_form
+msgid "Marking internal transactions"
+msgstr "标记内部交易"
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:116
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__origin
+msgid "Origin"
+msgstr "来源"
+
+#. module: ps_synergism_move
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_cancle_move_trade_view
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_mark_move_trade_view
+msgid "Post Journal Entries"
+msgstr "发布日记账分录"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_account_move__ps_boolean_inside
+msgid "Ps Boolean Id"
+msgstr "是否内部凭证"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_account_move__ps_mark
+msgid "Ps Mark"
+msgstr "是否标记"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_account_move__ps_partner_id
+msgid "Ps Partner Id"
+msgstr "关联公司"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_account_move__ps_trade_id
+msgid "Ps Trade Id"
+msgstr "关联业务"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_account_move__ps_trade_no
+msgid "Ps Trade No"
+msgstr "内部交易业务号"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_account_move__ps_type_id
+msgid "Ps Type Id"
+msgstr "内部交易业务类型"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_account_move__ps_way
+msgid "Ps Way"
+msgstr "内部交易方向"
+
+#. module: ps_synergism_move
+#: selection:account.move,ps_way:0
+#: selection:ps.account.move.trade,origin:0
+msgid "Receive"
+msgstr "接收方"
+
+#. module: ps_synergism_move
+#: selection:account.move,ps_way:0
+#: selection:ps.account.move.trade,origin:0
+msgid "Send"
+msgstr "发送方"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__src_account_id
+msgid "Src Account Id"
+msgstr "发送方科目"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__src_company_id
+msgid "Src Company Id"
+msgstr "业务方"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__src_direction
+msgid "Src Direction"
+msgstr "发送科目方向"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__src_move_id
+msgid "Src Move Id"
+msgstr "内部交易记录编号"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__state
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__state
+msgid "State"
+msgstr "状态"
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:96
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:99
+#, python-format
+msgid "The correspondence between the lender of the subject and the lender in the subject control table is inconsistent and cannot be labeled as an internal transaction."
+msgstr " 行科目的借贷方与科目对照表中借贷方对应不一致，无法标记为内部交易."
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:216
+#, python-format
+msgid "The current login user is not the sender. Please contact the sender to cancel the internal transaction."
+msgstr "当前登录用户不是发送方，请联系发送方取消内部交易."
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:203
+#, python-format
+msgid "This document has been confirmed and cannot be cancelled."
+msgstr "此单据已确认,无法被取消."
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__name
+msgid "Trade Name"
+msgstr "名称"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__trade_no
+msgid "Trade No"
+msgstr "内部交易业务号"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_relate__trade_relate_number
+msgid "Trade Relate Number"
+msgstr "编号"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_type__trade_type_number
+msgid "Trade Type Number"
+msgstr "类型编号"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_move_trade__type_id
+msgid "Type Id"
+msgstr "内部交易业务类型"
+
+#. module: ps_synergism_move
+#: model:ir.model.fields,field_description:ps_synergism_move.field_ps_account_trade_type__name
+msgid "Type Name"
+msgstr "类型名称"
+
+#. module: ps_synergism_move
+#: model:ir.ui.menu,name:ps_synergism_move.ps_account_trade_type_menu
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.view_ps_account_trade_type_form
+msgid "Types of internal transactions"
+msgstr "内部交易类型"
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:65
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:69
+#, python-format
+msgid "Voucher "
+msgstr "凭证 "
+
+#. module: ps_synergism_move
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_cancle_move_trade_view
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_mark_move_trade_view
+msgid "cancle"
+msgstr "取消"
+
+#. module: ps_synergism_move
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_cancle_move_trade_view
+#: model_terms:ir.ui.view,arch_db:ps_synergism_move.ps_mark_move_trade_view
+msgid "confirm"
+msgstr "确认"
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:90
+#, python-format
+msgid "inconsistence of subject settings between subjects and internal transaction control tables."
+msgstr " 科目与内部交易对照表中的科目设置不一致"
+
+#. module: ps_synergism_move
+#: code:addons/ps_synergism_move/models/ps_synergism_move.py:90
+#, python-format
+msgid "line"
+msgstr " 行的"
+
+#. module: ps_synergism_move
+#: model:ir.model,name:ps_synergism_move.model_ps_account_move_trade
+msgid "ps.account.move.trade"
+msgstr ""
+
+#. module: ps_synergism_move
+#: model:ir.actions.act_window,name:ps_synergism_move.action_view_ps_account_move_trade_tree
+msgid "ps.account.move.trade.act"
+msgstr "内部交易科目对照"
+
+#. module: ps_synergism_move
+#: model:ir.model,name:ps_synergism_move.model_ps_account_trade_relate
+msgid "ps.account.trade.relate"
+msgstr "内部交易科目对照"
+
+#. module: ps_synergism_move
+#: model:ir.actions.act_window,name:ps_synergism_move.act_ps_account_trade_relate
+msgid "ps.account.trade.relate.act"
+msgstr "内部交易对照"
+
+#. module: ps_synergism_move
+#: model:ir.model,name:ps_synergism_move.model_ps_account_trade_type
+msgid "ps.account.trade.type"
+msgstr "内部交易类型"
+
+#. module: ps_synergism_move
+#: model:ir.actions.act_window,name:ps_synergism_move.act_ps_account_trade_type
+msgid "ps.account.trade.type.act"
+msgstr "内部交易类型"
+
+#. module: ps_synergism_move
+#: model:ir.model,name:ps_synergism_move.model_ps_cancle_move_trade_wizard
+msgid "ps.cancle.move.trade.wizard"
+msgstr ""
+
+#. module: ps_synergism_move
+#: model:ir.model,name:ps_synergism_move.model_ps_mark_move_trade_wizard
+msgid "ps.mark.move.trade.wizard"
+msgstr ""
+

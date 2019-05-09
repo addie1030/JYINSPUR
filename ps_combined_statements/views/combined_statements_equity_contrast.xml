@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<record id="combined_statements_equity_contrast_tree" model="ir.ui.view">
+		    <field name="name">Contrast of Rights And Interests Subjects</field>
+		    <field name="model">ps.combined.statements.equity.contrast</field>
+		    <field name="arch" type="xml">
+		        <tree editable="bottom">
+		            <field name="debit_subject" widget="many2many_tags" options='{"no_open":True, "no_create":True}'/>
+					<field name="credit_subject" widget="many2many_tags" options='{"no_open":True, "no_create":True}'/>
+					<field name="ir_model_id" options='{"no_open": True, "no_create": True}'/>
+					<field name="category_id" />
+				</tree>
+		    </field>
+		</record>
+
+		<record id="combined_statements_equity_contrast_act_window" model="ir.actions.act_window">
+		    <field name="name">Contrast of Rights And Interests Subjects</field>
+		    <field name="type">ir.actions.act_window</field>
+		    <field name="res_model">ps.combined.statements.equity.contrast</field>
+		    <field name="view_mode">tree</field>
+		    <field name="help" type="html">
+		      <p class="oe_view_nocontent_create">
+		        Click here to create a subject comparison.
+		      </p><p>
+		        Subject comparison of rights and interests for generating offset entries.
+		      </p>
+		    </field>
+		</record>
+
+		<record id="combined_statements_equity_contrast_search" model="ir.ui.view">
+			<field name="name">Contrast Search of Rights and Interests Subjects</field>
+			<field name="model">ps.combined.statements.equity.contrast</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="debit_subject"/>
+					<field name="credit_subject"/>
+				</search>
+			</field>
+		</record>
+
+		<!-- Rights and interests class subjects  -->
+		<menuitem id="combined_statements_equity_contrast_menu"
+				  name="Contrast Table of Equity Setoff Relations"
+				  parent="combined_statements_merger_basic_record"
+				  action="combined_statements_equity_contrast_act_window"
+				  sequence="2"/>
+    </data>
+</odoo>

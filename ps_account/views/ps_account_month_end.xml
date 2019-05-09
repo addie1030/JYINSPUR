@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ps_account_period_list" model="ir.ui.view">
+        <field name="name">ps.account.period.list</field>
+        <field name="model">ps.account.period</field>
+        <field name="arch" type="xml">
+            <tree string="Account period list" toolbar="1" >
+                <field name="year"/>
+                <field name="period"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="financial_state" string="State"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="aciton_ps_month_end" model="ir.actions.act_window">
+        <field name="name">Month-end Processing</field>
+        <field name="res_model">ps.account.period</field>
+        <field name="view_type">tree</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Select an accounting period
+            </p>
+        </field>
+    </record>
+
+    <!--<menuitem id="menu_ps_account_month_end"-->
+              <!--name="月末结账"-->
+              <!--parent="menu_accounting_month_end"-->
+              <!--action="aciton_ps_month_end"-->
+              <!--sequence="5"-->
+              <!--groups="account.group_account_manager"-->
+    <!--/>-->
+
+</odoo>

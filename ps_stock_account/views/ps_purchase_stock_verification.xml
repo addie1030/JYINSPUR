@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_ps_purchase_stock_verification_form" model="ir.ui.view">
+            <field name="name">Invoice Stock Move Validate</field>
+            <field name="model">ps.purchase.stock.verification</field>
+            <field name="arch" type="xml">
+                <form string="Invoice Stock Move Validate" >
+                    <sheet>
+                        <button name="refresh_data"  string="Refresh" type="object"
+                                  class="oe_highlight"
+                                  groups="account.group_account_manager"
+                        />
+                        <group>
+                            <group>
+                                <field name="stock_move_type" required="1"/>
+                            </group>
+                            <group>
+                                <field name="partner_id"
+                                       options="{'no_create_edit': True,'no_open': True}"
+                                       required="1"
+                                />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Account Invoices">
+                                <field name="ps_account_invoice_ids" widget="one2many_list">
+                                    <tree delete="false" create="false" editable="false" class="ps_stock_picking_move account_invoices">
+                                        <field name="ps_origin" readonly="1"/>
+                                        <field name="ps_date"  readonly="1"/>
+                                        <field name="ps_product_id" readonly="1"/>
+                                        <field name="ps_quantity" readonly="1"/>
+                                        <field name="ps_price_unit" readonly="1"/>
+                                        <field name="ps_price_subtotal" readonly="1"/>
+                                        <field name="ps_uncancelled_quantity" readonly="1"/>
+                                        <field name="ps_cancelled_quantity" readonly="1"/>
+                                        <field name="ps_invoice_line_id" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <notebook>
+                            <page string="Stock Account Moves">
+                                <field name="ps_stock_move_ids" widget="one2many_list">
+                                    <tree delete="false" create="false" editable="true"
+                                          class="ps_purchase_stock_verification stock_account_moves"
+                                          decoration-danger="ps_the_cancelled_quantity > 0 ">
+                                        <field name="ps_ref" readonly="1"/>
+                                        <field name="ps_origin" readonly="1"/>
+                                        <field name="ps_date" readonly="1"/>
+                                        <field name="ps_product_id" readonly="1"/>
+                                        <field name="ps_quantity" readonly="1"/>
+                                        <field name="ps_price_unit" readonly="1"/>
+                                        <field name="ps_price_subtotal" readonly="1"/>
+                                        <field name="ps_uncancelled_quantity" readonly="1"/>
+                                        <field name="ps_cancelled_quantity" readonly="1"/>
+                                        <field name="ps_the_cancelled_quantity"/>
+                                        <field name="ps_stock_move_id" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_ps_purchase_stock_verification" model="ir.actions.act_window">
+            <field name="name">Invoice Stock Move Validate</field>
+            <field name="res_model">ps.purchase.stock.verification</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="action_ps_purchase_stock_verification"
+                  id="menu_action_ps_purchase_stock_verification"
+                  name="Invoice Stock Move Validate"
+                  parent="account.menu_finance_payables"
+                  sequence="21"/>
+
+        <menuitem action="action_ps_purchase_stock_verification"
+                  id="menu_action_ps_purchase_stock_verification_Outbound"
+                  name="Outbound Stock Move Validate"
+                  parent="account.menu_finance_receivables"
+                  sequence="21"/>
+
+        <record id="view_ps_company_form" model="ir.ui.view">
+            <field name="name">res.company.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='currency_id']" position="after">
+                    <field name="cogs_account_id"/>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

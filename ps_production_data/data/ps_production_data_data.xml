@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--
+             Precisions for calendar work hours
+        -->
+        <record forcecreate="True" id="decimal_work_hours" model="decimal.precision">
+            <field name="name">Work Hours</field>
+            <field name="digits">1</field>
+        </record>
+    </data>
+</odoo>

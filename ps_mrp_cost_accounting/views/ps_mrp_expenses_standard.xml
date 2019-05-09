@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ps_mrp_expenses_standard_list" model="ir.ui.view">
+            <field name="name">ps.mrp.expenses.standard.list</field>
+            <field name="model">ps.mrp.expenses.standard</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="scope_application"/>
+                    <field name="standard_type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ps_mrp_expenses_standard_form" model="ir.ui.view">
+            <field name="name">ps.mrp.expenses.standard.form</field>
+            <field name="model">ps.mrp.expenses.standard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="True">/</field>
+                                <field name="scope_application"/>
+                                <field name="is_factor" string="Is Factor"/>
+                                <field name="preset_sql" invisible="1"/>
+                                <field name="preset_parameter" invisible="1"/>
+                                <field name="is_preset" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                                <field name="standard_type"/>
+                                <field name="formula_code"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Factors">
+                                <field name="factor_ids" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}">
+                                    <tree string="" editable="top">
+                                        <field name="name" readonly="True"/>
+                                        <field name="formula_code" readonly="True"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <group>
+                            <field name="compute_formula" widget="text" string="Compute Formula"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ps_mrp_expenses_standard_act" model="ir.actions.act_window">
+            <field name="name">Mrp Expenses Standard</field>
+            <field name="res_model">ps.mrp.expenses.standard</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_ps_mrp_expenses_standard" name="Mrp Expenses Standard" action="ps_mrp_expenses_standard_act" parent="menu_cost_basic_data" groups="base.group_user" sequence="3" />
+    </data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="Combined Statements assets" inherit_id="web.assets_backend">
+
+		<xpath expr="." position="inside">
+			<!-- Spread Utils -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/formulas_utils.js" />
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/contextmenu.js" />
+
+			<!-- gcspread -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/gcspread.sheets.all.9.40.20161.0.min.js" />
+
+			<!-- Set the table  -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/template.js"/>
+
+			<!--Individual statements -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/respective_statements.js"/>
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/check_respective_statements.js"/>
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/respective_statements_tree_btn.js" />
+
+			<!--Internal creditor's rights debt table -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/comebined_statements_inside_credit_debit.js" />
+			<!--Common transactions within tables -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/comebined_statements_inside_familiar_deal.js" />
+			<!--Internal cash flow statement -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/combined_statements_inside_cash_detail.js" />
+			<!--Offset entries -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/combined_statements_elimination_entry.js" />
+
+			<!--consolidated -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/merge_statements.js"/>
+
+			<!--Papers to define -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/working_papers.js" />
+
+			<!--Adjust the working papers -->
+			<script type="text/javascript" src="/ps_combined_statements/static/src/js/adjust_working_papers.js" />
+
+			<!-- gcspread Style-->
+			<link rel="stylesheet" type="text/css" href="/ps_combined_statements/static/src/css/gcspread.sheets.9.40.20161.0.css" />
+			<link rel="stylesheet" type="text/css" href="/ps_combined_statements/static/src/css/gcspread.sheets.excel2016colorful.9.40.20161.0.css" />
+
+			<!-- Consolidated style  -->
+			<link rel="stylesheet" type="text/scss" href="/ps_combined_statements/static/src/scss/template.scss" />
+		</xpath>
+    </template>
+
+</odoo>

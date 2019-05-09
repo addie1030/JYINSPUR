@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequences for sale.contract -->
+        <record id="seq_sale_contract" model="ir.sequence">
+            <field name="name">Sales contract</field>
+            <field name="code">ps.sale.contract</field>
+            <field name="prefix">XSHT#</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_cost_none_search" model="ir.ui.view">
+            <field name="name">Cost None Search</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_search"/>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="no_set" string="No set"
+                            domain="['|',('price_unit','=',False),('price_unit','=','0.0')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_stock_cost_maintenance_tree" model="ir.ui.view">
+            <field name="name">Cost None Tree</field>
+            <field name="model">stock.move</field>
+            <field name="arch" type="xml">
+                <tree create="false" editable="bottom">
+                    <field name="reference" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                    <field name="product_id" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                    <field name="location_dest_id" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                    <field name="product_qty" readonly="1"/>
+                    <field name="price_unit" />
+                    <field name="value"/>
+                    <field name="state" invisible="1"/>
+                    <field name="remaining_value" invisible="1" />
+                    <field name="remaining_qty" invisible="1" />
+                </tree>
+            </field>
+        </record>
+
+        <record id='action_window_stock_cost_maintenance_action' model='ir.actions.act_window'>
+            <field name='name'>Storage Cost Maintenance</field>
+            <field name="res_model">stock.move</field>
+            <field name='view_mode'>tree</field>
+            <field name="context" eval="{'search_default_no_set':1,'search_default_incoming':1, 'remove_name': 'ps_list_actions_delete'}"/>
+            <field name="domain">[('state','=','done')]</field>
+            <field name='view_id' ref='view_stock_cost_maintenance_tree'/>
+        </record>
+
+        <menuitem name="Cost Maintenance" id="ps_stock_account.stock_cost_maintenance"
+                  parent="ps_account_center.menu_4" action="action_window_stock_cost_maintenance_action"
+                  groups="account.group_account_manager"/>
+    </data>
+</odoo>

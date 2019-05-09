@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ps_change_calendar_wizard_view" model="ir.ui.view">
+            <field name="name">Calendar Change Notification</field>
+            <field name="model">ps.change.factory.calendar</field>
+            <field name="arch" type="xml">
+                <form string="Calendar Notification">
+                    <p>Factory calendar already existed, please click 'Confirm' to change!</p>
+                    <footer>
+                        <button string="Confirm" name="ps_change_calendar_confirm" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" special="cancel" class="secondary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

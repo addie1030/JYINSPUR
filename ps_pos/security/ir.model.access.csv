@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ps_member_cashflow_account_point_sale_manager,ps.member.cashflow.account.point.sale.manager,model_ps_member_cashflow_account,point_of_sale.group_pos_manager,1,1,1,1
+access_ps_member_cashflow_account_group_pos_user,ps.member.cashflow.account.group.pos.user,model_ps_member_cashflow_account,point_of_sale.group_pos_user,1,1,1,0
+access_ps_member_category_point_rule_point_sale_manager,ps.member.category.point.rule.point.sale.manager,model_ps_member_category_point_rule,point_of_sale.group_pos_manager,1,1,1,1
+access_ps_member_category_point_rule_group_pos_user,ps.member.category.point.rule.group.pos.user,model_ps_member_category_point_rule,point_of_sale.group_pos_user,1,0,0,0
+access_ps_member_category_bonus_use_set_point_sale_manager,ps.member.category.bonus.use.set.point.sale.manager,model_ps_member_category_bonus_use_set,point_of_sale.group_pos_manager,1,1,1,1
+access_ps_member_category_bonus_use_set_group_pos_user,ps.member.category.bonus.use.set.group.pos.user,model_ps_member_category_bonus_use_set,point_of_sale.group_pos_user,1,0,0,0
+access_ps_member_category_gift_rule_point_sale_manager,ps.member.category.gift.rule.point.sale.manager,model_ps_member_category_gift_rule,point_of_sale.group_pos_manager,1,1,1,1
+access_ps_member_category_gift_rule_group_pos_user,ps.member.category.gift.rule.group.pos.user,model_ps_member_category_gift_rule,point_of_sale.group_pos_user,1,1,1,1
+access_ps_member_category_point_sale_manager,ps.member.category.point.sale.manager,model_ps_member_category,point_of_sale.group_pos_manager,1,1,1,1
+access_ps_member_category_group_pos_user,ps.member.category.group.pos.user,model_ps_member_category,point_of_sale.group_pos_user,1,0,0,0

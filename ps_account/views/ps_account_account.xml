@@ -1,0 +1,72 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<odoo>
+
+    <record id="ps_cashflow_item_view_tree_id" model="ir.ui.view">
+        <field name="name">ps.cashflow.item.view</field>
+        <field name="model">ps.cashflow.item</field>
+        <field name="arch" type="xml">
+                <tree toolbar="1" editable="top">
+                    <field name="name" string="Item Name" />
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+        </field>
+    </record>
+    <record id="ps_cashflow_item_action_id" model="ir.actions.act_window">
+        <field name="name">Cash Flow Item</field>
+            <field name="res_model">ps.cashflow.item</field>
+            <field name="view_mode">tree</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Please create special maintenance records.
+              </p>
+            </field>
+    </record>
+        <menuitem id="account_ps_base_menu"
+              name="Cash Flow"
+              action="ps_cashflow_item_action_id"
+              parent="account.menu_finance_configuration"
+              sequence="1"
+              groups="account.group_account_manager"/>
+
+    <!--科目属性维护-->
+    <record id="ps_account_account_attribute_view_form_id" model="ir.ui.view">
+        <field name="name">ps.account.account.attribute.view</field>
+        <field name="model">ps.account.account.attribute</field>
+        <field name="arch" type="xml">
+            <form >
+                <sheet>
+                    <group style="width:50%;padding:5px">
+                        <field name="name" string="Attribute name" required="True"/>
+                        <!--<field name="balance_direction" required="True"/>-->
+                        <field name="first_character" required="True" placeholder="Please enter the numbers between 1 and 9."/>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ps_account_account_attribute_view_tree_id" model="ir.ui.view">
+        <field name="name">ps.account.account.attribute.view</field>
+        <field name="model">ps.account.account.attribute</field>
+        <field name="arch" type="xml">
+                <tree class="o_form_view_inspur">
+                    <field name="name" string="Attribute name" />
+                    <field name="balance_direction" string="Balance direction" />
+                    <field name="first_character" string="First character" />
+                </tree>
+        </field>
+    </record>
+    <record id="ps_account_account_attribute_action_id" model="ir.actions.act_window">
+        <field name="name">Subject attribute maintenance</field>
+            <field name="res_model">ps.account.account.attribute</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Please create account attribute maintenance record.
+              </p>
+            </field>
+    </record>
+    <!--翻译修改-->
+    <delete model="ir.translation" search="[('src','=','Exchange Gain or Loss Journal'),('name','=','ir.model.fields,field_description')]"/>
+</odoo>

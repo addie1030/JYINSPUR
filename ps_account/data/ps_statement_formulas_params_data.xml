@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record forcecreate="True" id="0001_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0001_KMJE_JFYE"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.debit)-sum(account_move_line.credit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0001_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0001_KMJE_JFYE"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0001_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0001_KMJE_JFYE"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0001_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0001_KMJE_JFYE"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0001_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0001_KMJE_JFYE"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0001_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0001_KMJE_JFYE"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0002_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0002_KMJE_NCJF"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.debit)-sum(account_move_line.credit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0002_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0002_KMJE_NCJF"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0002_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0002_KMJE_NCJF"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0002_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0002_KMJE_NCJF"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0002_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0002_KMJE_NCJF"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0002_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0002_KMJE_NCJF"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0003_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0003_KMJE_JFFS"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.debit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0003_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0003_KMJE_JFFS"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0003_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0003_KMJE_JFFS"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0003_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0003_KMJE_JFFS"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0003_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0003_KMJE_JFFS"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0003_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0003_KMJE_JFFS"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0004_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0004_KMJE_JFLJ"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.debit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0004_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0004_KMJE_JFLJ"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0004_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0004_KMJE_JFLJ"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0004_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0004_KMJE_JFLJ"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0004_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0004_KMJE_JFLJ"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0004_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0004_KMJE_JFLJ"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0005_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0005_KMJE_YCJF"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.debit)-sum(account_move_line.credit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0005_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0005_KMJE_YCJF"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0005_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0005_KMJE_YCJF"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0005_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0005_KMJE_YCJF"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0005_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0005_KMJE_YCJF"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0005_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0005_KMJE_YCJF"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0006_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0006_KMJE_DFFS"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.credit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0006_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0006_KMJE_DFFS"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0006_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0006_KMJE_DFFS"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0006_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0006_KMJE_DFFS"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0006_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0006_KMJE_DFFS"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0006_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0006_KMJE_DFFS"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0007_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0007_KMJE_DFLJ"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.credit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0007_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0007_KMJE_DFLJ"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0007_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0007_KMJE_DFLJ"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0007_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0007_KMJE_DFLJ"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0007_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0007_KMJE_DFLJ"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0007_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0007_KMJE_DFLJ"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0008_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0008_BB"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.credit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0008_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0008_BB"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0008_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0008_BB"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0008_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0008_BB"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0008_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0008_BB"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0008_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0008_BB"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0009_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0009_KMJE_DFYE"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.credit) - sum(account_move_line.debit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0009_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0009_KMJE_DFYE"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0009_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0009_KMJE_DFYE"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0009_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0009_KMJE_DFYE"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0009_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0009_KMJE_DFYE"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0009_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0009_KMJE_DFYE"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0010_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0010_KMJE_NCDF"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.credit)-sum(account_move_line.debit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0010_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0010_KMJE_NCDF"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0010_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0010_KMJE_NCDF"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0010_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0010_KMJE_NCDF"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0010_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0010_KMJE_NCDF"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0010_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0010_KMJE_NCDF"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0011_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0011_KMJE_YCDF"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.credit)-sum(account_move_line.debit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0011_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0011_KMJE_YCDF"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0011_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0011_KMJE_YCDF"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0011_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0011_KMJE_YCDF"/>
+            <field name="param_id">0004</field>
+            <field name="name">#SACCOUNTCODE#</field>
+            <field name="param_description">Start accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting</field>
+        </record>
+		<record forcecreate="True" id="0011_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0011_KMJE_YCDF"/>
+            <field name="param_id">0005</field>
+            <field name="name">#EACCOUNTCODE#</field>
+            <field name="param_description">End accounting</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting</field>
+        </record>
+		<record forcecreate="True" id="0011_parm6" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0011_KMJE_YCDF"/>
+            <field name="param_id">0006</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0012_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0012_LLJE_JFLJ"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.debit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0012_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0012_LLJE_JFLJ"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0012_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0012_LLJE_JFLJ"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0012_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0012_LLJE_JFLJ"/>
+            <field name="param_id">0004</field>
+            <field name="name">#CASHFLOWITEM#</field>
+            <field name="param_description">现金流量项目</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">现金流量项目</field>
+        </record>
+		<record forcecreate="True" id="0012_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0012_LLJE_JFLJ"/>
+            <field name="param_id">0005</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0013_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0013_LLJE_DFLJ"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.credit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0013_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0013_LLJE_DFLJ"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0013_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0013_LLJE_DFLJ"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0013_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0013_LLJE_DFLJ"/>
+            <field name="param_id">0004</field>
+            <field name="name">#CASHFLOWITEM#</field>
+            <field name="param_description">现金流量项目</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">现金流量项目</field>
+        </record>
+		<record forcecreate="True" id="0013_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0013_LLJE_DFLJ"/>
+            <field name="param_id">0005</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0014_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0014_LLJE_JFFS"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.debit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0014_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0014_LLJE_JFFS"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0014_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0014_LLJE_JFFS"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0014_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0014_LLJE_JFFS"/>
+            <field name="param_id">0004</field>
+            <field name="name">#CASHFLOWITEM#</field>
+            <field name="param_description">现金流量项目</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">现金流量项目</field>
+        </record>
+		<record forcecreate="True" id="0014_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0014_LLJE_JFFS"/>
+            <field name="param_id">0005</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+        <record forcecreate="True" id="0015_parm1" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0015_LLJE_DFFS"/>
+            <field name="param_id">0001</field>
+            <field name="name">#FIELDS#</field>
+            <field name="param_description">Fetch field</field>
+            <field name="param_value">sum(account_move_line.credit)</field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch field</field>
+        </record>
+        <record forcecreate="True" id="0015_parm2" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0015_LLJE_DFFS"/>
+            <field name="param_id">0002</field>
+            <field name="name">#SPERIOD#</field>
+            <field name="param_description">Start accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Start accounting interval</field>
+        </record>
+		<record forcecreate="True" id="0015_parm3" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0015_LLJE_DFFS"/>
+            <field name="param_id">0003</field>
+            <field name="name">#EPERIOD#</field>
+            <field name="param_description">End accounting interval</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">End accounting interval</field>
+        </record>
+        <record forcecreate="True" id="0015_parm4" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0015_LLJE_DFFS"/>
+            <field name="param_id">0004</field>
+            <field name="name">#CASHFLOWITEM#</field>
+            <field name="param_description">现金流量项目</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">现金流量项目</field>
+        </record>
+		<record forcecreate="True" id="0015_parm5" model="ps.statement.formula.params">
+            <field name="formula_id" ref="0015_LLJE_DFFS"/>
+            <field name="param_id">0005</field>
+            <field name="name">#COND#</field>
+            <field name="param_description">Fetch condition</field>
+            <field name="param_value"></field>
+            <field name="param_category">0</field>
+            <field name="param_type">C</field>
+            <field name="param_note">Fetch condition</field>
+        </record>
+    </data>
+</odoo>

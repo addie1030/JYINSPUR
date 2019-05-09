@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "PS Cloud POS",
+    'version': '12.0.1.0',
+    'summary': "PS Cloud POS",
+    'sequence': 11,
+    'author': "www.mypscloud.com",
+    'website': 'https://www.mypscloud.com/',
+    'category': 'Point of Sale',
+    'depends': ['point_of_sale', ],
+    'license': 'OEEL-1',
+    'data': [
+        'data/ps_pos_data.xml',
+        'views/ps_pos.xml',
+        'views/ps_pos_view.xml',
+        'views/ps_pos_config.xml',
+        'views/ps_member_category.xml',
+        'views/ps_partner.xml',
+        'views/ps_pos_member_deposit.xml',
+        'security/ir.model.access.csv',
+    ],
+    'qweb': ["static/src/xml/*.xml"],
+    'js': ["static/src/js/*.js"],
+    'css': ["static/src/css/*.css"],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

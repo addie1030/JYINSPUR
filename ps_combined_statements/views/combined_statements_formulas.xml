@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<record id="combined_statements_formulas_tree" model="ir.ui.view">
+		    <field name="name">ps.combined.statements.formulas.tree</field>
+		    <field name="model">ps.combined.statements.formulas</field>
+		    <field name="arch" type="xml">
+		        <tree string="Custom Formula">
+					<field name="name" />
+					<field name="formula_summary"/>
+					<field name="formula_object" attrs="{'invisible':[('formula_type','=','custom')]}" />
+					<field name="formula_type" />
+					<field name="formula_note"  />
+		        </tree>
+		    </field>
+		</record>
+
+		<record id="combined_statements_formulas_form" model="ir.ui.view">
+			<field name="name">ps.combined.statements.formulas.form</field>
+			<field name="model">ps.combined.statements.formulas</field>
+			<field name="arch" type="xml">
+				<form>
+
+					<header>
+						<button name="create_params" string="Formula parameter generation" help="Formula parameter generation" attrs="{'invisible':[('formula_type','=','system')]}" type="object" class="oe_highlight" />
+					</header>
+
+					<sheet>
+						<group>
+							<field name="name" string="Formula name" attrs="{'readonly': [('formula_type','=','system')]}" />
+							<field name="formula_summary" string="Formula description" attrs="{'readonly': [('formula_type','=','system')]}" />
+							<field name="formula_object" string="Fetch object" attrs="{'invisible':[('formula_type','=','custom')],'readonly': [('formula_type','=','system')]}" />
+							<field name="formula_design" string="Formula model" placeholder="Take a few SQL Use double ## define the parameters For example, #ACCOUNT#" attrs="{'readonly': [('formula_type','=','system')]}" />
+							<field name="formula_type" string="Formula type" attrs="{'readonly': [('formula_type','=','system')]}" />
+							<field name="formula_note" string="Remarks" attrs="{'readonly': [('formula_type','=','system')]}" />
+							<!--<field name="formula_params_ids" string="Formula parameters " attrs="{'readonly': [('formula_type','=','system')]}" />-->
+						</group>
+
+						<notebook>
+						    <page string="Formula parameter">
+								<field name="formula_params_ids" nolabel="1" attrs="{'readonly': [('formula_type','=','system')]}">
+									<tree delete="0">
+										<field name="sequence" widget="handle" />
+										<field name="formula_id" invisible="1" />
+										<field name="name" />
+										<field name="param_description" />
+										<field name="param_value" />
+										<field name="param_sysvar" />
+										<field name="param_category" />
+										<field name="param_type" />
+										<field name="param_note" />
+									</tree>
+								</field>
+						    </page>
+						</notebook>
+
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="combined_statements_formulas_act_window" model="ir.actions.act_window">
+		    <field name="name">Formula definition</field>
+		    <field name="type">ir.actions.act_window</field>
+		    <field name="res_model">ps.combined.statements.formulas</field>
+		    <field name="view_mode">tree,form</field>
+		</record>
+
+		<!-- This Menu Item must have a parent and an action -->
+		<menuitem id="combined_statements_formulas_menu"
+				  name="Formula definition"
+				  parent="combined_statements_report_style_definition"
+				  action="combined_statements_formulas_act_window"
+				  sequence="40"/>
+
+		<record id="combined_statements_formulas_params_tree" model="ir.ui.view">
+		    <field name="name">ps.combined.statements.formulas.params.tree</field>
+		    <field name="model">ps.combined.statements.formulas.params</field>
+		    <field name="arch" type="xml">
+		        <tree default_order="sequence">
+					<field name="sequence" widget="handle"/>
+					<!--<field name="param_id" string="Parameters of the serial number " />-->
+					<field name="name" string="Parameter name" />
+					<field name="param_description" string="Parameter description" />
+					<field name="param_category" string="Source mode" />
+					<field name="param_type" string="Parameter type" />
+					<field name="param_value" string="Parameter contents" attrs="{'invisible':[('param_category','=','2')]}" />
+					<field name="param_sysvar" string="Parameter contents" attrs="{'invisible':[('param_category','!=','2')]}" />
+					<field name="param_note" string="Remarks" />
+		        </tree>
+		    </field>
+		</record>
+
+		<record id="combined_statements_formulas_params_from" model="ir.ui.view">
+			<field name="name">ps.combined.statements.formulas.params.form</field>
+			<field name="model">ps.combined.statements.formulas.params</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<!--<field name="param_id" string="Parameters of the serial number " />-->
+							<field name="name" string="Parameter name" />
+							<field name="param_description" string="Parameter description" />
+							<field name="param_category" string="Source mode" />
+							<field name="param_type" string="Parameter type" />
+							<field name="param_value" string="Parameter contents" attrs="{'invisible':[('param_category','=','2')]}" />
+							<field name="param_sysvar" string="Parameter contents" attrs="{'invisible':[('param_category','!=','2')]}" />
+							<field name="param_note" string="Remarks" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+    </data>
+</odoo>

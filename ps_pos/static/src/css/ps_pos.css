@@ -1,0 +1,18 @@
+.pos .actionpad .button.ps-pay{
+    height: 162px;
+}
+.pos .actionpad .button.ps-pay .pay-circle{
+    display: block;
+    font-size: 32px;
+    line-height: 54px;
+    padding-top: 6px;
+    background: rgb(86, 86, 86);
+    color: white;
+    width: 60px;
+    margin: auto;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    top: -1px;
+    left: 3px;
+}

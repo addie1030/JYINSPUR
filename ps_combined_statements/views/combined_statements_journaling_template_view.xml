@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!--Report project -->
+		<record id="combined_statements_project_form" model="ir.ui.view">
+			<field name="name">ps.combined.statements.project.form</field>
+			<field name="model">ps.combined.statements.project</field>
+			<field name="arch" type="xml">
+				<form>
+
+					<header>
+						<button name="design_journaling" type="object" string="Design" class="oe_highlight" />
+						<field name="state" widget="statusbar" statusbar_visible="normal,locking,archive" />
+					</header>
+
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active"
+									type="object"
+									confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?"
+									class="oe_stat_button"
+									icon="fa-archive">
+								<field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+							</button>
+						</div>
+
+						<div class="oe_title">
+						    <label for="name" class="oe_edit_only"/>
+						    <h1>
+						        <field name="name" placeholder=""/>
+						    </h1>
+						</div>
+
+						<group>
+							<group>
+								<field name="version_id" />
+							</group>
+							<group>
+								<field name="code" />
+								<!--<field name="organization_id" />-->
+							</group>
+						</group>
+
+						<notebook>
+							<page string="Report form">
+								<field name="journaling_ids" mode="tree" options="{'reload_whole_on_button': true}">
+									<tree>
+										<field name="sequence" widget="handle" />
+										<field name="name" />
+										<field name="project_id" invisible="1" />
+										<field name="uom" />
+										<field name="version_id" />
+										<!--<field name="company_id" groups="base.group_multi_company" />-->
+										<field name="currency_id" invisible="1" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+
+						<!--<group>-->
+							<!--<field name="currency_id" groups="base.group_multi_company"/>-->
+							<!--<field name="company_id" groups="base.group_multi_company" />-->
+						<!--</group>-->
+
+					</sheet>
+
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+
+				</form>
+			</field>
+		</record>
+
+		<!--kanban -->
+		<record id="combined_statements_project_kanban" model="ir.ui.view">
+			<field name="name">ps.combined.statements.project.kanban</field>
+			<field name="model">ps.combined.statements.project</field>
+			<field name="arch" type="xml">
+				<kanban class="oe_background_grey o_kanban_dashboard o_project_kanban">
+					<field name="name" />
+					<field name="code" />
+					<!--<field name="version_id" />-->
+					<!--<field name="organization_id" />-->
+					<!--<field name="company_id" groups="base.group_multi_company"/>-->
+					<templates>
+						<t t-name="kanban-box">
+							<div class="o_project_kanban_main">
+								<div class="o_kanban_card_content o_visible">
+									<div class="o_kanban_primary_left">
+										<div class="o_primary">
+											<span>
+												<t t-esc="record.name.value" />
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<!--search -->
+		<record id="combined_statements_project_search" model="ir.ui.view">
+			<field name="name">project Seacrh</field>
+			<field name="model">ps.combined.statements.project</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="code" string="Project Code" domain="[()]" />
+					<field name="name" string="Project Name" domain="[()]" />
+					<field name="currency_id" groups="base.group_multi_company" />
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+					<filter string="Current" name="current" domain="[('active', '=', True)]" />
+					<filter string="Archived" name="archived" domain="[('active', '=', False)]" />
+				</search>
+			</field>
+		</record>
+
+		<!--The list of -->
+		<record id="combined_statements_project_tree" model="ir.ui.view">
+			<field name="name">ps.combined.statements.project.tree</field>
+			<field name="model">ps.combined.statements.project</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="state" />
+					<field name="code" />
+					<field name="name" />
+					<field name="currency_id" groups="base.group_multi_company" />
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+				</tree>
+			</field>
+		</record>
+
+		<!--action -->
+		<record id="combined_statements_project_act_window" model="ir.actions.act_window">
+			<field name="name">Nest table</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">ps.combined.statements.project</field>
+			<field name="view_mode">tree,form,kanban</field>
+			<field name="search_view_id" ref="combined_statements_project_search" />
+			<field name="help" type="html">
+			  <p class="oe_view_nocontent_create">
+					Create a new set of table .
+			  </p>
+			</field>
+		</record>
+
+		<!-- Report project menu  -->
+		<menuitem id="combined_statements_project_menu"
+				  name="Nest table"
+				  parent="combined_statements_report_style_definition"
+				  action="combined_statements_project_act_window"
+				  sequence="1" />
+
+		<!--The report -->
+		<record id="combined_statements_journaling_template_form" model="ir.ui.view">
+			<field name="name">ps.combined.statements.journaling.template.form</field>
+			<field name="model">ps.combined.statements.journaling.template</field>
+			<field name="arch" type="xml">
+				<form string="">
+
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="normal,locking,archive" />
+					</header>
+
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active"
+									type="object"
+									confirm="(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?"
+									class="oe_stat_button"
+									icon="fa-archive">
+								<field name="active" widget="boolean_button" options='{"terminology": "archive"}' />
+							</button>
+						</div>
+
+						<div class="oe_title">
+							<label for="name" class="oe_edit_only" />
+							<h1>
+								<field name="name" placeholder="e.g. balance sheet" />
+							</h1>
+						</div>
+
+						<group>
+							<group>
+								<field name="project_id" />
+								<field name="is_protected" />
+								<field name="row_count" />
+								<field name="tail_count" />
+							</group>
+							<group>
+								<field name="uom" />
+								<field name="version_id" />
+								<field name="head_count" />
+								<field name="column_count" />
+							</group>
+						</group>
+
+						<notebook>
+							<page string="Columns Info">
+								<field name="define_ids" mode="tree">
+									<tree>
+										<field name="journaling_id" />
+										<field name="col_index" />
+										<field name="col_type" />
+									</tree>
+								</field>
+							</page>
+							<page string="Rows">
+								<field name="rows" mode="tree">
+									<tree>
+										<field name="row_number" widget="handle" />
+										<field name="state" />
+										<field name="cell_ids" />
+										<field name="journaling_id" invisible="1" />
+										<!--<field name="company_id" groups="base.group_multi_company" />-->
+									</tree>
+								</field>
+							</page>
+							<page string="Spans">
+								<field name="spans" mode="tree">
+									<tree>
+										<field name="row" />
+										<field name="row_count" />
+										<field name="col" />
+										<field name="col_count" />
+									</tree>
+								</field>
+							</page>
+							<page string="Rows Size">
+								<field name="rows_size" mode="tree">
+									<tree>
+										<field name="journaling_id" />
+										<field name="size" />
+									</tree>
+								</field>
+							</page>
+							<page string="Columns Size">
+								<field name="columns_size" mode="tree">
+									<tree>
+										<field name="journaling_id" />
+										<field name="size" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+
+						<!--<group>-->
+							<!--<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}" />-->
+							<!--<field name="company_id" groups="base.group_multi_company" />-->
+						<!--</group>-->
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!--Report list -->
+		<record id="combined_statements_journaling_template_tree" model="ir.ui.view">
+			<field name="name">ps.combined.statements.journaling.template.tree</field>
+			<field name="model">ps.combined.statements.journaling.template</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="uom" />
+					<field name="version_id" />
+					<field name="project_id" />
+					<!--<field name="company_id" groups="base.group_multi_company" />-->
+					<!--<field name="currency_id" groups="base.group_multi_currency" options="{'no_create': True}" />-->
+				</tree>
+			</field>
+		</record>
+
+		<!--The report search -->
+		<record id="combined_statements_journaling_template_search" model="ir.ui.view">
+			<field name="name">ps.combined.statements.journaling.template.search</field>
+			<field name="model">ps.combined.statements.journaling.template</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" string="Journaling Name" domain="[()]" />
+					<filter string="Current" name="current" domain="[('active', '=', True)]" />
+					<filter string="Archived" name="archived" domain="[('active', '=', False)]" />
+				</search>
+			</field>
+		</record>
+
+		<!--The report action -->
+		<record id="combined_statements_journaling_template_act_window" model="ir.actions.act_window">
+			<field name="name">Journaling</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">ps.combined.statements.journaling.template</field>
+			<field name="view_mode">tree,form</field>
+			<field name="search_view_id" ref="combined_statements_journaling_template_search" />
+		</record>
+
+		<!--Reporting line  Form-->
+		<record id="combined_statements_journaling_template_row_form" model="ir.ui.view">
+			<field name="name">ps.combined.statements.journaling.template.row.form</field>
+			<field name="model">ps.combined.statements.journaling.template.row</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="normal,locking,archive" />
+					</header>
+					<sheet>
+						<group>
+							<field name="journaling_id" />
+							<field name="row_number" />
+						</group>
+
+						<notebook>
+						    <page string="Cells">
+								<field name="cell_ids" mode="tree">
+									<tree>
+										<field name="row_id" />
+										<field name="row_index" />
+										<field name="col_index" />
+										<field name="value" />
+										<field name="formula" />
+										<field name="style" />
+										<field name="cell_isprotected" />
+										<field name="cell_rowoffset" />
+										<field name="cell_columnoffset" />
+										<field name="journaling_id"/>
+										<!--<field name="company_id" groups="base.group_multi_company" />-->
+									</tree>
+								</field>
+						    </page>
+						</notebook>
+
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!--The cell orm-->
+		<record id="combined_statements_journaling_template_cell_form" model="ir.ui.view">
+			<field name="name">ps.combined.statements.journaling.template.cell.form</field>
+			<field name="model">ps.combined.statements.journaling.template.cell</field>
+			<field name="arch" type="xml">
+				<form string="">
+					<sheet>
+						<group>
+							<group>
+								<field name="journaling_id" invisible="1"/>
+								<field name="row_id" />
+								<field name="value" />
+								<field name="style" />
+								<field name="cell_rowoffset" />
+							</group>
+							<group>
+								<field name="row_index" />
+								<field name="col_index" />
+								<field name="formula" />
+								<field name="cell_isprotected" />
+								<field name="cell_columnoffset" />
+							</group>
+						</group>
+						<group>
+							<!--<field name="company_id" groups="base.group_multi_company" />-->
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="combined_statements_journaling_template_columnsize_form" model="ir.ui.view">
+			<field name="name">ps.combined.statements.journaling.template.columnsize.form</field>
+			<field name="model">ps.combined.statements.journaling.template.columnsize</field>
+			<field name="arch" type="xml">
+				<form string="">
+					<sheet>
+						<group>
+							<field name="journaling_id" />
+							<field name="size" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="combined_statements_journaling_template_rowsize_form" model="ir.ui.view">
+			<field name="name">ps.combined.statements.journaling.template.rowsize.form</field>
+			<field name="model">ps.combined.statements.journaling.template.rowsize</field>
+			<field name="arch" type="xml">
+				<form string="">
+					<sheet>
+						<group>
+							<field name="journaling_id" />
+							<field name="size" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="combined_statements_journaling_template_spans_form" model="ir.ui.view">
+			<field name="name">ps.combined.statements.journaling.template.spans.form</field>
+			<field name="model">ps.combined.statements.journaling.template.spans</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="row" />
+							<field name="row_count" />
+							<field name="col" />
+							<field name="col_count" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!--columntype-->
+		<record id="combined_statements_journaling_template_columntype_tree" model="ir.ui.view">
+		    <field name="name">Report item type</field>
+		    <field name="model">ps.combined.statements.journaling.template.columntype</field>
+		    <field name="arch" type="xml">
+		        <tree editable="top">
+					<field name="sequence" widget="handle" />
+					<field name="name" />
+					<field name="is_display" widget="boolean"/>
+					<field name="description" />
+		        </tree>
+		    </field>
+		</record>
+
+		<record id="combined_statements_journaling_template_columntype_act_windows" model="ir.actions.act_window">
+		    <field name="name">Report item type</field>
+		    <field name="type">ir.actions.act_window</field>
+		    <field name="res_model">ps.combined.statements.journaling.template.columntype</field>
+		    <field name="view_mode">tree</field>
+		</record>
+
+		<!-- This Menu Item must have a parent and an action -->
+		<menuitem id="combined_statements_journaling_template_columntype_menu"
+				  name="Report item type"
+				  parent="combined_statements_basis_files"
+				  action="combined_statements_journaling_template_columntype_act_windows"
+				  sequence="10"/>
+
+	</data>
+</odoo>

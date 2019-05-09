@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--处置名称自动生成-->
+        <record id="sequence_ps_asset_disposal_name" model="ir.sequence">
+            <field name="name">Asset Disposal</field>
+            <field name="code">ps.asset.disposal</field>
+            <field name="prefix">CZ</field>
+            <field name="padding">4</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+        </record>
+    </data>
+</odoo>

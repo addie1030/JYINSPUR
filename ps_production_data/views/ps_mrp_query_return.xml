@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ps_production_return_mrp_routing_query_tree_view" model="ir.ui.view">
+        <field name="name">ps.mrp.query.return.tree</field>
+        <field name="model">ps.mrp.query.return</field>
+        <field name="arch" type="xml">
+            <tree string="Return Routing" create="false" edit="false" delete="false">
+                <field name="product_tmpl_id"/>
+                <field name="code"/>
+                <field name="version" attrs="{'invisible': [('version','=', 0)]}"/>
+                <field name="product_qty"/>
+                <field name="product_uom_id"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id='action_ps_production_return_mrp_routing_query' model='ir.actions.act_window' >
+        <field name='name'>Return of Routings Query</field>
+        <field name='res_model'>ps.mrp.query.return</field>
+        <field name='view_mode'>tree</field>
+        <field name="domain">[]</field>
+        <field name="context">{'active_id' : active_id}</field>
+    </record>
+</odoo>

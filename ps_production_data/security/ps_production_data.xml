@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="group_production_data" model="ir.module.category">
+        <field name="name">Production Data</field>
+        <field name="sequence">114</field>
+    </record>
+
+    <record id="group_production_data_user" model="res.groups">
+        <field name="name">Production Data User</field>
+        <field name="category_id" ref="group_production_data"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="group_production_data_manager" model="res.groups">
+        <field name="name">Production Data Manager</field>
+        <field name="category_id" ref="group_production_data"/>
+        <field name="implied_ids" eval="[(4, ref('group_production_data_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+</odoo>

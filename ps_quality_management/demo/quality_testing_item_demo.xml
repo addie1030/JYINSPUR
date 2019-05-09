@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="testing_item_gb" model="ps.quality.testing.item">
+            <field name="name">International Sampling Quality GB</field>
+            <field name="method_type">quantitative</field>
+            <field name="type">gb</field>
+            <field name="aql" ref="value3"/>
+        </record>
+
+        <record id="testing_item_all" model="ps.quality.testing.item">
+            <field name="name">International Sampling Quality ALL</field>
+            <field name="method_type">quantitative</field>
+            <field name="type">all</field>
+            <field name="aql" ref="value3"/>
+        </record>
+
+
+        <record id="inspection_plan" model="ps.quality.inspection.plan">
+            <field name="name">lenovo L460 Quality Inspection Plan</field>
+            <field name="product_variant_id" ref="product_product_computer"/>
+            <field name="product_tmpl_id" eval="ref('product_product_computer')"/>
+            <field name="validate_from" eval="(DateTime.now() + timedelta(days=-3)).strftime('%Y-%m-%d')"/>
+            <field name="validate_to" eval="(DateTime.now() + timedelta(days=3)).strftime('%Y-%m-%d')"/>
+            <field name="description">lenovo L460 Quality Inspection Plan</field>
+            <field name="sampling_plan_id" ref="ps_quality_management.quality_sampling_plan_1"/>
+            <field name="inspection_plan_testing_item_ids" model="quality.point" eval="[(0, 0, {
+                'name': 'Sampling Quality GB',
+                'product_id': ref('product_product_computer'),
+                'product_tmpl_id': ref('product_product_computer'),
+                'picking_type_id': ref('stock.picking_type_in'),
+                'testing_item_id': ref('ps_quality_management.testing_item_gb'),
+                'state': 'qualified',
+            }),(0, 0, {
+                'name': 'Sampling Quality ALL',
+                'product_id': ref('product_product_computer'),
+                'product_tmpl_id': ref('product_product_computer'),
+                'picking_type_id': ref('stock.picking_type_in'),
+                'testing_item_id': ref('ps_quality_management.testing_item_all'),
+                'state': 'qualified',
+            })]"/>
+        </record>
+
+
+        <record id="inspection_plan_templ" model="ps.quality.inspection.plan">
+            <field name="name">lenovo L460 Quality Inspection Plan</field>
+            <field name="product_tmpl_id" eval="ref('product_product_computer')"/>
+            <field name="validate_from" eval="(DateTime.now() + timedelta(days=-3)).strftime('%Y-%m-%d')"/>
+            <field name="validate_to" eval="(DateTime.now() + timedelta(days=3)).strftime('%Y-%m-%d')"/>
+            <field name="description">lenovo L460 Quality Inspection Plan</field>
+            <field name="sampling_plan_id" ref="ps_quality_management.quality_sampling_plan_1"/>
+            <field name="inspection_plan_testing_item_ids" model="quality.point" eval="[(0, 0, {
+                'name': 'Sampling Quality GB',
+                'product_tmpl_id': ref('product_product_computer'),
+                'picking_type_id': ref('stock.picking_type_in'),
+                'testing_item_id': ref('ps_quality_management.testing_item_gb'),
+                'state': 'qualified',
+            }),(0, 0, {
+                'name': 'Sampling Quality ALL',
+                'product_tmpl_id': ref('product_product_computer'),
+                'picking_type_id': ref('stock.picking_type_in'),
+                'testing_item_id': ref('ps_quality_management.testing_item_all'),
+                'state': 'qualified',
+            })]"/>
+        </record>
+
+    </data>
+</odoo>

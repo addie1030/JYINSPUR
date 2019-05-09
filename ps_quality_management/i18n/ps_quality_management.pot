@@ -1,0 +1,2288 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_quality_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-12 11:55+0000\n"
+"PO-Revision-Date: 2019-03-12 11:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__accept
+msgid " Accept "
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.level,category:0
+msgid " Normal "
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__check_count
+msgid "# Quality Checks"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_sampling_plan.py:87
+#, python-format
+msgid "%s (copy)"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check_type.py:25
+#, python-format
+msgid "%s Sequence"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_product_template_form_view
+msgid "<span>days</span>"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__aql
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__aql
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__aql
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__aql
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_aql
+msgid "AQL"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql__key
+msgid "AQL Key"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql__value
+msgid "AQL Value"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision__accept
+#: model:ps.quality.decision,decision:ps_quality_management.ps_quality_decision_receipt_is_bad
+msgid "Accept"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_inventory_check_request_form
+msgid "Action Draft"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_needaction
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_needaction
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_needaction
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_needaction
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__activity_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__activity_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__activity_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__activity_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__activity_state
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__activity_state
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__activity_state
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__activity_state
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.plan,type:0
+#: selection:ps.quality.sampling.plan,type:0
+#: selection:ps.quality.testing.item,type:0
+#: selection:quality.check,type:0
+#: selection:quality.point,type:0
+msgid "All"
+msgstr ""
+
+#. module: ps_quality_management
+#: sql_constraint:ps.quality.testing.value.mapping:0
+msgid "An item_id cannot have twice the same value_id."
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict__application
+msgid "Application"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_attachment_count
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_attachment_count
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_attachment_count
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_attachment_count
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_inventory_check_request_form
+msgid "Audit"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/__init__.py:46
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_warehouse__bad_return_type_id
+#, python-format
+msgid "Bad Return"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_base_data
+msgid "Base Data"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_ps_quality_basis
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__basis_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__basis_id
+#: selection:ps.quality.data_dict,application:0
+msgid "Basis"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_inventory_check_request_form
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+#: selection:ps.quality.check.order,state:0
+#: selection:ps.quality.defect.disposal,state:0
+msgid "Cancel"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_filter
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_filter
+#: selection:ps.quality.inspection.plan,state:0
+#: selection:ps.quality.inventory.check.request,state:0
+#: selection:ps.quality.sampling.plan,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level__category
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__inspection_level_category
+msgid "Category"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__check_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__check_id
+msgid "Check"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.inherit_quality_control_points_form
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Check  Data"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_data_ids
+msgid "Check Data"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__ps_decision_ids
+msgid "Check Decision"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__check_quantity
+msgid "Check Quantity"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__check_result
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_check_result
+msgid "Check Result"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Close"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_filter
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_filter
+#: selection:ps.quality.inspection.plan,state:0
+#: selection:ps.quality.sampling.plan,state:0
+msgid "Closed"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level__code
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__code
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__code
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__code
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__code
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_filter
+msgid "Code"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__code_id
+msgid "Coding"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__comments
+msgid "Comment"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__comparison
+msgid "Comparison"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_inventory_check_request_form
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Confirm"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_filter
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_filter
+#: selection:ps.quality.check.order,state:0
+#: selection:ps.quality.defect.disposal,state:0
+#: selection:ps.quality.inspection.plan,state:0
+#: selection:ps.quality.inventory.check.request,state:0
+#: selection:ps.quality.sampling.plan,state:0
+msgid "Confirmed"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+msgid "Control Person"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.actions.act_window,help:ps_quality_management.action_disposal_all
+msgid "Create a Disposal."
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.actions.act_window,help:ps_quality_management.action_quality_inspection_plan_tree
+msgid "Create a quality inspection plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.actions.act_window,help:ps_quality_management.action_quality_sampling_plan_tree
+msgid "Create a quality sampling plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.actions.act_window,help:ps_quality_management.action_quality_testing_item_tree
+msgid "Create a quality testing item"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.actions.act_window,help:ps_quality_management.action_quality_testing_value_mapping_tree
+msgid "Create a quality testing value mapping"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.actions.act_window,help:ps_quality_management.action_quality_testing_value_possible_tree
+msgid "Create a quality testing value possible"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.actions.act_window,help:ps_quality_management.action_quality_inspection_plan_tree
+msgid "Create quality inspection plan, add and manage quality inspection plan items."
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.actions.act_window,help:ps_quality_management.action_quality_sampling_plan_tree
+msgid "Create quality sampling plan, add and manage quality sampling plan lines."
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping__create_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_possible__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping__create_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_possible__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__criteria_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__criteria_id
+msgid "Criteria"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_ps_quality_data_dictionary
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_data_dictionary
+msgid "Data Dictionary"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_data_dict_tree
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_data_dict_tree_directory
+msgid "Data Directory"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__date
+msgid "Date"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inventory_check_request__date
+msgid "Date changes with state."
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__decision_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision__decision
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__decision_check_id
+msgid "Decision"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_ps_quality_defect_cause
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_quality_defect_cause
+#: selection:ps.quality.data_dict,application:0
+msgid "Defect Cause"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_ps_quality_defect_consequence
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_quality_defect_consequence
+#: selection:ps.quality.data_dict,application:0
+msgid "Defect Consequence"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_disposal_all
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_alert__defect_disposal_id
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_quality_defect_disposal
+msgid "Defect Disposal"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_ps_quality_defect_type
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_defect_type
+#: selection:ps.quality.data_dict,application:0
+msgid "Defect Type"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__defect_level
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__defect_level
+msgid "Defect_level"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_defect_disposal_line
+msgid "Defective disposal details\n"
+"    "
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Describe the quality check to do..."
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Describe why you need to perform this quality check..."
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__description
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__description
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__description
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict__description
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__description
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_possible__description
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_description
+msgid "Description"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__is_destructive_test
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__is_destructive_test
+msgid "Destructive Test"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_possible__display_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_report_report_ps_quality_sampling_code__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__disposal
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__disposal_count
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__decision_id
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+msgid "Disposal"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_warehouse__ps_pending_wh_id
+msgid "Disposal Inventory"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_defect_disposal
+msgid "Disposal of defect quality \n"
+"    "
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__document
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__document
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_document
+msgid "Document"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_defect_disposal.py:122
+#, python-format
+msgid "Don't delete contracts."
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inventory.check.request,state:0
+msgid "Done"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_filter
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_filter
+#: selection:ps.quality.check.order,state:0
+#: selection:ps.quality.defect.disposal,state:0
+#: selection:ps.quality.inspection.plan,state:0
+#: selection:ps.quality.inventory.check.request,state:0
+#: selection:ps.quality.sampling.plan,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.order,check_result:0
+#: selection:quality.check,ps_check_result:0
+msgid "Failed"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.decision,status:0
+#: selection:quality.point,state:0
+msgid "Failed "
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_failed_qty
+msgid "Failed Qty"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.testing.item,defect_level:0
+#: selection:quality.point,defect_level:0
+msgid "Fatal"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_follower_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_follower_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_follower_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_follower_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_channel_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_channel_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_channel_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_channel_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_partner_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_partner_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_partner_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_partner_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.plan,type:0
+#: selection:ps.quality.sampling.plan,type:0
+#: selection:ps.quality.testing.item,type:0
+#: selection:quality.check,type:0
+#: selection:quality.point,type:0
+msgid "GB"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_gb_data
+msgid "GB Data"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_filter
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_filter
+msgid "Group By..."
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.decision,status:0
+#: selection:quality.check,ps_check_result:0
+msgid "Hold"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_possible__id
+#: model:ir.model.fields,field_description:ps_quality_management.field_report_report_ps_quality_sampling_code__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_check_order__message_unread
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_defect_disposal__message_unread
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inspection_plan__message_unread
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inventory_check_request__message_unread
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_sampling_plan__message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_check_order__message_needaction
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_defect_disposal__message_needaction
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inspection_plan__message_needaction
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inventory_check_request__message_needaction
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_sampling_plan__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_check_order__message_has_error
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_defect_disposal__message_has_error
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inspection_plan__message_has_error
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inventory_check_request__message_has_error
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_sampling_plan__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__ps_inspect_plan_id
+msgid "Inspect Plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_quality_basis
+msgid "Inspection Basis"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_ps_quality_testing_equipment
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_quality_testing_equipment
+msgid "Inspection Equipment"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_inspection_item
+msgid "Inspection Item"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__inspection_level
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__check_level
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__check_level
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__check_level
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_quality_inspection_level
+msgid "Inspection Level"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__inspection_level_name
+msgid "Inspection Level Name"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_ps_quality_testing_method
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_quality_testing_method
+msgid "Inspection Method"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_inspection_order
+msgid "Inspection Order"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_inspection_plan_id
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_inspection_plan
+msgid "Inspection Plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__inspection_plan_testing_item_ids
+msgid "Inspection Plan Testing Item"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Instructions"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/__init__.py:48
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_warehouse__inventory_check_type_id
+#, python-format
+msgid "Inventory Check"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.server,name:ps_quality_management.quality_inventory_check_request_action
+msgid "Inventory Check Request"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_stock_warehouse.py:45
+#, python-format
+msgid "Inventory Disposal"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_inventory_inspection_check
+msgid "Inventory Inspection Check"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_production_lot__ps_inventory_inspection_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_quant__ps_inventory_inspection_date
+msgid "Inventory Inspection Date"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_inventory_inspection_check_request
+msgid "Inventory Inspection Request"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_product_product__ps_inventory_inspection_time
+#: model:ir.model.fields,field_description:ps_quality_management.field_product_template__ps_inventory_inspection_time
+msgid "Inventory Inspection Time"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_product_template_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_ps_quality_inventory_inspection_date
+msgid "Inventory Quality Check"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_stock_warehouse.py:43
+#, python-format
+msgid "Inventory Qualitycheck"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_is_follower
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_is_follower
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_is_follower
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_is_follower
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping__is_target
+msgid "Is Target Value"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__is_bad
+msgid "Is bad"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping__item_id
+msgid "Item"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__is_key_inspection
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__is_key_inspection
+msgid "Key Inspection"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_possible____last_update
+#: model:ir.model.fields,field_description:ps_quality_management.field_report_report_ps_quality_sampling_code____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping__write_uid
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_possible__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping__write_date
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_possible__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.testing.item,defect_level:0
+#: selection:quality.point,defect_level:0
+msgid "Light"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__lot_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__line_ids
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_inventory_check_request_form
+msgid "Line"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__location_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__lot_stock_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__location_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_location_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_quant__location_id
+msgid "Location"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__lot_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__lot_name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__lot_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__lot_id
+msgid "Lot"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__ps_lot_id
+msgid "Lot Line"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__lower_deviation
+msgid "Lower Deviation"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__lower_limit
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__lower_limit
+msgid "Lower Limit"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_main_attachment_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_main_attachment_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_main_attachment_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_quality_management_master_data
+msgid "Master Data"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_has_error
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_has_error
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_has_error
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_has_error
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__method_type
+msgid "Method Type"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__method_type
+msgid "Method_type"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_data_dict__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_level__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_aql__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__name
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_name
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_filter
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_filter
+msgid "Name"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_sampling_plan.py:79
+#, python-format
+msgid "Name must be unique !"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check_order.py:16
+#: code:addons/ps_quality_management/models/ps_quality_check_order.py:294
+#: code:addons/ps_quality_management/models/ps_quality_check_order.py:295
+#: code:addons/ps_quality_management/models/ps_quality_defect_disposal.py:12
+#: code:addons/ps_quality_management/models/ps_quality_inspection_plan.py:14
+#: code:addons/ps_quality_management/models/ps_quality_inventory_check_request.py:16
+#: code:addons/ps_quality_management/models/ps_quality_sampling_plan.py:11
+#: code:addons/ps_quality_management/models/ps_quality_testing.py:11
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__activity_date_deadline
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__activity_date_deadline
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__activity_date_deadline
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__activity_date_deadline
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__activity_summary
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__activity_summary
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__activity_summary
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__activity_summary
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__activity_type_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__activity_type_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__activity_type_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__activity_type_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ps.quality.data_dict,description:ps_quality_management.value2
+msgid "No Repairable"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.plan,strictness:0
+#: selection:ps.quality.sampling.plan,strictness:0
+#: selection:ps.quality.testing.item,strictness:0
+#: selection:quality.point,strictness:0
+msgid "Normal"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Note"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Notes"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_needaction_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_needaction_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_needaction_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_needaction_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_has_error_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_has_error_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_has_error_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_has_error_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_has_error_counter
+msgid "Number of error"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_check_order__message_needaction_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_defect_disposal__message_needaction_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inspection_plan__message_needaction_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inventory_check_request__message_needaction_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_sampling_plan__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_check_order__message_has_error_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_defect_disposal__message_has_error_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inspection_plan__message_has_error_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inventory_check_request__message_has_error_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_sampling_plan__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_check_order__message_unread_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_defect_disposal__message_unread_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inspection_plan__message_unread_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inventory_check_request__message_unread_counter
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_sampling_plan__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Operation"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_type__operation_type
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__picking_type_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__picking_type_id
+msgid "Operation Type"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.data,value_type:0
+#: selection:ps.quality.testing.item,method_type:0
+#: selection:quality.point,method_type:0
+msgid "Other"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.order,activity_state:0
+#: selection:ps.quality.defect.disposal,activity_state:0
+#: selection:ps.quality.inspection.plan,activity_state:0
+#: selection:ps.quality.inventory.check.request,activity_state:0
+#: selection:ps.quality.sampling.plan,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__own_lower_limit
+msgid "Own Lower Limit"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__own_product_id
+msgid "Own Product"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__own_product_tmpl_id
+msgid "Own Product Tmpl"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__own_upper_limit
+msgid "Own Upper Limit"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__partner_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__partner_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_picking__quality_check_todo
+msgid "Pending checks"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__picking_id
+msgid "Picking"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__picking_count
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__picking_count
+msgid "Picking Count"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_form_view
+msgid "Picking Orders"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__plan_id
+msgid "Plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.order,activity_state:0
+#: selection:ps.quality.defect.disposal,activity_state:0
+#: selection:ps.quality.inspection.plan,activity_state:0
+#: selection:ps.quality.inventory.check.request,activity_state:0
+#: selection:ps.quality.sampling.plan,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_inventory_check_request.py:115
+#, python-format
+msgid "Please confirm the existence of the warehouse!"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_inventory_check_request.py:48
+#, python-format
+msgid "Please ensure that this batch of products have a quality control plan!"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check_order.py:321
+#, python-format
+msgid "Please input quantity check decision for the quality failed product"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__product_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__product_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__product_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__product_id
+msgid "Product"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__product_readonly_state
+msgid "Product Readonly State"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_product_template
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__product_tmpl_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__product_tmpl_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__product_tmpl_id
+msgid "Product Template"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__product_variant_id
+msgid "Product Variant"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__product_ids
+msgid "Products"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_quant__ps_is_date_company
+msgid "Ps Is Date Company"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_quant__ps_is_request
+msgid "Ps Is Request"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.decision,status:0
+#: selection:ps.quality.check.order,check_result:0
+#: selection:quality.check,ps_check_result:0
+#: selection:quality.point,state:0
+msgid "Qualified"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__qty_ok
+msgid "Qualified Qty"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.data,value_type:0
+#: selection:ps.quality.testing.item,method_type:0
+#: selection:quality.point,method_type:0
+msgid "Qualitative"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_quality_alert
+msgid "Quality Alert"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_quality_check
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__check_ids
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_form_view
+msgid "Quality Check"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_picking__quality_check_count
+msgid "Quality Check Count"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_form_view
+msgid "Quality Check Data"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+msgid "Quality Check Decision"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+msgid "Quality Check Lines"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_check_order
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__quality_check_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_quality_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_picking__check_ids
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_tree_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_sampling_name_search_view
+msgid "Quality Check Order"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_quality_point
+msgid "Quality Control Point"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_ps_quality_quality_criterion
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_quality_quality_criterion
+#: selection:ps.quality.data_dict,application:0
+msgid "Quality Criterion"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_window_ps_quality_defect_disposal
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__quality_defect_disposal_id
+msgid "Quality Defect Disposal"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__quality_defect_disposal_line_ids
+msgid "Quality Defect Disposal Line"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_search_view
+msgid "Quality Defect Disposal Search View"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_quality_inspection_level
+#: model:ir.model,name:ps_quality_management.model_ps_quality_inspection_level
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_inspection_level_view
+msgid "Quality Inspection Level"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_quality_inspection_plan_tree
+#: model:ir.model,name:ps_quality_management.model_ps_quality_inspection_plan
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__plan_id
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_tree
+msgid "Quality Inspection Plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Quality Inspection Plan Detail"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Quality Inspection Plan Testing Items"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_quality_inventory_check
+#: model:ir.actions.server,name:ps_quality_management.action_quality_inventory_check_server
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_inventory_check_view
+msgid "Quality Inventory Check"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_quality_inventory_check_request
+#: model:ir.model,name:ps_quality_management.model_ps_quality_inventory_check_request
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_inventory_check_request_form
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_inventory_check_request_view
+msgid "Quality Inventory Check Request"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__point_id
+msgid "Quality Point"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_sampling_code
+msgid "Quality Sampling Code"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.client,name:ps_quality_management.action_quality_sampling_code_report
+msgid "Quality Sampling Code Report"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.quality_sampling_code_action
+#: model:ir.model,name:ps_quality_management.model_ps_quality_sampling_name
+msgid "Quality Sampling Name"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_quality_sampling_plan_tree
+#: model:ir.model,name:ps_quality_management.model_ps_quality_sampling_plan
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_tree
+msgid "Quality Sampling Plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_form
+msgid "Quality Sampling Plan Detail"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_sampling_plan_line
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_testing_item_form
+msgid "Quality Sampling Plan Line"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_form
+msgid "Quality Sampling Plan Lines"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_sampling_name_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_sampling_name_tree_view
+msgid "Quality Sampling name"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__quality_state
+msgid "Quality State"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_testing_item
+msgid "Quality Testing"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_quality_testing_aql
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_testing_aql_view
+msgid "Quality Testing AQL"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_testing_aql
+msgid "Quality Testing Aql"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_quality_testing_item_tree
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_testing_item_tree
+msgid "Quality Testing Item"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_quality_testing_value_mapping_tree
+#: model:ir.model,name:ps_quality_management.model_ps_quality_testing_value_mapping
+msgid "Quality Testing Value Mapping"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.actions.act_window,name:ps_quality_management.action_quality_testing_value_possible_tree
+#: model:ir.model,name:ps_quality_management.model_ps_quality_testing_value_possible
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_testing_value_mapping_tree
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_testing_value_possible_tree
+msgid "Quality Testing Value Possible"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.data,value_type:0
+#: selection:ps.quality.testing.item,method_type:0
+#: selection:quality.point,method_type:0
+msgid "Quantitative"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__qty
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__quantity
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__quantity_accept
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__quantity_accept
+msgid "Quantity Accept"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_check_quantity
+msgid "Quantity Check"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_qty_ng
+msgid "Quantity Failed"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_qty_ok
+msgid "Quantity Qualified"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__quantity_reject
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__quantity_reject
+msgid "Quantity Reject"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_stock_quant
+msgid "Quants"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_warehouse__ps_inspect_wh_id
+msgid "Recheck Inventory"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.plan,strictness:0
+#: selection:ps.quality.sampling.plan,strictness:0
+#: selection:ps.quality.testing.item,strictness:0
+#: selection:quality.point,strictness:0
+msgid "Reduced"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__ref
+msgid "Ref"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ps.quality.decision,decision:ps_quality_management.ps_quality_decision_rejection
+msgid "Reject"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ps.quality.data_dict,description:ps_quality_management.value1
+msgid "Repairable"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__activity_user_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__activity_user_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__activity_user_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__activity_user_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.level,code:0
+msgid "S-1"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.level,code:0
+msgid "S-2"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.level,code:0
+msgid "S-3"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.level,code:0
+msgid "S-4"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__sample_size
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__sample_size
+msgid "Sample Size"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__sample_size_code
+msgid "Sample Size Code"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__sampling_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name__code_ids
+msgid "Sampling Code"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_report_report_ps_quality_sampling_code
+msgid "Sampling Code Report"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_sampling_name_form_view
+msgid "Sampling Code Table"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__sampling_plan_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__sampling_plan_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_sampling_plan_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__sampling_plan_id
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_sampling_plan
+msgid "Sampling Plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_sampling_scheme
+msgid "Sampling Scheme"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_sampling_size_code_letter
+msgid "Sampling Size"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ps.quality.data_dict,description:ps_quality_management.value3
+msgid "Scrap"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_filter
+msgid "Search Quality Inspection Plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_filter
+msgid "Search Quality Sampling Plan"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan_line__sequence
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/__init__.py:32
+#: code:addons/ps_quality_management/models/ps_stock_warehouse.py:56
+#, python-format
+msgid "Sequence Bad Return"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/__init__.py:26
+#: code:addons/ps_quality_management/models/ps_stock_warehouse.py:50
+#, python-format
+msgid "Sequence Inventory Check"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.testing.item,defect_level:0
+#: selection:quality.point,defect_level:0
+msgid "Serious"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_name__is_set
+msgid "Set"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Set Draft"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__size_begin
+msgid "Size Begin"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__size_end
+msgid "Size End"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_code__size_scope
+msgid "Size Scope"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.level,category:0
+msgid "Special"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__standard_value
+msgid "Standard Value"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__state
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__state
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__state
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__state
+msgid "State"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__state
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__state
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_search_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_search_view
+msgid "States"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_decision__status
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__state
+msgid "Status"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_check_order__activity_state
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_defect_disposal__activity_state
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inspection_plan__activity_state
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inventory_check_request__activity_state
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_sampling_plan__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_defect_disposal.py:137
+#: selection:ps.quality.check.order,document:0
+#: selection:ps.quality.defect.disposal,document:0
+#, python-format
+msgid "Stock Picking"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__strictness
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__strictness
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__strictness
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__strictness
+msgid "Strictness"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__target_value
+msgid "Target Value"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__target_value_qualitative
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__target_value_qualitative
+msgid "Target Value Qualitative"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__target_value_quantitative
+msgid "Target Value Quantitative"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__team_id
+msgid "Team"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__testing_equipment_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__testing_equipment_id
+#: selection:ps.quality.data_dict,application:0
+msgid "Testing Equipment"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__testing_item_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__testing_item_id
+msgid "Testing Item"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__testing_method_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__testing_method_id
+#: selection:ps.quality.data_dict,application:0
+msgid "Testing Method"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_stock_move.py:167
+#, python-format
+msgid "The number of modifications should not be greater than the current value"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check.py:47
+#, python-format
+msgid "The quality failed qty can not bigger than the check quantity  when type is all"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check.py:51
+#, python-format
+msgid "The quality failed qty can not bigger than the sample quantity  when type is gb"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_stock_quant.py:67
+#, python-format
+msgid "The record has been requested to check"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_stock_quant.py:83
+#, python-format
+msgid "This product does not require quality control!"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_inspection_plan.py:83
+#, python-format
+msgid "This product_tmpl or product has duplicate time in confirmed state and picking_type_id"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_testing.py:127
+#, python-format
+msgid "This testing item method_type is not quantitative, please choose not number type value !"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_testing.py:118
+#, python-format
+msgid "This testing item method_type is quantitative, please choose number type value !"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.plan,strictness:0
+#: selection:ps.quality.sampling.plan,strictness:0
+#: selection:ps.quality.testing.item,strictness:0
+#: selection:quality.point,strictness:0
+msgid "Tightened"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.order,activity_state:0
+#: selection:ps.quality.defect.disposal,activity_state:0
+#: selection:ps.quality.inspection.plan,activity_state:0
+#: selection:ps.quality.inventory.check.request,activity_state:0
+#: selection:ps.quality.sampling.plan,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check_order.py:319
+#, python-format
+msgid "Total detail quantity can not bigger than quality ng quantity"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check.py:198
+#: code:addons/ps_quality_management/models/ps_quality_check.py:200
+#, python-format
+msgid "Total quality check detail quantity can not bigger than quality check quantity"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__type_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_decision__type_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__type_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__type
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__type
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_item__type
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_type_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__type
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__type
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_form
+msgid "Type"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__ps_picking_code
+msgid "Type of Operation"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__qty_ng
+msgid "UnQualified Qty"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_unread
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_unread
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_unread
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_unread
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__message_unread_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__message_unread_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__message_unread_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__message_unread_counter
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__uom_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__uom_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__uom_id
+msgid "Uom"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__upper_deviation
+msgid "Upper Deviation"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__upper_limit
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_point__upper_limit
+msgid "Upper Limit"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__user_id
+msgid "User"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+msgid "Validate"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__validate_from
+msgid "Validate From"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__validate_to
+msgid "Validate To"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.check.order,state:0
+#: selection:ps.quality.defect.disposal,state:0
+msgid "Validated"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_mapping__value_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_testing_value_possible__value
+msgid "Value"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_testing_value_mapping
+msgid "Value Mapping"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__value_measured
+msgid "Value Measured"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__qty_qualitative
+msgid "Value Measured Qualitative"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.ui.menu,name:ps_quality_management.menu_ps_testing_value
+msgid "Value Possible"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_data__value_type
+msgid "Value Type"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_stock_warehouse
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__warehouse_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__warehouse_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__warehouse_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request_line__warehouse_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__ps_warehouse_id
+#: model:ir.model.fields,field_description:ps_quality_management.field_stock_quant__ps_warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_check_order__website_message_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal__website_message_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inspection_plan__website_message_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_inventory_check_request__website_message_ids
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_sampling_plan__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_check_order__website_message_ids
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_defect_disposal__website_message_ids
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inspection_plan__website_message_ids
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_inventory_check_request__website_message_ids
+#: model:ir.model.fields,help:ps_quality_management.field_ps_quality_sampling_plan__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_inspection_plan.py:61
+#, python-format
+msgid "You can't delete a non-draft status quality inspection plan, please set it to draft status first!"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check_order.py:310
+#: code:addons/ps_quality_management/models/ps_quality_check_order.py:313
+#, python-format
+msgid "You need to supply a Lot/Serial number for product %s."
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check_order.py:306
+#, python-format
+msgid "Your lot %s is exited. "
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__qty
+msgid "bad number"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:quality.point,comparison:0
+msgid "between"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_form_view
+msgid "check Information"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_ps_quality_defect_disposal_line__qty_ng
+msgid "check bad number"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model.fields,field_description:ps_quality_management.field_quality_check__is_check_data
+msgid "check data"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_stock_quant_form_inherit
+msgid "check request"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_stock_quant.py:85
+#, python-format
+msgid "limited authority"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_control_point.py:147
+#, python-format
+msgid "lower_deviation can not less than 0 and more than target_value_quantitative"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_form_view
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_search_view
+msgid "name"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ps.quality.decision,decision:ps_quality_management.ps_quality_decision_receipt
+msgid "pending"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_sampling_code.py:49
+#, python-format
+msgid "please input the values between A and Z "
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_check_data
+msgid "ps quality check data"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_check_decision
+msgid "ps quality check decision"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_check_type
+msgid "ps quality check type"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_decision
+msgid "ps quality decision"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_data_dict
+msgid "ps.quality.data_dict"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_defect_disposal.py:168
+#, python-format
+msgid "qty can't greater than qty_ng"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_defect_disposal.py:170
+#, python-format
+msgid "qty can't less than qty_ng"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_form_view
+msgid "quality defect disposal form view"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_form_view
+msgid "quality defect disposal line"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_tree_view
+msgid "quality defect disposal tree view"
+msgstr ""
+
+#. module: ps_quality_management
+#: model:ir.model,name:ps_quality_management.model_ps_quality_inventory_check_request_line
+msgid "quality inventory check request line"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.plan,product_readonly_state:0
+msgid "readonly"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_inspection_plan_filter
+msgid "state"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.quality_check_order_form_view
+msgid "stock information"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.view_quality_sampling_plan_filter
+msgid "strictness"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_control_point.py:130
+#, python-format
+msgid "target_value_quantitative can not less than 0"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_stock_move.py:57
+#: code:addons/ps_quality_management/models/ps_stock_move.py:60
+#, python-format
+msgid "the quality checks result is Failed, Unable to do the next step!"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_sampling_code.py:17
+#, python-format
+msgid "this recode is setup data,so you can not delete!"
+msgstr ""
+
+#. module: ps_quality_management
+#: selection:ps.quality.inspection.plan,product_readonly_state:0
+msgid "un_readonly "
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_control_point.py:138
+#, python-format
+msgid "upper_deviation can not less than 0"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_inspection_plan.py:155
+#, python-format
+msgid "validate_to is greater than the validate_from !"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.ps_quality_defect_disposal_form_view
+msgid "validated"
+msgstr ""
+
+#. module: ps_quality_management
+#: code:addons/ps_quality_management/models/ps_quality_check_order.py:289
+#, python-format
+msgid "you can not delete this order when order state is confirmed"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.report_quality_sampling_code
+msgid "一般检查水平"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.report_quality_sampling_code
+msgid "批量范围"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.report_quality_sampling_code
+msgid "样本量字码表："
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.report_quality_sampling_code
+msgid "特殊检查水平"
+msgstr ""
+
+#. module: ps_quality_management
+#: model_terms:ir.ui.view,arch_db:ps_quality_management.report_quality_sampling_code
+msgid "类别"
+msgstr ""
+

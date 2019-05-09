@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--<record id="ps_mrp_invest_yield_collect_tree" model="ir.ui.view">-->
+            <!--<field name="name">ps.mrp.invest.yield.collect.tree</field>-->
+            <!--<field name="model">ps.mrp.invest.yield.collection</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<tree>-->
+                    <!--<field name="date"/>-->
+                    <!--<field name="product_id"/>-->
+                    <!--<field name="mrp_production_id"/>-->
+                    <!--<field name="cost_account_id"/>-->
+                    <!--<field name="product_qty"/>-->
+                <!--</tree>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record id="act_ps_mrp_in_product_cost_calculation" model="ir.actions.act_window">
+            <field name="name">In Product Cost Calculation</field>
+            <field name="res_model">ps.mrp.in.product.cost.calculation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    In Product Cost Calculation
+                </p>
+            </field>
+        </record>
+
+        <!--在产品成本计算菜单-->
+        <menuitem id="menu_ps_mrp_in_product_cost_calculation" name="In Product Cost Calculation"
+                  action="act_ps_mrp_in_product_cost_calculation" parent="menu_in_product_calculation" groups="base.group_user"
+                  sequence="1"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 16:29+0000\n"
+"PO-Revision-Date: 2019-01-22 16:29+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_purchase
+#: model:ir.model.fields,help:ps_purchase.field_res_config_settings__module_ps_purchase_change
+msgid "Allow change purchase order with a traceable record"
+msgstr ""
+
+#. module: ps_purchase
+#: model_terms:ir.ui.view,arch_db:ps_purchase.ps_purchase_res_config_settings_view_form
+msgid "Allow change purchase order with traceability"
+msgstr ""
+
+#. module: ps_purchase
+#: model_terms:ir.ui.view,arch_db:ps_purchase.ps_purchase_res_config_settings_view_form
+msgid "Allow to change purchase order with traceable record."
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.model,name:ps_purchase.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: ps_purchase
+#: model_terms:ir.ui.view,arch_db:ps_purchase.ps_purchase_res_config_settings_view_form
+msgid "Company"
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.model,name:ps_purchase.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.model.fields,field_description:ps_purchase.field_purchase_order_line__ps_date_done
+msgid "Date Done"
+msgstr ""
+
+#. module: ps_purchase
+#: model_terms:ir.actions.act_window,help:ps_purchase.action_window_ps_purchase_line
+msgid "No record."
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.model.fields,field_description:ps_purchase.field_res_config_settings__ps_is_overpass_initial_ordered_process
+msgid "Not Exceeding Receive/Return"
+msgstr ""
+
+#. module: ps_purchase
+#: model_terms:ir.ui.view,arch_db:ps_purchase.ps_purchase_res_config_settings_view_form
+msgid "Not allow to receive/return more than initially planned"
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.model.fields,field_description:ps_purchase.field_res_company__ps_is_overpass_initial_ordered_process
+msgid "Ps Is Overpass Initial Ordered Process"
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.actions.act_window,name:ps_purchase.action_window_ps_purchase_line
+#: model:ir.ui.menu,name:ps_purchase.menu_purchase_details
+msgid "Purchase Details"
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.model.fields,field_description:ps_purchase.field_res_config_settings__module_ps_purchase_change
+msgid "Purchase Order Change"
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.model,name:ps_purchase.model_purchase_order_line
+#: model_terms:ir.ui.view,arch_db:ps_purchase.purchase_order_line_tree
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: ps_purchase
+#: code:addons/ps_purchase/models/ps_stock_move.py:16
+#, python-format
+msgid "Receiving/Returning more than what was initially planned for the product is not allowed."
+msgstr ""
+
+#. module: ps_purchase
+#: model_terms:ir.ui.view,arch_db:ps_purchase.ps_purchase_res_config_settings_view_form
+msgid "Receiving/Returning more than what was initially planned for the product will not be allowed if this is selected."
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.model,name:ps_purchase.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: ps_purchase
+#: model:ir.model.fields,help:ps_purchase.field_res_config_settings__ps_is_overpass_initial_ordered_process
+msgid "Whether processing more than initial ordered is permitted or not"
+msgstr ""
+

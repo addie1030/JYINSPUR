@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<templates id="statements_pivot_template"  xml:space="preserve">
+    <t t-name="statements_pivot_template">
+        <div style='padding-left: 15px'>
+            <!--<h2 id="report_title" style="text-align:left;"></h2>-->
+            <div style='padding-bottom: 10px'>
+                <section class="left" style='float:left;height: 100%;'>
+                    <button id='btnPrint' class="btn btn-primary btn-sm" type="button">打印预览</button>
+                    <button id='btnOutput' class="btn btn-primary btn-sm" type="button">转出数据</button>
+                </section>
+                <section style="text-align:center;float:center;">
+                    <img src="ps_spreadjs/static/src/img/calendar.png" style="vertical-align: middle"/>
+                    期间
+                    <input type="month" class = "date_change" id="user_date" disabled="disabled"/>
+                    至
+                    <input type="month" class = "date_change" id="user_date_end" disabled="disabled"/>
+                </section>
+            </div>
+        </div>
+        <div id="statements_pivot_sheet" style="width:100%; height:400px;border: 1px solid gray;"></div>
+    </t>
+</templates>
+

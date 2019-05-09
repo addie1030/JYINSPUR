@@ -1,0 +1,1568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="0">
+        <record id="l10n_cn_small_business2017.1_small_business2017_chart1001" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+        </record>
+        <record id="l10n_cn_small_business2017.1_small_business2017_chart1002" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+        </record>
+        <record id="l10n_cn_small_business2017.1_small_business2017_chart1012" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+        </record>
+        <record id="l10n_cn_small_business2017.1_small_business2017_chart1012001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1012" />
+        </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1012002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1012" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1012003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1012" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1012004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1012" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1012005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1012" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1012006" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1012" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1101" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1101001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1101002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1101003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1101004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1121" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1122" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1123" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1131" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1132" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1221" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1401" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1402" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1403" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1404" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1405" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1407" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1408" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1411" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1412" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1413" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1421" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1501" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1501001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1501" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1501002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1501" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1511" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1511001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1511" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1511002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1511" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1601" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1602" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1604" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1605" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1606" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1621" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1622" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1701" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1702" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1801" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1901" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1901001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1901" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart1901002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_asset" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart1901" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2001" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2201" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2202" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2203" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2211" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2211001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2211" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2211002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2211" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2211003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2211" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2211004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2211" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2211005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2211" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2211006" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2211" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2211007" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2211" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001001" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001002" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001003" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001004" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001005" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001006" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001007" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001008" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001009" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221001010" model="account.account">
+            <field name="ps_account_level">3</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221006" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221007" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221008" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221009" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221010" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221011" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221012" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221013" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221014" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2221015" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart2221" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2231" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2232" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2241" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2401" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2501" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart2701" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_liability" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3001" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3002" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3002001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3002" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3002002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3002" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3002003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3002" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3002004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3002" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3002005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3002" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3002006" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3002" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3002007" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3002" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3101" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3101001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3101002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3101003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3101004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3101005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3101006" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3101" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3103" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104006" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104007" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104008" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104009" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104010" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104011" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart3104012" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_owner" />
+            <field name="ps_balance_direction">2</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart3104" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart4001" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_cost" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart4001001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_cost" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart4001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart4001002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_cost" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart4001" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart4002" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_cost" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart4101" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_cost" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart4301" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_cost" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart4401" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_cost" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart4403" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_cost" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5001" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5051" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5111" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5301" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">2</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5401" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5402" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403006" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403007" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403008" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403009" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403010" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403011" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403012" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403013" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5403014" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5403" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601006" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601007" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601008" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601009" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601010" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601011" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601012" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601013" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601014" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601015" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601016" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601017" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601018" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601019" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5601020" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5601" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602006" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602007" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602008" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602009" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602010" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602011" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602012" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602013" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602014" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602015" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602016" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602017" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602018" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602019" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5602020" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5602" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5603" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5603001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5603" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5603002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5603" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5711" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="False" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5711001" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5711" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5711002" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5711" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5711003" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5711" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5711004" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5711" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5711005" model="account.account">
+            <field name="ps_account_level">2</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+            <field name="parent_id" ref="l10n_cn_small_business2017.1_small_business2017_chart5711" />
+          </record>
+          <record id="l10n_cn_small_business2017.1_small_business2017_chart5801" model="account.account">
+            <field name="ps_account_level">1</field>
+            <field name="ps_is_leaf" eval="True" />
+            <field name="account_attribute_id" ref="ps_account.ps_account_attribute_profit" />
+            <field name="ps_balance_direction">1</field>
+            
+          </record>
+    </data>
+</odoo>

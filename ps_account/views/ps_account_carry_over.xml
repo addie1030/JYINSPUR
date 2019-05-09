@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--自定义结转凭证创建-->
+        <record id="ps_account_carry_over_create_form" model="ir.ui.view">
+            <field name="name">ps.account.carry.over.create.form</field>
+            <field name="model">ps.account.carry.over.create</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="period_id"/>
+                        </group>
+                        <group>
+                            <field name="journal_id" required="1"/>
+                        </group>
+                    </group>
+
+                    <field name="account_carry_over_ids" widget="one2many_list">
+                        <tree string="" delete="false" create="false" editable="true">
+                            <field name="is_generate" widget="boolean"/>
+                            <field name="carry_over_move_no" readonly="1"/>
+                            <field name="name" readonly="1"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="post" class="oe_highlight" string="Generate Voucher" type="object"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="act_ps_account_carry_over_create_form" model="ir.actions.act_window">
+            <field name="name">Account Carry Over</field>
+            <field name="res_model">ps.account.carry.over.create</field>
+            <field name="view_mode">form</field>
+            <field name="view_type">form</field>
+            <field name="target">new</field>
+        </record>
+        <!--自定义结转凭证创建End-->
+
+        <!--自定义凭证结转定义头-->
+        <record id="ps_account_carry_over_head_tree" model="ir.ui.view">
+            <field name="name">ps.account.carry.over.head.tree</field>
+            <field name="model">ps.account.carry.over.head</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="carry_over_move_no"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ps_account_carry_over_head_form" model="ir.ui.view">
+            <field name="name">ps.account.carry.over.head.form</field>
+            <field name="model">ps.account.carry.over.head</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="carry_over_move_no"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                        <field name="move_ids" widget="one2many_list">
+                            <tree>
+                                <field name="account_id"/>
+                                <field name="balance_direction"/>
+                                <field name="currency_id"/>
+                                <field name="partner_id"/>
+                                <field name="product_id"/>
+                                <field name="cashflow_id"/>
+                                <field name="analytic_id"/>
+                                <field name="amount_direction"/>
+                                <field name="rule_amount_ids"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="act_ps_account_carry_over_head" model="ir.actions.act_window">
+            <field name="name">Account Carry Over Head</field>
+            <field name="res_model">ps.account.carry.over.head</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('ps_account_carry_over_head_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('ps_account_carry_over_head_form')})]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create Defined Carry-over Voucher
+                </p>
+            </field>
+        </record>
+        <!--自定义凭证结转定义头End-->
+
+        <!--自定义凭证结转模版-->
+        <record id="ps_account_carry_over_move_form" model="ir.ui.view">
+            <field name="name">ps.account.carry.over.move.form</field>
+            <field name="model">ps.account.carry.over.move</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="account_id"/>
+                                <field name="balance_direction" widget="selection"/>
+                            </group>
+                            <group>
+                                <field name="currency_id"/>
+                                <field name="partner_id"/>
+                            </group>
+                            <group>
+                                <field name="product_id"/>
+                                <field name="cashflow_id"/>
+                            </group>
+                            <group>
+                                <field name="analytic_id"/>
+                                <field name="amount_direction" widget="selection"/>
+                            </group>
+                            <group string="Get Amount Rule">
+                                <field name="take_other_total"/>
+                            </group>
+                            <field name="rule_amount_ids" nolabel="1" widget="one2many_list"
+                                   attrs="{'invisible': [('take_other_total','=',True)]}">
+                                <tree string="Amount Rule" create="true" editable="true">
+                                    <field name="account_substr"/>
+                                    <field name="account_no"/>
+                                    <field name="currency_id"/>
+                                    <field name="partner_id"/>
+                                    <field name="product_id"/>
+                                    <field name="cashflow_id"/>
+                                    <field name="analytic_id"/>
+                                    <field name="amount_ratio"/>
+                                    <field name="amount_range"/>
+                                    <field name="connector" widget="selection"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--自定义凭证结转模版End-->
+
+        <menuitem id="ps_account_carry_over_create_menu"
+                  name="Account Carry Over Create"
+                  parent="ps_account.menu_accounting_month_end"
+                  sequence="15"
+                  action="act_ps_account_carry_over_create_form"
+                  groups="account.group_account_manager"/>
+
+        <menuitem id="ps_account_carry_over_head_menu"
+                  name="Account Carry Over Definition"
+                  parent="account.account_account_menu"
+                  sequence="101"
+                  action="act_ps_account_carry_over_head"
+                  groups="account.group_account_manager"/>
+    </data>
+</odoo>

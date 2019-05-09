@@ -1,0 +1,133 @@
+<odoo>
+    <data>
+        <!--  Quality Sampling Plan : view 、 action  -->
+
+        <record id="view_quality_sampling_plan_filter" model="ir.ui.view">
+            <field name="name">ps.quality.sampling.plan.list</field>
+            <field name="model">ps.quality.sampling.plan</field>
+            <field name="arch" type="xml">
+                <search string="Search Quality Sampling Plan">
+                    <field name="name" string="Name"/>
+                    <field name="code" string="Code"/>
+
+                    <filter name="Draft" string="Draft" domain="[('state','=','draft')]"/>
+                    <filter name="Confirmed" string="Confirmed" domain="[('state','=','confirmed')]"/>
+                    <filter name="Closed" string="Closed" domain="[('state','=','closed')]"/>
+                    <filter name="Cancelled" string="Cancelled" domain="[('state','=','cancelled')]"/>
+
+                    <group expand="0" string="Group By...">
+                        <filter string="strictness" domain="[]"
+                                name="group_by_strictness"
+                                context="{'group_by': 'strictness'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_quality_sampling_plan_tree" model="ir.actions.act_window">
+            <field name="name">Quality Sampling Plan</field>
+            <field name="res_model">ps.quality.sampling.plan</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a quality sampling plan
+                </p>
+                <p>
+                    Create quality sampling plan, add and manage quality sampling plan lines.
+                </p>
+            </field>
+        </record>
+
+        <record id="view_quality_sampling_plan_tree" model="ir.ui.view">
+            <field name="name">ps.quality.sampling.plan.tree</field>
+            <field name="model">ps.quality.sampling.plan</field>
+            <field name="arch" type="xml">
+                <tree string="Quality Sampling Plan" default_order="code">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="strictness"/>
+                    <field name="aql"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_quality_sampling_plan_form" model="ir.ui.view">
+            <field name="name">ps.quality.sampling.plan.form</field>
+            <field name="model">ps.quality.sampling.plan</field>
+            <field name="arch" type="xml">
+                <form string="Quality Sampling Plan Detail" edit="0">
+                    <header>
+                        <field name="state" widget="statusbar" readonly="1"
+                               statusbar_visible="draft,confirmed"/>
+                               <!--statusbar_visible="draft,confirmed,closed,cancelled"/>-->
+                    </header>
+                    <sheet>
+                        <group>
+                            <h1>
+                                <field name="code" readonly="1"/>
+                            </h1>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="name" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="type" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="strictness" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="aql" options="{'no_create_edit':True,'no_create':True}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Quality Sampling Plan Lines" name="sampling_plan_items">
+                                <field name="line_ids"
+                                       context="{'line_ids': line_ids}"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree default_order="sequence " editable="bottom">
+                                        <field name="sequence" readonly="1"/>
+                                        <!--<field name="batch_size"/>-->
+                                        <field name="sample_size_code"/>
+                                        <field name="sample_size"/>
+                                        <field name="quantity_accept"/>
+                                        <field name="quantity_reject"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_quality_sampling_plan_testing_item_form" model="ir.ui.view">
+            <field name="name">ps.quality.sampling.plan.line.form</field>
+            <field name="model">ps.quality.sampling.plan.line</field>
+            <field name="arch" type="xml">
+                <form string="Quality Sampling Plan Line">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="sequence" invisible="1"/>
+                                <field name="sample_size_code"/>
+                                <field name="sample_size"/>
+
+                            </group>
+                            <group>
+                                <field name="quantity_accept"/>
+                                <field name="quantity_reject"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

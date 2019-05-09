@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--盘点单单据编号自动生成-->
+        <record id="sequence_ps_asset_inventory_id" model="ir.sequence">
+            <field name="name">Asset Inventory Code Sequence</field>
+            <field name="code">ps.asset.inventory</field>
+            <field name="prefix">PD</field>
+            <field name="padding">4</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+        </record>
+    </data>
+</odoo>

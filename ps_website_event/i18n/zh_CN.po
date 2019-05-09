@@ -1,0 +1,133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_website_event
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 23:07+0000\n"
+"PO-Revision-Date: 2019-01-22 23:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "(Free)"
+msgstr "(免费)"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Attendee #%s"
+msgstr "出席者 #%s"
+
+#. module: ps_website_event
+#: selection:event.registration,relationship:0
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Cloud Partner"
+msgstr "云伙伴"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Company #%s"
+msgstr "公司 #%s"
+
+#. module: ps_website_event
+#: model:ir.model.fields,field_description:ps_website_event.field_event_registration__company_name
+msgid "Company Name"
+msgstr "公司名称"
+
+#. module: ps_website_event
+#: selection:event.registration,relationship:0
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Customer"
+msgstr "客户"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Email #%s"
+msgstr "Email #%s"
+
+#. module: ps_website_event
+#: selection:event.registration,relationship:0
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Employee"
+msgstr "员工"
+
+#. module: ps_website_event
+#: model:ir.model,name:ps_website_event.model_event_registration
+msgid "Event Registration"
+msgstr "事件记录"
+
+#. module: ps_website_event
+#: selection:event.registration,gender:0
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Female"
+msgstr "女"
+
+#. module: ps_website_event
+#: model:ir.model.fields,field_description:ps_website_event.field_event_registration__gender
+msgid "Gender"
+msgstr "性别"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Gender #%s"
+msgstr "性别 #%s"
+
+#. module: ps_website_event
+#: selection:event.registration,gender:0
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Male"
+msgstr "男"
+
+#. module: ps_website_event
+#: selection:event.registration,relationship:0
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Other"
+msgstr "其他"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Phone #%s"
+msgstr "电话 #%s"
+
+#. module: ps_website_event
+#: model:ir.model.fields,field_description:ps_website_event.field_event_registration__position
+msgid "Position"
+msgstr "职务"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Position #%s"
+msgstr "职务 #%s"
+
+#. module: ps_website_event
+#: model:ir.model.fields,field_description:ps_website_event.field_event_registration__relationship
+msgid "Relationship"
+msgstr "与主办方关系"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Relationship #%s"
+msgstr "与主办方关系 #%s"
+
+#. module: ps_website_event
+#: model:ir.model.fields,field_description:ps_website_event.field_event_registration__state_id
+msgid "State"
+msgstr "省"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "State #%s"
+msgstr "省 #%s"
+
+#. module: ps_website_event
+#: model_terms:ir.ui.view,arch_db:ps_website_event.ps_registration_attendee_details
+msgid "Ticket Type #"
+msgstr "门票类型#"
+

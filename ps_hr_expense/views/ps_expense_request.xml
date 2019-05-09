@@ -1,0 +1,166 @@
+<odoo>
+    <data>
+        <record id="ps_hr_expense_search" model="ir.ui.view">
+            <field name="name">ps.hr.expense.search</field>
+            <field name="model">ps.hr.expense.request</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="reason"/>
+                    <filter string="MyExpense" name="employee_id"
+                            domain="[('employee_id.user_id','=',uid)]"
+                    />
+                    <filter string="NeedRepayment" name="need_repayment"
+                            domain="[('need_repayment','=',True)]"
+                    />
+                    <group string="Group By">
+                        <filter string="Employee" domain="" context="{'group_by':'employee_id'}"
+                                name="ps_employee_group"/>
+                        <filter string="Department" domain="" context="{'group_by':'department_id'}"
+                                name="ps_department_group"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="ps_hr_expense_list" model="ir.ui.view">
+            <field name="name">ps.hr.expense.list</field>
+            <field name="model">ps.hr.expense.request</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="reason"/>
+                    <field name="amount_request"/>
+                    <field name="amount_approved" attrs="{'invisible':[('state', 'in', ['draft', 'confirmed'])]}"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ps_hr_expense_form" model="ir.ui.view">
+            <field name="name">ps.hr.expense.form</field>
+            <field name="model">ps.hr.expense.request</field>
+            <field name="priority">16</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_submit" states="draft" class="oe_highlight" string="Submit" type="object"
+                                groups="base.group_user"/>
+                        <button name="action_cancel" states="draft" string="Cancel" type="object"
+                                groups="base.group_user"/>
+                        <button name="open_refund_form" string="Refund" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('need_repayment', '=', False)]}"/>
+                        <button name="action_draft" states="cancelled" class="oe_highlight" string="Draft" type="object"
+                                groups="base.group_user"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,confirmed,approved,refused,cancelled,closed"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="department_id" readonly="1"/>
+                                <field name="reason" required="True" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                                <field name="need_repayment" invisible="True"/>
+                            </group>
+                            <group>
+                                <field name="amount_request"/>
+                                <field name="amount_approved" attrs="{'invisible':[('state', 'in', ['draft', 'confirmed'])]}"/>
+                                <field name="amount_actual"/>
+                                <field name="amount_reimburse"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details of Expense">
+                                <field name="line_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree string="" editable="bottom">
+                                        <field name="name"/>
+                                        <field name="description" required="True"/>
+                                        <field name="place"/>
+                                        <field name="price"/>
+                                        <field name="qty"/>
+                                        <field name="amount_request"/>
+                                        <field name="state" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <group>
+                            <field name="is_loan" string="Is Loan"/>
+                        </group>
+                        <group attrs="{'invisible': [('is_loan', '=', False)], 'required': [('is_loan', '=', True)]}">
+                            <group>
+                                <field name="amount_loan"/>
+                            </group>
+                            <group>
+                                <field name="date_return" attrs="{'required': [('is_loan', '=', True)]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="ps_hr_expense_line_form" model="ir.ui.view">
+            <field name="name">ps.hr.expense.line.form</field>
+            <field name="model">ps.hr.expense.request.line</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="place"/>
+                                <field name="price"/>
+                            </group>
+                            <group>
+                                <field name="price_approved"/>
+                                <field name="qty"/>
+                                <field name="amount_request"/>
+                                <field name="amount_approved"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ps_hr_expense.ps_hr_expense" model="ir.actions.act_window">
+            <field name="name">Expense Request</field>
+            <field name="res_model">ps.hr.expense.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">['|',('employee_id.user_id', '=', uid),('create_uid', '=', uid)]</field>
+            <field name="view_ids" eval="[(5,0,0),
+            (0,0,{'view_mode': 'tree', 'view_id': ref('ps_hr_expense_list')}),
+            (0,0,{'view_mode': 'form', 'view_id': ref('ps_hr_expense_form')})]"/>
+            <field name="search_view_id" ref="ps_hr_expense_search"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new request.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_ps_hr_expense"
+                  name="Expense Request"
+                  sequence="0"
+                  parent="hr_expense.menu_hr_expense_my_expenses"
+                  action="ps_hr_expense.ps_hr_expense"
+                  groups="base.group_user"></menuitem>
+
+    </data>
+</odoo>

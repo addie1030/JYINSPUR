@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ps_account_move_trade,ps_synergism_move.ps_account_move_trade,ps_synergism_move.model_ps_account_move_trade,account.group_account_manager,1,1,1,1
+access_ps_account_move_trade_relate,ps_synergism_move.ps_account_trade_relate,ps_synergism_move.model_ps_account_trade_relate,account.group_account_manager,1,1,1,1
+access_ps_account_move_trade_type,ps_synergism_move.ps_account_trade_type,ps_synergism_move.model_ps_account_trade_type,account.group_account_manager,1,1,1,1

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ps_partner_credit_profile_view" model="ir.ui.view">
+            <field name="name">ps_partner_credit_profile_view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='accounting']/group" position="after">
+                    <group string="Credit Profile"
+                           groups="account.group_account_manager,ps_credit_management.group_credit_officer">
+                        <field name="credit_profile_ids" readonly="1" nolabel="1">
+                            <tree create="false" delete="false" edit="false" default_order="date_start desc">
+                                <field name="level_id"/>
+                                <field name="check_scheme_id"/>
+                                <field name="credit_limit"/>
+                                <field name="ratio" widget="percentage"/>
+                                <field name="order_limit"/>
+                                <field name="overdue_days"/>
+                                <field name="overdue_limit"/>
+                                <field name="overdue_ratio" widget="percentage"/>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                                <field name="currency_id" groups="base.group_multi_currency"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                                <field name="state"/>
+                                <!--<field name="cycle_days"/>-->
+                            </tree>
+                        </field>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

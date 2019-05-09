@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!--Adjust the working papers wizard from-->
+		<record id="adjust_working_papers_generate_wizard_form" model="ir.ui.view">
+			<field name="name">ps.adjust.working.papers.generate.wizard.form</field>
+			<field name="model">ps.adjust.working.papers.generate.wizard</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="organization_id" options="{'no_create': True}" />
+							<field name="account_period" options="{'no_create': True}" />
+							<field name="project_id" options="{'no_create': True}" />
+						</group>
+					</sheet>
+
+					<footer>
+						<button name="generate_adjust_working_papers"
+								type="object"
+								string="Adjusting manuscript generation"
+								class="oe_highlight" />
+						<button special="cancel" string="Shut down " />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<!--Adjust the working papers wizard action-->
+		<record id="adjust_working_papers_generate_wizard_act_window" model="ir.actions.act_window">
+			<field name="name">Adjusting Work Paper Generation Wizard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="target">new</field>
+			<field name="res_model">ps.adjust.working.papers.generate.wizard</field>
+			<field name="view_id" ref="adjust_working_papers_generate_wizard_form" />
+			<field name="view_mode">form</field>
+		</record>
+
+		<!-- This Menu Item must have a parent and an action -->
+		<menuitem id="adjust_working_papers_generate_wizard_menu"
+				  name="Adjustment of Work Draft Generation"
+				  parent="combined_statements_merger_adjustment_business"
+				  action="adjust_working_papers_generate_wizard_act_window"
+				  sequence="1"/>
+	</data>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add  res.company -->
+        <record id="base.main_company" model="res.company">
+            <field name="ps_bank_id" ref="base.bank_bnp"/>
+            <field name="ps_bank_account">1111</field>
+            <field name="ps_tax_version">1</field>
+            <field name="ps_tax_disk_number">12345</field>
+            <field name="ps_maximum_amount">100000。0</field>
+        </record>
+
+        <!-- Add  res.partner -->
+        <record id="res_partner_1" model="res.partner">
+            <field name="ps_bank_name">gongshangyinhang</field>
+            <field name="ps_bank_account">1111</field>
+        </record>
+
+        <!-- Add  TaxBill -->
+        <record id="ps_account_taxbill_test" model="ps.account.taxbill">
+            <field name="partner_id" ref="base.res_partner_1"/>
+            <field name="taxbill_amount_actual">100000.0</field>
+            <field name="date" eval="DateTime.today()"/>
+            <field name="invoice_date" eval="DateTime.today()"/>
+            <field name="user_id" ref="base.user_demo"/>
+            <field name="reviewer_id" ref="base.user_demo"/>
+            <field name="payee_id" ref="base.user_demo"/>
+            <field name="drawer_id" ref="base.user_demo"/>
+            <field name="mobile">1234567890</field>
+            <field name="email">506991880@qq.com</field>
+            <field name="notes">hhhh</field>
+            <field name="taxbill_number">12345678900987654321</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="invoice_id" ref="l10n_generic_coa.demo_invoice_1"/>
+            <field name="apply_line_ids" model="ps.account.taxbill.line" eval="[(0, 0, {
+                'taxbill_id': ref('ps_account_taxbill_test'),
+                'invoice_id': ref('l10n_generic_coa.demo_invoice_1'),
+                'invoice_line_id': ref('l10n_generic_coa.demo_invoice_1_line_1'),
+                'product_id': ref('product.consu_delivery_02'),
+                'name': 'test',
+                'trade_name': 'testproduct',
+                'specification': 'testggxh',
+                'uom_id': ref('uom.product_uom_unit'),
+                'quantity': 10.0,
+                'price_unit': 10.0,
+                'price_subtotal': 10.0,
+                'price_total': 10.0,
+                'price_tax': 10.0,
+                'partner_id': ref('base.res_partner_1'),
+                'currency_id': ref('CNY'),
+                'company_id': ref('base.main_company'),
+                'company_currency_id': ref('CNY'),
+                'discount': 1.0,
+                'invoices_available_quantity': 10.0,
+            })]"/>
+        </record>
+
+        <!-- Confirm TaxBill-->
+        <function model="ps.account.taxbill" name="button_confirm" eval="[[ref('ps_account_taxbill_test')]]"/>
+    </data>
+</odoo>

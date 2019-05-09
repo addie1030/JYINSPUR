@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record forcecreate="True" id="0001_YEAR" model="ps.statement.system.variables">
+            <field name="name">@YEAR@</field>
+			<field name="description">Accounting year，2018</field>
+            <field name="note"></field>
+        </record>
+		<record forcecreate="True" id="0002_MONTH" model="ps.statement.system.variables">
+            <field name="name">@MONTH@</field>
+			<field name="description">Accounting month，01</field>
+            <field name="note"></field>
+        </record>
+		<record forcecreate="True" id="0003_DAY" model="ps.statement.system.variables">
+            <field name="name">@DAY@</field>
+			<field name="description">Accounting day，01</field>
+            <field name="note"></field>
+        </record>
+		<record forcecreate="True" id="0004_FDATE" model="ps.statement.system.variables">
+            <field name="name">@FDATE@</field>
+			<field name="description">Accounting date，20180101</field>
+            <field name="note"></field>
+        </record>
+		<record forcecreate="True" id="0005_LDATE" model="ps.statement.system.variables">
+            <field name="name">@LDATE@</field>
+			<field name="description">Login date，20180101</field>
+            <field name="note"></field>
+        </record>	
+		<record forcecreate="True" id="0006_COMPANY" model="ps.statement.system.variables">
+            <field name="name">@COMPANY@</field>
+			<field name="description">Company name</field>
+            <field name="note"></field>
+        </record>	
+		<record forcecreate="True" id="0007_COMPANYID" model="ps.statement.system.variables">
+            <field name="name">@COMPANYID@</field>
+			<field name="description">Company number</field>
+            <field name="note"></field>
+        </record>		
+    </data>
+</odoo>

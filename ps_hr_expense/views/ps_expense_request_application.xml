@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ps_hr_expense_approve_list" model="ir.ui.view">
+        <field name="name">ps.hr.expense.approve.list</field>
+        <field name="model">ps.hr.expense.request</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="reason"/>
+                <field name="amount_request"/>
+                <field name="amount_approved"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <record id="search_ps_hr_expense_approve" model="ir.ui.view">
+        <field name="name">ps.hr.expense.request.search</field>
+        <field name="model">ps.hr.expense.request</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <filter domain="[('state', '=', 'confirmed')]" string="To Approve" name="confirmed" help="Confirmed Expenses"></filter>
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="reason"/>
+                <group expand="0" string="Group By">
+                    <filter name="gro_employee" string="Group By Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                    <filter name="gro_department" string="Group By Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="ps_hr_expense_approve_form" model="ir.ui.view">
+        <field name="name">ps.hr.expense.form</field>
+        <field name="model">ps.hr.expense.request</field>
+        <field name="priority">15</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="open_refund_form" string="Refund" type="object" class="oe_highlight"
+                            attrs="{'invisible': [('need_repayment', '=', False)]}"/>
+                    <button name="action_approve" class="oe_highlight" string="Approve" type="object" states="confirmed" groups="hr_expense.group_hr_expense_user"/>
+                    <button name="action_refuse" string="Refuse" type="object" states="confirmed" groups="hr_expense.group_hr_expense_user"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,confirmed,approved,refused,cancelled,closed"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="employee_id" readonly="1"/>
+                            <field name="department_id" readonly="1"/>
+                            <field name="reason" readonly="1"/>
+                            <field name="need_repayment" invisible="True" readonly="1"/>
+                        </group>
+                        <group >
+                            <field name="amount_request" readonly="1"/>
+                            <field name="amount_approved" readonly="1" attrs="{'invisible':[('state', 'in', 'draft')]}"/>
+                            <field name="amount_actual" readonly="1"/>
+                            <field name="amount_reimburse" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Details of Expense">
+                            <field name="line_ids">
+                                <tree string="" editable="bottom" delete="false" create="false">
+                                    <field name="name" readonly="1"/>
+                                    <field name="description" readonly="1"/>
+                                    <field name="place" readonly="1"/>
+                                    <field name="price" readonly="1"/>
+                                    <field name="qty" readonly="1"/>
+                                    <field name="amount_request" readonly="1"/>
+                                    <field name="price_approved" attrs="{'readonly': [('state', '!=', 'confirmed')]}"/>
+                                    <field name="qty_approved" attrs="{'readonly': [('state', '!=', 'confirmed')]}"/>
+                                    <field name="amount_approved" readonly="1"/>
+                                    <field name="state" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group>
+                        <field name="is_loan" string="Is Loan" readonly="1"/>
+                    </group>
+                    <group attrs="{'invisible': [('is_loan', '=', False)], 'required': [('is_loan', '=', True)]}">
+                        <group>
+                            <field name="amount_loan" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="date_return" attrs="{'required': [('is_loan', '=', True)]}" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ps_hr_expense_approve" model="ir.actions.act_window">
+        <field name="name">Expenses Requests To Approve</field>
+        <field name="res_model">ps.hr.expense.request</field>
+        <field name="view_mode">tree</field>
+        <field name="target">current</field>
+        <field name="view_ids" eval="[(5,0,0),
+            (0,0,{'view_mode': 'tree', 'view_id': ref('ps_hr_expense_approve_list')}),
+            (0,0,{'view_mode': 'form', 'view_id': ref('ps_hr_expense_approve_form')})]"/>
+        <field name="search_view_id" ref="search_ps_hr_expense_approve"/>
+        <field name="context">{'search_default_confirmed': 1}</field>
+        <field name="domain">[('employee_id.parent_id.user_id', '=', uid), ('state', 'in', ['confirmed', 'approved', 'refused', 'cancelled', 'closed'])]</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click here to create a new expense request.
+            </p><p>
+            Once you have created your expense, submit it to your manager who will validate it.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+              id="menu_ps_hr_expense_approve"
+              name="Expense Request To Approve"
+              sequence="0"
+              parent="hr_expense.menu_hr_expense_report"
+              action="action_ps_hr_expense_approve"
+              groups="hr_expense.group_hr_expense_user"/>
+
+</odoo>

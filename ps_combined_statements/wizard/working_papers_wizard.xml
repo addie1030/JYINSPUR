@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!--Form-->
+		<record id="working_papers_generate_wizard_form" model="ir.ui.view">
+			<field name="name">ps.working.papers.generate.wizard.form</field>
+			<field name="model">ps.working.papers.generate.wizard</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="merger_organization" options="{'no_create': True}" />
+							<field name="account_period" options="{'no_create': True}" />
+							<field name="project_id" options="{'no_create': True}" />
+						</group>
+					</sheet>
+
+					<footer>
+						<button name="generate_working_papers"
+								type="object"
+								string="generate"
+								class="oe_highlight" />
+						<button special="cancel" string="Close" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<!--Action-->
+		<record id="working_papers_generate_wizard_act_window" model="ir.actions.act_window">
+			<field name="name">Work Manuscript Generation Wizard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="target">new</field>
+			<field name="res_model">ps.working.papers.generate.wizard</field>
+			<field name="view_id" ref="working_papers_generate_wizard_form" />
+			<field name="view_mode">form</field>
+		</record>
+
+		<!-- This Menu Item must have a parent and an action -->
+		<menuitem id="working_papers_generate_wizard_menu"
+				  name="Merge offset working paper generation"
+				  parent="combined_statements_merger_counteract_business"
+				  action="working_papers_generate_wizard_act_window"
+				  sequence="15"/>
+	</data>
+</odoo>

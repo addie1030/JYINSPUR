@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <template id="search_template_date">
+        <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-calendar"/>
+            <t t-if="options['date'].get('string') and options['date'].get('filter') != 'custom'"><t t-esc="options['date']['string']"/></t>
+            <t t-if="options['date'].get('filter') == 'custom'">
+                <t t-if="options['date'].get('date')">Date: <span class="js_format_date"><t t-esc="options['date']['date']"/></span></t>
+                <t t-if="options['date'].get('date_from')">From: <span class="js_format_date"><t t-esc="options['date']['date_from']"/></span> <br/><span class="o_reports_date_to">to: <span class="js_format_date"><t t-esc="options['date']['date_to']"/></span></span></t>
+            </t>
+            <span class="caret"/>
+        </a>
+        <ul class="dropdown-menu o_filters_menu" role="menu">
+            <t t-if="options['date'].get('date')">
+                <li title="Today" data-filter="today" class="js_account_report_date_filter"><a>Today</a></li>
+                <li title="End of Last Month" data-filter="last_month" class="js_account_report_date_filter"><a>End of Last Month</a></li>
+            </t>
+            <t t-if="options['date'].get('date_from')">
+                <li title="This Month" data-filter="this_month" class="js_account_report_date_filter"><a>This Month</a></li>
+                <li class="divider"></li>
+                <li title="Last Month" data-filter="last_month" class="js_account_report_date_filter"><a>Last Month</a></li>
+            </t>
+            <li class="divider"></li>
+            <li class="js_foldable_trigger o_closed_menu" data-filter='custom_filter_date'><a>Custom</a></li>
+            <br/>
+            <li class="o_foldable_menu o_closed_menu" data-filter='custom_filter_date' style='margin-left: 10px; margin-right: 10px;'>
+                <t t-if="options['date'].get('date_from') != None">
+                    <label class="custom-date" for="date_from">Start Date :</label>
+                    <div class="form-group custom-date">
+                        <div class='o_datepicker js_account_reports_datetimepicker' t-att-data-default-value="options['date']['date_from']">
+                            <input type='text' class="o_datepicker_input" name="date_from" />
+                            <span class="o_datepicker_button"/>
+                        </div>
+                    </div>
+                </t>
+                <label class="custom-date" for="date_to" t-if="options['date'].get('date_to') != None">End Date :</label>
+                <label class="custom-date" for="date_to" t-if="options['date'].get('date') != None">Date :</label>
+                <div class="form-group custom-date">
+                    <div class='o_datepicker js_account_reports_datetimepicker' t-att-data-default-value="options['date'].get('date_to') or options['date'].get('date')">
+                        <input type='text' class="o_datepicker_input" name="date_to" />
+                        <span class="o_datepicker_button"/>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary js_account_report_date_filter" data-filter="custom">Apply</button>
+            </li>
+        </ul>
+    </template>
+
+    <template id="search_template_styles">
+        <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-filter"/> Style:
+            <!--下面屏蔽的这一块是选择了某一项后会更新在'样式：'位置-->
+            <!--<t t-if="options.get('cash_basis') != None">-->
+                <!--<t t-if="options['cash_basis']">Cash Basis,</t>-->
+                <!--<t t-if="not options['cash_basis']">Accrual Basis,</t>-->
+            <!--</t>-->
+            <!--<t t-if="options.get('all_entries') != None" groups="account.group_account_user">-->
+                <!--<t t-if="options['all_entries']">With Draft Entries,</t>-->
+                <!--<t t-if="not options['all_entries']">Posted Entries Only,</t>-->
+            <!--</t>-->
+            <!--<t t-if="options.get('unreconciled') != None">-->
+                <!--<t t-if="options['unreconciled']">Only Show Unreconciled Entries</t>-->
+            <!--</t>-->
+            <span class="caret"/>
+        </a>
+        <ul class="dropdown-menu o_filters_menu" role="menu">
+            <li title="Currency Style" class="js_account_china_report_style_filter" data-filter="aa"><a>Currency Style</a></li>
+            <li title="Foreign Currency Style" class="js_account_china_report_style_filter" data-filter="bb"><a>Foreign Currency Style</a></li>
+            <li title="Quantity Currency Style" class="js_account_china_report_style_filter" data-filter="cc"><a>Quantity Currency Style</a></li>
+            <li title="Quantity Foreign Currency Style" class="js_account_china_report_style_filter" data-filter="dd"><a>Quantity Foreign Currency Style</a></li>
+        </ul>
+    </template>
+
+    <template id="search_template_subject">
+        <a type="button" class="dropdown-toggle account_subject_filter" data-toggle="dropdown">
+            <span class="fa fa-filter"/> Subject:
+            <span class="caret"/>
+        </a>
+        <ul class="dropdown-menu o_filters_menu" role="menu" style="padding-left:5px;padding-right:5px;">
+            <li style="margin-top:3px">
+                <label for="subject_from">From Subject :</label>
+                <br/>
+                <select class="js_account_china_reports_subject" style="min-width: 140px;" name="subject_from" data-filter="subject_from">
+                    <t t-foreach="options['subject_subjectList']" t-as="a">
+                        <option t-att-value="a['code']"><t t-esc="a['name']" /></option>
+                    </t>
+                </select>
+            </li>
+            <li class="divider" style="margin-top:3px"></li>
+            <li style="margin-top:3px">
+                <label for="subject_to">To Subject :</label>
+                <br/>
+                <select class="js_account_china_reports_subject" style="min-width: 140px;" name="subject_to" data-filter="subject_to">
+                    <t t-foreach="options['subject_subjectList']" t-as="a">
+                        <option t-att-value="a['code']"><t t-esc="a['name']" /></option>
+                    </t>
+                </select>
+            </li>
+            <li style="margin-top:3px">
+                <button type="button" class="btn btn-primary js_account_china_report_subject_filter" data-filter="level">Application</button>
+            </li>
+        </ul>
+    </template>
+
+    <template id="search_template_unit">
+        <a type="button" class="dropdown-toggle account_subject_filter" data-toggle="dropdown">
+            <span class="fa fa-filter"/> Exchange Unit:
+            <span class="caret"/>
+        </a>
+        <!--<p t-esc="options['unit_unitList']"></p>-->
+        <ul class="dropdown-menu o_filters_menu" role="menu" style="padding-left:5px;padding-right:5px;">
+            <li style="margin-top:3px">
+                <label for="unit_from">From Unit :</label>
+                <br/>
+                <select class="js_account_china_reports_unit" style="min-width: 140px;" name="unit_from" data-filter="unit_from">
+                    <t t-foreach="options['unit_unitList']" t-as="a">
+                        <option t-att-value="a['id']"><t t-esc="a['name']" /></option>
+                    </t>
+                </select>
+            </li>
+            <li class="divider" style="margin-top:3px"></li>
+            <li style="margin-top:3px">
+                <label for="unit_to">To :</label>
+                <br/>
+                <select class="js_account_china_reports_unit" style="min-width: 140px;" name="unit_to" data-filter="unit_to">
+                    <t t-foreach="options['unit_unitList']" t-as="a">
+                        <option t-att-value="a['id']"><t t-esc="a['name']" /></option>
+                    </t>
+                </select>
+            </li>
+            <li style="margin-top:3px">
+                <button type="button" class="btn btn-primary js_account_china_report_unit_filter" data-filter="level">Apply</button>
+            </li>
+        </ul>
+    </template>
+
+    <template id="search_template_partner">
+        <a type="button" class="dropdown-toggle account_subject_filter" data-toggle="dropdown">
+            <span class="fa fa-filter"/> Exchange Unit:
+            <span class="caret"/>
+        </a>
+        <!--<p t-esc="options['unit_unitList']"></p>-->
+        <ul class="dropdown-menu o_filters_menu" role="menu" style="padding-left:5px;padding-right:5px;">
+            <li style="margin-top:3px">
+                <label for="partner_from">Exchange Unit :</label>
+                <br/>
+                <select class="js_account_china_reports_partner" style="min-width: 140px;" name="partner_from" data-filter="partner_from">
+                    <t t-foreach="options['partner_partnerList']" t-as="a">
+                        <option t-att-value="a['id']"><t t-esc="a['name']" /></option>
+                    </t>
+                </select>
+            </li>
+            <li class="divider" style="margin-top:3px"></li>
+            <li style="margin-top:3px">
+                <button type="button" class="btn btn-primary js_account_china_report_partner_filter" data-filter="level">Apply</button>
+            </li>
+        </ul>
+    </template>
+
+    <template id="search_template_account_state">
+        <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-filter"/> State:
+            <!--下面屏蔽的这一块是选择了某一项后会更新在'样式：'位置-->
+            <!--<t t-if="options.get('cash_basis') != None">-->
+                <!--<t t-if="options['cash_basis']">Cash Basis,</t>-->
+                <!--<t t-if="not options['cash_basis']">Accrual Basis,</t>-->
+            <!--</t>-->
+            <!--<t t-if="options.get('all_entries') != None" groups="account.group_account_user">-->
+                <!--<t t-if="options['all_entries']">With Draft Entries,</t>-->
+                <!--<t t-if="not options['all_entries']">Posted Entries Only,</t>-->
+            <!--</t>-->
+            <!--<t t-if="options.get('unreconciled') != None">-->
+                <!--<t t-if="options['unreconciled']">Only Show Unreconciled Entries</t>-->
+            <!--</t>-->
+            <span class="caret"/>
+        </a>
+        <ul class="dropdown-menu o_filters_menu" role="menu">
+            <t t-foreach="options['account_state']" t-as="a">
+                <li t-att-title="a.get('name')" t-att-data-id="a.get('id')" data-filter="account_state" class="js_account_china_report_account_state_filter"><a><t t-esc="a.get('name')"/></a></li>
+            </t>
+        </ul>
+    </template>
+
+    <template id="search_template_auxiliary">
+        <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="fa fa-filter"/> Auxiliary:
+            <span class="caret"/>
+        </a>
+        <ul class="dropdown-menu o_filters_menu" role="menu">
+            <li title="All" class="js_account_china_report_auxiliary_filter" data-filter="all"><a>All</a></li>
+            <li title="Partner" class="js_account_china_report_auxiliary_filter" data-filter="partner"><a>Partner</a></li>
+            <li title="Product" class="js_account_china_report_auxiliary_filter" data-filter="product"><a>Product</a></li>
+            <li title="Cash Flow" class="js_account_china_report_auxiliary_filter" data-filter="cashflow"><a>Cash Flow</a></li>
+        </ul>
+    </template>
+
+    <template id="search_template_china">
+        <div class="btn-group o_dropdown o_account_reports_filter_date" t-if="options.get('date') != None">
+            <t t-call="ps_account.search_template_date">
+            </t>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_date_cmp" t-if="options.get('comparison') != None">
+            <t t-call="account_reports.search_template_comparison"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_bool" t-if="options.get('cash_basis') != None or options.get('all_entries') != None or options.get('unfold_all') != None">
+            <t t-call="account_reports.search_template_extra_options"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_account_state" t-if="options.get('account_state') != None">
+            <t t-call="ps_account.search_template_account_state"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_subject" t-if="options.get('subject') != None">
+            <t t-call="ps_account.search_template_subject"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_unit" t-if="options.get('unit') != None">
+            <t t-call="ps_account.search_template_unit"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_partner" t-if="options.get('partner') != None">
+            <t t-call="ps_account.search_template_partner"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_styles" t-if="options.get('style') != None">
+            <t t-call="ps_account.search_template_styles"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_multi_company" t-if="options.get('multi_company') != None">
+            <t t-call="account_reports.search_template_multi_company"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_journals" t-if="options.get('journals') != None">
+            <t t-call="account_reports.search_template_journals"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_account_type" t-if="options.get('account_type') != None">
+            <t t-call="account_reports.search_template_account_type"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_analytic" t-if="options.get('analytic') != None">
+            <t t-call="account_reports.search_template_analytic"/>
+        </div>
+        <div class="btn-group o_dropdown o_account_reports_filter_auxiliary" t-if="options.get('auxiliary') != None">
+            <t t-call="ps_account.search_template_auxiliary"/>
+        </div>
+    </template>
+
+
+    </data>
+</odoo>

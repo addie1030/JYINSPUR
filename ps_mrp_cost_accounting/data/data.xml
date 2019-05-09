@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--费用项目编号自动生成-->
+    <data noupdate="1">
+        <record id="sequence_ps_mrp_expense_item" model="ir.sequence">
+            <field name="name">sequence_ps_mrp_expense_item_code</field>
+            <field name="code">ps.mrp.expense.item.code</field>
+            <field name="prefix">FY</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+
+    <!--费用分配标准编号自动生成-->
+    <data noupdate="1">
+        <record id="sequence_ps_mrp_expenses_standard" model="ir.sequence">
+            <field name="name">sequence_ps_mrp_expenses_standard_code</field>
+            <field name="code">ps.mrp.expenses.standard.code</field>
+            <field name="prefix">FPBZ</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+
+    <!--费用项目预置数据-->
+    <data noupdate="1">
+        <record id="ps_mrp_expense_item_FY0001" model="ps.mrp.expense.item">
+            <field name="code">FY0001</field>
+            <field name="name">Depreciation charge</field>
+            <field name="cost_item_id"></field>
+        </record>
+        <record id="ps_mrp_expense_item_FY0002" model="ps.mrp.expense.item">
+            <field name="code">FY0002</field>
+            <field name="name">Labor cost</field>
+            <field name="cost_item_id"></field>
+        </record>
+        <record id="ps_mrp_expense_item_FY0003" model="ps.mrp.expense.item">
+            <field name="code">FY0003</field>
+            <field name="name">Water and electricity</field>
+            <field name="cost_item_id"></field>
+        </record>
+        <record id="ps_mrp_expense_item_FY0004" model="ps.mrp.expense.item">
+            <field name="code">FY0004</field>
+            <field name="name">Freight</field>
+            <field name="cost_item_id"></field>
+        </record>
+        <record id="ps_mrp_expense_item_FY0005" model="ps.mrp.expense.item">
+            <field name="code">FY0005</field>
+            <field name="name">Office expenses</field>
+            <field name="cost_item_id"></field>
+        </record>
+        <record id="ps_mrp_expense_item_FY0006" model="ps.mrp.expense.item">
+            <field name="code">FY0006</field>
+            <field name="name">Other</field>
+            <field name="cost_item_id"></field>
+        </record>
+    </data>
+
+    <!--费用分配标准预置含有sql的数据-->
+    <data noupdate="1">
+        <record id="ps_mrp_expense_standard_SCCL" model="ps.mrp.expenses.standard">
+            <field name="code">FPBZ0001</field>
+            <field name="name">生产产量</field>
+            <field name="formula_code">SCCL</field>
+            <field name="standard_type">expensesstandard</field>
+            <field name="scope_application">product</field>
+            <field name="is_factor">True</field>
+            <field name="compute_formula">SCCL</field>
+            <field name="preset_sql">SELECT SUM(product_qty)
+FROM mrp_production
+WHERE state = 'done'
+    AND date_planned_start BETWEEN %s AND %s
+    AND product_id = %s
+    AND routing_id IN (
+        SELECT routing_id
+        FROM mrp_routing_workcenter
+        WHERE workcenter_id IN (
+            SELECT mrp_workcenter_id
+            FROM mrp_workcenter_ps_mrp_cost_accounting_rel
+            WHERE ps_mrp_cost_accounting_id = %s
+        )
+    )</field>
+            <field name="preset_parameter"></field>
+            <field name="is_preset">True</field>
+        </record>
+    </data>
+
+    <!--费用分配标准附表预置含有sql的数据-->
+    <data noupdate="1">
+        <record id="ps_mrp_expense_standard_SCCL" model="ps.mrp.expenses.standard.line">
+            <field name="name">生产产量</field>
+            <field name="formula_code">SCCL</field>
+        </record>
+    </data>
+
+    <!--费用方案引入序列号-->
+    <data noupdate="1">
+        <record id="sequence_ps_mrp_expense_plan_pull" model="ir.sequence">
+            <field name="name">sequence.ps.mrp.expense.plan.pull</field>
+            <field name="code">ps.mrp.expenses.plan.pull</field>
+            <field name="prefix">FY</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

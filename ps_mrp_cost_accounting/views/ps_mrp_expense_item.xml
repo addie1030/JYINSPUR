@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ps_mrp_expense_item_list" model="ir.ui.view">
+            <field name="name">ps.mrp.expense.item.list</field>
+            <field name="model">ps.mrp.expense.item</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="cost_item_id" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ps_mrp_expense_item_form" model="ir.ui.view">
+            <field name="name">ps.mrp.expense.item.form</field>
+            <field name="model">ps.mrp.expense.item</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="True"/>
+                                <field name="cost_item_id" required="1" domain="[('cost_type' ,'=' ,'indirect')]"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ps_mrp_expense_item_act" model="ir.actions.act_window">
+            <field name="name">Mrp Expense Item</field>
+            <field name="res_model">ps.mrp.expense.item</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_ps_mrp_expense_item" name="Mrp Expense Item" action="ps_mrp_expense_item_act" parent="menu_cost_basic_data" groups="base.group_user" sequence="4" />
+    </data>
+</odoo>

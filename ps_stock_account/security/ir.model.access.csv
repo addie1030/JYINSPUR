@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ps_stock_account,ps_stock_account,model_ps_stock_account_china_center_cancel_move,account.group_account_manager,1,1,1,1
+access_ps_invoice_line_stock_move_recs,ps_invoice_line_stock_move_recs,model_ps_invoice_line_stock_move_recs,account.group_account_manager,1,1,1,1
+access_ps_stock_material_balance_table,ps.stock.material.balance.table,ps_stock_account.model_ps_stock_material_balance_table,account.group_account_invoice,1,1,1,1
+

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="search_template_styles">
+            <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="fa fa-filter"/> Style:
+                <span class="caret"/>
+            </a>
+            <ul class="dropdown-menu o_filters_menu" role="menu">
+                <li title="Amount" class="js_account_china_report_style_filter" data-filter="aa"><a>Amount</a></li>
+                <li title="QuantityAndAmount" class="js_account_china_report_style_filter" data-filter="cc"><a>QuantityAndAmount</a></li>
+            </ul>
+        </template>
+
+        <template id="search_template_subject">
+            <a type="button" class="dropdown-toggle account_subject_filter" data-toggle="dropdown">
+                <span class="fa fa-filter"/> Subject:
+                <span class="caret"/>
+            </a>
+            <ul class="dropdown-menu o_filters_menu" role="menu" style="padding-left:5px;padding-right:5px;">
+                <li style="margin-top:3px">
+                    <label for="subject_from">Subject From :</label>
+                    <br/>
+                    <select class="js_account_china_reports_subject" style="min-width: 140px;" name="subject_from" data-filter="subject_from">
+                        <t t-foreach="options['subject_subjectList']" t-as="a">
+                            <option t-att-value="a['code']"><t t-esc="a['name']" /></option>
+                        </t>
+                    </select>
+                </li>
+                <li class="divider" style="margin-top:3px"></li>
+                <li style="margin-top:3px">
+                    <label for="subject_to">Subject To :</label>
+                    <br/>
+                    <select class="js_account_china_reports_subject" style="min-width: 140px;" name="subject_to" data-filter="subject_to">
+                        <t t-foreach="options['subject_subjectList']" t-as="a">
+                            <option t-att-value="a['code']"><t t-esc="a['name']" /></option>
+                        </t>
+                    </select>
+                </li>
+                <li style="margin-top:3px">
+                    <button type="button" class="btn btn-primary js_account_china_report_subject_filter" data-filter="level">Apply</button>
+                </li>
+            </ul>
+        </template>
+
+        <template id="search_template_unit">
+            <a type="button" class="dropdown-toggle account_subject_filter" data-toggle="dropdown">
+                <span class="fa fa-filter"/> Exchange Unit:
+                <span class="caret"/>
+            </a>
+            <ul class="dropdown-menu o_filters_menu" role="menu" style="padding-left:5px;padding-right:5px;">
+                <li style="margin-top:3px">
+                    <label for="unit_from">Unit From :</label>
+                    <br/>
+                    <select class="js_account_china_reports_unit" style="min-width: 140px;" name="unit_from" data-filter="unit_from">
+                        <t t-foreach="options['unit_unitList']" t-as="a">
+                            <option t-att-value="a['id']"><t t-esc="a['name']" /></option>
+                        </t>
+                    </select>
+                </li>
+                <li class="divider" style="margin-top:3px"></li>
+                <li style="margin-top:3px">
+                    <label for="unit_to">Unit To :</label>
+                    <br/>
+                    <select class="js_account_china_reports_unit" style="min-width: 140px;" name="unit_to" data-filter="unit_to">
+                        <t t-foreach="options['unit_unitList']" t-as="a">
+                            <option t-att-value="a['id']"><t t-esc="a['name']" /></option>
+                        </t>
+                    </select>
+                </li>
+                <li style="margin-top:3px">
+                    <button type="button" class="btn btn-primary js_account_china_report_unit_filter" data-filter="level">Apply</button>
+                </li>
+            </ul>
+        </template>
+
+        <template id="search_template_partner">
+            <a type="button" class="dropdown-toggle account_subject_filter" data-toggle="dropdown">
+                <span class="fa fa-filter"/> 往来单位:
+                <span class="caret"/>
+            </a>
+            <ul class="dropdown-menu o_filters_menu" role="menu" style="padding-left:5px;padding-right:5px;">
+                <li style="margin-top:3px">
+                    <label for="partner_from">Partner From :</label>
+                    <br/>
+                    <select class="js_account_china_reports_partner" style="min-width: 140px;" name="partner_from" data-filter="partner_from">
+                        <t t-foreach="options['partner_partnerList']" t-as="a">
+                            <option t-att-value="a['id']"><t t-esc="a['name']" /></option>
+                        </t>
+                    </select>
+                </li>
+                <li class="divider" style="margin-top:3px"></li>
+                <li style="margin-top:3px">
+                    <button type="button" class="btn btn-primary js_account_china_report_partner_filter" data-filter="level">Apply</button>
+                </li>
+            </ul>
+        </template>
+
+        <template id="search_template_account_state">
+            <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="fa fa-filter"/> Status:
+                <span class="caret"/>
+            </a>
+            <ul class="dropdown-menu o_filters_menu" role="menu">
+                <t t-foreach="options['account_state']" t-as="a">
+                    <li t-att-title="a.get('name')" t-att-data-id="a.get('id')" data-filter="account_state" class="js_account_china_report_account_state_filter"><a><t t-esc="a.get('name')"/></a></li>
+                </t>
+            </ul>
+        </template>
+
+        <template id="search_template_china">
+
+        </template>
+    </data>
+</odoo>

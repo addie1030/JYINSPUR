@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_add" t-operation="after">
+            <!--<button type="button" class="btn btn-sm btn-primary o_list_tender_button_create">新建报表</button>-->
+            <button type="button" class="btn btn-sm btn-primary o_list_tender_button_open" style="display:none;">打开报表</button>
+            <!--<button type="button" class="btn btn-sm btn-primary o_list_tender_button_delete">删除报表</button>-->
+            <!--<button type="button" class="btn btn-sm btn-primary o_list_tender_button_calculate">计算报表</button>-->
+            <!--<button type="button" class="btn btn-sm btn-primary o_list_tender_button_monthend">月末存档</button>-->
+            <!--<button type="button" class="btn btn-sm btn-primary o_list_tender_button_export">导出报表</button>-->
+            <!--<button type="button" class="btn btn-sm btn-primary o_list_tender_button_import">导入报表</button>-->
+            <!--<button type="button" class="btn btn-sm btn-primary o_list_tender_button_output">转出数据</button>-->
+            <!--<button type="button" class="btn btn-sm btn-primary o_list_tender_button_input">转入数据</button>-->
+        </t>
+    </t>
+    <t t-extend="FormView.buttons">
+        <t t-jquery="button.o_form_button_cancel" t-operation="after">
+            <!--<button type="button" class="btn btn-primary btn-sm o_form_button_fcreateparams">生成公式参数</button>-->
+        </t>
+    </t>
+</template>

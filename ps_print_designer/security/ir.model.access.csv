@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ps_print_designer_print_design_bill,ps_print_designer.print_design_bill,ps_print_designer.model_print_design_bill,base.group_user,1,1,1,1
+access_ps_print_designer_print_design_bill2model,ps_print_designer.print_design_bill2model,ps_print_designer.model_print_design_bill2model,base.group_user,1,1,1,1
+access_ps_print_designer_print_design_define,ps_print_designer.print_design_define,ps_print_designer.model_print_design_define,base.group_user,1,1,1,1
+access_ps_print_designer_print_design_field,ps_print_designer.print_design_field,ps_print_designer.model_print_design_field,base.group_user,1,1,1,1

@@ -1,0 +1,159 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_stock_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 21:25+0000\n"
+"PO-Revision-Date: 2019-01-22 21:25+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_stock_reports
+#: model:ir.actions.act_window,name:ps_stock_reports.action_ps_stock_price_dispatch_report
+msgid "Action Stock Price Dispatch Report"
+msgstr "库存收发报告"
+
+#. module: ps_stock_reports
+#: model:ir.actions.act_window,name:ps_stock_reports.action_ps_wizard_stock_price_dispatch
+msgid "Action Wizard Price Dispatch"
+msgstr "库存收发报告向导"
+
+#. module: ps_stock_reports
+#: model_terms:ir.ui.view,arch_db:ps_stock_reports.ps_wizard_stock_price_dispatch_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: ps_stock_reports
+#: model_terms:ir.ui.view,arch_db:ps_stock_reports.ps_wizard_stock_price_dispatch_form
+msgid "Confirm"
+msgstr "确认"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch__display_name
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch__id
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch____last_update
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch____last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch__location_id
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__location_id
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__lot_stock_id
+msgid "Location"
+msgstr "位置"
+
+#. module: ps_stock_reports
+#: code:addons/ps_stock_reports/wizard/ps_wizard_stock_price_dispatch.py:40
+#, python-format
+msgid "Please note: that and ending date should not be greater than the current date! "
+msgstr "请注意：截至日期不能大于当前日期！"
+
+#. module: ps_stock_reports
+#: code:addons/ps_stock_reports/wizard/ps_wizard_stock_price_dispatch.py:35
+#, python-format
+msgid "Please note：that the starting and ending dates should not be greater than the deadline!"
+msgstr "请注意：起始日期不能大于截止日期！"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch__product_id
+msgid "Product"
+msgstr "产品"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch__qty_balance
+msgid "Qty Balance"
+msgstr "结存数量"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch__qty_in
+msgid "Qty In"
+msgstr "收入数量"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch__qty_out
+msgid "Qty Out"
+msgstr "发出数量"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch__qty_start
+msgid "Qty Start"
+msgstr "期初数量"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__start_date
+msgid "Start  Date"
+msgstr "起始日期"
+
+#. module: ps_stock_reports
+#: model:ir.ui.menu,name:ps_stock_reports.menu_ps_stock_price_dispatch_view
+msgid "Stock Dispatch"
+msgstr "库存收发报告"
+
+#. module: ps_stock_reports
+#: code:addons/ps_stock_reports/wizard/ps_wizard_stock_price_dispatch.py:176
+#: model:ir.model,name:ps_stock_reports.model_ps_stock_price_dispatch
+#: model_terms:ir.ui.view,arch_db:ps_stock_reports.ps_stock_price_dispatch_pivot
+#: model_terms:ir.ui.view,arch_db:ps_stock_reports.ps_stock_price_dispatch_tree
+#: model_terms:ir.ui.view,arch_db:ps_stock_reports.ps_wizard_stock_price_dispatch_form
+#, python-format
+msgid "Stock Price Dispatch"
+msgstr "库存收发报告"
+
+#. module: ps_stock_reports
+#: model:ir.model,name:ps_stock_reports.model_ps_wizard_stock_price_dispatch
+msgid "Stock Price Dispatch Wizard"
+msgstr "库存收发报告"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_stock_price_dispatch__product_uom
+msgid "Uom"
+msgstr "单位"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__warehouse_id
+msgid "Warehouse"
+msgstr "仓库"
+
+#. module: ps_stock_reports
+#: model:ir.model.fields,field_description:ps_stock_reports.field_ps_wizard_stock_price_dispatch__end_date
+msgid "end  Date"
+msgstr "截止日期"
+

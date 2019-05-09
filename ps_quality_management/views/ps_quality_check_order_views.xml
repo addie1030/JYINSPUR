@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="quality_check_order_tree_view" model="ir.ui.view">
+            <field name="name">quality_check_order_tree_view</field>
+            <field name="model">ps.quality.check.order</field>
+            <field name="arch" type="xml">
+                <tree string="Quality Check Order">
+                    <field name="name"/>
+                    <field name="product_tmpl_id"/>
+                    <field name="document"/>
+                    <field name="type_id" options="{'no_create_edit':True,'no_create':True}"/>
+                    <field name="qty_ok"/>
+                    <field name="qty_ng"/>
+                    <field name="description"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Inherit Form View to Modify it -->
+        <record id="quality_check_order_form_view" model="ir.ui.view">
+            <field name="name">quality_check_order_form_view</field>
+            <field name="model">ps.quality.check.order</field>
+            <field name="arch" type="xml">
+                <form string="Quality Check Order">
+                    <header>
+                        <button name="action_approve" states="draft" type="object" string="Audit"
+                                class="btn-primary" groups="quality.group_quality_manager"/>
+                        <button name="action_validate" states="confirmed" type="object" string="Validate"
+                                class="btn-primary" groups="quality.group_quality_manager"/>
+                        <button name="action_cancel" states="confirmed" type="object" string="Cancel"
+                                groups="quality.group_quality_manager"/>
+                        <button name="action_draft" states="cancel" type="object" string="Set Draft"
+                                class="btn-primary" groups="quality.group_quality_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,validated,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--<button name="action_view_check_order_stock_picking"-->
+                            <!--type="object"-->
+                            <!--class="oe_stat_button"-->
+                            <!--icon="fa-pencil-square-o"-->
+                            <!--attrs="{'invisible': [('state', '!=', 'validated')]}">-->
+                            <!--<field name="picking_count" widget="statinfo" string="Picking"/>-->
+                            <!--</button>-->
+                            <button name="action_view_defect_disposal"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-stop-circle-o"
+                                    attrs="{'invisible': [('disposal_count', '=', 0)]}">
+                                <field name="disposal_count" widget="statinfo" string="Disposal"/>
+                            </button>
+                        </div>
+                        <h1 class="d-none d-md-block">
+                            <field name="name" readonly="1" required="True"/>
+                        </h1>
+                        <group>
+                            <group>
+
+                                <field name="type_id" attrs="{'readonly':[('state', '!=', 'draft')]}" required="True"
+                                       options="{'no_create_edit':True}"/>
+                                <field name="document" attrs="{'readonly':[('state', '!=', 'draft')]}" required="True"
+                                       domain="[('state','not in',['done','cancel']),('picking_type_id','=',type_id)]"/>
+                                <field name="product_ids" invisible="1"/>
+                                <field name="product_tmpl_id" attrs="{'readonly':[('state', '!=', 'draft')]}"
+                                       domain="[('id','in',product_ids)]"/>
+                                <field name="product_id" attrs="{'readonly':[('state', '!=', 'draft')]}"
+                                       groups="product.group_product_variant"
+                                       domain="[('product_tmpl_id','=',product_tmpl_id)]"/>
+
+                                <field name="ps_picking_code" invisible="1"/>
+                                <field name="lot_id" groups="stock.group_production_lot"
+                                       attrs="{'invisible': [('ps_picking_code', '=', 'incoming')],'required': [('ps_picking_code', '!=', 'incoming')]}"
+                                       options="{'no_create_edit':True}"/>
+                                <field name="lot_name" groups="stock.group_production_lot"
+                                       attrs="{'invisible': [('ps_picking_code', 'in', ('outgoing','internal'))],'required': [('ps_picking_code', 'not in', ('outgoing','internal'))]}"/>
+                                <field name="description" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="ps_inspect_plan_id" attrs="{'readonly':[('state', 'not in', 'draft')]}"
+                                       domain="[ ('picking_type_id','=',type_id),'|',('product_variant_id','=',product_id),('product_tmpl_id','=',product_tmpl_id)]"/>
+                                <field name="check_result"/>
+                                <field name="check_quantity" readonly="True" force_save="1"/>
+                                <field name="qty_ok"/>
+                                <field name="qty_ng"/>
+                                <field name="ref" groups="stock.group_production_lot"
+                                       attrs="{'readonly':[('state', '=', 'validated')]}"/>
+                            </group>
+                        </group>
+                        <group string="stock information">
+                            <group>
+                                <field name="partner_id" options="{'no_create_edit':True}"
+                                       readonly="1" force_save="1"/>
+                                <field name="warehouse_id" options="{'no_create_edit':True}" required="1"
+                                       readonly="True" force_save="1"/>
+                                <field name="lot_stock_id" invisible="1"/>
+                                <field name="location_id" options="{'no_create_edit':True,'no_create':True}"
+                                       required="1"
+                                       domain="['|', ('id', '=', lot_stock_id), ('location_id', '=', lot_stock_id)]"
+                                       readonly="True" force_save="1"/>
+
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Quality Check Lines">
+                                <field name="check_ids"
+                                       attrs="{'readonly':[('state', 'not in', ('draft','confirmed'))]}"
+                                       options="{'no_create_edit':True, 'not_delete':True}"
+                                       context="{'check_ids':check_ids}">
+                                    <tree create="0" delete="0">
+                                        <field name="ps_check_quantity" invisible="1"/>
+                                        <field name="ps_failed_qty" invisible="1"/>
+                                        <field name="testing_item_id" options="{'no_create_edit':True}"/>
+                                        <field name="product_tmpl_id" invisible="1"/>
+                                        <field name="product_id" invisible="1"/>
+                                        <field name="ps_inspection_plan_id" invisible="1"/>
+                                        <field name="check_level" invisible="1"/>
+                                        <field name="type"/>
+                                        <field name="sample_size" invisible="0"/>
+                                        <field name="quantity_accept" invisible="0"/>
+                                        <field name="quantity_reject" invisible="0"/>
+                                        <field name="testing_item_id" invisible="1"/>
+                                        <field name="ps_inspection_plan_id" invisible="1"/>
+                                        <field name="ps_inspection_plan_id" invisible="1"/>
+                                        <field name="ps_inspection_plan_id" invisible="1"/>
+                                        <field name="test_type" invisible="1"/>
+                                        <field name="alert_ids" invisible="1"/>
+                                        <field name="control_date" invisible="1"/>
+                                        <field name="user_id" string="Control Person" invisible="1"/>
+                                        <!--<field name="ps_qty_ok"/>-->
+                                        <field name="ps_qty_ng"/>
+                                        <field name="ps_check_result"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Quality Check Decision"
+                                  attrs="{'invisible':[('check_result', '=', 'qualified')]}">
+                                <field name="ps_decision_ids"
+                                       attrs="{'readonly':[('state', 'not in', ('draft','confirmed'))]}"
+                                       required="True">
+                                    <tree editable="bottom">
+                                        <field name="status" readonly="1"/>
+                                        <field name="quantity"/>
+                                        <field name="disposal"/>
+                                        <field name="decision_id" options="{'no_create_edit':True}" readonly="1"
+                                               force_save="1"/>
+                                        <field name="description"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="quality_check_order_search_view" model="ir.ui.view">
+            <field name="name">quality_check_order_search_view</field>
+            <field name="model">ps.quality.check.order</field>
+            <field name="arch" type="xml">
+                <search string="Quality Check Order">
+                    <field name="name"/>
+                    <filter name="Confirmed" string="Confirmed" domain="[('state','=','confirmed')]"/>
+                    <filter name="Cancel" string="Cancel" domain="[('state','=','cancel')]"/>
+                    <filter name="Closed" string="Closed" domain="[('state','=','closed')]"/>
+                    <filter name="Draft" string="Draft" domain="[('state','=','closed')]"/>
+                    <group expand="0" name="group_by" string="Group By">
+                        <filter string="States" domain="" context="{'group_by':'state'}"
+                                name="state_group"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="quality_control.quality_check_action_main" model="ir.actions.act_window">
+            <field name="name">Quality Checks</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.check.order</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_disposal_all" model="ir.actions.act_window">
+            <field name="name">Defect Disposal</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.quality.defect.disposal</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="context">{}</field>
+            <field name="domain"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a Disposal.
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
+

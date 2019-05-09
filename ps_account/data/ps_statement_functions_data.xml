@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+	    <record forcecreate="True" id="0001_BB" model="ps.statement.functions">
+            <field name="name">BB</field>
+			<field name="func_summary">Report function</field>
+            <field name="func_design">select #FORMULA# as formula, sum(ps_statement_sheet_cells.numerical_data) as ndata from ps_statement_sheet_cells,ps_statement_sheet_rows,ps_statement_sheet_columns where ps_statement_sheet_cells.row_order=ps_statement_sheet_rows.row_order and ps_statement_sheet_cells.col_order=ps_statement_sheet_columns.col_order and ps_statement_sheet_cells.report_code=#REPORTCODE# and ps_statement_sheet_cells.report_date=#REPORTDATE# and ps_statement_sheet_rows.report_code=#REPORTCODE# and ps_statement_sheet_rows.report_date=#REPORTDATE# and ps_statement_sheet_columns.report_code=#REPORTCODE# and ps_statement_sheet_columns.report_date=#REPORTDATE# and ps_statement_sheet_rows.row_coordinate>=#STARTROW# and ps_statement_sheet_rows.row_coordinate&lt;=#ENDROW# and ps_statement_sheet_columns.col_coordinate>=#STARTCOL# and ps_statement_sheet_columns.col_coordinate&lt;=#ENDCOL# </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">Take the number from the report management system, example：=BB(0,0,0001,C6)</field>
+        </record>
+        <record forcecreate="True" id="0002_KMJE" model="ps.statement.functions">
+            <field name="name">KMJE</field>
+			<field name="func_summary">Account amount function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">Take the account corresponding amount data from the general ledger management system, example：=KMJE(0,0,1001,JFYE,KMJS=1 )</field>
+        </record>
+        <record forcecreate="True" id="0003_KMSL" model="ps.statement.functions">
+            <field name="name">KMSL</field>
+			<field name="func_summary">Account quantity function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code  </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">Take the account corresponding quantity data from the general ledger management system, example：=KMSL(0,0,1001,NCJF,KMJS=1 )</field>
+        </record>
+        <record forcecreate="True" id="0004_KMWB" model="ps.statement.functions">
+            <field name="name">KMWB</field>
+			<field name="func_summary">Subject foreign currency function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period = #SPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">Taking the account corresponding to foreign currency data from the general ledger management system, example：=KMWB(0,0,1001,JFFS,KMJS=1 )</field>
+        </record>
+        <record forcecreate="True" id="0005_BMJE" model="ps.statement.functions">
+            <field name="name">BMJE</field>
+			<field name="func_summary">Departmental amount function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">example：=BMJE(0,0,1001,01,NCJF,KMJS=1 )</field>
+        </record>
+		<record forcecreate="True" id="0006_BMSL" model="ps.statement.functions">
+            <field name="name">BMSL</field>
+			<field name="func_summary">Department quantity function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">example：=BMSL(0,0,1001,01,NCJF,KMJS=1 )</field>
+        </record>
+		<record forcecreate="True" id="0007_BMWB" model="ps.statement.functions">
+            <field name="name">BMWB</field>
+			<field name="func_summary">Departmental foreign currency function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">example：=BMWB(0,0,1001,01,NCJF,KMJS=1 )</field>
+        </record>
+        <record forcecreate="True" id="0008_GRJE" model="ps.statement.functions">
+            <field name="name">GRJE</field>
+			<field name="func_summary">Personal amount function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">example：=GRJE(0,0,1001,000001,NCJF,GRBH='000001' )</field>
+        </record>
+        <record forcecreate="True" id="0009_GRSL" model="ps.statement.functions">
+            <field name="name">GRSL</field>
+			<field name="func_summary">Personal quantity function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">example：=GRSL(0,0,1001,000001,NCJF,GRBH='000001' )</field>
+        </record>
+        <record forcecreate="True" id="0010_GRWB" model="ps.statement.functions">
+            <field name="name">GRWB</field>
+			<field name="func_summary">Personal foreign currency function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">example：=GRWB(0,0,1001,000001,NCJF,GRBH='000001' )</field>
+        </record>
+        <record forcecreate="True" id="0011_XMJE" model="ps.statement.functions">
+            <field name="name">XMJE</field>
+			<field name="func_summary">Project amount function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">Only one category of items of a batch of (a) subject with the same type of special accounting can be taken, so XMLB can only specify equal conditions, the default is the first item category of the first special accounting account in the account range, so If there are different types of special accounts in the specified account scope, only the first account with special accounting can take out the correct data, so the account number of the function should have the same type of special accounting.example：=XMJE(0,0,1001,01,NCJF,XMJS=1 ) </field>
+        </record>
+        <record forcecreate="True" id="0012_XMSL" model="ps.statement.functions">
+            <field name="name">XMSL</field>
+			<field name="func_summary">Project quantity function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">Only one category of items of a batch of (a) subject with the same type of special accounting can be taken, so XMLB can only specify equal conditions, the default is the first item category of the first special accounting account in the account range, so If there are different types of special accounts in the specified account scope, only the first account with special accounting can take out the correct data, so the account number of the function should have the same type of special accounting.example：=XMSL(0,0,1001,01,NCJF,XMJS=1 ) </field>
+        </record>
+        <record forcecreate="True" id="0013_XMWB" model="ps.statement.functions">
+            <field name="name">XMWB</field>
+			<field name="func_summary">Project foreign currency function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">Only one category of items of a batch of (a) subject with the same type of special accounting can be taken, so XMLB can only specify equal conditions, the default is the first item category of the first special accounting account in the account range, so If there are different types of special accounts in the specified account scope, only the first account with special accounting can take out the correct data, so the account number of the function should have the same type of special accounting.example：=XMWB(0,0,1001,01,NCJF,XMJS=1 ) </field>
+        </record>
+        <record forcecreate="True" id="0014_WLJE" model="ps.statement.functions">
+            <field name="name">WLJE</field>
+			<field name="func_summary">Current amount function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">example：=WLJE(0,0,1001,0001,NCJF,WLBH='0001' ) </field>
+        </record>
+        <record forcecreate="True" id="0015_WLSL" model="ps.statement.functions">
+            <field name="name">WLSL</field>
+			<field name="func_summary">Quantity function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">example：=WLSL(0,0,1001,0001,NCJF,WLBH='0001' ) </field>
+        </record>
+        <record forcecreate="True" id="0016_WLWB" model="ps.statement.functions">
+            <field name="name">WLWB</field>
+			<field name="func_summary">Foreign currency function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">example：=WLWB(0,0,1001,0001,NCJF,WLBH='0001' ) </field>
+        </record>
+        <record forcecreate="True" id="0017_FZJE" model="ps.statement.functions">
+            <field name="name">FZJE</field>
+			<field name="func_summary">Multiple auxiliary amount function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">In the auxiliary accounting, a subject can be set up for departments, contacts, and multi-category projects (up to 5 categories). This type of function is used for counting such subjects.example：=FZJE(0,0,KM,1001,NCJF,BMBH='01' ) </field>
+        </record>
+        <record forcecreate="True" id="0018_FZSL" model="ps.statement.functions">
+            <field name="name">FZSL</field>
+			<field name="func_summary">Multiple auxiliary quantity function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">In the auxiliary accounting, a subject can be set up for departments, contacts, and multi-category projects (up to 5 categories). This type of function is used for counting such subjects.example：=FZSL(0,0,KM,1001,NCJF,BMBH='01' ) </field>
+        </record>
+        <record forcecreate="True" id="0019_FZWB" model="ps.statement.functions">
+            <field name="name">FZWB</field>
+			<field name="func_summary">Multiple auxiliary foreign currency functions</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">In the auxiliary accounting, a subject can be set up for departments, contacts, and multi-category projects (up to 5 categories). This type of function is used for counting such subjects.example：=FZWB(0,0,KM,1001,NCJF,BMBH='01' ) </field>
+        </record>
+        <record forcecreate="True" id="0020_PZHJJE" model="ps.statement.functions">
+            <field name="name">PZHJJE</field>
+			<field name="func_summary">Voucher total amount function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">This class of functions takes the number directly from the voucher and takes the total of the fetched objects of the complete, unobtained voucher, including all the posted and unrecorded voucher. Its result is only one number. The month can be a range. Can't take negative values and can't cross years.example：=PZHJJE(0,0,1001,JFLJ,BMBH='01' ) </field>
+        </record>
+        <record forcecreate="True" id="0021_PZHJSL" model="ps.statement.functions">
+            <field name="name">PZHJSL</field>
+			<field name="func_summary">Voucher count function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">This class of functions takes the number directly from the voucher and takes the total of the fetched objects of the complete, unobtained voucher, including all the posted and unrecorded voucher. Its result is only one number. The month can be a range. Can't take negative values and can't cross years.example：=PZHJSL(0,0,1001,JFLJ,BMBH='01' ) </field>
+        </record>
+        <record forcecreate="True" id="0022_PZHJWB" model="ps.statement.functions">
+            <field name="name">PZHJWB</field>
+			<field name="func_summary">Voucher total foreign currency function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">This class of functions takes the number directly from the voucher and takes the total of the fetched objects of the complete, unobtained voucher, including all the posted and unrecorded voucher. Its result is only one number. The month can be a range. Can't take negative values and can't cross years.example：=PZHJWB(0,0,1001,JFLJ,BMBH='01' ) </field>
+        </record>
+        <record forcecreate="True" id="0023_LLJE" model="ps.statement.functions">
+            <field name="name">LLJE</field>
+			<field name="func_summary">Cash flow amount function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">The flow amount function takes the full year if the default month. The result of the fetch is sorted by the flow item number. Example：=LLJE(0,0,0010) </field>
+        </record>
+        <record forcecreate="True" id="0024_LLXM" model="ps.statement.functions">
+            <field name="name">LLXM</field>
+			<field name="func_summary">Cash flow item function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">The results of the fetch are sorted by flow item number. Example：=LLXM(0,0010) </field>
+        </record>
+        <record forcecreate="True" id="0025_TZJE" model="ps.statement.functions">
+            <field name="name">TZJE</field>
+			<field name="func_summary">Accounting amount function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">When there is no KMBH object in the condition, the number is directly taken from the account balance table. If a KMBH object appears in the condition, the data is taken from the voucher entry, and the data of the complete and unobligated voucher is taken, including the booked and unrecorded voucher; the following special rules are available: 1. The fetch object can only be one. A simple fetch object cannot be a four-expression expression, and it cannot take TZMC. 2. JFLJ, DFLJ, JFFS or DFFS objects cannot be used in the condition. 3. If you take foreign currency, you can only take the value of one foreign currency, and use "WBBH='a foreign currency number'" in the condition. Example：=TZJE(0,0,1,01,JFLJ,TZXM='01' ) </field>
+        </record>
+        <record forcecreate="True" id="0026_TZSL" model="ps.statement.functions">
+            <field name="name">TZSL</field>
+			<field name="func_summary">Accounting quantity function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">When there is no KMBH object in the condition, the number is directly taken from the account balance table. If a KMBH object appears in the condition, the data is taken from the voucher entry, and the data of the complete and unobligated voucher is taken, including the booked and unrecorded voucher; the following special rules are available: 1. The fetch object can only be one. A simple fetch object cannot be a four-expression expression, and it cannot take TZMC. 2. JFLJ, DFLJ, JFFS or DFFS objects cannot be used in the condition. 3. If you take foreign currency, you can only take the value of one foreign currency, and use "WBBH='a foreign currency number'" in the condition. Example：=TZSL(0,0,1,01,JFLJ,TZXM='01' ) </field>
+        </record>
+        <record forcecreate="True" id="0027_TZWB" model="ps.statement.functions">
+            <field name="name">TZWB</field>
+			<field name="func_summary">Accounting foreign currency function</field>
+            <field name="func_design">select #FIELDS# as ye,#FORMULA# as formula,max(account_move.id) as id from account_move,account_move_line,account_account,ps_account_period A where account_move_line.account_id=account_account.id and account_move.id = account_move_line.move_id and account_move.ps_period_code = A.id and A.year||A.period >= #SPERIOD# and A.year||A.period &lt;= #EPERIOD# and account_account.code >= #SACCOUNTCODE# and account_account.code &lt;= #EACCOUNTCODE# group by account_account.code </field>
+            <field name="func_type">0</field>
+			<field name="func_scope">0</field>
+			<field name="func_note">When there is no KMBH object in the condition, the number is directly taken from the account balance table. If a KMBH object appears in the condition, the data is taken from the voucher entry, and the data of the complete and unobligated voucher is taken, including the booked and unrecorded voucher; the following special rules are available: 1. The fetch object can only be one. A simple fetch object cannot be a four-expression expression, and it cannot take TZMC. 2. JFLJ, DFLJ, JFFS or DFFS objects cannot be used in the condition. 3. If you take foreign currency, you can only take the value of one foreign currency, and use "WBBH='a foreign currency number'" in the condition. Example：=TZWB(0,0,1,01,JFLJ,TZXM='01' ) </field>
+        </record>
+    </data>
+</odoo>

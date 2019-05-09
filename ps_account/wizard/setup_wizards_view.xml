@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="setup_account_year_period_form" model="ir.ui.view">
+            <field name="name">setup.account.year.period.form</field>
+            <field name="model">ps.account.fiscalyear</field>
+            <field name="inherit_id" ref="view_ps_account_fiscal_year_form"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="after">
+                    <footer>
+                        <field name="account_setup_fiscalyear_period_done" invisible="True"/>
+                        <button string="Mark completed" type="object" name="mark_fiscalyear_period_setup_as_done_action" class="oe_highlight" attrs="{'invisible': [('account_setup_fiscalyear_period_done','=',True)]}"/>
+                        <button string="Save" type="action" name="ps_account.setup_wizard_close" attrs="{'invisible': [('account_setup_fiscalyear_period_done','=',True)]}"/>
+                        <button string="Save" type="action" name="ps_account.setup_wizard_close" class="oe_highlight" attrs="{'invisible': [('account_setup_fiscalyear_period_done','=',False)]}"/>
+                        <button string="Marked as incomplete" type="object" name="unmark_fiscalyear_period_setup_as_done_action" attrs="{'invisible': [('account_setup_fiscalyear_period_done','=',False)]}"/>
+                    </footer>
+                </xpath>
+            </field>
+        </record>
+        <record id="setup_switch_coa_form" model="ir.ui.view">
+            <field name="name">setup.switch.coa.view.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <form string="Settings" >
+                    <sheet>
+                        <field name="has_accounting_entries" invisible="1"/>
+                        <h3 >Select subject template</h3>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-xs-12 col-md-6 o_setting_box" >
+                                <div class="o_setting_left_pane"/>
+                                <div class="o_setting_right_pane">
+                                    <label string="Locale settings" for="" />
+                                    <span class="fa fa-lg fa-building-o" aria-label="" title="Values set here are company-specific." groups="base.group_multi_company"/>
+                                    <div class="text-muted">
+                                        Please switch the subject to the'2017 small business accounting table, and cannot change the settings after the certificate is available.
+                                    </div>
+                                    <div class="content-group" attrs="{'invisible': [('has_accounting_entries','!=',False)]}">
+                                        <div class="row mt16">
+                                            <label string="Package" class="col-md-3 o_light_label" for=""/>
+                                            <field name="chart_template_id" widget="selection"/>
+                                        </div>
+                                        <div>
+                                            <button name="%(account.open_account_charts_modules)d" icon="fa-arrow-right" type="action" string="Install more templates" class="btn-link"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </sheet>
+                    <footer>
+                        <field name="account_setup_switch_coa_done" invisible="True"/>
+                        <button string="Save and mark as completed" type="object" name="mark_switch_coa_as_done" class="oe_highlight" attrs="{'invisible': [('account_setup_switch_coa_done','=',True)]}"/>
+                        <button string="Close" type="action" name="ps_account.setup_wizard_close" />
+                        <!--<button string="保存" type="action" name="ps_account.setup_wizard_close" class="oe_highlight" attrs="{'invisible': [('account_setup_switch_coa_done','=',False)]}"/>-->
+                        <button string="Marked as incomplete" type="object" name="unmark_switch_coa_as_done" attrs="{'invisible': [('account_setup_switch_coa_done','=',False)]}"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="setup_wizard_close" model="ir.actions.act_window_close">
+            <field name="name">Close setup wizards</field>
+        </record>
+    </data>
+</odoo>

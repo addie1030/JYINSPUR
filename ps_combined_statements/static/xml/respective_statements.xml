@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+
+	<!--表格容器模板-->
+	<t t-name="respective_statements">
+
+		<div name='journaling_toolsBar' id='journaling_toolsBar' class="journaling_toolsBar">
+			<section class="left">
+				<button id='btnPrint' class="btn btn-primary btn-sm">打印预览</button>
+				<button id='btnCalculate' class="btn btn-primary btn-sm">计算报表</button>
+				<button id='btnSave' class="btn btn-primary btn-sm">保存报表</button>
+				<button id='btnOutput' class="btn btn-primary btn-sm">导出数据</button>
+				<button id='btnDataValidate' class="btn btn-primary btn-sm">数据效验</button>
+				<button id='btnReplace' class="btn btn-primary btn-sm">自动取数</button>
+				<button id='btnMonetaryUnitAdjust' class="btn btn-primary btn-sm">上报</button>
+				<button id='btnInitialization' class="btn btn-primary btn-sm">撤回上报</button>
+			</section>
+		</div>
+
+		<div class="journaling_tutorial">
+			<div class="options">
+				<div class="option-row">
+					<div id="formulaBar_nodesign" contenteditable="true" spellcheck="false" >
+					</div>
+				</div>
+			</div>
+			<div class="journaling_spreadsheets" id="ss">
+			</div>
+
+			<!--<t t-call="spreadContextMenu" />-->
+		</div>
+	</t>
+
+	<!--个别报表查询容器-->
+	<t t-name="respective_statements_search">
+
+		<div name='journaling_toolsBar' id='journaling_toolsBar' class="journaling_toolsBar">
+			<section class="left">
+				<button id='btnPrint' class="btn btn-primary btn-sm">打印预览</button>
+			</section>
+		</div>
+
+		<div class="journaling_tutorial">
+			<div class="options">
+				<div class="option-row">
+					<div id="formulaBar" contenteditable="true" spellcheck="false" >
+					</div>
+				</div>
+			</div>
+			<div class="journaling_spreadsheets" id="ss">
+			</div>
+		</div>
+	</t>
+
+	<!--数据校验呈现-->
+	<t t-name="ValidateRulesResultDialog">
+		<div class="o_row validate_rules">
+
+			<div class="o_row">
+				<table class="table table-bordered">
+					<thead>
+						<th>规则</th>
+						<th>结果</th>
+					</thead>
+					<tbody>
+						<t t-foreach="data" t-as="o">
+							<tr>
+								<td><t t-raw="o['rule']"/></td>
+								<t t-if="o['flag'] == '成功'">
+									<td class="text-success"><t t-raw="o['flag']"/></td>
+								</t>
+								<t t-if="o['flag'] == '失败'">
+									<td class="text-danger"><t t-raw="o['flag']"/></td>
+								</t>
+							</tr>
+						</t>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</t>
+
+</templates>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="ps_credit_confirm_wizard" model="ir.ui.view">
+        <field name="name">ps.credit.confirm.wizard.form</field>
+        <field name="model">ps.credit.confirm.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Credit Confirm">
+                <group>
+                    <div>
+                        <field name="message" nolabel="1" readonly="1"/>
+                    </div>
+                </group>
+                <footer>
+                    <button name="continue_sale" type="object" string="Continue Sale" class="oe_highlight" groups="ps_credit_management.group_credit_check_manager"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ps_credit_confirm_stock_wizard" model="ir.ui.view">
+        <field name="name">ps.credit.confirm.stock.wizard.form</field>
+        <field name="model">ps.credit.confirm.stock.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Credit Confirm">
+                <group>
+                    <div>
+                        <field name="message" nolabel="1" readonly="1"/>
+                    </div>
+                </group>
+                <footer>
+                    <button name="continue_move" type="object" string="Continue" class="oe_highlight" groups="ps_credit_management.group_credit_check_manager"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

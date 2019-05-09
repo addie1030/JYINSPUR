@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="purchase_order_line_tree" model="ir.ui.view">
+            <field name="name">ps.purchase.order.line.tree</field>
+            <field name="model">purchase.order.line</field>
+            <field name="arch" type="xml">
+                <tree string="Purchase Order Line" create="false" delete="false">
+                    <field name="partner_id"/>
+                    <field name="order_id"/>
+                    <field name="product_id"/>
+                    <field name="name"/>
+                    <field name="ps_date_done"/>
+                    <field name="product_qty"/>
+                    <field name="product_uom"/>
+                    <field name="qty_received"/>
+                    <field name="qty_invoiced"/>
+                    <field name="price_unit"/>
+                    <field name="price_tax"/>
+                    <field name="price_subtotal"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_window_ps_purchase_line" model="ir.actions.act_window">
+            <field name="name">Purchase Details</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">purchase.order.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="purchase_order_line_tree"/>
+            <field name="domain">[('state', 'in', ('purchase', 'done'))]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create" style="display:block">
+                    No record.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_purchase_details"
+                  name="Purchase Details"
+                  parent="purchase.menu_procurement_management"
+                  action="action_window_ps_purchase_line"
+                  sequence="26"/>
+
+    </data>
+</odoo>

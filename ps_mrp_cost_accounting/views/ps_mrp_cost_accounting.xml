@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="ps_mrp_cost_accounting_list" model="ir.ui.view">
+            <field name="name">ps.mrp.cost.accounting.list</field>
+            <field name="model">ps.mrp.cost.accounting</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <!--<field name="code" required="True"/>-->
+                    <field name="name" required="True"/>
+                    <field name="name_id" required="True"/>
+                    <field name="related_object" required="True"/>
+                    <field name="workcenter_id" widget="many2many_tags"/>
+                    <!--<field name="department_id" attrs="{'readonly': [('related_object', '!=', 'department')]}"/>-->
+                    <field name="WIPcompute_id" required="True"/>
+                    <field name="company_id" required="True" attrs="{'readonly': [('company_id','!=', False)]}"/>
+                </tree>
+            </field>
+        </record>
+        <record id="ps_mrp_cost_accounting_form" model="ir.ui.view">
+            <field name="name">ps.mrp.cost.accounting.form</field>
+            <field name="model">ps.mrp.cost.accounting</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!--<field name="code" required="True"/>-->
+                                <field name="name_id" required="True"/>
+                                <field name="related_object" required="True"/>
+                                <field name="company_id" required="True" attrs="{'readonly': [('company_id','!=', False)]}"/>
+                            </group>
+                            <group>
+                                <field name="name" required="True"/>
+                                <field name="WIPcompute_id" required="True"/>
+                                <field name="workcenter_id" widget="many2many_tags"/>
+                                <!--<field name="department_id" attrs="{'readonly': [('related_object', '!=', 'department')]}"/>-->
+                            </group>
+                            <!--<field name="company_id" attrs="{'readonly': [('related_object', '!=', 'department')]}"/>-->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="ps_mrp_cost_accounting" model="ir.actions.act_window">
+            <field name="name">Mrp Cost Basic Data</field>
+            <field name="res_model">ps.mrp.cost.accounting</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_ps_mrp_cost_accounting" name="Mrp Cost Accounting" action="ps_mrp_cost_accounting" parent="menu_cost_basic_data" groups="base.group_user" sequence="1" />
+    </data>
+</odoo>

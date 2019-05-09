@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ps_production_mrp_routing_query_tree_view" model="ir.ui.view">
+        <field name="name">ps.mrp.routing.query.tree</field>
+        <field name="model">ps.mrp.routing.query</field>
+        <field name="arch" type="xml">
+            <tree string="Query Routing" create="false" edit="false" delete="false">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="version"/>
+                <field name="ps_process_sequence" invisible="1"/>
+                <field name="operation_name"/>
+                <field name="workcenter_name"/>
+                <field name="time_cycle" />
+                <field name="ps_salary_type" />
+                <field name="ps_price_unit"/>
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                <button name="action_query_relevant_product_info" type="object" class="oe_stat_button"
+                        icon="fa-ticket" aria-label="Query" title="Query"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="ps_production_mrp_routing_query_search_view" model="ir.ui.view">
+        <field name="name">ps.mrp.routing.query.search</field>
+        <field name="model">ps.mrp.routing.query</field>
+        <field name="arch" type="xml">
+            <search string="Search Query Lists">
+                <field name="name" string="Routing" filter_domain="['|',('name','ilike',self),('code','ilike',self)]"/>
+                <field name="workcenter_name" string="Work Center" filter_domain="[('workcenter_name','ilike',self)]"/>
+                <field name="operation_name" string="Operation" filter_domain="[('operation_name','ilike',self)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Routing" name="routing_id" domain="[]" context="{'group_by':'routing_id'}"/>
+                    <filter string="Work Center" name="workcenter_name" domain="[]"  context="{'group_by':'workcenter_name'}"/>
+                    <filter name="Operation" domain="[]"  context="{'group_by':'operation_name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id='action_ps_production_mrp_routing_query' model='ir.actions.act_window' >
+        <field name='name'>Routings Query</field>
+        <field name='res_model'>ps.mrp.routing.query</field>
+        <field name='view_mode'>tree</field>
+        <field name="domain">[]</field>
+        <field name="search_view_id" ref="ps_production_mrp_routing_query_search_view"/>
+    </record>
+    <menuitem id="menu_ps_production_mrp_routing_query"
+          name="Routings Query"
+          parent="ps_production_data.menu_reporting"
+          action="ps_production_data.action_ps_production_mrp_routing_query" sequence="4"/>
+</odoo>

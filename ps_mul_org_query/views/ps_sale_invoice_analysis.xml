@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+        <record id="ps_ps_sale_invoice_analysis_tree" model="ir.ui.view">
+        <field name="name">ps.sale.invoice.analysis.view</field>
+        <field name="model">ps.sale.invoice.analysis</field>
+        <field name="arch" type="xml">
+                <tree>
+                    <field name="sale_partner_id"/>
+                    <field name="purchase_partner_id"/>
+                    <field name="number"/>
+                    <field name="purchase_number"/>
+                    <field name="product_id"/>
+                    <field name="uom_id" />
+                    <field name="quantity" />
+                    <field name="currency_id"/>
+                    <field name="price_unit"/>
+                    <field name="price_subtotal"/>
+                    <field name="type"/>
+                    <field name="date"/>
+                </tree>
+        </field>
+        </record>
+
+        <record id='action_ps_sale_invoice_analysis' model='ir.actions.act_window' >
+            <field name='name'>Ps Sale Invoice Analysis</field>
+            <field name='res_model'>ps.sale.invoice.analysis</field>
+            <field name='view_mode'>tree</field>
+            <field name="domain">[]</field>
+        </record>
+        <menuitem id="purchase_analysis_report"
+                  name="Analysis Reporting"
+                  parent="purchase.menu_purchase_root"
+                  sequence="99"
+                  groups="purchase.group_purchase_manager"/>
+        <menuitem id="purchase_report"
+                  name="Reporting"
+                  parent="purchase_analysis_report"
+                  sequence="1"
+                  groups="purchase.group_purchase_manager"
+                  action="purchase.action_purchase_order_report_all"/>
+        <menuitem id="ps_purchase_analysis_report"
+                  name="Ps Purchase Analysis Report"
+                  parent="purchase_analysis_report"
+                  sequence="2"
+                  groups="purchase.group_purchase_manager"
+                  action="action_ps_sale_invoice_analysis"/>
+
+        <menuitem id="menu_ps_sale_invoice_analysis"
+              name="Ps Sale Invoice Analysis"
+              parent="sale.menu_sale_report"
+              action="action_ps_sale_invoice_analysis"
+              sequence="6"
+              groups="base.group_user"/>
+    </data>
+</odoo>

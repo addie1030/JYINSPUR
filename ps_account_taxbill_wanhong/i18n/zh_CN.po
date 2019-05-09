@@ -1,0 +1,214 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_account_taxbill_wanhong
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-08 08:41+0000\n"
+"PO-Revision-Date: 2019-03-08 08:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_apply_vat_wizard_view
+msgid "Apply VAT"
+msgstr "申请税票"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model,name:ps_account_taxbill_wanhong.model_res_company
+msgid "Companies"
+msgstr "公司"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_apply_vat_wizard_view
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_download_vat_wizard_view
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_stock_create_account_move_view
+msgid "Confirm"
+msgstr "确认"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_apply_vat_wizard__create_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_download_vat_wizard__create_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_res_company__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_apply_vat_wizard__create_date
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_download_vat_wizard__create_date
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_res_company__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_invoice_form
+msgid "Details"
+msgstr "明细"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_apply_vat_wizard__display_name
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_download_vat_wizard__display_name
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_res_company__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ps_account_taxbill_wanhong
+#: code:addons/ps_account_taxbill_wanhong/models/ps_account_taxbill.py:159
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.view_ps_account_taxbill_form_inherit
+#, python-format
+msgid "Download VAT"
+msgstr "税票下载"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_apply_vat_wizard__id
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_download_vat_wizard__id
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.view_ps_account_taxbill_form_inherit
+msgid "Invoice VAT"
+msgstr "申请税票"
+
+#. module: ps_account_taxbill_wanhong
+#: code:addons/ps_account_taxbill_wanhong/models/ps_account_taxbill.py:80
+#, python-format
+msgid "Invoicing VAT"
+msgstr "税票开具"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_apply_vat_wizard____last_update
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_download_vat_wizard____last_update
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_res_company____last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_apply_vat_wizard__write_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_download_vat_wizard__write_uid
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_res_company__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_apply_vat_wizard__write_date
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_download_vat_wizard__write_date
+#: model:ir.model.fields,field_description:ps_account_taxbill_wanhong.field_ps_res_company__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.actions.act_window,help:ps_account_taxbill_wanhong.ps_account_taxbill_invoice_action_display_tree
+msgid "No record."
+msgstr "无匹配记录"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_stock_create_account_move_view
+msgid "Post Journal Entries"
+msgstr "发布日记账分录 "
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_stock_create_account_move_view
+msgid "Success!"
+msgstr "成功！"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_download_vat_wizard_view
+msgid "Successfully download the applied invoice"
+msgstr "成功下载申请的发票"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_apply_vat_wizard_view
+msgid "Successfully submitted a billing application"
+msgstr "提交成功"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_invoice_form
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_invoice_tree
+msgid "Tax Receipt"
+msgstr "税票"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_invoice_form
+msgid "Tax Receipt Lines"
+msgstr "税票明细"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.actions.act_window,name:ps_account_taxbill_wanhong.ps_account_taxbill_invoice_action_display_tree
+#: model:ir.ui.menu,name:ps_account_taxbill_wanhong.menu_ps_account_taxbill_invoice_action_display_tree
+msgid "Tax Receipt Query"
+msgstr "税票查询"
+
+#. module: ps_account_taxbill_wanhong
+#: code:addons/ps_account_taxbill_wanhong/models/ps_res_company.py:71
+#, python-format
+msgid "Tax number,tel and address cannot be empty and Tax number must be 15, 18 or 20 digits in length."
+msgstr "税号,电话和地址不能为空，且税号必须为15，18或者20位数字"
+
+#. module: ps_account_taxbill_wanhong
+#: code:addons/ps_account_taxbill_wanhong/models/ps_res_company.py:62
+#, python-format
+msgid "Taxbill Register"
+msgstr "开票注册"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.res_company_form_view_inherit_account_taxbill
+msgid "Taxbill register"
+msgstr "开票注册"
+
+#. module: ps_account_taxbill_wanhong
+#: code:addons/ps_account_taxbill_wanhong/models/ps_account_taxbill.py:113
+#, python-format
+msgid "The VAT receipt has not been issued yet and cannot be downloaded."
+msgstr "发票还未开具，无法下载"
+
+#. module: ps_account_taxbill_wanhong
+#: code:addons/ps_account_taxbill_wanhong/models/ps_account_taxbill.py:37
+#, python-format
+msgid "The customer address or bank information is not enough for current VAT type."
+msgstr "客户的地址和银行信息不完整，无法申请税票"
+
+#. module: ps_account_taxbill_wanhong
+#: code:addons/ps_account_taxbill_wanhong/models/ps_account_taxbill.py:29
+#, python-format
+msgid "The vat of the company did not exist, please maintain the vat first"
+msgstr "公司税号信息不完善，请先进行信息维护。"
+
+#. module: ps_account_taxbill_wanhong
+#: code:addons/ps_account_taxbill_wanhong/models/ps_account_taxbill.py:31
+#, python-format
+msgid "The vat of the customer did not exist, please maintain the vat first"
+msgstr "客户税号信息不完善，请先进行信息维护。"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model,name:ps_account_taxbill_wanhong.model_ps_apply_vat_wizard
+msgid "VAT Application Notification"
+msgstr "税票申请通知"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model,name:ps_account_taxbill_wanhong.model_ps_download_vat_wizard
+msgid "VAT Downloading Notification"
+msgstr "税票下载通知"
+
+#. module: ps_account_taxbill_wanhong
+#: model_terms:ir.ui.view,arch_db:ps_account_taxbill_wanhong.ps_account_taxbill_download_vat_wizard_view
+msgid "download VAT"
+msgstr "下载税票"
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model,name:ps_account_taxbill_wanhong.model_ps_account_taxbill
+msgid "ps.account.taxbill"
+msgstr ""
+
+#. module: ps_account_taxbill_wanhong
+#: model:ir.model,name:ps_account_taxbill_wanhong.model_ps_res_company
+msgid "ps.res.company"
+msgstr ""
+

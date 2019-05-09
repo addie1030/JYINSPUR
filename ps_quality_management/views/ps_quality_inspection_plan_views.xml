@@ -1,0 +1,169 @@
+<odoo>
+    <data>
+        <!--  Quality Inspection Plan : view 、 action  -->
+
+        <record id="view_quality_inspection_plan_filter" model="ir.ui.view">
+            <field name="name">ps.quality.inspection.plan.list</field>
+            <field name="model">ps.quality.inspection.plan</field>
+            <field name="arch" type="xml">
+                <search string="Search Quality Inspection Plan">
+                    <field name="name" string="Name"/>
+
+                    <filter name="Draft" string="Draft" domain="[('state','=','draft')]"/>
+                    <filter name="Confirmed" string="Confirmed" domain="[('state','=','confirmed')]"/>
+                    <filter name="Closed" string="Closed" domain="[('state','=','closed')]"/>
+                    <filter name="Cancelled" string="Cancelled" domain="[('state','=','cancelled')]"/>
+
+                    <group expand="0" string="Group By...">
+                        <filter string="state" domain="[]"
+                                name="group_by_state"
+                                context="{'group_by': 'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_quality_inspection_plan_tree" model="ir.actions.act_window">
+            <field name="name">Quality Inspection Plan</field>
+            <field name="res_model">ps.quality.inspection.plan</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a quality inspection plan
+                </p>
+                <p>
+                    Create quality inspection plan, add and manage quality inspection plan items.
+                </p>
+            </field>
+        </record>
+
+        <record id="view_quality_inspection_plan_tree" model="ir.ui.view">
+            <field name="name">ps.quality.inspection.plan.tree</field>
+            <field name="model">ps.quality.inspection.plan</field>
+            <field name="arch" type="xml">
+                <tree string="Quality Inspection Plan" default_order="name desc,validate_from desc">
+                    <field name="code"/>
+                    <field name="name" invisible="1"/>
+                    <field name="product_tmpl_id"/>
+                    <field name="product_variant_id" groups="product.group_product_variant"/>
+                    <field name="picking_type_id"/>
+                    <field name="type"/>
+                    <field name="sampling_plan_id" options="{'no_create_edit':True,'no_create':True}" invisible="1"/>
+                    <field name="aql" invisible="1"/>
+                    <!--<field name="check_level"/>-->
+                    <field name="strictness" invisible="1"/>
+                    <field name="validate_from"/>
+                    <field name="validate_to"/>
+                    <field name="description"/>
+                    <field name="state"/>
+                    <field name="company_id"
+                           options="{'no_create_edit':True,'no_create':True}"
+                           groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_quality_inspection_plan_form" model="ir.ui.view">
+            <field name="name">ps.quality.inspection.plan.form</field>
+            <field name="model">ps.quality.inspection.plan</field>
+            <field name="arch" type="xml">
+                <form string="Quality Inspection Plan Detail">
+                    <header>
+                        <button name="cancelled" string="Cancel" type="object"
+                                attrs="{'invisible': [('state', 'not in', ['confirmed','closed'])]}"/>
+                        <button name="draft" string="Set Draft" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', 'not in', ['cancelled',])]}"/>
+                        <button name="confirmed" string="Confirm" type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', 'not in', ['draft',])]}"/>
+                        <button name="closed" string="Close" type="object"
+                                attrs="{'invisible': [('state', 'not in', ['confirmed'])]}"/>
+
+                        <field name="state" readonly="1" widget="statusbar"
+                               statusbar_visible="draft,confirmed,closed,cancelled"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <h1>
+                                <field name="code" readonly="1"/>
+                            </h1>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="name" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="product_tmpl_id" required="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create_edit':True,'no_create':True}"/>
+                                <field name="product_variant_id" groups="product.group_product_variant"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       options="{'no_create_edit':True,'no_create':True}"/>
+                                <field name="picking_type_id" required="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="validate_from" required="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="validate_to" required="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="company_id" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                       groups="base.group_multi_company"
+                                       options="{'no_create_edit':True,'no_create':True}"/>
+                            </group>
+                            <group>
+                                <field name="type" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="aql"
+                                       attrs="{'required': [('type','=','gb')], 'invisible': [('type','=','all')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="strictness"
+                                       attrs="{'required': [('type','=','gb')], 'invisible': [('type','=','all')], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="sampling_plan_id" invisible="1"/>
+                                <field name="description" required="1"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Quality Inspection Plan Testing Items" name="inspection_plan_testing_items">
+                                <field name="inspection_plan_testing_item_ids"
+                                       context="{'item_ids': inspection_plan_testing_item_ids,
+                                       'sampling_plan_id':sampling_plan_id,
+                                       'type':type,
+                                       'picking_type_id':picking_type_id,
+                                       'aql':aql,
+                                       'strictness':strictness,
+                                       'default_product_tmpl_id':product_tmpl_id,
+                                       'default_product_id':product_variant_id,
+                                       'default_own_product_tmpl_id':product_tmpl_id,
+                                       'default_own_product_id':product_variant_id,
+                                       }"
+                                       attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree default_order="sequence ">
+                                        <field name="sequence"/>
+
+                                        <field name="product_tmpl_id" invisible="1"/>
+                                        <field name="product_id" groups="product.group_product_variant" invisible="1"/>
+
+                                        <field name="testing_item_id"
+                                               options="{'no_create_edit':True,'no_create':True}"/>
+                                        <field name="method_type"/>
+                                        <field name="defect_level" invisible="1"/>
+                                        <field name="is_destructive_test" invisible="1"/>
+                                        <field name="is_key_inspection" invisible="1"/>
+                                        <field name="testing_method_id"
+                                               options="{'no_create_edit':True,'no_create':True}"/>
+                                        <field name="criteria_id" options="{'no_create_edit':True,'no_create':True}"/>
+                                        <field name="basis_id" options="{'no_create_edit':True,'no_create':True}"/>
+                                        <field name="testing_equipment_id"
+                                               options="{'no_create_edit':True,'no_create':True}"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

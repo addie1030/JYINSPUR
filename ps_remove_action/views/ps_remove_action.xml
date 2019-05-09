@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="account assets" inherit_id="web.assets_backend">
+        <xpath expr="//script[contains(@src, '/web/static/src/js/chrome/sidebar.js')]" position="replace">
+            <script type="text/javascript" src="/ps_remove_action/static/src/js/ps_sidebar.js"></script>
+        </xpath>
+    </template>
+</odoo>

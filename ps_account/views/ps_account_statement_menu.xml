@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <menuitem name="Statements List" id="account_statement_menu_1" parent="ps_account.menu_ps_account_statement_new" action="ps_spreadjs.action_window_statements" sequence="1" groups="account.group_account_manager"/>
+        <menuitem name="New Statement" id="account_statement_menu_2" parent="ps_account.menu_ps_account_statement_new" action="ps_spreadjs.action_view_statement_statements_newstatement" sequence="2"/>
+        <menuitem name="Statements Query" id="account_statement_menu_3" parent="ps_account.menu_ps_account_statement_new" action="ps_spreadjs.action_window_statements_query" sequence="3" groups="account.group_account_manager"/>
+        <menuitem name="Setting" id="account_statement_menu_4" parent="ps_account.menu_ps_account_statement_new" sequence="4" groups="account.group_account_manager"/>
+        <menuitem name="Amount Unit Definition" id="account_statement_menu_5" parent="account_statement_menu_4" action="ps_spreadjs.action_window_monetaryunitdefine" sequence="5" groups="account.group_account_manager"/>
+        <menuitem name="Custom Formula" id="account_statement_menu_6" parent="account_statement_menu_4" action="ps_spreadjs.action_window_statements_custom_formula" sequence="6" groups="account.group_account_manager"/>
+    </data>
+</odoo>

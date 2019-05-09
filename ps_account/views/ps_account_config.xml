@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.account</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <!--<xpath expr="//h2[contains(text(),'会计年度')]" position="replace">-->
+                <!--<h2></h2>-->
+                <!--</xpath>-->
+                <xpath expr="//div[@id='accounting_reports']/../../div" position="after">
+                    <h2>PS Cloud General Ledger Settings</h2>
+                    <div class="row mt16 o_settings_container" id="pscloud_account_setting">
+                        <!--<div class="col-xs-12 col-md-6 o_setting_box">-->
+                        <!--<div class="o_setting_left_pane">-->
+                        <!--<field name="ps_account_begin_use"/>-->
+                        <!--</div>-->
+                        <!--<div class="o_setting_right_pane">-->
+                        <!--<label for="ps_account_begin_use"/>-->
+                        <!--<div class="text-muted">-->
+                        <!--系统使用后，不能取消启用-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="o_setting_right_pane">-->
+                        <!--<field name="ps_account_begin_date"/>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="ps_same_user_approval"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ps_same_user_approval"/>
+                                <div class="text-muted">
+                                    Allow the creator and reviewer to be the same person
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="ps_account_code_structure"/>
+                                <div class="text-muted">
+                                    Currently supports 5 levels, the maximum of each level is 9
+                                </div>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <field name="ps_account_code_structure" readonly="1"/>
+                                <group>
+                                    <field name="ps_account_code_structure_l4" string="Level-4"/>
+                                    <field name="ps_account_code_structure_l5" string="Level-5"/>
+                                </group>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="ps_account_profit_id"/>
+                                <div class="text-muted">
+                                    Current Profit(for profit and loss carryover)
+                                </div>
+                                <field name="ps_account_profit_id" />
+                            </div>
+                        </div>
+                    </div>
+                    <h2>PS Cloud Financial Statement Settings</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="ps_statement_calculation_contains_unaccounted"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="ps_statement_calculation_contains_unaccounted"/>
+                                <div class="text-muted">
+                                    Statement calculation contains unposted voucher
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="ps.quality.sampling.name" id="name_value1">
+            <field name="name">GB/T2828.1-2012</field>
+            <field name="is_set">True</field>
+        </record>
+
+    </data>
+    <data noupdate="1">
+        <record model="ps.quality.sampling.code" id="sampling_code_value1">
+
+            <field name="size_begin">2</field>
+            <field name="size_end">8</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value2">
+            <field name="size_begin">9</field>
+            <field name="size_end">15</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value3">
+
+            <field name="size_begin">16</field>
+            <field name="size_end">25</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value4">
+
+            <field name="size_begin">26</field>
+            <field name="size_end">50</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value5">
+
+            <field name="size_begin">51</field>
+            <field name="size_end">90</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value6">
+
+            <field name="size_begin">91</field>
+            <field name="size_end">150</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value7">
+
+            <field name="size_begin">151</field>
+            <field name="size_end">280</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value8">
+
+            <field name="size_begin">281</field>
+            <field name="size_end">500</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value9">
+
+            <field name="size_begin">501</field>
+            <field name="size_end">1200</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value10">
+
+            <field name="size_begin">1201</field>
+            <field name="size_end">3200</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value11">
+
+            <field name="size_begin">3201</field>
+            <field name="size_end">10000</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value12">
+
+            <field name="size_begin">10001</field>
+            <field name="size_end">35000</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value13">
+
+            <field name="size_begin">35001</field>
+            <field name="size_end">150000</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value14">
+
+            <field name="size_begin">150001</field>
+            <field name="size_end">500000</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value15">
+
+            <field name="size_begin">500000</field>
+            <field name="size_end">0</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value1"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+        </record>
+
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value16">
+
+            <field name="size_begin">2</field>
+            <field name="size_end">8</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value17">
+
+            <field name="size_begin">9</field>
+            <field name="size_end">15</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value18">
+
+            <field name="size_begin">16</field>
+            <field name="size_end">25</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value19">
+
+            <field name="size_begin">26</field>
+            <field name="size_end">50</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value20">
+
+            <field name="size_begin">51</field>
+            <field name="size_end">90</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value21">
+
+            <field name="size_begin">91</field>
+            <field name="size_end">150</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value22">
+
+            <field name="size_begin">151</field>
+            <field name="size_end">280</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value23">
+
+            <field name="size_begin">281</field>
+            <field name="size_end">500</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value24">
+
+            <field name="size_begin">501</field>
+            <field name="size_end">1200</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value25">
+
+            <field name="size_begin">1201</field>
+            <field name="size_end">3200</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value26">
+
+            <field name="size_begin">3201</field>
+            <field name="size_end">10000</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value27">
+
+            <field name="size_begin">10001</field>
+            <field name="size_end">35000</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value28">
+
+            <field name="size_begin">35001</field>
+            <field name="size_end">150000</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value29">
+
+            <field name="size_begin">150001</field>
+            <field name="size_end">500000</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value30">
+
+            <field name="size_begin">500000</field>
+            <field name="size_end">0</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value2"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+        <record model="ps.quality.sampling.code" id="sampling_code_value31">
+
+            <field name="size_begin">2</field>
+            <field name="size_end">8</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value32">
+
+            <field name="size_begin">9</field>
+            <field name="size_end">15</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value33">
+
+            <field name="size_begin">16</field>
+            <field name="size_end">25</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value34">
+
+            <field name="size_begin">26</field>
+            <field name="size_end">50</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value35">
+
+            <field name="size_begin">51</field>
+            <field name="size_end">90</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value36">
+
+            <field name="size_begin">91</field>
+            <field name="size_end">150</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value37">
+
+            <field name="size_begin">151</field>
+            <field name="size_end">280</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value38">
+
+            <field name="size_begin">281</field>
+            <field name="size_end">500</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value39">
+
+            <field name="size_begin">501</field>
+            <field name="size_end">1200</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value40">
+
+            <field name="size_begin">1201</field>
+            <field name="size_end">3200</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value41">
+
+            <field name="size_begin">3201</field>
+            <field name="size_end">10000</field>
+            <field name="code">F</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value42">
+
+            <field name="size_begin">10001</field>
+            <field name="size_end">35000</field>
+            <field name="code">F</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value43">
+
+            <field name="size_begin">35001</field>
+            <field name="size_end">150000</field>
+            <field name="code">G</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value44">
+
+            <field name="size_begin">150001</field>
+            <field name="size_end">500000</field>
+            <field name="code">G</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value45">
+
+            <field name="size_begin">500000</field>
+            <field name="size_end">0</field>
+            <field name="code">H</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value3"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value46">
+
+            <field name="size_begin">2</field>
+            <field name="size_end">8</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value47">
+
+            <field name="size_begin">9</field>
+            <field name="size_end">15</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value48">
+
+            <field name="size_begin">16</field>
+            <field name="size_end">25</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value49">
+
+            <field name="size_begin">26</field>
+            <field name="size_end">50</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value50">
+
+            <field name="size_begin">51</field>
+            <field name="size_end">90</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value51">
+
+            <field name="size_begin">91</field>
+            <field name="size_end">150</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value52">
+
+            <field name="size_begin">151</field>
+            <field name="size_end">280</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value53">
+
+            <field name="size_begin">281</field>
+            <field name="size_end">500</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value54">
+
+            <field name="size_begin">501</field>
+            <field name="size_end">1200</field>
+            <field name="code">F</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value55">
+
+            <field name="size_begin">1201</field>
+            <field name="size_end">3200</field>
+            <field name="code">G</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value56">
+
+            <field name="size_begin">3201</field>
+            <field name="size_end">10000</field>
+            <field name="code">G</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value57">
+
+            <field name="size_begin">10001</field>
+            <field name="size_end">35000</field>
+            <field name="code">H</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value58">
+
+            <field name="size_begin">35001</field>
+            <field name="size_end">150000</field>
+            <field name="code">J</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value59">
+
+            <field name="size_begin">150001</field>
+            <field name="size_end">500000</field>
+            <field name="code">J</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value60">
+
+            <field name="size_begin">500000</field>
+            <field name="size_end">0</field>
+            <field name="code">K</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value4"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value61">
+
+            <field name="size_begin">2</field>
+            <field name="size_end">8</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value62">
+
+            <field name="size_begin">9</field>
+            <field name="size_end">15</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value63">
+
+            <field name="size_begin">16</field>
+            <field name="size_end">25</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value64">
+
+            <field name="size_begin">26</field>
+            <field name="size_end">50</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value65">
+
+            <field name="size_begin">51</field>
+            <field name="size_end">90</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value66">
+
+            <field name="size_begin">91</field>
+            <field name="size_end">150</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value67">
+
+            <field name="size_begin">151</field>
+            <field name="size_end">280</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value68">
+
+            <field name="size_begin">281</field>
+            <field name="size_end">500</field>
+            <field name="code">F</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value69">
+
+            <field name="size_begin">501</field>
+            <field name="size_end">1200</field>
+            <field name="code">G</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value70">
+
+            <field name="size_begin">1201</field>
+            <field name="size_end">3200</field>
+            <field name="code">H</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value71">
+
+            <field name="size_begin">3201</field>
+            <field name="size_end">10000</field>
+            <field name="code">J</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value72">
+
+            <field name="size_begin">10001</field>
+            <field name="size_end">35000</field>
+            <field name="code">K</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value73">
+
+            <field name="size_begin">35001</field>
+            <field name="size_end">150000</field>
+            <field name="code">L</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value74">
+
+            <field name="size_begin">150001</field>
+            <field name="size_end">500000</field>
+            <field name="code">M</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value75">
+
+            <field name="size_begin">500000</field>
+            <field name="size_end">0</field>
+            <field name="code">N</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value5"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+        <record model="ps.quality.sampling.code" id="sampling_code_value76">
+
+            <field name="size_begin">2</field>
+            <field name="size_end">8</field>
+            <field name="code">A</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value77">
+
+            <field name="size_begin">9</field>
+            <field name="size_end">15</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value78">
+
+            <field name="size_begin">16</field>
+            <field name="size_end">25</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value79">
+
+            <field name="size_begin">26</field>
+            <field name="size_end">50</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value80">
+
+            <field name="size_begin">51</field>
+            <field name="size_end">90</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value81">
+
+            <field name="size_begin">91</field>
+            <field name="size_end">150</field>
+            <field name="code">F</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value82">
+
+            <field name="size_begin">151</field>
+            <field name="size_end">280</field>
+            <field name="code">G</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value83">
+
+            <field name="size_begin">281</field>
+            <field name="size_end">500</field>
+            <field name="code">H</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value84">
+
+            <field name="size_begin">501</field>
+            <field name="size_end">1200</field>
+            <field name="code">J</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value85">
+
+            <field name="size_begin">1201</field>
+            <field name="size_end">3200</field>
+            <field name="code">K</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value86">
+
+            <field name="size_begin">3201</field>
+            <field name="size_end">10000</field>
+            <field name="code">L</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value87">
+
+            <field name="size_begin">10001</field>
+            <field name="size_end">35000</field>
+            <field name="code">M</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value88">
+
+            <field name="size_begin">35001</field>
+            <field name="size_end">150000</field>
+            <field name="code">N</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value89">
+
+            <field name="size_begin">150001</field>
+            <field name="size_end">500000</field>
+            <field name="code">P</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value90">
+
+            <field name="size_begin">500000</field>
+            <field name="size_end">0</field>
+            <field name="code">Q</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value6"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+        <record model="ps.quality.sampling.code" id="sampling_code_value91">
+
+            <field name="size_begin">2</field>
+            <field name="size_end">8</field>
+            <field name="code">B</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value92">
+
+            <field name="size_begin">9</field>
+            <field name="size_end">15</field>
+            <field name="code">C</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value93">
+
+            <field name="size_begin">16</field>
+            <field name="size_end">25</field>
+            <field name="code">D</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value94">
+
+            <field name="size_begin">26</field>
+            <field name="size_end">50</field>
+            <field name="code">E</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value95">
+
+            <field name="size_begin">51</field>
+            <field name="size_end">90</field>
+            <field name="code">F</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value96">
+
+            <field name="size_begin">91</field>
+            <field name="size_end">150</field>
+            <field name="code">J</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value97">
+
+            <field name="size_begin">151</field>
+            <field name="size_end">280</field>
+            <field name="code">H</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value98">
+
+            <field name="size_begin">281</field>
+            <field name="size_end">500</field>
+            <field name="code">J</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value99">
+
+            <field name="size_begin">501</field>
+            <field name="size_end">1200</field>
+            <field name="code">K</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value100">
+
+            <field name="size_begin">1201</field>
+            <field name="size_end">3200</field>
+            <field name="code">L</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value101">
+
+            <field name="size_begin">3201</field>
+            <field name="size_end">10000</field>
+            <field name="code">M</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value102">
+
+            <field name="size_begin">10001</field>
+            <field name="size_end">35000</field>
+            <field name="code">N</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value103">
+
+            <field name="size_begin">35001</field>
+            <field name="size_end">150000</field>
+            <field name="code">P</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value104">
+
+            <field name="size_begin">150001</field>
+            <field name="size_end">500000</field>
+            <field name="code">Q</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+        <record model="ps.quality.sampling.code" id="sampling_code_value105">
+
+            <field name="size_begin">500000</field>
+            <field name="size_end">0</field>
+            <field name="code">R</field>
+            <field name="inspection_level" ref="ps_quality_management.level_value7"/>
+            <field name="sampling_id" ref="ps_quality_management.name_value1"/>
+
+        </record>
+
+    </data>
+</odoo>

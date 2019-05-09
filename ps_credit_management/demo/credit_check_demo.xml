@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="0">
+        <record id="test_customer_demo" model="res.partner">
+            <field name="name">客户1</field>
+        </record>
+
+        <record id="test_sale_order_demo" model="sale.order">
+            <field name="partner_id" ref="test_customer_demo"/>
+        </record>
+
+        <record id="test_product_demo" model="product.template">
+            <field name="name">Da Yun Motorbike</field>
+        </record>
+
+        <record id="test_sale_order_line_demo" model="sale.order.line">
+            <field name="order_id" ref="test_sale_order_demo"/>
+            <field name="product_id" ref="test_product_demo"/>
+            <field name="product_uom_qty">5</field>
+            <field name="price_unit">100</field>
+        </record>
+
+    </data>
+</odoo>

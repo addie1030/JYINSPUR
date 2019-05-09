@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+<template id="inventory_line_template">
+    <span class="placeholder"></span>
+</template>
+
+<template id="inventory_main_template">
+    <div class='o_account_reports_body'>
+        <div class="container o_account_reports_page o_account_reports_no_print">
+            <!--主标题-->
+            <h2><t t-esc="report.get('name')"></t></h2>
+            <div class="table-responsive" style="margin-top:20px;" >
+                <p></p>
+                <table width="100%" class="o_account_reports_table" border="1px" bordercolor="#ccc" style="margin-bottom:10px">
+                    <thead>
+                        <tr style="height:40px">
+                            <t t-foreach="lines.get('columns_header')" t-as="column_header">
+                                <th t-att-class="(column_header.get('class', ''))" t-att-style="column_header.get('style', '')">
+                                    <t t-esc="column_header.get('name')"/>
+                                </th>
+                            </t>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-if="lines.get('lines')">
+                                <t t-call="ps_account.inventory_line_template" />
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+            <div class="js_account_report_footnotes"/>
+        </div>
+    </div>
+</template>
+
+<template id="inventory_details_report_template" inherit_id="ps_stock_account.inventory_main_template" primary="True">
+    <xpath expr="//thead" position="replace">
+        <t t-foreach="lines.get('columns_header')" t-as="column_header">
+            <t t-foreach="column_header" t-as="item">
+                <tr style="height:40px">
+                    <t t-foreach="item" t-as="o">
+                        <th t-att-class="(o.get('class', ''))" t-att-style="o.get('style', '')" t-att-rowspan="o.get('rowspan', '')"  t-att-colspan="o.get('colspan', '')">
+                            <t t-esc="o.get('name')"/>
+                        </th>
+                    </t>
+                </tr>
+            </t>
+        </t>
+    </xpath>
+    <xpath expr="//tbody" position="replace">
+        <t t-if="lines.get('lines')">
+            <t t-call="ps_stock_account.account_china_center_inventory_details_line_report" />
+        </t>
+    </xpath>
+</template>
+
+<template id="account_china_center_inventory_details_line_report" inherit_id="ps_stock_account.inventory_line_template" primary="True">
+    <xpath expr="//span[hasclass('placeholder')]" position="before">
+        <t t-foreach="lines.get('lines')" t-as="line">
+            <tr style="height:36px;">
+                <td style="text-align:center;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['section']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['company']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['product']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['product_category']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['document_number']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['in_number']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['in_price']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['in_value']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['out_number']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['out_price']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['out_value']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['jc_number']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['jc_price']" />
+                </td>
+                <td style="text-align:left;vertical-align:middle;padding-left:5px">
+                    <span t-esc="line['columns']['jc_value']" />
+                </td>
+            </tr>
+        </t>
+    </xpath>
+</template>
+</data>
+</odoo>

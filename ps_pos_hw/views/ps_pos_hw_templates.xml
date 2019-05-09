@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_common" name="ps_pos_hw assets" inherit_id="web.assets_common">
+        <xpath expr="//script[contains(@src, '/web/static/lib/jquery/jquery.js')]" position="before">
+            <script>if (typeof module === 'object') {window.module = module; module = undefined;window.nodeRequire = require;delete window.require}</script>
+        </xpath>
+        <xpath expr="//script[contains(@src, '/web/static/lib/jquery.mjs.nestedSortable/jquery.mjs.nestedSortable.js')]" position="after">
+            <script>if (window.module) module = window.module;</script>
+        </xpath>
+    </template>
+    <template id="ps_pos_hw_assets" name="ps_pos_hw assets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/less" href="/web/static/lib/bootstrap/less/variables.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/lib/bootstrap/less/mixins/vendor-prefixes.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/lib/bootstrap/less/mixins/buttons.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/lib/bootstrap/less/mixins/clearfix.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/lib/bootstrap/less/mixins/size.less"/>
+
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/variables.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/utils.less"/>
+            <link rel="stylesheet" type="text/css" href="/web/static/lib/jquery.ui/jquery-ui.css"/>
+            <link rel="stylesheet" type="text/css" href="/web/static/lib/fontawesome/css/font-awesome.css"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/lib/bootstrap-datetimepicker/src/less/_bootstrap-datetimepicker.less"/>
+            <link rel="stylesheet" type="text/css" href="/web/static/lib/select2/select2.css"/>
+            <link rel="stylesheet" type="text/css" href="/web/static/lib/select2-bootstrap-css/select2-bootstrap.css"/>
+
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/fonts.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/navbar.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/mimetypes.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/modal.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/animation.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/rainbow.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/datepicker.less"/>
+
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/import_bootstrap.less"/>
+
+            <link rel="stylesheet" type="text/css" href="/base/static/src/css/modules.css"/>
+
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/bootstrap_overridden.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/webclient_extra.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/webclient_layout.less"/>
+
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/webclient.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/domain_selector.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/model_field_selector.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/progress_bar.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/dropdown.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/dropdown_extra.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/tooltip.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/debug_manager.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/control_panel.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/fields.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/fields_extra.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/views.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/views_extra.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/pivot_view.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/graph_view.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/form_view.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/form_view_extra.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/list_view.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/list_view_extra.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/kanban_dashboard.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/kanban_column_progressbar.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/kanban_view.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/kanban_view_mobile.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/web_calendar.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/search_view.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/search_view_extra.less"/>
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/data_export.less"/>
+
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/base_settings.less"/>
+
+            <link rel="stylesheet" type="text/less" href="/web/static/src/less/report_backend.less"/>
+
+            <link rel="stylesheet" type="text/less" href="/ps_pos_hw/static/src/css/ps_pos_hw.css"/>
+
+            <script type="text/javascript" src="/ps_pos_hw/static/src/js/rfid_device_screens.js"></script>
+            <script type="text/javascript" src="/ps_pos_hw/static/src/js/ps_pos_print_main.js"></script>
+        </xpath>
+    </template>
+</odoo>
