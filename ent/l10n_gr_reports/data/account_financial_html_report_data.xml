@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_financial_report_l10n_si" model="account.financial.html.report">
+        <field name="name">Πίνακες φόρου</field>
+        <field name='parent_id' ref='l10n_gr.account_reports_gr_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+    <record id="account_financial_report_si_1" model="account.financial.html.report.line">
+        <field name="name">311 Σύνολο Εκροών</field>
+        <field name="code">GRTAX_311</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_si"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_1_1" model="account.financial.html.report.line">
+        <field name="name">307 Σύνολο φορολ. Εκροών</field>
+        <field name="code">GRTAX_307</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_si_1"/>
+        <field name="formulas">balance=GRTAX_303.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_1_1_1" model="account.financial.html.report.line">
+        <field name="name">303 Πωλήσεις 19-23%</field>
+        <field name="code">GRTAX_303</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_si_1_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_gr.tag_ivat_03')]), ('credit', '>', 0)]" />
+        <field name="formulas">balance=sum.credit</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_2" model="account.financial.html.report.line">
+        <field name="name">358 Σύνολο φορολ. Εισροών</field>
+        <field name="code">GRTAX_358</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_si"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_2_1" model="account.financial.html.report.line">
+        <field name="name">353 Αγορές ΦΠΑ 19-23%</field>
+        <field name="code">GRTAX_353</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_si_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_gr.tag_ivat_05')]), ('debit', '>', 0)]" />
+        <field name="formulas">balance=sum.debit</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_2_2" model="account.financial.html.report.line">
+        <field name="name">357 Δαπάνες/Έξοδα φορολ.</field>
+        <field name="code">GRTAX_357</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_si_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_gr.tag_ivat_06')]), ('debit', '>', 0)]" />
+        <field name="formulas">balance=sum.debit</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_3" model="account.financial.html.report.line">
+        <field name="name">501-511 Υπόλοιπο ΦΠΑ</field>
+        <field name="code">GRTAX_501_511</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_si"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_3_1" model="account.financial.html.report.line">
+        <field name="name">337 ΦΠΑ Πωλήσεων</field>
+        <field name="code">GRTAX_337</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_si_3"/>
+        <field name="formulas">balance=GRTAX_333.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_3_1_1" model="account.financial.html.report.line">
+        <field name="name">333 ΦΠΑ 19-23%</field>
+        <field name="code">GRTAX_333</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_si_3_1"/>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance=sum.credit</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_gr.tag_ivat_09')]), ('credit', '>', 0)]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_3_2" model="account.financial.html.report.line">
+        <field name="name">420 ΦΠΑ Αγορών</field>
+        <field name="code">GRTAX_420</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_si_3"/>
+        <field name="formulas">balance=GRTAX_378.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_3_2_1" model="account.financial.html.report.line">
+        <field name="name">378 Σύνολο Φορ. Αγορών</field>
+        <field name="code">GRTAX_378</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_si_3_2"/>
+        <field name="formulas">balance=GRTAX_373.balance+GRTAX_377.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_3_2_1_1" model="account.financial.html.report.line">
+        <field name="name">373 ΦΠΑ Αγορών 19-23%</field>
+        <field name="code">GRTAX_373</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_si_3_2_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_gr.tag_ivat_12')]), ('debit', '>', 0)]" />
+        <field name="formulas">balance=sum.debit</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_si_3_2_1_2" model="account.financial.html.report.line">
+        <field name="name">377 ΦΠΑ Δαπανών</field>
+        <field name="code">GRTAX_377</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_si_3_2_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_gr.tag_ivat_13')]), ('debit', '>', 0)]" />
+        <field name="formulas">balance=sum.debit</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

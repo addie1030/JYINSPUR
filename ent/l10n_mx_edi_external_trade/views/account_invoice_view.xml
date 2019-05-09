@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_l10n_mx_edi_external_trade_invoice_form_inherit" model="ir.ui.view">
+        <field name="name">l10n_mx_edi_external_trade.invoice.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='other_info']" position="inside">
+                <group>
+                    <group string="External Trade">
+                        <field name="l10n_mx_edi_external_trade"/>
+                        <field name="l10n_mx_edi_cer_source" attrs="{'invisible': [('l10n_mx_edi_external_trade', '=', False)]}"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']" position="after">
+                <field name="l10n_mx_edi_qty_umt"/>
+                <field name="l10n_mx_edi_umt_aduana_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

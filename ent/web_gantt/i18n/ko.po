@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * web_gantt
+# 
+# Translators:
+# Link Up링크업 <linkup.way@gmail.com>, 2018
+# Seongseok Shin <shinss61@hotmail.com>, 2018
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 10:05+0000\n"
+"PO-Revision-Date: 2018-08-24 11:49+0000\n"
+"Last-Translator: Seongseok Shin <shinss61@hotmail.com>, 2018\n"
+"Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:24
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:31
+#, python-format
+msgid "Day"
+msgstr "일"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:22
+#, python-format
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/js/gantt_view.js:58
+#: code:addons/web_gantt/static/src/js/gantt_view.js:99
+#, python-format
+msgid "Gantt"
+msgstr "간트"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/js/gantt_renderer.js:74
+#, python-format
+msgid "Gantt View"
+msgstr "간트 차트 화면"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:22
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:26
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:33
+#, python-format
+msgid "Month"
+msgstr "월"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:17
+#, python-format
+msgid "Next"
+msgstr "다음"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:11
+#, python-format
+msgid "Previous"
+msgstr ""
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:14
+#, python-format
+msgid "Today"
+msgstr "오늘"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:25
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:32
+#, python-format
+msgid "Week"
+msgstr "주"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:27
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:34
+#, python-format
+msgid "Year"
+msgstr "년"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/js/gantt_controller.js:208
+#, python-format
+msgid "You are trying to write on a read-only field!"
+msgstr "Read-only 필드에 쓰려고 하고 있습니다."
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/js/gantt_controller.js:203
+#, python-format
+msgid "You have no date_stop field defined!"
+msgstr "정의된 date_stop 필드가 없습니다."

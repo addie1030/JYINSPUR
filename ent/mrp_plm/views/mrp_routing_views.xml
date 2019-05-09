@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_routing_view_form_inherit_plm" model="ir.ui.view">
+        <field name="name">mrp.routing.form.inherit.plm</field>
+        <field name="inherit_id" ref="mrp.mrp_routing_form_view"/>
+        <field name="model">mrp.routing</field>
+        <field name="arch" type="xml">
+            <field name="location_id" position="after">
+                <field name="version"/>
+            </field>
+            <button name="toggle_active" position="before">
+                <button class="oe_stat_button" name="%(mrp_eco_action_routing)d" type="action" icon="fa-wrench">
+                    <field string="ECOs" name="eco_count" widget="statinfo"/>
+                </button>
+            </button>
+        </field>
+    </record>
+</odoo>

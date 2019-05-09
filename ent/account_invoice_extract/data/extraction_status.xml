@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="invoice_supplier_form_inherit_ocr" model="ir.ui.view">
+        <field name="name">invoice.supplier.form.inherit.ocr</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="retry_ocr" class="oe_highlight" string="Resend File through OCR" type="object" 
+                attrs="{'invisible': [('extract_can_show_resend_button', '=', False)]}"/>
+                <button name="retry_ocr" class="oe_highlight" string="Send File through OCR" type="object" 
+                attrs="{'invisible': [('extract_can_show_send_button', '=', False)]}"/>
+            </xpath>
+            <xpath expr="//header" position='after'>
+                <field name="extract_state" attrs="{'invisible':True}"/>
+                <field name="extract_word_ids" attrs="{'invisible':True}"/>
+                <field name="extract_can_show_resend_button" attrs="{'invisible':True}"/>
+                <field name="extract_can_show_send_button" attrs="{'invisible':True}"/>
+                <div role="status" class="o_success_ocr" attrs="{'invisible':['|', ('state', 'not in', ['draft']), ('extract_state', 'not in', ['waiting_validation', 'validation_to_send'])]}" >
+                    <!-- Extraction processed with success. Don't forget to validate the different fields. -->
+                </div>
+                <div role="status" class="alert alert-danger mb8" attrs="{'invisible':['|', ('state', 'not in', ['draft']), ('extract_state', 'not in', ['not_enough_credit'])]}">
+                    You don't have enough credit to extract datas from your invoice. You can buy new credits here: 
+                    <!--TODO: change because popup blocked-->
+                    <button string="Buy credits" type="object" name="buy_credits" class="btn btn-sm btn-primary pull-right mb0"/>
+                </div>
+                <div role="status" class="alert alert-info mb8" attrs="{'invisible':['|', ('state', 'not in', ['draft']), ('extract_state', 'not in', ['waiting_extraction'])]}">
+                    <button string="Update status" type="object" name="check_status" class="btn btn-sm btn-primary pull-right mb0"/>
+                    The data extraction started. It takes usually between 5 and 60 seconds.
+                    <div class="clearfix"/>
+                </div>
+                <div role="status" class="alert alert-info mb8" attrs="{'invisible':['|', ('state', 'not in', ['draft']), ('extract_state', 'not in', ['extract_not_ready'])]}">
+                    <button string="Update status" type="object" name="check_status" class="btn btn-sm btn-primary pull-right mb0"/>
+                    The data extraction is not finished yet. The extraction usually takes between 5 and 60 seconds.
+                    <div class="clearfix"/>
+                </div>
+                <div role="status" class="alert alert-danger mb8" attrs="{'invisible':['|', ('state', 'not in', ['draft']), ('extract_state', 'not in', ['error_status'])]}">
+                    An error occured during the ocr process.
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='message_ids']" position='replace'>
+                <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'always'}"/>
+            </xpath>
+            <xpath expr="//form" position="attributes">
+                <attribute name="js_class">account_invoice_extract_preview</attribute>
+            </xpath>
+            <xpath expr="//div[hasclass('o_attachment_preview')]" position="replace">
+                <div class="o_attachment_preview" attrs="{'invisible': ['|',('type', 'not in', ['in_invoice', 'in_refund']),('state', '!=', 'draft')]}" options="{'preview_priority_type': 'pdf'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <template id="assets_backend" name="Account invoice extract assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/account_invoice_extract/static/src/js/form_renderer_validation.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

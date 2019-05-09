@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="financial_report_l10n_no" model="account.financial.html.report">
+        <field name="name">Momsoppgave</field>
+        <field name='parent_id' ref='l10n_no.account_reports_no_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+    <record id="financial_report_no_01" model="account.financial.html.report.line">
+        <field name="name">Sum avgiftsgrunnlag</field>
+        <field name="code">NOTAX_01</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = NOTAX_0100.balance + NOTAX_0101.balance + NOTAX_0102.balance + NOTAX_0103.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_no"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_03" model="account.financial.html.report.line">
+        <field name="name">Sum innkjøp</field>
+        <field name="code">NOTAX_03</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = NOTAX_0104.balance + NOTAX_0105.balance + NOTAX_0106.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_no"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_01_00" model="account.financial.html.report.line">
+        <field name="name">Ikke momspliktig omsetning</field>
+        <field name="code">NOTAX_0100</field>
+        <field name="sequence" eval="0"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_no.tag_no_03')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_01_01" model="account.financial.html.report.line">
+        <field name="name">Grunnlag for utgående avgift, høy sats</field>
+        <field name="code">NOTAX_0101</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_no.tag_no_04')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_01_02" model="account.financial.html.report.line">
+        <field name="name">Grunnlag for utgående avgift, mellom sats</field>
+        <field name="code">NOTAX_0102</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_no.tag_no_05')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_01_03" model="account.financial.html.report.line">
+        <field name="name">Grunnlag for utgående avgift, lav sats</field>
+        <field name="code">NOTAX_0103</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_no.tag_no_06')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_01_04" model="account.financial.html.report.line">
+        <field name="name">Grunnlag for inngående avgift, høy sats</field>
+        <field name="code">NOTAX_0104</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_no.tag_no_07')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_01_05" model="account.financial.html.report.line">
+        <field name="name">Grunnlag for inngående avgift, mellom sats</field>
+        <field name="code">NOTAX_0105</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_no.tag_no_08')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_01_06" model="account.financial.html.report.line">
+        <field name="name">Grunnlag for inngående avgift, lav sats</field>
+        <field name="code">NOTAX_0106</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_no.tag_no_09')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_02" model="account.financial.html.report.line">
+        <field name="name">Netto beregnet avgift</field>
+        <field name="code">NOTAX_02</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = - NOTAX_0201.balance - NOTAX_0202.balance - NOTAX_0203.balance + NOTAX_0204.balance + NOTAX_0205.balance + NOTAX_0206.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_no"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_02_01" model="account.financial.html.report.line">
+        <field name="name">Beregnet inngående avgift, høy sats</field>
+        <field name="code">NOTAX_0201</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_no.tag_no_11')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_02_02" model="account.financial.html.report.line">
+        <field name="name">Beregnet inngående avgift, lav sats</field>
+        <field name="code">NOTAX_0202</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_no.tag_no_12')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_02_03" model="account.financial.html.report.line">
+        <field name="name">Beregnet inngående avgift, mellom sats</field>
+        <field name="code">NOTAX_0203</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_no.tag_no_13')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_02_04" model="account.financial.html.report.line">
+        <field name="name">Beregnet utgående avgift, høy sats</field>
+        <field name="code">NOTAX_0204</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_no.tag_no_14')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_02_05" model="account.financial.html.report.line">
+        <field name="name">Beregnet utgående avgift, lav sats</field>
+        <field name="code">NOTAX_0205</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_no.tag_no_15')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_no_02_06" model="account.financial.html.report.line">
+        <field name="name">Beregnet utgående avgift, mellom sats</field>
+        <field name="code">NOTAX_0206</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_no.tag_no_16')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_no_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

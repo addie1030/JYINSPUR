@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <div t-name="web_studio.X2ManyEdit">
+        <button type="button" class="btn btn-secondary btn-primary o_web_studio_editX2Many" data-type="list">Edit List View</button>
+        <button type="button" class="btn btn-secondary btn-primary o_web_studio_editX2Many" data-type="form">Edit Form View</button>
+    </div>
+</templates>

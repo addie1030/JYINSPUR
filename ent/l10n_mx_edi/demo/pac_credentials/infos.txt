@@ -1,0 +1,13 @@
+password: 12345678a
+vat: TCM970625MB1
+
+---------------------------
+CREDENTIALS
+---------------------------
+
+Solucion Factible:
+username: testing@solucionfactible.com
+password: timbrado.SF.16672
+
+Finkok:
+--Given by Vauxoo

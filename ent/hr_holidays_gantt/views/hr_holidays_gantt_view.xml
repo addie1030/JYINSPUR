@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+
+        <!-- Gantt view -->
+        <record id="hr_leave_gantt_view" model="ir.ui.view">
+            <field name="name">hr.leave.gantt</field>
+            <field name="model">hr.leave</field>
+            <field name="arch" type="xml">
+                <gantt type="consolidate"
+                       date_start="date_from"
+                       date_stop="date_to"
+                       fold_last_level="true"
+                       round_dnd_dates="true"
+                       consolidation="number_of_days"
+                       consolidation_max = '{"employee_id": 100}'
+                       string="Day(s)"
+                />
+            </field>
+        </record>
+
+        <!-- Add gantt view mode to the hr.holidays dashboard -->
+        <record id="hr_holidays.action_hr_holidays_dashboard" model="ir.actions.act_window">
+            <field name="view_mode">gantt,calendar</field>
+            <field name="context">{'search_default_year': 1, 'search_default_group_employee': 1, 'short_name': 1}</field>
+        </record>
+
+    </data>
+</odoo>

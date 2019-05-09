@@ -1,0 +1,243 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_account
+# 
+# Translators:
+# Martin Trigaux, 2018
+# Alina Lisnenko <alinasemeniuk1@gmail.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 09:12+0000\n"
+"PO-Revision-Date: 2018-08-24 11:38+0000\n"
+"Last-Translator: Alina Lisnenko <alinasemeniuk1@gmail.com>, 2019\n"
+"Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid ", from"
+msgstr ", від"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Code</span>"
+msgstr "<span>Код</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Cost/hour</span>"
+msgstr "<span>Вартість/година</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Operation</span>"
+msgstr "<span>Операція</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Operator</span>"
+msgstr "<span>Оператор</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Quantity</span>"
+msgstr "<span>Кількість</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Raw Materials</span>"
+msgstr "<span>Сировина</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Scraps</span>"
+msgstr "<span>Брак</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Total Cost</span>"
+msgstr "<span>Загальна сума</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Unit Cost</span>"
+msgstr "<span>Ціна за одиницю</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<span>Working Time</span>"
+msgstr "<span>Робочий час</span>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<strong>Total Cost of Operations</strong>"
+msgstr "<strong>Загальна вартість операцій</strong>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<strong>Total Cost of Raw Materials</strong>"
+msgstr "<strong>Загальна вартість сировини</strong>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<strong>Total Cost of Scraps</strong>"
+msgstr "<strong>Загальна вартість записів</strong>"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "<strong>Unit Cost</strong>"
+msgstr "<strong>Вартість одиниці</strong>"
+
+#. module: mrp_account
+#: model:ir.model.fields,field_description:mrp_account.field_mrp_workcenter__costs_hour_account_id
+msgid "Analytic Account"
+msgstr "Аналітичний рахунок"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "By product(s)"
+msgstr "Товаром(и)"
+
+#. module: mrp_account
+#: model:ir.actions.report,name:mrp_account.action_cost_struct_mrp_production
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_production_form_inherit_view6
+#: model_terms:ir.ui.view,arch_db:mrp_account.product_product_inherit_form_view_cost_structure
+msgid "Cost Analysis"
+msgstr "Аналіз вартості"
+
+#. module: mrp_account
+#: model:ir.model.fields,field_description:mrp_account.field_mrp_workcenter_productivity__cost_already_recorded
+msgid "Cost Recorded"
+msgstr "Записи вартості"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "Cost Structure"
+msgstr "Структура вартості"
+
+#. module: mrp_account
+#: model:ir.actions.report,name:mrp_account.action_cost_struct_product_template
+msgid "Cost Structure Analysis"
+msgstr "Аналіз структури вартості"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "Cost for"
+msgstr "Вартість для"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "Cost of Operations"
+msgstr "Вартість операцій"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "Cost of Scraps"
+msgstr "Вартість записів"
+
+#. module: mrp_account
+#: model:account.analytic.account,name:mrp_account.account_assembly_cycle
+msgid "Costing Account For Cycle of Assembly."
+msgstr "Облік витрат для циклу збірки."
+
+#. module: mrp_account
+#: model:account.analytic.account,name:mrp_account.account_assembly_hours
+msgid "Costing Account For Hours of Assembly."
+msgstr "Облік витрат для годин збірки."
+
+#. module: mrp_account
+#: model:ir.model.fields,field_description:mrp_account.field_report_mrp_account_mrp_cost_structure__display_name
+#: model:ir.model.fields,field_description:mrp_account.field_report_mrp_account_product_template_cost_structure__display_name
+msgid "Display Name"
+msgstr "Назва для відображення"
+
+#. module: mrp_account
+#: model:ir.model.fields,help:mrp_account.field_mrp_workcenter__costs_hour_account_id
+msgid ""
+"Fill this only if you want automatic analytic accounting entries on "
+"production orders."
+msgstr ""
+"Заповніть це, лише якщо ви хочете автоматичні аналітичні записи "
+"бухгалтерського обліку для виробничих замовлень."
+
+#. module: mrp_account
+#: model:ir.model.fields,field_description:mrp_account.field_report_mrp_account_mrp_cost_structure__id
+#: model:ir.model.fields,field_description:mrp_account.field_report_mrp_account_product_template_cost_structure__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_account
+#: model:ir.model.fields,field_description:mrp_account.field_report_mrp_account_mrp_cost_structure____last_update
+#: model:ir.model.fields,field_description:mrp_account.field_report_mrp_account_product_template_cost_structure____last_update
+msgid "Last Modified on"
+msgstr "Остання модифікація"
+
+#. module: mrp_account
+#: model:ir.model,name:mrp_account.model_report_mrp_account_mrp_cost_structure
+msgid "MRP Cost Structure Report"
+msgstr "Звіт структури вартості MRP"
+
+#. module: mrp_account
+#: model:ir.model,name:mrp_account.model_product_product
+msgid "Product"
+msgstr "Товар"
+
+#. module: mrp_account
+#: model:ir.model,name:mrp_account.model_product_template
+msgid "Product Template"
+msgstr "Шаблон товару"
+
+#. module: mrp_account
+#: model:ir.model,name:mrp_account.model_report_mrp_account_product_template_cost_structure
+msgid "Product Template Cost Structure Report"
+msgstr "Звіт шаблону товару структури вартості"
+
+#. module: mrp_account
+#: model:ir.model,name:mrp_account.model_mrp_production
+msgid "Production Order"
+msgstr "Замовлення на виробництво"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "Some of the Manufacturing Order(s) selected are not done yet"
+msgstr "Деякі вибрані замовлення на виробництво ще не виконані"
+
+#. module: mrp_account
+#: model:ir.model.fields,help:mrp_account.field_mrp_workcenter_productivity__cost_already_recorded
+msgid ""
+"Technical field automatically checked when a ongoing production posts "
+"journal entries for its costs. This way, we can record one production's cost"
+" multiple times and only consider new entries in the work centers time "
+"lines."
+msgstr ""
+"Технічне поле автоматично перевіряється, коли поточне виробництво записує в "
+"журнал для його витрат. Таким чином ми можемо зареєструвати вартість одного "
+"виду продукції кілька разів і розглядати нові записи лише у тимчасових "
+"робочих центрах."
+
+#. module: mrp_account
+#: model:ir.model,name:mrp_account.model_mrp_workcenter
+msgid "Work Center"
+msgstr "Робочий центр"
+
+#. module: mrp_account
+#: model:ir.model,name:mrp_account.model_mrp_workcenter_productivity
+msgid "Workcenter Productivity Log"
+msgstr "Журнал продуктивності робочого центру"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "hours"
+msgstr "години"
+
+#. module: mrp_account
+#: model_terms:ir.ui.view,arch_db:mrp_account.mrp_cost_structure
+msgid "manufacturing order(s)."
+msgstr "виробничі замовлення."

@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * base_automation_hr_contract
+# 
+# Translators:
+# Pernille Kristensen <pernillekristensen1994@gmail.com>, 2018
+# lhmflexerp <lhm@flexerp.dk>, 2018
+# Sanne Kristensen <sanne@vkdata.dk>, 2018
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 10:05+0000\n"
+"PO-Revision-Date: 2018-08-24 11:37+0000\n"
+"Last-Translator: Sanne Kristensen <sanne@vkdata.dk>, 2018\n"
+"Language-Team: Danish (https://www.transifex.com/odoo/teams/41243/da/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__website_published
+msgid ""
+"A code server action can be executed from the website, using a dedicated "
+"controller. The address is <base>/website/action/<website_path>. Set this "
+"field as True to allow users to run this action. If it is set to False the "
+"action cannot be run through the website."
+msgstr ""
+"En kode server handling kan udføres fra hjemmesiden, ved hjælp af en "
+"dedikeret controller. Adressen er <base>/website/action/<website_path>. "
+"Angiv dette felt som True for at give brugerne mulighed for at køre denne "
+"handling. Hvis den er sat til False, kan handlingen ikke køres gennem "
+"hjemmesiden."
+
+#. module: base_automation_hr_contract
+#: model:ir.model,name:base_automation_hr_contract.model_base_automation
+msgid "Automated Action"
+msgstr "Automatiseret handling"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_published
+msgid "Available on the Website"
+msgstr "Synlig på websitet"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__website_url
+msgid "The full URL to access the server action through the website."
+msgstr ""
+"Den fulde URL for at få adgang til serverens handling via hjemmesiden."
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__trg_date_resource_field_id
+msgid "Use employee work schedule"
+msgstr "Brug den ansattes arbejdsplan"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__trg_date_resource_field_id
+msgid "Use the user's working schedule."
+msgstr "Brug brugerens arbejdsplan"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_path
+msgid "Website Path"
+msgstr "Hjemmeside sti"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_url
+msgid "Website Url"
+msgstr "Hjemmeside URL"

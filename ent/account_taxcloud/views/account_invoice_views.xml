@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.actions.server" id="action_account_invoice_update_taxes">
+        <field name="name">Update taxes with Taxcloud</field>
+        <field name="model_id" ref="account.model_account_invoice"/>
+        <field name="binding_model_id" ref="account.model_account_invoice" />
+        <field name="state">code</field>
+        <field name="code">
+for invoice in records:
+    invoice.validate_taxes_on_invoice()
+        </field>
+    </record>
+</odoo>

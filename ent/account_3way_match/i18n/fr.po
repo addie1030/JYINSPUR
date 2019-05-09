@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_3way_match
+# 
+# Translators:
+# Martin Trigaux, 2018
+# Christophe CHAUVET <christophe.chauvet@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 10:05+0000\n"
+"PO-Revision-Date: 2018-09-18 10:05+0000\n"
+"Last-Translator: Christophe CHAUVET <christophe.chauvet@gmail.com>, 2018\n"
+"Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: account_3way_match
+#: model:ir.model.fields,help:account_3way_match.field_account_invoice__release_to_pay_manual
+msgid ""
+"  * Yes: you should pay the bill, you have received the products\n"
+"  * No, you should not pay the bill, you have not received the products\n"
+"  * Exception, there is a difference between received and billed quantities."
+msgstr ""
+"  * Oui, vous devez payer la facture puisque vous avez reçu les produits.\n"
+"  * Non, vous ne devez pas payer la facture puisque vous n’avez pas reçu les produits.\n"
+"  * Incident : la quantité reçue et la quantité facturée sont différentes."
+
+#. module: account_3way_match
+#: model_terms:ir.ui.view,arch_db:account_3way_match.account_invoice_filter_inherit_account_3way_match
+msgid "Bills in Exception"
+msgstr "Factures avec incidents"
+
+#. module: account_3way_match
+#: model_terms:ir.ui.view,arch_db:account_3way_match.account_invoice_filter_inherit_account_3way_match
+msgid "Bills to Pay"
+msgstr "Factures à payer"
+
+#. module: account_3way_match
+#: selection:account.invoice,release_to_pay:0
+#: selection:account.invoice,release_to_pay_manual:0
+#: selection:account.invoice.line,can_be_paid:0
+msgid "Exception"
+msgstr "Exception"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice__force_release_to_pay
+msgid "Force status"
+msgstr "Forcer le statut"
+
+#. module: account_3way_match
+#: model:ir.model.fields,help:account_3way_match.field_account_invoice__force_release_to_pay
+msgid ""
+"Indicates whether the 'Can be paid' status is defined automatically or "
+"manually."
+msgstr ""
+"Indique si le statut « Can be paid » (peut être payé) est défini "
+"automatiquement ou manuellement."
+
+#. module: account_3way_match
+#: model:ir.model,name:account_3way_match.model_account_invoice
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: account_3way_match
+#: model:ir.model,name:account_3way_match.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Ligne de facture"
+
+#. module: account_3way_match
+#: model:ir.model,name:account_3way_match.model_account_journal
+msgid "Journal"
+msgstr "Journal"
+
+#. module: account_3way_match
+#: selection:account.invoice,release_to_pay:0
+#: selection:account.invoice,release_to_pay_manual:0
+#: selection:account.invoice.line,can_be_paid:0
+msgid "No"
+msgstr "Non"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice_line__can_be_paid
+msgid "Release to Pay"
+msgstr "Livraison à payer"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice__release_to_pay
+msgid "Should be paid"
+msgstr "Doit être payé"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice__release_to_pay_manual
+msgid "Should be paid Manual"
+msgstr "Doit être payer manuellement"
+
+#. module: account_3way_match
+#: model:ir.model.fields,help:account_3way_match.field_account_invoice__release_to_pay
+msgid ""
+"This field can take the following values :\n"
+"  * Yes: you should pay the bill, you have received the products\n"
+"  * No, you should not pay the bill, you have not received the products\n"
+"  * Exception, there is a difference between received and billed quantities\n"
+"This status is defined automatically, but you can force it by ticking the 'Force Status' checkbox."
+msgstr ""
+"Ce champ peut prendre les valeurs suivantes :\n"
+"* Oui, vous devez payer la facture puisque vous avez reçu les produits.\n"
+" * Non, vous ne devez pas payer la facture puisque vous n’avez pas reçu les produits.\n"
+" * Incident : la quantité reçue et la quantité facturée sont différentes.\n"
+"Ce statut est défini automatiquement, mais vous pouvez le forcer en cochant la case « Forcer le statut »."
+
+#. module: account_3way_match
+#: selection:account.invoice,release_to_pay:0
+#: selection:account.invoice,release_to_pay_manual:0
+#: selection:account.invoice.line,can_be_paid:0
+msgid "Yes"
+msgstr "Oui"

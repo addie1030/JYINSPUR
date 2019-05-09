@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_mx_edi_payment_bank
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-01 22:37+0000\n"
+"PO-Revision-Date: 2019-02-01 22:37+0000\n"
+"Last-Translator: Edilianny Sánchez <esanchez@vauxoo.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_edi_payment_bank
+#: model:ir.model,name:l10n_mx_edi_payment_bank.model_res_bank
+msgid "Bank"
+msgstr "Banco"
+
+#. module: l10n_mx_edi_payment_bank
+#: model:ir.model,name:l10n_mx_edi_payment_bank.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Línea del extracto bancario"
+
+#. module: l10n_mx_edi_payment_bank
+#: model:ir.model.fields,help:l10n_mx_edi_payment_bank.field_account_payment__l10n_mx_edi_partner_bank_id
+#: model:ir.model.fields,help:l10n_mx_edi_payment_bank.field_account_register_payments__l10n_mx_edi_partner_bank_id
+msgid "If the payment was made with a financial institution define the bank account used in this payment."
+msgstr "Si el pago se realizó con una institución financiera, define la cuenta bancaria utilizada en este pago."
+
+#. module: l10n_mx_edi_payment_bank
+#: model:ir.model.fields,help:l10n_mx_edi_payment_bank.field_res_bank__l10n_mx_edi_vat
+msgid "Indicate the VAT of this institution, the value could be used in the payment complement in Mexico documents"
+msgstr "Indica el RFC de esta institución, el valor podría ser utilizado en el complemento de pago en los documentos de México."
+
+#. module: l10n_mx_edi_payment_bank
+#: model:ir.model.fields,field_description:l10n_mx_edi_payment_bank.field_account_payment__l10n_mx_edi_partner_bank_id
+#: model:ir.model.fields,field_description:l10n_mx_edi_payment_bank.field_account_register_payments__l10n_mx_edi_partner_bank_id
+msgid "Partner Bank"
+msgstr "Cuenta de banco"
+
+#. module: l10n_mx_edi_payment_bank
+#: model:ir.model,name:l10n_mx_edi_payment_bank.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: l10n_mx_edi_payment_bank
+#: model:ir.model,name:l10n_mx_edi_payment_bank.model_account_register_payments
+msgid "Register Payments"
+msgstr "Registrar pagos"
+
+#. module: l10n_mx_edi_payment_bank
+#: model:ir.model.fields,field_description:l10n_mx_edi_payment_bank.field_res_bank__l10n_mx_edi_vat
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_payment_bank.view_res_bank_inherit_l10n_mx_edi_bank
+msgid "VAT"
+msgstr "RFC"

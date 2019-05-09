@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_mx" inherit_id="l10n_mx_edi.report_invoice_document_mx">
+        <xpath expr="//table[@name='invoice_line_table']/tbody//tr[1]//td[1]" position="inside">
+            <t t-if="line.l10n_mx_edi_customs_number">
+                <br/>Customs:
+                <ul>
+                    <t t-foreach="line.l10n_mx_edi_customs_number.split(',') if line.l10n_mx_edi_customs_number else []" t-as="pedimento">
+                        <li><span t-esc="pedimento"/></li>
+                    </t>
+                </ul>
+            </t>
+        </xpath>
+    </template>
+</odoo>

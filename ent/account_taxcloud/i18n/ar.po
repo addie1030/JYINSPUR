@@ -1,0 +1,280 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_taxcloud
+# 
+# Translators:
+# amrnegm <amrnegm.01@gmail.com>, 2018
+# Mohammed Albasha <m.albasha.ma@gmail.com>, 2018
+# Osama Ahmaro <osamaahmaro@gmail.com>, 2018
+# Ali Alrehawi <alrehawi@hotmail.com>, 2018
+# Mustafa Rawi <mustafa@cubexco.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 09:12+0000\n"
+"PO-Revision-Date: 2018-08-24 11:37+0000\n"
+"Last-Translator: Mustafa Rawi <mustafa@cubexco.com>, 2019\n"
+"Language-Team: Arabic (https://www.transifex.com/odoo/teams/41243/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#. module: account_taxcloud
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.res_config_settings_view_form
+msgid "<i class=\"fa fa-fw fa-arrow-right\"/>How to Get Credentials"
+msgstr "<i class=\"fa fa-fw fa-arrow-right\"/> كيفية الحصول على وثائق الاعتماد"
+
+#. module: account_taxcloud
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.res_config_settings_view_form
+msgid ""
+"<i title=\"Import/update TICs from TaxCloud\" role=\"img\" aria-"
+"label=\"Import/update TICs from TaxCloud\" class=\"fa fa-refresh fa-fw\"/>"
+msgstr ""
+"<i title=\"Import/update TICs from TaxCloud\" role=\"img\" aria-"
+"label=\"Import/update TICs from TaxCloud\" class=\"fa fa-refresh fa-fw\"/>"
+
+#. module: account_taxcloud
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.res_config_settings_view_form
+msgid "API ID"
+msgstr "معرف API"
+
+#. module: account_taxcloud
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.res_config_settings_view_form
+msgid "API KEY"
+msgstr "مفتاح API"
+
+#. module: account_taxcloud
+#: model:ir.model,name:account_taxcloud.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: account_taxcloud
+#: model:ir.model,name:account_taxcloud.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_tic_category__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_tic_category__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: account_taxcloud
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.res_config_settings_view_form
+msgid "Default Category"
+msgstr "الفئة الافتراضية"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_res_company__tic_category_id
+#: model:ir.model.fields,field_description:account_taxcloud.field_res_config_settings__tic_category_id
+msgid "Default TIC Code"
+msgstr "كود TIC الافتراضي"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,help:account_taxcloud.field_res_company__tic_category_id
+#: model:ir.model.fields,help:account_taxcloud.field_res_config_settings__tic_category_id
+msgid ""
+"Default TICs(Taxability information codes) code to get sales tax from "
+"TaxCloud by product category."
+msgstr ""
+"يُستخدم رقم TIC (كود معلومات الملائمة الضريبية) الافتراضي لحساب ضريبة مبيعات"
+" المنتج على TaxCloud من خلال فئته."
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_tic_category__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,help:account_taxcloud.field_product_product__tic_category_id
+#: model:ir.model.fields,help:account_taxcloud.field_product_template__tic_category_id
+msgid ""
+"Each product falls into a category which has specific taxes predermined by "
+"the government.The system will use the Tax Cloud category set on the "
+"internal category of the product. If thereisn't any, the one on the product "
+"itself will be used. Only used in United States."
+msgstr ""
+"يندرج كل منتج تحت فئة معينة ولكل فئة ضرائب محددة مسبقًا من الحكومة. سيستخدم "
+"النظام فئة TaxCloud المذكورة في فئة المنتج الداخلية. إن لم يجد واحدة، "
+"سيستخدم الفئة المذكورة على المنتج نفسه. يُطبق هذا داخل الولايات المتحدة "
+"الأمريكية فقط."
+
+#. module: account_taxcloud
+#: model:ir.model,name:account_taxcloud.model_account_fiscal_position
+msgid "Fiscal Position"
+msgstr "الموقف الضريبي"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_tic_category__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: account_taxcloud
+#: model:ir.model,name:account_taxcloud.model_account_invoice
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_tic_category____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_tic_category__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_tic_category__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: account_taxcloud
+#: model:ir.model,name:account_taxcloud.model_product_category
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#. module: account_taxcloud
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.account_taxcloud_tic_category_search
+msgid "Product TIC Categories"
+msgstr "فئات TIC للمنتج"
+
+#. module: account_taxcloud
+#: model:ir.model,name:account_taxcloud.model_product_tic_category
+msgid "Product TIC Category"
+msgstr "فئة TIC للمنتج"
+
+#. module: account_taxcloud
+#: model:ir.model,name:account_taxcloud.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: account_taxcloud
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.account_taxcloud_tic_category_tree
+msgid "TIC Category"
+msgstr "فئة TIC"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_tic_category__code
+msgid "TIC Category Code"
+msgstr "كود فئة TIC"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_category__tic_category_id
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.account_taxcloud_tic_category_search
+msgid "TIC Code"
+msgstr "كود TIC"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_tic_category__description
+msgid "TIC Description"
+msgstr "وصف TIC"
+
+#. module: account_taxcloud
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.product_category_view_form_inherit_account_taxcloud
+msgid "TaxCloud"
+msgstr "TaxCloud"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_res_config_settings__taxcloud_api_id
+msgid "TaxCloud API ID"
+msgstr "معرف TaxCloud API"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_res_config_settings__taxcloud_api_key
+msgid "TaxCloud API KEY"
+msgstr "مفتاح TaxCloud API"
+
+#. module: account_taxcloud
+#: model:ir.actions.act_window,name:account_taxcloud.account_taxcloud_tic_category_action
+#: model:ir.ui.menu,name:account_taxcloud.menu_taxcloud_tic_category_action
+msgid "TaxCloud Categories"
+msgstr "فئات TaxCloud"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_product__tic_category_id
+#: model:ir.model.fields,field_description:account_taxcloud.field_product_template__tic_category_id
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.product_category_view_form_inherit_account_taxcloud
+#: model_terms:ir.ui.view,arch_db:account_taxcloud.product_template_taxcloud_inherit_form
+msgid "TaxCloud Category"
+msgstr "فئة TaxCloud"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,help:account_taxcloud.field_product_category__tic_category_id
+msgid ""
+"TaxCloud uses Taxability Information Codes (TIC) to make sure each item in "
+"your catalog is taxed at the right rate (or, for tax-exempt items, not taxed"
+" at all), so it's important to make sure that each item is assigned a TIC. "
+"If you can't find the right tax category for an item in your catalog, you "
+"can assign it to the 'General Goods and Services' TIC, 00000. TaxCloud "
+"automatically assigns products to this TIC as a default, so unless you've "
+"changed an item's TIC in the past, it should already be set to 00000."
+msgstr ""
+"تستخدم TaxCloud أكواد معلومات الملائمة الضريبية (TIC) للحرص على أن تُطبق "
+"الضرائب على كل عنصر في قائمتك بالنسبة الصحيحة (أو لا تُطبق في حالة العناصر "
+"المعفاة من الضرائب)، لذا من المهم أن تتأكد من حصول كل عنصر على رقم TIC خاص "
+"به. إن لم تستطع إيجاد الفئة الضريبية المناسبة لعنصر ما، يمكنك أن تمنحه رقم "
+"TIC الخاص بالمنتجات والخدمات العامة وهو 00000. تلقائيًا، تمنح TaxCloud كافة "
+"المنتجات هذا الكود، لذا ما لم تغير بنفسك رقم TIC لإحدى العناصر، ينبغي أن "
+"يكون رقمه 00000."
+
+#. module: account_taxcloud
+#: model:ir.model,name:account_taxcloud.model_account_fiscal_position_template
+msgid "Template for Fiscal Position"
+msgstr "قالب للموقف الضريبي"
+
+#. module: account_taxcloud
+#: code:addons/account_taxcloud/models/account_invoice.py:43
+#: code:addons/account_taxcloud/models/res_config_settings.py:23
+#, python-format
+msgid "The configuration of TaxCloud is in the Accounting app, Settings menu."
+msgstr "إعدادات TaxCloud في تطبيق المحاسبة، قائمة الضبط."
+
+#. module: account_taxcloud
+#: code:addons/account_taxcloud/models/account_invoice.py:115
+#, python-format
+msgid ""
+"The source document on the refund is not valid and thus the refunded cart "
+"won't be logged on your taxcloud account"
+msgstr ""
+"المستند المصدر للمرتجع غير صالح، لذا لن يتم تسجيل المرتجع في حسابك على "
+"TaxCloud"
+
+#. module: account_taxcloud
+#: code:addons/account_taxcloud/models/account_invoice.py:85
+#, python-format
+msgid ""
+"The tax rates have been updated, you may want to check it before validation"
+msgstr "تم تحديث معدلات الضرائب، ربما تريد مراجعتها قبل اعتماد عملية البيع"
+
+#. module: account_taxcloud
+#: code:addons/account_taxcloud/models/account_invoice.py:43
+#: code:addons/account_taxcloud/models/res_config_settings.py:23
+#, python-format
+msgid "Unable to retrieve taxes from TaxCloud: "
+msgstr "لم نستطع استرداد بيانات الضرائب من Taxcloud: "
+
+#. module: account_taxcloud
+#: model:ir.actions.server,name:account_taxcloud.action_account_invoice_update_taxes
+msgid "Update taxes with Taxcloud"
+msgstr "تحديث الضرائب بـ Taxcloud"
+
+#. module: account_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_account_fiscal_position__is_taxcloud
+#: model:ir.model.fields,field_description:account_taxcloud.field_account_fiscal_position_template__is_taxcloud
+msgid "Use TaxCloud API"
+msgstr "استخدام TaxCloud API"
+
+#. module: account_taxcloud
+#: code:addons/account_taxcloud/models/product.py:28
+#, python-format
+msgid "[%s] %s"
+msgstr "[%s] %s"

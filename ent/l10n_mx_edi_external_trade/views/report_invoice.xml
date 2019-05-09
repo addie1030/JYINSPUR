@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_documement_external_trade" inherit_id="account.report_invoice_document">
+        <xpath expr="//table[@name='invoice_line_table']" position="before">
+            <t t-set="xml" t-value="o.l10n_mx_edi_get_xml_etree()"/>
+            <t t-set="external" t-value="o.l10n_mx_edi_get_et_etree(xml)"/>
+        </xpath>
+        <xpath expr="//table[@name='invoice_line_table']/thead/tr/th[last()]" position="after">
+            <th t-if="o.l10n_mx_edi_cfdi_uuid and external != None">Tariff Fraction</th>
+            <th t-if="o.l10n_mx_edi_cfdi_uuid and external != None">Customs Qty</th>
+            <th t-if="o.l10n_mx_edi_cfdi_uuid and external != None">Customs Unit</th>
+        </xpath>
+        <xpath expr="//table[@name='invoice_line_table']/tbody//tr[1]//td[last()]" position="after">
+            <td t-if="o.l10n_mx_edi_cfdi_uuid and external != None" class="text-right"><span t-field="line.product_id.l10n_mx_edi_tariff_fraction_id.code"/></td>
+            <td t-if="o.l10n_mx_edi_cfdi_uuid and external != None" class="text-right"><span t-field="line.l10n_mx_edi_qty_umt"/></td>
+            <td t-if="o.l10n_mx_edi_cfdi_uuid and external != None"><span t-field="line.product_id.l10n_mx_edi_umt_aduana_id.name"/></td>
+        </xpath>
+        <xpath expr="//p[@t-if='o.comment']" position="before">
+            <div class="row" id="external_trade">
+                <t t-if="o.l10n_mx_edi_cfdi_uuid and external != None">
+                    <div align="center">
+                        <span><strong>External Trade</strong></span>
+                    </div>
+                    <table class="table table-sm text-center mt4 mb4" align="center" style="font-size:10px">
+                        <thead>
+                            <tr style="background-color:grey; color:white;">
+                                <th class="text-center">Operation Type</th>
+                                <th class="text-center">Certificate Key</th>
+                                <th class="text-center">Certificate Source</th>
+                                <th class="text-center" t-if="external.get('CertificadoOrigen', '') == 1">Number Certificate Source</th>
+                                <th class="text-center">Subdivision</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span t-esc="external.get('TipoOperacion', '').replace('2', 'Exportación')"/></td>
+                                <td><span t-esc="external.get('ClaveDePedimento', '')"/></td>
+                                <td><span t-esc="external.get('CertificadoOrigen', '').replace('0', 'No').replace('1', 'Si')"/></td>
+                                <td t-if="external.get('CertificadoOrigen', '') == 1"><span t-esc="external.get('NumCertificadoOrigen', '')"/></td>
+                                <td><span t-esc="external.get('Subdivision', '')"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm text-center mt4 mb4" align="center" style="font-size:10px">
+                        <thead>
+                            <tr style="background-color:grey; color:white;">
+                                <th class="text-center" t-if="external.get('NumeroExportadorConfiable', '')">Number of Reliable Exporter</th>
+                                <th class="text-center">Incoterm</th>
+                                <th class="text-center">Rate USD</th>
+                                <th class="text-center">Total USD</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td t-if="external.get('NumeroExportadorConfiable', '')"><span t-esc="external.get('NumeroExportadorConfiable', '')"/></td>
+                                <td><span t-esc="external.get('Incoterm', '')"/></td>
+                                <td><span t-esc="external.get('TipoCambioUSD', '')"/></td>
+                                <td><span t-esc="external.get('TotalUSD', '')"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </t>
+            </div>
+        </xpath>
+    </template>
+</odoo>

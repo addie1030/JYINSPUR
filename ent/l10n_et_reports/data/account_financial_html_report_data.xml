@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="account_financial_report_l10n_et" model="account.financial.html.report">
+        <field name="name">Ethiopia</field>
+        <field name="date_range" eval="False" />
+        <field name='parent_id' ref='l10n_et.account_reports_et_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+
+    <record id="account_financial_report_line_01_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Purchases - VAT</field>
+        <field name="code">ETTAX100</field>
+        <field name="sequence" eval="1"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_et"/>
+        <field name="formulas">balance = ETTAX110.balance + ETTAX120.balance + ETTAX130.balance + ETTAX140.balance</field>
+        <field name="level" eval="0"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_01_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Purchase VAT Out of Scope</field>
+        <field name="code">ETTAX110</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_01_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_02')])]" />
+         <field name="formulas">balance = sum.balance</field>
+         <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_02_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Purchase VAT Exempt</field>
+        <field name="code">ETTAX120</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_01_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_03')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_03_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Purchase VAT Rated 0%</field>
+        <field name="code">ETTAX130</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_01_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_04')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_04_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Purchase VAT Rated 15%</field>
+        <field name="code">ETTAX140</field>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_line_01_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_05')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Purchases - Witholding</field>
+        <field name="code">ETTAX200</field>
+        <field name="sequence" eval="2"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_et"/>
+        <field name="formulas">balance = ETTAX220.balance + ETTAX225.balance </field>
+        <field name="level" eval="0"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+
+    <record id="account_financial_report_line_02_01_et" model="account.financial.html.report.line">
+        <field name="name">Taxable 2% Withholding on Purchases</field>
+        <field name="code">ETTAX220</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_02_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_07')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_02_et" model="account.financial.html.report.line">
+        <field name="name">Taxable 35% Withholding on Purchases</field>
+        <field name="code">ETTAX225</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_02_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_08')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_03_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Sales - VAT</field>
+        <field name="code">ETTAX250</field>
+        <field name="sequence" eval="3"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_et"/>
+        <field name="formulas">balance = ETTAX255.balance + ETTAX260.balance + ETTAX265.balance + ETTAX270.balance</field>
+        <field name="level" eval="0"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_03_01_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Sales VAT Out of Scope (Sales)</field>
+        <field name="code">ETTAX255</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_03_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_10')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_03_02_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Sales VAT Exempt</field>
+        <field name="code">ETTAX260</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_03_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_11')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_03_03_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Sales VAT Rated 0%</field>
+        <field name="code">ETTAX265</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_03_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_12')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_03_04_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Sales VAT Rated 15%</field>
+        <field name="code">ETTAX270</field>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_line_03_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_13')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+
+    <record id="account_financial_report_line_04_et" model="account.financial.html.report.line">
+        <field name="name">Taxable Sales - Withholding</field>
+        <field name="code">ETTAX280</field>
+        <field name="sequence" eval="4"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_et"/>
+        <field name="formulas">balance = ETTAX285.balance + ETTAX290.balance + ETTAX295.balance</field>
+        <field name="level" eval="0"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_04_01_et" model="account.financial.html.report.line">
+        <field name="name">Taxable 2% Withholding on Sales</field>
+        <field name="code">ETTAX285</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_04_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_15')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_04_02_et" model="account.financial.html.report.line">
+        <field name="name">Taxable 35% Withholding on Sales</field>
+        <field name="code">ETTAX290</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_04_et"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_16')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="level" eval="1"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_04_03_et" model="account.financial.html.report.line">
+        <field name="name">Taxable VAT Withholding on Sales</field>
+        <field name="code">ETTAX295</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_04_et"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_et.tag_et_17')])]" />
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_05_et" model="account.financial.html.report.line">
+        <field name="name">Net VAT to be Paid/Reclaimed</field>
+        <field name="code">ETTAX300</field>
+        <field name="sequence" eval="5"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_et"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = ETTAX310.balance + ETTAX320.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_05_01_et" model="account.financial.html.report.line">
+        <field name="name">Purchase VAT</field>
+        <field name="code">ETTAX310</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_05_et"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = ETTAX311.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_05_01_01_et" model="account.financial.html.report.line">
+        <field name="name">Purchase VAT Rated 15%</field>
+        <field name="code">ETTAX311</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_05_01_et"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_et.tag_et_20')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+
+    <record id="account_financial_report_line_05_02_et" model="account.financial.html.report.line">
+        <field name="name">Sales VAT</field>
+        <field name="code">ETTAX320</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_05_et"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = ETTAX321.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_05_02_01_et" model="account.financial.html.report.line">
+        <field name="name">Sales VAT Rated 15%</field>
+        <field name="code">ETTAX321</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_05_02_et"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_et.tag_et_22')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_06_et" model="account.financial.html.report.line">
+        <field name="name">Withholding on Purchases</field>
+        <field name="code">ETTAX400</field>
+        <field name="sequence" eval="6"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_et"/>
+        <field name="formulas">balance = ETTAX410.balance + ETTAX420.balance</field>
+        <field name="level" eval="0"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_06_01_et" model="account.financial.html.report.line">
+        <field name="name">2% Withholding on Purchases</field>
+        <field name="code">ETTAX410</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_06_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_et.tag_et_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_06_02_et" model="account.financial.html.report.line">
+        <field name="name">35% Withholding on Purchases</field>
+        <field name="code">ETTAX420</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_06_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_et.tag_et_25')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_07_et" model="account.financial.html.report.line">
+        <field name="name">Withholding on Sales</field>
+        <field name="code">ETTAX500</field>
+        <field name="sequence" eval="7"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_et"/>
+        <field name="formulas">balance = ETTAX510.balance + ETTAX520.balance + ETTAX530.balance</field>
+        <field name="level" eval="0"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_07_01_et" model="account.financial.html.report.line">
+        <field name="name">2% Withheld on Sales</field>
+        <field name="code">ETTAX510</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_07_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_et.tag_et_27')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_07_02_et" model="account.financial.html.report.line">
+        <field name="name">35% Withheld on Sales</field>
+        <field name="code">ETTAX520</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_07_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_et.tag_et_28')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_07_03_et" model="account.financial.html.report.line">
+        <field name="name">VAT Withheld on Sales</field>
+        <field name="code">ETTAX530</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_07_et"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_et.tag_et_29')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

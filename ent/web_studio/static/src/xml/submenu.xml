@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+
+<ul t-name="web_studio.HomeStudioMenu" class="o_web_studio_home_studio_menu">
+    <li>
+        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">
+            Customizations
+        </a>
+        <div class="dropdown-menu" role="menu">
+            <a href="#" class="dropdown-item o_web_studio_change_background" role="menuitem">Change Background</a>
+            <span class="d-none">
+                <t t-call="HiddenInputFile">
+                    <t t-set="fileupload_id" t-value="widget.fileupload_id"/>
+                    <t t-set="fileupload_action" t-translation="off">/web/binary/upload_attachment</t>
+                    <input type="hidden" name="model" value="res.company"/>
+                    <input type="hidden" name="id" t-att-value="widget.company_id"/>
+                </t>
+            </span>
+            <a href="#" class="o_web_studio_reset_default_background dropdown-item" role="menuitem" t-if="widget.menu_data.background_image">Reset Default Background</a>
+            <a href="#" class="o_web_studio_import dropdown-item" role="menuitem">Import</a>
+            <a href="#" class="o_web_studio_export dropdown-item" role="menuitem">Export</a>
+        </div>
+    </li>
+</ul>
+
+<div t-name="web_studio.Menu" class="o_web_studio_menu">
+    <div class="o_web_studio_breadcrumb"/>
+
+    <ul class="o_menu_sections">
+      <li><a href="#" role="button" data-name="views">Views</a></li>
+      <li><a href="#" data-name="reports">Reports</a></li>
+      <li t-if="widget.multi_lang">
+        <a href="#" data-name="translations">Translations</a>
+      </li>
+      <li><a href="#" data-name="automations">Automations</a></li>
+      <li><a href="#" data-name="acl">Access Controls</a></li>
+      <li><a href="#" data-name="filters">Filter Rules</a></li>
+      <li class="o_web_studio_submenu_icons">
+        <div class="o_web_studio_views_icons">
+          <t t-if="_.contains(widget.active_view_types, 'form')">
+            <a href="#" data-name="form" title="Form View" aria-label="Form View"><i class="fa fa-address-card"/></a>
+          </t>
+          <t t-if="_.contains(widget.active_view_types, 'list')">
+            <a href="#" data-name="list" title="List View" aria-label="List View"><i class="fa fa-list-ul"/></a>
+          </t>
+          <t t-if="_.contains(widget.active_view_types, 'kanban')">
+            <a href="#" data-name="kanban" title="Kanban View" aria-label="Kanban View"><i class="fa fa-th-large"/></a>
+          </t>
+          <t t-if="_.contains(widget.active_view_types, 'calendar')">
+            <a href="#" data-name="calendar" title="Calendar View" aria-label="Calendar View"><i class="fa fa-calendar-o"/></a>
+          </t>
+          <t t-if="_.contains(widget.active_view_types, 'graph')">
+            <a href="#" data-name="graph" title="Graph View" aria-label="Graph View"><i class="fa fa-bar-chart"/></a>
+          </t>
+          <t t-if="_.contains(widget.active_view_types, 'pivot')">
+            <a href="#" data-name="pivot" title="Pivot View" aria-label="Pivot View"><i class="fa fa-table"/></a>
+          </t>
+          <t t-if="_.contains(widget.active_view_types, 'grid')">
+            <a href="#" data-name="grid" title="Grid View" aria-label="Grid View"><i class="fa fa-th"/></a>
+          </t>
+          <t t-if="_.contains(widget.active_view_types, 'gantt')">
+            <a href="#" data-name="gantt" title="Gantt View" aria-label="Gantt View"><i class="fa fa-tasks"/></a>
+          </t>
+          <t t-if="_.contains(widget.active_view_types, 'dashboard')">
+            <a href="#" data-name="dashboard"><i class="fa fa-tachometer"/></a>
+          </t>
+          <t t-if="_.contains(widget.active_view_types, 'cohort')">
+            <a href="#" data-name="cohort" title="Cohort View" aria-label="Cohort View"><i class="fa fa-signal"/></a>
+          </t>
+        </div>
+      </li>
+    </ul>
+
+    <div class="o_web_studio_redo"><button class="btn"><i class="fa fa-repeat"/><span>Redo</span></button></div>
+    <div class="o_web_studio_undo"><button class="btn"><i class="fa fa-undo"/><span>Undo</span></button></div>
+    <div class="o_web_studio_snackbar"/>
+
+</div>
+
+</templates>

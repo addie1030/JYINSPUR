@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id = "sdd_mandate_form_report_main"
+            model = "sdd.mandate"
+            string = "Mandate form"
+            report_type = "qweb-pdf"
+            name = "account_sepa_direct_debit.sdd_mandate_form_report"
+            file = "account_sepa_direct_debit.sdd_mandate_form_report"
+            attachment_use = "False"
+            menu = "True"/>
+
+        <template id="account_sepa_direct_debit.sdd_mandate_form_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="mandate">
+                    <t t-call="account_sepa_direct_debit.sdd_mandate_form_document" t-lang="mandate.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <template id="account_sepa_direct_debit.sdd_mandate_form_document">
+            <t t-call="web.external_layout">
+
+
+                <h1>SEPA Direct Debit Mandate</h1>
+
+                <p>
+                    This form grants our company the authorization to
+                    use direct debit to pay the invoices we send to you.
+                </p>
+
+                <p>
+                    <strong>Mandate identifier:</strong> <t t-esc="mandate.name"/>
+                </p>
+
+                <h2>Creditor information</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <p><strong>Name:</strong> <t t-esc="mandate.company_id.name"/></p>
+                        <p><strong>Address:</strong></p>
+                        <p><t t-if="user.company_id.street" t-esc="mandate.company_id.street + ' '"/></p>
+                        <p><t t-if="user.company_id.street2" t-esc="mandate.company_id.street2"/></p>
+                    </div>
+                    <div class="col-6">
+                        <p><strong>Creditor identifier:</strong> <t t-esc="mandate.company_id.sdd_creditor_identifier"/></p>
+                        <p><strong>City:</strong> <t t-esc="mandate.company_id.city"/></p>
+                        <p><strong>Zip:</strong> <t t-esc="mandate.company_id.zip"/></p>
+                        <p><strong>Country:</strong> <t t-esc="mandate.company_id.country_id.name"/></p>
+                    </div>
+                </div>
+
+                <h2>Debtor information</h2>
+                <div>
+                    <p>Please complete your coordinates.</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <p><strong>Name:</strong> <t t-esc="mandate.partner_id.name"/></p>
+
+                            <p><strong>Address:</strong></p>
+                            <t t-if="not mandate.partner_id.street and not mandate.partner_id.street2">
+                                <p>.........................................................</p>
+                                <p>.........................................................</p>
+                            </t>
+                            <p t-if="mandate.partner_id.street"><t t-esc="mandate.partner_id.street"/></p>
+                            <p t-if="mandate.partner_id.street2"><t t-esc="mandate.partner_id.street2"/></p>
+
+                            <p><strong>City:</strong> <t t-if="not mandate.partner_id.city">......................................</t><t t-else="" t-esc="mandate.partner_id.city"/></p>
+                            <p><strong>Zip:</strong> <t t-if="not mandate.partner_id.zip">......................................</t><t t-else="" t-esc="mandate.partner_id.zip"/></p>
+                            <p><strong>Country:</strong> <t t-if="not mandate.partner_id.country_id.name">......................................</t><t t-else="" t-esc="mandate.partner_id.country_id.name"/></p>
+                        </div>
+                        <div class="col-6">
+                            <p><strong>IBAN account number:</strong> <t t-if="not mandate.partner_bank_id.acc_number">......................................</t><t t-else="" t-esc="mandate.partner_bank_id.acc_number"/></p>
+                            <p><strong>Phone number:</strong> <t t-if="not mandate.partner_id.phone">......................................</t><t t-else="" t-esc="mandate.partner_id.phone"/></p>
+                            <p><strong>Mail address:</strong> <t t-if="not mandate.partner_id.email">......................................</t><t t-else="" t-esc="mandate.partner_id.email"/></p>
+                            <p><strong>Identification code<t t-if="not mandate.debtor_id_code"> (if applicable)</t>:</strong></p>
+                            <p t-if="not mandate.debtor_id_code">.........................................................</p>
+                            <p t-else=""><t t-esc="mandate.debtor_id_code"/></p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Mandate validity</h2>
+                <p>
+                    The mandate will only be used to pay invoices into the
+                    specified time range. If no end date is specified,
+                    you will have to contact us to stop its use.
+                </p>
+                <div class="row">
+                  <div class="col-6">
+                    <p><strong>Transaction type:</strong> recurrent</p>
+                  </div>
+                  <div class="col-6">
+                    <p><strong>Start date:</strong> <t t-if="not mandate.start_date">......................................</t><t t-else="" t-esc="mandate.start_date"/></p>
+                    <p><strong>End date<t t-if="not mandate.end_date"> (optional)</t>:</strong> <t t-if="not mandate.end_date">......................................</t><t t-else="" t-esc="mandate.end_date"/></p>
+                  </div>
+                </div>
+
+                <h2>Signature</h2>
+                <div class="row">
+                  <div class="col-6">
+                    <p><strong>Name of the reference party:</strong> ......................................</p>
+                    <p><strong>Signature:</strong></p>
+                  </div>
+                  <div class="col-6">
+                    <p><strong>Date and place of signature:</strong> ......................................</p>
+                  </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

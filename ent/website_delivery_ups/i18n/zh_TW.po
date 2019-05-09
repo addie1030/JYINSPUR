@@ -1,0 +1,124 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_delivery_ups
+# 
+# Translators:
+# Martin Trigaux, 2018
+# sejun huang <sejun.huang@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:07+0000\n"
+"PO-Revision-Date: 2018-09-21 14:07+0000\n"
+"Last-Translator: sejun huang <sejun.huang@gmail.com>, 2018\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/odoo/teams/41243/zh_TW/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.payment_delivery_methods_inherit_website_sale_delivery
+msgid "(Bill My Account)"
+msgstr ""
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,pending_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid ""
+"<i>Pending</i>, Thanks for choosing COD(Collect on Delivery/Cash on "
+"Delivery) option. Delivery boy will collect the payment on delivery."
+msgstr ""
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,cancel_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "<span><i>Cancel,</i> Your payment has been cancelled.</span>"
+msgstr "<span><i>取消,</i> 您的付款已被取消。</span>"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,done_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid ""
+"<span><i>Done,</i> Your online payment has been successfully processed. "
+"Thank you for your order.</span>"
+msgstr "<span><i>完成，</i> 您的線上付款已成功完成。感謝您的訂單。</span>"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,error_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid ""
+"<span><i>Error,</i> Please be aware that an error occurred during the "
+"transaction. The order has been confirmed but will not be paid. Do not "
+"hesitate to contact us if you have any questions on the status of your "
+"order.</span>"
+msgstr ""
+"<span><i>出錯了。</i>請注意，在交易過程中出現錯誤。訂單已確認，但未支付。如果您對訂單狀態有任何疑問，請隨時聯繫我們。</span>"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Apply"
+msgstr "應用"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Bank Account"
+msgstr "銀行帳戶"
+
+#. module: website_delivery_ups
+#: model:payment.acquirer,name:website_delivery_ups.payment_acquirer_ups_cod
+msgid "COD"
+msgstr ""
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Cancel"
+msgstr "取消"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Close"
+msgstr "關閉"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Communication"
+msgstr "溝通"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Enter your Carrier Account #"
+msgstr ""
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Please use the following transfer details"
+msgstr "請使用以下轉帳詳細信息"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Please use the order name as communication reference."
+msgstr "請使用訂單名稱作為通信參考。"
+
+#. module: website_delivery_ups
+#: model:ir.model,name:website_delivery_ups.model_sale_order
+msgid "Sale Order"
+msgstr "銷售訂單"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Select Freight Collect Method"
+msgstr ""
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "UPS Bill My Account"
+msgstr "UPS 結算我的帳戶"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.res_config_settings_view_form_inherit_website_delivery_ups
+msgid "UPS Delivery Methods"
+msgstr "UPS交付方式"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.payment_delivery_methods_inherit_website_sale_delivery
+msgid "Using Account"
+msgstr ""

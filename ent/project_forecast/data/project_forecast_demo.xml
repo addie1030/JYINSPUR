@@ -1,0 +1,74 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Project forecast will warn if the user assigned to a forecast doesn't have a timezone -->
+        <record id="base.user_demo" model="res.users">
+            <field name="tz">Europe/Brussels</field>
+        </record>
+
+        <record id="project.project_project_2" model="project.project">
+            <field name="allow_forecast" eval="True"/>
+            <field name="date_start" eval="(datetime.now().date().replace(day=1) + relativedelta(months=1)).isoformat()"/>
+            <field name="date" eval="(datetime.now().date().replace(day=1) + relativedelta(months=18, days=-1)).isoformat()"/>
+        </record>
+        <record id="project.project_project_1" model="project.project">
+            <field name="allow_forecast" eval="True"/>
+            <field name="date_start" eval="datetime.now().date().replace(day=1).isoformat()"/>
+            <field name="date" eval="(datetime.now().date().replace(day=1) + relativedelta(months=3, days=-1)).isoformat()"/>
+        </record>
+
+      <!-- Administrator -->
+      <record id="project_forecast_1" model="project.forecast">
+        <field name="start_date" eval="DateTime.today().strftime('%Y-%m-01')"/>
+        <field name="end_date" eval="(DateTime.today() + relativedelta(months=1, day=1, days=-1)).strftime('%Y-%m-%d')"/>
+        <field name="project_id" ref="project.project_project_1"/>
+        <field name="task_id" ref="project.project_task_1"/>
+        <field name="resource_hours">6</field>
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="employee_id" ref="hr.employee_admin"/>
+      </record>
+      <record id="project_forecast_2" model="project.forecast">
+        <field name="start_date" eval="(DateTime.today() + relativedelta(months=-3)).strftime('%Y-%m-01')"/>
+        <field name="end_date" eval="(DateTime.today() + relativedelta(months=-2, day=1, days=-1)).strftime('%Y-%m-%d')"/>
+        <field name="project_id" ref="project.project_project_2"/>
+        <field name="task_id" ref="project.project_task_10"/>
+        <field name="resource_hours">5</field>
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="employee_id" ref="hr.employee_admin"/>
+      </record>
+      <record id="project_forecast_101" model="project.forecast">
+        <field name="start_date" eval="(DateTime.today() +relativedelta(months=2)).strftime('%Y-%m-01')"/>
+        <field name="end_date" eval="(DateTime.today() + relativedelta(months=3, day=1, days=-1)).strftime('%Y-%m-%d')"/>
+        <field name="project_id" ref="project.project_project_2"/>
+        <field name="resource_hours">2</field>
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="employee_id" ref="hr.employee_admin"/>
+      </record>
+      <!-- Demo user -->
+      <record id="project_forecast_3" model="project.forecast">
+        <field name="start_date" eval="DateTime.today().strftime('%Y-%m-01')"/>
+        <field name="end_date" eval="(DateTime.today() + relativedelta(months=1, day=1, days=-1)).strftime('%Y-%m-%d')"/>
+        <field name="project_id" ref="project.project_project_1"/>
+        <field name="task_id" ref="project.project_task_1"/>
+        <field name="resource_hours">4</field>
+        <field name="user_id" ref="base.user_demo"/>
+        <field name="employee_id" ref="hr.employee_qdp"/>
+      </record>
+      <record id="project_forecast_4" model="project.forecast">
+        <field name="start_date" eval="(DateTime.today() + relativedelta(months=1)).strftime('%Y-%m-01')"/>
+        <field name="end_date" eval="(DateTime.today() + relativedelta(months=2, day=1, days=-1)).strftime('%Y-%m-%d')"/>
+        <field name="project_id" ref="project.project_project_1"/>
+        <field name="task_id" ref="project.project_task_2"/>
+        <field name="resource_hours">5</field>
+        <field name="user_id" ref="base.user_demo"/>
+        <field name="employee_id" ref="hr.employee_qdp"/>
+      </record>
+      <record id="project_forecast_5" model="project.forecast">
+        <field name="start_date" eval="(DateTime.today() + relativedelta(months=2)).strftime('%Y-%m-06')"/>
+        <field name="end_date" eval="(DateTime.today() + relativedelta(months=3, day=1, days=-1)).strftime('%Y-%m-%d')"/>
+        <field name="project_id" ref="project.project_project_1"/>
+        <field name="resource_hours">10</field>
+        <field name="user_id" ref="base.user_demo"/>
+        <field name="employee_id" ref="hr.employee_qdp"/>
+      </record>
+    </data>
+</odoo>

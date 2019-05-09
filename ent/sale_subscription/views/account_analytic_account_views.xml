@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="account_analytic_account_view_inherit_sale_subscription">
+        <field name="name">account.analytic.account.view.buttons.subscription_count</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_form" />
+        <field name="priority" eval="22"/>
+        <field name="groups_id" eval="[(4, ref('sale_subscription.group_sale_subscription_view'))]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='toggle_active']" position="before">
+                <button class="oe_stat_button" type="object" name="subscriptions_action"
+                    icon="fa-book" attrs="{'invisible': [('subscription_count', '=', 0)]}">
+                    <field string="Subscriptions" name="subscription_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="account_invoice_line_form_subscription_view" model="ir.ui.view">
+        <field name="name">account.invoice.line.form.inherit</field>
+        <field name="model">account.invoice.line</field>
+        <field name="inherit_id" ref="account.view_invoice_line_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='account_id']" position="after">
+                <field name="subscription_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem id="menu_account_asset_asset_list_normal_sale" name="Revenue Types"
+        action="account_deferred_revenue.action_account_asset_asset_list_normal_sale"
+        parent="sale_subscription.menu_sale_subscription_config"
+        sequence="10"/>
+</odoo>

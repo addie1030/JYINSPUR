@@ -1,0 +1,120 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_3way_match
+# 
+# Translators:
+# Martin Trigaux, 2018
+# Michael Yeung, 2018
+# sejun huang <sejun.huang@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 10:05+0000\n"
+"PO-Revision-Date: 2018-09-18 10:05+0000\n"
+"Last-Translator: sejun huang <sejun.huang@gmail.com>, 2018\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/odoo/teams/41243/zh_TW/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: account_3way_match
+#: model:ir.model.fields,help:account_3way_match.field_account_invoice__release_to_pay_manual
+msgid ""
+"  * Yes: you should pay the bill, you have received the products\n"
+"  * No, you should not pay the bill, you have not received the products\n"
+"  * Exception, there is a difference between received and billed quantities."
+msgstr ""
+" *是：您應該支付賬單，您已收到產品\n"
+"  *不，你不應該付賬單，你還沒有收到產品\n"
+"  *例外，收貨和開票數量之間存在差異。"
+
+#. module: account_3way_match
+#: model_terms:ir.ui.view,arch_db:account_3way_match.account_invoice_filter_inherit_account_3way_match
+msgid "Bills in Exception"
+msgstr "例外帳單"
+
+#. module: account_3way_match
+#: model_terms:ir.ui.view,arch_db:account_3way_match.account_invoice_filter_inherit_account_3way_match
+msgid "Bills to Pay"
+msgstr "待付帳單"
+
+#. module: account_3way_match
+#: selection:account.invoice,release_to_pay:0
+#: selection:account.invoice,release_to_pay_manual:0
+#: selection:account.invoice.line,can_be_paid:0
+msgid "Exception"
+msgstr "異常"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice__force_release_to_pay
+msgid "Force status"
+msgstr "強制狀態"
+
+#. module: account_3way_match
+#: model:ir.model.fields,help:account_3way_match.field_account_invoice__force_release_to_pay
+msgid ""
+"Indicates whether the 'Can be paid' status is defined automatically or "
+"manually."
+msgstr "指示是否自動或手動定義“可以付款”狀態。"
+
+#. module: account_3way_match
+#: model:ir.model,name:account_3way_match.model_account_invoice
+msgid "Invoice"
+msgstr "發票"
+
+#. module: account_3way_match
+#: model:ir.model,name:account_3way_match.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "發票行"
+
+#. module: account_3way_match
+#: model:ir.model,name:account_3way_match.model_account_journal
+msgid "Journal"
+msgstr "日記帳"
+
+#. module: account_3way_match
+#: selection:account.invoice,release_to_pay:0
+#: selection:account.invoice,release_to_pay_manual:0
+#: selection:account.invoice.line,can_be_paid:0
+msgid "No"
+msgstr "否"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice_line__can_be_paid
+msgid "Release to Pay"
+msgstr "發佈以支付"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice__release_to_pay
+msgid "Should be paid"
+msgstr "應該付錢"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice__release_to_pay_manual
+msgid "Should be paid Manual"
+msgstr "應該手動支付"
+
+#. module: account_3way_match
+#: model:ir.model.fields,help:account_3way_match.field_account_invoice__release_to_pay
+msgid ""
+"This field can take the following values :\n"
+"  * Yes: you should pay the bill, you have received the products\n"
+"  * No, you should not pay the bill, you have not received the products\n"
+"  * Exception, there is a difference between received and billed quantities\n"
+"This status is defined automatically, but you can force it by ticking the 'Force Status' checkbox."
+msgstr ""
+"該字段可以採用以下值：\n"
+"   *是：您應該支付賬單，您已收到產品\n"
+"   *不，你不應該付賬單，你還沒有收到產品\n"
+"   *例外，收貨和開票數量之間存在差異\n"
+"此狀態是自動定義的，但您可以通過勾選“強制狀態”複選框來強制它。"
+
+#. module: account_3way_match
+#: selection:account.invoice,release_to_pay:0
+#: selection:account.invoice,release_to_pay_manual:0
+#: selection:account.invoice.line,can_be_paid:0
+msgid "Yes"
+msgstr "是"

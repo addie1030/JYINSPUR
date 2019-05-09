@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report id="label_manufacture_template"
+            model="mrp.production"
+            string="Finished Product Label (ZPL)"
+            name="mrp_zebra.label_production_view"
+            file="mrp_zebra.label_production_view"
+            report_type="qweb-text"
+        />
+    </data>
+</odoo>

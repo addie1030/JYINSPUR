@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+<template id="print_check_top">
+    <t t-foreach="docs" t-as="o">
+        <t t-call="web.basic_layout">
+            <div t-foreach="o._check_get_pages()" t-as="page" class="page ckca_page ckca_top_page" t-attf-style="top: {{ o.company_id.account_check_printing_margin_top }}in; left: {{ o.company_id.account_check_printing_margin_left }}in; right: {{ o.company_id.account_check_printing_margin_right }}in;">
+                <t t-call="l10n_ca_check_printing.ckca_check" />
+                <t t-call="l10n_ca_check_printing.ckca_stub"><t t-set="stub_num" t-value="1"/></t>
+                <t t-call="l10n_ca_check_printing.ckca_stub"><t t-set="stub_num" t-value="2"/></t>
+            </div>
+        </t>
+    </t>
+</template>
+
+</data>
+</odoo>

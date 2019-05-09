@@ -1,0 +1,124 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_bank_statement_import_qif
+# 
+# Translators:
+# Alagappan Karthikeyan <me@karthik.sg>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 10:05+0000\n"
+"PO-Revision-Date: 2018-08-24 11:36+0000\n"
+"Last-Translator: Alagappan Karthikeyan <me@karthik.sg>, 2019\n"
+"Language-Team: Tamil (https://www.transifex.com/odoo/teams/41243/ta/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ta\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_bank_statement_import_qif
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_qif.account_bank_statement_import_qif
+msgid "<i class=\"fa fa-download mr4\"/>Import Sample Template"
+msgstr "மாதிரி டெம்ப்ளேட் இறக்குமதி"
+
+#. module: account_bank_statement_import_qif
+#: model:ir.model.fields,help:account_bank_statement_import_qif.field_account_bank_statement_import__journal_id
+msgid ""
+"Accounting journal related to the bank statement you're importing. It has to"
+" be manually chosen for statement formats which doesn't allow automatic "
+"journal detection (QIF for example)."
+msgstr ""
+"நீங்கள் இறக்குமதி செய்யும் வங்கிக் கூற்றுடன் தொடர்புடைய கணக்கியல் பத்திரிகை."
+" தானியங்கி பத்திரிகை கண்டறிதலை (உதாரணமாக QIF) அனுமதிக்காத அறிக்கையில் அது "
+"கைமுறையாகத் தேர்ந்தெடுக்கப்பட வேண்டும்."
+
+#. module: account_bank_statement_import_qif
+#: model:ir.model.fields,help:account_bank_statement_import_qif.field_account_bank_statement_import__qif_date_format
+msgid ""
+"Although the historic QIF date format is month-first (mm/dd/yy), many "
+"financial institutions use the local format.Therefore, it is frequent "
+"outside the US to have QIF date formated day-first (dd/mm/yy)."
+msgstr ""
+"வரலாற்று QIF தேதி வடிவம் மாதம் முதல் முதல் (mm / dd / yy) என்றாலும், பல நிதி"
+" நிறுவனங்கள் உள்ளூர் வடிவமைப்பைப் பயன்படுத்துகின்றன. ஆகையால், QIF தேதி நாள் "
+"முதல் (dd / mm / yy) வரையறுக்கப்படுவதற்கு அமெரிக்காவிற்கு வெளியே அடிக்கடி "
+"நிகழ்கிறது."
+
+#. module: account_bank_statement_import_qif
+#: code:addons/account_bank_statement_import_qif/wizard/account_bank_statement_import_qif.py:59
+#, python-format
+msgid "Could not decipher the QIF file."
+msgstr "QIF கோப்பை புரிந்துகொள்ள முடியவில்லை."
+
+#. module: account_bank_statement_import_qif
+#: model:ir.model.fields,field_description:account_bank_statement_import_qif.field_account_bank_statement_import__qif_date_format
+msgid "Dates format"
+msgstr "தேதிகள் வடிவமைப்பு"
+
+#. module: account_bank_statement_import_qif
+#: model:ir.model.fields,field_description:account_bank_statement_import_qif.field_account_bank_statement_import__hide_journal_field
+msgid "Hide the journal field in the view"
+msgstr "பார்வை பத்திரிகை துறையில் மறை"
+
+#. module: account_bank_statement_import_qif
+#: model:ir.model,name:account_bank_statement_import_qif.model_account_bank_statement_import
+msgid "Import Bank Statement"
+msgstr "இறக்குமதி வங்கி அறிக்கை"
+
+#. module: account_bank_statement_import_qif
+#: model:ir.model,name:account_bank_statement_import_qif.model_account_journal
+#: model:ir.model.fields,field_description:account_bank_statement_import_qif.field_account_bank_statement_import__journal_id
+msgid "Journal"
+msgstr "ஜர்னல்"
+
+#. module: account_bank_statement_import_qif
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_qif.account_bank_statement_import_qif
+msgid "Quicken Interchange Format (.QIF)"
+msgstr "விரைவு பரிமாற்றம் வடிவமைப்பு (.QIF)"
+
+#. module: account_bank_statement_import_qif
+#: model:ir.model.fields,field_description:account_bank_statement_import_qif.field_account_bank_statement_import__show_qif_date_format
+msgid "Show Qif Date Format"
+msgstr "Qif தேதி வடிவம் காட்டு"
+
+#. module: account_bank_statement_import_qif
+#: model:ir.model.fields,help:account_bank_statement_import_qif.field_account_bank_statement_import__show_qif_date_format
+msgid ""
+"Technical field used to ask the user for the date format used in the QIF "
+"file, as this format is ambiguous."
+msgstr ""
+"QIF கோப்பில் பயன்படுத்தப்படும் தேதி வடிவமைப்பிற்கு பயனர் கேட்க தொழில்நுட்ப "
+"தொழில்நுட்பம் பயன்படுத்தப்படும், இந்த வடிவம் தெளிவற்றது."
+
+#. module: account_bank_statement_import_qif
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_qif.account_bank_statement_import_view_inherited
+msgid ""
+"The QIF format is ambiguous about dates: please check with your financial "
+"institution whether they format it with month or day first.<br/>"
+msgstr ""
+"QIF வடிவமைப்பு தேதிகள் பற்றி தெளிவற்றது: உங்கள் நிதி நிறுவனத்துடன் முதலில் "
+"அவர்கள் மாதத்தையோ அல்லது நாளையையோ வடிவமைத்தீர்களா என்பதை சரிபார்க்கவும்."
+
+#. module: account_bank_statement_import_qif
+#: code:addons/account_bank_statement_import_qif/wizard/account_bank_statement_import_qif.py:105
+#, python-format
+msgid "This file is either not a bank statement or is not correctly formed."
+msgstr "இந்த கோப்பு வங்கி அறிக்கை அல்ல அல்லது சரியாக அமைக்கப்படவில்லை."
+
+#. module: account_bank_statement_import_qif
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_qif.account_bank_statement_import_view_inherited
+msgid "_Import"
+msgstr "இறக்குமதி"
+
+#. module: account_bank_statement_import_qif
+#: selection:account.bank.statement.import,qif_date_format:0
+msgid "dd/mm/yy"
+msgstr ""
+
+#. module: account_bank_statement_import_qif
+#: selection:account.bank.statement.import,qif_date_format:0
+msgid "mm/dd/yy"
+msgstr ""

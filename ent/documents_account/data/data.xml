@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Workflow Rules -->
+
+        <record id="vendor_bill_rule" model="documents.workflow.rule" forcecreate="0">
+            <field name="name">Create vendor bill</field>
+            <field name="create_model">account.invoice.in_invoice</field>
+            <field name="domain_folder_id" ref="documents.documents_finance_folder"/>
+        </record>
+
+        <record id="documents_replace_inbox_vendor_bill" model="documents.workflow.action" forcecreate="0">
+            <field name="workflow_rule_id" ref="vendor_bill_rule"/>
+            <field name="action">replace</field>
+            <field name="facet_id" ref="documents.documents_finance_status_folder"/>
+            <field name="tag_id" ref="documents.documents_finance_status_tc"/>
+        </record>
+
+        <record id="documents_add_documents_vendor_bill" model="documents.workflow.action" forcecreate="0">
+            <field name="workflow_rule_id" ref="vendor_bill_rule"/>
+            <field name="action">add</field>
+            <field name="tag_id" ref="documents.documents_finance_documents_vendor_bill"/>
+        </record>
+
+        <record id="credit_note_rule" model="documents.workflow.rule" forcecreate="0">
+            <field name="name">Create vendor refund</field>
+            <field name="create_model">account.invoice.in_refund</field>
+            <field name="domain_folder_id" ref="documents.documents_finance_folder"/>
+        </record>
+
+        <record id="documents_replace_inbox_credit_note" model="documents.workflow.action" forcecreate="0">
+            <field name="workflow_rule_id" ref="credit_note_rule"/>
+            <field name="action">replace</field>
+            <field name="facet_id" ref="documents.documents_finance_status_folder"/>
+            <field name="tag_id" ref="documents.documents_finance_status_tc"/>
+        </record>
+
+        <!-- activity types -->
+
+        <record id="mail_documents_activity_data_vat" model="mail.activity.type">
+            <field name="name">Tax Statement</field>
+            <field name="delay_count">3</field>
+            <field name="delay_unit">months</field>
+            <field name="res_model_id" ref="base.model_ir_attachment"/>
+            <field name="delay_from">previous_activity</field>
+        </record>
+
+        <record id="mail_documents_activity_data_vat" model="mail.activity.type">
+            <field name="force_next">True</field>
+            <field name="default_next_type_id" ref="mail_documents_activity_data_vat"/>
+        </record>
+
+
+        <record id="mail_documents_activity_data_fs" model="mail.activity.type">
+            <field name="name">Financial Statement</field>
+            <field name="delay_count">12</field>
+            <field name="delay_unit">months</field>
+            <field name="res_model_id" ref="base.model_res_partner"/>
+            <field name="delay_from">previous_activity</field>
+        </record>
+
+        <record id="mail_documents_activity_data_fs" model="mail.activity.type">
+            <field name="force_next">True</field>
+            <field name="default_next_type_id" ref="mail_documents_activity_data_fs"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,50 @@
+<odoo>
+    <data noupdate="0">
+
+        <record id="module_category_documents_management" model="ir.module.category">
+            <field name="name">Documents management</field>
+            <field name="description">Allows you to manage your documents.</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="group_documents_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_category_documents_management"/>
+        </record>
+
+        <record id="group_documents_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="module_category_documents_management"/>
+            <field name="implied_ids" eval="[(4, ref('group_documents_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+        <record id="documents_folder_groups_rule" model="ir.rule">
+            <field name="name">Documents.folder: folder groups</field>
+            <field name="model_id" ref="model_documents_folder"/>
+            <field name="domain_force">['|', ('group_ids', '=', False), ('group_ids', 'in', [g.id for g in user.groups_id])]</field>
+        </record>
+
+        <record id="documents_folder_company_rule" model="ir.rule">
+            <field name="name">Documents.folder: multicompany</field>
+            <field name="model_id" ref="model_documents_folder"/>
+            <field name="domain_force">['|',('company_id', '=', False), ('company_id', 'child_of', [user.company_id.id])]</field>
+        </record>
+
+        <record id="documents_share_user_rule" model="ir.rule">
+            <field name="name">Documents.share: user rule</field>
+            <field name="model_id" ref="model_documents_share"/>
+            <field name="groups" eval="[(4, ref('group_documents_user'))]"/>
+            <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        </record>
+
+        <record id="documents_share_manager_rule" model="ir.rule">
+            <field name="name">Documents.share: manager rule</field>
+            <field name="model_id" ref="model_documents_share"/>
+            <field name="groups" eval="[(4, ref('group_documents_manager'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+        </record>
+
+    </data>
+</odoo>

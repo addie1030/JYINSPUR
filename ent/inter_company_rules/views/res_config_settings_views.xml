@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.inter.company.rules</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='inter_companies_rules']" position='replace'>
+                     <div class="mt16">
+                        <div name="module_inter_company_rules_company_id" attrs="{'invisible': [('module_inter_company_rules', '=', False)]}">
+                            <field name="rule_type" class="oe_inline o_light_label" widget="radio"/>
+                        </div>
+                        <div class="ml16" name="module_inter_company_rules_set_so_po" attrs="{'invisible':['|', ('rule_type', '!=', 'so_and_po'), ('module_inter_company_rules', '=', False)]}">
+                            When a company validates a
+                            <field name="applicable_on" class="ml8 mr8 oe_inline" style='padding-right: 8px'/>to
+                            <strong>
+                                <field name="rules_company_id" class="oe_inline" options='{"no_open": True}'/>
+                            </strong>, generate a
+                            <field name="auto_validation" class="oe_inline ml8" style='padding-right: 12px'/>
+                            <strong>
+                                <span attrs="{'invisible': [('applicable_on','!=', 'purchase')]}" class="ml8">Sale Order </span>
+                                <span attrs="{'invisible': [('applicable_on','!=', 'sale')]}" class="ml8">Purchase Order </span>
+                                <span attrs="{'invisible': [('applicable_on','!=', 'sale_purchase')]}" class="ml8"> Sale and Purchase Order </span>
+                            </strong>
+                            using <field name="warehouse_id" class="ui-autocomplete-input oe_inline ml8"/>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

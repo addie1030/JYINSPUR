@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+<t t-extend="main_menu">
+    <t t-jquery="img" t-operation="replace">
+        <div class="o_stock_mobile_barcode_container">
+            <button class="btn btn-primary o_stock_mobile_barcode"><i class="fa fa-camera fa-2x o_mobile_barcode_camera"></i> Tap to scan</button>
+            <img src="/stock_barcode/static/img/barcode.png" alt="Barcode"/>
+        </div>
+    </t>
+</t>
+
+</templates>

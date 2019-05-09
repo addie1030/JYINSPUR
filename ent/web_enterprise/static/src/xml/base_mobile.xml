@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+<t t-name="StatusbarButtons">
+    <div class="o_statusbar_buttons">
+        <div class="btn-group">
+            <a role="button" class="btn btn-primary dropdown-toggle" href="#"
+                data-toggle="dropdown" aria-expanded="false">Action</a>
+            <div class="dropdown-menu" role="menu"/>
+        </div>
+    </div>
+</t>
+
+<t t-name="FieldStatus.content.mobile">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <t t-if="status" t-esc="status.display_name"/>
+    </button>
+    <div class="dropdown-menu" role="menu">
+        <t t-foreach="selection" t-as="i">
+            <t t-call="FieldStatus.content.button">
+                <t t-set="is_dropdown" t-value="true"/>
+            </t>
+        </t>
+    </div>
+</t>
+
+<t t-name="BurgerMenu">
+    <div class="o_burger_menu o_in_home_menu">
+        <div class="o_burger_menu_topbar">
+            <span class="dropdown-toggle">
+                <img class="rounded-circle o_burger_menu_avatar" t-att-src="'/web/image?model=res.users&amp;field=image_small&amp;id=' + session.uid" alt="Menu"/>
+                <span class="o_burger_menu_username"><t t-esc="session.name"/></span>
+            </span>
+            <span class="fa fa-close o_burger_menu_close float-right" role="img" aria-label="Close menu" title="Close menu"/>
+        </div>
+        <div class="o_burger_menu_content o_burger_menu_dark">
+            <div class="o_burger_menu_user">
+                <div t-if="session.user_companies" class="o_burger_menu_companies">
+                    <div class="o_burger_menu_user_title">COMPANIES</div>
+                    <t t-foreach="session.user_companies.allowed_companies" t-as="company">
+                        <div t-attf-class="o_burger_menu_company #{session.user_companies.current_company[0] == company[0] ? 'active' : ''}" t-att-data-id="company[0]">
+                            <span class="fa fa-building-o o_burger_menu_company_icon" title="Company menu" role="img" aria-label="Company menu"/>
+                            <t t-esc="company[1]"/>
+                        </div>
+                    </t>
+                </div>
+            </div>
+            <div class="o_burger_menu_app"/>
+        </div>
+    </div>
+</t>
+
+<t t-name="Menu.sections.mobile">
+    <t t-set="mobile" t-value="true"/>
+    <t t-set="inNavbar" t-value="true"/>
+    <t t-foreach="menu_data.children" t-as="primary_menu">
+        <section t-att-class="primary_menu.id">
+            <t t-if="primary_menu.children.length">
+                <t t-foreach="primary_menu.children" t-as="submenu">
+                    <t t-set="menu" t-value="submenu"/>
+                    <t t-call="Menu.link"/>
+                </t>
+            </t>
+        </section>
+    </t>
+</t>
+
+</templates>

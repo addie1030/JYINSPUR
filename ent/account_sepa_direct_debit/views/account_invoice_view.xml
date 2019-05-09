@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sdd_view_account_invoice_search" model="ir.ui.view">
+            <field name="name">sdd.account.invoice.search</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='late']" position="after">
+                    <filter name="revoked_mandate" string="Linked to revoked mandate" domain="[('sdd_paying_mandate_id.state', '=', 'revoked')]"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

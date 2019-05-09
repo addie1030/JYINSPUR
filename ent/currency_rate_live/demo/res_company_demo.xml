@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_company_1" model="res.partner">
+        <field name="name">Company_1</field>
+        <field eval="1" name="is_company"/>
+        <field name="street">Good Hope Street</field>
+        <field name="country_id" ref="base.mx"/>
+        <field name="zip">90210</field>
+        <field name="city">Somewhere</field>
+        <field name="email">hello@company_1.com</field>
+        <field name="phone">+1 (999) 555-44-33</field>
+        <field name="website">www.company_1.com</field>
+    </record>
+    <record id="res_company_company_1" model="res.company">
+        <field name="currency_id" ref="base.MXN"/>
+        <field name="partner_id" ref="res_partner_company_1"/>
+        <field name="name">Company_1</field>
+        <field name="currency_provider">banxico</field>
+        <field name="currency_interval_unit">daily</field>
+    </record>
+    <record id="res_partner_company_2" model="res.partner">
+        <field name="name">Company_2</field>
+        <field eval="1" name="is_company"/>
+        <field name="street">Good Hope Street</field>
+        <field name="country_id" ref="base.mx"/>
+        <field name="zip">90210</field>
+        <field name="city">Somewhere</field>
+        <field name="email">info@company_2.com</field>
+        <field name="phone">+1 (999) 555-44-33</field>
+        <field name="website">www.company_2.com</field>
+    </record>
+    <record id="res_company_company_2" model="res.company">
+        <field name="currency_id" ref="base.MXN"/>
+        <field name="partner_id" ref="res_partner_company_2"/>
+        <field name="name">Company_2</field>
+        <field name="currency_provider">banxico</field>
+        <field name="currency_interval_unit">daily</field>
+    </record>
+</odoo>

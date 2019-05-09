@@ -1,0 +1,290 @@
+<odoo><data>
+
+  <!-- tree view -->
+  <record id="project_forecast_view_tree" model="ir.ui.view">
+    <field name="name">project.forecast.tree</field>
+    <field name="model">project.forecast</field>
+    <field name="arch" type="xml">
+      <tree string="Forecast List">
+        <field name="employee_id"/>
+        <field name="project_id"/>
+        <field name="task_id"/>
+        <field name="resource_time"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- form view -->
+  <record id="project_forecast_view_form" model="ir.ui.view">
+    <field name="name">project.forecast.form</field>
+    <field name="model">project.forecast</field>
+    <field name="arch" type="xml">
+        <form string="Forecast Form">
+            <sheet string="Project Forecast">
+                <div class="oe_button_box" name="button_box"
+                        invisible="context.get('view_grid_add_line')">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                    </button>
+                </div>
+                <group>
+                    <group>
+                        <field name="employee_id" string="Assign To"/>
+                        <field name="project_id"
+                            domain="[('allow_forecast', '=', True)]"
+                            context="{'default_allow_forecast': True}"/>
+                        <field name="task_id"
+                            context="{'default_project_id': project_id,
+                                      'default_employee_id': employee_id}"/>
+                    </group>
+                    <group invisible="context.get('view_grid_add_line')">
+                        <field name="forecast_uom" invisible="1"/>
+                        <field name="resource_hours" widget="float_time" attrs="{'invisible': [('forecast_uom', '=', 'day')]}"/>
+                        <label for="resource_time" attrs="{'invisible': [('forecast_uom', '=', 'hour')]}"/>
+                        <div attrs="{'invisible': [('forecast_uom', '=', 'hour')]}">
+                            <field name="resource_time" class="oe_inline"/> day(s)
+                        </div>
+                        <field name="time" string="% Time" invisible="context.get('view_grid_add_line')"/>
+                    </group>
+                    <group groups="base.group_no_one">
+                        <field name="start_date"/>
+                        <field name="end_date" readonly="1" force_save="1"/>
+                    </group>
+                </group>
+            </sheet>
+        </form>
+    </field>
+  </record>
+
+  <!-- search view -->
+  <record id="project_forecast_view_search" model="ir.ui.view">
+    <field name="name">project.forecast.search</field>
+    <field name="model">project.forecast</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="project_id"/>
+        <field name="task_id"/>
+        <filter name="my_activities" string="My Activities"
+                domain="[('user_id', '=', uid)]"/>
+        <filter name="my_projects" string="My Projects"
+                domain="[('project_id.user_id', '=', uid)]" />
+        <separator/>
+        <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+        <separator/>
+        <filter name="future" string="Future"
+                domain="[('end_date', '>=', time.strftime('%%Y-%%m-%%d 00:00:00'))]" />
+        <filter name="past" string="Past"
+                domain="[('start_date', '&lt;=', time.strftime('%%Y-%%m-%%d 22:59:59'))]" />
+        <group string="Group By">
+          <filter name="group_by_employee_id" string="Employee"
+                  context="{'group_by': 'employee_id'}"/>
+          <filter name="group_by_project_id" string="Project"
+                  context="{'group_by': 'project_id'}"/>
+          <filter name="group_by_task_id" string="Task"
+                  context="{'group_by': 'task_id'}"/>
+        </group>
+      </search>
+    </field>
+  </record>
+
+  <!-- Gantt view -->
+  <record id="project_forecast_view_gantt" model="ir.ui.view">
+    <field name="name">project.forecast.gantt</field>
+    <field name="model">project.forecast</field>
+    <field name="arch" type="xml">
+      <gantt type="consolidate"
+             create="false"
+             edit="false"
+             date_start="start_date"
+             date_stop="end_date"
+             fold_last_level="true"
+             round_dnd_dates="true"
+             consolidation="time"
+             consolidation_max='{"employee_id": 100}'
+             consolidation_exclude="exclude">
+      </gantt>
+    </field>
+  </record>
+
+  <record id="project_forecast_view_pivot" model="ir.ui.view">
+    <field name="name">project.forecast.pivot</field>
+    <field name="model">project.forecast</field>
+    <field name="arch" type="xml">
+      <pivot string="Forecast Analysis">
+        <field name="resource_time" type="measure"/>
+        <field name="start_date" interval="month" type="col"/>
+      </pivot>
+    </field>
+  </record>
+
+    <record id="project_forecast_view_graph" model="ir.ui.view">
+        <field name="name">project.forecast.graph</field>
+        <field name="model">project.forecast</field>
+        <field name="arch" type="xml">
+            <graph string="Forecast Analysis" type="bar">
+                <field name="project_id" type="row"/>
+                <field name="employee_id" type="col"/>
+                <field name="time" type="measure"/>
+                <field name="resource_time" type="measure"/>
+             </graph>
+         </field>
+    </record>
+
+    <!-- Grid views -->
+    <record id="project_forecast_view_grid_by_task" model="ir.ui.view">
+        <field name="name">project.forecast.grid.by.task</field>
+        <field name="model">project.forecast</field>
+        <field name="arch" type="xml">
+            <grid string="Forecast by task" adjustment="object" adjust_name="adjust_grid">
+                <field name="task_id" type="row" section="1"/>
+                <field name="employee_id" type="row"/>
+                <field name="start_date" type="col">
+                    <range name="week" string="Week" span="month" step="day" invisible="context.get('forecast_hide_range_week')"/>
+                    <range name="month" string="Month" span="month" step="week" invisible="context.get('forecast_hide_range_month')"/>
+                    <range name="year" string="Year" span="year" step="month" invisible="context.get('forecast_hide_range_year')"/>
+                </field>
+                <field name="resource_time" type="measure"/>
+            </grid>
+        </field>
+    </record>
+
+    <record id="view_project_forecast_grid_by_user" model="ir.ui.view">
+        <field name="name">project.forecast.grid.by.employee</field>
+        <field name="model">project.forecast</field>
+        <field name="arch" type="xml">
+            <grid string="Forecast by employee" adjustment="object" adjust_name="adjust_grid">
+                <field name="employee_id" type="row" section="1"/>
+                <field name="project_id" type="row"/>
+                <field name="task_id" type="row"/>
+                <field name="start_date" type="col">
+                    <range name="week" string="Week" span="month" step="day" invisible="context.get('forecast_hide_range_week')"/>
+                    <range name="month" string="Month" span="month" step="week" invisible="context.get('forecast_hide_range_month')"/>
+                    <range name="year" string="Year" span="year" step="month" invisible="context.get('forecast_hide_range_year')"/>
+                </field>
+                <field name="resource_time" type="measure"/>
+            </grid>
+        </field>
+    </record>
+
+    <record id="view_project_forecast_grid_by_project" model="ir.ui.view">
+        <field name="name">project.forecast.grid.by.project</field>
+        <field name="model">project.forecast</field>
+        <field name="arch" type="xml">
+            <grid string="Forecast by project" adjustment="object" adjust_name="adjust_grid">
+                <field name="project_id" type="row" section="1"/>
+                <field name="task_id" type="row"/>
+                <field name="employee_id" type="row"/>
+                <field name="start_date" type="col">
+                    <range name="week" string="Week" span="week" step="day" invisible="context.get('forecast_hide_range_week')"/>
+                    <range name="month" string="Month" span="month" step="week" invisible="context.get('forecast_hide_range_month')"/>
+                    <range name="year" string="Year" span="year" step="month" invisible="context.get('forecast_hide_range_year')"/>
+                </field>
+                <field name="resource_time" type="measure"/>
+            </grid>
+        </field>
+    </record>
+
+    <!-- Menus and actions -->
+
+    <menuitem id="project_forecast_menu"
+        name="Forecast"
+        parent="project.menu_main_pm"
+        sequence="2"/>
+
+    <record id="project_forecast_action_by_user" model="ir.actions.act_window">
+        <field name="name">Forecast by employee</field>
+        <field name="res_model">project.forecast</field>
+        <field name="view_mode">grid,gantt,tree,form</field>
+        <field name="context">{
+            'search_default_future': 1,
+            'group_by': ['employee_id', 'task_id'],
+        }</field>
+    </record>
+
+    <record id="project_forecast_action_view_by_user" model="ir.actions.act_window.view">
+        <field name="view_mode">grid</field>
+        <field name="sequence" eval="1"/>
+        <field name="view_id" ref="view_project_forecast_grid_by_user"/>
+        <field name="act_window_id" ref="project_forecast_action_by_user"/>
+    </record>
+
+    <record id="project_forecast_action_server_by_user" model="ir.actions.server">
+        <field name="name">Forecast: view by employee</field>
+        <field name="model_id" ref="project_forecast.model_project_forecast"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_view_forecast('project_forecast.project_forecast_action_by_user')</field>
+    </record>
+
+    <record id="project_forecast_action_by_project" model="ir.actions.act_window">
+        <field name="name">Forecast by project</field>
+        <field name="res_model">project.forecast</field>
+        <field name="view_mode">grid,gantt,tree,form</field>
+        <field name="context">{
+            'search_default_future': 1,
+            'group_by': ['project_id', 'employee_id'],
+        }</field>
+    </record>
+
+    <record id="project_forecast_action_view_by_project" model="ir.actions.act_window.view">
+        <field name="view_mode">grid</field>
+        <field name="sequence" eval="1"/>
+        <field name="view_id" ref="view_project_forecast_grid_by_project"/>
+        <field name="act_window_id" ref="project_forecast_action_by_project"/>
+    </record>
+
+    <record id="project_forecast_action_server_by_project" model="ir.actions.server">
+        <field name="name">Forecast: view by project</field>
+        <field name="model_id" ref="project_forecast.model_project_forecast"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_view_forecast('project_forecast.project_forecast_action_by_project')</field>
+    </record>
+
+    <menuitem id="project_forecast_menu" name="Forecast"
+        parent="project.menu_main_pm"
+        sequence="2"/>
+
+    <menuitem id="project_forecast_group_by_user"
+        name="By Employee"
+        parent="project_forecast.project_forecast_menu"
+        sequence="10"
+        action="project_forecast_action_server_by_user"/>
+
+    <menuitem id="project_forecast_group_by_project"
+        name="By Project"
+        parent="project_forecast.project_forecast_menu"
+        sequence="20"
+        action="project_forecast_action_server_by_project"/>
+
+    <record id="project_forecast_action_report_activities" model="ir.actions.act_window">
+        <field name="name">Forecast Analysis</field>
+        <field name="res_model">project.forecast</field>
+        <field name="view_mode">pivot,graph,gantt,tree,form</field>
+        <field name="context">{'group_by': ['employee_id'],}</field>
+    </record>
+
+    <menuitem id="project_forecast_report_activities"
+        name="Forecast Analysis"
+        parent="project.menu_project_report"
+        action="project_forecast_action_report_activities"/>
+
+    <!-- Actions from form view -->
+    <record id="project_forecast_action_from_project" model="ir.actions.act_window">
+        <field name="name">Forecast</field>
+        <field name="res_model">project.forecast</field>
+        <field name="view_mode">grid,gantt,tree,form</field>
+        <field name="context">{
+            'project_id': active_id,
+            'search_default_project_id': active_id,
+            'default_project_id': active_id,
+            'grid_anchor': (datetime.date.today()).strftime('%Y-%m-%d'),
+        }</field>
+    </record>
+    <record id="project_forecast_action_view_grid_from_project" model="ir.actions.act_window.view">
+        <field name="view_mode">grid</field>
+        <field name="sequence" eval="1"/>
+        <field name="view_id" ref="project_forecast_view_grid_by_task"/>
+        <field name="act_window_id" ref="project_forecast_action_from_project"/>
+    </record>
+
+</data>
+</odoo>

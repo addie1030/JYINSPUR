@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Participant -->
+    <record id="marketing_participant_view_form" model="ir.ui.view">
+        <field name="name">marketing.participant.view.form</field>
+        <field name="model">marketing.participant</field>
+        <field name="arch" type="xml">
+            <form string="Participant">
+                <header>
+                    <button name="action_set_completed" type="object" states="running" class="btn-secondary" string="Mark as completed"/>
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <span class="o_form_label">Record</span>
+                        <h1>
+                            <field name="resource_ref" required="1" options="{'hide_model': True}"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="create_date" readonly="1" string="Workflow Started On"/>
+                        </group>
+                        <group>
+                            <field name="campaign_id" readonly="1" groups="base.group_no_one"/>
+                            <field name="model_id" readonly="1" groups="base.group_no_one"/>
+                            <field name="res_id" readonly="1" groups="base.group_no_one" string="Resource ID"/>
+                        </group>
+                    </group>
+                    <div class="o_ma_hierarchy">
+                        <div class="o_ma_hierarchy_title" attrs="{'invisible': [('trace_ids', '=', [])]}">Workflow</div>
+                        <div class="o_ma_hierarchy_readonly" attrs="{'invisible': [('trace_ids', '!=', [])]}">
+                            <h3>No activity</h3>
+                            <p>
+                                It will be generated automatically once you save this record.
+                            </p>
+                        </div>
+                        <field name="trace_ids" widget="hierarchy_kanban" readonly="1" nolabel="1" class="o_ma_hierarchy_container o_ma_workitem_hierarchy">
+                            <kanban default_order="schedule_date">
+                                <field name="state" />
+                                <field name="activity_type" />
+                                <field name="state_msg" />
+                                <field name="schedule_date" />
+                                <field name="parent_id" />
+                                <field name="trigger_type" />
+                                <field name="clicked" />
+                                <field name="replied" />
+                                <field name="opened" />
+                                <field name="bounced" />
+                                <templates>
+                                    <div t-name="kanban-box">
+                                        <div class="o_ma_body">
+                                            <t t-call="timeline" />
+                                            <div class="o_ma_card">
+                                                <div class="row">
+                                                    <div class="col-1">
+                                                        <t t-set="icons" t-value="{'rejected': 'ban', 'processed': 'check', 'canceled': 'times', 'error': 'exclamation-triangle', 'scheduled': 'clock-o'}" />
+                                                        <div t-attf-class="o_ma_icon o_ma_#{record.state.raw_value} text-center">
+                                                            <i t-attf-class="fa fa-#{icons[record.state.raw_value]}" t-attf-title="State: #{record.state.raw_value}" role="img" t-attf-aria-label="State: #{record.state.raw_value}"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-11">
+                                                        <strong>
+                                                            <field name="activity_id" />
+                                                        </strong>
+                                                        <span class="o_ma_type">
+                                                            <i class="fa fa-email" t-if="record.activity_type.raw_value == 'email'" title="Email" role="img" aria-label="Email"/>
+                                                            <i class="fa fa-cogs" t-if="record.activity_type.raw_value != 'email'" title="Non email activity" role="img" aria-label="Non email activity"/>
+                                                            <field name="activity_type" />
+                                                        </span>
+                                                        <div>
+                                                            <span t-attf-class="o_ma_status_text o_ma_text_#{record.state.raw_value} text-uppercase"><t t-esc="record.state.value" /></span>
+                                                            <t t-if="record.state_msg.raw_value">
+                                                                <span class="text-muted"> - <field name="state_msg" /></span>
+                                                            </t>
+                                                        </div>
+                                                    </div>
+                                                    <div t-if="record.activity_type.raw_value == 'email' and record.state.raw_value == 'processed'" class="col-12">
+                                                        <div class="o_ma_actions text-uppercase text-center">
+                                                            <span t-att-class="record.opened.raw_value ? 'active' : None"><i class="fa fa-check-circle" /> Opened</span>
+                                                            <span t-att-class="record.clicked.raw_value ? 'active' : None"><i class="fa fa-check-circle" /> Clicked</span>
+                                                            <span t-att-class="record.replied.raw_value ? 'active' : None"><i class="fa fa-check-circle" /> Replied</span>
+                                                            <span t-att-class="record.bounced.raw_value ? 'active' : None"><i class="fa fa-check-circle" /> Bounced</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div t-if="record.state.raw_value == 'scheduled' and record.schedule_date.raw_value" class="o_ma_test_buttons">
+                                                    <button name="action_execute" type="object" class="btn btn-primary" title="Run" aria-label="Run">
+                                                        <i class="fa fa-play" />
+                                                    </button>
+                                                    <button name="participant_action_cancel" type="object" class="btn btn-warning" title="Cancel" aria-label="Cancel">
+                                                        <i class="fa fa-times" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="o_hierarchy_children" />
+                                        </div>
+                                    </div>
+                                    <t t-name="timeline">
+                                        <div class="o_ma_timeline text-center">
+                                            <t t-if="record.schedule_date.value">
+                                                <field name="schedule_date" />
+                                            </t>
+                                            <t t-else="">
+                                                <t t-if="record.trigger_type.raw_value == 'mail_open'">
+                                                    <span class="o_ma_text_scheduled">
+                                                        <i t-attf-class="fa fa-envelope-open-o" /> Not opened yet
+                                                    </span>
+                                                </t>
+                                                <t t-if="record.trigger_type.raw_value == 'mail_reply'">
+                                                    <span class="o_ma_text_scheduled">
+                                                        <i t-attf-class="fa fa-reply" /> Not replied yet
+                                                    </span>
+                                                </t>
+                                                <t t-if="record.trigger_type.raw_value == 'mail_click'">
+                                                    <span class="o_ma_text_scheduled">
+                                                        <i t-attf-class="fa fa-hand-pointer-o" /> Not clicked yet
+                                                    </span>
+                                                </t>
+                                            </t>
+                                        </div>
+                                    </t>
+                                </templates>
+                            </kanban>
+                        </field>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="marketing_participant_view_tree" model="ir.ui.view">
+        <field name="name">marketing.participant.view.tree</field>
+        <field name="model">marketing.participant</field>
+        <field name="arch" type="xml">
+            <tree string="Participant" create="false">
+                <field name="resource_ref" string="Resource Name" />
+                <field name="model_id" />
+                <field name="state" />
+                <field name="campaign_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="marketing_participant_view_search" model="ir.ui.view">
+        <field name="name">marketing.participant.view.search</field>
+        <field name="model">marketing.participant</field>
+        <field name="arch" type="xml">
+            <search string="Search Participants">
+                <field name="campaign_id" />
+                <filter string="Running" name="running" domain="[('state', '=', 'running')]" />
+                <filter string="Completed" name="completed" domain="[('state', '=', 'completed')]" />
+                <separator />
+                <group>
+                    <filter string="Campaign" name="group_by_campaign" context="{'group_by': 'campaign_id'}" />
+                    <filter string="State" name="group_by_state" context="{'group_by': 'state'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="marketing_participants_action" model="ir.actions.act_window">
+        <field name="name">Participants</field>
+        <field name="res_model">marketing.participant</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Trace -->
+    <record id="marketing_trace_view_form" model="ir.ui.view">
+        <field name="name">marketing.trace.view.form</field>
+        <field name="model">marketing.trace</field>
+        <field name="arch" type="xml">
+            <form string="Participant">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="activity_id"/>
+                            <field name="schedule_date"/>
+                        </group>
+                        <group>
+                            <field name="participant_id"/>
+                            <field name="state"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="mail_statistics_ids"/>
+                    </group>
+                    <group>
+                        <field name="state_msg"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="marketing_trace_view_tree" model="ir.ui.view">
+        <field name="name">marketing.trace.view.tree</field>
+        <field name="model">marketing.trace</field>
+        <field name="arch" type="xml">
+            <tree string="Traces">
+                <field name="schedule_date"/>
+                <field name="activity_id"/>
+                <field name="participant_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="marketing_trace_action" model="ir.actions.act_window">
+        <field name="name">Traces</field>
+        <field name="res_model">marketing.trace</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="marketing_participants_menu"
+        parent="marketing_automation_configuration_menu"
+        action="marketing_participants_action"
+        sequence="1"/>
+    <menuitem id="marketing_trace_menu"
+        parent="marketing_automation_configuration_menu"
+        action="marketing_trace_action"
+        sequence="2"/>
+
+</odoo>

@@ -1,0 +1,430 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * web_enterprise
+# 
+# Translators:
+# Martin Trigaux, 2019
+# Bole <bole@dajmi5.com>, 2019
+# Đurđica Žarković <durdica.zarkovic@storm.hr>, 2019
+# Ivica Dimjašević <ivica.dimjasevic@storm.hr>, 2019
+# Karolina Tonković <karolina.tonkovic@storm.hr>, 2019
+# Jasmina Otročak <jasmina@uvid.hr>, 2019
+# Tina Milas, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:06+0000\n"
+"PO-Revision-Date: 2018-08-24 11:49+0000\n"
+"Last-Translator: Tina Milas, 2019\n"
+"Language-Team: Croatian (https://www.transifex.com/odoo/teams/41243/hr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:219
+#, python-format
+msgid "(Enterprise Edition)"
+msgstr "(Enterprize verzija)"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:67
+#, python-format
+msgid "1 month"
+msgstr "1 mjesec"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base_mobile.xml:8
+#, python-format
+msgid "Action"
+msgstr "Akcija"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:252
+#: code:addons/web_enterprise/static/src/xml/base.xml:255
+#: code:addons/web_enterprise/static/src/xml/base.xml:261
+#: code:addons/web_enterprise/static/src/xml/base.xml:264
+#: code:addons/web_enterprise/static/src/xml/base.xml:270
+#: code:addons/web_enterprise/static/src/xml/base.xml:273
+#: code:addons/web_enterprise/static/src/xml/base.xml:279
+#: code:addons/web_enterprise/static/src/xml/base.xml:282
+#: code:addons/web_enterprise/static/src/xml/base.xml:288
+#: code:addons/web_enterprise/static/src/xml/base.xml:291
+#: code:addons/web_enterprise/static/src/xml/base.xml:297
+#: code:addons/web_enterprise/static/src/xml/base.xml:300
+#: code:addons/web_enterprise/static/src/xml/base.xml:306
+#: code:addons/web_enterprise/static/src/xml/base.xml:309
+#: code:addons/web_enterprise/static/src/xml/base.xml:315
+#: code:addons/web_enterprise/static/src/xml/base.xml:318
+#: code:addons/web_enterprise/static/src/xml/base.xml:324
+#: code:addons/web_enterprise/static/src/xml/base.xml:327
+#, python-format
+msgid "Alt"
+msgstr "Alt"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:129
+#, python-format
+msgid "Applications"
+msgstr "Aplikacije"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base_mobile.xml:39
+#, python-format
+msgid "COMPANIES"
+msgstr ""
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base_mobile.xml:34
+#, python-format
+msgid "Close menu"
+msgstr ""
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base_mobile.xml:42
+#, python-format
+msgid "Company menu"
+msgstr ""
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:255
+#: code:addons/web_enterprise/static/src/xml/base.xml:264
+#: code:addons/web_enterprise/static/src/xml/base.xml:273
+#: code:addons/web_enterprise/static/src/xml/base.xml:282
+#: code:addons/web_enterprise/static/src/xml/base.xml:291
+#: code:addons/web_enterprise/static/src/xml/base.xml:300
+#: code:addons/web_enterprise/static/src/xml/base.xml:309
+#: code:addons/web_enterprise/static/src/xml/base.xml:318
+#: code:addons/web_enterprise/static/src/xml/base.xml:327
+#, python-format
+msgid "Control"
+msgstr "Kontrola"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:277
+#, python-format
+msgid "Create a new record"
+msgstr "Kreiraj novi zapis"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:225
+#, python-format
+msgid "Database expiration:"
+msgstr "Datum isteka baze podataka:"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:243
+#, python-format
+msgid "Description"
+msgstr "Opis"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:268
+#, python-format
+msgid "Discard a record modification"
+msgstr ""
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:259
+#, python-format
+msgid "Edit a record"
+msgstr "Uredi zapis"
+
+#. module: web_enterprise
+#: model:ir.model,name:web_enterprise.model_ir_http
+msgid "HTTP Routing"
+msgstr ""
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/js/widgets/user_menu.js:57
+#, python-format
+msgid "Keyboard Shortcuts"
+msgstr "Prečaci tipkovnice"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:98
+#, python-format
+msgid "Log in as an administrator to correct the issue."
+msgstr "Prijavite se kao administrator kako biste riješili problem."
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:51
+#, python-format
+msgid "Logo"
+msgstr "Logo"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:245
+#, python-format
+msgid "Mac"
+msgstr ""
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base_mobile.xml:31
+#, python-format
+msgid "Menu"
+msgstr "Izbornik"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:48
+#, python-format
+msgid "No result"
+msgstr "Nema rezultata"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:218
+#, python-format
+msgid "Odoo"
+msgstr "Odoo"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:111
+#, python-format
+msgid "Odoo Help"
+msgstr "Odoo Pomoć"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:313
+#, python-format
+msgid "Open the next record"
+msgstr "Otvori sljedeći zapis"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:304
+#, python-format
+msgid "Open the previous record"
+msgstr "Otvori prethodni zapis"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:295
+#, python-format
+msgid "Open to kanban view"
+msgstr "Otvori u kanban pogledu"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:286
+#, python-format
+msgid "Open to list view"
+msgstr "Otvori kao listu"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:119
+#, python-format
+msgid "Paste code here"
+msgstr "zaljepite kod ovdje"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:90
+#: code:addons/web_enterprise/static/src/xml/base.xml:95
+#, python-format
+msgid "Refresh subscription status"
+msgstr "Osvježi status pretplate"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:121
+#, python-format
+msgid "Register"
+msgstr "Registracija"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:86
+#, python-format
+msgid "Register your subscription"
+msgstr "Registrirajte svoju pretplatu"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:89
+#, python-format
+msgid "Renew your subscription"
+msgstr "Obnovite svoju pretplatu"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:250
+#, python-format
+msgid "Save a record"
+msgstr "Spremi zapis"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:6
+#, python-format
+msgid "Search"
+msgstr "Traži"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:7
+#, python-format
+msgid "Search..."
+msgstr "Pronađi..."
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:232
+#, python-format
+msgid "Shortcuts"
+msgstr "Prečaci"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:110
+#, python-format
+msgid ""
+"Something went wrong while registering your database. You can try again or "
+"contact"
+msgstr ""
+"Nešto je pošlo krivo prilikom registracije Vaše baze podataka. Možete "
+"pokušati ponovno ili kontaktirati"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:116
+#, python-format
+msgid "Subscription Code:"
+msgstr "Šifra pretplate:"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:104
+#, python-format
+msgid ""
+"Thank you, your registration was successful! Your database is valid until"
+msgstr ""
+"Hvala Vam, uspješno ste se registrirali! Vaša baza podataka vrijedi do"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:80
+#, python-format
+msgid "This database has expired."
+msgstr "Vaša baza podataka je istekla."
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:76
+#, python-format
+msgid "This database will expire in"
+msgstr "Ova baza podataka ističe"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:73
+#, python-format
+msgid "This demo database will expire in"
+msgstr "Ova demo baza podataka ističe"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:322
+#, python-format
+msgid "Toggle home menu"
+msgstr ""
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:130
+#, python-format
+msgid "Toggle menu"
+msgstr ""
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:94
+#, python-format
+msgid "Upgrade your subscription"
+msgstr "Nadogradi pretplatu"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:244
+#, python-format
+msgid "Windows/Linux"
+msgstr "Windows/Linux"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:92
+#, python-format
+msgid "You have more users than your subscription allows."
+msgstr "Imate više korisnika nego što Vaša pretplata dopušta."
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:62
+#, python-format
+msgid ""
+"You will be able to register your database once you have installed your "
+"first app."
+msgstr ""
+"Moći ćete registrirati bazu podataka kada instalirate svoju prvu aplikaciju."
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:119
+#, python-format
+msgid "Your subscription code"
+msgstr "Vaša šifra pretplate"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:107
+#, python-format
+msgid "Your subscription was updated and is valid until"
+msgstr "Vaša pretplata je ažurirana i vrijedi do"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:86
+#, python-format
+msgid "buy a subscription"
+msgstr "kupi pretplatu"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:70
+#, python-format
+msgid "days"
+msgstr "dana"
+
+#. module: web_enterprise
+#. openerp-web
+#: code:addons/web_enterprise/static/src/xml/base.xml:86
+#, python-format
+msgid "or"
+msgstr "ili"

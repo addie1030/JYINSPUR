@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+
+<t t-name="website_studio.SubMenu" t-extend="web_studio.Menu">
+    <t t-jquery=".o_menu_sections &gt; .o_web_studio_submenu_icons" t-operation="before">
+        <li>
+            <a href="#" data-toggle="collapse" aria-expanded="true" data-name="website">Website</a>
+        </li>
+    </t>
+</t>
+
+</templates>

@@ -1,0 +1,3009 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_lu_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-23 16:21+0000\n"
+"PO-Revision-Date: 2019-01-23 16:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_1
+msgid "Base - Achat Biens 0% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_4_1
+msgid "Base - Achat Biens 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_8_1
+msgid "Base - Achat Biens 12% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_4_1
+msgid "Base - Achat Biens 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_2
+msgid "Base - Achat Biens 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_12_1
+msgid "Base - Achat Biens 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_15_1
+msgid "Base - Achat Biens 14% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_7_1
+msgid "Base - Achat Biens 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_3
+msgid "Base - Achat Biens 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_1_1
+msgid "Base - Achat Biens 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_5_1
+msgid "Base - Achat Biens 15% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_1_1
+msgid "Base - Achat Biens 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_4
+msgid "Base - Achat Biens 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_11_1
+msgid "Base - Achat Biens 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_14_1
+msgid "Base - Achat Biens 17% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_6_1
+msgid "Base - Achat Biens 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_5
+msgid "Base - Achat Biens 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_3_1
+msgid "Base - Achat Biens 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_7_1
+msgid "Base - Achat Biens 3% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_3_1
+msgid "Base - Achat Biens 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_6
+msgid "Base - Achat Biens 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_2_1
+msgid "Base - Achat Biens 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_6_1
+msgid "Base - Achat Biens 6% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_2_1
+msgid "Base - Achat Biens 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_7
+msgid "Base - Achat Biens 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_13_1
+msgid "Base - Achat Biens 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_16_1
+msgid "Base - Achat Biens 8% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_8_1
+msgid "Base - Achat Biens 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_8
+msgid "Base - Achat Biens 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_9_1
+msgid "Base - Achat Biens Exonéré - Extracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_10_1
+msgid "Base - Achat Biens Exonéré - Extracommunautaire fin privées"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_5_1
+msgid "Base - Achat Biens Exonéré - Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_9
+msgid "Base - Achat Prestations 0% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_4_1
+msgid "Base - Achat Prestations 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_4_1
+msgid "Base - Achat Prestations 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_10
+msgid "Base - Achat Prestations 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_7_1
+msgid "Base - Achat Prestations 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_7_1
+msgid "Base - Achat Prestations 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_11
+msgid "Base - Achat Prestations 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_1_1
+msgid "Base - Achat Prestations 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_1_1
+msgid "Base - Achat Prestations 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_12
+msgid "Base - Achat Prestations 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_6_1
+msgid "Base - Achat Prestations 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_6_1
+msgid "Base - Achat Prestations 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_13
+msgid "Base - Achat Prestations 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_3_1
+msgid "Base - Achat Prestations 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_3_1
+msgid "Base - Achat Prestations 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_14
+msgid "Base - Achat Prestations 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_2_1
+msgid "Base - Achat Prestations 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_2_1
+msgid "Base - Achat Prestations 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_15
+msgid "Base - Achat Prestations 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_8_1
+msgid "Base - Achat Prestations 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_8_1
+msgid "Base - Achat Prestations 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_16
+msgid "Base - Achat Prestations 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_5_1
+msgid "Base - Achat Prestations Exonérées - Extracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_5_1
+msgid "Base - Achat Prestations Exonérées - Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_17
+msgid "Base - Frais Biens 0% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_4_2
+msgid "Base - Frais Biens 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_8_2
+msgid "Base - Frais Biens 12% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_4_2
+msgid "Base - Frais Biens 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_18
+msgid "Base - Frais Biens 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_12_2
+msgid "Base - Frais Biens 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_15_2
+msgid "Base - Frais Biens 14% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_7_2
+msgid "Base - Frais Biens 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_19
+msgid "Base - Frais Biens 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_1_2
+msgid "Base - Frais Biens 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_5_2
+msgid "Base - Frais Biens 15% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_1_2
+msgid "Base - Frais Biens 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_20
+msgid "Base - Frais Biens 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_11_2
+msgid "Base - Frais Biens 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_14_2
+msgid "Base - Frais Biens 17% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_6_2
+msgid "Base - Frais Biens 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_21
+msgid "Base - Frais Biens 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_3_2
+msgid "Base - Frais Biens 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_7_2
+msgid "Base - Frais Biens 3% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_3_2
+msgid "Base - Frais Biens 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_22
+msgid "Base - Frais Biens 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_2_2
+msgid "Base - Frais Biens 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_6_2
+msgid "Base - Frais Biens 6% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_2_2
+msgid "Base - Frais Biens 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_23
+msgid "Base - Frais Biens 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_13_2
+msgid "Base - Frais Biens 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_16_2
+msgid "Base - Frais Biens 8% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_8_2
+msgid "Base - Frais Biens 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_24
+msgid "Base - Frais Biens 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_9_2
+msgid "Base - Frais Biens Exonéré - Extracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_10_2
+msgid "Base - Frais Biens Exonéré - Extracommunautaire fin privées"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_5_2
+msgid "Base - Frais Biens Exonéré - Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_25
+msgid "Base - Frais Prestations 0% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_4_2
+msgid "Base - Frais Prestations 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_4_2
+msgid "Base - Frais Prestations 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_26
+msgid "Base - Frais Prestations 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_7_2
+msgid "Base - Frais Prestations 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_7_2
+msgid "Base - Frais Prestations 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_27
+msgid "Base - Frais Prestations 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_1_2
+msgid "Base - Frais Prestations 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_1_2
+msgid "Base - Frais Prestations 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_28
+msgid "Base - Frais Prestations 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_6_2
+msgid "Base - Frais Prestations 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_6_2
+msgid "Base - Frais Prestations 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_29
+msgid "Base - Frais Prestations 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_3_2
+msgid "Base - Frais Prestations 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_3_2
+msgid "Base - Frais Prestations 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_30
+msgid "Base - Frais Prestations 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_2_2
+msgid "Base - Frais Prestations 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_2_2
+msgid "Base - Frais Prestations 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_31
+msgid "Base - Frais Prestations 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_8_2
+msgid "Base - Frais Prestations 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_8_2
+msgid "Base - Frais Prestations 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_32
+msgid "Base - Frais Prestations 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_5_2
+msgid "Base - Frais Prestations Exonérées - Extracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_5_2
+msgid "Base - Frais Prestations Exonérées - Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_33
+msgid "Base - Investissement Biens 0% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_4_3
+msgid "Base - Investissement Biens 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_8_3
+msgid "Base - Investissement Biens 12% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_4_3
+msgid "Base - Investissement Biens 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_34
+msgid "Base - Investissement Biens 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_12_3
+msgid "Base - Investissement Biens 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_15_3
+msgid "Base - Investissement Biens 14% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_7_3
+msgid "Base - Investissement Biens 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_35
+msgid "Base - Investissement Biens 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_1_3
+msgid "Base - Investissement Biens 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_5_3
+msgid "Base - Investissement Biens 15% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_1_3
+msgid "Base - Investissement Biens 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_36
+msgid "Base - Investissement Biens 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_11_3
+msgid "Base - Investissement Biens 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_14_3
+msgid "Base - Investissement Biens 17% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_6_3
+msgid "Base - Investissement Biens 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_37
+msgid "Base - Investissement Biens 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_3_3
+msgid "Base - Investissement Biens 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_7_3
+msgid "Base - Investissement Biens 3% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_3_3
+msgid "Base - Investissement Biens 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_38
+msgid "Base - Investissement Biens 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_2_3
+msgid "Base - Investissement Biens 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_6_3
+msgid "Base - Investissement Biens 6% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_2_3
+msgid "Base - Investissement Biens 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_39
+msgid "Base - Investissement Biens 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_13_3
+msgid "Base - Investissement Biens 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_16_3
+msgid "Base - Investissement Biens 8% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_8_3
+msgid "Base - Investissement Biens 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_40
+msgid "Base - Investissement Biens 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_9_3
+msgid "Base - Investissement Biens Exonéré - Extracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_10_3
+msgid "Base - Investissement Biens Exonéré - Extracommunautaire fin privées"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_5_3
+msgid "Base - Investissement Biens Exonéré - Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_41
+msgid "Base - Investissement Prestations 0% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_4_3
+msgid "Base - Investissement Prestations 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_4_3
+msgid "Base - Investissement Prestations 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_42
+msgid "Base - Investissement Prestations 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_7_3
+msgid "Base - Investissement Prestations 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_7_3
+msgid "Base - Investissement Prestations 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_43
+msgid "Base - Investissement Prestations 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_1_3
+msgid "Base - Investissement Prestations 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_1_3
+msgid "Base - Investissement Prestations 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_44
+msgid "Base - Investissement Prestations 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_6_3
+msgid "Base - Investissement Prestations 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_6_3
+msgid "Base - Investissement Prestations 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_45
+msgid "Base - Investissement Prestations 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_3_3
+msgid "Base - Investissement Prestations 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_3_3
+msgid "Base - Investissement Prestations 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_46
+msgid "Base - Investissement Prestations 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_2_3
+msgid "Base - Investissement Prestations 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_2_3
+msgid "Base - Investissement Prestations 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_47
+msgid "Base - Investissement Prestations 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_8_3
+msgid "Base - Investissement Prestations 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_8_3
+msgid "Base - Investissement Prestations 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3_48
+msgid "Base - Investissement Prestations 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_5_3
+msgid "Base - Investissement Prestations Exonérées - Extracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_5_3
+msgid "Base - Investissement Prestations Exonérées - Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_SANS
+msgid "Base - Sans Taxe"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_2_1
+msgid "Base - Vente - Autres Exonérations (Article 43 et 60 bis)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_3_1
+msgid "Base - Vente - Autres Exonérations (Article 44 et 56 quarter)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_1_1
+msgid "Base - Vente Biens - Extracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_11_1
+msgid "Base - Vente Biens - Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_5_1
+msgid "Base - Vente Biens 0% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_4_1
+msgid "Base - Vente Biens 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_7_1
+msgid "Base - Vente Biens 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_1_1
+msgid "Base - Vente Biens 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_6_1
+msgid "Base - Vente Biens 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_3_1
+msgid "Base - Vente Biens 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_2_1
+msgid "Base - Vente Biens 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_8_1
+msgid "Base - Vente Biens 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_4_1
+msgid "Base - Vente Biens Tabacs - Extracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_4_2
+msgid "Base - Vente Biens Tabacs - Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_4_3
+msgid "Base - Vente Biens Tabacs - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_5_1
+msgid "Base - Vente Biens – Triangulaire Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_6_1
+msgid "Base - Vente Prestations - Extracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_9_1
+msgid "Base - Vente Prestations - Intracommunautaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_10_1
+msgid "Base - Vente Prestations - Intracommunautaire exonérées dans l'état membre"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_5_2
+msgid "Base - Vente Prestations 0% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_4_2
+msgid "Base - Vente Prestations 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_7_2
+msgid "Base - Vente Prestations 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_1_2
+msgid "Base - Vente Prestations 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_6_2
+msgid "Base - Vente Prestations 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_3_2
+msgid "Base - Vente Prestations 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_2_2
+msgid "Base - Vente Prestations 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_8_2
+msgid "Base - Vente Prestations 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_3
+msgid "Codes non assignés"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report,name:l10n_lu_reports.account_financial_report_l10n_lu
+#: model:ir.actions.client,name:l10n_lu_reports.account_financial_html_report_action_5
+#: model:ir.ui.menu,name:l10n_lu_reports.account_financial_html_report_menu_5
+msgid "Déclaration Mensuelle"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2
+msgid "I.-II. CALCUL DU CHIFFRE D'AFFAIRE IMPOSABLE"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1
+msgid "I.A. Chiffre d'affaires global"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1
+msgid "I.B. Exonérations et montants déductibles"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_11
+msgid "I.B.1. Livraisons intracommunautaires de biens à des personnes identifiées à la TVA dans un autre Etat membre (art.43/1/d,e et f) (3)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_1
+msgid "I.B.2. Exportations (art.43/1/a et b)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_2
+msgid "I.B.3. Autres exonérations (art.43 et 60bis)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_3
+msgid "I.B.4. Autres exonérations (art.44 et 56quater)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_4
+msgid "I.B.5. Tabacs fabriqués"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_5
+msgid "I.B.6.a) Livraisons subséquentes à des acquisitions intracommunautaires dans le cadre d'opérations triangulaires, lorsque le destinataire identifié à la TVA dans l'Etat membre de destination des biens y est le redevable de la taxe (4)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_9
+msgid "I.B.6.b)1)  Prestations de services à des identifiés à la TVA dans un autre Etat membre non exonérées dans l'Etat membre du preneur redevable (art.17/1/b) (5)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_10
+msgid "I.B.6.b)2)  Prestations de services à des identifiés à la TVA dans un autre Etat membre exonérées dans l'Etat membre du preneur (art.17/1/b)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_7
+msgid "I.B.6.c) Opérations réalisées dans le cadre du régime particulier de l'article 56sexies"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_6
+msgid "I.B.6.d) Autres opérations réalisées (imposables) à l'étranger"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_1_8
+msgid "I.B.7. Opérations à l'intérieur du pays pour lesquelles le preneur est le redevable"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2
+msgid "I.C. Chiffre d'affaires imposable"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1
+msgid "II. AUTRES BASES"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4
+msgid "II.-III.-IV. CALCUL DE LA TAXE"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1
+msgid "II.A. Ventilation du chiffre d'affaires imposable – base"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1
+msgid "II.A. Ventilation du chiffre d'affaires imposable – taxe"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_5
+msgid "II.A. base 0%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_4
+msgid "II.A. base 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_7
+msgid "II.A. base 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_1
+msgid "II.A. base 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_6
+msgid "II.A. base 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_3
+msgid "II.A. base 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_2
+msgid "II.A. base 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_2_1_2_1_8
+msgid "II.A. base 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_5
+msgid "II.A. taxe 0%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_4
+msgid "II.A. taxe 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_7
+msgid "II.A. taxe 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_1
+msgid "II.A. taxe 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_6
+msgid "II.A. taxe 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_3
+msgid "II.A. taxe 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_2
+msgid "II.A. taxe 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_8
+msgid "II.A. taxe 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1
+msgid "II.B. Acquisitions intracommunautaires de biens – base"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2
+msgid "II.B. Acquisitions intracommunautaires de biens – taxe"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_4
+msgid "II.B. base 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_7
+msgid "II.B. base 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_1
+msgid "II.B. base 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_6
+msgid "II.B. base 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_3
+msgid "II.B. base 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_2
+msgid "II.B. base 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_8
+msgid "II.B. base 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_1_5
+msgid "II.B. base exonérée"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_4
+msgid "II.B. taxe 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_6
+msgid "II.B. taxe 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_1
+msgid "II.B. taxe 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_5
+msgid "II.B. taxe 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_3
+msgid "II.B. taxe 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_2
+msgid "II.B. taxe 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_7
+msgid "II.B. taxe 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_3
+msgid "II.C. Acquisitions effectuées dans le cadre d'opérations triangulaires – base"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2
+msgid "II.D. Importations de biens – base"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3
+msgid "II.D. Importations de biens – taxe"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_4
+msgid "II.D.1. base 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_12
+msgid "II.D.1. base 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_1
+msgid "II.D.1. base 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_11
+msgid "II.D.1. base 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_3
+msgid "II.D.1. base 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_2
+msgid "II.D.1. base 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_13
+msgid "II.D.1. base 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_9
+msgid "II.D.1. base exonérée"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_4
+msgid "II.D.1. taxe 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_10
+msgid "II.D.1. taxe 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_1
+msgid "II.D.1. taxe 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_9
+msgid "II.D.1. taxe 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_3
+msgid "II.D.1. taxe 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_2
+msgid "II.D.1. taxe 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_11
+msgid "II.D.1. taxe 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_8
+msgid "II.D.2.. base 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_15
+msgid "II.D.2.. base 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_5
+msgid "II.D.2.. base 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_14
+msgid "II.D.2.. base 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_7
+msgid "II.D.2.. base 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_6
+msgid "II.D.2.. base 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_16
+msgid "II.D.2.. base 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_2_10
+msgid "II.D.2.. base exonérée"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_8
+msgid "II.D.2.. taxe 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_13
+msgid "II.D.2.. taxe 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_5
+msgid "II.D.2.. taxe 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_12
+msgid "II.D.2.. taxe 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_7
+msgid "II.D.2.. taxe 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_6
+msgid "II.D.2.. taxe 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_14
+msgid "II.D.2.. taxe 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4
+msgid "II.E. Prestations de services à déclarer par le preneur redevable de la taxe – base"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4
+msgid "II.E. Prestations de services à déclarer par le preneur redevable de la taxe – taxe"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1
+msgid "II.E.1. base"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_4
+msgid "II.E.1.a) base 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_7
+msgid "II.E.1.a) base 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_1
+msgid "II.E.1.a) base 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_6
+msgid "II.E.1.a) base 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_3
+msgid "II.E.1.a) base 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_2
+msgid "II.E.1.a) base 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_8
+msgid "II.E.1.a) base 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1
+msgid "II.E.1.a) taxe"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_4
+msgid "II.E.1.a) taxe 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_6
+msgid "II.E.1.a) taxe 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_1
+msgid "II.E.1.a) taxe 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_5
+msgid "II.E.1.a) taxe 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_3
+msgid "II.E.1.a) taxe 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_2
+msgid "II.E.1.a) taxe 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_7
+msgid "II.E.1.a) taxe 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_1_5
+msgid "II.E.1.b) exonérées"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2
+msgid "II.E.2. base"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_4
+msgid "II.E.2. base 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_7
+msgid "II.E.2. base 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_1
+msgid "II.E.2. base 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_6
+msgid "II.E.2. base 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_3
+msgid "II.E.2. base 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_2
+msgid "II.E.2. base 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_8
+msgid "II.E.2. base 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_1_4_2_5
+msgid "II.E.2. exonérées"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2
+msgid "II.E.2. taxe"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_4
+msgid "II.E.2. taxe 12%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_6
+msgid "II.E.2. taxe 14%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_1
+msgid "II.E.2. taxe 15%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_5
+msgid "II.E.2. taxe 17%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_3
+msgid "II.E.2. taxe 3%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_2
+msgid "II.E.2. taxe 6%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_7
+msgid "II.E.2. taxe 8%"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1
+msgid "II.H. Total de la taxe en aval"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1
+msgid "III.A. Total de la taxe en amont"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4
+msgid "III.A.1. Achats de biens et de services à l'intérieur du pays (art.48/1/a)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5
+msgid "III.A.2. Acquisitions intracommunautaires de biens (art.48/1/b)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6
+msgid "III.A.3. Importations de biens (taxe déclarée ou payée) (art.48/1/c)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_1
+msgid "III.A.4. Affectations de biens (art.48/1/d)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7
+msgid "III.A.5. Taxe déclarée comme débiteur (voir points II.E et F)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_2
+msgid "III.A.6. Taxe acquittée comme caution solidaire"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_3
+msgid "III.A.7. Taxe régularisée - régime particulier suspensif (art.60bis/9, al. 2)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1
+msgid "III.C. Total de la taxe en amont déductible"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2
+msgid "IV.A. Total de la taxe en amont déductible"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1
+msgid "IV.A. Total de la taxe en aval"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1
+msgid "IV.C. Excédent"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_4_1
+msgid "Taxe - Achat Biens 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_1
+msgid "Taxe - Achat Biens 12% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_8_1
+msgid "Taxe - Achat Biens 12% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_8
+msgid "Taxe - Achat Biens 12% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_4_1
+msgid "Taxe - Achat Biens 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_1
+msgid "Taxe - Achat Biens 12% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_1
+msgid "Taxe - Achat Biens 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_10_1
+msgid "Taxe - Achat Biens 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_2
+msgid "Taxe - Achat Biens 14% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_13_1
+msgid "Taxe - Achat Biens 14% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_9
+msgid "Taxe - Achat Biens 14% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_6_1
+msgid "Taxe - Achat Biens 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_2
+msgid "Taxe - Achat Biens 14% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_2
+msgid "Taxe - Achat Biens 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_1_1
+msgid "Taxe - Achat Biens 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_3
+msgid "Taxe - Achat Biens 15% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_5_1
+msgid "Taxe - Achat Biens 15% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_10
+msgid "Taxe - Achat Biens 15% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_1_1
+msgid "Taxe - Achat Biens 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_3
+msgid "Taxe - Achat Biens 15% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_3
+msgid "Taxe - Achat Biens 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_9_1
+msgid "Taxe - Achat Biens 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_4
+msgid "Taxe - Achat Biens 17% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_12_1
+msgid "Taxe - Achat Biens 17% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_11
+msgid "Taxe - Achat Biens 17% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_5_1
+msgid "Taxe - Achat Biens 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_4
+msgid "Taxe - Achat Biens 17% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_4
+msgid "Taxe - Achat Biens 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_3_1
+msgid "Taxe - Achat Biens 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_5
+msgid "Taxe - Achat Biens 3% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_7_1
+msgid "Taxe - Achat Biens 3% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_12
+msgid "Taxe - Achat Biens 3% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_3_1
+msgid "Taxe - Achat Biens 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_5
+msgid "Taxe - Achat Biens 3% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_5
+msgid "Taxe - Achat Biens 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_2_1
+msgid "Taxe - Achat Biens 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_6
+msgid "Taxe - Achat Biens 6% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_6_1
+msgid "Taxe - Achat Biens 6% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_13
+msgid "Taxe - Achat Biens 6% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_2_1
+msgid "Taxe - Achat Biens 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_6
+msgid "Taxe - Achat Biens 6% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_6
+msgid "Taxe - Achat Biens 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_11_1
+msgid "Taxe - Achat Biens 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_7
+msgid "Taxe - Achat Biens 8% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_14_1
+msgid "Taxe - Achat Biens 8% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_14
+msgid "Taxe - Achat Biens 8% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_7_1
+msgid "Taxe - Achat Biens 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_7
+msgid "Taxe - Achat Biens 8% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_7
+msgid "Taxe - Achat Biens 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_4_1
+msgid "Taxe - Achat Prestations 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_1
+msgid "Taxe - Achat Prestations 12% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_4_1
+msgid "Taxe - Achat Prestations 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_8
+msgid "Taxe - Achat Prestations 12% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_8
+msgid "Taxe - Achat Prestations 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_6_1
+msgid "Taxe - Achat Prestations 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_2
+msgid "Taxe - Achat Prestations 14% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_6_1
+msgid "Taxe - Achat Prestations 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_9
+msgid "Taxe - Achat Prestations 14% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_9
+msgid "Taxe - Achat Prestations 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_1_1
+msgid "Taxe - Achat Prestations 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_3
+msgid "Taxe - Achat Prestations 15% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_1_1
+msgid "Taxe - Achat Prestations 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_10
+msgid "Taxe - Achat Prestations 15% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_10
+msgid "Taxe - Achat Prestations 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_5_1
+msgid "Taxe - Achat Prestations 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_4
+msgid "Taxe - Achat Prestations 17% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_5_1
+msgid "Taxe - Achat Prestations 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_11
+msgid "Taxe - Achat Prestations 17% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_11
+msgid "Taxe - Achat Prestations 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_3_1
+msgid "Taxe - Achat Prestations 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_5
+msgid "Taxe - Achat Prestations 3% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_3_1
+msgid "Taxe - Achat Prestations 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_12
+msgid "Taxe - Achat Prestations 3% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_12
+msgid "Taxe - Achat Prestations 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_2_1
+msgid "Taxe - Achat Prestations 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_6
+msgid "Taxe - Achat Prestations 6% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_2_1
+msgid "Taxe - Achat Prestations 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_13
+msgid "Taxe - Achat Prestations 6% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_13
+msgid "Taxe - Achat Prestations 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_7_1
+msgid "Taxe - Achat Prestations 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_7
+msgid "Taxe - Achat Prestations 8% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_7_1
+msgid "Taxe - Achat Prestations 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_14
+msgid "Taxe - Achat Prestations 8% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_14
+msgid "Taxe - Achat Prestations 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_4_2
+msgid "Taxe - Frais Biens 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_15
+msgid "Taxe - Frais Biens 12% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_8_2
+msgid "Taxe - Frais Biens 12% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_22
+msgid "Taxe - Frais Biens 12% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_4_2
+msgid "Taxe - Frais Biens 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_8
+msgid "Taxe - Frais Biens 12% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_15
+msgid "Taxe - Frais Biens 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_10_2
+msgid "Taxe - Frais Biens 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_16
+msgid "Taxe - Frais Biens 14% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_13_2
+msgid "Taxe - Frais Biens 14% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_23
+msgid "Taxe - Frais Biens 14% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_6_2
+msgid "Taxe - Frais Biens 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_9
+msgid "Taxe - Frais Biens 14% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_16
+msgid "Taxe - Frais Biens 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_1_2
+msgid "Taxe - Frais Biens 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_17
+msgid "Taxe - Frais Biens 15% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_5_2
+msgid "Taxe - Frais Biens 15% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_24
+msgid "Taxe - Frais Biens 15% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_1_2
+msgid "Taxe - Frais Biens 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_10
+msgid "Taxe - Frais Biens 15% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_17
+msgid "Taxe - Frais Biens 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_9_2
+msgid "Taxe - Frais Biens 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_18
+msgid "Taxe - Frais Biens 17% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_12_2
+msgid "Taxe - Frais Biens 17% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_25
+msgid "Taxe - Frais Biens 17% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_5_2
+msgid "Taxe - Frais Biens 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_11
+msgid "Taxe - Frais Biens 17% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_18
+msgid "Taxe - Frais Biens 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_3_2
+msgid "Taxe - Frais Biens 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_19
+msgid "Taxe - Frais Biens 3% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_7_2
+msgid "Taxe - Frais Biens 3% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_26
+msgid "Taxe - Frais Biens 3% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_3_2
+msgid "Taxe - Frais Biens 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_12
+msgid "Taxe - Frais Biens 3% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_19
+msgid "Taxe - Frais Biens 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_2_2
+msgid "Taxe - Frais Biens 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_20
+msgid "Taxe - Frais Biens 6% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_6_2
+msgid "Taxe - Frais Biens 6% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_27
+msgid "Taxe - Frais Biens 6% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_2_2
+msgid "Taxe - Frais Biens 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_13
+msgid "Taxe - Frais Biens 6% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_20
+msgid "Taxe - Frais Biens 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_11_2
+msgid "Taxe - Frais Biens 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_21
+msgid "Taxe - Frais Biens 8% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_14_2
+msgid "Taxe - Frais Biens 8% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_28
+msgid "Taxe - Frais Biens 8% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_7_2
+msgid "Taxe - Frais Biens 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_14
+msgid "Taxe - Frais Biens 8% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_21
+msgid "Taxe - Frais Biens 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_4_2
+msgid "Taxe - Frais Prestations 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_15
+msgid "Taxe - Frais Prestations 12% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_4_2
+msgid "Taxe - Frais Prestations 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_22
+msgid "Taxe - Frais Prestations 12% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_22
+msgid "Taxe - Frais Prestations 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_6_2
+msgid "Taxe - Frais Prestations 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_16
+msgid "Taxe - Frais Prestations 14% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_6_2
+msgid "Taxe - Frais Prestations 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_23
+msgid "Taxe - Frais Prestations 14% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_23
+msgid "Taxe - Frais Prestations 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_1_2
+msgid "Taxe - Frais Prestations 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_17
+msgid "Taxe - Frais Prestations 15% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_1_2
+msgid "Taxe - Frais Prestations 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_24
+msgid "Taxe - Frais Prestations 15% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_24
+msgid "Taxe - Frais Prestations 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_5_2
+msgid "Taxe - Frais Prestations 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_18
+msgid "Taxe - Frais Prestations 17% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_5_2
+msgid "Taxe - Frais Prestations 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_25
+msgid "Taxe - Frais Prestations 17% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_25
+msgid "Taxe - Frais Prestations 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_3_2
+msgid "Taxe - Frais Prestations 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_19
+msgid "Taxe - Frais Prestations 3% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_3_2
+msgid "Taxe - Frais Prestations 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_26
+msgid "Taxe - Frais Prestations 3% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_26
+msgid "Taxe - Frais Prestations 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_2_2
+msgid "Taxe - Frais Prestations 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_20
+msgid "Taxe - Frais Prestations 6% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_2_2
+msgid "Taxe - Frais Prestations 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_27
+msgid "Taxe - Frais Prestations 6% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_27
+msgid "Taxe - Frais Prestations 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_7_2
+msgid "Taxe - Frais Prestations 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_21
+msgid "Taxe - Frais Prestations 8% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_7_2
+msgid "Taxe - Frais Prestations 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_28
+msgid "Taxe - Frais Prestations 8% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_28
+msgid "Taxe - Frais Prestations 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_4_3
+msgid "Taxe - Investissement Biens 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_29
+msgid "Taxe - Investissement Biens 12% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_8_3
+msgid "Taxe - Investissement Biens 12% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_36
+msgid "Taxe - Investissement Biens 12% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_4_3
+msgid "Taxe - Investissement Biens 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_15
+msgid "Taxe - Investissement Biens 12% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_29
+msgid "Taxe - Investissement Biens 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_10_3
+msgid "Taxe - Investissement Biens 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_30
+msgid "Taxe - Investissement Biens 14% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_13_3
+msgid "Taxe - Investissement Biens 14% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_37
+msgid "Taxe - Investissement Biens 14% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_6_3
+msgid "Taxe - Investissement Biens 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_16
+msgid "Taxe - Investissement Biens 14% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_30
+msgid "Taxe - Investissement Biens 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_1_3
+msgid "Taxe - Investissement Biens 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_31
+msgid "Taxe - Investissement Biens 15% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_5_3
+msgid "Taxe - Investissement Biens 15% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_38
+msgid "Taxe - Investissement Biens 15% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_1_3
+msgid "Taxe - Investissement Biens 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_17
+msgid "Taxe - Investissement Biens 15% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_31
+msgid "Taxe - Investissement Biens 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_9_3
+msgid "Taxe - Investissement Biens 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_32
+msgid "Taxe - Investissement Biens 17% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_12_3
+msgid "Taxe - Investissement Biens 17% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_39
+msgid "Taxe - Investissement Biens 17% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_5_3
+msgid "Taxe - Investissement Biens 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_18
+msgid "Taxe - Investissement Biens 17% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_32
+msgid "Taxe - Investissement Biens 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_3_3
+msgid "Taxe - Investissement Biens 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_33
+msgid "Taxe - Investissement Biens 3% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_7_3
+msgid "Taxe - Investissement Biens 3% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_40
+msgid "Taxe - Investissement Biens 3% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_3_3
+msgid "Taxe - Investissement Biens 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_19
+msgid "Taxe - Investissement Biens 3% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_33
+msgid "Taxe - Investissement Biens 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_2_3
+msgid "Taxe - Investissement Biens 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_34
+msgid "Taxe - Investissement Biens 6% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_6_3
+msgid "Taxe - Investissement Biens 6% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_41
+msgid "Taxe - Investissement Biens 6% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_2_3
+msgid "Taxe - Investissement Biens 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_20
+msgid "Taxe - Investissement Biens 6% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_34
+msgid "Taxe - Investissement Biens 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_11_3
+msgid "Taxe - Investissement Biens 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_35
+msgid "Taxe - Investissement Biens 8% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_3_14_3
+msgid "Taxe - Investissement Biens 8% - Extracommunautaire fin privées (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_6_42
+msgid "Taxe - Investissement Biens 8% - Extracommunautaire fin privées (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_2_7_3
+msgid "Taxe - Investissement Biens 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_5_21
+msgid "Taxe - Investissement Biens 8% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_35
+msgid "Taxe - Investissement Biens 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_4_3
+msgid "Taxe - Investissement Prestations 12% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_29
+msgid "Taxe - Investissement Prestations 12% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_4_3
+msgid "Taxe - Investissement Prestations 12% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_36
+msgid "Taxe - Investissement Prestations 12% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_36
+msgid "Taxe - Investissement Prestations 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_6_3
+msgid "Taxe - Investissement Prestations 14% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_30
+msgid "Taxe - Investissement Prestations 14% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_6_3
+msgid "Taxe - Investissement Prestations 14% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_37
+msgid "Taxe - Investissement Prestations 14% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_37
+msgid "Taxe - Investissement Prestations 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_1_3
+msgid "Taxe - Investissement Prestations 15% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_31
+msgid "Taxe - Investissement Prestations 15% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_1_3
+msgid "Taxe - Investissement Prestations 15% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_38
+msgid "Taxe - Investissement Prestations 15% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_38
+msgid "Taxe - Investissement Prestations 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_5_3
+msgid "Taxe - Investissement Prestations 17% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_32
+msgid "Taxe - Investissement Prestations 17% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_5_3
+msgid "Taxe - Investissement Prestations 17% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_39
+msgid "Taxe - Investissement Prestations 17% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_39
+msgid "Taxe - Investissement Prestations 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_3_3
+msgid "Taxe - Investissement Prestations 3% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_33
+msgid "Taxe - Investissement Prestations 3% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_3_3
+msgid "Taxe - Investissement Prestations 3% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_40
+msgid "Taxe - Investissement Prestations 3% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_40
+msgid "Taxe - Investissement Prestations 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_2_3
+msgid "Taxe - Investissement Prestations 6% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_34
+msgid "Taxe - Investissement Prestations 6% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_2_3
+msgid "Taxe - Investissement Prestations 6% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_41
+msgid "Taxe - Investissement Prestations 6% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_41
+msgid "Taxe - Investissement Prestations 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_2_7_3
+msgid "Taxe - Investissement Prestations 8% - Extracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_35
+msgid "Taxe - Investissement Prestations 8% - Extracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_4_1_7_3
+msgid "Taxe - Investissement Prestations 8% - Intracommunautaire (+)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_7_42
+msgid "Taxe - Investissement Prestations 8% - Intracommunautaire (-)"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_2_1_1_4_42
+msgid "Taxe - Investissement Prestations 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_4_1
+msgid "Taxe - Vente Biens 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_7_1
+msgid "Taxe - Vente Biens 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_1_1
+msgid "Taxe - Vente Biens 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_6_1
+msgid "Taxe - Vente Biens 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_3_1
+msgid "Taxe - Vente Biens 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_2_1
+msgid "Taxe - Vente Biens 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_8_1
+msgid "Taxe - Vente Biens 8% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_4_2
+msgid "Taxe - Vente Prestations 12% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_7_2
+msgid "Taxe - Vente Prestations 14% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_1_2
+msgid "Taxe - Vente Prestations 15% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_6_2
+msgid "Taxe - Vente Prestations 17% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_3_2
+msgid "Taxe - Vente Prestations 3% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_2_2
+msgid "Taxe - Vente Prestations 6% - Pays"
+msgstr ""
+
+#. module: l10n_lu_reports
+#: model:account.financial.html.report.line,name:l10n_lu_reports.account_financial_report_lu_4_1_1_1_1_8_2
+msgid "Taxe - Vente Prestations 8% - Pays"
+msgstr ""
+

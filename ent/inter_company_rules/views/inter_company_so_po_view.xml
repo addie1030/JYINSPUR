@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_company_inter_change_inherit_form">
+            <field name="name">res.company.form.inherit</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="model">res.company</field>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Inter-Company Rules">
+                        <group string="Inter-Company Rules">
+                            <field name="rule_type" widget="radio" nolabel="1" colspan="2" class="mt8"/>
+                            <div colspan="2" class="mt8 ml16" attrs="{'invisible': [('rule_type', '!=', 'so_and_po')]}">
+                                When a company validates a
+                                <field name="applicable_on" class="oe_inline ml4 mr4" style="padding-right:8px"/>to this company,
+                            </div>
+                            <div colspan="2" class="mt8 ml16" attrs="{'invisible': [('rule_type', '!=', 'so_and_po')]}">
+                                generate a
+                                <field name="auto_validation" class="oe_inline ml4" style="padding-right:8px"/>
+                                <strong>
+                                    <span attrs="{'invisible': [('applicable_on','!=', 'purchase')]}" class="ml4">Sale Order</span>
+                                    <span attrs="{'invisible': [('applicable_on','!=', 'sale')]}" class="ml4">Purchase Order</span>
+                                    <span attrs="{'invisible':[('applicable_on','!=', 'sale_purchase')]}" class="ml4"> Sale and Purchase Order</span>
+                                </strong> using
+                                <field name="warehouse_id" class="ml8 oe_inline" options="{'no_create': True, 'no_open': True}"/>
+                            </div>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="intercompany_user_id" require="1" groups="base.group_no_one"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+	</data>
+</odoo>

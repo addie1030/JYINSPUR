@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+<div t-name="web_studio.NewFieldDialog" class="o_web_studio_field_dialog_form">
+    <t t-if="widget.type === 'selection'">
+        <t t-call="web_studio.SelectionValues"/>
+    </t>
+    <t t-else="">
+        <t t-if="_.contains(['one2many', 'related'], widget.type)">
+            <label>Select a related field:</label>
+            <span class="o_many2one_field"/>
+        </t>
+        <t t-else="">
+            <label>Relation:</label>
+            <span class="o_many2one_model"/>
+        </t>
+    </t>
+</div>
+
+<t t-name="web_studio.SelectionValues">
+    <p class="text-muted">Specify all possible values.</p>
+    <ul class="o_web_studio_selection_editor list-unstyled" t-if="widget.selection.length">
+        <li t-foreach="widget.selection" t-as="selectionValue" t-att-data-value="selectionValue[0]">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text fa fa-bars" role="img" aria-label="Value of list" title="Value of list"/>
+                </div>
+                <span class="form-control">
+                    <t t-esc="selectionValue[1]"/>
+                </span>
+                <span class="input-group-append">
+                    <button type="button" class="btn btn-primary fa fa-pencil-square-o o_web_studio_edit_selection_value" aria-label="Edit selection" title="Edit selection"/>
+                    <button type="button" class="btn btn-danger fa fa-trash-o o_web_studio_remove_selection_value" aria-label="Remove selection" title="Remove selection"/>
+                </span>
+            </div>
+        </li>
+    </ul>
+    <div class="o_web_studio_selection_new_value input-group">
+        <input class="o_input form-control" placeholder="Add new value" type="text"/>
+        <span class="input-group-append">
+            <button class="btn btn-primary fa fa-plus" aria-label="Add" title="Add"/>
+        </span>
+    </div>
+</t>
+
+<t t-name="web_studio.SelectionValues.edit">
+    <div class="form-group">
+        <label class="col-form-label col-md-3" for="o_selection_label">Label</label>
+        <div class="col-md-9">
+            <input class="form-control" id="o_selection_label" required="required" t-att-value="element[1]"/>
+        </div>
+    </div>
+    <div class="form-group" t-if="debug">
+        <label class="col-form-label col-md-3" for="o_selection_value">Value</label>
+        <div class="col-md-9">
+            <input class="form-control" id="o_selection_value" required="required" t-att-value="element[0]"/>
+        </div>
+    </div>
+</t>
+</templates>

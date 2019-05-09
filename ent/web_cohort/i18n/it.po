@@ -1,0 +1,251 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * web_cohort
+# 
+# Translators:
+# Francesco Garganese <francesco.garganese@aeromnia.aero>, 2018
+# nomorality <mauro.deluca@me.com>, 2018
+# Martin Trigaux, 2018
+# Cécile Collart <cco@odoo.com>, 2018
+# Manuela Feliciani <mfeliciani@alice.it>, 2018
+# Paolo Valier, 2018
+# mbo_odoo <mbo@odoo.com>, 2018
+# David Minneci <david@numeko.it>, 2018
+# Sergio Zanchetta <primes2h@gmail.com>, 2018
+# Léonie Bouchat <lbo@odoo.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-21 16:33+0000\n"
+"PO-Revision-Date: 2018-08-24 11:49+0000\n"
+"Last-Translator: Léonie Bouchat <lbo@odoo.com>, 2019\n"
+"Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: web_cohort
+#: code:addons/web_cohort/controllers/main.py:36
+#, python-format
+msgid "%s - By %s"
+msgstr ""
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:76
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:154
+#, python-format
+msgid "- By"
+msgstr ""
+
+#. module: web_cohort
+#: model:ir.model,name:web_cohort.model_ir_actions_act_window_view
+msgid "Action Window View"
+msgstr "Vista finestra azione"
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Activity"
+msgstr "Attività"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/controllers/main.py:59
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:112
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:184
+#, python-format
+msgid "Average"
+msgstr "Media"
+
+#. module: web_cohort
+#: model:ir.model,name:web_cohort.model_base
+msgid "Base"
+msgstr "Base"
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Calendar"
+msgstr "Calendario"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/js/cohort_view.js:22
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+#, python-format
+msgid "Cohort"
+msgstr "Coorte"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/js/cohort_view.js:42
+#, python-format
+msgid "Cohort view has not defined \"date_start\" attribute."
+msgstr ""
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/js/cohort_view.js:45
+#, python-format
+msgid "Cohort view has not defined \"date_stop\" attribute."
+msgstr ""
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/js/cohort_controller.js:96
+#: code:addons/web_cohort/static/src/js/cohort_view.js:63
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:17
+#, python-format
+msgid "Count"
+msgstr "Conteggio"
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/js/cohort_view.js:15
+#, python-format
+msgid "Day"
+msgstr "Giorno"
+
+#. module: web_cohort
+#: selection:ir.ui.view,type:0
+msgid "Diagram"
+msgstr "Diagramma"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:36
+#, python-format
+msgid "Download in Excel file"
+msgstr ""
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Form"
+msgstr "Modulo"
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Gantt"
+msgstr "Gantt"
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Graph"
+msgstr "Grafico"
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Grid"
+msgstr "Griglia"
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Kanban"
+msgstr "Kanban"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:6
+#, python-format
+msgid "Measures"
+msgstr "Misure"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/js/cohort_view.js:17
+#, python-format
+msgid "Month"
+msgstr "Mese"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:204
+#, python-format
+msgid "No data available for cohort."
+msgstr ""
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:128
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:201
+#, python-format
+msgid "No data available."
+msgstr "Non ci sono dati disponibili."
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/xml/web_cohort.xml:43
+#, python-format
+msgid "Period:"
+msgstr "Periodo:"
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Pivot"
+msgstr "Pivot"
+
+#. module: web_cohort
+#: selection:ir.ui.view,type:0
+msgid "QWeb"
+msgstr "QWeb"
+
+#. module: web_cohort
+#: selection:ir.ui.view,type:0
+msgid "Search"
+msgstr "Ricerca"
+
+#. module: web_cohort
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Tree"
+msgstr "Struttura ad Albero"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/js/cohort_view.js:74
+#, python-format
+msgid "Untitled"
+msgstr "Senza titolo"
+
+#. module: web_cohort
+#: model:ir.model,name:web_cohort.model_ir_ui_view
+msgid "View"
+msgstr "Vista"
+
+#. module: web_cohort
+#: model:ir.model.fields,field_description:web_cohort.field_ir_actions_act_window_view__view_mode
+#: model:ir.model.fields,field_description:web_cohort.field_ir_ui_view__type
+msgid "View Type"
+msgstr "Tipo Vista"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/js/cohort_view.js:16
+#, python-format
+msgid "Week"
+msgstr "Settimana"
+
+#. module: web_cohort
+#. openerp-web
+#: code:addons/web_cohort/static/src/js/cohort_view.js:18
+#, python-format
+msgid "Year"
+msgstr "Anno"

@@ -1,0 +1,91 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * project_timesheet_forecast_sale
+# 
+# Translators:
+# Ediz Duman <neps1192@gmail.com>, 2018
+# Martin Trigaux, 2018
+# Ertuğrul Güreş <ertugrulg@projetgrup.com>, 2018
+# Murat Kaplan <muratk@projetgrup.com>, 2018
+# Umur Akın <umura@projetgrup.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:06+0000\n"
+"PO-Revision-Date: 2018-08-24 11:47+0000\n"
+"Last-Translator: Umur Akın <umura@projetgrup.com>, 2019\n"
+"Language-Team: Turkish (https://www.transifex.com/odoo/teams/41243/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: project_timesheet_forecast_sale
+#: code:addons/project_timesheet_forecast_sale/models/project.py:26
+#, python-format
+msgid "%s (%s remaining hours)"
+msgstr "%s (%s kalan saatler)"
+
+#. module: project_timesheet_forecast_sale
+#: code:addons/project_timesheet_forecast_sale/controllers/project.py:47
+#, python-format
+msgid "After"
+msgstr "Sonra"
+
+#. module: project_timesheet_forecast_sale
+#: code:addons/project_timesheet_forecast_sale/controllers/project.py:47
+#, python-format
+msgid "Forecasted"
+msgstr "Öngörülen"
+
+#. module: project_timesheet_forecast_sale
+#: code:addons/project_timesheet_forecast_sale/controllers/project.py:163
+#: code:addons/project_timesheet_forecast_sale/controllers/project.py:182
+#, python-format
+msgid "Forecasts"
+msgstr "Öngörüler"
+
+#. module: project_timesheet_forecast_sale
+#: model:ir.model,name:project_timesheet_forecast_sale.model_project_project
+msgid "Project"
+msgstr "Proje"
+
+#. module: project_timesheet_forecast_sale
+#: model:ir.model,name:project_timesheet_forecast_sale.model_project_forecast
+msgid "Project Forecast"
+msgstr "Proje Öngörüleri"
+
+#. module: project_timesheet_forecast_sale
+#: code:addons/project_timesheet_forecast_sale/controllers/project.py:25
+#, python-format
+msgid ""
+"Remaining \n"
+" (Forecasts incl.)"
+msgstr ""
+
+#. module: project_timesheet_forecast_sale
+#: model:ir.model,name:project_timesheet_forecast_sale.model_sale_order_line
+#: model:ir.model.fields,field_description:project_timesheet_forecast_sale.field_project_forecast__order_line_id
+msgid "Sales Order Line"
+msgstr "Satış Sipariş Satırı"
+
+#. module: project_timesheet_forecast_sale
+#: model:ir.model,name:project_timesheet_forecast_sale.model_project_task
+msgid "Task"
+msgstr "Görev"
+
+#. module: project_timesheet_forecast_sale
+#: model_terms:ir.ui.view,arch_db:project_timesheet_forecast_sale.timesheet_plan
+msgid "Timesheets/Forecasts"
+msgstr ""
+
+#. module: project_timesheet_forecast_sale
+#: code:addons/project_timesheet_forecast_sale/controllers/project.py:26
+#, python-format
+msgid ""
+"What is still to deliver based on sold hours, hours already done and "
+"forecasted hours. Equals to sold hours - done hours - forecasted hours."
+msgstr ""

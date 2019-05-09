@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="timesheet_plan" inherit_id="sale_timesheet.timesheet_plan" name="Timesheet Plan (Timesheet and Forecast)" priority="35">
+        <xpath expr="//h3[@name='table_plan_title']" position="replace">
+             <h3 name="table_plan_title">Timesheets/Forecasts</h3>
+        </xpath>
+    </template>
+
+</odoo>

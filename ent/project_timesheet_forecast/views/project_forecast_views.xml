@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_forecast_view_form_inherit_project_timesheet_forecast" model="ir.ui.view">
+        <field name="name">project.forecast.form.inherit.timesheet</field>
+        <field name="inherit_id" ref="project_forecast.project_forecast_view_form"/>
+        <field name="model">project.forecast</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='time']" position="after">
+                <field name="effective_hours" widget="float_time"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_forecast_view_pivot_inherit_project_timesheet_forecast" model="ir.ui.view">
+        <field name="name">project.forecast.pivot.inherit.timesheet</field>
+        <field name="inherit_id" ref="project_forecast.project_forecast_view_pivot"/>
+        <field name="model">project.forecast</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='resource_time']" position="after">
+                <field name="effective_hours" type="measure"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

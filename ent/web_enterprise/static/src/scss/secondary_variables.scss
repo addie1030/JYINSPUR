@@ -1,0 +1,21 @@
+
+$o-form-lightsecondary: lighten($o-brand-secondary, 25%);
+
+$o-list-footer-color: $o-main-text-color;
+
+$o-control-panel-background-color: $o-view-background-color;
+
+$o-tooltip-background-color: $o-view-background-color;
+$o-tooltip-color: $o-main-text-color;
+$o-tooltip-arrow-color: $o-main-text-color;
+
+// Needed for having no spacing between sheet and mail body in mass_mailing:
+// Different required cancel paddings between web and web_enterprise
+$o-sheet-cancel-tpadding: $o-horizontal-padding;
+$o-sheet-cancel-bpadding: $o-horizontal-padding + $o-sheet-vpadding;
+
+// Side chatter
+$o-chatter-min-width: 530px;
+$o-form-sheet-min-width: 990px; // Safest is map-get($container-max-widths, lg)
+                                // as it is the minimal width of the default
+                                // form view design for md/lg sizes

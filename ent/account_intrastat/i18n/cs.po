@@ -1,0 +1,341 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_intrastat
+# 
+# Translators:
+# Jan Horzinka <jan.horzinka@centrum.cz>, 2018
+# Michal Veselý <michal@veselyberanek.net>, 2018
+# Martin Trigaux, 2018
+# trendspotter <j.podhorecky@volny.cz>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 09:12+0000\n"
+"PO-Revision-Date: 2018-08-24 11:36+0000\n"
+"Last-Translator: trendspotter <j.podhorecky@volny.cz>, 2019\n"
+"Language-Team: Czech (https://www.transifex.com/odoo/teams/41243/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.search_template_intrastat_type
+msgid ""
+"<span class=\"fa fa-filter\"/>\n"
+"                Types:"
+msgstr ""
+"<span class=\"fa fa-filter\"/>\n"
+" Typy:"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.search_template_intrastat_extended
+msgid "<span class=\"fa fa-filter\"/> Options:"
+msgstr "<span class=\"fa fa-filter\"/> Volby:"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:16
+#, python-format
+msgid "Arrival"
+msgstr ""
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.invoice_form_inherit_account_intrastat
+msgid "Arrival country"
+msgstr "Země přijezdu"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.view_intrastat_code_search
+msgid "By country"
+msgstr "Podle země"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.view_intrastat_code_search
+msgid "By type"
+msgstr "Podle typu"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.view_intrastat_code_search
+msgid "Commodity"
+msgstr "Zboží"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:33
+#: model:ir.model.fields,field_description:account_intrastat.field_product_category__intrastat_id
+#: model:ir.model.fields,field_description:account_intrastat.field_product_template__intrastat_id
+#, python-format
+msgid "Commodity Code"
+msgstr "Kód komodity"
+
+#. module: account_intrastat
+#: model:ir.model,name:account_intrastat.model_res_company
+msgid "Companies"
+msgstr "Firmy v systému"
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_res_config_settings__company_country_id
+msgid "Company country"
+msgstr "Země společnosti"
+
+#. module: account_intrastat
+#: model:ir.model,name:account_intrastat.model_res_config_settings
+msgid "Config Settings"
+msgstr "Nastavení konfigurace"
+
+#. module: account_intrastat
+#: model:ir.model,name:account_intrastat.model_res_country
+msgid "Country"
+msgstr "Stát"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:30
+#: code:addons/account_intrastat/models/account_sales_report.py:24
+#, python-format
+msgid "Country Code"
+msgstr "Kód země"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:28
+#, python-format
+msgid "Date"
+msgstr "Datum"
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_res_company__intrastat_transport_mode_id
+msgid "Default Transport Mode"
+msgstr ""
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_res_company__incoterm_id
+#: model:ir.model.fields,field_description:account_intrastat.field_res_config_settings__incoterm_id
+msgid "Default incoterm for Intrastat"
+msgstr ""
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:17
+#, python-format
+msgid "Dispatch"
+msgstr "Odeslání"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.invoice_supplier_form_inherit_account_intrastat
+msgid "Dispatch country"
+msgstr "Země odeslání"
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_account_intrastat_report__display_name
+#: model:ir.model.fields,field_description:account_intrastat.field_account_sales_report__display_name
+msgid "Display Name"
+msgstr "Zobrazovaný název"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_sales_report.py:124
+#: model:ir.actions.client,name:account_intrastat.action_account_report_sales
+#: model:ir.model,name:account_intrastat.model_account_sales_report
+#: model:ir.ui.menu,name:account_intrastat.menu_action_account_report_sales
+#, python-format
+msgid "EC Sales List"
+msgstr ""
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.search_template_intrastat_extended
+msgid "Extended"
+msgstr "Rozšířené"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.search_template_intrastat_extended
+msgid "Extended Mode"
+msgstr "Rozšířený režim"
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_account_intrastat_report__id
+#: model:ir.model.fields,field_description:account_intrastat.field_account_sales_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:39
+#, python-format
+msgid "Incoterm Code"
+msgstr ""
+
+#. module: account_intrastat
+#: model:ir.model.fields,help:account_intrastat.field_res_company__incoterm_id
+#: model:ir.model.fields,help:account_intrastat.field_res_config_settings__incoterm_id
+msgid ""
+"International Commercial Terms are a series of predefined commercial terms "
+"used in international transactions."
+msgstr ""
+"Mezinárodní obchodní podmínky jsou série předem definovaných obchodních "
+"termínů používaných v mezinárodních transakcích."
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_account_invoice_line__intrastat_transaction_id
+#: model_terms:ir.ui.view,arch_db:account_intrastat.invoice_form_inherit_account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.product_category_form_view_inherit_account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.product_template_form_view_inherit_account_intrastat
+msgid "Intrastat"
+msgstr "Intrastat"
+
+#. module: account_intrastat
+#: model:ir.actions.act_window,name:account_intrastat.action_report_intrastat_code_tree
+#: model:ir.model,name:account_intrastat.model_account_intrastat_code
+#: model:ir.ui.menu,name:account_intrastat.menu_report_intrastat_code
+#: model_terms:ir.ui.view,arch_db:account_intrastat.view_report_intrastat_code_form
+msgid "Intrastat Code"
+msgstr "Intrastat kód"
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_account_invoice__intrastat_country_id
+msgid "Intrastat Country"
+msgstr "Intrastat Země"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:234
+#: model:ir.actions.client,name:account_intrastat.action_account_report_intrastat
+#: model:ir.model,name:account_intrastat.model_account_intrastat_report
+#: model:ir.ui.menu,name:account_intrastat.menu_action_account_report_intrastat
+#, python-format
+msgid "Intrastat Report"
+msgstr "Intrastat Report"
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_account_invoice__intrastat_transport_mode_id
+msgid "Intrastat Transport Mode"
+msgstr ""
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.view_report_intrastat_code_tree
+msgid "Intrastat code"
+msgstr "Intrastat kód"
+
+#. module: account_intrastat
+#: model:ir.model.fields,help:account_intrastat.field_account_invoice__intrastat_country_id
+msgid "Intrastat country, arrival for sales, dispatch for purchases"
+msgstr ""
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_res_country__intrastat
+msgid "Intrastat member"
+msgstr "člen Intrastat"
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_res_company__intrastat_region_id
+msgid "Intrastat region"
+msgstr ""
+
+#. module: account_intrastat
+#: model:ir.model,name:account_intrastat.model_account_invoice
+msgid "Invoice"
+msgstr "Faktura"
+
+#. module: account_intrastat
+#: model:ir.model,name:account_intrastat.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Řádek faktury"
+
+#. module: account_intrastat
+#: model:ir.model.fields,field_description:account_intrastat.field_account_intrastat_report____last_update
+#: model:ir.model.fields,field_description:account_intrastat.field_account_sales_report____last_update
+msgid "Last Modified on"
+msgstr "Naposled změněno"
+
+#. module: account_intrastat
+#: model:ir.model,name:account_intrastat.model_product_category
+msgid "Product Category"
+msgstr "Kategorie výrobku"
+
+#. module: account_intrastat
+#: model:ir.model,name:account_intrastat.model_product_template
+msgid "Product Template"
+msgstr "Šablona výrobku"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:43
+#, python-format
+msgid "Quantity"
+msgstr "Množství"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.view_intrastat_code_search
+msgid "Region"
+msgstr "Region"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:32
+#, python-format
+msgid "Region Code"
+msgstr "Regionální kód"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.search_template_intrastat_extended
+msgid "Standard"
+msgstr "Standardní"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:29
+#, python-format
+msgid "System"
+msgstr ""
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:224
+#: code:addons/account_intrastat/models/account_sales_report.py:114
+#, python-format
+msgid "Total"
+msgstr "Celkem"
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.view_intrastat_code_search
+msgid "Transaction"
+msgstr "Transakce"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:31
+#, python-format
+msgid "Transaction Code"
+msgstr ""
+
+#. module: account_intrastat
+#: model_terms:ir.ui.view,arch_db:account_intrastat.view_intrastat_code_search
+msgid "Transport"
+msgstr "Doprava"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:38
+#, python-format
+msgid "Transport Code"
+msgstr ""
+
+#. module: account_intrastat
+#: sql_constraint:account.intrastat.code:0
+msgid "Triplet code/type/country_id must be unique."
+msgstr ""
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:34
+#, python-format
+msgid "Type"
+msgstr "Typ"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_sales_report.py:23
+#, python-format
+msgid "VAT"
+msgstr "DIČ"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:44
+#: code:addons/account_intrastat/models/account_sales_report.py:25
+#, python-format
+msgid "Value"
+msgstr "Hodnota"
+
+#. module: account_intrastat
+#: code:addons/account_intrastat/models/account_intrastat_report.py:42
+#, python-format
+msgid "Weight"
+msgstr "Hmotnost"

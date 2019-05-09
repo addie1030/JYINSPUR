@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_information_template" inherit_id="l10n_mx_edi.cfdiv33">
+        <xpath expr="//*[local-name()='Concepto']" position="inside">
+            <t t-if="not record.fields_get(['l10n_mx_edi_external_trade']) or not record.l10n_mx_edi_external_trade">
+                <t t-foreach="line.l10n_mx_edi_customs_number.split(',') if line.l10n_mx_edi_customs_number else []" t-as="pedimento">
+                    <cfdi:InformacionAduanera
+                        xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+                        t-att-NumeroPedimento="pedimento.strip()"/>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>

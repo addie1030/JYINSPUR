@@ -1,0 +1,1377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_financial_report_l10n_ma_report" model="account.financial.html.report">
+        <field name="name">Plan comptable marocain</field>
+        <field name='parent_id' ref='l10n_ma.account_reports_ma_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_0" model="account.financial.html.report.line">
+        <field name="name">Ventilation du chiffre d’affaires total</field>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ma_report"/>
+        <field name="level" eval="0" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXA</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_1" model="account.financial.html.report.line">
+        <field name="name">Montant du chiffre d’affaires réalisé y compris les affaires non imposables (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_0"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAX10</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_2" model="account.financial.html.report.line">
+        <field name="name">-Opérations situées hors champ d’application de la TVA</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_0"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAX20</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_3" model="account.financial.html.report.line">
+        <field name="name">-Opérations exonérées sans droit à déduction (art 91du CGI)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_0"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAX30</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_4" model="account.financial.html.report.line">
+        <field name="name">-Opérations exonérées avec droit à déduction (art 92 du CGI)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_0"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAX40</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_5" model="account.financial.html.report.line">
+        <field name="name">-Opérations faites en suspension de la TVA (art 94 du CGI)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_0"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAX50</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_6" model="account.financial.html.report.line">
+        <field name="name">Chiffre d’affaires imposable à répartir (différence : ligne 10 – (20 + 30 +40 +50) (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_0"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAX60</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_7" model="account.financial.html.report.line">
+        <field name="name">Ventilation du chiffre d’affaires imposable</field>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ma_report"/>
+        <field name="level" eval="0" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXB</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = MATAXB_1.balance+MATAXB_2.balance+MATAXB_3.balance+MATAXB_4.balance+MATAXB_5.balance+MATAXB_6.balance+MATAXB_7.balance+MATAXB_8.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_8" model="account.financial.html.report.line">
+        <field name="name">TAUX NORMAL DE 20% (Base HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_7"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXB_1</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = - sum.balance+MATAXHT80.balance+MATAXHT81.balance+MATAXHT82.balance+MATAXHT83.balance+MATAXHT84.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ma.tax_tag_01')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_9" model="account.financial.html.report.line">
+        <field name="name">-Opération de production et de distribution (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_8"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXHT80</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_10" model="account.financial.html.report.line">
+        <field name="name">-Opérations d'entreprises de travaux immobiliers (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_8"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXHT81</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_11" model="account.financial.html.report.line">
+        <field name="name">-Prestations de services (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_8"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXHT82</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_12" model="account.financial.html.report.line">
+        <field name="name">-Opérations de crédit bail (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_8"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXHT83</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_13" model="account.financial.html.report.line">
+        <field name="name">-Professions libérales visées à l’article 89-I-12°-b du CGI(HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_8"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXHT84</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_14" model="account.financial.html.report.line">
+        <field name="name">TAUX NORMAL DE 20% (TVA exigible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_7"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXB_2</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = - sum.balance+MATAXTVA80.balance+MATAXTVA81.balance+MATAXTVA82.balance+MATAXTVA83.balance+MATAXTVA84.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ma.tax_tag_01')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_15" model="account.financial.html.report.line">
+        <field name="name">-Opération de production et de distribution (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_14"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXTVA80</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_16" model="account.financial.html.report.line">
+        <field name="name">-Opérations d'entreprises de travaux immobiliers (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_14"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXTVA81</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_17" model="account.financial.html.report.line">
+        <field name="name">-Prestations de services (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_14"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXTVA82</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_18" model="account.financial.html.report.line">
+        <field name="name">-Opérations de crédit bail (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_14"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXTVA83</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_19" model="account.financial.html.report.line">
+        <field name="name">-Professions libérales visées à l’article 89-I-12°-b du CGI(TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_14"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXTVA84</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+     <record id="account_financial_report_l10n_ma_line_20" model="account.financial.html.report.line">
+        <field name="name">TAUX REDUIT DE 14% (Base HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_7"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXB_3</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = - sum.balance+MATAXB_3_1.balance+MATAXB_3_2.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ma.tax_tag_02')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_21" model="account.financial.html.report.line">
+        <field name="name">TR 14%- Avec droit à déduction (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_20"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXB_3_1</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = MATAXHT85.balance+MATAXHT86.balance+MATAXHT87.balance+MATAXHT88.balance+MATAXHT89.balance+MATAXHT90.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_22" model="account.financial.html.report.line">
+        <field name="name">-Beurre à l’exclusion du beurre de fabrication artisanale visé à l’article 91 (IA. 2°)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_21"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXHT85</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_23" model="account.financial.html.report.line">
+        <field name="name">-Graisses alimentaires (animales ou végétales), margarines ou saindoux</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_21"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXHT86</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_24" model="account.financial.html.report.line">
+        <field name="name">-Thé (en vrac ou conditionné)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_21"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXHT87</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_25" model="account.financial.html.report.line">
+        <field name="name">-Opérations de transport de voyageurs et de marchandises</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_21"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXHT88</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_26" model="account.financial.html.report.line">
+        <field name="name">-Véhicule utilitaire léger économique, et cyclomoteur économique et produits et matières entrant dans leur fabrication</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_21"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXHT89</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_27" model="account.financial.html.report.line">
+        <field name="name">Énergie électrique</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_21"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXHT90</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_28" model="account.financial.html.report.line">
+        <field name="name">TR 14%- Avec droit à déduction (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_20"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXB_3_2</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = MATAXHT91.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_29" model="account.financial.html.report.line">
+        <field name="name">Les prestations de services rendues par tout agent démarcheur ou courtier d’assurances à raison des contrats apportés par lui à une entreprise d’assurances</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_28"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXHT91</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_30" model="account.financial.html.report.line">
+        <field name="name">TAUX REDUIT DE 14% (TVA exigible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_7"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXB_4</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ma.tax_tag_02')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_31" model="account.financial.html.report.line">
+        <field name="name">TR 14%- Avec droit à déduction (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_30"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXB_4_1</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = MATAXTVA85.balance+MATAXTVA86.balance+MATAXTVA87.balance+MATAXTVA88.balance+MATAXTVA89.balance+MATAXTVA90.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_32" model="account.financial.html.report.line">
+        <field name="name">-Beurre à l’exclusion du beurre de fabrication artisanale visé à l’article 91 (IA. 2°)(TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_31"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXTVA85</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_33" model="account.financial.html.report.line">
+        <field name="name">-Graisses alimentaires (animales ou végétales), margarines ou saindoux(TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_31"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXTVA86</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_34" model="account.financial.html.report.line">
+        <field name="name">-Thé (en vrac ou conditionné)(TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_31"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXTVA87</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_35" model="account.financial.html.report.line">
+        <field name="name">-Opérations de transport de voyageurs et de marchandises(TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_31"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXTVA88</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_36" model="account.financial.html.report.line">
+        <field name="name">-Véhicule utilitaire léger économique, et cyclomoteur économique et produits et matières entrant dans leur fabrication(TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_31"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXTVA89</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_37" model="account.financial.html.report.line">
+        <field name="name">Énergie électrique(TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_31"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXTVA90</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_38" model="account.financial.html.report.line">
+        <field name="name">TR 14%- Avec droit à déduction (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_30"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXB_4_2</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = MATAXTVA91.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_39" model="account.financial.html.report.line">
+        <field name="name">Les prestations de services rendues par tout agent démarcheur ou courtier d’assurances à raison des contrats apportés par lui à une entreprise d’assurances(TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_38"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXTVA91</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_40" model="account.financial.html.report.line">
+        <field name="name">TAUX REDUIT DE 1O% (Base HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_7"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXB_5</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = -sum.balance+MATAXHT100.balance+MATAXHT101.balance+MATAXHT102.balance+MATAXHT103.balance+MATAXHT104.balance+MATAXHT92.balance+MATAXHT93.balance+MATAXHT94.balance+MATAXHT95.balance+MATAXHT96.balance+MATAXHT97.balance+MATAXHT98.balance+MATAXHT99.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ma.tax_tag_03')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_41" model="account.financial.html.report.line">
+        <field name="name">-Les opérations de crédit foncier, de crédit à la construction et de crédit à l’hôtellerie (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXHT100</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_42" model="account.financial.html.report.line">
+        <field name="name">-Les transactions portant sur les actions et les parts sociales (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXHT101</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_43" model="account.financial.html.report.line">
+        <field name="name">-Les opérations de crédit agricole (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXHT102</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_44" model="account.financial.html.report.line">
+        <field name="name">Les opérations afférentes aux prêts et avances consentis aux collectivités locales par le fonds d’équipement communal ainsi que celles au profit dudit fonds (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXHT103</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_45" model="account.financial.html.report.line">
+        <field name="name">-Les opérations des avocats, interprètes, notaires, adoul, huissiers de justice et vétérinaires (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXHT104</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_46" model="account.financial.html.report.line">
+        <field name="name">-Opérations de restauration et de logement dans des hôtels (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXHT92</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_47" model="account.financial.html.report.line">
+        <field name="name">-Opérations de restauration fournies par les prestataires de services au personnel salarié des entreprises (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="7"/>
+        <field name="code">MATAXHT93</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_48" model="account.financial.html.report.line">
+        <field name="name">-Exploitation ou location d’hôtel ou ensemble immobilier à destination touristique (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="8"/>
+        <field name="code">MATAXHT94</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_49" model="account.financial.html.report.line">
+        <field name="name">-Les huiles fluides alimentaires (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="9"/>
+        <field name="code">MATAXHT95</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_50" model="account.financial.html.report.line">
+        <field name="name">-Le sel de cuisines (gemme ou marin) (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="10"/>
+        <field name="code">MATAXHT96</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_51" model="account.financial.html.report.line">
+        <field name="name">-Le riz usiné, les farines et semoules de riz et les farines de féculents, les pâtes alimentaires (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="11"/>
+        <field name="code">MATAXHT97</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_52" model="account.financial.html.report.line">
+        <field name="name">-Les opérations de banque et de crédit et les commissions de change (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="12"/>
+        <field name="code">MATAXHT98</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_53" model="account.financial.html.report.line">
+        <field name="name">-Les transactions relatives aux valeurs mobilières (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_40"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="13"/>
+        <field name="code">MATAXHT99</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+
+    <record id="account_financial_report_l10n_ma_line_54" model="account.financial.html.report.line">
+        <field name="name">TAUX REDUIT DE 1O% (TVA exigible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_7"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXB_6</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = - sum.balance+MATAXTVA100.balance+MATAXTVA101.balance+MATAXTVA102.balance+MATAXTVA103.balance+MATAXTVA104.balance+MATAXTVA92.balance+MATAXTVA93.balance+MATAXTVA94.balance+MATAXTVA95.balance+MATAXTVA96.balance+MATAXTVA97.balance+MATAXTVA98.balance+MATAXTVA99.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ma.tax_tag_03')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_55" model="account.financial.html.report.line">
+        <field name="name">-Les opérations de crédit foncier, de crédit à la construction et de crédit à l’hôtellerie (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXTVA100</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_56" model="account.financial.html.report.line">
+        <field name="name">-Les transactions portant sur les actions et les parts sociales (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXTVA101</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_57" model="account.financial.html.report.line">
+        <field name="name">-Les opérations de crédit agricole (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXTVA102</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_58" model="account.financial.html.report.line">
+        <field name="name">Les opérations afférentes aux prêts et avances consentis aux collectivités locales par le fonds d’équipement communal ainsi que celles au profit dudit fonds (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXTVA103</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_59" model="account.financial.html.report.line">
+        <field name="name">-Les opérations des avocats, interprètes, notaires, adoul, huissiers de justice et vétérinaires (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXTVA104</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_60" model="account.financial.html.report.line">
+        <field name="name">-Opérations de restauration et de logement dans des hôtels (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXTVA92</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_61" model="account.financial.html.report.line">
+        <field name="name">-Opérations de restauration fournies par les prestataires de services au personnel salarié des entreprises (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="7"/>
+        <field name="code">MATAXTVA93</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_62" model="account.financial.html.report.line">
+        <field name="name">-Exploitation ou location d’hôtel ou ensemble immobilier à destination touristique (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="8"/>
+        <field name="code">MATAXTVA94</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_63" model="account.financial.html.report.line">
+        <field name="name">-Les huiles fluides alimentaires (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="9"/>
+        <field name="code">MATAXTVA95</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_64" model="account.financial.html.report.line">
+        <field name="name">-Le sel de cuisines (gemme ou marin) (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="10"/>
+        <field name="code">MATAXTVA96</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_65" model="account.financial.html.report.line">
+        <field name="name">-Le riz usiné, les farines et semoules de riz et les farines de féculents, les pâtes alimentaires (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="11"/>
+        <field name="code">MATAXTVA97</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_66" model="account.financial.html.report.line">
+        <field name="name">-Les opérations de banque et de crédit et les commissions de change (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="12"/>
+        <field name="code">MATAXTVA98</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_67" model="account.financial.html.report.line">
+        <field name="name">-Les transactions relatives aux valeurs mobilières (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_54"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="13"/>
+        <field name="code">MATAXTVA99</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_68" model="account.financial.html.report.line">
+        <field name="name">TAUX REDUIT DE 7% (Base HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_7"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="7"/>
+        <field name="code">MATAXB_7</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = - sum.balance+MATAXHT105.balance+MATAXHT106.balance+MATAXHT107.balance+MATAXHT108.balance+MATAXHT109.balance+MATAXHT110.balance+MATAXHT111.balance+MATAXHT112.balance+MATAXHT113.balance+MATAXHT114.balance+MATAXHT115.balance+MATAXHT116.balance+MATAXHT117.balance+MATAXHT118.balance+MATAXHT119.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ma.tax_tag_04')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_69" model="account.financial.html.report.line">
+        <field name="name">L’eau livrée aux réseaux de distribution publique et les prestations d’assainissement (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXHT105</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_70" model="account.financial.html.report.line">
+        <field name="name">Location de compteurs d'eau et d'électricité (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXHT106</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_71" model="account.financial.html.report.line">
+        <field name="name">Gaz de pétrole et les autres hydrocarbures gazeux (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXHT107</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_72" model="account.financial.html.report.line">
+        <field name="name">Huiles de pétrole ou de schistes, brutes ou raffinées (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXHT108</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_73" model="account.financial.html.report.line">
+        <field name="name">Produits pharmaceutiques, matières premières et produits entrant dans leurs compositions ainsi que les emballages non récupérables de ces produits et matières (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXHT109</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_74" model="account.financial.html.report.line">
+        <field name="name">Les fournitures scolaires, produits et matières entrant dans leur composition (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXHT110</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_75" model="account.financial.html.report.line">
+        <field name="name">Aliments de bétail et des animaux de basse cour (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="7"/>
+        <field name="code">MATAXHT111</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_76" model="account.financial.html.report.line">
+        <field name="name">Sucre raffiné ou aggloméré (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="8"/>
+        <field name="code">MATAXHT112</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_77" model="account.financial.html.report.line">
+        <field name="name">Conserves de sardines (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="9"/>
+        <field name="code">MATAXHT113</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_78" model="account.financial.html.report.line">
+        <field name="name">Lait en poudre (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="10"/>
+        <field name="code">MATAXHT114</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_79" model="account.financial.html.report.line">
+        <field name="name">Savon de ménage (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="11"/>
+        <field name="code">MATAXHT115</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_80" model="account.financial.html.report.line">
+        <field name="name">Voiture économique et produits et matières entrant dans sa fabrication (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="12"/>
+        <field name="code">MATAXHT116</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_81" model="account.financial.html.report.line">
+        <field name="name">Péage dans les autoroutes (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="13"/>
+        <field name="code">MATAXHT117</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_82" model="account.financial.html.report.line">
+        <field name="name">Reversement de la TVA à différents titres (cessation, régularisation,....)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="14"/>
+        <field name="code">MATAXHT118</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_83" model="account.financial.html.report.line">
+        <field name="name">TOTAL de la TVA exigible</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_68"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="15"/>
+        <field name="code">MATAXHT119</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_84" model="account.financial.html.report.line">
+        <field name="name">TAUX REDUIT DE 7% (TVA exigible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_7"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="8"/>
+        <field name="code">MATAXB_8</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = - sum.balance+MATAXTVA105.balance+MATAXTVA106.balance+MATAXTVA107.balance+MATAXTVA108.balance+MATAXTVA109.balance+MATAXTVA110.balance+MATAXTVA111.balance+MATAXTVA112.balance+MATAXTVA113.balance+MATAXTVA114.balance+MATAXTVA115.balance+MATAXTVA116.balance+MATAXTVA117.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ma.tax_tag_04')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_85" model="account.financial.html.report.line">
+        <field name="name">L’eau livrée aux réseaux de distribution publique et les prestations d’assainissement (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXTVA105</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_86" model="account.financial.html.report.line">
+        <field name="name">Location de compteurs d'eau et d'électricité (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXTVA106</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_87" model="account.financial.html.report.line">
+        <field name="name">Gaz de pétrole et les autres hydrocarbures gazeux (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXTVA107</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_88" model="account.financial.html.report.line">
+        <field name="name">Huiles de pétrole ou de schistes, brutes ou raffinées (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXTVA108</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_89" model="account.financial.html.report.line">
+        <field name="name">Produits pharmaceutiques, matières premières et produits entrant dans leurs compositions ainsi que les emballages non récupérables de ces produits et matières (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXTVA109</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_90" model="account.financial.html.report.line">
+        <field name="name">Les fournitures scolaires, produits et matières entrant dans leur composition (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXTVA110</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_91" model="account.financial.html.report.line">
+        <field name="name">Aliments de bétail et des animaux de basse cour (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="7"/>
+        <field name="code">MATAXTVA111</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_92" model="account.financial.html.report.line">
+        <field name="name">Sucre raffiné ou aggloméré (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="8"/>
+        <field name="code">MATAXTVA112</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_93" model="account.financial.html.report.line">
+        <field name="name">Conserves de sardines (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="9"/>
+        <field name="code">MATAXTVA113</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_94" model="account.financial.html.report.line">
+        <field name="name">Lait en poudre (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="10"/>
+        <field name="code">MATAXTVA114</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_95" model="account.financial.html.report.line">
+        <field name="name">Savon de ménage (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="11"/>
+        <field name="code">MATAXTVA115</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_96" model="account.financial.html.report.line">
+        <field name="name">Voiture économique et produits et matières entrant dans sa fabrication (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="12"/>
+        <field name="code">MATAXTVA116</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_97" model="account.financial.html.report.line">
+        <field name="name">Péage dans les autoroutes (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_84"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="13"/>
+        <field name="code">MATAXTVA117</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_98" model="account.financial.html.report.line">
+        <field name="name">Ventilation des déductions</field>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ma_report"/>
+        <field name="level" eval="0" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXC</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = MATAXC_1.balance+MATAXC_2.balance+MATAXC_3.balance+MATAXC_4.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_99" model="account.financial.html.report.line">
+        <field name="name">1-ACHATS NON IMMOBILISES (Base HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_98"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXC_1</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance=MATAXHT130.balance+MATAXHT131.balance+MATAXC_1_1.balance+MATAXC_1_2.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_100" model="account.financial.html.report.line">
+        <field name="name">Travaux à façons (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_99"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXHT130</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_101" model="account.financial.html.report.line">
+        <field name="name">Sous-traitance (travaux immobiliers) (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_99"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXHT131</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_102" model="account.financial.html.report.line">
+        <field name="name">Biens matériels (Base HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_99"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXC_1_1</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance+MATAXHT124.balance+MATAXHT125.balance+MATAXHT126.balance+MATAXHT127.balance+MATAXHT128.balance+MATAXHT129.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ma.tax_tag_05')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_103" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'importation (20%) (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_102"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXHT124</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ma.tax_tag_06')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_104" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'intérieur (20%) (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_102"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXHT125</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_105" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'importation (14%) (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_102"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXHT126</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ma.tax_tag_07')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_106" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'intérieur (14%) (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_102"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXHT127</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_107" model="account.financial.html.report.line">
+        <field name="name">-Achat à l'importation (7%) (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_102"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXHT128</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ma.tax_tag_08')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_108" model="account.financial.html.report.line">
+        <field name="name">-Achat à l'intérieur (7%) (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_102"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXHT129</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_109" model="account.financial.html.report.line">
+        <field name="name">Prestations de services (Base HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_99"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXC_1_2</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = MATAXHT120.balance+MATAXHT121.balance+MATAXHT122.balance+MATAXHT123.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_110" model="account.financial.html.report.line">
+        <field name="name">Prestations de service au taux normal (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_109"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXHT120</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_111" model="account.financial.html.report.line">
+        <field name="name">Transport (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_109"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXHT121</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_112" model="account.financial.html.report.line">
+        <field name="name">Opérations de banque (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_109"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXHT122</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_113" model="account.financial.html.report.line">
+        <field name="name">Hôtels de voyageurs, et ensemble immobiliers à destination touristique (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_109"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXHT123</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_114" model="account.financial.html.report.line">
+        <field name="name">1-ACHATS NON IMMOBILISES (TVA déductible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_98"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXC_2</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance=MATAXTVA130.balance+MATAXTVA131.balance+MATAXC_2_1.balance+MATAXC_2_2.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_115" model="account.financial.html.report.line">
+        <field name="name">Travaux à façons (TVA déductible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_114"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXTVA130</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_116" model="account.financial.html.report.line">
+        <field name="name">Sous-traitance (travaux immobiliers) (TVA déductible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_114"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXTVA131</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_117" model="account.financial.html.report.line">
+        <field name="name">Biens matériels (TVA déductible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_114"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXC_2_1</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance+MATAXTVA124.balance+MATAXTVA125.balance+MATAXTVA126.balance+MATAXTVA127.balance+MATAXTVA128.balance+MATAXTVA129.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ma.tax_tag_05')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_118" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'importation (20%) (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_117"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXTVA124</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ma.tax_tag_06')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_119" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'intérieur (20%) (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_117"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXTVA125</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_120" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'importation (14%) (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_117"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXTVA126</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ma.tax_tag_07')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_121" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'intérieur (14%) (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_117"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXTVA127</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_122" model="account.financial.html.report.line">
+        <field name="name">-Achat à l'importation (7%) (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_117"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXTVA128</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ma.tax_tag_08')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_123" model="account.financial.html.report.line">
+        <field name="name">-Achat à l'intérieur (7%) (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_117"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXTVA129</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_124" model="account.financial.html.report.line">
+        <field name="name">Prestations de services (TVA déductible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_114"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXC_2_2</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = MATAXTVA120.balance+MATAXTVA121.balance+MATAXTVA122.balance+MATAXTVA123.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_125" model="account.financial.html.report.line">
+        <field name="name">Prestations de service au taux normal (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_124"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXTVA120</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_126" model="account.financial.html.report.line">
+        <field name="name">Transport (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_124"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXTVA121</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_127" model="account.financial.html.report.line">
+        <field name="name">Opérations de banque (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_124"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXTVA122</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_128" model="account.financial.html.report.line">
+        <field name="name">Hôtels de voyageurs, et ensemble immobiliers à destination touristique (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_124"/>
+        <field name="level" eval="3" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXTVA123</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_ma_line_129" model="account.financial.html.report.line">
+        <field name="name">2-IMMOBILISATIONS (Base HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_98"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXC_3</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance+MATAXHT132.balance+MATAXHT133.balance+MATAXHT134.balance+MATAXHT135.balance+MATAXHT136.balance+MATAXHT137.balance+MATAXHT138.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ma.tax_tag_09')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_130" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'importation (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_129"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXHT132</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_131" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'intérieur (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_129"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXHT133</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_132" model="account.financial.html.report.line">
+        <field name="name">-Livraison à soi-même autre que les constructions (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_129"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXHT134</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_133" model="account.financial.html.report.line">
+        <field name="name">-Installation et pose (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_129"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXHT135</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_134" model="account.financial.html.report.line">
+        <field name="name">-Constructions (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_129"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXHT136</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_135" model="account.financial.html.report.line">
+        <field name="name">-Livraison à soi-même de constructions (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_129"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXHT137</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_136" model="account.financial.html.report.line">
+        <field name="name">-Déduction complémentaire de la régularisation du prorata (HT)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_129"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="7"/>
+        <field name="code">MATAXHT138</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_137" model="account.financial.html.report.line">
+        <field name="name">2-IMMOBILISATIONS (TVA déductible)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_98"/>
+        <field name="level" eval="1" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXC_4</field>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance+MATAXTVA132.balance+MATAXTVA133.balance+MATAXTVA134.balance+MATAXTVA135.balance+MATAXTVA136.balance+MATAXTVA137.balance+MATAXTVA138.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ma.tax_tag_09')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_138" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'importation (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_137"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="1"/>
+        <field name="code">MATAXTVA132</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_139" model="account.financial.html.report.line">
+        <field name="name">-Achats à l'intérieur (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_137"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="2"/>
+        <field name="code">MATAXTVA133</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_140" model="account.financial.html.report.line">
+        <field name="name">-Livraison à soi-même autre que les constructions (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_137"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="3"/>
+        <field name="code">MATAXTVA134</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_141" model="account.financial.html.report.line">
+        <field name="name">-Installation et pose (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_137"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="4"/>
+        <field name="code">MATAXTVA135</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_142" model="account.financial.html.report.line">
+        <field name="name">-Constructions (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_137"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="5"/>
+        <field name="code">MATAXTVA136</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_143" model="account.financial.html.report.line">
+        <field name="name">-Livraison à soi-même de constructions (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_137"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="6"/>
+        <field name="code">MATAXTVA137</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_ma_line_144" model="account.financial.html.report.line">
+        <field name="name">-Déduction complémentaire de la régularisation du prorata (TVA)</field>
+        <field name="parent_id" ref="account_financial_report_l10n_ma_line_137"/>
+        <field name="level" eval="2" />
+        <field name="sequence" eval="7"/>
+        <field name="code">MATAXTVA138</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+</odoo>

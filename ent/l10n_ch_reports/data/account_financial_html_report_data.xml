@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="financial_report_l10n_ch" model="account.financial.html.report">
+        <field name="name">Décompte TVA Suisse</field>
+        <field name="parent_id" ref="l10n_ch.account_reports_ch_statements_menu"/>
+        <field name="tax_report" eval="1"/>
+    </record>
+
+    <record id="financial_report_line_chtax_I" model="account.financial.html.report.line">
+        <field name="name">I - CHIFFRE D'AFFAIRES</field>
+        <field name="code">CHTAX_I</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="special_date_changer">strict_range</field>
+        <field name="financial_report_id" ref="financial_report_l10n_ch"/>
+    </record>
+
+    <record id="financial_report_line_chtax_299" model="account.financial.html.report.line">
+        <field name="name">299 Chiffre d'affaires imposable (ch. 200 moins ch.289)</field>
+        <field name="code">CHTAX_299</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = CHTAX_200.balance - CHTAX_289.balance</field>
+        <field name="special_date_changer">strict_range</field>
+        <field name="financial_report_id" ref="financial_report_l10n_ch"/>
+    </record>
+
+    <record id="financial_report_line_chtax_200" model="account.financial.html.report.line">
+        <field name="name">200 Chiffre d'affaires</field>
+        <field name="code">CHTAX_200</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = CHTAX_302a.balance + CHTAX_312a.balance + CHTAX_342a.balance + CHTAX_289.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_I"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_289" model="account.financial.html.report.line">
+        <field name="name">289 Déductions (ch.220 à ch.280)</field>
+        <field name="code">CHTAX_289</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = CHTAX_220.balance + CHTAX_221.balance + CHTAX_225.balance + CHTAX_230.balance + CHTAX_235.balance + CHTAX_280.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_I"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_220" model="account.financial.html.report.line">
+        <field name="name">220 Chiffre d'affaires imposable a 0% (export)</field>
+        <field name="code">CHTAX_220</field>
+        <field name="sequence" eval="0"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_220')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_289"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_221" model="account.financial.html.report.line">
+        <field name="name">221 Prestations fournies à l'étranger</field>
+        <field name="code">CHTAX_221</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_221')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_289"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_225" model="account.financial.html.report.line">
+        <field name="name">225 Transfer avec la procédure de déclaration</field>
+        <field name="code">CHTAX_225</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_225')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_289"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_230" model="account.financial.html.report.line">
+        <field name="name">230 Chiffre d'affaires non-imposable a 0% (exclu)</field>
+        <field name="code">CHTAX_230</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_230')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_289"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_235" model="account.financial.html.report.line">
+        <field name="name">235 Diminution de la contre-prestation</field>
+        <field name="code">CHTAX_235</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_235')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_289"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_280" model="account.financial.html.report.line">
+        <field name="name">280 Divers (p.ex valeur du terrain)</field>
+        <field name="code">CHTAX_280</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_280')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_289"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_II" model="account.financial.html.report.line">
+        <field name="name">II - CALCUL DE L'IMPOT</field>
+        <field name="code">CHTAX_II</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="special_date_changer">strict_range</field>
+        <field name="financial_report_id" ref="financial_report_l10n_ch"/>
+    </record>
+
+    <record id="financial_report_line_chtax_CAI" model="account.financial.html.report.line">
+        <field name="name">Chiffre d'affaires imposable</field>
+        <field name="code">CHTAX_CAI</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = CHTAX_302a.balance + CHTAX_312a.balance + CHTAX_342a.balance</field>
+        <field name="special_date_changer">strict_range</field>
+        <field name="parent_id" ref="financial_report_line_chtax_II"/>
+    </record>
+
+    <record id="financial_report_line_chtax_302a" model="account.financial.html.report.line">
+        <field name="name">302a Chiffre d'affaires imposable a 7.7% (TS)</field>
+        <field name="code">CHTAX_302a</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_302_a')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_CAI"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_312a" model="account.financial.html.report.line">
+        <field name="name">312a Chiffre d'affaires imposable a 2.5% (TR)</field>
+        <field name="code">CHTAX_312a</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_311_a')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_CAI"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_342a" model="account.financial.html.report.line">
+        <field name="name">342a Chiffre d'affaires imposable a 3.7% (TS)</field>
+        <field name="code">CHTAX_342a</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_342_a')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_CAI"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_BA" model="account.financial.html.report.line">
+        <field name="name">Base Impôt sur acquisitions de services</field>
+        <field name="code">CHTAX_BA</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = CHTAX_381a.balance + CHTAX_382a.balance</field>
+        <field name="special_date_changer">strict_range</field>
+        <field name="parent_id" ref="financial_report_line_chtax_II"/>
+    </record>
+
+    <record id="financial_report_line_chtax_381a" model="account.financial.html.report.line">
+        <field name="name">381a Impots sur les acquisitions</field>
+        <field name="code">CHTAX_381a</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_381_a')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_BA"/>
+        <field name="hide_if_zero" eval="True"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_382a" model="account.financial.html.report.line">
+        <field name="name">382a Impots sur les acquisitions</field>
+        <field name="code">CHTAX_382a</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_382_a')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_BA"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_399" model="account.financial.html.report.line">
+        <field name="name">399 TVA Due </field>
+        <field name="code">CHTAX_399</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = CHTAX_302b.balance + CHTAX_312b.balance + CHTAX_342b.balance + CHTAX_381b.balance + CHTAX_382b.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_ch"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_302b" model="account.financial.html.report.line">
+        <field name="name">302b TVA due a 7.7% (TS)</field>
+        <field name="code">CHTAX_302b</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_302_b')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_399"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_312b" model="account.financial.html.report.line">
+        <field name="name">312b TVA due a 2.5% (TR)</field>
+        <field name="code">CHTAX_312b</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_311_b')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_399"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_342b" model="account.financial.html.report.line">
+        <field name="name">342b TVA due a 3.7% (TS)</field>
+        <field name="code">CHTAX_342b</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_342_b')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_399"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_381b" model="account.financial.html.report.line">
+        <field name="name">381b Impots sur les acquisitions </field>
+        <field name="code">CHTAX_381b</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_381_b')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_399"/>
+        <field name="hide_if_zero" eval="True" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_382b" model="account.financial.html.report.line">
+        <field name="name">382b Impots sur les acquisitions </field>
+        <field name="code">CHTAX_382b</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_382_b')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_399"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_479" model="account.financial.html.report.line">
+        <field name="name">479 TVA préalable</field>
+        <field name="code">CHTAX_479</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = CHTAX_400.balance + CHTAX_405.balance + CHTAX_410.balance - CHTAX_415.balance - CHTAX_420.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_ch"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_400" model="account.financial.html.report.line">
+        <field name="name">400 TVA préalable sur biens et services</field>
+        <field name="code">CHTAX_400</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="['|', ('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_dedouanement')]), ('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_400')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_479"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_405" model="account.financial.html.report.line">
+        <field name="name">405 TVA préalable sur invest. et autres ch.</field>
+        <field name="code">CHTAX_405</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_405')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_479"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_410" model="account.financial.html.report.line">
+        <field name="name">410 Dégrèvement ultérieur de l'impot préalable</field>
+        <field name="code">CHTAX_410</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_410')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_479"/>
+        <field name="show_domain">never</field>
+        <field name="hide_if_zero" eval="True" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_415" model="account.financial.html.report.line">
+        <field name="name">415 Correction de l'impot préalable</field>
+        <field name="code">CHTAX_415</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_415')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_479"/>
+        <field name="show_domain">never</field>
+        <field name="hide_if_zero" eval="True" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_420" model="account.financial.html.report.line">
+        <field name="name">420 Réduction de la déduction de l'impot préalable</field>
+        <field name="code">CHTAX_420</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_420')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_chtax_479"/>
+        <field name="show_domain">never</field>
+        <field name="hide_if_zero" eval="True" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_cadre2_total" model="account.financial.html.report.line">
+        <field name="name">SOLDE</field>
+        <field name="code">CH_SOLDE</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="special_date_changer">strict_range</field>
+        <field name="financial_report_id" ref="financial_report_l10n_ch"/>
+    </record>
+
+    <record id="financial_report_line_chtax_500" model="account.financial.html.report.line">
+        <field name="name">500 Solde de TVA a payer a l'AFC</field>
+        <field name="code">CHTAX_500</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = (CHTAX_399.balance - CHTAX_479.balance) &gt; 0 and (CHTAX_399.balance - CHTAX_479.balance) or 0.0</field>
+        <field name="parent_id" ref="financial_report_line_chtax_cadre2_total"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="financial_report_line_chtax_510" model="account.financial.html.report.line">
+        <field name="name">510 Solde de TVA a recevoir de l'AFC</field>
+        <field name="code">CHTAX_510</field>
+        <field name="level" eval="0"/>
+        <field name="sequence" eval="4"/>
+        <field name="formulas">balance = (CHTAX_479.balance - CHTAX_399.balance) &gt; 0 and (CHTAX_479.balance - CHTAX_399.balance) or 0.0</field>
+        <field name="parent_id" ref="financial_report_line_chtax_cadre2_total"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+
+   <!-- BS REPORT  -->
+
+    <record id="account_financial_report_l10n_ch_bilan" model="account.financial.html.report">
+        <field name="name">Bilan</field>
+        <field name="date_range" eval="False"/>
+        <field name="parent_id" ref="l10n_ch.account_reports_ch_statements_menu"/>
+    </record>
+
+    <record id="account_financial_report_line_ch_1" model="account.financial.html.report.line">
+        <field name="name">ACTIF</field>
+        <field name="code">CH_1</field>
+        <field name="level" eval="0"/>
+        <field name="sequence" eval="1"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ch_bilan"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_10.balance + CH_14.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_10" model="account.financial.html.report.line">
+        <field name="name">ACTIF CIRCULANT</field>
+        <field name="code">CH_10</field>
+        <field name="level" eval="1"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_1"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_100.balance + CH_106.balance + CH_110.balance + CH_114.balance + CH_120.balance + CH_130.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_100" model="account.financial.html.report.line">
+        <field name="name">Trésorerie</field>
+        <field name="code">CH_100</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_10"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '1'), ('account_id.code', '&lt;', '106')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_106" model="account.financial.html.report.line">
+        <field name="name">Actifs à court terme cotés en bourse </field>
+        <field name="code">CH_106</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_10"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '106'), ('account_id.code', '&lt;', '11')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_110" model="account.financial.html.report.line">
+        <field name="name">Créances résultant de livraisons et prestations </field>
+        <field name="code">CH_110</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_10"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '11'), ('account_id.code', '&lt;', '114')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_114" model="account.financial.html.report.line">
+        <field name="name">Autres créances à court terme </field>
+        <field name="code">CH_114</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_10"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '114'), ('account_id.code', '&lt;', '120')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_120" model="account.financial.html.report.line">
+        <field name="name">Stocks et prestations non facturées </field>
+        <field name="code">CH_120</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="5"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_10"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '120'), ('account_id.code', '&lt;', '130')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_130" model="account.financial.html.report.line">
+        <field name="name">Actifs de régularisation (transitoires) </field>
+        <field name="code">CH_130</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="6"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_10"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '130'), ('account_id.code', '&lt;', '14')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_14" model="account.financial.html.report.line">
+        <field name="name">ACTIF IMMOBILISE</field>
+        <field name="code">CH_14</field>
+        <field name="level" eval="1"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_1"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_140.balance + CH_148.balance + CH_150.balance + CH_160.balance + CH_170.balance + CH_180.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_140" model="account.financial.html.report.line">
+        <field name="name">Immobilisations financières </field>
+        <field name="code">CH_140</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_14"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '14'), ('account_id.code', '&lt;', '148')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_148" model="account.financial.html.report.line">
+        <field name="name">Participations </field>
+        <field name="code">CH_148</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_14"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '148'), ('account_id.code', '&lt;', '150')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_150" model="account.financial.html.report.line">
+        <field name="name">Immobilisations corporelles meubles </field>
+        <field name="code">CH_150</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_14"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '150'), ('account_id.code', '&lt;', '160')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_160" model="account.financial.html.report.line">
+        <field name="name">Immobilisations corporelles immeubles </field>
+        <field name="code">CH_160</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_14"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '160'), ('account_id.code', '&lt;', '170')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_170" model="account.financial.html.report.line">
+        <field name="name">Immobilisations incorporelles </field>
+        <field name="code">CH_170</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="5"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_14"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '170'), ('account_id.code', '&lt;', '180')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_180" model="account.financial.html.report.line">
+        <field name="name">Capital non versé : capital social - capital de fondation"</field>
+        <field name="code">CH_180</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="6"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_14"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '180'), ('account_id.code', '&lt;', '2')]"/>
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_2" model="account.financial.html.report.line">
+        <field name="name">PASSIF</field>
+        <field name="code">CH_2</field>
+        <field name="level" eval="0"/>
+        <field name="sequence" eval="2"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ch_bilan"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_20.balance + CH_24.balance + CH_28.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_20" model="account.financial.html.report.line">
+        <field name="name">DETTE A COURT TERME</field>
+        <field name="code">CH_20</field>
+        <field name="level" eval="1"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_2"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_200.balance + CH_210.balance + CH_220.balance + CH_230.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_200" model="account.financial.html.report.line">
+        <field name="name">Dettes à court terme résultant d’achats et de prestations de services </field>
+        <field name="code">CH_200</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_20"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '2'), ('account_id.code', '&lt;', '210')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_210" model="account.financial.html.report.line">
+        <field name="name">Dettes à court terme rémunérés </field>
+        <field name="code">CH_210</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_20"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '210'), ('account_id.code', '&lt;', '220')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_220" model="account.financial.html.report.line">
+        <field name="name">Autres dettes à court terme </field>
+        <field name="code">CH_220</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_20"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '220'), ('account_id.code', '&lt;', '230')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_230" model="account.financial.html.report.line">
+        <field name="name">Passifs de régularisation (transitoires) et provisions à court terme </field>
+        <field name="code">CH_230</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_20"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '230'), ('account_id.code', '&lt;', '24')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_24" model="account.financial.html.report.line">
+        <field name="name">DETTE A LONG TERME</field>
+        <field name="code">CH_24</field>
+        <field name="level" eval="1"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_2"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_240.balance + CH_250.balance + CH_260.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_240" model="account.financial.html.report.line">
+        <field name="name">Dettes à long terme rémunérées </field>
+        <field name="code">CH_240</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_24"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '24'), ('account_id.code', '&lt;', '250')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_250" model="account.financial.html.report.line">
+        <field name="name">Autres dettes à long terme </field>
+        <field name="code">CH_250</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_24"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '250'), ('account_id.code', '&lt;', '260')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_260" model="account.financial.html.report.line">
+        <field name="name">Provisions à long termes et provisions légales </field>
+        <field name="code">CH_260</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_24"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '260'), ('account_id.code', '&lt;', '28')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_28" model="account.financial.html.report.line">
+        <field name="name">CAPITAUX PROPRES</field>
+        <field name="code">CH_28</field>
+        <field name="level" eval="1"/>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_2"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_280.balance + CH_290.balance + CH_299.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_280" model="account.financial.html.report.line">
+        <field name="name">Capital social ou capital de fondation </field>
+        <field name="code">CH_280</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_28"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '28'), ('account_id.code', '&lt;', '290')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_290" model="account.financial.html.report.line">
+        <field name="name">Réserves / bénéfices et pertes reportés </field>
+        <field name="code">CH_290</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_28"/>
+        <field name="groupby">account_id</field>
+        <field name="special_date_changer">strict_range</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '290'), ('account_id.code', '&lt;', '2991')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_299" model="account.financial.html.report.line">
+        <field name="name">Résultat de l'exercice</field>
+        <field name="code">CH_299</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_28"/>
+        <field name="special_date_changer">from_beginning</field>
+        <field name="green_on_positive">true</field>
+        <field name="domain" eval="[('account_id.user_type_id', '=', ref('account.data_unaffected_earnings'))]"/>
+        <field name="formulas">balance = CH_R.balance - sum.balance</field>
+    </record>
+
+
+
+   <!-- P&L REPORT  -->
+
+    <record id="account_financial_report_l10n_ch_cdr" model="account.financial.html.report">
+        <field name="name">Compte de résultat</field>
+        <field name="parent_id" ref="l10n_ch.account_reports_ch_statements_menu"/>
+    </record>
+
+    <record id="account_financial_report_line_ch_R" model="account.financial.html.report.line">
+        <field name="name">= Bénéfice / Perte : </field>
+        <field name="code">CH_R</field>
+        <field name="level" eval="0"/>
+        <field name="sequence" eval="1"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ch_cdr"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_RAI.balance + CH_89.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_3" model="account.financial.html.report.line">
+        <field name="name">= Produits nets des ventes et prestations de service</field>
+        <field name="code">CH_3</field>
+        <field name="level" eval="0"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_R"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_30.balance + CH_39.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_30" model="account.financial.html.report.line">
+        <field name="name">Chiffre d'affaires</field>
+        <field name="code">CH_30</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_3"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '3'), ('account_id.code', '&lt;', '39')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_39" model="account.financial.html.report.line">
+        <field name="name">+/- Variation des stocks</field>
+        <field name="code">CH_39</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_3"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '39'), ('account_id.code', '&lt;', '4')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_ebitda" model="account.financial.html.report.line">
+        <field name="name">= Résultat d'exploitation avant intérêts, impôts et amortissements (EBITDA) </field>
+        <field name="code">CH_EBITDA</field>
+        <field name="level" eval="0"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_R"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_3.balance +CH_4.balance + CH_5.balance + CH_60.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_4" model="account.financial.html.report.line">
+        <field name="name">- Charges de marchandises et de matériel</field>
+        <field name="code">CH_4</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_ebitda"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '4'), ('account_id.code', '&lt;', '5')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_5" model="account.financial.html.report.line">
+        <field name="name">- Charges de personnel</field>
+        <field name="code">CH_5</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_ebitda"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '5'), ('account_id.code', '&lt;', '6')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_60" model="account.financial.html.report.line">
+        <field name="name">- Autres charges d‘exploitation </field>
+        <field name="code">CH_60</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_ebitda"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '6'), ('account_id.code', '&lt;', '68')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_ebit" model="account.financial.html.report.line">
+        <field name="name">= Résultat d'exploitation avant intérêts et impôts (EBIT) </field>
+        <field name="code">CH_EBIT</field>
+        <field name="level" eval="0"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_R"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_EBITDA.balance + CH_68.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_68" model="account.financial.html.report.line">
+        <field name="name">- Amortissements et ajustements de valeur des postes sur immobilisations corporelles </field>
+        <field name="code">CH_68</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_ebit"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '68'), ('account_id.code', '&lt;', '69')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+
+    <record id="account_financial_report_line_ch_ebt" model="account.financial.html.report.line">
+        <field name="name">= Résultat d'exploitation avant impôts (EBT) </field>
+        <field name="code">CH_EBT</field>
+        <field name="level" eval="0"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_R"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_EBIT.balance + CH_69.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_69" model="account.financial.html.report.line">
+        <field name="name">+/- Résultat financier </field>
+        <field name="code">CH_69</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_ebt"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '69'), ('account_id.code', '&lt;', '7')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_rai" model="account.financial.html.report.line">
+        <field name="name">= Résultat de l'exercice avant impôts</field>
+        <field name="code">CH_RAI</field>
+        <field name="level" eval="0"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_R"/>
+        <field name="domain" eval=""/>
+        <field name="formulas">balance = CH_EBT.balance + CH_7.balance + CH_80.balance + CH_85.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_7" model="account.financial.html.report.line">
+        <field name="name">+/- Résultat des activités annexes d'exploitation</field>
+        <field name="code">CH_7</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_rai"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '7'), ('account_id.code', '&lt;', '8')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_80" model="account.financial.html.report.line">
+        <field name="name">+/- Résultat hors-exploitation </field>
+        <field name="code">CH_80</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_rai"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '8'), ('account_id.code', '&lt;', '85')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_85" model="account.financial.html.report.line">
+        <field name="name">+/- Résultat extraordinaires</field>
+        <field name="code">CH_85</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_rai"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '85'), ('account_id.code', '&lt;', '89')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_line_ch_89" model="account.financial.html.report.line">
+        <field name="name">- Impôts directs </field>
+        <field name="code">CH_89</field>
+        <field name="level" eval="2"/>
+        <field name="sequence" eval="99"/>
+        <field name="parent_id" ref="account_financial_report_line_ch_R"/>
+        <field name="groupby">account_id</field>
+        <field name="domain" eval="[('account_id.code', '&gt;=', '89'), ('account_id.code', '&lt;', '9')]"/>
+        <field name="formulas">balance = -sum.balance</field>
+    </record>
+</odoo>

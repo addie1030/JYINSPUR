@@ -1,0 +1,136 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_delivery_ups
+# 
+# Translators:
+# Sergio Zanchetta <primes2h@gmail.com>, 2018
+# Paolo Valier, 2018
+# David Minneci <david@numeko.it>, 2018
+# Léonie Bouchat <lbo@odoo.com>, 2018
+# Paolo Caruccio <paolo.caruccio66@gmail.com>, 2018
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:07+0000\n"
+"PO-Revision-Date: 2018-08-24 11:49+0000\n"
+"Last-Translator: Paolo Caruccio <paolo.caruccio66@gmail.com>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.payment_delivery_methods_inherit_website_sale_delivery
+msgid "(Bill My Account)"
+msgstr "(Fatturare il mio conto)"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,pending_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid ""
+"<i>Pending</i>, Thanks for choosing COD(Collect on Delivery/Cash on "
+"Delivery) option. Delivery boy will collect the payment on delivery."
+msgstr ""
+"<i>In attesa</i>, Grazie di aver scelto l'opzione COD (Collect on "
+"Delivery/Cash on Delivery). Il ragazzo delle consegne incasserà il pagamento"
+" alla consegna."
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,cancel_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "<span><i>Cancel,</i> Your payment has been cancelled.</span>"
+msgstr "<span><i>Annulla,</i> Il tuo pagamento è stato annullato.</span>"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,done_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid ""
+"<span><i>Done,</i> Your online payment has been successfully processed. "
+"Thank you for your order.</span>"
+msgstr ""
+"<span><i>Fatto,</i> Il tuo pagamento è stato elaborato correttamente. Grazie"
+" per il tuo ordine.</span>"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,error_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid ""
+"<span><i>Error,</i> Please be aware that an error occurred during the "
+"transaction. The order has been confirmed but will not be paid. Do not "
+"hesitate to contact us if you have any questions on the status of your "
+"order.</span>"
+msgstr ""
+"<span><i>Errore,</i> Si prega di prendere in considerazione che si è "
+"verificato un errore durante la transazione. L'ordine è stato confermato ma "
+"non verrà pagato. Non esitate a contattarci se avete domande sullo stato del"
+" vostro ordine.</span>"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Apply"
+msgstr "Salva"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Bank Account"
+msgstr "Conto Bancario"
+
+#. module: website_delivery_ups
+#: model:payment.acquirer,name:website_delivery_ups.payment_acquirer_ups_cod
+msgid "COD"
+msgstr "COD"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Close"
+msgstr "Chiudi"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Communication"
+msgstr "Comunicazione"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Enter your Carrier Account #"
+msgstr "Inserisci il numero di conto del vettore"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Please use the following transfer details"
+msgstr "Usa le seguenti informazioni per il bonifico bancario"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Please use the order name as communication reference."
+msgstr "Usa il nome dell'ordine come riferimento di comunicazione. "
+
+#. module: website_delivery_ups
+#: model:ir.model,name:website_delivery_ups.model_sale_order
+msgid "Sale Order"
+msgstr "Ordini di Vendita"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Select Freight Collect Method"
+msgstr "Seleziona il metodo di ritiro delle merci"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "UPS Bill My Account"
+msgstr "UPS Fatturare il mio conto"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.res_config_settings_view_form_inherit_website_delivery_ups
+msgid "UPS Delivery Methods"
+msgstr "Metodi di consegna UPS"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.payment_delivery_methods_inherit_website_sale_delivery
+msgid "Using Account"
+msgstr "Usando il mio conto"

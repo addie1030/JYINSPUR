@@ -1,0 +1,230 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * web_dashboard
+# 
+# Translators:
+# Akram Alfusayal <akram_ma@hotmail.com>, 2018
+# amrnegm <amrnegm.01@gmail.com>, 2018
+# Osoul <baruni@osoul.ly>, 2018
+# Osama Ahmaro <osamaahmaro@gmail.com>, 2018
+# Shaima Safar <shaima.safar@open-inside.com>, 2018
+# Islam Eldeeb <islameldeb@gmail.com>, 2018
+# Martin Trigaux, 2018
+# Waleed Mohsen <mohsen.waleed@gmail.com>, 2018
+# Mustafa Rawi <mustafa@cubexco.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-02 10:32+0000\n"
+"PO-Revision-Date: 2018-08-24 11:49+0000\n"
+"Last-Translator: Mustafa Rawi <mustafa@cubexco.com>, 2019\n"
+"Language-Team: Arabic (https://www.transifex.com/odoo/teams/41243/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/js/dashboard_controller.js:60
+#, python-format
+msgid "%s Analysis"
+msgstr ""
+
+#. module: web_dashboard
+#: model:ir.model,name:web_dashboard.model_ir_actions_act_window_view
+msgid "Action Window View"
+msgstr ""
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Activity"
+msgstr "النشاط"
+
+#. module: web_dashboard
+#: model:ir.model,name:web_dashboard.model_base
+msgid "Base"
+msgstr "الأساس"
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Calendar"
+msgstr "التقويم"
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Cohort"
+msgstr "مجموعة"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:65
+#, python-format
+msgid "Column:"
+msgstr ""
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/js/dashboard_view.js:27
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+#, python-format
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: web_dashboard
+#: selection:ir.ui.view,type:0
+msgid "Diagram"
+msgstr "الرسم التخطيطي"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:40
+#, python-format
+msgid "Domain Label:"
+msgstr ""
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:35
+#, python-format
+msgid "Domain:"
+msgstr "النطاق:"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:26
+#, python-format
+msgid "Field:"
+msgstr "الحقل:"
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Form"
+msgstr "النموذج"
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Gantt"
+msgstr "جانت"
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Graph"
+msgstr "الرسم البياني"
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Grid"
+msgstr "الشبكة"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:45
+#, python-format
+msgid "Group Operator:"
+msgstr ""
+
+#. module: web_dashboard
+#: model:ir.model,name:web_dashboard.model_ir_http
+msgid "HTTP Routing"
+msgstr "مسار HTTP"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:61
+#, python-format
+msgid "Help:"
+msgstr ""
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Kanban"
+msgstr "نظام رقابة المخزون"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:53
+#, python-format
+msgid "Modifiers:"
+msgstr "المُعدِّلات:"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:13
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:18
+#, python-format
+msgid "Name:"
+msgstr "الاسم:"
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Pivot"
+msgstr "محور"
+
+#. module: web_dashboard
+#: selection:ir.ui.view,type:0
+msgid "QWeb"
+msgstr "QWeb"
+
+#. module: web_dashboard
+#: selection:ir.ui.view,type:0
+msgid "Search"
+msgstr "بحث"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:22
+#, python-format
+msgid "String:"
+msgstr ""
+
+#. module: web_dashboard
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Tree"
+msgstr "الشجرة"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:57
+#, python-format
+msgid "Value Label:"
+msgstr ""
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:30
+#, python-format
+msgid "Value:"
+msgstr ""
+
+#. module: web_dashboard
+#: model:ir.model,name:web_dashboard.model_ir_ui_view
+msgid "View"
+msgstr "عرض"
+
+#. module: web_dashboard
+#: model:ir.model.fields,field_description:web_dashboard.field_ir_actions_act_window_view__view_mode
+#: model:ir.model.fields,field_description:web_dashboard.field_ir_ui_view__type
+msgid "View Type"
+msgstr "نوع واجهة العرض"
+
+#. module: web_dashboard
+#. openerp-web
+#: code:addons/web_dashboard/static/src/xml/dashboard.xml:49
+#, python-format
+msgid "Widget:"
+msgstr "الأداة:"

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="financial_report_l10n_si" model="account.financial.html.report">
+        <field name="name">Struktura DDV</field>
+        <field name='parent_id' ref='l10n_si.account_reports_si_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+    <record id="financial_report_line_si_01" model="account.financial.html.report.line">
+        <field name="name">Znesek osnov za DDV</field>
+        <field name="code">SITAX_OS_SUM</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = SITAX_OS_NEODB.balance + SITAX_OS_ODB.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_si"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_0101" model="account.financial.html.report.line">
+        <field name="name">- neodbitni DDV</field>
+        <field name="code">SITAX_OS_NEODB</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = SITAX_OS_NEODB_VST.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_01"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_010101" model="account.financial.html.report.line">
+        <field name="name">- vstopni DDV</field>
+        <field name="code">SITAX_OS_NEODB_VST</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = SITAX_OS_NEODB_VST_20.balance + SITAX_OS_NEODB_VST_8_5.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_0101"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_01010101" model="account.financial.html.report.line">
+        <field name="name">Nabave po osnovni stopnji DDV</field>
+        <field name="code">SITAX_OS_NEODB_VST_20</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_si.DDV_V_22_NE')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_010101"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_01010102" model="account.financial.html.report.line">
+        <field name="name">Nabave po znižani stopnji DDV</field>
+        <field name="code">SITAX_OS_NEODB_VST_8_5</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_si.DDV_V_9_5_NE')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_010101"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_0102" model="account.financial.html.report.line">
+        <field name="name">- odbitni DDV</field>
+        <field name="code">SITAX_OS_ODB</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = SITAX_OS_ODB_IZST.balance + SITAX_OS_ODB_VST.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_01"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_010201" model="account.financial.html.report.line">
+        <field name="name">- izstopni DDV</field>
+        <field name="code">SITAX_OS_ODB_IZST</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = SITAX_OS_ODB_IZST_0.balance + SITAX_OS_ODB_IZST_20.balance + SITAX_OS_ODB_IZST_8_5.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_0102"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_0102011" model="account.financial.html.report.line">
+        <field name="name">Prodaja oproščena DDV</field>
+        <field name="code">SITAX_OS_ODB_IZST_0</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_si.DDV_I_0')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_010201"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_01020102" model="account.financial.html.report.line">
+        <field name="name">Prodaja po osnovni stopnji DDV</field>
+        <field name="code">SITAX_OS_ODB_IZST_20</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_si.DDV_I_22')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_010201"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_01020103" model="account.financial.html.report.line">
+        <field name="name">Prodaja po znižani stopnji DDV</field>
+        <field name="code">SITAX_OS_ODB_IZST_8_5</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_si.DDV_I_9_5')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_010201"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_010202" model="account.financial.html.report.line">
+        <field name="name">- vstopni DDV</field>
+        <field name="code">SITAX_OS_ODB_VST</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = SITAX_OS_ODB_VST_0.balance + SITAX_OS_ODB_VST_20.balance + SITAX_OS_ODB_VST_8_5.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_0102"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_01020201" model="account.financial.html.report.line">
+        <field name="name">Nabave oproščene DDV</field>
+        <field name="code">SITAX_OS_ODB_VST_0</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_si.DDV_V_0')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_010202"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_01020202" model="account.financial.html.report.line">
+        <field name="name">Nabave po osnovni stopnji DDV</field>
+        <field name="code">SITAX_OS_ODB_VST_20</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_si.DDV_V_22_sam'), ref('l10n_si.DDV_V_22')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_010202"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_01020203" model="account.financial.html.report.line">
+        <field name="name">Nabave po znižani stopnji DDV</field>
+        <field name="code">SITAX_OS_ODB_VST_8_5</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_si.DDV_V_9_5'), ref('l10n_si.DDV_V_9_5_sam')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_010202"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_02" model="account.financial.html.report.line">
+        <field name="name">Znesek DDV</field>
+        <field name="code">SITAX_ZN_SUM</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = SITAX_ZN_NEODB.balance + SITAX_ZN_ODB.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_si"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_0201" model="account.financial.html.report.line">
+        <field name="name">- neodbitni DDV</field>
+        <field name="code">SITAX_ZN_NEODB</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = SITAX_ZN_NEODB_VST.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_02"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_020101" model="account.financial.html.report.line">
+        <field name="name">- vstopni DDV</field>
+        <field name="code">SITAX_ZN_NEODB_VST</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = SITAX_ZN_NEODB_VST_20.balance + SITAX_ZN_NEODB_VST_8_5.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_0201"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_02010101" model="account.financial.html.report.line">
+        <field name="name">Neodbitni DDV – osnovna stopnja</field>
+        <field name="code">SITAX_ZN_NEODB_VST_20</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_si.DDV_V_22_NE')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_020101"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_02010102" model="account.financial.html.report.line">
+        <field name="name">Neodbitni DDV – znižana stopnja</field>
+        <field name="code">SITAX_ZN_NEODB_VST_8_5</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_si.DDV_V_9_5_NE')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_020101"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_0202" model="account.financial.html.report.line">
+        <field name="name">- odbitni DDV</field>
+        <field name="code">SITAX_ZN_ODB</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = SITAX_ZN_ODB_IZST.balance + SITAX_ZN_ODB_VST.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_02"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_020201" model="account.financial.html.report.line">
+        <field name="name">- izstopni DDV</field>
+        <field name="code">SITAX_ZN_ODB_IZST</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = SITAX_ZN_ODB_IZST_20.balance + SITAX_ZN_ODB_IZST_8_5.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_0202"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_02020101" model="account.financial.html.report.line">
+        <field name="name">Izstopni DDV - osnovna stopnja</field>
+        <field name="code">SITAX_ZN_ODB_IZST_20</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_si.DDV_I_22')])]"/>
+        <field name="formulas">balance = - sum.balance + SITAX_ZN_ODB_IZST_20_bis.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_020201"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_02020101b" model="account.financial.html.report.line">
+        <field name="name">Izstopni DDV - osnovna stopnja - bis (because DDV_I_22_SO needs to have the oposite sign)</field>
+        <field name="code">SITAX_ZN_ODB_IZST_20_bis</field>
+        <field name="level" eval="3"/>
+        <field name="sequence" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_si.DDV_I_22_SO')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_02020102" model="account.financial.html.report.line">
+        <field name="name">Izstopni DDV - znižana stopnja</field>
+        <field name="code">SITAX_ZN_ODB_IZST_8_5</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_si.DDV_I_9_5')])]"/>
+        <field name="formulas">balance = - sum.balance + SITAX_ZN_ODB_IZST_8_5_bis.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_020201"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_02020102b" model="account.financial.html.report.line">
+        <field name="name">Izstopni DDV - znižana stopnja bis (same reason as above)</field>
+        <field name="code">SITAX_ZN_ODB_IZST_8_5_bis</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_si.DDV_I_9_5_SO')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_020202" model="account.financial.html.report.line">
+        <field name="name">- vstopni DDV</field>
+        <field name="code">SITAX_ZN_ODB_VST</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = SITAX_ZN_ODB_VST_20.balance + SITAX_ZN_ODB_VST_8_5.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_0202"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_02020201" model="account.financial.html.report.line">
+        <field name="name">Vstopni DDV - osnovna stopnja</field>
+        <field name="code">SITAX_ZN_ODB_VST_20</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_si.DDV_V_22'), ref('l10n_si.DDV_V_22_SO'), ref('l10n_si.DDV_V_22_sam')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_020202"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_si_02020202" model="account.financial.html.report.line">
+        <field name="name">Vstopni DDV - znižana stopnja</field>
+        <field name="code">SITAX_ZN_ODB_VST_8_5</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_si.DDV_V_9_5'), ref('l10n_si.DDV_V_9_5_SO'), ref('l10n_si.DDV_V_9_5_sam')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_si_020202"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

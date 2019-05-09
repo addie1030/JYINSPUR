@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_product_view_form_mps" model="ir.ui.view">
+        <field name="name">product.product.view.form.mps</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <form string="Forecast Product">
+                <div class="oe_inline">
+                    <h1><field name="product_tmpl_id" readonly="1" string="Product"/></h1>
+                </div>
+                <group>
+                    <group>
+                        <label for="mps_forecasted"/>
+                        <div class="o_row">
+                            <field name="mps_forecasted"/>
+                            <field name="uom_id" readonly="1"/>
+                        </div>
+                        <field name="mps_min_supply"/>
+                        <field name="mps_max_supply"/>
+                        <field name="mps_active"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="do_forecast" type="object" string="Save" class="btn-primary"/>
+                    <button string="Cancel" class="btn btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

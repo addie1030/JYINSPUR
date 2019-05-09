@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_financial_report_l10n_pl" model="account.financial.html.report">
+        <field name="name">Rejestr główny</field>
+        <field name='parent_id' ref='l10n_pl.account_reports_pl_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+    <record id="account_financial_report_pl_01" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Razem C</field>
+        <field name="code">C_RAZEM_35</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = PLTAXC_01_10.balance + PLTAXC_02_11.balance + PLTAXC_03_13.balance + PLTAXC_04_15.balance + PLTAXC_05_17.balance + PLTAXC_06_19.balance + PLTAXC_07_21.balance + PLTAXC_08_22.balance + PLTAXC_09_23.balance + PLTAXC_10_25.balance + PLTAXC_11_27.balance + PLTAXC_12_31.balance</field>
+        <field name="financial_report_id" ref="account_financial_report_l10n_pl"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_01" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Dostawa towarów/usług, kraj, zwolnione</field>
+        <field name="code">PLTAXC_01_10</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_02')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_02" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Dostawa towarów/usług, poza kraj</field>
+        <field name="code">PLTAXC_02_11</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_03')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_02_01" model="account.financial.html.report.line">
+        <field name="name">Podstawa - W tym usługi art 100.1.4</field>
+        <field name="code">PLTAXC_02a_12</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_04')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_03" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Dostawa towarów/usług, kraj, 0%</field>
+        <field name="code">PLTAXC_03_13</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_05')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_03_01" model="account.financial.html.report.line">
+        <field name="name">Podstawa - W tym towary art 129</field>
+        <field name="code">PLTAXC_03a_14</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_pl_01_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_04" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Dostawa towarów/usług, kraj, 3% lub 5%</field>
+        <field name="code">PLTAXC_04_15</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_07')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_05" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Dostawa towarów/usług, kraj, 7% lub 8%</field>
+        <field name="code">PLTAXC_05_17</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_08')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_06" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Dostawa towarów/usług, kraj, 22% lub 23%</field>
+        <field name="code">PLTAXC_06_19</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_09')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_07" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Wew-wspól dostawa towarów</field>
+        <field name="code">PLTAXC_07_21</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_10')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_08" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Eksport towarów</field>
+        <field name="code">PLTAXC_08_22</field>
+        <field name="sequence" eval="8"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_11')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_09" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Wewn-wspól. nabycie towarów</field>
+        <field name="code">PLTAXC_09_23</field>
+        <field name="sequence" eval="9"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_12')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_10" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Import towarów art. 33a</field>
+        <field name="code">PLTAXC_10_25</field>
+        <field name="sequence" eval="10"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_13')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_11" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Import usług</field>
+        <field name="code">PLTAXC_11_27</field>
+        <field name="sequence" eval="11"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_14')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_11_01" model="account.financial.html.report.line">
+        <field name="name">Podstawa - W tym nabycie wg art 28b</field>
+        <field name="code">PLTAXC_11a_29</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_15')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01_11"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_12" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Dostawa towarów, podatnik nabywca</field>
+        <field name="code">PLTAXC_12_31</field>
+        <field name="sequence" eval="12"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_16')])]"/>
+        <field name="formulas">balance = sum.balance + PLTAXC_12_31b.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_01_12b" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Dostawa towarów, podatnik nabywca bis</field>
+        <field name="code">PLTAXC_12_31b</field>
+        <field name="sequence" eval="12"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_17')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_02" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Razem D</field>
+        <field name="code">PLTAXD_RAZEM_00</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = PLTAXD_02_39.balance + PLTAXD_02_41.balance</field>
+        <field name="financial_report_id" ref="account_financial_report_l10n_pl"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_02_01" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Nabycie towarów i usług ś.trwałe</field>
+        <field name="code">PLTAXD_02_39</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_pl_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_02_02" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Nabycie towarów i usług pozostałych</field>
+        <field name="code">PLTAXD_02_41</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_20')])]"/>
+        <field name="formulas">balance = sum.balance + PLTAXD_02_41b.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_02_02b" model="account.financial.html.report.line">
+        <field name="name">Podstawa - Nabycie towarów i usług pozostałych bis</field>
+        <field name="code">PLTAXD_02_41b</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_pl.tag_pl_21')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03" model="account.financial.html.report.line">
+        <field name="name">Podatek - Do przeniesienia</field>
+        <field name="code">PLTAXE_55</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = PLTAXE_50.balance + PLTAXE_51.balance</field>
+        <field name="financial_report_id" ref="account_financial_report_l10n_pl"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01" model="account.financial.html.report.line">
+        <field name="name">Podatek - Nadwyżka naliczonego nad należnym</field>
+        <field name="code">PLTAXE_50</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = PLTAXE_48.balance + PLTAXE_49.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01" model="account.financial.html.report.line">
+        <field name="name">Podatek - Do wpłaty do US</field>
+        <field name="code">PLTAXE_48</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = PLTAXE_46.balance + PLTAXE_47.balance + PLTAXC_RAZEM_36.balance + PLTAXD_03_45.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_01" model="account.financial.html.report.line">
+        <field name="name">Podatek - Wydatek na kasy rejestrujące</field>
+        <field name="code">PLTAXE_46</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_02" model="account.financial.html.report.line">
+        <field name="name">Podatek - Objęty zaniechaniem poboru</field>
+        <field name="code">PLTAXE_47</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03" model="account.financial.html.report.line">
+        <field name="name">Podatek - Razem C</field>
+        <field name="code">PLTAXC_RAZEM_36</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="3"/>
+        <field name="formulas">balance = PLTAXC_04_16.balance + PLTAXC_05_18.balance + PLTAXC_06_20.balance + PLTAXC_09_24.balance + PLTAXC_10_26.balance + PLTAXC_11_28.balance + PLTAXC_12_32.balance + PLTAXC_13_33.balance + PLTAXC_14_34.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_01" model="account.financial.html.report.line">
+        <field name="name">Podatek - Dostawa towarów/usług, kraj, 3% lub 5%</field>
+        <field name="code">PLTAXC_04_16</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="4"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_28')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_02" model="account.financial.html.report.line">
+        <field name="name">Podatek - Dostawa towarów/usług, kraj, 7% lub 8%</field>
+        <field name="code">PLTAXC_05_18</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="4"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_29')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_03" model="account.financial.html.report.line">
+        <field name="name">Podatek - Dostawa towarów/usług, kraj, 22% lub 23%</field>
+        <field name="code">PLTAXC_06_20</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="4"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_30')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_04" model="account.financial.html.report.line">
+        <field name="name">Podatek - Wewn-wspól. nabycie towarów</field>
+        <field name="code">PLTAXC_09_24</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="4"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_31')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_05" model="account.financial.html.report.line">
+        <field name="name">Podatek - Import towarów art. 33a</field>
+        <field name="code">PLTAXC_10_26</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="4"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_32')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_06" model="account.financial.html.report.line">
+        <field name="name">Podatek - Import usług</field>
+        <field name="code">PLTAXC_11_28</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="4"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_33')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_06_01" model="account.financial.html.report.line">
+        <field name="name">Podatek - W tym nabycie wg art 28b</field>
+        <field name="code">PLTAXC_11a_30</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="5"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_34')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03_06"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_07" model="account.financial.html.report.line">
+        <field name="name">Podatek - Dostawa towarów, podatnik nabywca</field>
+        <field name="code">PLTAXC_12_32</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="4"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_35')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_08" model="account.financial.html.report.line">
+        <field name="name">Podatek - Ze spisu z natury art 14.5</field>
+        <field name="code">PLTAXC_13_33</field>
+        <field name="sequence" eval="8"/>
+        <field name="level" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_03_09" model="account.financial.html.report.line">
+        <field name="name">Podatek - Wew.wspól. nabycie środk. transp. termin</field>
+        <field name="code">PLTAXC_14_34</field>
+        <field name="sequence" eval="9"/>
+        <field name="level" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_03"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_04" model="account.financial.html.report.line">
+        <field name="name">Podatek - Razem D</field>
+        <field name="code">PLTAXD_03_45</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="3"/>
+        <field name="formulas">balance = PLTAXD_01_37.balance + PLTAXD_01_38.balance + PLTAXD_02_40.balance + PLTAXD_02_42.balance + PLTAXD_03_43.balance + PLTAXD_03_44.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_04_01" model="account.financial.html.report.line">
+        <field name="name">Podatek - Nadwyżka z poprzedniej deklaracji</field>
+        <field name="code">PLTAXD_01_37</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_04"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_04_02" model="account.financial.html.report.line">
+        <field name="name">Podatek - Naliczony ze spisu z natury, art.113</field>
+        <field name="code">PLTAXD_01_38</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_04"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_04_03" model="account.financial.html.report.line">
+        <field name="name">Podatek - Nabycie towarów i usług ś.trwałe</field>
+        <field name="code">PLTAXD_02_40</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_04"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_04_04" model="account.financial.html.report.line">
+        <field name="name">Podatek - Nabycie towarów i usług pozostałych</field>
+        <field name="code">PLTAXD_02_42</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="4"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_42')])]"/>
+        <field name="formulas">balance = sum.balance + PLTAXD_02_42b.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_04"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_04_04b" model="account.financial.html.report.line">
+        <field name="name">Podatek - Nabycie towarów i usług pozostałych bis</field>
+        <field name="code">PLTAXD_02_42b</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="4"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_pl.tag_pl_43')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_04_05" model="account.financial.html.report.line">
+        <field name="name">Podatek - Korekta naliczonego od nabycia ś.trwałych</field>
+        <field name="code">PLTAXD_03_43</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_04"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_01_04_06" model="account.financial.html.report.line">
+        <field name="name">Podatek - Korekta naliczonego od pozostałych nabyć</field>
+        <field name="code">PLTAXD_03_44</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01_01_04"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_01_02" model="account.financial.html.report.line">
+        <field name="name">Podatek - Wydatek na kasy do zwrotu w tym okresie</field>
+        <field name="code">PLTAXE_49</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_02" model="account.financial.html.report.line">
+        <field name="name">Podatek - Do zwrotu</field>
+        <field name="code">PLTAXE_51</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = PLTAXE_52.balance + PLTAXE_53.balance + PLTAXE_54.balance</field>
+        <field name="parent_id" ref="account_financial_report_pl_03"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_02_01" model="account.financial.html.report.line">
+        <field name="name">Podatek - Do zwrotu 25 dni</field>
+        <field name="code">PLTAXE_52</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_02_02" model="account.financial.html.report.line">
+        <field name="name">Podatek - Do zwrotu 60 dni</field>
+        <field name="code">PLTAXE_53</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_pl_03_02_03" model="account.financial.html.report.line">
+        <field name="name">Podatek - Do zwrotu 180 dni</field>
+        <field name="code">PLTAXE_54</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_pl_03_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

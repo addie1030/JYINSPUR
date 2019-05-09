@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_account_taxcloud
+# 
+# Translators:
+# zbik2607 <darek@krokus.com.pl>, 2018
+# Martin Trigaux, 2018
+# Paweł Wodyński <pw@myodoo.pl>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:06+0000\n"
+"PO-Revision-Date: 2018-09-21 14:06+0000\n"
+"Last-Translator: Paweł Wodyński <pw@myodoo.pl>, 2018\n"
+"Language-Team: Polish (https://www.transifex.com/odoo/teams/41243/pl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. module: sale_account_taxcloud
+#: model:ir.model,name:sale_account_taxcloud.model_account_invoice
+msgid "Invoice"
+msgstr "Faktura"
+
+#. module: sale_account_taxcloud
+#: model:ir.model,name:sale_account_taxcloud.model_sale_order
+msgid "Sale Order"
+msgstr "Zamówienie sprzedaży"
+
+#. module: sale_account_taxcloud
+#: code:addons/sale_account_taxcloud/models/sale_order.py:34
+#, python-format
+msgid "The configuration of TaxCloud is in the Accounting app, Settings menu."
+msgstr ""
+"Konfiguracja TaxCloud znajduje się w aplikacji Księgowość, menu Ustawienia."
+
+#. module: sale_account_taxcloud
+#: code:addons/sale_account_taxcloud/models/sale_order.py:34
+#, python-format
+msgid "Unable to retrieve taxes from TaxCloud: "
+msgstr "Nie można pobrać podatków z TaxCloud:"
+
+#. module: sale_account_taxcloud
+#: model:ir.actions.server,name:sale_account_taxcloud.action_sale_order_update_taxes
+msgid "Update taxes with Taxcloud"
+msgstr "Zaktualizuj podatki za pomocą usługi TaxCloud"

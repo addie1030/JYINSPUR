@@ -1,0 +1,2536 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_reports
+# 
+# Translators:
+# Otgonbayar.A <gobi.mn@gmail.com>, 2018
+# Martin Trigaux, 2018
+# Uurdmunkh Ulam-Orgikh <uurdmunkh.u@gmail.com>, 2019
+# Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 09:12+0000\n"
+"PO-Revision-Date: 2018-08-24 11:36+0000\n"
+"Last-Translator: Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2019\n"
+"Language-Team: Mongolian (https://www.transifex.com/odoo/teams/41243/mn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: mn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:240
+#, python-format
+msgid "%s Payment Reminder"
+msgstr "%s Төлбөрийн Сануулга"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_general_ledger_report
+msgid "&amp;nbsp;"
+msgstr "&amp;nbsp;"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:30
+#, python-format
+msgid "&times;"
+msgstr "&times;"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:582
+#, python-format
+msgid "(No Group)"
+msgstr "(Бүлэг биш)"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_financial_report.py:355
+#: code:addons/account_reports/models/account_financial_report.py:357
+#, python-format
+msgid "(copy)"
+msgstr "(хуулбарлах)"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:22
+#, python-format
+msgid "1 - 30"
+msgstr "1 - 30"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:22
+#, python-format
+msgid "31 - 60"
+msgstr "31 - 60"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:22
+#, python-format
+msgid "61 - 90"
+msgstr "61 - 90"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:22
+#, python-format
+msgid "91 - 120"
+msgstr "91 - 120"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_analytic
+msgid "<b>Accounts</b><br/>"
+msgstr "<b>Данс</b><br/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "<b>Next Reminder Date:</b>"
+msgstr "<b>Дараагийн сануулах огноо:</b>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_analytic
+msgid "<b>Tags</b><br/>"
+msgstr "<b>Пайз</b><br/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+msgid ""
+"<br/>\n"
+"                <span>You can visualize their impact by activating the option to view unposted entries, or post them to remove this warning.</span>"
+msgstr ""
+"<br/>\n"
+"                <span>Та батлагдаагүй гүйлгээг харах сонголтыг идэвхижүүлснээр тэдгээрийг тайлан тооцонд хэрхэн нөлөөлөхийг мэдэж болно. Эсвэл энэ анхааруулгыг арилгахын тулд тэдгээрийг батлах боломжтой.</span>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+msgid ""
+"<br/>\n"
+"                Analytic Accounts:"
+msgstr ""
+"<br/>\n"
+"                Аналитик данс:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+msgid "<br/>Companies:"
+msgstr "<br/>Компаниуд:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "<i class=\"fa fa-circle\" style=\"color: green;\"/> Good Debtor"
+msgstr "<i class=\"fa fa-circle\" style=\"color: green;\"/> Сайн зээлдэгч"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "<i class=\"fa fa-circle\" style=\"color: grey;\"/> Normal Debtor"
+msgstr "<i class=\"fa fa-circle\" style=\"color: grey;\"/> Энгийн зээлдэгч"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "<i class=\"fa fa-circle\" style=\"color: red;\"/> Bad Debtor"
+msgstr "<i class=\"fa fa-circle\" style=\"color: red;\"/> Муу зээлдэгч"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Email\"/>"
+msgstr "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Имэйл\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+msgid ""
+"<i class=\"fa fa-fw fa-pencil o_account_reports_edit_summary_pencil\" "
+"role=\"img\" aria-label=\"Edit Summary\" title=\"Edit Summary\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-pencil o_account_reports_edit_summary_pencil\" "
+"role=\"img\" aria-label=\"Хураангуйг засах\" title=\"Хураангуйг засах\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "<i class=\"fa fa-mobile fa-fw\" role=\"img\" aria-label=\"Mobile\" title=\"Mobile\"/>"
+msgstr ""
+"<i class=\"fa fa-mobile fa-fw\" role=\"img\" aria-label=\"Гар утас\" "
+"title=\"Гар утас\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "<i class=\"fa fa-phone fa-fw\" role=\"img\" aria-label=\"Phone\" title=\"Phone\"/>"
+msgstr "<i class=\"fa fa-phone fa-fw\" role=\"img\" aria-label=\"Утас\" title=\"Утас\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+msgid "<span class=\"fa fa-bar-chart\"/> Comparison:"
+msgstr "<span class=\"fa fa-bar-chart\"/> Харьцуулалт:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_journals
+msgid ""
+"<span class=\"fa fa-book\"/>\n"
+"            Journals:"
+msgstr ""
+"<span class=\"fa fa-book\"/>\n"
+"            Журнал:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "<span class=\"fa fa-calendar\" title=\"Dates\" role=\"img\" aria-label=\"Dates\"/>"
+msgstr "<span class=\"fa fa-calendar\" title=\"Огноо\" role=\"img\" aria-label=\"Огноо\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_aged_partner_balance_line_report
+msgid ""
+"<span class=\"fa fa-circle color-green trust-partner\" role=\"img\" aria-"
+"label=\"Balance is good\" title=\"Balance is good\"/>"
+msgstr ""
+"<span class=\"fa fa-circle color-green trust-partner\" role=\"img\" aria-"
+"label=\"Үлдэгдэл сайн\" title=\"Үлдэгдэл сайн\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_partner_ledger_report
+msgid ""
+"<span class=\"fa fa-circle color-green trust-partner\" role=\"img\" aria-"
+"label=\"Partner ledger is good\" title=\"Partner ledger is good\"/>"
+msgstr ""
+"<span class=\"fa fa-circle color-green trust-partner\" role=\"img\" aria-"
+"label=\"Харилцагчийн тооцоо сайн\" title=\"Харилцагчийн тооцоо сайн\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_aged_partner_balance_line_report
+msgid ""
+"<span class=\"fa fa-circle color-red trust-partner\" role=\"img\" aria-"
+"label=\"Balance is bad\" title=\"Balance is bad\"/>"
+msgstr ""
+"<span class=\"fa fa-circle color-red trust-partner\" role=\"img\" aria-"
+"label=\"Үлдэгдэл муу\" title=\"Үлдэгдэл муу\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_partner_ledger_report
+msgid ""
+"<span class=\"fa fa-circle color-red trust-partner\" role=\"img\" aria-"
+"label=\"Partner ledger is bad\" title=\"Partner ledger is bad\"/>"
+msgstr ""
+"<span class=\"fa fa-circle color-red trust-partner\" role=\"img\" aria-"
+"label=\"Харилцагчийн тооцоо муу\" title=\"Харилцагчийн тооцоо муу\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_aged_partner_balance_line_report
+msgid ""
+"<span class=\"fa fa-circle color-transparent trust-partner\" role=\"img\" "
+"aria-label=\"Balance is normal\" title=\"Balance is normal\"/>"
+msgstr ""
+"<span class=\"fa fa-circle color-transparent trust-partner\" role=\"img\" "
+"aria-label=\"Үлдэгдэл хэвийн\" title=\"Үлдэгдэл хэвийн\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_partner_ledger_report
+msgid ""
+"<span class=\"fa fa-circle color-transparent trust-partner\" role=\"img\" "
+"aria-label=\"Partner ledger is normal\" title=\"Partner ledger is normal\"/>"
+msgstr ""
+"<span class=\"fa fa-circle color-transparent trust-partner\" role=\"img\" "
+"aria-label=\"Харилцагчийн тооцоо хэвийн\" title=\"Харилцагчийн тооцоо "
+"хэвийн\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_multi_company
+msgid ""
+"<span class=\"fa fa-filter\"/>\n"
+"            Companies:"
+msgstr ""
+"<span class=\"fa fa-filter\"/>\n"
+"            Компаниуд:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_ir_filters
+msgid ""
+"<span class=\"fa fa-filter\"/>\n"
+"            Filters:"
+msgstr ""
+"<span class=\"fa fa-filter\"/>\n"
+"            Шүүлтүүр:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "<span class=\"fa fa-filter\"/> Options:"
+msgstr "<span class=\"fa fa-filter\"/> Сонголт:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.followup_search_template
+msgid "<span class=\"fa fa-filter\"/> Partners:"
+msgstr "<span class=\"fa fa-filter\"/> Харилцагч:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_analytic
+msgid "<span class=\"fa fa-folder-open\"/> Analytic"
+msgstr "<span class=\"fa fa-folder-open\"/> Аналитик"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_partner
+msgid "<span class=\"fa fa-folder-open\"/> Partners"
+msgstr "<span class=\"fa fa-folder-open\"/> Харилцагч"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Эдгээр утгууд нь зөвхөн "
+"тухайн компаны хувьд хадгалагдана.\" groups=\"base.group_multi_company\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_account_type
+msgid ""
+"<span class=\"fa fa-user\"/>\n"
+"            Account:"
+msgstr ""
+"<span class=\"fa fa-user\"/>\n"
+"            Данс:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.footnotes_template
+msgid ""
+"<span class=\"o_account_reports_footnote_icons\"><i class=\"fa fa-fw fa-"
+"trash-o\" role=\"img\" aria-label=\"Delete\" title=\"Delete\"/></span>"
+msgstr ""
+"<span class=\"o_account_reports_footnote_icons\"><i class=\"fa fa-fw fa-"
+"trash-o\" role=\"img\" aria-label=\"Устгах\" title=\"Устгах\"/></span>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Payment Follow-up</span>\n"
+"                        <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" role=\"img\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Төлбөрийн хяналт</span>\n"
+"                        <span class=\"fa fa-lg fa-building-o\" title=\"Эдгээр утгууд нь зөвхөн тухайн компаны хувьд хадгалагдана.\" role=\"img\" aria-label=\"Эдгээр утгууд нь зөвхөн тухайн компаны хувьд хадгалагдана.\" groups=\"base.group_multi_company\"/>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.res_partner_view_form
+msgid "<span class=\"o_stat_text\">Due</span>"
+msgstr "<span class=\"o_stat_text\">Эцсийн огноо</span>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+msgid ""
+"<span class=\"searchIcon\"><i class=\"fa fa-search\" role=\"img\" aria-"
+"label=\"Search\" title=\"Search\"/></span>"
+msgstr ""
+"<span class=\"searchIcon\"><i class=\"fa fa-search\" role=\"img\" aria-"
+"label=\"Хайлт\" title=\"Хайлт\"/></span>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view_account_manager
+msgid "<span title=\"Latest Statement\">Latest Statement</span>"
+msgstr "<span title=\"Latest Statement\">Хамгийн сүүлийн хуулга</span>"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid ""
+"<strong>Warning!</strong> No action needs to be taken for this partner."
+msgstr ""
+"<strong>Анхаар!</strong>Энэ харилцагчтай холбоотой ямар нэг ажилбар "
+"шаардлагагүй."
+
+#. module: account_reports
+#: sql_constraint:account.financial.html.report.line:0
+msgid "A report line with the same code already exists."
+msgstr "Энэ код тайлангийн мөрөнд аль хэдийнээ ашиглагдсан байна."
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_total_assets0
+msgid "ASSETS"
+msgstr "ХӨРӨНГӨ"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:21
+#: code:addons/account_reports/models/account_partner_ledger.py:31
+#, python-format
+msgid "Account"
+msgstr "Данс"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_analytic_report
+msgid "Account Analytic Report"
+msgstr "Шинжилгээний дансны тайлан"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Дансны модны загвар"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_report
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_form
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_tree
+msgid "Account Report"
+msgstr "Санхүүгийн тайлан"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_financial_html_report_line
+msgid "Account Report (HTML Line)"
+msgstr "Санхүүгийн тайлан (HTML мөр)"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_financial_html_report
+msgid "Account Report (HTML)"
+msgstr "Санхүүгийн тайлан (HTML)"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_report_footnote
+msgid "Account Report Footnote"
+msgstr "Санхүүгийн тайлангийн хөлийн тэмдэглэл"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_analytic_report.py:79
+#, python-format
+msgid "Accounts without a group"
+msgstr "Бүлэггүй дансууд"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Accrual Basis"
+msgstr "Акруэл суурь"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+msgid "Accrual Basis<br/>"
+msgstr "Accrual Basis<br/>"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__action_id
+msgid "Action"
+msgstr "Үйлдэл"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/js/account_reports.js:360
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+#, python-format
+msgid "Add a note"
+msgstr "Тэмдэглэл нэмэх"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_res_company__totals_below_sections
+#: model:ir.model.fields,field_description:account_reports.field_res_config_settings__totals_below_sections
+msgid "Add totals below sections"
+msgstr "Бүлэг бүрийн доор нийлбэрийг харуулах"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_prepayments_received0
+msgid "Advance Payments received from customers"
+msgstr "Захиалагчаас хүлээн авсан урьдчилгаа төлбөр"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_cash_paid0
+msgid "Advance payments made to suppliers"
+msgstr "Нийлүүлэгчид төлсөн урьдчилгаа төлбөр"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_aged_partner
+msgid "Aged Partner Balances"
+msgstr "Харилцагчийн үлдэгдлийн насжилт"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:118
+#: model:ir.actions.client,name:account_reports.action_account_report_ap
+#: model:ir.model,name:account_reports.model_account_aged_payable
+#: model:ir.ui.menu,name:account_reports.menu_action_account_report_aged_payable
+#, python-format
+msgid "Aged Payable"
+msgstr "Өглөгийн насжилт"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view
+msgid "Aged Payables"
+msgstr "Өглөгийн насжилт"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:98
+#: model:ir.actions.client,name:account_reports.action_account_report_ar
+#: model:ir.model,name:account_reports.model_account_aged_receivable
+#: model:ir.ui.menu,name:account_reports.menu_action_account_report_aged_receivable
+#, python-format
+msgid "Aged Receivable"
+msgstr "Авлагын насжилт"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view
+msgid "Aged Receivables"
+msgstr "Авлагын насжилт"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_journals
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_multi_company
+msgid "All"
+msgstr "Бүгд"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__analytic
+msgid "Allow analytic filters"
+msgstr "Аналитик шүүлтүүр ашиглах"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__cash_basis
+msgid "Allow cash basis mode"
+msgstr "Мөнгөн суурьт татвар ашиглах"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__comparison
+msgid "Allow comparison"
+msgstr "Хугацааны харьцуулалт ашиглах"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__show_journal_filter
+msgid "Allow filtering by journals"
+msgstr "Журналын шүүлтүүр ашиглах"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,show_domain:0
+msgid "Always"
+msgstr "Үргэлж"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:24
+#, python-format
+msgid "Amount"
+msgstr "Дүн"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_partner_ledger.py:40
+#, python-format
+msgid "Amount Currency"
+msgstr "Валютаарх дүн"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+msgid "Analytic Accounts:"
+msgstr "Шинжилгээний данс:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_caret_options
+msgid "Analytic Entries"
+msgstr "Шинжилгээний бичилт"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_analytic_report.py:29
+#: model:ir.actions.client,name:account_reports.action_account_report_analytic
+#: model:ir.ui.menu,name:account_reports.menu_action_report_account_analytic
+#, python-format
+msgid "Analytic Report"
+msgstr "Шинжилгээний тайлан"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+msgid "Analytic Tags:"
+msgstr "Шинжилгээний пайз:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template
+msgid "Annotate"
+msgstr "Тэмдэглэгээ"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__applicable_filters_ids
+msgid "Applicable Filters"
+msgstr "Хэрэглэж болох шүүлтүүр"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "Apply"
+msgstr "Ашиглах"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:770
+#, python-format
+msgid "As of %s"
+msgstr "%s - н байдлаар"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,special_date_changer:0
+msgid "At the beginning of the period"
+msgstr "Мөчлөгийн эхэнд"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_caret_options
+msgid "Audit"
+msgstr "Аудит"
+
+#. module: account_reports
+#: model:ir.ui.menu,name:account_reports.account_reports_audit_reports_menu
+msgid "Audit Reports"
+msgstr "Аудит тайлан"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "Auto"
+msgstr "Авто"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_form
+msgid "Available Filters & Options"
+msgstr "Боломжит шүүлтүүр & сонголтууд"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_avgcre0
+msgid "Average creditors days"
+msgstr "Зээлдүүлэгчийн дундаж өдөр"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_avdebt0
+msgid "Average debtors days"
+msgstr "Зээлдэгчийн дундаж өдөр"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "Bad debtor"
+msgstr "Муу зээлдэгч"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_analytic_report.py:25
+#: code:addons/account_reports/models/account_consolidated_journals.py:29
+#: code:addons/account_reports/models/account_general_ledger.py:35
+#: code:addons/account_reports/models/account_partner_ledger.py:42
+#, python-format
+msgid "Balance"
+msgstr "Баланс"
+
+#. module: account_reports
+#: model:account.financial.html.report,name:account_reports.account_financial_report_balancesheet0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_balancesheet0
+#: model:ir.actions.client,name:account_reports.account_financial_html_report_action_2
+#: model:ir.actions.client,name:account_reports.action_account_report_bs
+#: model:ir.ui.menu,name:account_reports.account_financial_html_report_menu_2
+msgid "Balance Sheet"
+msgstr "Баланс тайлан"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:211
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:212
+#: model:ir.actions.client,name:account_reports.action_account_report_bank_reconciliation
+#: model:ir.actions.client,name:account_reports.action_account_report_bank_reconciliation_with_journal
+#, python-format
+msgid "Bank Reconciliation"
+msgstr "Банкны тулгалт"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_bank_reconciliation_report
+msgid "Bank Reconciliation Report"
+msgstr "Банк тулгалтын тайлан"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_bank_view0
+msgid "Bank and Cash Accounts"
+msgstr "Банк, бэлэн мөнгөний дансууд"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_general_ledger.py:432
+#, python-format
+msgid "Base Amount"
+msgstr "Суурь дүн"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__date_range
+msgid "Based on date ranges"
+msgstr "Хугацааны мужаар"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_cash0
+msgid "Cash"
+msgstr "Бэлэн мөнгө"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Cash Basis"
+msgstr "Мөнгөн суурь"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Cash Basis Method"
+msgstr "Мөнгөн суурьтай арга"
+
+#. module: account_reports
+#: model:account.financial.html.report,name:account_reports.account_financial_report_cashsummary0
+#: model:ir.actions.client,name:account_reports.account_financial_html_report_action_3
+#: model:ir.actions.client,name:account_reports.action_account_report_cs
+#: model:ir.ui.menu,name:account_reports.account_financial_html_report_menu_3
+msgid "Cash Flow Statement"
+msgstr "Мөнгөн урсгалын тайлан"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_opening_balance0
+msgid "Cash and cash equivalents, beginning of period"
+msgstr "Мөнгө ба түүнтэй тэнцэх зүйлс, мөчлөгийн эхлэл"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_closing_balance0
+msgid "Cash and cash equivalents, closing balance"
+msgstr "Мөнгө ба түүнтэй тэнцэх зүйлс, хаалтын үлдэгдэл"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_financing0
+msgid "Cash flows from financing activities"
+msgstr "Санхүүгийн үйл ажиллагааны мөнгөн урсгал"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_investing0
+msgid "Cash flows from investing & extraordinary activities"
+msgstr "Хөрөнгө оруулалт ба тусгай үйл ажиллагааны мөнгөн урсгал"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_operating0
+msgid "Cash flows from operating activities"
+msgstr "Үндсэн үйл ажиллагааны мөнгөн урсгал"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_unclassified0
+msgid "Cash flows from unclassified activities"
+msgstr "Ангилагдаагүй үйл ажиллагааны мөнгөн урсгал"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_financing_in0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_investing_in0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_unclassified_in0
+msgid "Cash in"
+msgstr "Ирсэн бэлэн мөнгө"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_financing_out0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_investing_out0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_unclassified_out0
+msgid "Cash out"
+msgstr "Гарсан бэлэн мөнгө"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_cash_spent0
+msgid "Cash paid for operating activities"
+msgstr "Үндсэн үйл ажиллагаанд төлсөн мөнгө"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_cash_received0
+msgid "Cash received"
+msgstr "Хүлээн авсан мөнгө"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_cash_received0
+msgid "Cash received from operating activities"
+msgstr "Үндсэн үйл ажиллагаагаар хүлээн авсан мөнгө"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_cash_spent0
+msgid "Cash spent"
+msgstr "Зарцуулсан бэлэн мөнгө"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_cash_surplus0
+msgid "Cash surplus"
+msgstr "Илүүдэл бэлэн мөнгө"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_followup_report
+msgid "Change expected payment date"
+msgstr "Төлөх ёстой эцсийн огноог өөрчлөх"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_coa_report
+msgid "Chart of Account Report"
+msgstr "Дансны модны тайлан"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__children_ids
+msgid "Children"
+msgstr "Дэд"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_line_form
+msgid "Children Lines"
+msgstr "Дэд мөрүүд"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_closing_bank_balance0
+msgid "Closing bank balance"
+msgstr "Банкны хаалтын баланс"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__code
+msgid "Code"
+msgstr "Код"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:32
+#: code:addons/account_reports/models/account_general_ledger.py:30
+#, python-format
+msgid "Communication"
+msgstr "Харилцаа"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_res_company
+msgid "Companies"
+msgstr "Компаниуд"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+msgid "Companies:"
+msgstr "Компаниуд:"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__company_id
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__company_id
+msgid "Company"
+msgstr "Компани"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_line_form
+msgid "Computation"
+msgstr "Тооцоололт"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_regulator0
+msgid "Computation Error: unexplained difference"
+msgstr "Тооцооллын алдаа: тайлбарлаагүй зөрүү"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_res_config_settings
+msgid "Config Settings"
+msgstr "Тохируулга"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_consolidated_journals.py:26
+#: model:ir.actions.client,name:account_reports.action_account_report_cj
+#: model:ir.ui.menu,name:account_reports.menu_action_account_report_cj
+#, python-format
+msgid "Consolidated Journals"
+msgstr "Нэгдсэн журнал"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_consolidated_journal
+msgid "Consolidated Journals Report"
+msgstr "Нэгдсэн журналын тайлан"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_res_partner
+msgid "Contact"
+msgstr "Холбох хаяг"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_line_form
+msgid "Cosmetics"
+msgstr "Гоо сайхны бараа"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cost_sales0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_direct_costs0
+msgid "Cost of Revenue"
+msgstr "Борлуулалтын өртөг"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:248
+#, python-format
+msgid ""
+"Could not send mail to partner because it does not have any email address "
+"defined"
+msgstr ""
+"Харилцагчийн хаягын мэдээлэлд ямар нэг имэйл хаяг тодорхойлогдоогүй учир энэ"
+" харилцагчид имэйл илгээж чадсангүй"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__create_uid
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__create_uid
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote__create_uid
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__create_uid
+msgid "Created by"
+msgstr "Үүсгэгч"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__create_date
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__create_date
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote__create_date
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__create_date
+msgid "Created on"
+msgstr "Үүсгэсэн огноо"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_financial_report.py:93
+#, python-format
+msgid "Crebit"
+msgstr "Кредит"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_consolidated_journals.py:50
+#: code:addons/account_reports/models/account_financial_report.py:142
+#: code:addons/account_reports/models/account_general_ledger.py:34
+#: code:addons/account_reports/models/account_partner_ledger.py:38
+#: code:addons/account_reports/models/account_report_coa.py:32
+#: code:addons/account_reports/models/account_report_coa.py:37
+#: code:addons/account_reports/models/account_report_coa.py:41
+#: code:addons/account_reports/models/account_report_coa.py:43
+#, python-format
+msgid "Credit"
+msgstr "Кредит"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_general_ledger.py:32
+#, python-format
+msgid "Currency"
+msgstr "Валют"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_current_assets0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_current_assets_view0
+msgid "Current Assets"
+msgstr "Эргэлтийн хөрөнгө"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_current_liabilities0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_current_liabilities1
+msgid "Current Liabilities"
+msgstr "Богино хугацааны өр төлбөр"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_current_year_earnings_line_2
+msgid "Current Year Allocated Earnings"
+msgstr "Өмнөх хугацааны хуримтлагдсан ашиг"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_current_year_earnings_line_1
+msgid "Current Year Earnings"
+msgstr "Тайлант жилийн ашиг"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_current_year_earnings0
+msgid "Current Year Unallocated Earnings"
+msgstr "Тайлант хугацааны хуримтлагдсан ашиг"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_ca_to_l0
+msgid "Current assets to liabilities"
+msgstr "Өр төлбөрт харгалзах эргэлтийн хөрөнгө"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:155
+#, python-format
+msgid "Current balance of account %s"
+msgstr "%s дансны одоогийн үлдэгдэл"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:157
+#, python-format
+msgid "Current balance of accounts %s"
+msgstr "%s дансны одоогийн үлдэгдэл"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "Custom"
+msgstr "Өөриймшсөн"
+
+#. module: account_reports
+#: code:addons/account_reports/models/res_partner.py:87
+#, python-format
+msgid "Customer Ledger"
+msgstr "Захиалагчийн тайлан"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.followup_filter_info_template
+msgid "Customer ref:"
+msgstr "Захиалагчийн код:"
+
+#. module: account_reports
+#: model:ir.actions.client,name:account_reports.action_account_followup
+msgid "Customers Statement"
+msgstr "Захиалагчдын тооцоо"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:22
+#: code:addons/account_reports/models/account_followup_report.py:29
+#: code:addons/account_reports/models/account_general_ledger.py:29
+#, python-format
+msgid "Date"
+msgstr "Огноо"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "Date :"
+msgstr "Огноо"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid ""
+"Date at which Odoo will remind you to take care of that follow-up if you "
+"choose \"remind me later\" button."
+msgstr ""
+"Та \"дараа сануулах\" товч дээр дарах үед Odoo систем танд авлагын араас "
+"хөөцөлдөх сануулгыг ямар огноонд өгвөл зохихыг тодорхойлно."
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/js/account_reports.js:225
+#: code:addons/account_reports/static/src/js/account_reports.js:275
+#, python-format
+msgid "Date cannot be empty"
+msgstr "Огноо хоосон байж болохгүй"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_move_line__next_action_date
+msgid ""
+"Date where the next action should be taken for a receivable item. Usually, "
+"automatically set when sending reminders through the customer statement."
+msgstr ""
+"Авлагын араас хөөцөлдөх дараагийн алхам хэрэгжвэл зохих огноо. Ингэснээр уг "
+"огноонд систем захиалагчийн тооцооны үлдэгдлийг автоматаар илгээх болно."
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.followup_filter_info_template
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "Date:"
+msgstr "Огноо:"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_res_config_settings__days_between_two_followups
+msgid "Days between two follow-ups"
+msgstr "Авлагын араас хөөцөлдөх хоёр алхам хоорондын хоногийн тоо"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_consolidated_journals.py:29
+#: code:addons/account_reports/models/account_financial_report.py:134
+#: code:addons/account_reports/models/account_general_ledger.py:33
+#: code:addons/account_reports/models/account_partner_ledger.py:36
+#: code:addons/account_reports/models/account_report_coa.py:31
+#: code:addons/account_reports/models/account_report_coa.py:36
+#: code:addons/account_reports/models/account_report_coa.py:40
+#: code:addons/account_reports/models/account_report_coa.py:42
+#, python-format
+msgid "Debit"
+msgstr "Дебет"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_depreciation0
+msgid "Depreciation"
+msgstr "Элэгдэл"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_detailed_net_profit0
+msgid "Detailed Net Profit"
+msgstr "Цэвэр орлогын дэлгэрэнгүй"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_consolidated_journals.py:86
+#, python-format
+msgid "Details per month"
+msgstr "Сараарх дэлгэрэнгүй"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view_account_manager
+msgid "Difference"
+msgstr "Зөрүү"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:190
+#, python-format
+msgid ""
+"Difference between Virtual GL Balance and Last Bank Statement Ending Balance.\n"
+"\n"
+"If non-zero, it could be due to\n"
+"  1) some bank statements being not yet encoded into Odoo\n"
+"  2) payments double-encoded"
+msgstr ""
+"Банкны хуулганы хаалтын үлдэгдэл болон Ерөнхий журналын бүртгэл дээрх дансны үлдэгдэл хоорондын зөрүү.\n"
+"\n"
+"Хэрэв тэгээс ялгаатай зөрүү байвал дараах шалтгаантай\n"
+"  1) зарим банкны хуулганы гүйлгээ хараахан Odoo -д бүртгэгдээгүй\n"
+"  2) зарим банкны хуулганы гүйлгээ давхардаж илүү бүртгэгдсэн"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_aged_partner__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_aged_payable__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_aged_receivable__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_analytic_report__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_bank_reconciliation_report__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_coa_report__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_consolidated_journal__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_followup_report__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_general_ledger__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_generic_tax_report__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_partner_ledger__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_report__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote__display_name
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__display_name
+msgid "Display Name"
+msgstr "Дэлгэрэнгүй нэр"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__hierarchy_option
+msgid "Display the hierarchy choice in the report options"
+msgstr "Тайланг мод бүтцээр харах сонголт "
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__domain
+msgid "Domain"
+msgstr "Домэйн"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:16
+#, python-format
+msgid "Done"
+msgstr "Дууссан"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:30
+#: code:addons/account_reports/models/account_partner_ledger.py:33
+#, python-format
+msgid "Due Date"
+msgstr "Төлөх эцсийн огноо"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
+msgid "Duration between two reminders"
+msgstr "Хоёр сануулга хоорондын хугацаа"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_equity0
+msgid "EQUITY"
+msgstr "ӨМЧ"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__hierarchy_option
+msgid "Enable the hierarchy option"
+msgstr "Мод бүтцийг идэвхижүүлэх"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "End Date :"
+msgstr "Дуусах огноо :"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "End of Last Financial Year"
+msgstr "Сүүлийн тайлант жилийн төгсгөл"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "End of Last Month"
+msgstr "Сүүлийн сарын төгсгөл"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "End of Last Quarter"
+msgstr "Сүүлийн улирлын төгсгөл"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:34
+#, python-format
+msgid "Excluded"
+msgstr "Тооцооноос гадуур"
+
+#. module: account_reports
+#: model:account.financial.html.report,name:account_reports.account_financial_report_executivesummary0
+#: model:ir.actions.client,name:account_reports.account_financial_html_report_action_4
+#: model:ir.ui.menu,name:account_reports.account_financial_html_report_menu_4
+msgid "Executive Summary"
+msgstr "Үйл ажиллгааны товчоо"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:33
+#, python-format
+msgid "Expected Date"
+msgstr "Товлосон огноо"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:55
+#: model:ir.model.fields,field_description:account_reports.field_account_move_line__expected_pay_date
+#, python-format
+msgid "Expected Payment Date"
+msgstr "Товлосон төлбөрийн огноо"
+
+#. module: account_reports
+#: code:addons/account_reports/models/res_partner.py:147
+#, python-format
+msgid "Expected pay date has been changed from %s to %s for invoice %s"
+msgstr ""
+"Товлосон төлбөрийн огноо %s байснаас %s болж өөрчлөгдсөн. Нэхэмжлэл: %s"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_move_line__expected_pay_date
+msgid ""
+"Expected payment date as manually set through the customer statement (e.g: "
+"if you had the customer on the phone and want to remember the date he "
+"promised he would pay)"
+msgstr ""
+"Захиалагчийн тооцооны тайлан дээрээс товлосон төлбөрийн огноог гараар "
+"өөрчилсөн (ж.нь: та захиалагчтай утсаар харилцаж байхдаа түүний төлбөр "
+"хийхээр тохирсон огноог санахад)"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_expenses0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_expense0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_less_expenses0
+msgid "Expenses"
+msgstr "Зардлууд"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:701
+#, python-format
+msgid "Export (XLSX)"
+msgstr "Экспорт (XLSX)"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+msgid "Filter:"
+msgstr "Шүүлтүүр:"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__applicable_filters_ids
+msgid "Filters that can be used to filter and group lines in this report."
+msgstr ""
+"Эдгээр шүүлтүүр нь тайлангийн мөрүүдийг бүлэглэх, шүүлт хийхэд ашиглагдана."
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__financial_report_id
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__financial_report_id
+msgid "Financial Report"
+msgstr "Санхүүгийн тайлан"
+
+#. module: account_reports
+#: model:ir.actions.act_window,name:account_reports.action_account_financial_report_tree
+#: model:ir.ui.menu,name:account_reports.menu_account_financial_reports_tree
+msgid "Financial Reports"
+msgstr "Санхүүгийн тайлан"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,figure_type:0
+msgid "Float"
+msgstr "Бутархайн оронтой тоо"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,show_domain:0
+msgid "Foldable"
+msgstr "Эвхэгддэг байх"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template
+msgid "Folded"
+msgstr "Эвхсэн"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_followup_report
+msgid "Follow-up Report"
+msgstr "Авлага сануулгын тайлан"
+
+#. module: account_reports
+#: model:ir.actions.act_window,name:account_reports.action_view_list_customer_statements
+#: model:ir.ui.menu,name:account_reports.customer_statements_menu
+msgid "Follow-up Reports"
+msgstr "Авлага сануулгын тайлан"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.customer_statements_tree_view
+msgid "Follow-up Reports Tree View"
+msgstr "Авлага хяналтын жагсаалт харагдац"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:235
+#, python-format
+msgid "Follow-up email sent to %s"
+msgstr "Авлага сануулах имэйл %s-руу илгээгдсэн"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:257
+#, python-format
+msgid "Follow-up letter printed"
+msgstr "Авлага сануулах захидал хэвлэгдсэн"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view
+msgid "Follow-up reports"
+msgstr "Авлага сануулгын тайлан"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:35
+#, python-format
+msgid "Follow-ups Done / Total Follow-ups"
+msgstr "Хийгдсэн авлага сануулга / Нийт авлага сануулга"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:180
+#, python-format
+msgid "Followup Report"
+msgstr "Авлага сануулга"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_res_partner__followup_status
+msgid "Followup status"
+msgstr "Авлага мөшгилтийн төлөв"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__footnotes_ids
+msgid "Footnotes"
+msgstr "Хөлийн тэмдэглэл"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,special_date_changer:0
+msgid "Force given dates for all accounts and account types"
+msgstr "Бүх данс, дансны төрлүүдийн хэмжээнд нэг ижил тайлант огноог ашиглах"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__formulas
+msgid "Formulas"
+msgstr "Томьёонууд"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:783
+#, python-format
+msgid ""
+"From %s \n"
+" to  %s"
+msgstr ""
+"%s эхлээд\n"
+"  %s хүртэл"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,special_date_changer:0
+msgid "From the beginning"
+msgstr "Эхнээс нь"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,special_date_changer:0
+msgid "From the beginning of the fiscal year"
+msgstr "Санхүүгийн жилийн эхнээс эхлэх"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "From:"
+msgstr "Эхлэх:"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_general_ledger.py:453
+#: model:ir.actions.client,name:account_reports.action_account_report_general_ledger
+#: model:ir.ui.menu,name:account_reports.menu_action_account_report_general_ledger
+#: model_terms:ir.ui.view,arch_db:account_reports.line_caret_options
+#, python-format
+msgid "General Ledger"
+msgstr "Ерөнхий журналын тайлан"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_general_ledger
+msgid "General Ledger Report"
+msgstr "Ерөнхий журналын тайлан"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:160
+#, python-format
+msgid "General Report"
+msgstr "Ерөнхий тайлан"
+
+#. module: account_reports
+#: model:ir.actions.client,name:account_reports.action_account_report_gt
+#: model:ir.model,name:account_reports.model_account_generic_tax_report
+msgid "Generic Tax Report"
+msgstr "Татварын ерөнхий тайлан"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "Good debtor"
+msgstr "Сайн зээлдэгч"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_gross_profit0
+msgid "Gross Profit"
+msgstr "Бохир ашиг"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_gross_profit0
+msgid "Gross profit"
+msgstr "Бохир ашиг"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_gpmargin0
+msgid "Gross profit margin (gross profit / operating income)"
+msgstr "Бохир ашгийн эзлэх хувь (бохир ашиг / үйл ажиллагааны орлого)"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__groupby
+msgid "Group by"
+msgstr "Бүлэглэх"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_financial_report.py:291
+#: code:addons/account_reports/models/account_financial_report.py:867
+#: code:addons/account_reports/models/account_financial_report.py:981
+#, python-format
+msgid "Groupby should be a field from account.move.line"
+msgstr "Зөвхөн account.move.line -ны талбаруудаар бүлэглэлт хийх боломжтой"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_financial_report.py:831
+#, python-format
+msgid "Groupby should be a journal item field"
+msgstr "Зөвхөн журналын бичилтийн талбараар бүлэглэлт хийх боломжтой"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__hide_if_zero
+msgid "Hide If Zero"
+msgstr "0 бол нуух"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Hierarchy"
+msgstr "Шатлал"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Hierarchy and Subtotals"
+msgstr "Шатлал ба дэд дүн"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_aged_partner__id
+#: model:ir.model.fields,field_description:account_reports.field_account_aged_payable__id
+#: model:ir.model.fields,field_description:account_reports.field_account_aged_receivable__id
+#: model:ir.model.fields,field_description:account_reports.field_account_analytic_report__id
+#: model:ir.model.fields,field_description:account_reports.field_account_bank_reconciliation_report__id
+#: model:ir.model.fields,field_description:account_reports.field_account_coa_report__id
+#: model:ir.model.fields,field_description:account_reports.field_account_consolidated_journal__id
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__id
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__id
+#: model:ir.model.fields,field_description:account_reports.field_account_followup_report__id
+#: model:ir.model.fields,field_description:account_reports.field_account_general_ledger__id
+#: model:ir.model.fields,field_description:account_reports.field_account_generic_tax_report__id
+#: model:ir.model.fields,field_description:account_reports.field_account_partner_ledger__id
+#: model:ir.model.fields,field_description:account_reports.field_account_report__id
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote__id
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.followup_search_template
+msgid "In Need of Action"
+msgstr "Үйлдэл хийх шаардлагатай"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.customer_statements_search_view
+#: selection:res.partner,followup_status:0
+msgid "In need of action"
+msgstr "Үйлдэл хийх шаардлагатай"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Include Unposted Entries"
+msgstr "Ноорог гүйлгээг хамруулах"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Include unposted entries"
+msgstr "Ноорог гүйлгээг хамруулах"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_income0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_totalincome0
+msgid "Income"
+msgstr "Орлого"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_general_ledger.py:308
+#: code:addons/account_reports/models/account_partner_ledger.py:35
+#: code:addons/account_reports/models/account_report_coa.py:50
+#: model_terms:ir.ui.view,arch_db:account_reports.template_coa_table_header
+#, python-format
+msgid "Initial Balance"
+msgstr "Эхний үлдэгдэл"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:43
+#, python-format
+msgid "Insert foot note here"
+msgstr "Хөлийн тэмдэглэлийг энд оруулна уу"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_move_line__internal_note
+msgid "Internal Note"
+msgstr "Дотоод тэмдэглэл"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__green_on_positive
+msgid "Is growth good when positive"
+msgstr "Хасах тэмдэгтэй тоог улаанаар харуулах"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:21
+#: code:addons/account_reports/models/account_partner_ledger.py:30
+#, python-format
+msgid "JRNL"
+msgstr "ЖРНЛ"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_move_line
+msgid "Journal Item"
+msgstr "Журналын бичилт"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_caret_options
+msgid "Journal Items"
+msgstr "Журналын бичилт"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:309
+#, python-format
+msgid "Journal Items (%s)"
+msgstr "Журналын бичилт (%s)"
+
+#. module: account_reports
+#: model:ir.actions.server,name:account_reports.action_journal_items
+msgid "Journal Items by tax"
+msgstr "Татварын журналын бичилт"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_consolidated_journals.py:29
+#, python-format
+msgid "Journal Name (Code)"
+msgstr "Журналын нэр (код)"
+
+#. module: account_reports
+#: model:ir.actions.act_window,name:account_reports.action_account_print_journal_menu
+#: model:ir.ui.menu,name:account_reports.menu_print_journal
+msgid "Journals Audit"
+msgstr "Журналын аудит"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+msgid "Journals:"
+msgstr "Журнал:"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_liabilities_view0
+msgid "LIABILITIES"
+msgstr "ӨР ТӨЛБӨР"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_liabilities_and_equity_view0
+msgid "LIABILITIES + EQUITY"
+msgstr "ӨР ТӨЛБӨР + ЭЗДИЙН ӨМЧ"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:188
+#, python-format
+msgid "Last Bank Statement Ending Balance"
+msgstr "Сүүлийн банкны хуулгын хаалтын үлдэгдэл"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "Last Financial Year"
+msgstr "Сүүлчийн тайлант жил"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_aged_partner____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_aged_payable____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_aged_receivable____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_analytic_report____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_bank_reconciliation_report____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_coa_report____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_consolidated_journal____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_followup_report____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_general_ledger____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_generic_tax_report____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_partner_ledger____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_report____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote____last_update
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager____last_update
+msgid "Last Modified on"
+msgstr "Сүүлд зассан огноо"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "Last Month"
+msgstr "Сүүлийн Сар"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "Last Quarter"
+msgstr "Сүүлийн улирал"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__write_uid
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__write_uid
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote__write_uid
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__write_uid
+msgid "Last Updated by"
+msgstr "Сүүлд зассан этгээд"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__write_date
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__write_date
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote__write_date
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__write_date
+msgid "Last Updated on"
+msgstr "Сүүлд зассан огноо"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__level
+msgid "Level"
+msgstr "Түвшин"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote__line
+msgid "Line"
+msgstr "Мөр"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__line_ids
+msgid "Lines"
+msgstr "Мөрүүд"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_general_ledger.py:384
+#: code:addons/account_reports/models/account_partner_ledger.py:206
+#, python-format
+msgid "Load more... (%s remaining)"
+msgstr "Нэмж ачааллах...(%s бичлэгээс)"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_line_form
+msgid "Main Info"
+msgstr "Үндсэн мэдээлэл"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_account_report_manager
+msgid "Manage Summary and Footnotes of Reports"
+msgstr "Тайлангийн хөл болон толгойн тэмдэглэлийг зохиох"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote__manager_id
+msgid "Manager"
+msgstr "Менежер"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "Manual"
+msgstr "Гараар"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_partner_ledger.py:34
+#, python-format
+msgid "Matching Number"
+msgstr "Тохирох дугаар"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__generated_menu_id
+msgid "Menu Item"
+msgstr "Дэд цэс"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
+msgid "Minimum"
+msgstr "Хамгийн бага"
+
+#. module: account_reports
+#: model:ir.model,name:account_reports.model_ir_module_module
+msgid "Module"
+msgstr "Модуль"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_generic_tax_report.py:19
+#: code:addons/account_reports/models/account_generic_tax_report.py:22
+#, python-format
+msgid "NET"
+msgstr "ЦЭВЭР"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_general_ledger.py:431
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__name
+#, python-format
+msgid "Name"
+msgstr "Нэр"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_net_assets0
+msgid "Net Assets"
+msgstr "Нийт хөрөнгө"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_profit0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_net_profit0
+msgid "Net Profit"
+msgstr "Цэвэр ашиг"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_net_assets0
+msgid "Net assets"
+msgstr "Нийт хөрөнгө"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_cashsummary_net_increase0
+msgid "Net increase in cash and cash equivalents"
+msgstr "Мөнгө ба түүнтэй тэнцэх зүйлсийн цэвэр өсөлт"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_npmargin0
+msgid "Net profit margin (net profit / income)"
+msgstr "Цэвэр ашгийн эзлэх хувь (цэвэр ашиг / орлого)"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,show_domain:0
+msgid "Never"
+msgstr "Хэзээ ч үгүй"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_move_line__next_action_date
+#: model:ir.model.fields,field_description:account_reports.field_res_partner__payment_next_action_date
+msgid "Next Action Date"
+msgstr "Дараачийн үйлдлийн огноо"
+
+#. module: account_reports
+#: code:addons/account_reports/models/res_partner.py:154
+#, python-format
+msgid "Next action date: "
+msgstr "Дараагийн үйлдлийн огноо:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+msgid "No Comparison"
+msgstr "Харьцуулалт алга"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,figure_type:0
+msgid "No Unit"
+msgstr "Нэгж алга"
+
+#. module: account_reports
+#: selection:res.partner,followup_status:0
+msgid "No action needed"
+msgstr "Үйлдэл шаардагдаагүй"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:933
+#, python-format
+msgid "No comparison"
+msgstr "Харьцуулалт алга"
+
+#. module: account_reports
+#: model_terms:ir.actions.act_window,help:account_reports.action_view_list_customer_statements
+msgid "No follow-up to send!"
+msgstr "Илгээх авлагын сануулга алга!"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:23
+#, python-format
+msgid "No followup to send!"
+msgstr "Илгээх авлага сануулга алга!"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "Normal debtor"
+msgstr "Энгийн зээлдэгч"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:21
+#, python-format
+msgid "Not due on: %s"
+msgstr "%s-ээс хойш төлөгдөх"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_move_line__internal_note
+msgid ""
+"Note you can set through the customer statement about a receivable journal "
+"item"
+msgstr ""
+"Захиалагчийн тайлан дээр тухайн авлагын журналын бичилтийн талаарх нэмэлт "
+"мэдээлэл харуулах зорилготой тэмдэглэл"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_res_company__days_between_two_followups
+msgid "Number of days between two follow-ups"
+msgstr "Авлага сануулга хоорондын хоногийн тоо"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+msgid "Number of periods :"
+msgstr "Мөчлөгийн тоо :"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:13
+#, python-format
+msgid ""
+"Odoo will remind you to take care of this follow-up on the next reminder "
+"date."
+msgstr ""
+"Odoo систем танд авлагынхаа араас санаа тавих талаарх сануулга өгөх "
+"дараагийн огноо."
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:22
+#, python-format
+msgid "Older"
+msgstr "Хуучин"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Only Show Unreconciled Entries"
+msgstr "Зөвхөн тулгагдаагүй гүйлгээг харуулах"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_income0
+msgid "Operating Income"
+msgstr "Үйл ажиллагааны орлого"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:163
+#, python-format
+msgid "Operations to Process"
+msgstr "Боловсруулах үйл ажиллагаа"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_other_income0
+msgid "Other Income"
+msgstr " Бусад орлого"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.customer_statements_search_view
+msgid "Overdue Invoices"
+msgstr "Хугацаа хэтэрсэн нэхэмжлэл"
+
+#. module: account_reports
+#: code:addons/account_reports/models/res_partner.py:174
+#, python-format
+msgid "Overdue Payments for %s"
+msgstr "%s-ны хугацаа хэтэрсэн төлбөр"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__parent_id
+msgid "Parent"
+msgstr "Эцэг"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__parent_id
+msgid "Parent Menu"
+msgstr "Толгой цэс"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__parent_path
+msgid "Parent Path"
+msgstr "Эцэг зам"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_analytic_report.py:24
+#: code:addons/account_reports/models/account_general_ledger.py:31
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__partner_id
+#, python-format
+msgid "Partner"
+msgstr "Харилцагч"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+msgid "Partner Categories:"
+msgstr "Харилцагчийн ангилал:"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_partner_ledger.py:228
+#: code:addons/account_reports/models/res_partner.py:83
+#: code:addons/account_reports/models/res_partner.py:185
+#: model:ir.actions.client,name:account_reports.action_account_report_partner_ledger
+#: model:ir.model,name:account_reports.model_account_partner_ledger
+#: model:ir.ui.menu,name:account_reports.menu_action_account_report_partner_ledger
+#, python-format
+msgid "Partner Ledger"
+msgstr "Харилцагчийн тайлан"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_res_partner__partner_ledger_label
+msgid "Partner Ledger Label"
+msgstr "Харилцагчийн тайлангийн гарчиг"
+
+#. module: account_reports
+#: model:ir.ui.menu,name:account_reports.account_reports_partners_reports_menu
+msgid "Partner Reports"
+msgstr "Харилцагчийн тайлан"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/js/account_reports.js:410
+#, python-format
+msgid "Partners"
+msgstr "Харилцагч"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+msgid "Partners:"
+msgstr "Харилцагч:"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_partner_ledger.py:19
+#, python-format
+msgid "Payable"
+msgstr "Өглөг"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_current_liabilities_payable
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_creditors0
+msgid "Payables"
+msgstr "Өглөг"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,figure_type:0
+msgid "Percents"
+msgstr "Хувь"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_performance0
+msgid "Performance"
+msgstr "Гүйцэтгэл"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:886
+#, python-format
+msgid "Please specify a start and end date."
+msgstr "Эхлэх болон дуусах огноог тодорхойлно уу."
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:884
+#, python-format
+msgid "Please specify an end date."
+msgstr "Дуусах огноог тодорхойлно уу."
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_fixed_assets_view0
+msgid "Plus Fixed Assets"
+msgstr "Үндсэн хөрөнгийн нэмэгдэл"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_non_current_assets_view0
+msgid "Plus Non-current Assets"
+msgstr "Эргэлтийн бус хөрөнгийн нэмэгдэл"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_non_current_liabilities0
+msgid "Plus Non-current Liabilities"
+msgstr "Урт хугацаат өр төлбөрийн нэмэгдэл"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_position0
+msgid "Position"
+msgstr "Албан тушаал"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Posted Entries Only"
+msgstr "Зөвхөн батлагдсан гүйлгээ"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_prepayements0
+msgid "Prepayments"
+msgstr "Урьдчилсан төлбөр"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+msgid "Previous Period"
+msgstr "Өмнөх хугацаа"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_previous_year_earnings0
+msgid "Previous Years Unallocated Earnings"
+msgstr "Өнгөрсөн жилийн хуримтлагдсан ашиг"
+
+#. module: account_reports
+#: model:ir.actions.report,name:account_reports.action_report_followup
+msgid "Print Follow-up Letter"
+msgstr "Авлагын сануулга захиа хэвлэх"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__print_on_new_page
+msgid "Print On New Page"
+msgstr "Шинэ хуудсанд хэвлэх"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report.py:701
+#, python-format
+msgid "Print Preview"
+msgstr "Урьдчилан харах"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:7
+#, python-format
+msgid "Print letter"
+msgstr "Захиа хэвлэх"
+
+#. module: account_reports
+#: model:ir.actions.server,name:account_reports.action_account_reports_customer_statements_do_followup
+msgid "Process Follow-ups"
+msgstr "Авлага сануулга гүйцэтгэх"
+
+#. module: account_reports
+#: model:ir.actions.client,name:account_reports.action_account_report_pnl
+msgid "Profit And Loss"
+msgstr "Орлого үр дүн"
+
+#. module: account_reports
+#: model:account.financial.html.report,name:account_reports.account_financial_report_profitandloss0
+#: model:ir.actions.client,name:account_reports.account_financial_html_report_action_1
+#: model:ir.ui.menu,name:account_reports.account_financial_html_report_menu_1
+msgid "Profit and Loss"
+msgstr "Орлого үр дүн"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_profitability0
+msgid "Profitability"
+msgstr "Үр ашиг"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_partner_ledger.py:18
+#, python-format
+msgid "Receivable"
+msgstr "Авлага"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_debtors0
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_receivable0
+msgid "Receivables"
+msgstr "Авлагууд"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view
+msgid "Reconciliation Report"
+msgstr "Тулгалтын тайлан"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_partner_ledger.py:32
+#, python-format
+msgid "Ref"
+msgstr "Дугаар"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:21
+#: code:addons/account_reports/models/account_analytic_report.py:23
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:23
+#, python-format
+msgid "Reference"
+msgstr "Дугаар"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:13
+#, python-format
+msgid "Remind me later"
+msgstr "Дараа сануулах"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_form
+msgid "Report Definition"
+msgstr "Тайлан тодорхойлолт"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_line_form
+msgid "Report Line"
+msgstr "Тайлангийн мөр"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_form
+#: model_terms:ir.ui.view,arch_db:account_reports.view_account_financial_report_line_tree
+msgid "Report Lines"
+msgstr "Тайлангийн мөрүүд"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__report_name
+msgid "Report Name"
+msgstr "Тайлангийн нэр"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
+msgid "Reporting"
+msgstr "Тайлан"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_retained_earnings0
+msgid "Retained Earnings"
+msgstr "Хуримтлагдсан ашиг"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_return_investment0
+msgid "Return on investments (net profit / assets)"
+msgstr "Хөрөнгө оруулалтын өгөөж (цэвэр ашиг / хөрөнгө)"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+msgid "Same Period Last Year"
+msgstr "Өмнөх жилийн мөн үе"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "Save"
+msgstr "Хадгалах"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+msgid "Search account"
+msgstr "Дансаар хайх"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__name
+msgid "Section Name"
+msgstr "Хэсгийн нэр"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid ""
+"Select this option if you want to manually define the next reminder date."
+msgstr "Та дараагийн сануулах огноог гараар тохируулахыг хүсвэл үүнийг сонго."
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid "Send an email"
+msgstr "Имэйл илгээх"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:10
+#, python-format
+msgid "Send by email"
+msgstr "Имэйл илгээх"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__sequence
+msgid "Sequence"
+msgstr "Дараалал"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__tax_report
+msgid ""
+"Set to True to automatically filter out journal items that have the boolean "
+"field 'tax_exigible' set to False"
+msgstr ""
+"'tax_exigible' boolean талбарыг идэвхигүй болгосон журналийн бичилтүүдийг "
+"автоматаар шүүж гаргахын тулд Үнэн болгоно уу"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_report_executivesummary_st_cash_forecast0
+msgid "Short term cash forecast"
+msgstr "Богино хугацааны мөнгөн төлөвлөлт"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__debit_credit
+msgid "Show Credit and Debit Columns"
+msgstr "Кредит, дебет багануудыг харуулах"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__show_domain
+msgid "Show Domain"
+msgstr "Домэйн харуулах"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__unfold_all_filter
+msgid "Show unfold all filter"
+msgstr "Бүх шүүлтүүрийг нээсэн байх"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:31
+#, python-format
+msgid "Source Document"
+msgstr "Эх баримт"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__special_date_changer
+msgid "Special Date Changer"
+msgstr "Тусгайлан огноо сонгох"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_comparison
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "Start Date :"
+msgstr "Эхлэх огноо :"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_report_manager__summary
+msgid "Summary"
+msgstr "Хураангуй"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_generic_tax_report.py:20
+#: code:addons/account_reports/models/account_generic_tax_report.py:23
+#, python-format
+msgid "TAX"
+msgstr "ТАТВАР"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/js/account_reports.js:417
+#, python-format
+msgid "Tags"
+msgstr "Пайз"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_general_ledger.py:445
+#, python-format
+msgid "Tax Amount"
+msgstr "Татварын дүн"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_general_ledger.py:436
+#, python-format
+msgid "Tax Declaration"
+msgstr "Татвар тодорхойлолт"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_generic_tax_report.py:153
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__tax_report
+#: model:ir.ui.menu,name:account_reports.menu_action_account_report_gt
+#, python-format
+msgid "Tax Report"
+msgstr "Татварын тайлан"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_report_footnote__text
+msgid "Text"
+msgstr "Текст"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_res_partner__payment_next_action_date
+msgid "The date before which no action should be taken."
+msgstr "Уг огноо хүртэлх хугацаанд ямар ч үйл ажиллагаа явуулахгүй."
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_template.xml:30
+#, python-format
+msgid "The follow-up report was successfully emailed!"
+msgstr "Авлага сануулах имэйлүүд амжилттай илгээгдсэн!"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__generated_menu_id
+msgid "The menu item generated for this report, or None if there isn't any."
+msgstr ""
+"Энэ тайланг дуудаж ачааллахад зориулсан цэс, хэрэв хоосон байвал цэс "
+"тодорхойлогдоогүй гэсэн үг."
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.template_followup_report
+msgid ""
+"The next reminder date is computed based on what you have defined in the "
+"accounting settings."
+msgstr ""
+"Дараагийн сануулах огноо нь та санхүүгийн тохиргооны хэсэгт хэрхэн "
+"тохируулсанаас хамааран төлөвлөгдөнө."
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+msgid "There are"
+msgstr "Энд"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "This Financial Year"
+msgstr "Энэ санхүүгийн жил"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "This Month"
+msgstr "Энэ сар"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "This Quarter"
+msgstr "Энэ улирал"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
+msgid ""
+"This allows you to choose the position of totals in your financial reports."
+msgstr "Энд та санхүүгийн тайлангийн нийт дүн хаанаа байрлахыг сонгож болно."
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "Today"
+msgstr "Өнөөдөр"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_aged_partner_balance.py:22
+#: code:addons/account_reports/models/account_aged_partner_balance.py:80
+#: code:addons/account_reports/models/account_consolidated_journals.py:85
+#: code:addons/account_reports/models/account_financial_report.py:1108
+#: code:addons/account_reports/models/account_financial_report.py:1193
+#: code:addons/account_reports/models/account_general_ledger.py:426
+#: code:addons/account_reports/models/account_partner_ledger.py:262
+#: code:addons/account_reports/models/account_report_coa.py:52
+#: code:addons/account_reports/models/account_report_coa.py:113
+#: model_terms:ir.ui.view,arch_db:account_reports.customer_statements_tree_view
+#: model_terms:ir.ui.view,arch_db:account_reports.template_coa_table_header
+#, python-format
+msgid "Total"
+msgstr "Нийт"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_general_ledger.py:394
+#, python-format
+msgid "Total "
+msgstr "Дүн"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:35
+#: code:addons/account_reports/models/account_followup_report.py:108
+#: model:ir.model.fields,field_description:account_reports.field_res_partner__total_due
+#, python-format
+msgid "Total Due"
+msgstr "Төлөх дүн"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_followup_report.py:119
+#: model:ir.model.fields,field_description:account_reports.field_res_partner__total_overdue
+#, python-format
+msgid "Total Overdue"
+msgstr "Хугацаа хэтэрсэн дүн"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:42
+#, python-format
+msgid "Total Virtual GL Balance"
+msgstr "Ерөнхий журналын нийт дүн"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_report_coa.py:149
+#: model:ir.actions.client,name:account_reports.action_account_report_coa
+#: model:ir.ui.menu,name:account_reports.menu_action_account_report_coa
+#, python-format
+msgid "Trial Balance"
+msgstr "Шалгах баланс"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report_line__figure_type
+msgid "Type"
+msgstr "Төрөл"
+
+#. module: account_reports
+#: model:account.financial.html.report.line,name:account_reports.account_financial_unaffected_earnings0
+msgid "Unallocated Earnings"
+msgstr "Хуваарилаагүй ашиг"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_financial_report.py:45
+#: code:addons/account_reports/models/account_financial_report.py:905
+#, python-format
+msgid "Undefined"
+msgstr "Тодорхойлогдоогүй"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:189
+#, python-format
+msgid "Unexplained Difference"
+msgstr "Тайлбарлаагүй зөрүү"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Unfold"
+msgstr "Дэлгэх"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Unfold All"
+msgstr "Бүгдийг дэлгэх"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template
+msgid "Unfolded"
+msgstr "Дэлгэгдсэн"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "Unreconciled"
+msgstr "Тулгагдаагүй"
+
+#. module: account_reports
+#: model:ir.model.fields,field_description:account_reports.field_res_partner__unreconciled_aml_ids
+msgid "Unreconciled Aml"
+msgstr "Тулгагдаагүй үлдэгдэл"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:166
+#, python-format
+msgid "Unreconciled Bank Statement Lines"
+msgstr "Банкны хуулгын тулгагдаагүй мөр"
+
+#. module: account_reports
+#: selection:account.financial.html.report.line,special_date_changer:0
+msgid "Use given dates"
+msgstr "Огноо өгч ашиглах"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:174
+#, python-format
+msgid "Validated Payments not Linked with a Bank Statement Line"
+msgstr "Батлагдсан хэдий ч банкны хуулганы мөртэй холбогдоогүй төлбөрүүд"
+
+#. module: account_reports
+#: code:addons/account_reports/models/res_partner.py:85
+#, python-format
+msgid "Vendor Ledger"
+msgstr "Нийлүүлэгчийн тайлан"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_caret_options
+msgid "View Bank Statement"
+msgstr "Банкны хуулга харах"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_caret_options
+msgid "View Bill"
+msgstr "Нэхэмжлэл харах"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_caret_options
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_followup_report
+msgid "View Invoice"
+msgstr "Нэхэмжлэл харах"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_aged_payable_report
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_aged_receivable_report
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_followup_report
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_general_ledger_report
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_partner_ledger_report
+msgid "View Journal Entry"
+msgstr "Журналын бичилт харах"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_caret_options
+msgid "View Partner"
+msgstr "Харилцагч харах"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_caret_options
+msgid "View Payment"
+msgstr "Төлбөрийг харах"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_bank_reconciliation_report.py:151
+#, python-format
+msgid "Virtual GL Balance"
+msgstr "Ерөнхий журнал тайлангийн үлдэгдэл"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report_line__print_on_new_page
+msgid ""
+"When checked this line and everything after it will be printed on a new "
+"page."
+msgstr "Сонгогдсон мөр болон түүнээс хойшхи нь шинэ хуудсанд хэвлэгдэнэ."
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_res_company__totals_below_sections
+#: model:ir.model.fields,help:account_reports.field_res_config_settings__totals_below_sections
+#: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
+msgid ""
+"When ticked, totals and subtotals appear below the sections of the report."
+msgstr ""
+"Үүнийг сонговол тайлан доторх бүлэг бүрийн нийлбэр дүн бүлгийн доод хэсэгт "
+"байршиж харагдана."
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.filter_info_template
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_extra_options
+msgid "With Draft Entries"
+msgstr "Ноорог гүйлгээн хамруулах"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.followup_search_template
+msgid "With Overdue Invoices"
+msgstr "Хугацаа хэтэрсэн нэхэмжлэлийг хамруулах"
+
+#. module: account_reports
+#: selection:res.partner,followup_status:0
+msgid "With overdue invoices"
+msgstr "Хугацаа хэтэрсэн нэхэмжлэлийг хамруулах"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/js/followup_form/followup_form_controller.js:69
+#, python-format
+msgid "You are done with the follow-ups!<br/>You have skipped %s partner(s)."
+msgstr ""
+"Таны авлага сануулах үйл ажиллагаа дууслаа!<br/>Та %s харилцагчийг алгассан "
+"байна."
+
+#. module: account_reports
+#: code:addons/account_reports/models/res_partner.py:147
+#, python-format
+msgid "any"
+msgstr "ямар нэг"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
+msgid "days between each reminder"
+msgstr "сануулга хоорондын өдрийн тоо"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__analytic
+msgid "display the analytic filters"
+msgstr "аналитик шүүлтүүрийг харуулах"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__comparison
+msgid "display the comparison filter"
+msgstr "харьцуулах шүүлтүүрийг харуулах"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__show_journal_filter
+msgid "display the journal filter in the report"
+msgstr "журналын шүүлтүүрийг тайланд харуулах"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__cash_basis
+msgid "display the option to switch to cash basis mode"
+msgstr "Мөнгөн сууриар харуулах сонголтыг ашиглах"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__unfold_all_filter
+msgid "display the unfold all options in report"
+msgstr "тайлан дээрх бүх шүүлтүүрийг дэлгэж харагдуулах"
+
+#. module: account_reports
+#: code:addons/account_reports/models/account_financial_report.py:923
+#, python-format
+msgid "n/a"
+msgstr "б/гүй"
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_report_manager__report_name
+msgid "name of the model of the report"
+msgstr "тайлангийн моделийн нэр"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+msgid "prior or included in this period."
+msgstr "өмнөх эсвэл тайлант хугацаанд багтсан байх."
+
+#. module: account_reports
+#: model:ir.model.fields,help:account_reports.field_account_financial_html_report__date_range
+msgid "specify if the report use date_range or single date"
+msgstr ""
+"тайлан нь хугацааны муж ашиглах эсвэл тухайн өдрийн огноогоор тооцоологдохыг"
+" тодорхойлно"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.search_template_date_filter
+msgid "to:"
+msgstr "хүртэл:"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.main_template
+msgid "unposted Journal Entries"
+msgstr "ноорог ажил гүйлгээ"
+
+#. module: account_reports
+#: model_terms:ir.ui.view,arch_db:account_reports.line_template_general_ledger_report
+msgid "⇒ journal items"
+msgstr "⇒ журналын бичилт"

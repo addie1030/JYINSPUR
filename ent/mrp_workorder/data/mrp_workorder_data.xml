@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="test_type_text" model="quality.point.test_type">
+            <field name="name">Text</field>
+            <field name="technical_name">text</field>
+        </record>
+
+        <record id="mrp_workorder.test_type_register_consumed_materials" model="quality.point.test_type">
+            <field name="name">Register Consumed Materials</field>
+            <field name="technical_name">register_consumed_materials</field>
+        </record>
+
+        <record id="test_type_picture" model="quality.point.test_type">
+            <field name="name">Take a Picture</field>
+            <field name="technical_name">picture</field>
+        </record>
+    </data>
+</odoo>

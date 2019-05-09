@@ -1,0 +1,38 @@
+<odoo>
+    <!-- Sale subscription wizard -->
+    <record model="ir.ui.view" id="wizard_form_view">
+        <field name="name">wizard.form</field>
+        <field name="model">sale.subscription.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Upsell">
+                <p>To add new products to this running subscription, you can either create a new quotation to ask a customer approval (discounted for the current invoicing period) or directly insert them in the subscription to invoice it on the next invoice date. If you use a quotation, the products will be added at the order confirmation.</p>
+                <group>
+                    <field name="date_from"/>
+                </group>
+                <field name="option_lines">
+                    <tree string="Options" editable="bottom">
+                        <field name="product_id" domain="[('recurring_invoice', '=', True)]" context="{'default_recurring_invoice': True}"/>
+                        <field name="name" invisible="1"/>
+                        <field name="quantity" readonly="0"/>
+                        <field name="uom_id" groups="uom.group_uom"/>
+                    </tree>
+                </field>
+                <footer>
+                    <button name="create_sale_order" type="object"
+                            string="Create &amp; View Quotation" class="oe_highlight"/>
+                    <button name="add_lines" type="object"
+                            string="Add in Subscription" class="oe_highlight" help="Insert the options directly, they will be invoiced on the next invoice date."/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="wizard_action">
+        <field name="name">Upsell</field>
+        <field name="res_model">sale.subscription.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="wizard_form_view"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

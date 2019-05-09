@@ -1,0 +1,160 @@
+.o_event_barcode_bg {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-up(md) {
+        @include o-position-absolute(0, 0, 0, 0);
+    }
+}
+.o_event_barcode_main {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 2em;
+    img {
+        width: 200px;
+    }
+    input {
+        border: 1px solid #c4c4c4;
+        font-size: 19px;
+        padding: 4px;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        box-shadow: 0px 0px 8px #d9d9d9;
+        -moz-box-shadow: 0px 0px 8px #d9d9d9;
+        -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+    }
+    input:focus {
+        outline: none;
+        border: 1px solid #7bc1f7;
+        box-shadow: 0px 0px 8px #7bc1f7;
+        -moz-box-shadow: 0px 0px 8px #7bc1f7;
+        -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+    }
+    @include media-breakpoint-up(md) {
+        flex: 0 0 auto;
+        width: 550px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        background-color: rgba(255,255,255,0.8);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        font-size: 1.2em;
+        padding: 3em;
+    }
+}
+.o_event_barcode_detail {
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0px 0px 5px rgb(51, 51, 51);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    .o_event_date {
+        height: 120px;
+        color: rgb(255, 255, 255);
+        background-color: #A2488A;
+        padding-left: 10px;
+        // Mobile: border radius top-left/right
+        @include media-breakpoint-down(md) {
+            border-top-left-radius: 10px;
+            -webkit-border-top-left-radius: 10px;
+            -moz-border-radius-topleft: 10px;
+            border-top-right-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            -moz-border-radius-topright: 10px;
+        }
+        // Otherwise: border radious top/bottom-left
+        @include media-breakpoint-up(lg) {
+            border-top-left-radius: 10px;
+            -webkit-border-top-left-radius: 10px;
+            -moz-border-radius-topleft: 10px;
+            border-bottom-left-radius: 10px;
+            -webkit-border-bottom-left-radius: 10px;
+            -moz-border-radius-bottomleft: 10px;
+        }
+
+        .o_event_day {
+            display: block;
+            font-size: 25pt;
+            line-height: 1;
+        }
+        .o_event_month {
+            font-size: 18pt;
+            font-weight: 900;
+        }
+    }
+    .o_event_info {
+        height: 120px;
+        color: inherit;
+        background-color: rgb(245, 245, 245);
+        display: table;
+        &:hover {
+            cursor: pointer;
+        }
+        // Mobile: border radius on bottom-left
+        // Otherwise: no border radius
+        @include media-breakpoint-down(md) {
+            border-bottom-left-radius: 10px;
+            -webkit-border-bottom-left-radius: 10px;
+            -moz-border-radius-bottomleft: 10px;
+        }
+        .o_event_info_name{
+            display: table-cell;
+            vertical-align: middle;
+            .o_event_title {
+                font-size: 17pt;
+                font-weight: 700;
+            }
+            .o_event_desc {
+                font-size: 13pt;
+                font-weight: 300;
+            }
+        }
+    }
+    .o_event_social {
+        height: 120px;
+        padding: 5px 10px 5px 10px;
+        border-left: 1px solid rgb(230, 230, 230);
+        font-size: 36px;
+        background: #A2488A !important;
+        color: white;
+        // Mobile: border radius on bottom-right
+        @include media-breakpoint-down(md) {
+            border-bottom-right-radius: 10px;
+            -webkit-border-bottom-right-radius: 10px;
+            -moz-border-radius-bottomright: 10px;
+        }
+        // Otherwise: border radius on top/bottom right
+        @include media-breakpoint-up(lg) {
+            border-top-right-radius: 10px;
+            -webkit-border-top-right-radius: 10px;
+            -moz-border-radius-topright: 10px;
+            border-bottom-right-radius: 10px;
+            -webkit-border-bottom-right-radius: 10px;
+            -moz-border-radius-bottomright: 10px;
+        }
+        .o_event_reg_attendee {
+            border-bottom: 1px solid;
+        }
+        .o_event_total_attendee {
+            border-top: 1px solid;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    @include media-breakpoint-up(md) {
+        width: 550px;
+    }
+}
+
+.o_notification_manager {
+    .o_event_success {
+        color: white;
+        background-color: #5BC236;
+    }
+}

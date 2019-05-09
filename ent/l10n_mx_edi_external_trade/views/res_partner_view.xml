@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_form_inherit_l10n_mx_edi_external_trade" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.l10n.mx.edi.external.trade</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='sales_purchases']//field[@name='customer']" position="after">
+                <field name="l10n_mx_edi_external_trade"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_l10n_mx_edi_external_trade" model="ir.ui.view">
+        <field name="name">res.partner.l10n.mx.edi.external.trade</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="l10n_mx_edi.mx_partner_address_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='l10n_mx_edi_colony']" position="after">
+                <field name="l10n_mx_edi_colony_code" placeholder="Colony Code..." attrs="{'invisible': [('type', '!=', 'invoice')]}"/>
+            </xpath>
+            <xpath expr="//field[@name='l10n_mx_edi_locality']" position="after">
+                <field name="l10n_mx_edi_locality_id" placeholder="Locality..." domain="[('state_id','=', state_id)]" options='{"no_create": True}'/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="financial_report_l10n_uy" model="account.financial.html.report">
+        <field name="name">Estructura de IVA</field>
+        <field name='parent_id' ref='l10n_uy.account_reports_uy_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+    <record id="financial_report_line_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Imponible</field>
+        <field name="code">UYTAX_01</field>
+        <field name="sequence" eval="1"/>
+        <field name="formulas">balance = UYTAX_0101.balance + UYTAX_0201.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_uy"/>
+        <field name="level" eval="0"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_01_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Imponible Compras</field>
+        <field name="code">UYTAX_0101</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = UYTAX_010101.balance + UYTAX_020101.balance + UYTAX_030101.balance + UYTAX_040101.balance</field>
+        <field name="parent_id" ref="financial_report_line_01_uy"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_01_01_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Compras 22%</field>
+        <field name="code">UYTAX_010101</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_uy.tag_compras_22')]), ('debit', '>', 0)]"/>
+        <field name="formulas">balance = sum.debit</field>
+        <field name="parent_id" ref="financial_report_line_01_01_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_02_01_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Compras 10%</field>
+        <field name="code">UYTAX_020101</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_uy.tag_compras_10')]), ('debit', '>', 0)]"/>
+        <field name="formulas">balance = sum.debit</field>
+        <field name="parent_id" ref="financial_report_line_01_01_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_03_01_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Compras 0%</field>
+        <field name="code">UYTAX_030101</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_uy.tag_compras_exento')]), ('debit', '>', 0)]"/>
+        <field name="formulas">balance = sum.debit</field>
+        <field name="parent_id" ref="financial_report_line_01_01_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_04_01_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Imponible Compras</field>
+        <field name="code">UYTAX_040101</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_uy.tag_compras_22'), ref('l10n_uy.tag_compras_10'), ref('l10n_uy.tag_compras_exento')]), ('credit', '>', 0)]"/>
+        <field name="formulas">balance = - sum.credit</field>
+        <field name="parent_id" ref="financial_report_line_01_01_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_02_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Imponible Ventas</field>
+        <field name="code">UYTAX_0201</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = UYTAX_010201.balance + UYTAX_020201.balance + UYTAX_030201.balance + UYTAX_040201.balance</field>
+        <field name="parent_id" ref="financial_report_line_01_uy"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_01_02_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Ventas 22%</field>
+        <field name="code">UYTAX_010201</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_uy.tag_ventas_22')]), ('credit', '>', 0)]"/>
+        <field name="formulas">balance = sum.credit</field>
+        <field name="parent_id" ref="financial_report_line_02_01_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_02_02_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Ventas 10%</field>
+        <field name="code">UYTAX_020201</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_uy.tag_ventas_10')]), ('credit', '>', 0)]"/>
+        <field name="formulas">balance = sum.credit</field>
+        <field name="parent_id" ref="financial_report_line_02_01_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_03_02_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Ventas 0%</field>
+        <field name="code">UYTAX_030201</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_uy.tag_ventas_exentos')]), ('credit', '>', 0)]"/>
+        <field name="formulas">balance = sum.credit</field>
+        <field name="parent_id" ref="financial_report_line_02_01_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_04_02_01_uy" model="account.financial.html.report.line">
+        <field name="name">Base Imponible Ventas</field>
+        <field name="code">UYTAX_040201</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_uy.tag_ventas_22'), ref('l10n_uy.tag_ventas_10'), ref('l10n_uy.tag_ventas_exentos')]), ('debit', '>', 0)]"/>
+        <field name="formulas">balance = - sum.debit</field>
+        <field name="parent_id" ref="financial_report_line_02_01_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_02_uy" model="account.financial.html.report.line">
+        <field name="name">Saldo de IVA</field>
+        <field name="code">UYTAX_02</field>
+        <field name="sequence" eval="2"/>
+        <field name="formulas">balance = UYTAX_0102.balance + UYTAX_0202.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_uy"/>
+        <field name="level" eval="0"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_01_02_uy" model="account.financial.html.report.line">
+        <field name="name">IVA Compras - pagado</field>
+        <field name="code">UYTAX_0102</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = UYTAX_010102.balance + UYTAX_020102.balance + UYTAX_030102.balance + UYTAX_040102.balance</field>
+        <field name="parent_id" ref="financial_report_line_02_uy"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_01_01_02_uy" model="account.financial.html.report.line">
+        <field name="name">IVA Compras 22%</field>
+        <field name="code">UYTAX_010102</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_uy.tag_compras_22')]), ('debit', '>', 0)]"/>
+        <field name="formulas">balance = sum.debit</field>
+        <field name="parent_id" ref="financial_report_line_01_02_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_02_01_02_uy" model="account.financial.html.report.line">
+        <field name="name">IVA Compras 10%</field>
+        <field name="code">UYTAX_020102</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_uy.tag_compras_10')]), ('debit', '>', 0)]"/>
+        <field name="formulas">balance = sum.debit</field>
+        <field name="parent_id" ref="financial_report_line_01_02_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_03_01_02_uy" model="account.financial.html.report.line">
+        <field name="name">Compras Exento IVA</field>
+        <field name="code">UYTAX_030102</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_01_02_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_04_01_02_uy" model="account.financial.html.report.line">
+        <field name="name">IVA Compras - pagado</field>
+        <field name="code">UYTAX_040102</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_uy.tag_compras_10'), ref('l10n_uy.tag_compras_22')]), ('credit', '>', 0)]"/>
+        <field name="formulas">balance = - sum.credit</field>
+        <field name="parent_id" ref="financial_report_line_02_uy"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_02_02_uy" model="account.financial.html.report.line">
+        <field name="name">IVA Ventas - percibido</field>
+        <field name="code">UYTAX_0202</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = UYTAX_010202.balance + UYTAX_020202.balance + UYTAX_030202.balance + UYTAX_040202.balance</field>
+        <field name="parent_id" ref="financial_report_line_02_uy"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_01_02_02_uy" model="account.financial.html.report.line">
+        <field name="name">IVA Ventas 22%</field>
+        <field name="code">UYTAX_010202</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_uy.tag_ventas_22')]), ('credit', '>', 0)]"/>
+        <field name="formulas">balance = sum.credit</field>
+        <field name="parent_id" ref="financial_report_line_02_02_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_02_02_02_uy" model="account.financial.html.report.line">
+        <field name="name">IVA Ventas 10%</field>
+        <field name="code">UYTAX_020202</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_uy.tag_ventas_10')]), ('credit', '>', 0)]"/>
+        <field name="formulas">balance = sum.credit</field>
+        <field name="parent_id" ref="financial_report_line_02_02_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_03_02_02_uy" model="account.financial.html.report.line">
+        <field name="name">Ventas Exento IVA</field>
+        <field name="code">UYTAX_030202</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_02_02_uy"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_04_02_02_uy" model="account.financial.html.report.line">
+        <field name="name">IVA Ventas - percibido</field>
+        <field name="code">UYTAX_040202</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_uy.tag_ventas_10'), ref('l10n_uy.tag_ventas_22')]), ('debit', '>', 0)]"/>
+        <field name="formulas">balance = - sum.debit</field>
+        <field name="parent_id" ref="financial_report_line_02_02_uy"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

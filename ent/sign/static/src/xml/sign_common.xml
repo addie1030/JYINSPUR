@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="sign.sign_item" name="Signature Item">
+        <t t-if="readonly">
+            <div t-if="type == 'signature' || type == 'initial'" class="o_sign_sign_item text-center" style="text-align: center;" t-att-data-signature="value"><span class="o_sign_helper"/><img t-if="value" t-att-src="value" alt="Signature"/><t t-if="!value"><t t-esc="placeholder"/></t><t t-if="editMode" t-call="sign.sign_item_configuration"/></div>
+
+            <div t-if="type == 'text' || type == 'textarea'" class="o_sign_sign_item"><t t-esc="value"/><t t-if="editMode" t-call="sign.sign_item_configuration"/></div>
+
+            <div t-if="type == 'checkbox'" class="o_sign_sign_item"><t t-if="value == 'on'">X</t><t t-if="editMode" t-call="sign.sign_item_configuration"/></div>
+        </t>
+
+        <t t-if="!readonly">
+            <button t-if="type == 'signature' || type == 'initial'" class="o_sign_sign_item text-center"><span class="o_sign_helper"/><t t-esc="placeholder"/></button>
+            <input t-if="type == 'text'" type="text" class="o_sign_sign_item" t-att-placeholder="placeholder"/>
+            <input t-if="type == 'checkbox'" type="checkbox" class="o_sign_sign_item"/>
+            <textarea t-if="type == 'textarea'" class="o_sign_sign_item" t-att-placeholder="placeholder"/>
+        </t>
+    </t>
+
+    <div t-name="sign.sign_item_configuration" class="o_sign_config_area">
+        <span class="fa fa-arrows" role="img" aria-label="Signature configuration" title="Signature configuration"/>
+        <span class="o_sign_responsible_display"/>
+    </div>
+
+    <!-- Signing part -->
+    <div t-name="sign.signature_dialog">
+        <div class="o_sign_signer_info form-group row">
+            <label class="col-lg-2 col-form-label" for="name">Full Name</label>
+            <div class="col-lg-10">
+                <input class="o_sign_signer_name form-control" name="signer" t-att-value="widget.signerName" type="text"/>
+            </div>
+        </div>
+        <div class="o_sign_signature_draw card mt-3">
+            <div class="card-header">
+                <a role="button" class="o_sign_select_style float-right btn btn-link" href="#">Select Signature Style</a>
+                <a role="button" class="o_sign_clean float-right btn btn-link" href="#">Clear Signature</a>
+                <a data-mode="draw" class="o_sign_mode btn btn-light active" role="button" href="#">Draw</a>
+                <a data-mode="auto" class="o_sign_mode btn btn-light" role="button" href="#">Auto</a>
+                <a data-mode="load" class="o_sign_mode btn btn-light" role="button" href="#">Load</a>
+                <input type="file" name="files[]" class="o_sign_load btn btn-link py-0" role="button"/>
+            </div>
+            <div class="o_sign_signature card-body p-0"/>
+        </div>
+        <div class="mt16 small">By clicking Adopt and Sign, I agree that the chosen signature/initials will be a valid electronic representation of my hand-written signature/initials for all purposes when it is used on documents, including legally binding contracts.</div>
+
+        <div class="o_sign_font_dialog card">
+            <div class="card-header">Styles</div>
+            <div class="o_sign_font_selection card-body"/>
+        </div>
+    </div>
+
+    <t t-name="sign.svg_text" name="SVG Signature Text">
+        <svg t-att-width="width" t-att-height="height">
+            <defs>
+                <style type="text/css">
+                    @font-face {
+                        font-family: "font";
+                        src: url(data:font/ttf;base64,<t t-esc="font"/>) format("woff");
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                </style>
+            </defs>
+            <!-- adapt textLength to prevent distortion and left overflow with small words -->
+            <text x="50%" t-att-y="height*4/5" t-att-font-size="height*4/5" t-att-textLength="width * 4 / 5 * (type === 'signature' ? Math.min(1, text.length / 7) : 1)" t-att-lengthAdjust="'spacing' + ((type == 'signature')? 'AndGlyphs' : '')" style="font-family:'font'" fill="black" text-anchor="middle"><t t-esc="text"/></text>
+        </svg>
+    </t>
+
+    <div t-name="sign.public_signer_dialog">
+        <div class="form-group row">
+            <label for="o_sign_public_signer_name_input" class="col-lg-3 col-form-label">Your name</label>
+            <div class="col-lg-9">
+                <input type="text" id="o_sign_public_signer_name_input" placeholder="Your name" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="o_sign_public_signer_mail_input" class="col-lg-3 col-form-label">Your email</label>
+            <div class="col-lg-9">
+                <input type="email" id="o_sign_public_signer_mail_input" placeholder="Your email" class="form-control"/>
+            </div>
+        </div>
+    </div>
+
+    <div t-name="sign.public_sms_signer">
+        <div class="form-group">
+            <span>A SMS will be sent to the following phone number. Please update it if it's not relevant.</span>
+            <div>
+                <input type="text" id="o_sign_phone_number_input" placeholder="Phone number..." class="form-control" t-att-value="widget.signerPhone"/>
+                <button class='btn-link o_sign_resend_sms'>Send SMS</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <span>Please enter the code received through SMS to complete your signature</span>
+            <div>
+                <input type="text" id="o_sign_public_signer_sms_input" placeholder="SMS Code" class="form-control"/>
+            </div>
+        </div>
+    </div>
+
+    <div t-name="sign.thank_you_dialog">
+        <div class="o_thankyou_message">We will let you know by email once everyone has signed.<br/>
+        You can close the window and come back later.</div>
+        <t t-if="!widget.RedirectURL">
+            <div class="o_promote_esign o_thankyou_link">
+                <img src="/sign/static/description/icon.png" alt="Document Sign" class="img img-fluid d-inline-block"/>
+                <a class="pl-3" target="_blank" href="https://www.odoo.com/page/sign">Made with Odoo Sign</a>
+            </div>
+        </t>
+        <t t-if="widget.RedirectURL">
+            <div class="o_promote_esign o_thankyou_link">
+                <img src="/sign/static/description/icon.png" alt="Document Sign" class="img img-fluid d-inline-block"/>
+                <a class="pl-3" target="_blank" t-att-href="widget.RedirectURL">View External Document</a>
+            </div>
+        </t>
+        <div class="o_go_to_document o_thankyou_link">
+            <img src="/sign/static/description/icon.png" alt="Document Sign" class="img img-fluid d-inline-block"/>
+            <a class="pl-3" href="#">View Signed document</a>
+        </div>
+    </div>
+
+    <div t-name="sign.no_pub_thank_you_dialog" t-extend="sign.thank_you_dialog">
+        <t t-jquery=".o_promote_esign" t-operation="replace"/>
+    </div>
+</templates>

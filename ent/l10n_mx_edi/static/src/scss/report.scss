@@ -1,0 +1,30 @@
+#complement {
+    page-break-before: auto;
+    page-break-inside: avoid;
+    div {
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+    }
+    .barcode {
+        float: none;
+        img {
+            height: 180px;
+            width: 180px;
+        }
+    }
+    .complement-details {
+        font-size:8px;
+    }
+    div.digital-stamp {
+        background-color: grey;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+    div.digital-stamp-content {
+        width: 93%;
+    }
+    .nowrap {
+        white-space: pre;
+    }
+}

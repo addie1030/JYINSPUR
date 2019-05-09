@@ -1,0 +1,218 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * web_grid
+# 
+# Translators:
+# Martin Trigaux, 2018
+# Jeffery CHEN Fan <jeffery9@gmail.com>, 2018
+# KWOKYUK CHEUNG <cheungkwokyuk@gmail.com>, 2018
+# liAnGjiA <liangjia@qq.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:07+0000\n"
+"PO-Revision-Date: 2018-09-21 14:07+0000\n"
+"Last-Translator: liAnGjiA <liangjia@qq.com>, 2018\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: web_grid
+#: model:ir.model,name:web_grid.model_ir_actions_act_window_view
+msgid "Action Window View"
+msgstr "动作窗视图"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Activity"
+msgstr "活动"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_controller.js:148
+#: code:addons/web_grid/static/src/xml/grid_view.xml:5
+#, python-format
+msgid "Add a Line"
+msgstr "添加明细"
+
+#. module: web_grid
+#: model:ir.model,name:web_grid.model_base
+msgid "Base"
+msgstr "基础"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Calendar"
+msgstr "日历"
+
+#. module: web_grid
+#: code:addons/web_grid/models/models.py:201
+#: code:addons/web_grid/models/models.py:233
+#, python-format
+msgid "Can not use fields of type %s as grid columns"
+msgstr "不能使用类型 %s 的字段作为表格栏位"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Cohort"
+msgstr "队列"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Dashboard"
+msgstr "仪表板"
+
+#. module: web_grid
+#: selection:ir.ui.view,type:0
+msgid "Diagram"
+msgstr "图表"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Form"
+msgstr "表单"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Gantt"
+msgstr "甘特图"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Graph"
+msgstr "图形"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_view.js:15
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+#, python-format
+msgid "Grid"
+msgstr "网络"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Kanban"
+msgstr "看板"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/xml/grid_view.xml:24
+#, python-format
+msgid "Next"
+msgstr "下一个"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Pivot"
+msgstr "透视表"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/xml/grid_view.xml:17
+#, python-format
+msgid "Previous"
+msgstr "以前"
+
+#. module: web_grid
+#: selection:ir.ui.view,type:0
+msgid "QWeb"
+msgstr "QWeb"
+
+#. module: web_grid
+#: selection:ir.ui.view,type:0
+msgid "Search"
+msgstr "搜索"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:244
+#, python-format
+msgid "See all the records aggregated in this cell"
+msgstr "升序查看单元格内的所有记录"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:183
+#, python-format
+msgid ""
+"The sectioned grid view can't handle groups with different columns sets"
+msgstr "部分化的网格视图不能处理具有不同列集的组。"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/xml/grid_view.xml:19
+#, python-format
+msgid "Today"
+msgstr "今日"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:395
+#, python-format
+msgid "Total"
+msgstr "合计"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:393
+#, python-format
+msgid "Total (%s)"
+msgstr "合计 (%s)"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Tree"
+msgstr "树形"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_controller.js:204
+#, python-format
+msgid "Undefined"
+msgstr "未定义的"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:160
+#: code:addons/web_grid/static/src/js/grid_renderer.js:323
+#: code:addons/web_grid/static/src/js/grid_renderer.js:358
+#, python-format
+msgid "Unknown"
+msgstr "未知"
+
+#. module: web_grid
+#: model:ir.model,name:web_grid.model_ir_ui_view
+msgid "View"
+msgstr "视图"
+
+#. module: web_grid
+#: model:ir.model.fields,field_description:web_grid.field_ir_actions_act_window_view__view_mode
+#: model:ir.model.fields,field_description:web_grid.field_ir_ui_view__type
+msgid "View Type"
+msgstr "视图类型"
+
+#. module: web_grid
+#: code:addons/web_grid/models/models.py:244
+#, python-format
+msgid ""
+"Week %(weeknumber)s\n"
+"%(week_start)s - %(week_end)s"
+msgstr ""
+"周 %(weeknumber)s\n"
+"%(week_start)s - %(week_end)s"

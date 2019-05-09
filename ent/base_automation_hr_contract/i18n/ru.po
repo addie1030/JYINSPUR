@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * base_automation_hr_contract
+# 
+# Translators:
+# Martin Trigaux, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.3+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-25 08:34+0000\n"
+"PO-Revision-Date: 2018-06-25 08:34+0000\n"
+"Last-Translator: Martin Trigaux, 2018\n"
+"Language-Team: Russian (https://www.transifex.com/odoo/teams/41243/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__website_published
+msgid ""
+"A code server action can be executed from the website, using a dedicated "
+"controller. The address is <base>/website/action/<website_path>. Set this "
+"field as True to allow users to run this action. If it is set to False the "
+"action cannot be run through the website."
+msgstr ""
+"Действие код сервера может быть выполнена с веб-сайта, используя специальный"
+" контроллер. Адрес <base>/website/action/<website_path>. Установите это поле"
+" Правда, чтобы позволить пользователям запускать это действие. Если оно "
+"установлено в значение Ложь действие не может быть запущена через веб-сайт."
+
+#. module: base_automation_hr_contract
+#: model:ir.model,name:base_automation_hr_contract.model_base_automation
+msgid "Automated Action"
+msgstr "Автоматизированное действие"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_published
+msgid "Available on the Website"
+msgstr "Доступно на веб-сайте"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__website_url
+msgid "The full URL to access the server action through the website."
+msgstr "Полный URL, чтобы получить доступ к действию сервера через веб-сайт."
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__trg_date_resource_field_id
+msgid "Use employee work schedule"
+msgstr "Используйте график работы сотрудника"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__trg_date_resource_field_id
+msgid "Use the user's working schedule."
+msgstr "Используйте рабочий график пользователя."
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_path
+msgid "Website Path"
+msgstr "Путь сайта"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_url
+msgid "Website Url"
+msgstr "URL веб-сайта"

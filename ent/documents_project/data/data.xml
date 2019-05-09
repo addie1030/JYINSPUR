@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Workflow Rules -->
+
+        <record id="project_rule" model="documents.workflow.rule" forcecreate="0">
+            <field name="name">Create a Task</field>
+            <field name="create_model">project.task</field>
+            <field name="domain_folder_id" ref="documents.documents_internal_folder"/>
+        </record>
+
+    </data>
+</odoo>

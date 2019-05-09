@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * project_timesheet_forecast
+# 
+# Translators:
+# Martin Trigaux, 2018
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2018
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:06+0000\n"
+"PO-Revision-Date: 2018-08-24 11:47+0000\n"
+"Last-Translator: Erwin van der Ploeg <erwin@odooexperts.nl>, 2018\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_timesheet_forecast_report_analysis__date
+#: model_terms:ir.ui.view,arch_db:project_timesheet_forecast.project_timesheet_forecast_report_view_search
+msgid "Date"
+msgstr "Datum"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_timesheet_forecast_report_analysis__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_forecast__effective_hours
+msgid "Effective hours"
+msgstr "Effectieve uren"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_timesheet_forecast_report_analysis__employee_id
+#: model_terms:ir.ui.view,arch_db:project_timesheet_forecast.project_timesheet_forecast_report_view_search
+msgid "Employee"
+msgstr "Werknemer"
+
+#. module: project_timesheet_forecast
+#: selection:project.timesheet.forecast.report.analysis,type:0
+msgid "Forecast"
+msgstr "Planning"
+
+#. module: project_timesheet_forecast
+#: model_terms:ir.ui.view,arch_db:project_timesheet_forecast.project_timesheet_forecast_report_view_search
+msgid "Group By"
+msgstr "Groepeer op"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_timesheet_forecast_report_analysis__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_timesheet_forecast_report_analysis____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_timesheet_forecast_report_analysis__number_hours
+msgid "Number of hours"
+msgstr "Aantal uren"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_forecast__working_days_count
+msgid "Number of working days"
+msgstr "Aantal werkdagen"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_forecast__percentage_hours
+msgid "Progress"
+msgstr "Voortgang"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_timesheet_forecast_report_analysis__project_id
+#: model_terms:ir.ui.view,arch_db:project_timesheet_forecast.project_timesheet_forecast_report_view_search
+msgid "Project"
+msgstr "Project"
+
+#. module: project_timesheet_forecast
+#: model:ir.model,name:project_timesheet_forecast.model_project_forecast
+msgid "Project Forecast"
+msgstr "Projectprognose"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_timesheet_forecast_report_analysis__task_id
+#: model_terms:ir.ui.view,arch_db:project_timesheet_forecast.project_timesheet_forecast_report_view_search
+msgid "Task"
+msgstr "Taak"
+
+#. module: project_timesheet_forecast
+#: model_terms:ir.actions.act_window,help:project_timesheet_forecast.project_timesheet_forecast_report_action
+msgid ""
+"This report performs analysis on your timesheet and forecast. This allow to "
+"have a global view of past forecast and what was really done. Comparing old "
+"estimation and effective work amount will help you to better plan your futur"
+" project."
+msgstr ""
+"Deze rapportage analyseert uw urenstaat en prognose. Dit geeft u een globaal"
+" overzicht van de prognose uit het verleden en wat werkelijk is gedaan. Het "
+"vergelijk van oude inschattingen en de werkelijke werkuren helpt u bij het "
+"beter plannen van toekomstige projecten."
+
+#. module: project_timesheet_forecast
+#: selection:project.timesheet.forecast.report.analysis,type:0
+msgid "Timesheet"
+msgstr "Urenstaat"
+
+#. module: project_timesheet_forecast
+#: model:ir.model,name:project_timesheet_forecast.model_project_timesheet_forecast_report_analysis
+msgid "Timesheet & Forecast Statistics"
+msgstr "Urenstaat & prognose statistieken"
+
+#. module: project_timesheet_forecast
+#: model:ir.actions.act_window,name:project_timesheet_forecast.project_timesheet_forecast_report_action
+#: model_terms:ir.ui.view,arch_db:project_timesheet_forecast.project_timesheet_forecast_report_view_graph
+#: model_terms:ir.ui.view,arch_db:project_timesheet_forecast.project_timesheet_forecast_report_view_pivot
+#: model_terms:ir.ui.view,arch_db:project_timesheet_forecast.project_timesheet_forecast_report_view_search
+msgid "Timesheet Forecast Analysis"
+msgstr "Urenstaat prognoseanalyse"
+
+#. module: project_timesheet_forecast
+#: model:ir.ui.menu,name:project_timesheet_forecast.menu_project_timesheet_forecast_report_analysis
+msgid "Timesheet and Forecast Analysis"
+msgstr "Urenstaat en prognoseanalyse"
+
+#. module: project_timesheet_forecast
+#: model:ir.filters,name:project_timesheet_forecast.ir_filter_project_timesheet_forecast
+msgid "Timesheet vs Forecast"
+msgstr "Urenstaat vs prognose"
+
+#. module: project_timesheet_forecast
+#: model:ir.model.fields,field_description:project_timesheet_forecast.field_project_timesheet_forecast_report_analysis__type
+msgid "Type"
+msgstr "Type"

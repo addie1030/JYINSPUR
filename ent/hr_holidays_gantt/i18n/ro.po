@@ -1,0 +1,24 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * hr_holidays_gantt
+# 
+# Translators:
+# Cozmin Candea <office@terrabit.ro>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.3+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-25 08:34+0000\n"
+"PO-Revision-Date: 2018-06-25 08:34+0000\n"
+"Last-Translator: Cozmin Candea <office@terrabit.ro>, 2018\n"
+"Language-Team: Romanian (https://www.transifex.com/odoo/teams/41243/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#. module: hr_holidays_gantt
+#: model:ir.ui.view,arch_db:hr_holidays_gantt.hr_leave_gantt_view
+msgid "Day(s)"
+msgstr "Zi (zile)"

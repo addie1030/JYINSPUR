@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * base_automation_hr_contract
+# 
+# Translators:
+# Duy BQ <duybq86@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 10:05+0000\n"
+"PO-Revision-Date: 2018-09-18 10:05+0000\n"
+"Last-Translator: Duy BQ <duybq86@gmail.com>, 2018\n"
+"Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__website_published
+msgid ""
+"A code server action can be executed from the website, using a dedicated "
+"controller. The address is <base>/website/action/<website_path>. Set this "
+"field as True to allow users to run this action. If it is set to False the "
+"action cannot be run through the website."
+msgstr ""
+"Một hành động máy chủ mã có thể được thực hiện từ trang web, sử dụng một bộ "
+"điều khiển chuyên dụng. Địa chỉ là <base>/ website / action /<website_path>."
+" Đặt trường này là \"Đúng\" để cho phép người dùng chạy tác vụ này. Nếu nó "
+"được đặt thành \"Sai\" thì hành động không thể chạy qua trang web."
+
+#. module: base_automation_hr_contract
+#: model:ir.model,name:base_automation_hr_contract.model_base_automation
+msgid "Automated Action"
+msgstr "Thực hiện tự động"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_published
+msgid "Available on the Website"
+msgstr "Khả dụng ở Website"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__website_url
+msgid "The full URL to access the server action through the website."
+msgstr "URL đầy đủ để truy cập hành động máy chủ thông qua trang web."
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__trg_date_resource_field_id
+msgid "Use employee work schedule"
+msgstr "Sử dụng lịch làm việc của nhân viên"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__trg_date_resource_field_id
+msgid "Use the user's working schedule."
+msgstr "Sử dụng lịch làm việc của người dùng."
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_path
+msgid "Website Path"
+msgstr "Đường dẫn website"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_url
+msgid "Website Url"
+msgstr "Đường dẫn Website"

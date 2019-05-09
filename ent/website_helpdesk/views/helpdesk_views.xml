@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="helpdesk_team_view_form_inherit_website_helpdesk" model="ir.ui.view">
+        <field name="name">helpdesk.team.form.inherit.website.slides.helpdesk</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_team_view_form"/>
+        <field name="model">helpdesk.team</field>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='toggle_active']" position="after">
+                <button class="oe_stat_button" name="website_publish_button" type="object" icon="fa-globe" attrs="{'invisible': [('use_website_helpdesk_form', '=', False), ('use_website_helpdesk_forum', '=', False), ('use_website_helpdesk_slides', '=', False)]}">
+                    <field name="website_published" widget="website_button"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

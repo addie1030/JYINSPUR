@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="mrp_mps_report_1" model="mrp.mps.report">
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="period">month</field>
+        </record>
+
+        <record id="product.product_product_3" model="product.product">
+            <field name="mps_active" eval="True"/>
+            <field name="mps_min_supply" eval="0"/>
+            <field name="mps_max_supply" eval="20"/>
+            <field name="mps_forecasted" eval="5"/>
+        </record>
+
+        <record id="product.product_product_12" model="product.product">
+            <field name="mps_active" eval="True"/>
+            <field name="mps_min_supply" eval="0"/>
+            <field name="mps_max_supply" eval="50"/>
+            <field name="mps_forecasted" eval="15"/>
+        </record>
+
+        <record id="mps_stock_inventory_0" model="stock.inventory">
+            <field name="name">Starting Inventory</field>
+        </record>
+
+        <record id="mps_stock_inventory_line_0" model="stock.inventory.line">
+            <field name="product_id" ref="product.product_product_12"/>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="mps_stock_inventory_0"/>
+            <field name="product_qty">340</field>
+            <field name="location_id" ref="stock.stock_location_components"/>
+        </record>
+        <record id="mps_stock_inventory_line_1" model="stock.inventory.line">
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="mps_stock_inventory_0"/>
+            <field name="product_qty">50</field>
+            <field name="location_id" ref="stock.stock_location_components"/>
+        </record>
+
+        <function model="stock.inventory" name="action_start" eval="[[ref('mps_stock_inventory_0')]]"/>
+        <function model="stock.inventory" name="action_validate" eval="[[ref('mps_stock_inventory_0')]]"/>
+
+        <record id="sale_forecast4" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(months=2)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_12"/>
+            <field name="forecast_qty">40</field>
+        </record>
+        <record id="sale_forecast5" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(months=2) + relativedelta(days=15)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_12"/>
+            <field name="forecast_qty">5</field>
+        </record>
+        <record id="sale_forecast6" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(months=3)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_12"/>
+            <field name="forecast_qty">100</field>
+        </record>
+
+        <record id="sale_forecast1" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(months=2)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="forecast_qty">20</field>
+        </record>
+
+        <record id="sale_forecast2" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(months=3)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="forecast_qty">40</field>
+        </record>
+
+        <record id="sale_forecast3" model="sale.forecast">
+            <field name="date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="forecast_qty">20</field>
+            <field name="to_supply">20</field>
+            <field name="mode">manual</field>
+        </record>
+
+        <record id="sale_forecast7" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(months=5)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="forecast_qty">40</field>
+            <field name="to_supply">100</field>
+            <field name="mode">manual</field>
+        </record>
+
+        <record id="sale_forecast8" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(days=1)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_12"/>
+            <field name="forecast_qty">40</field>
+        </record>
+        <record id="sale_forecast9" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(days=2)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_12"/>
+            <field name="forecast_qty">60</field>
+        </record>
+        <record id="sale_forecast10" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(days=5) + relativedelta(weeks=1)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_12"/>
+            <field name="forecast_qty">80</field>
+        </record>
+
+        <record id="sale_forecast11" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(days=2) + relativedelta(weeks=1)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="forecast_qty">20</field>
+        </record>
+        <record id="sale_forecast12" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(days=3)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="forecast_qty">40</field>
+        </record>
+        <record id="sale_forecast13" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(days=2)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="forecast_qty">30</field>
+            <field name="to_supply">10</field>
+            <field name="mode">manual</field>
+        </record>
+        <record id="sale_forecast14" model="sale.forecast">
+            <field name="date" eval="(DateTime.today() + relativedelta(days=1)).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_3"/>
+            <field name="forecast_qty">70</field>
+            <field name="to_supply">20</field>
+            <field name="mode">manual</field>
+        </record>
+        <record id="sale_forecast15" model="sale.forecast">
+            <field name="date" eval="(DateTime.today()).strftime('%Y-%m-%d')"/>
+            <field name="product_id" ref="product.product_product_12"/>
+            <field name="forecast_qty">40</field>
+            <field name="to_supply">15</field>
+        </record>
+
+        <function model="mrp.mps.report" name="update_indirect" eval="[ref('product.product_product_12')]"/>
+        <function model="mrp.mps.report" name="update_indirect" eval="[ref('product.product_product_3')]"/>
+
+    </data>
+</odoo>

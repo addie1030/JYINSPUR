@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="l10n_ch.vat_tag_382_a" model="account.account.tag">
+        <field name="name">Switzerland VAT Form: grid 382 base</field>
+        <field name="applicability">taxes</field>
+    </record>
+
+    <record id="l10n_ch.vat_tag_382_b" model="account.account.tag">
+        <field name="name">Switzerland VAT Form: grid 382 tax</field>
+        <field name="applicability">taxes</field>
+    </record>
+</odoo>

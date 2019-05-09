@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="mass_mailing_view_form_marketing_activity" model="ir.ui.view">
+        <field name="name">mail.mass_mailing.view.marketing.activity</field>
+        <field name="model">mail.mass_mailing</field>
+        <field name="priority">20</field>
+        <field name="arch" type="xml">
+        <form string="Mail Template">
+            <sheet>
+                <group>
+                    <field name="name" string="Subject"/>
+                    <field name="email_from"/>
+                    <label for="mailing_model_id" string="Recipients" invisible="1"/>
+                    <field name="mailing_model_id" invisible="1"/>
+                    <field name="mailing_model_real" invisible="1"/>
+                    <field name="use_in_marketing_automation" invisible="1"/>
+                    <field name="state" invisible="1"/>
+                </group>
+                <notebook>
+                    <page string="Mail Body">
+                        <field name="body_html" widget="html_frame" options="{'editor_url': '/mass_mailing/field/email_template'}"/>
+                    </page>
+                    <page string="Options">
+                        <group>
+                            <group string="Mailing">
+                                <field name="attachment_ids" widget="many2many_binary" string="Attach a file" class="oe_inline"/>
+                                <field name="keep_archives" groups="base.group_no_one"/>
+                                <label for="reply_to"/>
+                                <div>
+                                    <field name="reply_to_mode" widget="radio" attrs="{'invisible': [('mailing_model_real', '=', 'mail.mass_mailing.contact')]}"/>
+                                    <field name="reply_to" attrs="{'required': [('reply_to_mode', '=', 'email')], 'invisible': [('reply_to_mode', '!=', 'email')]}"/>
+                                </div>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+        </field>
+    </record>
+
+    <record id="mass_mailing.action_view_mass_mailings" model="ir.actions.act_window">
+        <field name="domain">[('use_in_marketing_automation', '=', False)]</field>
+    </record>
+
+</odoo>

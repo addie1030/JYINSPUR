@@ -1,0 +1,42 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_zebra
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:06+0000\n"
+"PO-Revision-Date: 2018-08-24 11:39+0000\n"
+"Language-Team: Filipino (https://www.transifex.com/odoo/teams/41243/fil/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: fil\n"
+"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+
+#. module: mrp_zebra
+#: model:ir.actions.report,name:mrp_zebra.label_manufacture_template
+msgid "Finished Product Label (ZPL)"
+msgstr ""
+
+#. module: mrp_zebra
+#: model_terms:ir.ui.view,arch_db:mrp_zebra.mrp_workorder_view_form_tablet_printers
+msgid "Print Labels"
+msgstr ""
+
+#. module: mrp_zebra
+#: model:ir.model,name:mrp_zebra.model_quality_point
+msgid "Quality Control Point"
+msgstr ""
+
+#. module: mrp_zebra
+#: model:ir.model,name:mrp_zebra.model_mrp_workorder
+msgid "Work Order"
+msgstr ""
+
+#. module: mrp_zebra
+#: code:addons/mrp_zebra/models/mrp_workorder.py:42
+#, python-format
+msgid "You did not set a lot/serial number for the final product"
+msgstr ""

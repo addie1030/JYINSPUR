@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_financial_report_l10n_br_tva0" model="account.financial.html.report">
+        <field name="name">Códigos de Impostos Brasileiros</field>
+        <field name='parent_id' ref='l10n_br.account_reports_br_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line0" model="account.financial.html.report.line">
+        <field name="name">ICMSST</field>
+        <field name="code">BRTAX00</field>
+        <field name="sequence" eval="1"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_br_tva0"/>
+        <field name="level" eval="0" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line0_01" model="account.financial.html.report.line">
+        <field name="name">ICMSST_1</field>
+        <field name="code">BRTAX00_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line0"/>
+        <field name="level" eval="1" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_br.tag_br_02')])]" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line0_02" model="account.financial.html.report.line">
+        <field name="name">ICMSST_2</field>
+        <field name="code">BRTAX00_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line0"/>
+        <field name="level" eval="1" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_br.tag_br_03')])]" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line1" model="account.financial.html.report.line">
+        <field name="name">IRPJ</field>
+        <field name="code">BRTAX01</field>
+        <field name="sequence" eval="2"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_br_tva0"/>
+        <field name="level" eval="0" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line1_1" model="account.financial.html.report.line">
+        <field name="name">IRPJ_1</field>
+        <field name="code">BRTAX01_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_br.tag_br_05')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="level" eval="1" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line1_2" model="account.financial.html.report.line">
+        <field name="name">IRPJ_2</field>
+        <field name="code">BRTAX01_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_br.tag_br_06')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="level" eval="1" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line2" model="account.financial.html.report.line">
+        <field name="name">IR</field>
+        <field name="code">BRTAX02</field>
+        <field name="sequence" eval="3"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_br_tva0"/>
+        <field name="level" eval="0" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line2_1" model="account.financial.html.report.line">
+        <field name="name">IR_1</field>
+        <field name="code">BRTAX02_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_br.tag_br_08')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="level" eval="1" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line2_2" model="account.financial.html.report.line">
+        <field name="name">IR_2</field>
+        <field name="code">BRTAX02_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_br.tag_br_09')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="level" eval="1" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line3" model="account.financial.html.report.line">
+        <field name="name">ISSQN</field>
+        <field name="code">BRTAX03</field>
+        <field name="sequence" eval="4"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_br_tva0"/>
+        <field name="level" eval="0" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line3_1" model="account.financial.html.report.line">
+        <field name="name">ISSQN_1</field>
+        <field name="code">BRTAX03_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_br.tag_br_11')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line3_2" model="account.financial.html.report.line">
+        <field name="name">ISSQN_2</field>
+        <field name="code">BRTAX03_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_br.tag_br_12')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+
+    <record id="account_financial_report_l10n_br_tva_line4" model="account.financial.html.report.line">
+        <field name="name">CSLL</field>
+        <field name="code">BRTAX04</field>
+        <field name="sequence" eval="5"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_br_tva0"/>
+        <field name="level" eval="0" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line4_1" model="account.financial.html.report.line">
+        <field name="name">CSLL_1</field>
+        <field name="code">BRTAX04_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line4"/>
+        <field name="level" eval="1" />
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_br.tag_br_14')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line4_2" model="account.financial.html.report.line">
+        <field name="name">CSLL_2</field>
+        <field name="code">BRTAX04_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line4"/>
+        <field name="level" eval="1" />
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_br.tag_br_15')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line5" model="account.financial.html.report.line">
+        <field name="name">COFINS</field>
+        <field name="code">BRTAX05</field>
+        <field name="sequence" eval="6"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_br_tva0"/>
+        <field name="level" eval="0" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line5_1" model="account.financial.html.report.line">
+        <field name="name">COFINS_1</field>
+        <field name="code">BRTAX05_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_br.tag_br_17')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line5_2" model="account.financial.html.report.line">
+        <field name="name">COFINS_2</field>
+        <field name="code">BRTAX05_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_br.tag_br_18')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line6" model="account.financial.html.report.line">
+        <field name="name">PIS</field>
+        <field name="code">BRTAX06</field>
+        <field name="sequence" eval="7"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_br_tva0"/>
+        <field name="level" eval="0" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line6_1" model="account.financial.html.report.line">
+        <field name="name">PIS_1</field>
+        <field name="code">BRTAX06_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_br.tag_br_20')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="level" eval="1" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line6_2" model="account.financial.html.report.line">
+        <field name="name">PIS_2</field>
+        <field name="code">BRTAX06_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_br.tag_br_21')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line7" model="account.financial.html.report.line">
+        <field name="name">IPI</field>
+        <field name="code">BRTAX07</field>
+        <field name="sequence" eval="8"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_br_tva0"/>
+        <field name="level" eval="0" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line7_1" model="account.financial.html.report.line">
+        <field name="name">IPI_1</field>
+        <field name="code">BRTAX07_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_br.tag_br_23')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line7_2" model="account.financial.html.report.line">
+        <field name="name">IPI_2</field>
+        <field name="code">BRTAX07_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_br.tag_br_24')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line8" model="account.financial.html.report.line">
+        <field name="name">ICMS</field>
+        <field name="code">BRTAX08</field>
+        <field name="sequence" eval="9"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_br_tva0"/>
+        <field name="level" eval="0" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line8_1" model="account.financial.html.report.line">
+        <field name="name">ICMS_1</field>
+        <field name="code">BRTAX08_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_br.tag_br_26')])]" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line8_2" model="account.financial.html.report.line">
+        <field name="name">ICMS_2</field>
+        <field name="code">BRTAX08_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_br.tag_br_27')])]" />
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line9" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável com Alíquota Básica</field>
+        <field name="code">BRTAX09</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line10" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável com Alíquota Diferenciada</field>
+        <field name="code">BRTAX10</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line11" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável com Alíquota por Unidade de Medida de Produto</field>
+        <field name="code">BRTAX11</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line12" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável Monofásica - Revenda a Alíquota Zero</field>
+        <field name="code">BRTAX12</field>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line13" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável por Substituição Tributária</field>
+        <field name="code">BRTAX13</field>
+        <field name="sequence" eval="5"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line14" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável a Alíquota zero</field>
+        <field name="code">BRTAX14</field>
+        <field name="sequence" eval="6"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line15" model="account.financial.html.report.line">
+        <field name="name">Operação Isenta da Contribuição</field>
+        <field name="code">BRTAX15</field>
+        <field name="sequence" eval="7"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line16" model="account.financial.html.report.line">
+        <field name="name">Operação sem Incidência da Contribuição</field>
+        <field name="code">BRTAX16</field>
+        <field name="sequence" eval="8"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line17" model="account.financial.html.report.line">
+        <field name="name">Operação com Suspensão da Contribuição</field>
+        <field name="code">BRTAX17</field>
+        <field name="sequence" eval="9"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line18" model="account.financial.html.report.line">
+        <field name="name">Outras Operações de Saída</field>
+        <field name="code">BRTAX18</field>
+        <field name="sequence" eval="10"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line19" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno</field>
+        <field name="code">BRTAX19</field>
+        <field name="sequence" eval="11"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line20" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno</field>
+        <field name="code">BRTAX20</field>
+        <field name="sequence" eval="12"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line21" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada Exclusivamente a Receita de Exportação</field>
+        <field name="code">BRTAX21</field>
+        <field name="sequence" eval="13"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line22" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno</field>
+        <field name="code">BRTAX22</field>
+        <field name="sequence" eval="14"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line23" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada a Receitas Tributadas no Mercado Interno e de Exportação </field>
+        <field name="code">BRTAX23</field>
+        <field name="sequence" eval="15"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line24" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada a Receitas Não Tributadas no Mercado Interno e de Exportação</field>
+        <field name="code">BRTAX24</field>
+        <field name="sequence" eval="16"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line25" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno e de Exportação</field>
+        <field name="code">BRTAX25</field>
+        <field name="sequence" eval="17"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line26" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno</field>
+        <field name="code">BRTAX26</field>
+        <field name="sequence" eval="18"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line27" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno</field>
+        <field name="code">BRTAX27</field>
+        <field name="sequence" eval="19"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line28" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação</field>
+        <field name="code">BRTAX28</field>
+        <field name="sequence" eval="20"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line29" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno</field>
+        <field name="code">BRTAX29</field>
+        <field name="sequence" eval="21"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line30" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas no Mercado Interno e de Exportação</field>
+        <field name="code">BRTAX30</field>
+        <field name="sequence" eval="22"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line31" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação</field>
+        <field name="code">BRTAX31</field>
+        <field name="sequence" eval="23"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line32" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno e de Exportação</field>
+        <field name="code">BRTAX32</field>
+        <field name="sequence" eval="24"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line33" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Outras Operações</field>
+        <field name="code">BRTAX33</field>
+        <field name="sequence" eval="25"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line34" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição sem Direito a Crédito</field>
+        <field name="code">BRTAX34</field>
+        <field name="sequence" eval="26"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line35" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição com Isenção</field>
+        <field name="code">BRTAX35</field>
+        <field name="sequence" eval="27"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line36" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição com Suspensão</field>
+        <field name="code">BRTAX36</field>
+        <field name="sequence" eval="28"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line37" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição a Alíquota Zero</field>
+        <field name="code">BRTAX37</field>
+        <field name="sequence" eval="29"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line38" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição sem Incidência da Contribuição</field>
+        <field name="code">BRTAX38</field>
+        <field name="sequence" eval="30"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line39" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição por Substituição Tributária</field>
+        <field name="code">BRTAX39</field>
+        <field name="sequence" eval="31"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line40" model="account.financial.html.report.line">
+        <field name="name">Outras Operações de Entrada</field>
+        <field name="code">BRTAX40</field>
+        <field name="sequence" eval="32"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line41" model="account.financial.html.report.line">
+        <field name="name">Outras Operações</field>
+        <field name="code">BRTAX41</field>
+        <field name="sequence" eval="33"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line5"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line42" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável com Alíquota Básica</field>
+        <field name="code">BRTAX42</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line43" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável com Alíquota Diferenciada</field>
+        <field name="code">BRTAX43</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line44" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável com Alíquota por Unidade de Medida de Produto</field>
+        <field name="code">BRTAX44</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line45" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável Monofásica - Revenda a Alíquota Zero</field>
+        <field name="code">BRTAX45</field>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line46" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável por Substituição Tributária</field>
+        <field name="code">BRTAX46</field>
+        <field name="sequence" eval="5"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line47" model="account.financial.html.report.line">
+        <field name="name">Operação Tributável a Alíquota Zero</field>
+        <field name="code">BRTAX47</field>
+        <field name="sequence" eval="6"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line48" model="account.financial.html.report.line">
+        <field name="name">Operação Isenta da Contribuição</field>
+        <field name="code">BRTAX48</field>
+        <field name="sequence" eval="7"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line49" model="account.financial.html.report.line">
+        <field name="name">Operação sem Incidência da Contribuição</field>
+        <field name="code">BRTAX49</field>
+        <field name="sequence" eval="8"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line50" model="account.financial.html.report.line">
+        <field name="name">Operação com Suspensão da Contribuição</field>
+        <field name="code">BRTAX50</field>
+        <field name="sequence" eval="9"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line51" model="account.financial.html.report.line">
+        <field name="name">Outras Operações de Saída</field>
+        <field name="code">BRTAX51</field>
+        <field name="sequence" eval="10"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line52" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno</field>
+        <field name="code">BRTAX52</field>
+        <field name="sequence" eval="11"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line53" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Não Tributada no Mercado Interno</field>
+        <field name="code">BRTAX53</field>
+        <field name="sequence" eval="12"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line54" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada Exclusivamente a Receita de Exportação</field>
+        <field name="code">BRTAX54</field>
+        <field name="sequence" eval="13"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line55" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno</field>
+        <field name="code">BRTAX55</field>
+        <field name="sequence" eval="14"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line56" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada a Receitas Tributadas no Mercado Interno e de Exportação</field>
+        <field name="code">BRTAX56</field>
+        <field name="sequence" eval="15"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line57" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação</field>
+        <field name="code">BRTAX57</field>
+        <field name="sequence" eval="16"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line58" model="account.financial.html.report.line">
+        <field name="name">Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação</field>
+        <field name="code">BRTAX58</field>
+        <field name="sequence" eval="17"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line59" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno</field>
+        <field name="code">BRTAX59</field>
+        <field name="sequence" eval="18"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line60" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno</field>
+        <field name="code">BRTAX60</field>
+        <field name="sequence" eval="19"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line61" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação</field>
+        <field name="code">BRTAX61</field>
+        <field name="sequence" eval="20"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line62" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno</field>
+        <field name="code">BRTAX62</field>
+        <field name="sequence" eval="21"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line63" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas no Mercado Interno e de Exportação</field>
+        <field name="code">BRTAX63</field>
+        <field name="sequence" eval="22"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line64" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação</field>
+        <field name="code">BRTAX64</field>
+        <field name="sequence" eval="23"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line65" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação</field>
+        <field name="code">BRTAX65</field>
+        <field name="sequence" eval="24"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line66" model="account.financial.html.report.line">
+        <field name="name">Crédito Presumido - Outras Operações</field>
+        <field name="code">BRTAX66</field>
+        <field name="sequence" eval="25"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line67" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição sem Direito a Crédito</field>
+        <field name="code">BRTAX67</field>
+        <field name="sequence" eval="26"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line68" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição com Isenção</field>
+        <field name="code">BRTAX68</field>
+        <field name="sequence" eval="27"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line69" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição com Suspensão</field>
+        <field name="code">BRTAX69</field>
+        <field name="sequence" eval="28"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line70" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição a Alíquota Zero</field>
+        <field name="code">BRTAX70</field>
+        <field name="sequence" eval="29"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line71" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição sem Incidência da Contribuição</field>
+        <field name="code">BRTAX71</field>
+        <field name="sequence" eval="30"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line72" model="account.financial.html.report.line">
+        <field name="name">Operação de Aquisição por Substituição Tributária</field>
+        <field name="code">BRTAX72</field>
+        <field name="sequence" eval="31"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line73" model="account.financial.html.report.line">
+        <field name="name">Outras Operações de Entrada</field>
+        <field name="code">BRTAX73</field>
+        <field name="sequence" eval="32"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line74" model="account.financial.html.report.line">
+        <field name="name">Outras Operações</field>
+        <field name="code">BRTAX74</field>
+        <field name="sequence" eval="33"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line6"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line75" model="account.financial.html.report.line">
+        <field name="name">Entrada com recuperação de crédito</field>
+        <field name="code">BRTAX75</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line76" model="account.financial.html.report.line">
+        <field name="name">Entrada tributada com alíquota zero</field>
+        <field name="code">BRTAX76</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line77" model="account.financial.html.report.line">
+        <field name="name">Entrada isenta</field>
+        <field name="code">BRTAX77</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line78" model="account.financial.html.report.line">
+        <field name="name">EEntrada não-tributada</field>
+        <field name="code">BRTAX78</field>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line79" model="account.financial.html.report.line">
+        <field name="name">Entrada imune</field>
+        <field name="code">BRTAX79</field>
+        <field name="sequence" eval="5"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line80" model="account.financial.html.report.line">
+        <field name="name">Entrada com suspensão</field>
+        <field name="code">BRTAX80</field>
+        <field name="sequence" eval="6"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line81" model="account.financial.html.report.line">
+        <field name="name">Outras entradas</field>
+        <field name="code">BRTAX81</field>
+        <field name="sequence" eval="7"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line82" model="account.financial.html.report.line">
+        <field name="name">Saída tributada</field>
+        <field name="code">BRTAX82</field>
+        <field name="sequence" eval="8"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line83" model="account.financial.html.report.line">
+        <field name="name">Saída tributada com alíquota zero</field>
+        <field name="code">BRTAX83</field>
+        <field name="sequence" eval="9"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line84" model="account.financial.html.report.line">
+        <field name="name">Saída isenta</field>
+        <field name="code">BRTAX84</field>
+        <field name="sequence" eval="10"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line85" model="account.financial.html.report.line">
+        <field name="name">Saída não-tributada</field>
+        <field name="code">BRTAX85</field>
+        <field name="sequence" eval="11"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line86" model="account.financial.html.report.line">
+        <field name="name">Saída imune</field>
+        <field name="code">BRTAX86</field>
+        <field name="sequence" eval="12"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line87" model="account.financial.html.report.line">
+        <field name="name">Saída com suspensão</field>
+        <field name="code">BRTAX87</field>
+        <field name="sequence" eval="13"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line88" model="account.financial.html.report.line">
+        <field name="name">Outras saídas</field>
+        <field name="code">BRTAX88</field>
+        <field name="sequence" eval="14"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line7"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line89" model="account.financial.html.report.line">
+        <field name="name">Tributada integralmente</field>
+        <field name="code">BRTAX89</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line90" model="account.financial.html.report.line">
+        <field name="name">Tributada e com cobrança do ICMS por substituição tributária</field>
+        <field name="code">BRTAX90</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line91" model="account.financial.html.report.line">
+        <field name="name">Com redução de base de cálculo</field>
+        <field name="code">BRTAX91</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line92" model="account.financial.html.report.line">
+        <field name="name">Isenta ou não tributada e com cobrança do ICMS por substituição tributária</field>
+        <field name="code">BRTAX92</field>
+        <field name="sequence" eval="4"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line93" model="account.financial.html.report.line">
+        <field name="name">Isenta</field>
+        <field name="code">BRTAX93</field>
+        <field name="sequence" eval="5"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+     <record id="account_financial_report_l10n_br_tva_line94" model="account.financial.html.report.line">
+        <field name="name">Não tributada</field>
+        <field name="code">BRTAX94</field>
+        <field name="sequence" eval="6"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line95" model="account.financial.html.report.line">
+        <field name="name">Suspensão</field>
+        <field name="code">BRTAX95</field>
+        <field name="sequence" eval="7"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+     <record id="account_financial_report_l10n_br_tva_line96" model="account.financial.html.report.line">
+        <field name="name">Diferimento</field>
+        <field name="code">BRTAX96</field>
+        <field name="sequence" eval="8"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line97" model="account.financial.html.report.line">
+        <field name="name">ICMS cobrado anteriormente por substituição tributária</field>
+        <field name="code">BRTAX97</field>
+        <field name="sequence" eval="9"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line98" model="account.financial.html.report.line">
+        <field name="name">Com redução de base de cálculo e cobrança do ICMS por substituição tributária</field>
+        <field name="code">BRTAX98</field>
+        <field name="sequence" eval="10"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line99" model="account.financial.html.report.line">
+        <field name="name">Outras</field>
+        <field name="code">BRTAX99</field>
+        <field name="sequence" eval="11"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line100" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito</field>
+        <field name="code">BRTAX100</field>
+        <field name="sequence" eval="12"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line101" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito</field>
+        <field name="code">BRTAX101</field>
+        <field name="sequence" eval="13"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line102" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta</field>
+        <field name="code">BRTAX102</field>
+        <field name="sequence" eval="14"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line103" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária</field>
+        <field name="code">BRTAX103</field>
+        <field name="sequence" eval="15"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line104" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária</field>
+        <field name="code">BRTAX104</field>
+        <field name="sequence" eval="16"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line105" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta e com cobrança do ICMS por substituição tributária</field>
+        <field name="code">BRTAX105</field>
+        <field name="sequence" eval="17"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line106" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - Imune</field>
+        <field name="code">BRTAX106</field>
+        <field name="sequence" eval="18"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line107" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - Não tributada pelo Simples Nacional</field>
+        <field name="code">BRTAX107</field>
+        <field name="sequence" eval="19"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line108" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - ICMS cobrado anteriormente por substituição tributária (substituído) ou por antecipação</field>
+        <field name="code">BRTAX108</field>
+        <field name="sequence" eval="20"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_l10n_br_tva_line109" model="account.financial.html.report.line">
+        <field name="name">Simples Nacional - Outros</field>
+        <field name="code">BRTAX109</field>
+        <field name="sequence" eval="21"/>
+        <field name="parent_id" ref="account_financial_report_l10n_br_tva_line8"/>
+        <field name="level" eval="1" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

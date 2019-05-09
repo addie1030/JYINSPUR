@@ -1,0 +1,457 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_mps
+# 
+# Translators:
+# Myat Thu <myat90thu@gmail.com>, 2016
+# Chester Denn <faceless.void199@gmail.com>, 2016
+# Hein Myat Phone <heinmyatphone@outlook.com>, 2016
+# Pyaephone Kyaw <pyayphonekyaw@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-10 09:14+0000\n"
+"PO-Revision-Date: 2016-10-10 09:14+0000\n"
+"Last-Translator: Pyaephone Kyaw <pyayphonekyaw@gmail.com>, 2016\n"
+"Language-Team: Burmese (https://www.transifex.com/odoo/teams/41243/my/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: my\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "&lt;&amp;hellip;&lt;"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "<span class=\"fa fa-fw\">-</span> Demand Forecast"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "<span class=\"fa fa-fw\">-</span> Indirect Demand"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid ""
+"<span class=\"fa fa-fw\">=</span> \n"
+"                                    Forecasted Inventory"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "<span class=\"text-muted\"> by</span>"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.mrp_mps_report_view_form
+msgid "Add Product"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:155
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+#, python-format
+msgid "Add a Product"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "Apply"
+msgstr "လုပ်ဆောင်သည်။"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product_apply_active
+msgid "Apply active"
+msgstr ""
+
+#. module: mrp_mps
+#: selection:sale.forecast,mode:0
+msgid "Automatic"
+msgstr "အလိုအလျှောက်"
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.mrp_mps_report_view_form
+#: model:ir.ui.view,arch_db:mrp_mps.product_product_view_form_mps
+msgid "Cancel"
+msgstr "မလုပ်ဆောင်တော့ပါ။"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_res_company
+msgid "Companies"
+msgstr "ကုမ္ပဏီများ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report_company_id
+msgid "Company"
+msgstr "ကုမ္ပဏီ"
+
+#. module: mrp_mps
+#: model:stock.inventory.line,product_name:mrp_mps.mps_stock_inventory_line_1
+msgid "Computer SC234"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report_create_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_create_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_create_uid
+msgid "Created by"
+msgstr "တည်ဆောက်သူ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report_create_date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_create_date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_create_date
+msgid "Created on"
+msgstr "တည်ဆောက်သည့်အချိန်"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:15
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:21
+#: selection:mrp.mps.report,period:0
+#: selection:res.company,manufacturing_period:0
+#, python-format
+msgid "Daily"
+msgstr "နေ့စဥ်"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_date
+msgid "Date"
+msgstr "နေ့စွဲ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_sale_forecast_product_uom_id
+msgid "Default Unit of Measure used for all stock operation."
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_config_settings_manufacturing_period
+#: model:ir.model.fields,help:mrp_mps.field_res_company_manufacturing_period
+msgid ""
+"Default value for the time ranges in Master Production Schedule report."
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:37
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_forecast_qty
+#, python-format
+msgid "Demand Forecast"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report_display_name
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_display_name
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_display_name
+msgid "Display Name"
+msgstr "ပြချင်သော အမည်"
+
+#. module: mrp_mps
+#: selection:sale.forecast,state:0
+msgid "Done"
+msgstr "ပြီးဆုံးသည်"
+
+#. module: mrp_mps
+#: selection:sale.forecast,state:0
+msgid "Forecast"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:52
+#, python-format
+msgid "Forecast Inventory"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:176
+#: model:ir.ui.view,arch_db:mrp_mps.product_product_view_form_mps
+#, python-format
+msgid "Forecast Product"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product_mps_forecasted
+msgid "Forecasted Target"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report_id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_id
+msgid "ID"
+msgstr "နံပါတ်"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_sale_forecast_to_supply
+msgid "If mode is Manual, this is the forced value"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:42
+#, python-format
+msgid "Indirect Demand"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_quantity
+msgid "Indirect Quantity"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report___last_update
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast___last_update
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect___last_update
+msgid "Last Modified on"
+msgstr "နောက်ဆုံးပြင်ဆင်ချိန်"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report_write_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_write_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_write_uid
+msgid "Last Updated by"
+msgstr "နောက်ဆုံးပြင်ဆင်သူ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report_write_date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_write_date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_write_date
+msgid "Last Updated on"
+msgstr "နောက်ဆုံးပြင်ဆင်ချိန်"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product_mps_apply
+msgid "Latest Apply"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "Launch Procurement"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:6
+#, python-format
+msgid "Launch green cells"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product_mps_active
+msgid "MPS Active"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "MPS in Main Warehouse"
+msgstr ""
+
+#. module: mrp_mps
+#: selection:sale.forecast,mode:0
+msgid "Manual"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_config_settings_manufacturing_period
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company_manufacturing_period
+msgid "Manufacturing Period"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.actions.client,name:mrp_mps.mrp_mps_report_action_client
+#: model:ir.ui.menu,name:mrp_mps.mrp_mps_report_menu
+msgid "Master Production Schedule"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product_mps_max_supply
+msgid "Maximum to Supply"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product_mps_min_supply
+msgid "Minimum to Supply"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_mode
+msgid "Mode"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:13
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:19
+#: selection:mrp.mps.report,period:0
+#: selection:res.company,manufacturing_period:0
+#, python-format
+msgid "Monthly"
+msgstr "လစဉ်"
+
+#. module: mrp_mps
+#: model:stock.inventory.line,product_name:mrp_mps.mps_stock_inventory_line_0
+msgid "Mouse, Wireless"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:84
+#, python-format
+msgid "Only Integer Value should be valid."
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:190
+#, python-format
+msgid "Only Integer or Float Value should be valid."
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report_period
+msgid "Period"
+msgstr "အချိတ်အကန့်အသတ်"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:11
+#, python-format
+msgid "Period:"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_procurement_id
+msgid "Procurement Generated"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_group_id
+msgid "Procurement Group"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_product_product
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report_product_id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_product_id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_product_origin_id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_product_id
+#: model:ir.ui.view,arch_db:mrp_mps.product_product_view_form_mps
+msgid "Product"
+msgstr "ကုန်ပစ္စည်း"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_product_uom_id
+msgid "Product UoM"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect_warehouse_id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_warehouse_id
+msgid "Production Location"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:25
+#, python-format
+msgid "Rows"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.product_product_view_form_mps
+msgid "Save"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:32
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+#, python-format
+msgid "Starting Inventory"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_state
+msgid "State"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:47
+#, python-format
+msgid "To Produce"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_to_supply
+msgid "To Supply"
+msgstr ""
+
+#. module: mrp_mps
+#: code:addons/mrp_mps/models/mrp_mps_report.py:149
+#, python-format
+msgid "Week "
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:14
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:20
+#: selection:mrp.mps.report,period:0
+#: selection:res.company,manufacturing_period:0
+#, python-format
+msgid "Weekly"
+msgstr "အပတ်စဉ်"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:84
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:190
+#, python-format
+msgid "Wrong value entered!"
+msgstr "မှားယှငျးသောတနျဖိုးကိုထညျ့သှငျးခဲ့သညျ!"
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "double click in order to empty"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_mrp_config_settings
+msgid "mrp.config.settings"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_mrp_mps_report
+msgid "mrp.mps.report"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_sale_forecast
+msgid "sale.forecast"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_sale_forecast_indirect
+msgid "sale.forecast.indirect"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "set min-max"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "set target"
+msgstr ""

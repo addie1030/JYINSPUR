@@ -1,0 +1,687 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_workorder
+# 
+# Translators:
+# Francesco Garganese <francesco.garganese@aeromnia.aero>, 2018
+# Davide Corio <enlightx@gmail.com>, 2018
+# Luigi Di Naro <gigidn@gmail.com>, 2018
+# Simone Bernini <simone@aperturelabs.it>, 2018
+# Andrea Piovesana <andrea.m.piovesana@gmail.com>, 2018
+# Fabio Genovese <ing.fabiogenovese@gmail.com>, 2018
+# David Minneci <david@numeko.it>, 2018
+# mbo_odoo <mbo@odoo.com>, 2018
+# Martin Trigaux, 2018
+# Paolo Valier, 2018
+# Léonie Bouchat <lbo@odoo.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-08 07:14+0000\n"
+"PO-Revision-Date: 2018-08-24 11:38+0000\n"
+"Last-Translator: Léonie Bouchat <lbo@odoo.com>, 2019\n"
+"Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.res_config_settings_view_form
+msgid "<i class=\"fa fa-print\"/> Print barcode commands"
+msgstr "<i class=\"fa fa-print\"/> Stampare i comandi di codice a barre"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__allow_producing_quantity_change
+msgid "Allow Changes to Producing Quantity"
+msgstr "Consentire le modifiche di quantità prodotta"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_point_test_type__allow_registration
+msgid "Allow Registration"
+msgstr "Consentire iscrizione"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/mrp_workorder_barcode.xml:7
+#, python-format
+msgid "And barcode"
+msgstr ""
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet_menu
+msgid "Block"
+msgstr "Blocca"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__check_ids
+msgid "Check"
+msgstr "Assegno"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_production__check_ids
+msgid "Checks"
+msgstr "Assegni"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/widget_template.xml:8
+#, python-format
+msgid "Clear"
+msgstr "Pulisci"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/widget_template.xml:28
+#, python-format
+msgid "Close"
+msgstr "Chiudi"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__component_id
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__component_id
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_point__component_id
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Component"
+msgstr "Componenti"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__component_uom_id
+msgid "Component UoM"
+msgstr "Componente UdM"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Continue"
+msgstr "Continua"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__control_date
+msgid "Control Date"
+msgstr "Data controllo"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__current_quality_check_id
+msgid "Current Quality Check"
+msgstr "Controllo qualità attuale"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_inherit_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Date"
+msgstr "Data"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,help:mrp_workorder.field_quality_point__test_type_id
+msgid "Defines the type of the quality control point."
+msgstr "Definire il tipo di punto controllo qualità"
+
+#. module: mrp_workorder
+#: selection:quality.point,worksheet:0
+msgid "Do not update page"
+msgstr "Non aggiornare la pagina"
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/quality.py:110
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__qty_done
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__qty_done
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_inherit_workorder
+#, python-format
+msgid "Done"
+msgstr "Completato"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/mrp_workorder_barcode.xml:8
+#, python-format
+msgid "Download"
+msgstr "Download"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Dropdown menu"
+msgstr "Menu a discesa"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,help:mrp_workorder.field_mrp_workorder__component_tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr ""
+"Garantisci la tracciabilità di un prodotto stoccabile nel tuo magazzino."
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Finish steps"
+msgstr "Completare le fasi"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__finished_product_check_ids
+msgid "Finished Product Check"
+msgstr "Controllo di prodotto finito"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__finished_product_sequence
+msgid "Finished Product Sequence Number"
+msgstr "Numero di sequenza del prodotto finito"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_inherit_workorder
+msgid "Finished Steps"
+msgstr "Fasi completate"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__component_tracking
+msgid "Is Component Tracked"
+msgstr ""
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__is_first_step
+msgid "Is First Step"
+msgstr "Prima fase"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__is_last_step
+msgid "Is Last Step"
+msgstr "Ultima fase"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__is_last_lot
+msgid "Is Last lot"
+msgstr "Ultimo lotto"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__lot_id
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__lot_id
+msgid "Lot"
+msgstr "Lotto"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Lot Number"
+msgstr "Numero lotto"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Lot Number:"
+msgstr "Numero lotto:"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Manufacturing Orders"
+msgstr "Ordini di produzione"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Mark as Done"
+msgstr "Marca come Completato"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Mark as Done and Close MO"
+msgstr "Impostare come \"completato\" e chiudere l'ordine di produzione"
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/mrp_workorder.py:305
+#, python-format
+msgid "Menu"
+msgstr "Menu"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__move_line_id
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__move_line_id
+msgid "Move Line"
+msgstr "Sposta riga"
+
+#. module: mrp_workorder
+#: model:ir.actions.server,name:mrp_workorder.production_order_unplan_server_action
+msgid "Mrp: Unplan Production Orders"
+msgstr "Produzione: annullare gli ordini di produzione"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Next"
+msgstr "Successivo"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__note
+msgid "Note"
+msgstr "Nota"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_alert__workorder_id
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__workorder_id
+msgid "Operation"
+msgstr "Operazione"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_inherit_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Operator"
+msgstr "Operatore"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__parent_id
+msgid "Parent Quality Check"
+msgstr "Controllo qualità padre"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_point__routing_id
+msgid "Parent Routing"
+msgstr "Routing Superiore"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Pause"
+msgstr "Metti in pausa"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__picture
+msgid "Picture"
+msgstr "Immagine"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "Plan"
+msgstr "Pianificazione"
+
+#. module: mrp_workorder
+#: model_terms:ir.actions.act_window,help:mrp_workorder.mrp_workorder_action_tablet
+msgid "Plan some work orders from your manufacturing orders."
+msgstr "Pianificare ordini di lavoro dagli ordini di produzione."
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_workorder_production
+msgid "Planning by Production"
+msgstr "Pianificazione per produzione"
+
+#. module: mrp_workorder
+#: model:ir.ui.menu,name:mrp_workorder.menu_mrp_workorder_workcenter
+msgid "Planning by Workcenter"
+msgstr "Pianificazione per centro di lavoro"
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/mrp_workorder.py:179
+#: code:addons/mrp_workorder/models/mrp_workorder.py:206
+#, python-format
+msgid ""
+"Please ensure the quantity to produce is nonnegative and does not exceed the"
+" remaining quantity."
+msgstr ""
+"Assicurarsi che la quantità da produrre non sia negativa e non superi la "
+"quantità rimanente. "
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/mrp_workorder.py:183
+#, python-format
+msgid "Please enter a Lot/SN."
+msgstr "Inserire un lotto/numero di serie."
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/mrp_workorder.py:185
+#, python-format
+msgid "Please enter a positive quantity."
+msgstr "Inserire una quantità positiva."
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/mrp_workorder.py:192
+#, python-format
+msgid "Please upload a picture."
+msgstr "Caricare un'immagine."
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Previous"
+msgstr "Precedente"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_inherit_workorder
+msgid "Process"
+msgstr "Processa"
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_mrp_production
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_alert__production_id
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__production_id
+msgid "Production Order"
+msgstr "Ordine di Produzione"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Production Workcenter"
+msgstr "Centro di Lavoro"
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_quality_alert
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__quality_alert_ids
+msgid "Quality Alert"
+msgstr "Allarme qualità"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__quality_alert_count
+msgid "Quality Alert Count"
+msgstr "Totale allarmi qualità"
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_quality_check
+msgid "Quality Check"
+msgstr "Controllo qualità"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__quality_check_fail
+msgid "Quality Check Fail"
+msgstr "Controllo qualità fallito"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__quality_check_todo
+msgid "Quality Check Todo"
+msgstr "Controllo qualità da effettuare"
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_quality_point
+msgid "Quality Control Point"
+msgstr "Punto controllo qualità"
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_quality_point_test_type
+msgid "Quality Control Test Type"
+msgstr "Tipo di test controllo qualità"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.view_routing_steps_search
+msgid "Quality Point Steps"
+msgstr ""
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__quality_state
+msgid "Quality State"
+msgstr ""
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Quantity"
+msgstr "Quantità"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Record production"
+msgstr "Registrare produzione"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__component_is_byproduct
+msgid "Register a by product"
+msgstr "Registrare un prodotto"
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/quality.py:104
+#, python-format
+msgid "Register component(s)"
+msgstr "Registrare componenti"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__component_remaining_qty
+msgid "Remaining Quantity for Component"
+msgstr "Quantità rimanente per componente"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__user_id
+msgid "Responsible"
+msgstr "Responsabile"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__result
+msgid "Result"
+msgstr "Risultato"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.view_routing_steps_search
+msgid "Routing"
+msgstr "Routing"
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_mrp_routing
+msgid "Routings"
+msgstr "Routings"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "Scheduled Date"
+msgstr "Data pianificata"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_production__date_planned_finished_wo
+msgid "Scheduled End Date"
+msgstr "Data pianificata di termine"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_production__date_planned_start_wo
+msgid "Scheduled Start Date"
+msgstr "Data pianificata di inizio"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet_menu
+msgid "Scrap"
+msgstr "Scarto"
+
+#. module: mrp_workorder
+#: selection:quality.point,worksheet:0
+msgid "Scroll to specific page"
+msgstr "Far scorrere fino a una specifica pagina"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Serial Number"
+msgstr "Numero di Serie"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Serial Number:"
+msgstr "Numero di serie:"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Skip"
+msgstr "Salta"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__skip_completed_checks
+msgid "Skip Completed Checks"
+msgstr "Ignorare le verificazioni completate"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__skipped_check_ids
+msgid "Skipped Check"
+msgstr "Verificazione ignorata"
+
+#. module: mrp_workorder
+#: model_terms:ir.actions.act_window,help:mrp_workorder.mrp_workorder_action_tablet
+msgid "Start a new work order"
+msgstr "Iniziare un nuovo ordine di lavoro"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Status"
+msgstr "Stato"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__quality_state_for_summary
+msgid "Status Summary"
+msgstr ""
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_point__operation_id
+msgid "Step"
+msgstr "Passo"
+
+#. module: mrp_workorder
+#: model:ir.actions.act_window,name:mrp_workorder.action_mrp_workorder_show_steps
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_routing_view_form_inherit_quality
+msgid "Steps"
+msgstr "Fasi"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/widget_template.xml:17
+#, python-format
+msgid "Take a Picture"
+msgstr "Scattare una foto"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__test_type
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_point__test_type_id
+msgid "Test Type"
+msgstr "Tipo di test"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,help:mrp_workorder.field_quality_point__routing_id
+msgid ""
+"The routing contains all the Work Centers used and for how long. This will "
+"create work orders afterwards which alters the execution of the "
+"manufacturing order."
+msgstr ""
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__title
+msgid "Title"
+msgstr "Titolo"
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/quality.py:110
+#, python-format
+msgid "To Do"
+msgstr "Da fare"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Total Qty"
+msgstr "Qtà totale"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_point__code
+msgid "Type of Operation"
+msgstr "Tipo di Operazione"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet_menu
+msgid "Unblock"
+msgstr "Sblocca"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__component_uom_id
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_production_tree_view_planning
+msgid "Unit of Measure"
+msgstr "Unità di misura"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "Unplan"
+msgstr "Annullare la pianificazione"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/widget_template.xml:10
+#, python-format
+msgid "Uploading..."
+msgstr "Caricamento..."
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet
+msgid "Validate"
+msgstr "Valida"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/widget_template.xml:32
+#, python-format
+msgid "Viewer"
+msgstr ""
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/mrp_workorder.py:495
+#, python-format
+msgid "Warning"
+msgstr "Avviso"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_alert__workcenter_id
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__workcenter_id
+msgid "Work Center"
+msgstr "Centro di Lavoro"
+
+#. module: mrp_workorder
+#: model:ir.model,name:mrp_workorder.model_mrp_workorder
+msgid "Work Order"
+msgstr "Ordine di Lavoro"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.quality_point_view_form_inherit_mrp
+msgid "Work Order Operation"
+msgstr "Operazione ordine di lavoro"
+
+#. module: mrp_workorder
+#: model:ir.actions.act_window,name:mrp_workorder.mrp_workorder_action_tablet
+#: model:ir.ui.menu,name:mrp_workorder.mrp_workorder_menu_planning
+msgid "Work Orders"
+msgstr "Ordini di Lavoro"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workcenter_view_kanban_inherit_workorder
+msgid "Work orders"
+msgstr "Ordini di lavoro"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_workorder_view_form_tablet_menu
+msgid "Workorder Actions"
+msgstr "Azioni dell'ordine di lavoro"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_point__worksheet
+msgid "Worksheet"
+msgstr "Foglio di lavoro"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_quality_point__worksheet_page
+msgid "Worksheet Page"
+msgstr "Pagina foglio di lavoro"
+
+#. module: mrp_workorder
+#: model:ir.model.fields,field_description:mrp_workorder.field_mrp_workorder__worksheet_page
+msgid "Worksheet page"
+msgstr "Pagina foglio di lavoro"
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/mrp_workorder.py:496
+#, python-format
+msgid ""
+"You are using components from another lot. \n"
+"Please validate the components from the first lot before using another lot."
+msgstr ""
+"Si sta usando componenti di un altro lotto. \n"
+"Convalidare i componenti del primo lotto prima di utilizzare un altro lotto."
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/mrp_workorder.py:416
+#, python-format
+msgid "You should provide a lot for the final product"
+msgstr "Fornire un lotto per il prodotto finale."
+
+#. module: mrp_workorder
+#: code:addons/mrp_workorder/models/mrp_workorder.py:414
+#, python-format
+msgid "You still need to do the quality checks!"
+msgstr "Si deve ancora fare i controlli di qualità!"
+
+#. module: mrp_workorder
+#. openerp-web
+#: code:addons/mrp_workorder/static/src/xml/mrp_workorder_barcode.xml:8
+#, python-format
+msgid "commands for Manufacturing"
+msgstr "comandi per la produzione"
+
+#. module: mrp_workorder
+#: model_terms:ir.ui.view,arch_db:mrp_workorder.mrp_production_view_form_inherit_planning
+msgid "to"
+msgstr "a"

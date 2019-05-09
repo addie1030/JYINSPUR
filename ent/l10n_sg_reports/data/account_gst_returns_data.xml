@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_financial_report_l10n_sg_gst_returns" model="account.financial.html.report">
+            <field name="name">GST Return (F5)</field>
+            <field name="report_type">date_range</field>
+            <field name="tax_report" eval="1"/>
+            <field name='parent_id' ref='l10n_sg.account_reports_sg_statements_menu'/>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_supplies" model="account.financial.html.report.line">
+            <field name="name">Supplies</field>
+            <field name="financial_report_id" ref="account_financial_report_l10n_sg_gst_returns"/>
+            <field name="sequence" eval="1"/>
+            <field name="level" eval="1" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+
+        <record id="account_financial_report_l10n_sg_gst_returns_box1" model="account.financial.html.report.line">
+            <field name="name">Box 1 - Total value of standard-rated supplies</field>
+            <field name="code">IRAS_BOX01</field>
+            <field name="formulas">balance = - sum.balance</field>
+            <field name="domain" eval="['|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_05')]),
+                                        '|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_48')]),
+                                        '|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_49')]),
+                                        ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_06')])]"/>
+            <field name="parent_id" ref='account_financial_report_l10n_sg_gst_returns_supplies'/>
+            <field name="sequence" eval="1"/>
+            <field name="show_domain">foldable</field>
+            <field name="groupby">account_id</field>
+            <field name="level" eval="2" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_box2" model="account.financial.html.report.line">
+            <field name="name">Box 2 - Total value of zero-rated supplies</field>
+            <field name="code">IRAS_BOX02</field>
+            <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_04')])]"/>
+            <field name="formulas">balance = - sum.balance</field>
+            <field name="parent_id" ref='account_financial_report_l10n_sg_gst_returns_supplies'/>
+            <field name="sequence" eval="2"/>
+            <field name="show_domain">foldable</field>
+            <field name="groupby">account_id</field>
+            <field name="level" eval="2" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        <record id="account_financial_report_l10n_sg_gst_returns_box3" model="account.financial.html.report.line">
+            <field name="name">Box 3 - Total value of exempt supplies</field>
+            <field name="code">IRAS_BOX03</field>
+            <field name="formulas">balance = - sum.balance</field>
+            <field name="domain" eval="['|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_23')]),
+                                        ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_24')])]"/>
+            <field name="parent_id" ref='account_financial_report_l10n_sg_gst_returns_supplies'/>
+            <field name="sequence" eval="3"/>
+            <field name="show_domain">foldable</field>
+            <field name="groupby">account_id</field>
+            <field name="level" eval="2" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+
+        <record id="account_financial_report_l10n_sg_gst_returns_box4" model="account.financial.html.report.line">
+            <field name="name">Box 4 - Total value of (1) + (2) + (3)</field>
+            <field name="code">IRAS_BOX04</field>
+            <field name="formulas">balance = IRAS_BOX01.balance + IRAS_BOX02.balance + IRAS_BOX03.balance</field>
+            <field name="parent_id" ref='account_financial_report_l10n_sg_gst_returns_supplies'/>
+            <field name="sequence" eval="4"/>
+            <field name="level" eval="2" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_purchases" model="account.financial.html.report.line">
+            <field name="name">Purchases</field>
+            <field name="financial_report_id" ref="account_financial_report_l10n_sg_gst_returns"/>
+            <field name="sequence" eval="2"/>
+            <field name="level" eval="1" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_box5" model="account.financial.html.report.line">
+            <field name="name">Box 5 - Total value of taxable purchases</field>
+            <field name="code">IRAS_BOX05</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="domain" eval="['|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_08')]),
+                                        '|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_50')]),
+                                        '|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_16')]),
+                                        '|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_12')]),
+                                        '|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_14')]),
+                                        '|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_10')]),
+                                        '|', ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_09')]),
+                                        ('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_13')])]"/>
+            <field name="parent_id" ref='account_financial_report_l10n_sg_gst_returns_purchases'/>
+            <field name="sequence" eval="1"/>
+            <field name="show_domain">foldable</field>
+            <field name="groupby">account_id</field>
+            <field name="level" eval="2" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+       
+        <record id="account_financial_report_l10n_sg_gst_returns_taxes" model="account.financial.html.report.line">
+            <field name="name">Taxes</field>
+            <field name="financial_report_id" ref="account_financial_report_l10n_sg_gst_returns"/>
+            <field name="sequence" eval="3"/>
+            <field name="level" eval="1" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_box6" model="account.financial.html.report.line">
+            <field name="name">Box 6 - Output tax due</field>
+            <field name="code">IRAS_BOX06</field>
+            <field name="formulas">balance = - sum.balance</field>
+            <field name="domain" eval="['|', ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_05')]),
+                                        '|', ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_49')]),
+                                        ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_06')])]"/>
+            <field name="parent_id" ref='account_financial_report_l10n_sg_gst_returns_taxes'/>
+            <field name="sequence" eval="1"/>
+            <field name="show_domain">foldable</field>
+            <field name="groupby">account_id</field>
+            <field name="level" eval="2" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_box7" model="account.financial.html.report.line">
+            <field name="name">Box 7 - Less : Input tax and refunds claimed</field>
+            <field name="code">IRAS_BOX07</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="domain" eval="['|', ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_08')]),
+                                        '|', ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_50')]),
+                                        '|', ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_16')]),
+                                        '|', ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_12')]),
+                                        '|', ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_14')]),
+                                        '|', ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_10')]),
+                                        '|', ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_09')]),
+                                        ('tax_line_id.tag_ids', 'in', [ref('l10n_sg.tag_sg_13')])]"/>
+            <field name="parent_id" ref='account_financial_report_l10n_sg_gst_returns_taxes'/>
+            <field name="sequence" eval="2"/>
+            <field name="show_domain">foldable</field>
+            <field name="groupby">account_id</field>
+            <field name="level" eval="2" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_box8" model="account.financial.html.report.line">
+            <field name="name">Box 8 - Equals : Net GST to be paid to IRAS</field>
+            <field name="code">IRAS_BOX08</field>
+            <field name="formulas">balance = IRAS_BOX06.balance - IRAS_BOX07.balance</field>
+            <field name="parent_id" ref='account_financial_report_l10n_sg_gst_returns_taxes'/>
+            <field name="sequence" eval="3"/>
+            <field name="level" eval="2" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_applicable" model="account.financial.html.report.line">
+            <field name="name">Applicable to Taxable Persons under Major Exported Scheme / Approved 3rd Party Logistics Company / Other Approved Schemes Only</field>
+            <field name="financial_report_id" ref="account_financial_report_l10n_sg_gst_returns"/>
+            <field name="sequence" eval="4"/>
+            <field name="level" eval="1" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_applicable_box9" model="account.financial.html.report.line">
+            <field name="name">Box 9 - Total value of goods imported under this scheme</field>
+            <field name="code">IRAS_BOX09</field>
+            <field name="sequence" eval="1"/>
+            <field name="level" eval="2"/>
+            <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_sg.tag_sg_17')])]"/>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="parent_id" ref="account_financial_report_l10n_sg_gst_returns_applicable"/>
+            <field name="show_domain">never</field>
+            <field name="special_date_changer">strict_range</field>
+        </record>
+
+        <record id="account_financial_report_l10n_sg_gst_returns_revenues" model="account.financial.html.report.line">
+            <field name="name">Revenue</field>
+            <field name="financial_report_id" ref="account_financial_report_l10n_sg_gst_returns"/>
+            <field name="sequence" eval="6"/>
+            <field name="level" eval="1" />
+            <field name="special_date_changer">strict_range</field>
+        </record>
+        
+        <record id="account_financial_report_l10n_sg_gst_returns_revenues_box13" model="account.financial.html.report.line">
+            <field name="name">Box 13 - Revenue for the accounting period</field>
+            <field name="code">IRAS_BOX13</field>
+            <field name="sequence" eval="1"/>
+            <field name="level" eval="2"/>
+            <field name="formulas">balance = NEP.balance</field>
+            <field name="parent_id" ref="account_financial_report_l10n_sg_gst_returns_revenues"/>
+            <field name="special_date_changer">strict_range</field>
+        </record>
+    </data>
+</odoo>

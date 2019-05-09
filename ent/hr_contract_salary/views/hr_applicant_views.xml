@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_applicant_view_form" model="ir.ui.view">
+        <field name="name">hr.applicant.form</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.crm_case_form_view_job"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='toggle_active']" position="before">
+                <button name="action_show_proposed_contracts" class="oe_stat_button" icon="fa-book" type="object" help="Proposed Contracts">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value"><field name="proposed_contracts_count"/></span>
+                        <span class="o_stat_text">Contracts</span>
+                     </div>
+                </button>
+            </xpath>
+            <button name="reset_applicant" position="after">
+                <button name="%(generate_offer_link_action)d" type="action" string="Generate Offer Link" class="oe_highlight"/>
+            </button>
+        </field>
+    </record>
+</odoo>

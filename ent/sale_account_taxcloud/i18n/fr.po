@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_account_taxcloud
+# 
+# Translators:
+# Martin Trigaux, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:06+0000\n"
+"PO-Revision-Date: 2018-09-21 14:06+0000\n"
+"Last-Translator: Martin Trigaux, 2018\n"
+"Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: sale_account_taxcloud
+#: model:ir.model,name:sale_account_taxcloud.model_account_invoice
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: sale_account_taxcloud
+#: model:ir.model,name:sale_account_taxcloud.model_sale_order
+msgid "Sale Order"
+msgstr "Bon de commande"
+
+#. module: sale_account_taxcloud
+#: code:addons/sale_account_taxcloud/models/sale_order.py:34
+#, python-format
+msgid "The configuration of TaxCloud is in the Accounting app, Settings menu."
+msgstr ""
+"La configuration de TaxCloud s'effectue dans le menu Paramètres de "
+"l'application Comptabilité."
+
+#. module: sale_account_taxcloud
+#: code:addons/sale_account_taxcloud/models/sale_order.py:34
+#, python-format
+msgid "Unable to retrieve taxes from TaxCloud: "
+msgstr "Impossible de récupérer les taxes à partir de TaxCloud :"
+
+#. module: sale_account_taxcloud
+#: model:ir.actions.server,name:sale_account_taxcloud.action_sale_order_update_taxes
+msgid "Update taxes with Taxcloud"
+msgstr "Mettre à jour les taxes avec TaxCloud"

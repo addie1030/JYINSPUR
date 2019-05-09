@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_forecast_user,sale.forecast,mrp_mps.model_sale_forecast,mrp.group_mrp_user,1,0,0,0
+access_sale_forecast_manager,sale.forecast,mrp_mps.model_sale_forecast,mrp.group_mrp_manager,1,1,1,1
+access_sale_forecast_indirect_user,sale.forecast.indirect,mrp_mps.model_sale_forecast_indirect,mrp.group_mrp_user,1,0,0,0
+access_sale_forecast_indirect_manager,sale.forecast.indirect,mrp_mps.model_sale_forecast_indirect,mrp.group_mrp_manager,1,1,1,1

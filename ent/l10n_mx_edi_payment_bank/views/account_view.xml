@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="view_bank_statement_inh_l10n_mx_bank" model="ir.ui.view">
+        <field name="name">view.bank.statement.inh.l10n.mx.bank</field>
+        <field name="model">account.bank.statement</field>
+        <field name="inherit_id" ref="account.view_bank_statement_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='bank_account_id']" position="attributes">
+                <attribute name="invisible">0</attribute>
+                <attribute name="context">{'default_partner_id': partner_id}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

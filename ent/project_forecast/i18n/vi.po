@@ -1,0 +1,464 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * project_forecast
+# 
+# Translators:
+# thanh nguyen <thanhnguyen.icsc@gmail.com>, 2018
+# Duy BQ <duybq86@gmail.com>, 2018
+# fanha99 <fanha99@hotmail.com>, 2018
+# Martin Trigaux, 2018
+# lam nguyen <lamev.inc@gmail.com>, 2018
+# Minh Nguyen <ndminh210994@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:06+0000\n"
+"PO-Revision-Date: 2018-09-21 14:06+0000\n"
+"Last-Translator: Minh Nguyen <ndminh210994@gmail.com>, 2018\n"
+"Language-Team: Vietnamese (https://www.transifex.com/odoo/teams/41243/vi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_form
+msgid "% Time"
+msgstr "% Thời gian"
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project_forecast.py:200
+#, python-format
+msgid "%s Task(s): %s"
+msgstr "%s Tác vụ: %s"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_view_kanban_inherit_project_forecast
+msgid "<span class=\"o_label\">Forecast</span>"
+msgstr "<span class=\"o_label\">Dự báo</span>"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_view_form_inherit_project_forecast
+msgid "<span>Forecast</span>"
+msgstr "<span>Dự báo</span>"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__active
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__resource_time
+msgid "Allocated Time"
+msgstr "Thời gian được phân bổ"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__time
+msgid "Allocated time / Time span"
+msgstr "Thời gian phân bổ / Khoảng thời gian"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_task__allow_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_view_form_inherit_project_forecast
+msgid "Allow Forecast"
+msgstr "Cho phép dự báo"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_project__allow_forecast
+msgid "Allow forecast"
+msgstr "Cho phép dự báo"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_search
+msgid "Archived"
+msgstr "Lưu trữ"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_form
+msgid "Assign To"
+msgstr "Phân công cho"
+
+#. module: project_forecast
+#: model:ir.ui.menu,name:project_forecast.project_forecast_group_by_user
+msgid "By Employee"
+msgstr "Theo nhân viên"
+
+#. module: project_forecast
+#: model:ir.ui.menu,name:project_forecast.project_forecast_group_by_project
+msgid "By Project"
+msgstr "Theo dự án"
+
+#. module: project_forecast
+#: selection:res.company,forecast_span:0
+msgid "By day"
+msgstr "Theo ngày"
+
+#. module: project_forecast
+#: selection:res.company,forecast_span:0
+msgid "By month"
+msgstr "Theo tháng"
+
+#. module: project_forecast
+#: selection:res.company,forecast_span:0
+msgid "By week"
+msgstr "Theo tuần"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__color
+msgid "Color"
+msgstr "Màu sắc"
+
+#. module: project_forecast
+#: model:ir.model,name:project_forecast.model_res_company
+msgid "Companies"
+msgstr "Công ty"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: project_forecast
+#: model:ir.model,name:project_forecast.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cấu hình thiết lập"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: project_forecast
+#: selection:res.company,forecast_uom:0
+msgid "Days"
+msgstr "Ngày"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__employee_id
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_search
+msgid "Employee"
+msgstr "Người lao động"
+
+#. module: project_forecast
+#: model:ir.model.fields,help:project_forecast.field_res_company__forecast_span
+#: model:ir.model.fields,help:project_forecast.field_res_config_settings__forecast_span
+msgid ""
+"Encode your forecast in a table displayed by days, weeks or the whole year."
+msgstr ""
+"Mã hóa dự báo của bạn trong bảng được hiển thị theo ngày, tuần hoặc cả năm."
+
+#. module: project_forecast
+#: model:ir.model.fields,help:project_forecast.field_project_forecast__forecast_uom
+#: model:ir.model.fields,help:project_forecast.field_res_company__forecast_uom
+#: model:ir.model.fields,help:project_forecast.field_res_config_settings__forecast_uom
+msgid "Encode your forecasts in hours or days."
+msgstr "Mã hóa dự báo của bạn theo giờ hoặc ngày."
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__end_date
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__exclude
+msgid "Exclude"
+msgstr "Loại trừ"
+
+#. module: project_forecast
+#: model:ir.model.fields,help:project_forecast.field_project_forecast__resource_time
+msgid "Expressed in the Unit of Measure of the project company"
+msgstr ""
+
+#. module: project_forecast
+#: model:ir.actions.act_window,name:project_forecast.project_forecast_action_from_project
+#: model:ir.ui.menu,name:project_forecast.project_forecast_menu
+msgid "Forecast"
+msgstr "Dự báo"
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project_forecast.py:274
+#, python-format
+msgid "Forecast (in %s)"
+msgstr ""
+
+#. module: project_forecast
+#: model:ir.actions.act_window,name:project_forecast.project_forecast_action_report_activities
+#: model:ir.ui.menu,name:project_forecast.project_forecast_report_activities
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_graph
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_pivot
+msgid "Forecast Analysis"
+msgstr "Phân tích dự báo"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_form
+msgid "Forecast Form"
+msgstr "Mãu dự báo"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_tree
+msgid "Forecast List"
+msgstr "Danh sách dự báo"
+
+#. module: project_forecast
+#: model:ir.actions.act_window,name:project_forecast.project_forecast_action_by_user
+#: model_terms:ir.ui.view,arch_db:project_forecast.view_project_forecast_grid_by_user
+msgid "Forecast by employee"
+msgstr ""
+
+#. module: project_forecast
+#: model:ir.actions.act_window,name:project_forecast.project_forecast_action_by_project
+#: model_terms:ir.ui.view,arch_db:project_forecast.view_project_forecast_grid_by_project
+msgid "Forecast by project"
+msgstr "Dự báo theo dự án"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_grid_by_task
+msgid "Forecast by task"
+msgstr ""
+
+#. module: project_forecast
+#: sql_constraint:project.forecast:0
+msgid "Forecast end date should be greater or equal to its start date"
+msgstr ""
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project_forecast.py:198
+#, python-format
+msgid ""
+"Forecast should not overlap existing forecasts. To solve this, check the "
+"project(s): %s."
+msgstr ""
+
+#. module: project_forecast
+#: model:ir.actions.server,name:project_forecast.project_forecast_action_server_by_user
+msgid "Forecast: view by employee"
+msgstr ""
+
+#. module: project_forecast
+#: model:ir.actions.server,name:project_forecast.project_forecast_action_server_by_project
+msgid "Forecast: view by project"
+msgstr ""
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project_forecast.py:164
+#, python-format
+msgid "Forecasted time must be positive"
+msgstr "Thời gian dự báo phải là dương"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_search
+msgid "Future"
+msgstr "Tương lai"
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project_forecast.py:296
+#, python-format
+msgid ""
+"Grid adjustment for project forecasts only supports the 'start_date' columns"
+" field and the 'resource_time' cell field, got respectively %(column_field)r"
+" and %(cell_field)r"
+msgstr ""
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: project_forecast
+#: selection:res.company,forecast_uom:0
+msgid "Hours"
+msgstr "Giờ"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_grid_by_task
+#: model_terms:ir.ui.view,arch_db:project_forecast.view_project_forecast_grid_by_project
+#: model_terms:ir.ui.view,arch_db:project_forecast.view_project_forecast_grid_by_user
+msgid "Month"
+msgstr "Tháng"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_search
+msgid "My Activities"
+msgstr "Hoạt động của tôi"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_search
+msgid "My Projects"
+msgstr "Dự án của tôi"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_search
+msgid "Past"
+msgstr "Quá khứ"
+
+#. module: project_forecast
+#: model:ir.model.fields,help:project_forecast.field_project_forecast__time
+msgid "Percentage of working time"
+msgstr "Phần trăm thời gian làm việc"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__resource_hours
+msgid "Planned hours"
+msgstr "Giờ đã lên kế hoạch"
+
+#. module: project_forecast
+#: model:ir.model,name:project_forecast.model_project_project
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__project_id
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_search
+msgid "Project"
+msgstr "Dự án"
+
+#. module: project_forecast
+#: model:ir.model,name:project_forecast.model_project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_form
+msgid "Project Forecast"
+msgstr "Dự báo dự án"
+
+#. module: project_forecast
+#: model:ir.model.fields,help:project_forecast.field_project_forecast__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr "Người dùng liên quan đến nguồn lực để quản lý sự truy cập"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__start_date
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: project_forecast
+#: model:ir.model,name:project_forecast.model_project_task
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__task_id
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_search
+msgid "Task"
+msgstr "Nhiệm vụ"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__stage_id
+msgid "Task stage"
+msgstr "Tình trạng tác vụ"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__tag_ids
+msgid "Task tags"
+msgstr "Thẻ tác vụ"
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project_forecast.py:132
+#, python-format
+msgid ""
+"The employee (%s) doesn't have a timezone, this might cause errors in the "
+"time computation. It is configurable on the user linked to the employee"
+msgstr ""
+
+#. module: project_forecast
+#: model:ir.model.fields,help:project_forecast.field_project_project__allow_forecast
+#: model:ir.model.fields,help:project_forecast.field_project_task__allow_forecast
+msgid "This feature shows the Forecast link in the kanban view"
+msgstr "Tính năng này hiển thị liên kết Dự báo trong chế độ xem kanban"
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_res_company__forecast_span
+#: model:ir.model.fields,field_description:project_forecast.field_res_config_settings__forecast_span
+msgid "Time Span"
+msgstr ""
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__forecast_uom
+#: model:ir.model.fields,field_description:project_forecast.field_res_company__forecast_uom
+#: model:ir.model.fields,field_description:project_forecast.field_res_config_settings__forecast_uom
+msgid "Time Unit"
+msgstr ""
+
+#. module: project_forecast
+#: model:ir.filters,name:project_forecast.ir_filter_forecast_time_by_month
+msgid "Time by month"
+msgstr ""
+
+#. module: project_forecast
+#: model:ir.model.fields,field_description:project_forecast.field_project_forecast__user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_grid_by_task
+#: model_terms:ir.ui.view,arch_db:project_forecast.view_project_forecast_grid_by_project
+#: model_terms:ir.ui.view,arch_db:project_forecast.view_project_forecast_grid_by_user
+msgid "Week"
+msgstr "Tuần"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_grid_by_task
+#: model_terms:ir.ui.view,arch_db:project_forecast.view_project_forecast_grid_by_project
+#: model_terms:ir.ui.view,arch_db:project_forecast.view_project_forecast_grid_by_user
+msgid "Year"
+msgstr "Năm"
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project.py:21
+#, python-format
+msgid ""
+"You cannot delete a project containing forecasts. You can either delete all "
+"the project's forecasts and then delete the project or simply deactivate the"
+" project."
+msgstr ""
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project.py:43
+#, python-format
+msgid ""
+"You cannot delete a task containing forecasts. You can either delete all the"
+" task's forecasts and then delete the task or simply deactivate the task."
+msgstr ""
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project_forecast.py:170
+#, python-format
+msgid "Your task is not in the selected project."
+msgstr "Tác vụ của bạn không có trong dự án đã chọn"
+
+#. module: project_forecast
+#: model_terms:ir.ui.view,arch_db:project_forecast.project_forecast_view_form
+msgid "day(s)"
+msgstr "ngày"
+
+#. module: project_forecast
+#: code:addons/project_forecast/models/project_forecast.py:109
+#, python-format
+msgid "undefined"
+msgstr "không xác định"

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="helpdesk.helpdesk_ticket_1" model="helpdesk.ticket">
+        <field name="project_id" model="project.project"
+            eval="obj().env.ref('sale_timesheet.sale_order_2').order_line.filtered(lambda line: line.product_id == obj().env.ref('sale_timesheet.product_service_order_timesheet')).task_id.project_id.id"/>
+        <field name="task_id" model="project.project"
+            eval="obj().env.ref('sale_timesheet.sale_order_2').order_line.filtered(lambda line: line.product_id == obj().env.ref('sale_timesheet.product_service_order_timesheet')).task_id.id"/>
+    </record>
+</odoo>

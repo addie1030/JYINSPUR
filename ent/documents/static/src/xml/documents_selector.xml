@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+<t t-name="documents.DocumentsSelector">
+    <div class="o_documents_selector h-100 border-right bg-white">
+        <section class="o_documents_selector_section mb-3 o_documents_selector_folders">
+            <header class="o_documents_selector_header text-uppercase">
+                <i class="o_documents_folder_color fa fa-folder mr-1"/>
+                <b>Folders</b>
+            </header>
+            <div class="o_documents_selector_folders_container"/>
+        </section>
+        <section class="o_documents_selector_section mb-3 o_documents_selector_tags">
+            <header class="o_documents_selector_header text-uppercase">
+                <i class="o_documents_tag_color fa fa-tag mr-1"/>
+                <b>Tags</b>
+            </header>
+            <ol class="list-group d-block">
+                <li t-foreach="facets" t-as="facet" t-att-data-id="facet.id" class="o_documents_selector_facet o_foldable list-group-item border-0">
+                    <t t-set="facet_att_id" t-value="_.uniqueId('facet_')"/>
+                    <header class="list-group-item-action" t-att-title="facet.tooltip">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" t-att-name="facet_att_id" t-att-id="facet_att_id" t-att-checked="facet.selected ? 'checked' : undefined" class="custom-control-input"/>
+                            <label class="custom-control-label d-block" t-att-for="facet_att_id">
+                                <span class="o_docs_label_title"><t t-esc="facet.name"/></span>
+                                <i class="o_toggle_fold fa fa-fw fa-caret-down pull-right"></i>
+                            </label>
+                        </div>
+                    </header>
+                    <ol class="list-group d-block">
+                        <li t-foreach="facet.tags" t-as="tag" t-att-data-id="tag.id" class="o_documents_selector_tag list-group-item border-0 list-group-item-action">
+                            <t t-set="tag_att_id" t-value="_.uniqueId('tag_')"/>
+                            <header t-att-title="facet.tooltip">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" t-att-name="tag_att_id" t-att-id="tag_att_id" t-att-checked="tag.selected ? 'checked' : undefined" class="custom-control-input"/>
+                                    <label t-att-for="tag_att_id" class="custom-control-label d-block">
+                                        <t t-esc="tag.name"/>
+                                        <b t-if="tag.__count > 0" class="o_documents_selector_count pull-right mr-2"><t t-esc="tag.__count"/></b>
+                                    </label>
+                                </div>
+                            </header>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </section>
+        <section class="o_documents_selector_section mb-3 o_documents_selector_models">
+            <header class="o_documents_selector_header text-uppercase">
+                <i class="o_documents_model_color fa fa-file-text mr-1"/>
+                <b>Attached To</b>
+            </header>
+            <ol class="list-group d-block">
+                <li t-foreach="relatedModels" t-as="model" t-att-data-id="model.res_model" class="o_documents_selector_model list-group-item border-0">
+                    <t t-set="model_att_id" t-value="_.uniqueId('model_')"/>
+                    <header>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" t-att-name="model_att_id" t-att-id="model_att_id" t-att-checked="model.selected ? 'checked' : undefined" class="custom-control-input"/>
+                            <label t-att-for="model_att_id" class="custom-control-label d-block">
+                                <t t-esc="model.res_model_name"/>
+                                <b t-if="model.__count > 0" class="o_documents_selector_count pull-right text-muted mr-2 small"><t t-esc="model.__count"/></b>
+                            </label>
+                        </div>
+                    </header>
+                </li>
+            </ol>
+        </section>
+    </div>
+</t>
+
+<t t-name="documents.DocumentsSelectorFolder">
+    <li t-att-class="'o_documents_selector_folder border-0 list-group-item' + (folder.children.length ? ' o_foldable' : '')" t-att-data-id="folder.id">
+        <header t-att-class="'list-group-item-action' + (folder.id === activeFolderID ? ' active' : '')">
+            <label t-att-for="folder.name" class="mb0 d-block">
+                <i t-if="folder.children.length" class="fa fa-fw pull-right o_toggle_fold fa-caret-down"/>
+                <span class="o_docs_label_title"><t t-esc="folder.name"/></span>
+            </label>
+        </header>
+    </li>
+</t>
+
+</templates>

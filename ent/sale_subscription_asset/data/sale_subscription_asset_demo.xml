@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="website_subscription_asset_year" model="account.asset.category">
+        <field name="journal_id" model="account.journal" search="[
+            ('type', '=', 'general'),
+            ('id', '!=', obj([]).env.user.company_id.currency_exchange_journal_id.id)]"/>
+        <field name="name">Office Cleaning Yearly</field>
+        <field name="type">sale</field>
+        <field name="method_period">1</field>
+        <field name="method_number">12</field>
+        <field name="account_asset_id" model="account.account" search="[
+            ('user_type_id', '=', obj([]).env.ref('account.data_account_type_fixed_assets').id)]"/>
+        <field name="account_depreciation_id" model="account.account" search="[
+            ('user_type_id', '=', obj([]).env.ref('account.data_account_type_fixed_assets').id)]"/>
+        <field name="account_depreciation_expense_id" model="account.account" search="[
+            ('user_type_id', '=', obj([]).env.ref('account.data_account_type_expenses').id)]"/>
+    </record>
+
+    <record id="website_subscription_asset_month" model="account.asset.category">
+        <field name="journal_id" model="account.journal" search="[
+            ('type', '=', 'general'),
+            ('id', '!=', obj([]).env.user.company_id.currency_exchange_journal_id.id)]"/>
+        <field name="name">Cleaning Monthly</field>
+        <field name="type">sale</field>
+        <field name="method_period">1</field>
+        <field name="method_number">1</field>
+        <field name="account_asset_id" model="account.account" search="[
+            ('user_type_id', '=', obj([]).env.ref('account.data_account_type_fixed_assets').id)]"/>
+        <field name="account_depreciation_id" model="account.account" search="[
+            ('user_type_id', '=', obj([]).env.ref('account.data_account_type_fixed_assets').id)]"/>
+        <field name="account_depreciation_expense_id" model="account.account" search="[
+            ('user_type_id', '=', obj([]).env.ref('account.data_account_type_expenses').id)]"/>
+    </record>
+
+    <record id="sale_subscription.cleaning_yearly" model="sale.subscription.template">
+        <field name="template_asset_category_id" ref="sale_subscription_asset.website_subscription_asset_year"/>
+    </record>
+
+    <record id="sale_subscription.cleaning_monthly" model="sale.subscription.template">
+        <field name="template_asset_category_id" ref="sale_subscription_asset.website_subscription_asset_month"/>
+    </record>
+
+    <record id="sale_subscription.subscription_portal_21" model="sale.subscription">
+        <field name="asset_category_id" ref="sale_subscription_asset.website_subscription_asset_month"/>
+    </record>
+</odoo>

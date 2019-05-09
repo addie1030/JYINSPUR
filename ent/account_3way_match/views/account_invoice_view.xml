@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_invoice_form_inherit" model="ir.ui.view">
+        <field name="name">account.invoice.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='fiscal_position_id']" position='after'>
+                <div class="oe_row" colspan="2">
+                    <label for="release_to_pay" style="width: 20% ; font-weight: bold" class="o_light_label"/>
+                    <field name="release_to_pay" attrs="{'invisible': [('force_release_to_pay', '=', True)]}" style="width: 20%"/>
+                    <field name="release_to_pay_manual" attrs="{'invisible': [('force_release_to_pay', '!=', True)]}" style="width: 20%"/>
+                    <span class="o_form_label" style="width: 2%">   </span><!--Little "hack" so that the label below does not touch the release_to_pay_manual field in the view.-->
+                    <label for="force_release_to_pay" style="width: 20% ; font-weight: bold" class="o_light_label"/>
+                    <field name="force_release_to_pay" style="width: 20%"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="account_invoice_filter_inherit_account_3way_match" model="ir.ui.view">
+        <field name="name">account.invoice.select.inherit.account_3way_match</field>
+        <field name="mode">primary</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='late']" position='after'>
+                <separator/>
+                <filter name="bills_to_pay" string="Bills to Pay" domain="['&amp;', ('state', '=', 'open'), '|', ('date_due', '&lt;', time.strftime('%%Y-%%m-%%d')), ('release_to_pay','=', 'yes')]"/>
+                <filter name="exception" string="Bills in Exception" domain="[('release_to_pay','=', 'exception')]"/>
+            </xpath>
+        </field>
+    </record>
+
+     <!--This action has been redefined and the account_invoice_filter_inherit_account_3way_match
+     created in order to only display 'bills_to_pay' and 'exception' filters
+     in the view related to vendor bills, as it makes no sense to propose them
+     in the view related to sales invoices, which share the same model.-->
+     <record id="account.action_vendor_bill_template" model="ir.actions.act_window">
+        <field name="name">Vendor Bills</field>
+        <field name="res_model">account.invoice</field>
+        <field name="search_view_id" ref="account_invoice_filter_inherit_account_3way_match"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * base_automation_hr_contract
+# 
+# Translators:
+# MS, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 10:05+0000\n"
+"PO-Revision-Date: 2018-09-18 10:05+0000\n"
+"Last-Translator: MS, 2018\n"
+"Language-Team: Portuguese (https://www.transifex.com/odoo/teams/41243/pt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__website_published
+msgid ""
+"A code server action can be executed from the website, using a dedicated "
+"controller. The address is <base>/website/action/<website_path>. Set this "
+"field as True to allow users to run this action. If it is set to False the "
+"action cannot be run through the website."
+msgstr ""
+
+#. module: base_automation_hr_contract
+#: model:ir.model,name:base_automation_hr_contract.model_base_automation
+msgid "Automated Action"
+msgstr "Ação Automatizada"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_published
+msgid "Available on the Website"
+msgstr "Disponível no Site da Web"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__website_url
+msgid "The full URL to access the server action through the website."
+msgstr ""
+"O URL completo para aceder ao servidor de ação através do site da Web."
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__trg_date_resource_field_id
+msgid "Use employee work schedule"
+msgstr "Utilizar horário de trabalho do funcionário"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,help:base_automation_hr_contract.field_base_automation__trg_date_resource_field_id
+msgid "Use the user's working schedule."
+msgstr "Utilize o horário de trabalho do utilizador."
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_path
+msgid "Website Path"
+msgstr "Caminho do Site da Web"
+
+#. module: base_automation_hr_contract
+#: model:ir.model.fields,field_description:base_automation_hr_contract.field_base_automation__website_url
+msgid "Website Url"
+msgstr "Url do Site da Web"

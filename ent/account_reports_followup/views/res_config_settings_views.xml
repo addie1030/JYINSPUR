@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.account.reports.followup</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="account_reports_followup" position="replace">
+                <div class="content-group" attrs="{'invisible': [('module_account_reports_followup', '=', False)]}">
+                    <div>
+                        <button type="object" icon="fa-arrow-right" name="open_followup_level_form" string="Follow-up Levels" class="oe_link"/>
+                    </div>
+                </div>
+            </div>
+            <div id="payment_follow_up" position="replace"/>
+        </field>
+    </record>
+
+</odoo>

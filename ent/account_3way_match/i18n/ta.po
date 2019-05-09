@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_3way_match
+# 
+# Translators:
+# Bagavathikumar Ramakrishnan <bagavathikumar@gmail.com>, 2019
+# Alagappan Karthikeyan <me@karthik.sg>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 10:05+0000\n"
+"PO-Revision-Date: 2018-08-24 11:36+0000\n"
+"Last-Translator: Alagappan Karthikeyan <me@karthik.sg>, 2019\n"
+"Language-Team: Tamil (https://www.transifex.com/odoo/teams/41243/ta/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ta\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_3way_match
+#: model:ir.model.fields,help:account_3way_match.field_account_invoice__release_to_pay_manual
+msgid ""
+"  * Yes: you should pay the bill, you have received the products\n"
+"  * No, you should not pay the bill, you have not received the products\n"
+"  * Exception, there is a difference between received and billed quantities."
+msgstr ""
+"* ஆமாம்: நீங்கள் மசோதாவை செலுத்த வேண்டும், நீங்கள் பொருட்களை பெற்றுள்ளீர்கள்\n"
+"   * இல்லை, நீங்கள் மசோதாவை செலுத்தக்கூடாது, நீங்கள் பொருட்களைப் பெறவில்லை\n"
+"   * விதிவிலக்கு, பெறப்பட்ட மற்றும் கட்டப்பட்ட அளவுகளுக்கு வித்தியாசம் உள்ளது."
+
+#. module: account_3way_match
+#: model_terms:ir.ui.view,arch_db:account_3way_match.account_invoice_filter_inherit_account_3way_match
+msgid "Bills in Exception"
+msgstr "விதிவிலக்கு உள்ள பில்கள்"
+
+#. module: account_3way_match
+#: model_terms:ir.ui.view,arch_db:account_3way_match.account_invoice_filter_inherit_account_3way_match
+msgid "Bills to Pay"
+msgstr "கட்டணம் செலுத்துதல்"
+
+#. module: account_3way_match
+#: selection:account.invoice,release_to_pay:0
+#: selection:account.invoice,release_to_pay_manual:0
+#: selection:account.invoice.line,can_be_paid:0
+msgid "Exception"
+msgstr "விதிவிலக்கு"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice__force_release_to_pay
+msgid "Force status"
+msgstr "அதிகாரத்தின் நிலை"
+
+#. module: account_3way_match
+#: model:ir.model.fields,help:account_3way_match.field_account_invoice__force_release_to_pay
+msgid ""
+"Indicates whether the 'Can be paid' status is defined automatically or "
+"manually."
+msgstr ""
+"'செலுத்தப்படலாம்' நிலை தானாகவோ அல்லது கைமுறையாகவோ வரையறுக்கப்பட்டுள்ளதா "
+"என்பதை குறிக்கிறது."
+
+#. module: account_3way_match
+#: model:ir.model,name:account_3way_match.model_account_invoice
+msgid "Invoice"
+msgstr "விலைப்பட்டியல்"
+
+#. module: account_3way_match
+#: model:ir.model,name:account_3way_match.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "விலைப்பட்டியல் வரி"
+
+#. module: account_3way_match
+#: model:ir.model,name:account_3way_match.model_account_journal
+msgid "Journal"
+msgstr "ஜர்னல்"
+
+#. module: account_3way_match
+#: selection:account.invoice,release_to_pay:0
+#: selection:account.invoice,release_to_pay_manual:0
+#: selection:account.invoice.line,can_be_paid:0
+msgid "No"
+msgstr "இல்லை"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice_line__can_be_paid
+msgid "Release to Pay"
+msgstr "செலுத்த விடுவிக்கவும்"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice__release_to_pay
+msgid "Should be paid"
+msgstr "பணம் செலுத்தப்பட வேண்டும்"
+
+#. module: account_3way_match
+#: model:ir.model.fields,field_description:account_3way_match.field_account_invoice__release_to_pay_manual
+msgid "Should be paid Manual"
+msgstr "கையேடு செலுத்தப்பட வேண்டும்"
+
+#. module: account_3way_match
+#: model:ir.model.fields,help:account_3way_match.field_account_invoice__release_to_pay
+msgid ""
+"This field can take the following values :\n"
+"  * Yes: you should pay the bill, you have received the products\n"
+"  * No, you should not pay the bill, you have not received the products\n"
+"  * Exception, there is a difference between received and billed quantities\n"
+"This status is defined automatically, but you can force it by ticking the 'Force Status' checkbox."
+msgstr ""
+"இந்த புலம் பின்வரும் மதிப்புகள் எடுக்கலாம்:\n"
+"  * ஆமாம்: நீங்கள் மசோதாவை செலுத்த வேண்டும், நீங்கள் பொருட்களை பெற்றுள்ளீர்கள் * இல்லை, நீங்கள் மசோதாவை செலுத்தக்கூடாது, நீங்கள் பொருட்களைப் பெற்றிருக்கவில்லை\n"
+"  * விதிவிலக்கு, பெறப்பட்ட மற்றும் கட்டப்பட்ட அளவுகளுக்கு வித்தியாசம் உள்ளது\n"
+"இந்த நிலை தானாகவே வரையறுக்கப்படுகிறது, ஆனால் 'ஃபோர்ஸ் ஸ்டேட்ஸ்' தேர்வுப்பெட்டியைத் தேர்ந்தெடுப்பதன் மூலம் அதை கட்டாயப்படுத்தலாம்."
+
+#. module: account_3way_match
+#: selection:account.invoice,release_to_pay:0
+#: selection:account.invoice,release_to_pay_manual:0
+#: selection:account.invoice.line,can_be_paid:0
+msgid "Yes"
+msgstr "ஆம்"

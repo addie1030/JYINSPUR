@@ -1,0 +1,459 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * l10n_mx_edi_external_trade
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-31 10:51+0000\n"
+"PO-Revision-Date: 2018-10-31 10:51+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.res_config_settings_view_form_inherit_l10n_mx_edi_external_trade
+msgid "<span class=\"o_form_label\">External Trade</span>"
+msgstr "<span class=\"o_form_label\">Comercio Exterior</span>"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "<span><strong>External Trade</strong></span>"
+msgstr "<span><strong>Comercio Exterior</strong></span>"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_res_partner__l10n_mx_edi_curp
+msgid "Attribute to set in XML to express the CURP when the partner is from a natural person."
+msgstr "Atributo para expresar el CURP en el XML cuando el socio se trate de una persona física."
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "CARRIAGE AND INSURANCE PAID TO"
+msgstr "TRANSPORTE Y SEGURO PAGADOS HASTA"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "CARRIAGE PAID TO"
+msgstr "TRANSPORTE PAGADO HASTA"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "COST AND FREIGHT"
+msgstr "COSTE Y FLETE"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "COST, INSURANCE AND FREIGHT"
+msgstr "COSTE, SEGURO Y FLETE"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Certificate Key"
+msgstr "Llave del Certificado"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_account_invoice__l10n_mx_edi_cer_source
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Certificate Source"
+msgstr "Certificado de Origen"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_res_city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__code
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__code
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_res_city__l10n_mx_edi_code
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__code
+msgid "Code defined in the SAT to this record."
+msgstr "Código definido en el SAT para este registro."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_res_city__l10n_mx_edi_code
+msgid "Code to use in the CFDI with external trade complement. It is based on the SAT catalog."
+msgstr "Código para usar en el CFDI con el complemento de comercio exterior. Está basado en el catalogo del SAT."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_res_company__l10n_mx_edi_colony_code
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_res_partner__l10n_mx_edi_colony_code
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.res_company_form_inherit_l10n_mx_edi_external_trade
+msgid "Colony Code"
+msgstr "Código de la Colonia"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_res_company__l10n_mx_edi_colony_code
+msgid "Colony Code configured for this company. It is used in the external trade complement to define the colony where the domicile is located."
+msgstr "Código de la colonia configurado para esta compañía. Es usado en el complemento de comercio exterior para definir la colonia donde se ubica el domicilio."
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.res_partner_l10n_mx_edi_external_trade
+msgid "Colony Code..."
+msgstr "Código de la Colonia..."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de Configuración"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.res_config_settings_view_form_inherit_l10n_mx_edi_external_trade
+msgid "Configure data to external trade."
+msgstr "Configurar datos para el comercio exterior."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__create_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Customs Qty"
+msgstr "Cant. Aduana"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Customs Unit"
+msgstr "Unidad Aduana"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_uom_uom__l10n_mx_edi_code_aduana
+msgid "Customs code"
+msgstr "Código de Aduana"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "DELIVERED AT FRONTIER"
+msgstr "ENTREGADA EN FRONTERA"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "DELIVERED AT PLACE"
+msgstr "ENTREGADA EN LUGAR"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "DELIVERED AT TERMINAL"
+msgstr "ENTREGADA EN TERMINAL"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "DELIVERED DUTY PAID"
+msgstr "ENTREGADA DERECHOS PAGADOS"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "DELIVERED DUTY UNPAID"
+msgstr "ENTREGADA DERECHOS NO PAGADOS"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "DELIVERED EX QUAY"
+msgstr "ENTREGADA EN MUELLE"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "DELIVERED EX SHIP"
+msgstr "ENTREGADA SOBRE BUQUE"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__display_name
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "EX WORKS"
+msgstr "EN FABRICA"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.view_l10n_mx_edi_external_trade_invoice_form_inherit
+msgid "External Trade"
+msgstr "Comercio Exterior"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "FREE ALONGSIDE SHIP"
+msgstr "FRANCO AL COSTADO DEL BUQUE"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "FREE CARRIER"
+msgstr "FRANCO TRANSPORTISTA"
+
+#. module: l10n_mx_edi_external_trade
+#: selection:account.invoice,l10n_mx_edi_incoterm:0
+msgid "FREE ON BOARD"
+msgstr "FRANCO A BORDO"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__id
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__active
+msgid "If the tariff fraction has expired it could be disabled to do not allow select the record."
+msgstr "Si la fracción arancelaria ha caducado, se puede desactivar para no permitir seleccionar el registro."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_account_invoice__l10n_mx_edi_external_trade
+msgid "If this field is active, the CFDI that generates this invoice will include the complement \"External Trade\"."
+msgstr "Si este campo está activo el CFDI que genere esta factura incluirá el complemento \"Comercio Exterior\"."
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Incoterm"
+msgstr "Incoterm"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_account_invoice__l10n_mx_edi_incoterm
+msgid "Indicates the applicable INCOTERM to the external trade customer invoice."
+msgstr "Indica el INCOTERM aplicable a la factura de cliente para el comercio exterior."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_res_company__l10n_mx_edi_num_exporter
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_res_config_settings__l10n_mx_edi_num_exporter
+msgid "Indicates the number of reliable exporter in accordance with Article 22 of Annex 1 of the Free Trade Agreement with the European Association and the Decision of the European Community. Used in External Trade in the attribute \"NumeroExportadorConfiable\"."
+msgstr "Indica el número de exportador confiable de acuerdo con el Artículo 22 del Anexo 1 del Tratado de Libre Comercio con la Asociación Europea y a la Decisión de la Comunidad Europea. Usado en el Comercio Exterior en el atributo \"NumeroExportadorConfiable\"."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Linea de Factura"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_account_invoice_line__l10n_mx_edi_tariff_fraction_id
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_product_template__l10n_mx_edi_tariff_fraction_id
+msgid "It is used to express the key of the tariff fraction corresponding to the description of the product to export."
+msgstr "Es usada para expresar la clave de la fracción arancelaria correspondiente a la descripción de la mercancía a exportar."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality____last_update
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__write_date
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_l10n_mx_edi_res_locality
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_res_company__l10n_mx_edi_locality_id
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_res_partner__l10n_mx_edi_locality_id
+msgid "Locality"
+msgstr "Localidad"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.res_company_form_inherit_l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.res_partner_l10n_mx_edi_external_trade
+msgid "Locality..."
+msgstr "Localidad..."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_l10n_mx_edi_tariff_fraction
+msgid "Mexican EDI Tariff Fraction"
+msgstr "Fracción Arancelaria Mexicana"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_res_company__l10n_mx_edi_locality_id
+msgid "Municipality configured for this company"
+msgstr "Municipio configurado para esta compañía"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__name
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__name
+msgid "Name defined in the SAT catalog to this record."
+msgstr "Nombre definido en el catálogo para este registro."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_account_invoice__l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_res_partner__l10n_mx_edi_external_trade
+msgid "Need external trade?"
+msgstr "¿Necesita comercio exterior?"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_res_partner__l10n_mx_edi_colony_code
+msgid "Note: Only use this field if this partner is the company address or if it is a branch office.\n"
+"Colony code that will be used in the CFDI with the external trade as Emitter colony. It must be a code from the SAT catalog."
+msgstr "Nota: Solo use este campo si este socio es la dirección de la compañía o si es una sucursal.\n"
+"Código de la colonia que será usado en el CFDI con el comercio exterior como la colonia del Emisor. Debe ser un código del catálogo del SAT."
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Number Certificate Source"
+msgstr "Número de Certificado de Origen"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_res_company__l10n_mx_edi_num_exporter
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_res_config_settings__l10n_mx_edi_num_exporter
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Number of Reliable Exporter"
+msgstr "Número de Exportador Confiable"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Operation Type"
+msgstr "Tipo de Operación"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_res_partner__l10n_mx_edi_locality_id
+msgid "Optional attribute used in the XML that serves to define the locality where the domicile is located."
+msgstr "Atributo opcional usado en el XML que sirve para definir la localidad donde se ubica el domicilio."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model,name:l10n_mx_edi_external_trade.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Unidad de Medida del Producto"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_account_invoice_line__l10n_mx_edi_qty_umt
+msgid "Qty UMT"
+msgstr "Cant. UMT"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_account_invoice_line__l10n_mx_edi_qty_umt
+msgid "Quantity expressed in the UMT from product. It is used in the attribute \"CantidadAduana\" in the CFDI"
+msgstr "Cantidad expresada en la UMT del producto. Es usada en el atributo \"CantidadAduana\" del CFDI"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Rate USD"
+msgstr "Tasa USD"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_res_locality__state_id
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Subdivision"
+msgstr "Subdivisión"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_account_invoice_line__l10n_mx_edi_tariff_fraction_id
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_product_template__l10n_mx_edi_tariff_fraction_id
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.l10n_mx_edi_tariff_fraction_tree_view
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Tariff Fraction"
+msgstr "Fracción Arancelaria"
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.res_config_settings_view_form_inherit_l10n_mx_edi_external_trade
+msgid "The parameters to configure the External Trade."
+msgstr "Los parámetros para configurar el Comercio Exterior."
+
+#. module: l10n_mx_edi_external_trade
+#: model_terms:ir.ui.view,arch_db:l10n_mx_edi_external_trade.report_invoice_documement_external_trade
+msgid "Total USD"
+msgstr "Total USD"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_account_invoice_line__l10n_mx_edi_umt_aduana_id
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_product_template__l10n_mx_edi_umt_aduana_id
+msgid "UMT Aduana"
+msgstr "UMT Aduana"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_account_invoice_line__l10n_mx_edi_price_unit_umt
+msgid "Unit Value UMT"
+msgstr "Valor unitario UMT"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_account_invoice_line__l10n_mx_edi_price_unit_umt
+msgid "Unit value expressed in the UMT from product. It is used in the attribute \"ValorUnitarioAduana\" in the CFDI"
+msgstr "Valor unitario expresado en la UMT del producto. Es usado en el atributo \"ValorUnitarioAduana\" en el CFDI"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__uom_code
+msgid "UoM code related with this tariff fraction. This value is defined in the SAT catalog and will be assigned in the attribute \"UnidadAduana\" in the merchandise."
+msgstr "Código de UdM relacionado con esta fracción arancelaria. Este valor es definido en el catálogo del SAT y será asignado en el atributo \"UnidadAduana\" in mercancías."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,field_description:l10n_mx_edi_external_trade.field_l10n_mx_edi_tariff_fraction__uom_code
+msgid "Uom Code"
+msgstr "Código de UdM"
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_account_invoice__l10n_mx_edi_cer_source
+msgid "Used in CFDI like attribute derived from the exception of certificates of Origin of the Free Trade Agreements that Mexico has celebrated with several countries. If it has a value, it will indicate that it serves as certificate of origin and this value will be set in the CFDI node \"NumCertificadoOrigen\"."
+msgstr "Usado en el CFDI como atributo derivado de la excepción de certificados de Origen de los Tratados de Libre Comercio que ha celebrado México con diversos países. Si tiene un valor, indicará que ejerce como certificado de origen y este valor se establecerá en el nodo CFDI \"NumCertificadoOrigen\"."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_account_invoice_line__l10n_mx_edi_umt_aduana_id
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_product_template__l10n_mx_edi_umt_aduana_id
+msgid "Used in complement \"Comercio Exterior\" to indicate in the products the TIGIE Units of Measurement. It is based in the SAT catalog."
+msgstr "Usado en el complemento de \"Comercio Exterior\" para indicar en los productos la Unidad de Medida Tarifa de la TIGIE. Está basado en el catalogo del SAT."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_uom_uom__l10n_mx_edi_code_aduana
+msgid "Used in the complement of \"Comercio Exterior\" to indicate in the products the UoM. It is based in the SAT catalog."
+msgstr "Usado en el complemento \"Comercio Exterior\" para indicar en los productos la UdM. Está basado en el catálogo del SAT."
+
+#. module: l10n_mx_edi_external_trade
+#: model:ir.model.fields,help:l10n_mx_edi_external_trade.field_res_partner__l10n_mx_edi_external_trade
+msgid "check this box to add by default the external trade complement in invoices for this customer."
+msgstr "Marca esta casilla para añadir por defecto el complemento del comercio exterior in facturas para este cliente."

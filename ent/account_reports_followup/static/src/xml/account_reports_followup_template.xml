@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+
+    <t t-name="CustomerStatements.buttonsWithLevels">
+        <div>
+            <button type="button" class="btn btn-primary o_account_reports_followup_print_letter_button">
+                Print letter
+            </button>
+            <button type="button" class="btn btn-primary o_account_reports_followup_send_mail_button">
+                Send by email
+            </button>
+            <button type="button" class="btn btn-primary o_account_reports_followup_manual_action_button">
+                Manual Action
+            </button>
+            <button type="button" class="btn btn-secondary o_account_reports_followup_do_it_later_button" data-toggle='tooltip' title='Odoo will remind you to take care of this follow-up on the next reminder date.'>
+                Remind me later
+            </button>
+            <button type="button" class="btn btn-primary o_account_reports_followup_done_button" style="display:none">
+                Done
+            </button>
+        </div>
+    </t>
+</templates>

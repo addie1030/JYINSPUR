@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+	<record id="account_financial_report_l10n_do" model="account.financial.html.report">
+        <field name="name">Dominican Republic</field>
+        <field name="date_range" eval="False" />
+        <field name='parent_id' ref='l10n_do.account_reports_do_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+
+    <record id="account_financial_report_line_01_do" model="account.financial.html.report.line">
+        <field name="name">II-1 Total de Operaciones</field>
+        <field name="code">DOTAX01</field>
+        <field name="sequence" eval="1"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_do"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = DOTAX0101.balance + DOTAX0102.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_01_do" model="account.financial.html.report.line">
+        <field name="name">II.A INGRESOS POR EXPORTACIONES DE BIENES O SERVICIOS EXENTOS</field>
+        <field name="code">DOTAX0101</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_01_do"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = DOTAX010101.balance + DOTAX010102.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_01_01_do" model="account.financial.html.report.line">
+        <field name="name">II.A.2 INGRESOS POR EXPORTACIONES DE BIENES O SERVICIOS EXENTOS</field>
+        <field name="code">DOTAX010101</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_01_01_do"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_01_02_do" model="account.financial.html.report.line">
+        <field name="name">II.A.3 INGRESOS POR VENTAS LOCALES DE BIENES O SERVICIOS EXENTOS</field>
+        <field name="code">DOTAX010102</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_01_01_do"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_do.tag_V_EXENTA')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_02_do" model="account.financial.html.report.line">
+        <field name="name">II.B GRAVADAS</field>
+        <field name="code">DOTAX0102</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_01_do"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = DOTAX010201.balance + DOTAX010202.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_02_01_do" model="account.financial.html.report.line">
+        <field name="name">II.B.6 OPERACIONES GRAVADAS AL 18%</field>
+        <field name="code">DOTAX010201</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_01_02_do"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_do.tag_V_ITBIS_18')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_01_02_02_do" model="account.financial.html.report.line">
+        <field name="name">II.B.7 OPERACIONES GRAVADAS AL 11%</field>
+        <field name="code">DOTAX010202</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_01_02_do"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_do" model="account.financial.html.report.line">
+        <field name="name">III LIQUIDACION</field>
+        <field name="code">DOTAX02</field>
+        <field name="sequence" eval="2"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_do"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = DOTAX0201.balance + DOTAX0202.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_01_do" model="account.financial.html.report.line">
+        <field name="name">III.10 TOTAL ITBIS COBRADO (Sumar casillas 8+9)</field>
+        <field name="code">DOTAX0201</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_02_do"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = DOTAX020101.balance + DOTAX020102.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_01_01_do" model="account.financial.html.report.line">
+        <field name="name">III.8 ITBIS COBRADO (18% de la casilla 6)</field>
+        <field name="code">DOTAX020101</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_02_01_do"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_do.tag_V_ITBIS_18')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_01_02_do" model="account.financial.html.report.line">
+        <field name="name">III.9 TBIS COBRADO (11% de la casilla 7)</field>
+        <field name="code">DOTAX020102</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_02_01_do"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_02_do" model="account.financial.html.report.line">
+        <field name="name">III.14 TOTAL ITBIS PAGADO (Sumar casillas 11+12+13)</field>
+        <field name="code">DOTAX0202</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_02_do"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = DOTAX020201.balance + DOTAX020202.balance + DOTAX020203.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_02_01_do" model="account.financial.html.report.line">
+        <field name="name">III.11 ITBIS PAGADO EN COMPRAS LOCALES</field>
+        <field name="code">DOTAX020201</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_02_02_do"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_do.tag_C_ITBIS_18_Incluido'), ref('l10n_do.tag_C_ITBIS_18')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_02_02_do" model="account.financial.html.report.line">
+        <field name="name">III.12 ITBIS PAGADO POR SERVICIOS DEDUCIBLES</field>
+        <field name="code">DOTAX020202</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_02_02_do"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_do.tag_CS_ITBIS_18_Incluido'), ref('l10n_do.tag_CS_ITBIS_18')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_02_02_03_do" model="account.financial.html.report.line">
+        <field name="name">III.13 ITBIS PAGADO EN IMPORTACIONES</field>
+        <field name="code">DOTAX020203</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_line_02_02_do"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_do.tag_IMP_ITBIS_18')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_03_do" model="account.financial.html.report.line">
+        <field name="name">A,1 ITBIS RETENIDO</field>
+        <field name="code">DOTAX03</field>
+        <field name="sequence" eval="3"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_do"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = DOTAX0301.balance + DOTAX0302.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_03_01_do" model="account.financial.html.report.line">
+        <field name="name">A.25 Servicios Sujetos a Retención Personas = Físicas y Entidad</field>
+        <field name="code">DOTAX0301</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_line_03_do"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_do.tag_R_ITBIS_18')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_line_03_02_do" model="account.financial.html.report.line">
+        <field name="name">A.30 Itbis Por Servicios Sujetos A Retencion Personas Físicas</field>
+        <field name="code">DOTAX0302</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_line_03_do"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_do.tag_R_ITBIS_18')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

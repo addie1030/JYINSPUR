@@ -1,0 +1,57 @@
+<odoo>
+    <record id="project_view_kanban_inherit_project_forecast" model="ir.ui.view">
+        <field name="name">project.kanban.inherit.project.forecast</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban"/>
+        <field name="priority">32</field>
+        <field name="arch" type="xml">
+            <xpath expr="/kanban" position="inside">
+                <field name="allow_forecast"/>
+            </xpath>
+            <xpath expr="//div[hasclass('o_project_kanban_boxes')]" position="inside">
+                <a t-if="record.allow_forecast.raw_value" class="o_project_kanban_box" name="action_view_project_forecast" type="object">
+                    <div>
+                        <span class="o_label">Forecast</span>
+                    </div>
+                </a>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_project_view_form_simplified_inherit_forecast" model="ir.ui.view">
+        <field name="name">project.project.view.form.simplified.inherit.forecast</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+        <field name="priority">32</field>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="allow_forecast"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="project_view_form_inherit_project_forecast" model="ir.ui.view">
+        <field name="name">project.view.form.inherit.project.forecast</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="priority">32</field>
+        <field name="arch" type="xml">
+            <div name="options_active" position="attributes">
+                <attribute name="class"></attribute>
+            </div>
+            <div name="options_active" position="inside">
+                <div>
+                    <field name="allow_forecast" class="oe_inline" string="Allow Forecast"/>
+                    <label for="allow_forecast"/>
+                </div>
+            </div>
+            <button name="toggle_active" position="before">
+                <button class="oe_stat_button" type="object" attrs="{'invisible':[('allow_forecast', '=', False)]}"
+                    name="action_view_project_forecast" icon="fa-tasks">
+                    <span>Forecast</span>
+                </button>
+            </button>
+        </field>
+    </record>
+    
+</odoo>

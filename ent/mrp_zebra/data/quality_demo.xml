@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="quality_point_print_labels" model="quality.point">
+        <field name="product_id" ref="mrp.product_product_computer_desk"/>
+        <field name="product_tmpl_id" ref="mrp.product_product_computer_desk_product_template"/>
+        <field name="picking_type_id" model="stock.warehouse" eval="obj().env.ref('stock.warehouse0').manu_type_id.id"/>
+        <field name="operation_id" ref="mrp.mrp_routing_workcenter_5"/>
+        <field name="test_type_id" ref="mrp_zebra.test_type_print_label"/>
+        <field name="title">Print Labels</field>
+    </record>
+</odoo>

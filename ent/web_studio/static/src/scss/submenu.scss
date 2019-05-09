@@ -1,0 +1,163 @@
+.o_web_studio_menu {
+    height: $o-web-studio-menu-height;
+    background-color: $o-web-studio-bg-medium;
+    text-align: center;
+    border-bottom: 3px solid $o-web-studio-bg-dark;
+
+    .o_web_studio_breadcrumb {
+        display: inline-block;
+        float: left;
+
+        > ol {
+            background-color: inherit;
+            margin: 12px $o-horizontal-padding;
+
+            > li {
+                font-size: 0.8em;
+                text-transform: uppercase;
+                line-height: 1;
+                cursor: default;
+                font-weight: bold;
+                color: $o-web-studio-text-inactive;
+
+                &.active:not(:first-child) {
+                    color: $o-web-studio-text-light;
+                }
+
+                &.o_back_button:hover {
+                    cursor: pointer;
+                    color: white;
+                }
+
+                + li:before {
+                    font-weight: normal;
+                    content: "\003E";
+                }
+            }
+        }
+    }
+
+    .o_web_studio_undo, .o_web_studio_redo {
+        float: right;
+        display: inline-block;
+        margin: 8px 0;
+        visibility: hidden;
+
+        i {
+            margin-right: 5px;
+        }
+
+        > button {
+            padding-left: 0;
+            cursor: default;
+            background-color: $o-web-studio-bg-medium;
+            color: $o-web-studio-text-inactive;
+
+            > span {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 0.8em;
+            }
+        }
+
+        &.o_web_studio_undo span {
+            padding-right: 10px;
+            border-right: 1px solid $o-web-studio-bg-medium;
+        }
+
+        &.o_web_studio_active {
+            visibility: visible;
+
+            > button:hover {
+                cursor: pointer;
+                color: $o-web-studio-text-light ;
+            }
+        }
+    }
+
+    .o_web_studio_redo.o_web_studio_active + .o_web_studio_undo span{
+        border-right-color: $o-web-studio-text-disabled;
+    }
+
+    .o_web_studio_snackbar {
+        float: right;
+        display: inline-block;
+        font-size: 0.9em;
+        line-height: $o-web-studio-menu-height;
+        opacity: 0.5;
+        padding-right: 40px;
+
+        background-color: $o-web-studio-bg-medium;
+        color: $o-web-studio-text-inactive;
+    }
+
+    .o_menu_sections {
+        float: right;
+        margin: 0;
+        list-style: none;
+
+        > li {
+            float: left;
+            position: relative;
+
+            > .dropdown-menu {
+                right: 0;
+                left: auto;
+            }
+
+            &:hover, &:active, &:focus {
+                outline: none;
+                > a {
+                    background-color: darken($o-web-studio-bg-medium, 2%);
+                    color: white;
+                    border-color: lighten($o-brand-primary, 10%);
+                }
+            }
+
+            > a {
+                font-size: 0.9em;
+                display: block;
+                padding: 0 ($grid-gutter-width*0.3);
+                height: $o-web-studio-menu-height - $o-web-studio-menu-item-border-width;
+                line-height: $o-web-studio-menu-height;
+                color: $o-web-studio-text-inactive;
+                border-bottom: $o-web-studio-menu-item-border-width solid $o-web-studio-bg-dark;
+                box-sizing: content-box;
+
+                &:hover, &:active, &:focus {
+                    outline: none;
+                }
+
+                &.active {
+                    color: $o-web-studio-text-light;
+                    border-color: $o-brand-primary;
+                }
+            }
+        }
+
+        .o_web_studio_views_icons {
+            border-left: 1px solid $o-web-studio-bg-dark;
+            padding: 0 $grid-gutter-width*0.5;
+            margin-left: $grid-gutter-width*0.3;
+            height: $o-web-studio-menu-height - $o-web-studio-menu-item-border-width;
+
+            > a {
+                float: left;
+                padding: 0 7px;
+                background-color: transparent;
+                color: $o-web-studio-text-inactive;
+                border-radius: $border-radius-sm;
+                line-height: $o-web-studio-menu-height;
+                height: $o-web-studio-menu-height - $o-web-studio-menu-item-border-width;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                &:hover {
+                    color: $o-web-studio-text-light;
+                }
+            }
+        }
+    }
+}

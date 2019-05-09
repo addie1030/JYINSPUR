@@ -1,0 +1,483 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * iot
+# 
+# Translators:
+# Gunther Clauwaert <gclauwae@hotmail.com>, 2018
+# Eric Geens <ericgeens@yahoo.com>, 2018
+# Martin Trigaux, 2018
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2018
+# Cas Vissers <casvissers@brahoo.nl>, 2018
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2018
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 09:12+0000\n"
+"PO-Revision-Date: 2018-08-24 09:20+0000\n"
+"Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>, 2018\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+msgid ""
+"0. Power on the IoT Box<br/><br/>\n"
+"\n"
+"                            <strong>A. Ethernet Connection</strong><br/>\n"
+"                            1. Click on the \"Scan\" button below<br/><br/>\n"
+"\n"
+"                            <strong>B. WiFi Connection (or Ethernet Connection doesn't work)</strong><br/>\n"
+"                            1. Make sure no ethernet cable is connected to the IoT Box<br/>\n"
+"                            2. Copy the token that is below<br/>\n"
+"                            3. Connect to the IoT Box WiFi network (you should see it in your available WiFi networks)<br/>\n"
+"                            4. You will be redirected to the IoT Box Homepage<br/>\n"
+"                            5. Paste the token in token field and follow the steps described on the IoT Box Homepage<br/>"
+msgstr ""
+"0. Zet de IoT Box aan <br/><br/>\n"
+"\n"
+" <strong>A. Ethernet-verbinding </strong><br/>\n"
+"1. Klik op de knop \"Scan\" hieronder <br/><br/>\n"
+"\n"
+" <strong>B. WiFi-verbinding (of Ethernet-verbinding werkt niet)</strong><br/>\n"
+"1. Controleer of er geen ethernetkabel op de IoT Box is aangesloten<br/>\n"
+"2. Kopieer het token dat hieronder staat <br/>\n"
+"3. Maak verbinding met het IoT Box WiFi-netwerk (u zou het in uw beschikbare WiFi-netwerken moeten zien)<br/>\n"
+"4. U wordt doorgestuurd naar de IoT Box startpagina <br/>\n"
+"5. Plak het token in het tokenveld en volg de stappen beschreven op de IoT Box startpagina <br/>"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__action
+msgid "Action"
+msgstr "Actie"
+
+#. module: iot
+#: model:ir.model,name:iot.model_add_iot_box
+msgid "Add IoT Box wizard"
+msgstr "Voeg IoT box toe wizard"
+
+#. module: iot
+#: selection:iot.device,connection:0
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#. module: iot
+#: selection:iot.device,type:0
+msgid "Camera"
+msgstr "Camera"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_box_action
+msgid "Click on the"
+msgstr "Klik op de"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Close MO"
+msgstr "Sluit MO"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Close WO"
+msgstr "Sluit WO"
+
+#. module: iot
+#: model:ir.actions.act_window,name:iot.action_add_iot_box
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+msgid "Connect an IoT Box"
+msgstr "Verbind een IoT bo"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__connection
+msgid "Connection"
+msgstr "Connectie"
+
+#. module: iot
+#. openerp-web
+#: code:addons/iot/static/src/js/iot.js:291
+#, python-format
+msgid "Connection failed"
+msgstr "Verbinding mislukt"
+
+#. module: iot
+#. openerp-web
+#: code:addons/iot/static/src/js/iot.js:94
+#, python-format
+msgid "Connection with the IoT Box failed!"
+msgstr "Verbinding met IoT box mislukt!"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__create_uid
+#: model:ir.model.fields,field_description:iot.field_iot_box__create_uid
+#: model:ir.model.fields,field_description:iot.field_iot_device__create_uid
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__create_date
+#: model:ir.model.fields,field_description:iot.field_iot_box__create_date
+#: model:ir.model.fields,field_description:iot.field_iot_device__create_date
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+msgid "Detect and Add IoT devices in the network"
+msgstr "Detecteer en voeg een IoT apparaat toe in het netwerk"
+
+#. module: iot
+#: selection:iot.device,type:0
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__device_id
+msgid "Device"
+msgstr "Apparaat"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_search
+msgid "Device type"
+msgstr "Apparaat type"
+
+#. module: iot
+#: model:ir.actions.act_window,name:iot.iot_device_action
+#: model:ir.model.fields,field_description:iot.field_iot_box__device_ids
+#: model:ir.ui.menu,name:iot.iot_device_menu_action
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+msgid "Devices"
+msgstr "Apparaten"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__display_name
+#: model:ir.model.fields,field_description:iot.field_iot_box__display_name
+#: model:ir.model.fields,field_description:iot.field_iot_device__display_name
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Fail"
+msgstr "Mislukt"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Finish"
+msgstr "Klaar"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+msgid "Found IoT Box(s)"
+msgstr "Gevonden IoT box(en)"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_search
+msgid "Group By"
+msgstr "Groepeer op"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__id
+#: model:ir.model.fields,field_description:iot.field_iot_box__id
+#: model:ir.model.fields,field_description:iot.field_iot_device__id
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__id
+msgid "ID"
+msgstr "ID"
+
+#. module: iot
+#: model:ir.model,name:iot.model_iot_device
+msgid "IOT Device"
+msgstr "IoT toestel"
+
+#. module: iot
+#: model:ir.model,name:iot.model_iot_trigger
+msgid "IOT Trigger"
+msgstr "IOT trigger"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__ip
+msgid "IP Address"
+msgstr "IP-adres"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__identifier
+msgid "Identifier"
+msgstr "Identificatie "
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__identifier
+msgid "Identifier (Mac Address)"
+msgstr "Identificator (Mac Address)"
+
+#. module: iot
+#: model:ir.ui.menu,name:iot.iot_menu_root
+msgid "IoT"
+msgstr "IoT"
+
+#. module: iot
+#: model:ir.model,name:iot.model_iot_box
+#: model:ir.model.fields,field_description:iot.field_iot_device__iot_id
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_search
+msgid "IoT Box"
+msgstr "IoT Box"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__ip_url
+msgid "IoT Box Home Page"
+msgstr "IoT box startpagina"
+
+#. module: iot
+#: model:ir.actions.act_window,name:iot.iot_box_action
+#: model:ir.ui.menu,name:iot.iot_box_menu_action
+msgid "IoT Boxes"
+msgstr "IoT boxen"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_ir_actions_report__device_id
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_search
+msgid "IoT Device"
+msgstr "IoT Apparaat"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__key
+msgid "Key"
+msgstr "Sleutel"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box____last_update
+#: model:ir.model.fields,field_description:iot.field_iot_box____last_update
+#: model:ir.model.fields,field_description:iot.field_iot_device____last_update
+#: model:ir.model.fields,field_description:iot.field_iot_trigger____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__write_uid
+#: model:ir.model.fields,field_description:iot.field_iot_box__write_uid
+#: model:ir.model.fields,field_description:iot.field_iot_device__write_uid
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__write_date
+#: model:ir.model.fields,field_description:iot.field_iot_box__write_date
+#: model:ir.model.fields,field_description:iot.field_iot_device__write_date
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__name
+#: model:ir.model.fields,field_description:iot.field_iot_device__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: iot
+#: selection:iot.device,connection:0
+msgid "Network"
+msgstr "Netwerk"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Next"
+msgstr "Volgende"
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_box_action
+msgid "No IoT Box found !"
+msgstr "Geen IoT box gevonden !"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+msgid "OK"
+msgstr "OK"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Pack"
+msgstr "Verpakking"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Pass"
+msgstr "Geslaagd"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Pause"
+msgstr "Pauze"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Previous"
+msgstr "Vorige"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Print Delivery Slip"
+msgstr "Pakbon afdrukken"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Print Labels"
+msgstr "Labels afdrukken"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Print Operation"
+msgstr "Bewerking afdrukken"
+
+#. module: iot
+#: selection:iot.device,type:0
+msgid "Printer"
+msgstr "Printer"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_view_form
+msgid "Printer Reports"
+msgstr "Rapportannprinter"
+
+#. module: iot
+#: model:ir.model,name:iot.model_publisher_warranty_contract
+msgid "Publisher Warranty Contract For IoT Box"
+msgstr "Uitgever garantie contract voor IoT box"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Record Production"
+msgstr "Productie vastleggen"
+
+#. module: iot
+#: model:ir.model,name:iot.model_ir_actions_report
+msgid "Report Action"
+msgstr "Rapport actie"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.act_report_xml_view_tree_iot
+msgid "Report xml"
+msgstr "Rapport xml"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__report_ids
+msgid "Reports"
+msgstr "Rapportages"
+
+#. module: iot
+#. openerp-web
+#: code:addons/iot/static/src/js/iot.js:120
+#, python-format
+msgid "SCAN"
+msgstr "SCAN"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+msgid "Scanning range(s)"
+msgstr "Scan bereik(en)"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Scrap"
+msgstr "Afkeuren"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__screen_url
+msgid "Screen URL"
+msgstr "Scherm URL"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_trigger__sequence
+msgid "Sequence"
+msgstr "Volgorde"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Skip"
+msgstr "Overslaan"
+
+#. module: iot
+#. openerp-web
+#: code:addons/iot/static/src/js/iot.js:89
+#, python-format
+msgid "Successfully sent to printer!"
+msgstr "Succesvol verzonden aan printer!"
+
+#. module: iot
+#. openerp-web
+#: code:addons/iot/static/src/js/iot.js:325 selection:iot.trigger,action:0
+#, python-format
+msgid "Take Measure"
+msgstr "Neem afspraak"
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Take Picture"
+msgstr "Neem foto"
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_device_action
+msgid "There is no device connected to your IoT Boxes"
+msgstr "Er is geen apparaat verbonden aan uw IoT boxen"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__token
+msgid "Token"
+msgstr "Token"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__type
+msgid "Type"
+msgstr "Soort"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_device__connection
+msgid "Type of connection."
+msgstr "Verbindingstype."
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_device__type
+msgid "Type of device."
+msgstr "Type apparaat."
+
+#. module: iot
+#: selection:iot.device,connection:0
+msgid "USB"
+msgstr "USB"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_box__screen_url
+msgid "Url of the page that will be displayed by hdmi port of the box."
+msgstr ""
+"Url van de pagina die wordt weergegeven door de hdmi poort van de box."
+
+#. module: iot
+#: selection:iot.trigger,action:0
+msgid "Validate"
+msgstr "Bevestig"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_ir_actions_report__device_id
+msgid ""
+"When setting a device here, the report will be printed through this device "
+"on the IoT Box"
+msgstr ""
+"Wanneer u hier aan apparaat instelt, zal het rapport worden geprint met dit "
+"apparaat op de IoT box."
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_box_action
+msgid "connect"
+msgstr "verbind"
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_box_action
+msgid "to add an IoT Box."
+msgstr "om een IoT box toe te voegen"

@@ -1,0 +1,133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_delivery_ups
+# 
+# Translators:
+# Murat Kaplan <muratk@projetgrup.com>, 2018
+# Ahmet Altinisik <aaltinisik@altinkaya.com.tr>, 2018
+# Ertuğrul Güreş <ertugrulg@projetgrup.com>, 2018
+# Martin Trigaux, 2018
+# Umur Akın <umura@projetgrup.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:07+0000\n"
+"PO-Revision-Date: 2018-08-24 11:49+0000\n"
+"Last-Translator: Umur Akın <umura@projetgrup.com>, 2019\n"
+"Language-Team: Turkish (https://www.transifex.com/odoo/teams/41243/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.payment_delivery_methods_inherit_website_sale_delivery
+msgid "(Bill My Account)"
+msgstr ""
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,pending_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid ""
+"<i>Pending</i>, Thanks for choosing COD(Collect on Delivery/Cash on "
+"Delivery) option. Delivery boy will collect the payment on delivery."
+msgstr ""
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,cancel_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "<span><i>Cancel,</i> Your payment has been cancelled.</span>"
+msgstr "<span><i>İptal,</i> Ödemeniz iptal edildi.</span>"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,done_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid ""
+"<span><i>Done,</i> Your online payment has been successfully processed. "
+"Thank you for your order.</span>"
+msgstr ""
+"<span><i>Başarılı !</i> Online ödeme başarıyla işlendi. Siparişiniz için "
+"teşekkür ederiz.</span>"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,error_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid ""
+"<span><i>Error,</i> Please be aware that an error occurred during the "
+"transaction. The order has been confirmed but will not be paid. Do not "
+"hesitate to contact us if you have any questions on the status of your "
+"order.</span>"
+msgstr ""
+"<span><i>Hata,</i>  İşlem sırasında bir hata oluştuğunu lütfen unutmayın. "
+"Sipariş onaylanmış olup ödeme yapılmayacaktır. Siparişinizin durumu hakkında"
+" herhangi bir sorunuz olursa bizimle iletişim kurmakta lütfen tereddüt "
+"etmeyiniz..</span>"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Apply"
+msgstr "Uygula"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Bank Account"
+msgstr "Banka Hesabı"
+
+#. module: website_delivery_ups
+#: model:payment.acquirer,name:website_delivery_ups.payment_acquirer_ups_cod
+msgid "COD"
+msgstr "COD"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Cancel"
+msgstr "İptal"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Close"
+msgstr "Kapat"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Communication"
+msgstr "İletişim"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Enter your Carrier Account #"
+msgstr "Nakliyeci Hesaplarınızı Girin #"
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Please use the following transfer details"
+msgstr "Lütfen devam eden transfer detaylarını kullanın."
+
+#. module: website_delivery_ups
+#: model_terms:payment.acquirer,post_msg:website_delivery_ups.payment_acquirer_ups_cod
+msgid "Please use the order name as communication reference."
+msgstr "Lütfen iletişim referansı olarak sipariş adı kullanın."
+
+#. module: website_delivery_ups
+#: model:ir.model,name:website_delivery_ups.model_sale_order
+msgid "Sale Order"
+msgstr "Satış Siparişi"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "Select Freight Collect Method"
+msgstr "Malzeme Toplama Yöntemi Seçin"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.ups_bill_my_account_dialog
+msgid "UPS Bill My Account"
+msgstr "UPS Fatura Hesabım"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.res_config_settings_view_form_inherit_website_delivery_ups
+msgid "UPS Delivery Methods"
+msgstr "UPS Teslimat Yöntemleri"
+
+#. module: website_delivery_ups
+#: model_terms:ir.ui.view,arch_db:website_delivery_ups.payment_delivery_methods_inherit_website_sale_delivery
+msgid "Using Account"
+msgstr "Hesap Kullanımı"

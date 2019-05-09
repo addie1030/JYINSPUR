@@ -1,0 +1,97 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_plaid
+# 
+# Translators:
+# Alagappan Karthikeyan <me@karthik.sg>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:06+0000\n"
+"PO-Revision-Date: 2018-08-24 11:36+0000\n"
+"Last-Translator: Alagappan Karthikeyan <me@karthik.sg>, 2019\n"
+"Language-Team: Tamil (https://www.transifex.com/odoo/teams/41243/ta/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ta\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_plaid
+#: model:ir.model.fields,help:account_plaid.field_account_online_provider__plaid_error_type
+msgid "Additional information on error"
+msgstr "பிழை பற்றிய கூடுதல் தகவல்"
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:55
+#, python-format
+msgid "Get %s status code for call to %s. Content message: %s"
+msgstr ""
+"% S க்கு அழைப்பதற்கு% s நிலைக் குறியீட்டைப் பெறுக. உள்ளடக்க செய்தி:% s"
+
+#. module: account_plaid
+#: model:ir.model,name:account_plaid.model_account_online_journal
+msgid "Interface for Online Account Journal"
+msgstr "ஆன்லைன் கணக்கு ஜர்னலுக்கான இடைமுகம்"
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:136
+#, python-format
+msgid "Only an Accountant is allowed to perform this operation."
+msgstr "இந்த செயல்முறை செய்ய ஒரு கணக்காளர் மட்டுமே அனுமதிக்கப்படுகிறார்."
+
+#. module: account_plaid
+#: selection:account.online.provider,provider_type:0
+msgid "Plaid"
+msgstr "பிளேசிட்"
+
+#. module: account_plaid
+#: model:ir.model.fields,field_description:account_plaid.field_account_online_provider__plaid_error_type
+msgid "Plaid Error Type"
+msgstr "திட்டமிட்ட பிழை வகை"
+
+#. module: account_plaid
+#: model:ir.model.fields,field_description:account_plaid.field_account_online_provider__plaid_item_id
+msgid "Plaid Item"
+msgstr "திட்டமிட்ட பொருள்"
+
+#. module: account_plaid
+#: model:ir.model.fields,field_description:account_plaid.field_account_online_provider__provider_type
+msgid "Provider Type"
+msgstr "வழங்குபவர் வகை"
+
+#. module: account_plaid
+#: model:ir.model,name:account_plaid.model_account_online_provider
+msgid "Provider for online account synchronization"
+msgstr "ஆன்லைன் கணக்கு ஒத்திசைவு வழங்குபவர்"
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:41
+#, python-format
+msgid ""
+"There was en error with Plaid Services!\n"
+"{message: %s,\n"
+"error code: %s,\n"
+"error type: %s,\n"
+"request id: %s}"
+msgstr ""
+"ப்ளைட் சர்வீஸுடன் ஒரு பிழை ஏற்பட்டது! {message:% s, error code:% s, error "
+"வகை:% s, விருப்பமான ஐடி:% s}"
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:74
+#, python-format
+msgid "Timeout: the server did not reply within 60s"
+msgstr "காலாவதியானது: 60 களில் சேவையகம் பதிலளிக்கவில்லை"
+
+#. module: account_plaid
+#: selection:account.online.provider,provider_type:0
+msgid "Yodlee"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model.fields,help:account_plaid.field_account_online_provider__plaid_item_id
+msgid "item id in plaid database"
+msgstr "திட்டமிட்ட தரவுத்தளத்தில் உருப்படி ஐடி"

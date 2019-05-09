@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+<template id="assets_backend" name="account_reports_followup_assets" inherit_id="web.assets_backend">
+    <xpath expr="." position="inside">
+        <script type="text/javascript" src="/account_reports_followup/static/src/js/followup_form_controller.js"></script>
+        <script type="text/javascript" src="/account_reports_followup/static/src/js/followup_form_model.js"></script>
+    </xpath>
+</template>
+<template id='template_followup_report' inherit_id='account_reports.template_followup_report'>
+    <xpath expr="//div[hasclass('o_account_reports_summary')]" position="before">
+        <div style="padding-top: 10px" t-if="context.get('print_mode') != True and followup_line" ><b><t t-esc="followup_line.name"/></b></div>
+    </xpath>
+</template>
+</data>
+</odoo>

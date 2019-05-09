@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherited Analytic Account form for subscriptions -->
+    <record id="sale_subscription_view_form_inherit_sale_subscription_asset" model="ir.ui.view">
+        <field name="name">sale.subscription.form.view.inherit</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//notebook/page[@id="settings"]/group' position='inside'>
+                <field name="asset_category_id" string="Deferred Revenue Type" context="{'default_type':'sale'}" groups="base.group_no_one"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="sale_subscription_template_view_form_inherit_sale_subscription_asset">
+        <field name="name">sale.subscription.template.form.inherit</field>
+        <field name="model">sale.subscription.template</field>
+        <field name="inherit_id" ref="sale_subscription.sale_subscription_template_view_form"/>
+        <field name="arch" type="xml">
+            <field name="journal_id" position="after">
+                <field name="template_asset_category_id" string="Deferred Revenue Type" context="{'default_type':'sale'}"/>
+            </field>
+        </field>
+    </record>
+</odoo>

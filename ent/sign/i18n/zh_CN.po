@@ -1,0 +1,1922 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sign
+# 
+# Translators:
+# v2exerer <9010446@qq.com>, 2018
+# 苏州远鼎 <tiexinliu@126.com>, 2018
+# ChinaMaker <liuct@chinamaker.net>, 2018
+# 老窦 北京 <2662059195@qq.com>, 2018
+# Summer Xia <sxi@odoo.com>, 2018
+# JZH-Odoo <jzh@odoo.com>, 2018
+# e2f_cn c7 <e2f_cn_c7@outlook.com>, 2018
+# bower Guo <124358678@qq.com>, 2018
+# roye w <159820@qq.com>, 2018
+# inspur qiuguodong <qiuguodong@inspur.com>, 2018
+# liAnGjiA <liangjia@qq.com>, 2018
+# Martin Trigaux, 2018
+# Jeffery CHEN Fan <jeffery9@gmail.com>, 2018
+# snow wang <147156565@qq.com>, 2018
+# 广州救火 <7017511@qq.com>, 2018
+# niulin lnc. <admin@niulin.net>, 2018
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 09:12+0000\n"
+"PO-Revision-Date: 2018-08-24 11:48+0000\n"
+"Last-Translator: niulin lnc. <admin@niulin.net>, 2018\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_res_partner__signature_count
+msgid "# Signatures"
+msgstr "签名"
+
+#. module: sign
+#: code:addons/sign/models/sign_request.py:249
+#, python-format
+msgid "%s : Signature request"
+msgstr "%s : 签名请求"
+
+#. module: sign
+#: code:addons/sign/controllers/main.py:200
+#, python-format
+msgid "%s couldn't sign the document due to an insufficient credit error."
+msgstr "由于信用错误，%s无法在文件上签署。"
+
+#. module: sign
+#: code:addons/sign/models/sign_request.py:290
+#: code:addons/sign/models/sign_request.py:311
+#, python-format
+msgid "%s has been signed"
+msgstr "%s已经签署"
+
+#. module: sign
+#: code:addons/sign/controllers/main.py:207
+#, python-format
+msgid "%s validated the signature by SMS with the phone number %s."
+msgstr "%s通过手机号%s的SMS验证签名。"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_follower
+msgid ") has added you as a follower of the document"
+msgstr "）已将您添加为文档的关注者"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_request
+msgid ") has requested your signature on the document"
+msgstr "）已要求您在文件上签名"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign._doc_sign
+msgid "- <em>Waiting Signature</em>"
+msgstr "- <em>等待签署</em>"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign._doc_sign
+msgid "<br/>(the email access has not been sent)"
+msgstr "<br/>(邮件未发出)"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_share_view_form
+msgid ""
+"<span attrs=\"{'invisible': [('url', '!=', False)]}\">To be able to share, "
+"there must be either no fields to fill or only one responsible for all the "
+"fields!</span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('url', '!=', "
+"False)]}\">为了能够共享，务必保证所有字段不填写或只有一个人负责所有字段！</span>"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_form
+msgid "<span class=\"o_stat_text\"> Signed</span>"
+msgstr "<span class=\"o_stat_text\">已签署</span>"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.res_partner_view_form
+msgid "<span class=\"o_stat_text\">Signature Requests</span>"
+msgstr "<span class=\"o_stat_text\">签署请求</span>"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_form
+msgid "<span class=\"o_stat_text\">View</span>"
+msgstr "<span class=\"o_stat_text\">视图</span>"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_share_view_form
+msgid ""
+"<span class=\"text-muted\" attrs=\"{'invisible': [('url', '=', "
+"False)]}\">Share this link and Odoo will create a new document per person "
+"who clicks on the link. The link is private, only those that receive the "
+"link will be able to sign it.</span>"
+msgstr ""
+"<span class=\"text-muted\" attrs=\"{'invisible': [('url', '=', "
+"False)]}\">分享此链接，Odoo将为每个点击该链接的人创建一个新文档。 该链接是私有的，只有那些收到链接的人才能签名。</span>"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_item_type_view_form
+msgid "<span>(1.0 = full page size)</span>"
+msgstr "<span>(1.0 = full page size)</span>"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_completed
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_request
+msgid ""
+"<strong>Warning</strong> do not forward this email to other people!<br/>\n"
+"            They will be able to access this document and sign it as yourself."
+msgstr ""
+"<strong>警告</strong>不要将此EMail转发给其他人！<br/>\n"
+"             他们将能够访问此文档并自行签名。"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:85
+#, python-format
+msgid ""
+"A SMS will be sent to the following phone number. Please update it if it's "
+"not relevant."
+msgstr "短信将发送到以下电话号码。如果有误，请更新。"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_needaction
+msgid "Action Needed"
+msgstr "需要采取行动"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__active
+#: model:ir.model.fields,field_description:sign.field_sign_template__active
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_search
+msgid "Active"
+msgstr "有效"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:238
+#, python-format
+msgid "Add Initials"
+msgstr "添加首字母"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:247
+#, python-format
+msgid "Add on all pages"
+msgstr "在所有的页面上增加"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:243
+#, python-format
+msgid "Add once"
+msgstr "增加一次"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:496
+#, python-format
+msgid "Adopt Your Signature"
+msgstr "采纳你的签名"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:502
+#, python-format
+msgid "Adopt and Sign"
+msgstr "采用并签字"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+msgid "Archive"
+msgstr "存档"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_search
+msgid "Archived"
+msgstr "已归档"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template__attachment_id
+msgid "Attachment"
+msgstr "附件"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数量"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:38
+#, python-format
+msgid "Auto"
+msgstr "自动"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__auto_field
+msgid "Automatic Partner Field"
+msgstr "自动业务伙伴字段"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_kanban
+msgid "Avatar"
+msgstr "头像"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:44
+#, python-format
+msgid ""
+"By clicking Adopt and Sign, I agree that the chosen signature/initials will "
+"be a valid electronic representation of my hand-written signature/initials "
+"for all purposes when it is used on documents, including legally binding "
+"contracts."
+msgstr ""
+"通过点击“采取”和“签署”，我同意所选择的签名/首字母将是我手写签名/缩写签名的有效电子表示当它被用于文件用于所有的目的，包括具有法律约束力的合同。"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:505
+#: code:addons/sign/static/src/js/sign_common.js:764
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_form
+#: model_terms:ir.ui.view,arch_db:sign.sign_send_request_view_form
+#, python-format
+msgid "Cancel"
+msgstr "取消"
+
+#. module: sign
+#: selection:sign.request,state:0
+msgid "Canceled"
+msgstr "已取消"
+
+#. module: sign
+#: model:sign.item.type,name:sign.sign_item_type_checkbox
+#: selection:sign.item.type,type:0
+msgid "Checkbox"
+msgstr "复选框"
+
+#. module: sign
+#: model:ir.actions.act_window,name:sign.sign_template_action
+#: model:ir.actions.act_window,name:sign.sign_template_with_archived_action
+msgid "Choose a Template"
+msgstr "选择一个模板"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:36
+#, python-format
+msgid "Clear Signature"
+msgstr "清除签名"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:648
+#, python-format
+msgid "Click to start"
+msgstr "单击开始"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_share_view_form
+msgid "Close"
+msgstr "关闭"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__color
+#: model:ir.model.fields,field_description:sign.field_sign_template__color
+msgid "Color"
+msgstr "颜色"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template_tag__color
+msgid "Color Index"
+msgstr "颜色索引"
+
+#. module: sign
+#: model:sign.item.role,name:sign.sign_item_role_company
+#: model:sign.item.type,name:sign.sign_item_type_company
+msgid "Company"
+msgstr "公司"
+
+#. module: sign
+#: selection:sign.request.item,state:0
+msgid "Completed"
+msgstr "已完成"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__completed_document
+msgid "Completed Document"
+msgstr "完成的文档"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__nb_closed
+msgid "Completed Signatures"
+msgstr "完成的签名"
+
+#. module: sign
+#: model:ir.ui.menu,name:sign.menu_sign_configuration
+msgid "Configuration"
+msgstr "配置"
+
+#. module: sign
+#: model:ir.model,name:sign.model_res_partner
+msgid "Contact"
+msgstr "联系人"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__follower_ids
+msgid "Copy to"
+msgstr "拷贝到"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:326
+#, python-format
+msgid "Create: \""
+msgstr "创建: \""
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_item_role__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_item_value__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_request__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_request_send_copy__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_template__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_template_share__create_uid
+#: model:ir.model.fields,field_description:sign.field_sign_template_tag__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_item_role__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_item_value__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_request__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_request_send_copy__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_template__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_template_share__create_date
+#: model:ir.model.fields,field_description:sign.field_sign_template_tag__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: sign
+#: model:sign.item.role,name:sign.sign_item_role_customer
+msgid "Customer"
+msgstr "客户"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:179
+#, python-format
+msgid "Customize Field"
+msgstr "自定义字段"
+
+#. module: sign
+#: model:sign.item.type,name:sign.sign_item_type_date
+msgid "Date"
+msgstr "日期"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__default_height
+msgid "Default Height"
+msgstr "默认高度"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__default_width
+msgid "Default Width"
+msgstr "默认宽度"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+msgid "Delete"
+msgstr "刪除"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_kanban
+msgid "Details"
+msgstr "细节"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_res_users__sign_signature
+msgid "Digital Signature"
+msgstr "数字签名"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.res_users_view_form
+msgid "Digital Signatures"
+msgstr "数字化签名"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_res_users__sign_initials
+msgid "Digitial Initials"
+msgstr "数字缩写"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_send_copy_view_form
+msgid "Discard"
+msgstr "取消"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_item_view_form
+msgid "Display"
+msgstr "显示"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_item_role__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_item_value__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_request__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_request_send_copy__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_template__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_template_share__display_name
+#: model:ir.model.fields,field_description:sign.field_sign_template_tag__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_form
+msgid "Document"
+msgstr "单据"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__page
+msgid "Document Page"
+msgstr "文档页面"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:104
+#: code:addons/sign/static/src/xml/sign_common.xml:110
+#: code:addons/sign/static/src/xml/sign_common.xml:115
+#, python-format
+msgid "Document Sign"
+msgstr "文档签名"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__template_id
+msgid "Document Template"
+msgstr "文档模板"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:884
+#: model_terms:ir.ui.view,arch_db:sign._doc_sign
+#, python-format
+msgid "Download Document"
+msgstr "下载文档"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:79
+#, python-format
+msgid "Download original document"
+msgstr "下载原始文档"
+
+#. module: sign
+#: selection:sign.request.item,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:66
+#, python-format
+msgid "Drag & Drop a field in the PDF"
+msgstr "拖拽字段到PDF"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:37
+#, python-format
+msgid "Draw"
+msgstr "画"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+msgid "Dropdown menu"
+msgstr "下拉菜单"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:45
+#, python-format
+msgid "Duplicate"
+msgstr "复制"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:835
+#, python-format
+msgid "Duplicated Template"
+msgstr "重复的模板"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+msgid "Edit"
+msgstr "编辑"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+msgid "Edit Fields"
+msgstr "编辑字段"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_form
+msgid "Edit fields"
+msgstr "编辑字段"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:50
+#, python-format
+msgid "Edit template name"
+msgstr "编辑模板名字"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__signer_email
+#: model:sign.item.type,name:sign.sign_item_type_email
+msgid "Email"
+msgstr "用户名/手机号/邮箱地址"
+
+#. module: sign
+#: model:sign.item.role,name:sign.sign_item_role_employee
+msgid "Employee"
+msgstr "员工"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:794
+#: code:addons/sign/static/src/js/sign_common.js:821
+#: code:addons/sign/static/src/js/sign_common.js:1097
+#: code:addons/sign/static/src/js/sign_common.js:1114
+#: code:addons/sign/static/src/js/sign_common.js:1158
+#, python-format
+msgid "Error"
+msgstr "错误"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__extension
+#: model:ir.model.fields,field_description:sign.field_sign_template__extension
+msgid "Extension"
+msgstr "延期"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__favorited_ids
+#: model:ir.model.fields,field_description:sign.field_sign_template__favorited_ids
+msgid "Favorite of"
+msgstr "收藏的"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:6
+#: model:ir.model.fields,field_description:sign.field_sign_item__name
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__name
+#, python-format
+msgid "Field Name"
+msgstr "字段名称"
+
+#. module: sign
+#: model:ir.ui.menu,name:sign.sign_item_type_menu
+msgid "Field Types"
+msgstr "字段类型"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_item
+msgid "Fields to be sign on Document"
+msgstr "要在文档上签名的字段"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template__datas
+msgid "File Content"
+msgstr "文件内容"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__reference
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__filename
+msgid "Filename"
+msgstr "文件名"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:741
+#: code:addons/sign/static/src/js/sign_common.js:842
+#, python-format
+msgid "Final Validation"
+msgstr "最终确认"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "关注者(渠道)"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(业务伙伴)"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign._doc_sign
+msgid "From:"
+msgstr "来自:"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:28
+#, python-format
+msgid "Full Name"
+msgstr "完整名称"
+
+#. module: sign
+#: selection:sign.request,state:0
+msgid "Fully Signed"
+msgstr "完全签署"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "Future Activities"
+msgstr "未来活动"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_form
+msgid "Get Completed Document"
+msgstr "得到完整的文档"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "Group By"
+msgstr "分组"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__height
+msgid "Height"
+msgstr "高度"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__id
+#: model:ir.model.fields,field_description:sign.field_sign_item_role__id
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__id
+#: model:ir.model.fields,field_description:sign.field_sign_item_value__id
+#: model:ir.model.fields,field_description:sign.field_sign_request__id
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__id
+#: model:ir.model.fields,field_description:sign.field_sign_request_send_copy__id
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__id
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer__id
+#: model:ir.model.fields,field_description:sign.field_sign_template__id
+#: model:ir.model.fields,field_description:sign.field_sign_template_share__id
+#: model:ir.model.fields,field_description:sign.field_sign_template_tag__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_request__message_unread
+msgid "If checked new messages require your attention."
+msgstr "查看是否有未读信息。"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_request__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果勾选此项，有新消息会提醒你。"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_request__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾选此项， 某些信息将会产生传递错误。"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+msgid "In favorites, remove it"
+msgstr "在收藏夹中，将其删除"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_item_view_form
+msgid "Information"
+msgstr "信息"
+
+#. module: sign
+#: selection:sign.item.type,type:0
+msgid "Initial"
+msgstr "初始"
+
+#. module: sign
+#: model:sign.item.type,name:sign.sign_item_type_initial
+msgid "Initials"
+msgstr "首字母"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_is_follower
+msgid "Is Follower"
+msgstr "是关注者"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template_share__is_one_responsible
+msgid "Is One Responsible"
+msgstr "是一个负责人"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__is_user_signer
+msgid "Is User Signer"
+msgstr "是用户签名者"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__last_action_date
+msgid "Last Action Date"
+msgstr "最后操作日期"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_item_role____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_item_type____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_item_value____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_request____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_request_item____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_request_send_copy____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_send_request____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_template____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_template_share____last_update
+#: model:ir.model.fields,field_description:sign.field_sign_template_tag____last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_item_role__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_item_value__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_request__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_request_send_copy__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_template__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_template_share__write_uid
+#: model:ir.model.fields,field_description:sign.field_sign_template_tag__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_item_role__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_item_value__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_request__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_request_send_copy__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_template__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_template_share__write_date
+#: model:ir.model.fields,field_description:sign.field_sign_template_tag__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "Late Activities"
+msgstr "逾期活动"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__latitude
+msgid "Latitude"
+msgstr "纬度"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template_share__url
+msgid "Link to Share"
+msgstr "分享用链接"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:39
+#, python-format
+msgid "Load"
+msgstr "加载"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.doc_sign
+msgid "Logo"
+msgstr "徽标"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__longitude
+msgid "Longitude"
+msgstr "经度"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:105
+#, python-format
+msgid "Made with Odoo Sign"
+msgstr "设置用Odoo登入"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "附件"
+
+#. module: sign
+#: model:res.groups,name:sign.group_sign_manager
+msgid "Manager"
+msgstr "经理"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:21
+#, python-format
+msgid "Mandatory field"
+msgstr "强制字段"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__message
+msgid "Message"
+msgstr "消息"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_has_error
+msgid "Message Delivery error"
+msgstr "消息递送错误"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.deleted_sign_request
+msgid "Missing signature request"
+msgstr "丢失签名请求"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__sms_number
+msgid "Mobile"
+msgstr "手机"
+
+#. module: sign
+#: selection:sign.item.type,type:0
+msgid "Multiline Text"
+msgstr "多行文字"
+
+#. module: sign
+#: model:sign.item.type,name:sign.sign_item_type_multiline_text
+msgid "Multiline text"
+msgstr "多行文字"
+
+#. module: sign
+#: model:ir.actions.act_window,name:sign.action_sign_template_share
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_share_view_form
+msgid "Multiple Signature Requests"
+msgstr "要求多个签名"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "My Documents"
+msgstr "我的文档"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_search
+msgid "My Favorites"
+msgstr "我的收藏夹"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_search
+msgid "My Templates"
+msgstr "我的模板"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item_role__name
+#: model:ir.model.fields,field_description:sign.field_sign_template__name
+#: model:sign.item.type,name:sign.sign_item_type_name
+msgid "Name"
+msgstr "名称"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_send_request_view_form
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_form
+msgid "Name for the file"
+msgstr "文件名称"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_send_request_view_form
+msgid "Name or email..."
+msgstr "姓名或邮箱"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:59
+#, python-format
+msgid "Need a valid PDF to add signature fields !"
+msgstr "需要有效的PDF来添加签名字段"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.doc_sign
+msgid "Need to sign? Check your inbox to get your secure access"
+msgstr "需要签名？检查收件箱检查一下你的安全权限"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:122
+#, python-format
+msgid "New Template"
+msgstr "新模板"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活动截止日期"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活动摘要"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活动类型"
+
+#. module: sign
+#: model_terms:ir.actions.act_window,help:sign.sign_request_action
+msgid "No documents to sign"
+msgstr "没有要签署的文件"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+msgid "Not in favorites, add it"
+msgstr "不在收藏夹中，将其添加"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+msgid "Not in favorites, set it"
+msgstr "不在收藏夹中，设置它"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "行动数量"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_has_error_counter
+msgid "Number of error"
+msgstr "错误数"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要行动消息的数量"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "递送错误的消息数量"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读消息的数量"
+
+#. module: sign
+#: model:res.groups,name:sign.group_sign_user
+msgid "Officer"
+msgstr "主管"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:1027
+#, python-format
+msgid "Ok"
+msgstr "确定"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_share_view_form
+msgid "Open"
+msgstr "打开"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template__redirect_url
+msgid "Optional Link"
+msgstr "可选链接"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_send_request_view_form
+msgid "Optional Message..."
+msgstr "可选消息…"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_template__redirect_url
+msgid ""
+"Optional link for redirection after signature instead of "
+"https://www.odoo.com/page/sign"
+msgstr "可选的用于签名后重定向的链接，代替https://www.odoo.com/page/sign"
+
+#. module: sign
+#: model_terms:ir.actions.act_window,help:sign.sign_template_action
+msgid "Or,"
+msgstr "或,"
+
+#. module: sign
+#: selection:sign.request,activity_state:0
+msgid "Overdue"
+msgstr "逾期"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__partner_id
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer__partner_id
+msgid "Partner"
+msgstr "业务伙伴"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_item_type__auto_field
+msgid "Partner field to use to auto-complete the fields of this type"
+msgstr "使用自动完成这种类型的字段的业务伙伴字段"
+
+#. module: sign
+#: model:sign.item.type,name:sign.sign_item_type_phone
+msgid "Phone"
+msgstr "电话"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:87
+#, python-format
+msgid "Phone number..."
+msgstr "电话号码..."
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__placeholder
+msgid "Placeholder"
+msgstr "占位符"
+
+#. module: sign
+#: selection:sign.request,activity_state:0
+msgid "Planned"
+msgstr "已安排"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.doc_sign
+msgid "Please Review And Act On This Document"
+msgstr "请检视并且这个文档上做出相关动作"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:92
+#, python-format
+msgid "Please enter the code received through SMS to complete your signature"
+msgstr "请输入通过短信接收的代码以完成您的签名"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__posX
+msgid "Position X"
+msgstr "X 坐标"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__posY
+msgid "Position Y"
+msgstr "Y 坐标"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_form
+msgid "Preview"
+msgstr "预览"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:78
+#, python-format
+msgid "Print original document"
+msgstr "打印原始文件"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__progress
+msgid "Progress"
+msgstr "进度"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_send_copy__request_id
+msgid "Request"
+msgstr "请求"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__request_item_infos
+msgid "Request Item Infos"
+msgstr "请求项目信息"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:90
+#, python-format
+msgid "Request a Signature"
+msgstr "请求签名"
+
+#. module: sign
+#: model_terms:ir.actions.act_window,help:sign.sign_request_action
+msgid ""
+"Request a signature to upload a template (or use an existing one)\n"
+"                to automate your signature process."
+msgstr "请求一个签名来上传一个模板（或者使用一个已有的模板）来自动化你的签名过程。"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__nb_total
+msgid "Requested Signatures"
+msgstr "请求的签名"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__required
+msgid "Required"
+msgstr "必填"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:999
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_form
+#, python-format
+msgid "Resend"
+msgstr "重发"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:998
+#, python-format
+msgid "Resend the invitation"
+msgstr "重新发送邀请"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:962
+#, python-format
+msgid "Resent !"
+msgstr "重发！"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:12
+#: code:addons/sign/static/src/xml/sign_backend.xml:35
+#: model:ir.model.fields,field_description:sign.field_sign_item__responsible_id
+#, python-format
+msgid "Responsible"
+msgstr "负责人"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template__responsible_count
+msgid "Responsible Count"
+msgstr "责任数"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__activity_user_id
+msgid "Responsible User"
+msgstr "责任用户"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+msgid "Restore"
+msgstr "还原"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__role_id
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer__role_id
+msgid "Role"
+msgstr "角色"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_item_role_view_tree
+msgid "Role Name"
+msgstr "规则名称"
+
+#. module: sign
+#: model:ir.ui.menu,name:sign.sign_item_role_menu
+msgid "Roles"
+msgstr "角色"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item_role__sms_authentification
+msgid "SMS Authentification"
+msgstr "SMS 授权"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:94
+#, python-format
+msgid "SMS Code"
+msgstr "SMS代码"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__sms_token
+msgid "SMS Token"
+msgstr "SMS 令牌"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:49
+#, python-format
+msgid "Saved"
+msgstr "已保存"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__access_token
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__access_token
+msgid "Security Token"
+msgstr "安全令牌"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:35
+#, python-format
+msgid "Select Signature Style"
+msgstr "选择签名样式"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:319
+#, python-format
+msgid "Select the responsible"
+msgstr "选择负责人"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:617
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_send_copy_view_form
+#: model_terms:ir.ui.view,arch_db:sign.sign_send_request_view_form
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_form
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+#, python-format
+msgid "Send"
+msgstr "发送"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:88
+#, python-format
+msgid "Send SMS"
+msgstr "发送短信"
+
+#. module: sign
+#: model:ir.actions.act_window,name:sign.action_sign_send_request
+#: model_terms:ir.ui.view,arch_db:sign.sign_send_request_view_form
+msgid "Send Signature Request"
+msgstr "发送签名请求"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__signer_id
+msgid "Send To"
+msgstr "发送给"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_form
+msgid "Send a Copy"
+msgstr "发送副本"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:73
+#, python-format
+msgid "Send a Request"
+msgstr "发送一个请求"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_send_copy__partner_ids
+msgid "Send a copy"
+msgstr "发送副本"
+
+#. module: sign
+#: model:ir.actions.act_window,name:sign.action_sign_request_send_copy
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_send_copy_view_form
+msgid "Send a copy to third parties"
+msgstr "向第三方发送副本"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__nb_wait
+msgid "Sent Requests"
+msgstr "送出请求"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:630
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_form
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_kanban
+#, python-format
+msgid "Share"
+msgstr "共享"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template__share_link
+msgid "Share Link"
+msgstr "分享链接"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "Show all records which has next action date is before today"
+msgstr "显示所有下一个活动日期在今天之前的记录"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:980
+#: code:addons/sign/wizard/sign_send_request.py:82
+#: code:addons/sign/wizard/sign_template_share.py:33
+#: model:ir.ui.menu,name:sign.menu_document
+#, python-format
+msgid "Sign"
+msgstr "签署"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_send_request_view_form
+msgid "Sign Directly"
+msgstr "直接登入"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:975
+#: model_terms:ir.ui.view,arch_db:sign._doc_sign
+#, python-format
+msgid "Sign Document"
+msgstr "签署文档"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_send_request_signer__sign_send_request_id
+msgid "Sign Send Request"
+msgstr "签名发送请求"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_template_share
+msgid "Sign Share Template"
+msgstr "签名共享模板"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_template_tag
+msgid "Sign Template Tag"
+msgstr "登入模板标签"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_request
+msgid "Sign document now"
+msgstr "现在签署文档"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_send_request
+msgid "Sign send request"
+msgstr "发送签名请求"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_request_send_copy
+msgid "Sign send request copy"
+msgstr "发送签名请求副本"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_send_request_signer
+msgid "Sign send request signer"
+msgstr "签名者发送签名请求"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:57
+#: code:addons/sign/static/src/xml/sign_common.xml:5
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__signature
+#: model_terms:ir.ui.view,arch_db:sign._doc_sign
+#: model:sign.item.type,name:sign.sign_item_type_signature
+#: selection:sign.item.type,type:0
+#, python-format
+msgid "Signature"
+msgstr "签名"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item_value__sign_item_id
+msgid "Signature Item"
+msgstr "签字条款"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_item_role
+msgid "Signature Item Party"
+msgstr "签字项方"
+
+#. module: sign
+#: model:ir.actions.act_window,name:sign.sign_item_role_action
+msgid "Signature Item Role"
+msgstr "签名项角色"
+
+#. module: sign
+#: model:ir.actions.act_window,name:sign.sign_item_type_action
+#: model:ir.model,name:sign.model_sign_item_type
+msgid "Signature Item Type"
+msgstr "签名项类型"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_item_value
+msgid "Signature Item Value"
+msgstr "签字项值"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template__sign_item_ids
+msgid "Signature Items"
+msgstr "签字项"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_request
+#: model:ir.model.fields,field_description:sign.field_sign_item_value__sign_request_id
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__sign_request_id
+#: model_terms:ir.ui.view,arch_db:sign.sign_send_request_view_form
+msgid "Signature Request"
+msgstr "签字需求"
+
+#. module: sign
+#: code:addons/sign/models/sign_request.py:160
+#: code:addons/sign/models/sign_request.py:562
+#: code:addons/sign/wizard/sign_send_request.py:17
+#, python-format
+msgid "Signature Request - %s"
+msgstr "签名请求 - %s"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_request_item
+msgid "Signature Request Item"
+msgstr "签字需求项"
+
+#. module: sign
+#: model:ir.actions.act_window,name:sign.sign_request_item_action
+msgid "Signature Request Items"
+msgstr "签名请求项"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template__sign_request_ids
+msgid "Signature Requests"
+msgstr "签字需求"
+
+#. module: sign
+#: model:ir.ui.menu,name:sign.sign_request_item_menu
+msgid "Signature Requests Items"
+msgstr "签名请求项"
+
+#. module: sign
+#: model:ir.model,name:sign.model_sign_template
+msgid "Signature Template"
+msgstr "签名模板"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:21
+#, python-format
+msgid "Signature configuration"
+msgstr "签名配置"
+
+#. module: sign
+#: code:addons/sign/wizard/sign_send_request.py:68
+#, python-format
+msgid "Signature(s)"
+msgstr "签名"
+
+#. module: sign
+#: model:ir.actions.act_window,name:sign.sign_request_action
+#: model:ir.ui.menu,name:sign.sign_request_menu
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_form
+msgid "Signatures"
+msgstr "签名"
+
+#. module: sign
+#: selection:sign.request,state:0
+msgid "Signatures in Progress"
+msgstr "进行中的签字"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.doc_sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "Signed"
+msgstr "已签署"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__signing_date
+#: model_terms:ir.ui.view,arch_db:sign._doc_sign
+msgid "Signed on"
+msgstr "签署在"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "Signer Email"
+msgstr "签署人EMail"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__request_item_ids
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__signer_ids
+msgid "Signers"
+msgstr "签署人"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__signers_count
+msgid "Signers Count"
+msgstr "签署人计数"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:1080
+#, python-format
+msgid "Some fields have still to be completed !"
+msgstr "有些字段还是需要完成的"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:824
+#, python-format
+msgid "Somebody is already filling a document which uses this template"
+msgstr "该模板已被应用"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:820
+#: code:addons/sign/static/src/js/sign_common.js:1096
+#: code:addons/sign/static/src/js/sign_common.js:1157
+#, python-format
+msgid "Sorry, an error occured, please try to fill the document again."
+msgstr "抱歉，发生错误，请再次填写该文档"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__state
+#: model:ir.model.fields,field_description:sign.field_sign_request_item__state
+msgid "State"
+msgstr "状态"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态 \n"
+" 逾期：已经超过截止日期 \n"
+" 现今：活动日期是当天 \n"
+" 计划：未来的活动。"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:47
+#, python-format
+msgid "Styles"
+msgstr "样式"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__subject
+msgid "Subject"
+msgstr "主题"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template_tag__name
+msgid "Tag Name"
+msgstr "标签名"
+
+#. module: sign
+#: sql_constraint:sign.template.tag:0
+msgid "Tag name already exists !"
+msgstr "标签名已存在!"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_template__tag_ids
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_view_form
+msgid "Tags"
+msgstr "标签"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__template_id
+#: model:ir.model.fields,field_description:sign.field_sign_send_request__template_id
+#: model:ir.model.fields,field_description:sign.field_sign_template_share__template_id
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "Template"
+msgstr "模板"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "Template or Tag"
+msgstr "模板或标签"
+
+#. module: sign
+#: model:ir.ui.menu,name:sign.sign_template_menu
+msgid "Templates"
+msgstr "模板"
+
+#. module: sign
+#: model:sign.item.type,name:sign.sign_item_type_text
+#: selection:sign.item.type,type:0
+msgid "Text"
+msgstr "文本"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:869
+#, python-format
+msgid "Thank You !"
+msgstr "感谢你！"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_completed
+msgid "The document"
+msgstr "文档"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.deleted_sign_request
+msgid ""
+"The signature access you are trying to reach does not exist. Maybe the signature request has been deleted or modified. <br/>\n"
+"                    If there still exists a signature request for this document, check your inbox to get your access!"
+msgstr ""
+"你正在尝试获取的签字访问不存在。可能签字需求被删除或者更改。<br/>\n"
+"如果该文档还是需要签字，请检查你的收件箱以便得到权限！"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_form
+msgid ""
+"This will delete all the already completed documents of this request and "
+"disable every sent accesses, are you sure?"
+msgstr "这将删除此请求的所有已完成的文件，并禁用每个发送的访问，你确定？"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__tip
+msgid "Tip"
+msgstr "提示"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "To Sign"
+msgstr "待签名"
+
+#. module: sign
+#: selection:sign.request,activity_state:0
+msgid "Today"
+msgstr "今日"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_request_view_search
+msgid "Today Activities"
+msgstr "今天的活动"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__type_id
+#: model:ir.model.fields,field_description:sign.field_sign_item_type__type
+msgid "Type"
+msgstr "类型"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_backend.js:79
+#, python-format
+msgid "UPLOAD A PDF TEMPLATE"
+msgstr "上传PDF模板"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:793
+#: code:addons/sign/static/src/js/sign_common.js:1113
+#, python-format
+msgid "Unable to send the SMS, please contact the sender of the document."
+msgstr "无法发送短信，请联系发件人的文件。"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_unread
+msgid "Unread Messages"
+msgstr "未读消息"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读消息计数器"
+
+#. module: sign
+#: model_terms:ir.actions.act_window,help:sign.sign_template_action
+#: model_terms:ir.actions.act_window,help:sign.sign_template_with_archived_action
+msgid "Upload a PDF"
+msgstr "上传PDF"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:44
+#, python-format
+msgid "Used by a signature request."
+msgstr "用于签名申请"
+
+#. module: sign
+#: model:ir.model,name:sign.model_res_users
+msgid "Users"
+msgstr "用户"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_backend.xml:27
+#, python-format
+msgid "Validate"
+msgstr "验证"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:747
+#, python-format
+msgid "Validate & Send"
+msgstr "确认和发送"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign._doc_sign
+msgid "Validate &amp; Send Completed Document"
+msgstr "确认&amp;发送完成的文档"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item_value__value
+msgid "Value"
+msgstr "值"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:846
+#, python-format
+msgid "Verify"
+msgstr "验证"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:111
+#, python-format
+msgid "View External Document"
+msgstr "查看外部文档"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:116
+#, python-format
+msgid "View Signed document"
+msgstr "查看签名文档"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_completed
+msgid "View document now"
+msgstr "现在查看文档"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_follower
+msgid "View signature request"
+msgstr "查看签名请求"
+
+#. module: sign
+#: selection:sign.request.item,state:0
+msgid "Waiting for completion"
+msgstr "等待完成"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:1080
+#, python-format
+msgid "Warning"
+msgstr "警告"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:100
+#, python-format
+msgid "We will let you know by email once everyone has signed."
+msgstr "我们会通过邮件让你知道所有人都登入了。"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_request__website_message_ids
+msgid "Website Messages"
+msgstr "网站信息"
+
+#. module: sign
+#: model:ir.model.fields,help:sign.field_sign_request__website_message_ids
+msgid "Website communication history"
+msgstr "网站沟通记录"
+
+#. module: sign
+#: model:ir.model.fields,field_description:sign.field_sign_item__width
+msgid "Width"
+msgstr "宽度"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_send_request_view_form
+msgid "Write email or search contact..."
+msgstr "撰写邮件或者查找联系人"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:100
+#, python-format
+msgid "You can close the window and come back later."
+msgstr "你可以关闭窗口，以后再来。"
+
+#. module: sign
+#: code:addons/sign/models/sign_template.py:65
+#, python-format
+msgid ""
+"You can't delete a template for which signature requests exist but you can "
+"archive it instead."
+msgstr "您不能删除签名申请存在的模板，但您可以将其归档。"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.doc_sign
+msgid "You have completed the document"
+msgstr "你必须完成文档"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_follower
+msgid ""
+"You will be notified once the document has been signed by everyone involved."
+msgstr "一旦文档被所有人签字，你将收到通知。"
+
+#. module: sign
+#: code:addons/sign/models/sign_template.py:78
+#, python-format
+msgid ""
+"Your PDF file shouldn't be encrypted with a password in order to be used as "
+"a signature template"
+msgstr ""
+
+#. module: sign
+#: code:addons/sign/models/sign_request.py:557
+#, python-format
+msgid "Your confirmation code is %s"
+msgstr "您确认代码是%s"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:76
+#: code:addons/sign/static/src/xml/sign_common.xml:78
+#, python-format
+msgid "Your email"
+msgstr "你的邮件"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/xml/sign_common.xml:70
+#: code:addons/sign/static/src/xml/sign_common.xml:72
+#, python-format
+msgid "Your name"
+msgstr "你的名字"
+
+#. module: sign
+#. openerp-web
+#: code:addons/sign/static/src/js/sign_common.js:870
+#, python-format
+msgid "Your signature has been saved."
+msgstr "你的签名已经保存"
+
+#. module: sign
+#: model:sign.item.type,tip:sign.sign_item_type_checkbox
+#: model:sign.item.type,tip:sign.sign_item_type_company
+#: model:sign.item.type,tip:sign.sign_item_type_date
+#: model:sign.item.type,tip:sign.sign_item_type_email
+#: model:sign.item.type,tip:sign.sign_item_type_multiline_text
+#: model:sign.item.type,tip:sign.sign_item_type_name
+#: model:sign.item.type,tip:sign.sign_item_type_phone
+#: model:sign.item.type,tip:sign.sign_item_type_text
+msgid "fill in"
+msgstr "填写"
+
+#. module: sign
+#: model_terms:ir.ui.view,arch_db:sign.sign_template_mail_completed
+msgid "has been completed and signed by everyone."
+msgstr "已经完成并签署了所有人。"
+
+#. module: sign
+#: model_terms:ir.actions.act_window,help:sign.sign_template_action
+msgid "load our templates of contract"
+msgstr "加载我们的合同模板"
+
+#. module: sign
+#: model:sign.item.type,tip:sign.sign_item_type_initial
+msgid "mark it"
+msgstr "标记"
+
+#. module: sign
+#: model:sign.item.type,tip:sign.sign_item_type_signature
+msgid "sign it"
+msgstr "登陆"

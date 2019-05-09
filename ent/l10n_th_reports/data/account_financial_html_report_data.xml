@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_financial_report_l10n_th" model="account.financial.html.report">
+        <field name="name">Thai Chart of Taxes</field>
+        <field name='parent_id' ref='l10n_th.account_reports_th_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+    <record id="account_financial_report_th_1" model="account.financial.html.report.line">
+        <field name="name">Taxes to be paid</field>
+        <field name="code">THTAX_1</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_th"/>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance=-THTAX_1_1.balance+THTAX_1_2.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_th_1_1" model="account.financial.html.report.line">
+        <field name="name">Withholding Tax</field>
+        <field name="code">THTAX_1_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_th_1"/>
+        <field name="formulas">balance=THTAX_Personal_Withholding_Tax.balance+THTAX_Company_Withholding_Tax.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_th_01" model="account.financial.html.report.line">
+        <field name="name">Personal Withholding Tax</field>
+        <field name="code">THTAX_Personal_Withholding_Tax</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="show_domain">never</field>
+        <field name="parent_id" ref="account_financial_report_l10n_th_1_1"/>
+        <field name="formulas">balance=THTAX_50_PND3_5_TAX.balance+THTAX_50_PND3_6_TAX.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_01_1" model="account.financial.html.report.line">
+        <field name="name">Personal Withholding Tax (Service)</field>
+        <field name="code">THTAX_50_PND3_5_TAX</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_th_01"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_th.tag_th_04')])]"/>
+        <field name="formulas">balance=-sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_01_2" model="account.financial.html.report.line">
+        <field name="name">Personal Withholding Tax (Other)</field>
+        <field name="code">THTAX_50_PND3_6_TAX</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_th_01"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', ref('l10n_th.tag_th_05'))]"/>
+        <field name="formulas">balance=-sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_th_02" model="account.financial.html.report.line">
+        <field name="name">Company Withholding Tax</field>
+        <field name="code">THTAX_Company_Withholding_Tax</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="show_domain">never</field>
+        <field name="parent_id" ref="account_financial_report_l10n_th_1_1"/>
+        <field name="formulas">balance=THTAX_50_PND53_5_TAX.balance+THTAX_50_PND53_6_TAX.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_02_1" model="account.financial.html.report.line">
+        <field name="name">Company Withholding Tax (Service)</field>
+        <field name="code">THTAX_50_PND53_5_TAX</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_th_02"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_th.tag_th_07')])]"/>
+        <field name="formulas">balance=-sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_02_2" model="account.financial.html.report.line">
+        <field name="name">Company Withholding Tax (Other)</field>
+        <field name="code">THTAX_50_PND53_6_TAX</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_th_02"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_th.tag_th_08')])]"/>
+        <field name="formulas">balance=-sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_th_1_2" model="account.financial.html.report.line">
+        <field name="name">Value Added Tax</field>
+        <field name="code">THTAX_1_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_th_1"/>
+        <field name="formulas">balance=THTAX_PP30_5.balance-THTAX_PP30_7.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_th_03" model="account.financial.html.report.line">
+        <field name="name">Output VAT</field>
+        <field name="code">THTAX_PP30_5</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_th.tag_th_10')])]"/>
+        <field name="formulas">balance=-sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_l10n_th_1_2"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_l10n_th_04" model="account.financial.html.report.line">
+        <field name="name">Input VAT</field>
+        <field name="code">THTAX_PP30_7</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_th.tag_th_11')])]"/>
+        <field name="formulas">balance=sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_l10n_th_1_2"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+    <record id="account_financial_report_th_2" model="account.financial.html.report.line">
+        <field name="name">Taxable amounts</field>
+        <field name="code">THTAX_2</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_th"/>
+        <field name="formulas">balance=THTAX_2_1.balance+THTAX_2_2.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_1" model="account.financial.html.report.line">
+        <field name="name">Withholding Tax</field>
+        <field name="code">THTAX_2_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_th_2"/>
+        <field name="formulas">balance=THTAX_PND3_1.balance+THTAX_PND53_1.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_1_1" model="account.financial.html.report.line">
+        <field name="name">Personal Withholding Tax</field>
+        <field name="code">THTAX_PND3_1</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_th_2_1"/>
+        <field name="formulas">balance=THTAX_50_PND3_5_BASE.balance+THTAX_50_PND3_6_BASE.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_1_1_1" model="account.financial.html.report.line">
+        <field name="name">Personal Withholding Tax (Service)</field>
+        <field name="code">THTAX_50_PND3_5_BASE</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_th_2_1_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_th.tag_th_15')])]"/>
+        <field name="formulas">balance=sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_1_1_2" model="account.financial.html.report.line">
+        <field name="name">Personal Withholding Tax (Other)</field>
+        <field name="code">THTAX_50_PND3_6_BASE</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_th_2_1_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval=""/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_1_2" model="account.financial.html.report.line">
+        <field name="name">Company Withholding Tax</field>
+        <field name="code">THTAX_PND53_1</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_th_2_1"/>
+        <field name="formulas">balance=THTAX_50_PND53_5_BASE.balance+THTAX_50_PND53_6_BASE.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_1_2_1" model="account.financial.html.report.line">
+        <field name="name">Company Withholding Tax (Service)</field>
+        <field name="code">THTAX_50_PND53_5_BASE</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_th_2_1_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_th.tag_th_18')])]"/>
+        <field name="formulas">balance=sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_1_2_2" model="account.financial.html.report.line">
+        <field name="name">Company Withholding Tax (Other)</field>
+        <field name="code">THTAX_50_PND53_6_BASE</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_th.tag_th_19')])]"/>
+        <field name="formulas">balance=sum.balance</field>
+        <field name="parent_id" ref="account_financial_report_th_2_1_2"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_2" model="account.financial.html.report.line">
+        <field name="name">Value Added Tax</field>
+        <field name="code">THTAX_2_2</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_th_2"/>
+        <field name="formulas">balance=THTAX_PP30_4.balance+THTAX_PP30_6.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_2_1" model="account.financial.html.report.line">
+        <field name="name">Output VAT</field>
+        <field name="code">THTAX_PP30_4</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_th_2_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_th.tag_th_21')])]"/>
+        <field name="formulas">balance=-sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_th_2_2_2" model="account.financial.html.report.line">
+        <field name="name">Input VAT</field>
+        <field name="code">THTAX_PP30_6</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_th_2_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_th.tag_th_22')])]"/>
+        <field name="formulas">balance=sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

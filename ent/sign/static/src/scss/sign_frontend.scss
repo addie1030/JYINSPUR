@@ -1,0 +1,26 @@
+
+.o_sign_document {
+    height: 100%;
+
+    > header {
+        flex: 0 0 auto;
+        height: $nav-link-height;
+        background-color: $o-brand-lightsecondary;
+        > div {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            a {
+                flex: 0 0 auto;
+                > img {
+                    height: $nav-link-height;
+                }
+            }
+
+            .o_sign_header_instruction {
+                font-size: 1.2em;
+                flex: 1 1 auto;
+            }
+        }
+    }
+}

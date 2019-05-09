@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Workflow Rules -->
+
+        <record id="Sign_rule" model="documents.workflow.rule">
+            <field name="name">Request a Signature</field>
+            <field name="create_model">sign.template</field>
+            <field name="condition_type">domain</field>
+            <field name="domain">[["mimetype","ilike","pdf"]]</field>
+            <field name="domain_folder_id" ref="documents.documents_internal_folder"/>
+        </record>
+    </data>
+</odoo>

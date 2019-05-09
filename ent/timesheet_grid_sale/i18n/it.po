@@ -1,0 +1,68 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * timesheet_grid_sale
+# 
+# Translators:
+# Paolo Valier, 2018
+# Paolo Caruccio <paolo.caruccio66@gmail.com>, 2018
+# Léonie Bouchat <lbo@odoo.com>, 2018
+# Sergio Zanchetta <primes2h@gmail.com>, 2018
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 09:13+0000\n"
+"PO-Revision-Date: 2018-08-24 11:48+0000\n"
+"Last-Translator: Sergio Zanchetta <primes2h@gmail.com>, 2018\n"
+"Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: timesheet_grid_sale
+#: model_terms:ir.ui.view,arch_db:timesheet_grid_sale.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Invoicing Policy</span>"
+msgstr "<span class=\"o_form_label\">Politica di fatturazione</span>"
+
+#. module: timesheet_grid_sale
+#: selection:res.config.settings,invoiced_timesheet:0
+msgid "All recorded timesheets"
+msgstr "Tutti i timesheet registrati"
+
+#. module: timesheet_grid_sale
+#: model:ir.model,name:timesheet_grid_sale.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Riga contabilità analitica"
+
+#. module: timesheet_grid_sale
+#: selection:res.config.settings,invoiced_timesheet:0
+msgid "Approved timesheets only"
+msgstr "Solo timesheet approvati"
+
+#. module: timesheet_grid_sale
+#: model:ir.model,name:timesheet_grid_sale.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni di configurazione"
+
+#. module: timesheet_grid_sale
+#: model:ir.model,name:timesheet_grid_sale.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Riga fattura"
+
+#. module: timesheet_grid_sale
+#: model_terms:ir.ui.view,arch_db:timesheet_grid_sale.res_config_settings_view_form
+msgid "Record time spent and invoice it based on:"
+msgstr "Registrare il tempo trascorso e fatturarlo in base:"
+
+#. module: timesheet_grid_sale
+#: model:ir.model,name:timesheet_grid_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Riga Ordine di Vendita"
+
+#. module: timesheet_grid_sale
+#: model:ir.model.fields,field_description:timesheet_grid_sale.field_res_config_settings__invoiced_timesheet
+msgid "Timesheets Invoicing"
+msgstr "Fatturazione Timesheet"

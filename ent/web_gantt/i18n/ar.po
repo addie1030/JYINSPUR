@@ -1,0 +1,115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * web_gantt
+# 
+# Translators:
+# Mustafa J. Kadhem <safi2266@gmail.com>, 2018
+# Martin Trigaux, 2018
+# Ghaith Gammar <g.gammar@saharaifs.net>, 2018
+# Shaima Safar <shaima.safar@open-inside.com>, 2018
+# Mostafa Hanafy <mostafa.s.hanafy@gmail.com>, 2018
+# Mustafa Rawi <mustafa@cubexco.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-18 10:05+0000\n"
+"PO-Revision-Date: 2018-08-24 11:49+0000\n"
+"Last-Translator: Mustafa Rawi <mustafa@cubexco.com>, 2019\n"
+"Language-Team: Arabic (https://www.transifex.com/odoo/teams/41243/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:24
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:31
+#, python-format
+msgid "Day"
+msgstr "اليوم"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:22
+#, python-format
+msgid "Dropdown menu"
+msgstr "القائمة المنسدلة"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/js/gantt_view.js:58
+#: code:addons/web_gantt/static/src/js/gantt_view.js:99
+#, python-format
+msgid "Gantt"
+msgstr "جانت"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/js/gantt_renderer.js:74
+#, python-format
+msgid "Gantt View"
+msgstr "واجهة جانت"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:22
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:26
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:33
+#, python-format
+msgid "Month"
+msgstr "الشهر"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:17
+#, python-format
+msgid "Next"
+msgstr "التالي"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:11
+#, python-format
+msgid "Previous"
+msgstr "السابق"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:14
+#, python-format
+msgid "Today"
+msgstr "اليوم"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:25
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:32
+#, python-format
+msgid "Week"
+msgstr "الأسبوع"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:27
+#: code:addons/web_gantt/static/src/xml/web_gantt.xml:34
+#, python-format
+msgid "Year"
+msgstr "السنة"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/js/gantt_controller.js:208
+#, python-format
+msgid "You are trying to write on a read-only field!"
+msgstr "انت تحاول الكتابة في حقل للقراءة فقط!"
+
+#. module: web_gantt
+#. openerp-web
+#: code:addons/web_gantt/static/src/js/gantt_controller.js:203
+#, python-format
+msgid "You have no date_stop field defined!"
+msgstr "لا تمتلك date_stop كحقل معرف!"

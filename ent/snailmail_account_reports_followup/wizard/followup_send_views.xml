@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="followup_send_wizard_form">
+            <field name="name">followup.send.form</field>
+            <field name="model">followup.send</field>
+            <field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+            <field name="arch" type="xml">
+                <form string="Send Follow-Ups">
+                    <!-- truly invisible fields for control and options -->
+                    <field name="letter_ids" invisible="1"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="letters_qty" invisible="1"/>
+                    <!-- visible fields -->
+                    <div class="text-left d-inline-block" name='cost'>
+                        <span attrs="{'invisible': [('letters_qty', '>', 1)]}"> Sending this document will cost </span>
+                        <span attrs="{'invisible': [('letters_qty', '=', 1)]}"> Sending these <field name="letters_qty" nolabel="1"/> documents will cost </span>
+                        <b>
+                            <span>
+                                <field name="snailmail_cost" options="{'digits':[0,0]}" class="mr4"/>
+                                <label for="snailmail_cost" class="mr4"/>
+                            </span>
+                        </b>
+                        <i class="fa fa-info-circle" role="img" aria-label="Warning" title="
+                        The letter will be sent using the IAP service from Odoo.&#10;Make sure you have enough credits on your account or proceed to a recharge.&#10;In case of multiple sending, the price is estimated based on 1 page per document.
+                        "/>
+                    </div>
+
+                    <footer>
+                        <button string="Send by Post"
+                            name="snailmail_send_action" type="object" class="btn-primary o_mail_send"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+       <act_window
+            name="Send Follow-Ups"
+            id="followup_send"
+            multi="True"
+            key2="client_action_multi"
+            res_model="followup.send"
+            src_model="res.partner"
+            view_mode="form"
+            target="new"
+            view_type="form"
+            groups="account.group_account_invoice"
+            />
+
+    </data>
+
+</odoo>

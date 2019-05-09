@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<div t-name="DocumentsKanbanView.buttons">
+    <button type="button" t-attf-class="btn btn-primary o_documents_kanban_upload">
+        Upload
+    </button>
+    <button type="button" t-attf-class="btn btn-primary o_documents_kanban_url">
+        Add URL
+    </button>
+    <button type="button" t-attf-class="btn btn-primary o_documents_kanban_request">
+        Request Document
+    </button>
+    <button type="button" t-attf-class="btn btn-secondary o_documents_kanban_share" groups="documents.group_documents_user">
+        Share
+    </button>
+</div>
+
+<!--
+    @param {documents.DocumentsKanbanController} widget
+    @param {string} csrf_token
+-->
+<div t-name="documents.HiddenInputFile" class="o_hidden o_documents_hidden_input_file_container">
+    <t t-call="HiddenInputFile">
+        <t t-set="fileupload_id" t-value="widget.fileUploadID"/>
+        <t t-set="csrf_token" t-value="csrf_token"/>
+        <input type="hidden" name="model" t-att-value="'documents.folder'"/>
+        <input type="hidden" name="id" t-att-value="widget.selectedFolderID"/>
+    </t>
+</div>
+
+
+</templates>
+

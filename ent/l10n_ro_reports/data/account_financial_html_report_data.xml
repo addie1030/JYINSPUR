@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_financial_report_l10n_ro" model="account.financial.html.report">
+        <field name="name">Decont TVA</field>
+        <field name='parent_id' ref='l10n_ro.account_reports_ro_statements_menu'/>
+        <field name="tax_report" eval="1"/>
+    </record>
+    <record id="account_financial_report_ro_1" model="account.financial.html.report.line">
+        <field name="name">BAZA TVA COLECTAT</field>
+        <field name="code">ROTAX_a</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ro"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 0%</field>
+        <field name="code">ROTAX_TVA_colectata_0_Baza</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_00')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 19%</field>
+        <field name="code">ROTAX_TVA_colectata_19_Baza</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_19')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_3" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 24%</field>
+        <field name="code">ROTAX_TVA_colectata_24_Baza</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_24')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_4" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 5%</field>
+        <field name="code">ROTAX_TVA_colectata_5_Baza</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_05')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_5" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 9%</field>
+        <field name="code">ROTAX_TVA_colectata_9_Baza</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_1"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_09')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_6" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_1"/>
+        <field name="formulas">balance = ROTAX_TVA_colectata_00_intracomunitar_bunuri_Baza.balance+ROTAX_TVA_colectata_05_intracomunitar_bunuri_Baza.balance+ROTAX_TVA_colectata_09_intracomunitar_bunuri_Baza.balance+ROTAX_TVA_colectata_24_intracomunitar_bunuri_Baza.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_6_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_00_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_0')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_6_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_05_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_5')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_6_3" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_09_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_9')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_6_4" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_24_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_7" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_1"/>
+        <field name="formulas">balance = ROTAX_TVA_colectata_00_intracomunitar_servicii_Baza.balance+ROTAX_TVA_colectata_05_intracomunitar_servicii_Baza.balance+ROTAX_TVA_colectata_09_intracomunitar_servicii_Baza.balance+ROTAX_TVA_colectata_24_intracomunitar_servicii_Baza.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_7_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_00_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_7_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_05_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_7_3" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_09_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_7_4" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_24_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_8" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_taxare_inversa_Baza</field>
+        <field name="sequence" eval="8"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_1"/>
+        <field name="formulas">balance = ROTAX_TVA_colectata_00_taxare_inversa_Baza.balance+ROTAX_TVA_colectata_05_taxare_inversa_Baza.balance+ROTAX_TVA_colectata_09_taxare_inversa_Baza.balance+ROTAX_TVA_colectata_24_taxare_inversa_Baza.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_8_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_00_taxare_inversa_Baza</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvati'), ref('l10n_ro.tax_tag_tva_taxare_inversa_0')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_8_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_05_taxare_inversa_Baza</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_5')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_8_3" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_09_taxare_inversa_Baza</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_9')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_1_8_4" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_24_taxare_inversa_Baza</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_1_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2" model="account.financial.html.report.line">
+        <field name="name">TVA COLECTATA</field>
+        <field name="code">ROTAX_b</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ro"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_1" model="account.financial.html.report.line">
+        <field name="name">TVA 0%</field>
+        <field name="code">ROTAX_TVA_colectata_0</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_00')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_2" model="account.financial.html.report.line">
+        <field name="name">TVA 19%</field>
+        <field name="code">ROTAX_TVA_colectata_19</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_19')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_3" model="account.financial.html.report.line">
+        <field name="name">TVA 24%</field>
+        <field name="code">ROTAX_TVA_colectata_24</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_24')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_4" model="account.financial.html.report.line">
+        <field name="name">TVA 5%</field>
+        <field name="code">ROTAX_TVA_colectata_5</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_05')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_5" model="account.financial.html.report.line">
+        <field name="name">TVA 9%</field>
+        <field name="code">ROTAX_TVA_colectata_9</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_2"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_sale_tvac_09')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_6" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_intracomunitar_bunuri</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_2"/>
+        <field name="formulas">balance = ROTAX_TVA_colectata_00_intracomunitar_bunuri.balance+ROTAX_TVA_colectata_05_intracomunitar_bunuri.balance+ROTAX_TVA_colectata_09_intracomunitar_bunuri.balance+ROTAX_TVA_colectata_24_intracomunitar_bunuri.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_6_1" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_00_intracomunitar_bunuri</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_6"/>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_6_2" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_05_intracomunitar_bunuri</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_colectat_5')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_6_3" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_09_intracomunitar_bunuri</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_colectat_9')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_6_4" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_colectata_24_intracomunitar_bunuri</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_colectat_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_7" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_intracomunitar_servicii</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_2"/>
+        <field name="formulas">balance = ROTAX_TVA_colectata_00_intracomunitar_servicii.balance+ROTAX_TVA_colectata_05_intracomunitar_servicii.balance+ROTAX_TVA_colectata_09_intracomunitar_servicii.balance+ROTAX_TVA_colectata_24_intracomunitar_servicii.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_7_1" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_00_intracomunitar_servicii</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_7_2" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_05_intracomunitar_servicii</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_7_3" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_09_intracomunitar_servicii</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_7_4" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_colectata_24_intracomunitar_servicii</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_8" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_taxare_inversa</field>
+        <field name="sequence" eval="8"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_2"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_8_1" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_00_taxare_inversa</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_8"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_8_2" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_05_taxare_inversa</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_colectat_5')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_8_3" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_09_taxare_inversa</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_colectat_9')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_2_8_4" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_colectata_24_taxare_inversa</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_2_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_colectat_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3" model="account.financial.html.report.line">
+        <field name="name">BAZA TVA DEDUCTIBIL</field>
+        <field name="code">ROTAX_c</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ro"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 0%</field>
+        <field name="code">ROTAX_TVA_deductibila_0_Baza</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_3"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_00')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 19%</field>
+        <field name="code">ROTAX_TVA_deductibila_19_Baza</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_3"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_19')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_3" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 24%</field>
+        <field name="code">ROTAX_TVA_deductibila_24_Baza</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_3"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_4" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 5%</field>
+        <field name="code">ROTAX_TVA_deductibila_5_Baza</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_3"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_05')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_5" model="account.financial.html.report.line">
+        <field name="name">Baza TVA 9%</field>
+        <field name="code">ROTAX_TVA_deductibila_9_Baza</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_3"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_09')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_6" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri%</field>
+        <field name="code">ROTAX_TVA_deductibila_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_3"/>
+        <field name="formulas">balance = ROTAX_TVA_deductibila_00_intracomunitar_bunuri_Baza.balance+ROTAX_TVA_deductibila_05_intracomunitar_bunuri_Baza.balance+ROTAX_TVA_deductibila_09_intracomunitar_bunuri_Baza.balance+ROTAX_TVA_deductibila_24_intracomunitar_bunuri_Baza.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_6_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri%</field>
+        <field name="code">ROTAX_TVA_deductibila_00_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_0')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_6_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri%</field>
+        <field name="code">ROTAX_TVA_deductibila_05_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_5')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_6_3" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri%</field>
+        <field name="code">ROTAX_TVA_deductibila_09_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_9')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_6_4" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Bunuri%</field>
+        <field name="code">ROTAX_TVA_deductibila_24_intracomunitar_bunuri_Baza</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_7" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii%</field>
+        <field name="code">ROTAX_TVA_deductibila_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_3"/>
+        <field name="formulas">balance = ROTAX_TVA_deductibila_00_intracomunitar_servicii_Baza.balance+ROTAX_TVA_deductibila_05_intracomunitar_servicii_Baza.balance+ROTAX_TVA_deductibila_09_intracomunitar_servicii_Baza.balance+ROTAX_TVA_deductibila_24_intracomunitar_servicii_Baza.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_7_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii%</field>
+        <field name="code">ROTAX_TVA_deductibila_00_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_7_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii%</field>
+        <field name="code">ROTAX_TVA_deductibila_05_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_7_3" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii%</field>
+        <field name="code">ROTAX_TVA_deductibila_09_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_7_4" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Intracomunitar Servicii%</field>
+        <field name="code">ROTAX_TVA_deductibila_24_intracomunitar_servicii_Baza</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_8" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_taxare_inversa_Baza</field>
+        <field name="sequence" eval="8"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_3"/>
+        <field name="formulas">balance = ROTAX_TVA_deductibila_00_taxare_inversa_Baza.balance+ROTAX_TVA_deductibila_05_taxare_inversa_Baza.balance+ROTAX_TVA_deductibila_09_taxare_inversa_Baza.balance+ROTAX_TVA_deductibila_24_taxare_inversa_Baza.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_8_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_00_taxare_inversa_Baza</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_0')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_8_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_05_taxare_inversa_Baza</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_5')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_8_3" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_09_taxare_inversa_Baza</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_9')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_3_8_4" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_24_taxare_inversa_Baza</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_3_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4" model="account.financial.html.report.line">
+        <field name="name">TVA DEDUCTIBILA</field>
+        <field name="code">ROTAX_d</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ro"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_1" model="account.financial.html.report.line">
+        <field name="name">TVA 0%</field>
+        <field name="code">ROTAX_TVA_deductibila_0</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_4"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_00')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_2" model="account.financial.html.report.line">
+        <field name="name">TVA 19%</field>
+        <field name="code">ROTAX_TVA_deductibila_19</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_4"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_19')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_3" model="account.financial.html.report.line">
+        <field name="name">TVA 24%</field>
+        <field name="code">ROTAX_TVA_deductibila_24</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_4"/>
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_24')])]" />
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_4" model="account.financial.html.report.line">
+        <field name="name">TVA 5%</field>
+        <field name="code">ROTAX_TVA_deductibila_5</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_4"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_05')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_5" model="account.financial.html.report.line">
+        <field name="name">TVA 9%</field>
+        <field name="code">ROTAX_TVA_deductibila_9</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_4"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_purchase_tvad_09')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_6" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_deductibila_intracomunitar_bunuri</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_4"/>
+        <field name="formulas">balance = ROTAX_TVA_deductibila_00_intracomunitar_bunuri.balance+ROTAX_TVA_deductibila_05_intracomunitar_bunuri.balance+ROTAX_TVA_deductibila_09_intracomunitar_bunuri.balance+ROTAX_TVA_deductibila_24_intracomunitar_bunuri.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_6_1" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_deductibila_00_intracomunitar_bunuri</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_6"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_6_2" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_deductibila_05_intracomunitar_bunuri</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_deductibil_5')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_6_3" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_deductibila_09_intracomunitar_bunuri</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_deductibil_9')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_6_4" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Bunuri</field>
+        <field name="code">ROTAX_TVA_deductibila_24_intracomunitar_bunuri</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_6"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_intracomunitara_achizitii_deductibil_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_7" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_deductibila_intracomunitar_servicii</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_4"/>
+        <field name="formulas">balance = ROTAX_TVA_deductibila_00_intracomunitar_servicii.balance+ROTAX_TVA_deductibila_05_intracomunitar_servicii.balance+ROTAX_TVA_deductibila_09_intracomunitar_servicii.balance+ROTAX_TVA_deductibila_24_intracomunitar_servicii.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_7_1" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_deductibila_00_intracomunitar_servicii</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_7_2" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_deductibila_05_intracomunitar_servicii</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_7_3" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_deductibila_09_intracomunitar_servicii</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_7_4" model="account.financial.html.report.line">
+        <field name="name">TVA Intracomunitar Servicii</field>
+        <field name="code">ROTAX_TVA_deductibila_24_intracomunitar_servicii</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_8" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_taxare_inversa</field>
+        <field name="sequence" eval="8"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_4"/>
+        <field name="formulas">balance = ROTAX_TVA_deductibila_00_taxare_inversa.balance+ROTAX_TVA_deductibila_05_taxare_inversa.balance+ROTAX_TVA_deductibila_09_taxare_inversa.balance+ROTAX_TVA_deductibila_24_taxare_inversa.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_8_1" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_00_taxare_inversa</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_8"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_8_2" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_05_taxare_inversa</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_deductibil_5')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_8_3" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_09_taxare_inversa</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_deductibil_9')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_4_8_4" model="account.financial.html.report.line">
+        <field name="name">TVA Taxare Inversa</field>
+        <field name="code">ROTAX_TVA_deductibila_24_taxare_inversa</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_ro_4_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ro.tax_tag_tva_taxare_inversa_deductibil_24')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_5" model="account.financial.html.report.line">
+        <field name="name">BAZA TVA NEEXIGIBILA</field>
+        <field name="code">ROTAX_e</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ro"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_5_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Neexigibil Colectat</field>
+        <field name="code">ROTAX_Baza_TVA_Neexigibil_Colectat</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_5"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_5_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Neexigibil Deductibil</field>
+        <field name="code">ROTAX_Baza_TVA_Neexigibil_Deductibil</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_5"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_6" model="account.financial.html.report.line">
+        <field name="name">TVA NEEXIGIBILA</field>
+        <field name="code">ROTAX_f</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ro"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_6_1" model="account.financial.html.report.line">
+        <field name="name">TVA Neexigibil Colectat</field>
+        <field name="code">ROTAX_TVA_Neexigibil_Colectat</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_6"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_6_2" model="account.financial.html.report.line">
+        <field name="name">TVA Neexigibil Deductibil</field>
+        <field name="code">ROTAX_TVA_Neexigibil_Deductibil</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_6"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_7" model="account.financial.html.report.line">
+        <field name="name">BAZA TVA TAXARE INVERSA</field>
+        <field name="code">ROTAX_g</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ro"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_7_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare inversa</field>
+        <field name="code">ROTAX_Baza_TVA_Taxare_inversa</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_7"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_8" model="account.financial.html.report.line">
+        <field name="name">BAZA TVA TAXARE SCUTITA</field>
+        <field name="code">ROTAX_h</field>
+        <field name="sequence" eval="8"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ro"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_8_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Scutita - Achizitii</field>
+        <field name="code">ROTAX_Baza_TVA_Taxare_Scutita_Achizitii</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tvatisc_purchase')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_8_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare Scutita - Vanzari</field>
+        <field name="code">ROTAX_Baza_TVA_Taxare_Scutita_Vanzari</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_8"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tvatisc_sale'), ref('l10n_ro.tax_tag_tvatisc_purchase')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_9" model="account.financial.html.report.line">
+        <field name="name">BAZA TVA TAXARE INTRACOMUNITARA NEIMPOZABILA</field>
+        <field name="code">ROTAX_i</field>
+        <field name="sequence" eval="9"/>
+        <field name="level" eval="0"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_ro"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_9_1" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare intracomunitara neimpozabila - Achizitii</field>
+        <field name="code">ROTAX_Baza_TVA_Taxare_intracomunitara_neimpozabila_Achizitii</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_9"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tvatine_purchase')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="account_financial_report_ro_9_2" model="account.financial.html.report.line">
+        <field name="name">Baza TVA Taxare intracomunitara neimpozabila - Vanzari</field>
+        <field name="code">ROTAX_Baza_TVA_Taxare_intracomunitara_neimpozabila_Vanzari</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_ro_9"/>
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ro.tax_tag_tvatine_sale')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

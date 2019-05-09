@@ -1,0 +1,220 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * web_grid
+# 
+# Translators:
+# Martin Trigaux, 2018
+# Quim - eccit <quim@eccit.com>, 2018
+# Manel Fernandez <manelfera@outlook.com>, 2018
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 14:07+0000\n"
+"PO-Revision-Date: 2018-08-24 11:49+0000\n"
+"Last-Translator: Manel Fernandez <manelfera@outlook.com>, 2018\n"
+"Language-Team: Catalan (https://www.transifex.com/odoo/teams/41243/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: web_grid
+#: model:ir.model,name:web_grid.model_ir_actions_act_window_view
+msgid "Action Window View"
+msgstr ""
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Activity"
+msgstr "Activitat"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_controller.js:148
+#: code:addons/web_grid/static/src/xml/grid_view.xml:5
+#, python-format
+msgid "Add a Line"
+msgstr "Afegir una línia"
+
+#. module: web_grid
+#: model:ir.model,name:web_grid.model_base
+msgid "Base"
+msgstr "Base"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Calendar"
+msgstr "Calendari"
+
+#. module: web_grid
+#: code:addons/web_grid/models/models.py:201
+#: code:addons/web_grid/models/models.py:233
+#, python-format
+msgid "Can not use fields of type %s as grid columns"
+msgstr "No es pot fer servir camps del tipus %s com columnes de taula"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Cohort"
+msgstr "Cohort"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Dashboard"
+msgstr "Taulel"
+
+#. module: web_grid
+#: selection:ir.ui.view,type:0
+msgid "Diagram"
+msgstr "Diagrama"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Form"
+msgstr "Formulari"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Gantt"
+msgstr "Gràfic de Gantt"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Graph"
+msgstr "Diagrama"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_view.js:15
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+#, python-format
+msgid "Grid"
+msgstr "Quadrícula"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Kanban"
+msgstr "Kanban"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/xml/grid_view.xml:24
+#, python-format
+msgid "Next"
+msgstr "Següent"
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Pivot"
+msgstr "Pivote"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/xml/grid_view.xml:17
+#, python-format
+msgid "Previous"
+msgstr ""
+
+#. module: web_grid
+#: selection:ir.ui.view,type:0
+msgid "QWeb"
+msgstr "QWeb"
+
+#. module: web_grid
+#: selection:ir.ui.view,type:0
+msgid "Search"
+msgstr "Cercar"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:244
+#, python-format
+msgid "See all the records aggregated in this cell"
+msgstr "Veure tots els registres agregats d'aquest cel·la"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:183
+#, python-format
+msgid ""
+"The sectioned grid view can't handle groups with different columns sets"
+msgstr ""
+"La vista de taula seccionada no pot gestionar grups amb conjunts de "
+"diferents columnes"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/xml/grid_view.xml:19
+#, python-format
+msgid "Today"
+msgstr "Avui"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:395
+#, python-format
+msgid "Total"
+msgstr "Total"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:393
+#, python-format
+msgid "Total (%s)"
+msgstr ""
+
+#. module: web_grid
+#: selection:ir.actions.act_window.view,view_mode:0
+#: selection:ir.ui.view,type:0
+msgid "Tree"
+msgstr "Arbre"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_controller.js:204
+#, python-format
+msgid "Undefined"
+msgstr "Indefinit"
+
+#. module: web_grid
+#. openerp-web
+#: code:addons/web_grid/static/src/js/grid_renderer.js:160
+#: code:addons/web_grid/static/src/js/grid_renderer.js:323
+#: code:addons/web_grid/static/src/js/grid_renderer.js:358
+#, python-format
+msgid "Unknown"
+msgstr "Desconegut"
+
+#. module: web_grid
+#: model:ir.model,name:web_grid.model_ir_ui_view
+msgid "View"
+msgstr "Vista"
+
+#. module: web_grid
+#: model:ir.model.fields,field_description:web_grid.field_ir_actions_act_window_view__view_mode
+#: model:ir.model.fields,field_description:web_grid.field_ir_ui_view__type
+msgid "View Type"
+msgstr "Tipus de vista"
+
+#. module: web_grid
+#: code:addons/web_grid/models/models.py:244
+#, python-format
+msgid ""
+"Week %(weeknumber)s\n"
+"%(week_start)s - %(week_end)s"
+msgstr ""
+"Setmana %(weeknumber)s\n"
+"%(week_start)s - %(week_end)s"

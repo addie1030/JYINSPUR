@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="financial_report_l10n_hu" model="account.financial.html.report">
+        <field name="name">Általános Forgalmi Adó</field>
+        <field name='parent_id' ref='l10n_hu.account_reports_hu_statements_menu'/>
+    </record>
+    <record id="financial_report_line_hu_01" model="account.financial.html.report.line">
+        <field name="code">HUTAX_ÁFA_alap</field>
+        <field name="name">ÁFA alap</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = HUTAX_01.balance + HUTAX_02.balance + HUTAX_04.balance + HUTAX_04_1.balance + HUTAX_05.balance + HUTAX_06.balance + HUTAX_07.balance + HUTAX_11.balance + HUTAX_23.balance + HUTAX_23_1.balance + HUTAX_29.balance + HUTAX_63.balance + HUTAX_63_1.balance + HUTAX_64.balance + HUTAX_65.balance + HUTAX_66.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_hu"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_01" model="account.financial.html.report.line">
+        <field name="code">HUTAX_01</field>
+        <field name="name">Adóalap - Fizetendő ÁFA Export</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_02')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_02" model="account.financial.html.report.line">
+        <field name="code">HUTAX_02</field>
+        <field name="name">Adóalap - Fizetendő ÁFA EU</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_03')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_03" model="account.financial.html.report.line">
+        <field name="code">HUTAX_04</field>
+        <field name="name">Adóalap - Fizetendő ÁFA tárgyi adómentes</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_04')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_04" model="account.financial.html.report.line">
+        <field name="code">HUTAX_04_1</field>
+        <field name="name">Adóalap - Fizetendő ÁFA alanyi adómentes</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_05')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_05" model="account.financial.html.report.line">
+        <field name="code">HUTAX_05</field>
+        <field name="name">Adóalap - Fizetendő ÁFA 5%</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_06')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_06" model="account.financial.html.report.line">
+        <field name="code">HUTAX_06</field>
+        <field name="name">Adóalap - Fizetendő ÁFA 18%</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_07')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_07" model="account.financial.html.report.line">
+        <field name="code">HUTAX_07</field>
+        <field name="name">Adóalap - Fizetendő ÁFA 27%</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_08')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_08" model="account.financial.html.report.line">
+        <field name="code">HUTAX_11</field>
+        <field name="name">Adóalap - Visszaigényelhető ÁFA EU</field>
+        <field name="sequence" eval="8"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_09')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_09" model="account.financial.html.report.line">
+        <field name="code">HUTAX_23</field>
+        <field name="name">Adóalap – Fordított ÁFA</field>
+        <field name="sequence" eval="9"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_12')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_10" model="account.financial.html.report.line">
+        <field name="code">HUTAX_23_1</field>
+        <field name="name">Adóalap – Import ÁFA</field>
+        <field name="sequence" eval="10"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_11')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_11" model="account.financial.html.report.line">
+        <field name="code">HUTAX_29</field>
+        <field name="name">Adóalap – Fordított ÁFA</field>
+        <field name="sequence" eval="11"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_10')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_12" model="account.financial.html.report.line">
+        <field name="code">HUTAX_63</field>
+        <field name="name">Adóalap - Visszaigényelhető ÁFA alanyi adómentes</field>
+        <field name="sequence" eval="12"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_13')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_13" model="account.financial.html.report.line">
+        <field name="code">HUTAX_63_1</field>
+        <field name="name">Adóalap - Visszaigényelhető ÁFA tárgyi adómentes</field>
+        <field name="sequence" eval="13"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_14')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_14" model="account.financial.html.report.line">
+        <field name="code">HUTAX_64</field>
+        <field name="name">Adóalap - Visszaigényelhető ÁFA 5%</field>
+        <field name="sequence" eval="14"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_15')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_15" model="account.financial.html.report.line">
+        <field name="code">HUTAX_65</field>
+        <field name="name">Adóalap - Visszaigényelhető ÁFA 18%</field>
+        <field name="sequence" eval="15"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_16')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_01_16" model="account.financial.html.report.line">
+        <field name="code">HUTAX_66</field>
+        <field name="name">Adóalap - Visszaigényelhető ÁFA 27%</field>
+        <field name="sequence" eval="16"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_hu.tag_hu_17')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_01"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_02" model="account.financial.html.report.line">
+        <field name="code">HUTAX_ÁFA – fiz/vissz</field>
+        <field name="name">ÁFA fizetndő / visszaigényelhető</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = HUTAX_05_1.balance + HUTAX_06_1.balance + HUTAX_07_1.balance + HUTAX_64_1.balance + HUTAX_65_1.balance + HUTAX_66_1.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_hu"/>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_02_01" model="account.financial.html.report.line">
+        <field name="code">HUTAX_05_1</field>
+        <field name="name">Fizetendő ÁFA 5%</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_hu.tag_hu_19')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_02_02" model="account.financial.html.report.line">
+        <field name="code">HUTAX_06_1</field>
+        <field name="name">Fizetendő ÁFA 18%</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_hu.tag_hu_20')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_02_03" model="account.financial.html.report.line">
+        <field name="code">HUTAX_07_1</field>
+        <field name="name">Fizetendő ÁFA 27%</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_hu.tag_hu_21')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_02_04" model="account.financial.html.report.line">
+        <field name="code">HUTAX_64_1</field>
+        <field name="name">Visszaigényelhető ÁFA 5%</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_hu.tag_hu_22')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_02_05" model="account.financial.html.report.line">
+        <field name="code">HUTAX_65_1</field>
+        <field name="name">Visszaigényelhető ÁFA 18%</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_hu.tag_hu_23')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+    <record id="financial_report_line_hu_02_06" model="account.financial.html.report.line">
+        <field name="code">HUTAX_66_1</field>
+        <field name="name">Visszaigényelhető ÁFA 27%</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="1"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_hu.tag_hu_24')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_hu_02"/>
+        <field name="show_domain">never</field>
+        <field name="special_date_changer">strict_range</field>
+    </record>
+
+</odoo>

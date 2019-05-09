@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="invoice_form_inherit" model="ir.ui.view">
+            <field name="name">l10n_es_real_estates.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='l10n_es_reports_mod347_invoice_type']" position="after">
+                    <field name="l10n_es_real_estate_id" attrs="{'required':[('l10n_es_reports_mod347_invoice_type', '=', 'real_estates')], 'invisible':[('l10n_es_reports_mod347_invoice_type', '!=', 'real_estates')]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="invoice_supplier_form_inherit" model="ir.ui.view">
+            <field name="name">l10n_es_real_estates.supplier.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='l10n_es_reports_mod347_invoice_type']" position="after">
+                    <field name="l10n_es_real_estate_id" attrs="{'required':[('l10n_es_reports_mod347_invoice_type', '=', 'real_estates')], 'invisible':[('l10n_es_reports_mod347_invoice_type', '!=', 'real_estates')]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

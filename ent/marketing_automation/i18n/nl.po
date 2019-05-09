@@ -1,0 +1,1301 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * marketing_automation
+# 
+# Translators:
+# Martin Trigaux, 2018
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2019
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-15 15:18+0000\n"
+"PO-Revision-Date: 2018-08-24 11:38+0000\n"
+"Last-Translator: Erwin van der Ploeg <erwin@odooexperts.nl>, 2019\n"
+"Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__total_participant_count
+msgid "# of active and completed participants"
+msgstr "Aantal actieve deelnemers en deelnemers die klaar zijn"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__running_participant_count
+msgid "# of active participants"
+msgstr "Aantal actieve deelnemers"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__completed_participant_count
+msgid "# of completed participants"
+msgstr "Aantal deelnemers die klaar zijn"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "<i class=\"fa fa-check-circle\"/> Bounced"
+msgstr "<i class=\"fa fa-check-circle\"/> Bounced"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "<i class=\"fa fa-check-circle\"/> Clicked"
+msgstr "<i class=\"fa fa-check-circle\"/> Geklikt"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "<i class=\"fa fa-check-circle\"/> Opened"
+msgstr "<i class=\"fa fa-check-circle\"/> Geopend"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "<i class=\"fa fa-check-circle\"/> Replied"
+msgstr "<i class=\"fa fa-check-circle\"/> Beantwoord"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid ""
+"<i class=\"fa fa-clock-o\" role=\"img\" aria-label=\"Select time\" "
+"title=\"Select time\"/>"
+msgstr ""
+"<i class=\"fa fa-clock-o\" role=\"img\" aria-label=\"Selecteer tijd\" "
+"title=\"Selecteer tijd\"/>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<i class=\"fa fa-envelope-open-o\"/> Not opened within"
+msgstr "<i class=\"fa fa-envelope-open-o\"/> Niet geopend binnen"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<i class=\"fa fa-envelope-open-o\"/> Opened after"
+msgstr "<i class=\"fa fa-envelope-open-o\"/> Geopend na"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<i class=\"fa fa-exclamation-circle\"/> Mail bounced after"
+msgstr "<i class=\"fa fa-exclamation-circle\"/> Mail bounced na"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<i class=\"fa fa-hand-pointer-o\"/> Clicked after"
+msgstr "<i class=\"fa fa-hand-pointer-o\"/> Geklikt na"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<i class=\"fa fa-hand-pointer-o\"/> Not clicked within"
+msgstr "<i class=\"fa fa-hand-pointer-o\"/> Niet geklikt binnen"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<i class=\"fa fa-pie-chart\"/> Email Details"
+msgstr "<i class=\"fa fa-pie-chart\"/> E-mailgegevens"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<i class=\"fa fa-plus-circle\"/> Add child activity"
+msgstr "<i class=\"fa fa-plus-circle\"/> Onderliggende activiteit toevoegen"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<i class=\"fa fa-reply\"/> Not replied within"
+msgstr "<i class=\"fa fa-reply\"/> Niet beantwoord binnen"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<i class=\"fa fa-reply\"/> Replied after"
+msgstr "<i class=\"fa fa-reply\"/> Beantwoord na"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid ""
+"<i data-type=\"act\" class=\"fa fa-code-fork fa-rotate-180 fa-flip-vertical "
+"o_ma_text_processed o_add_child\" title=\"Add Another Activity\" "
+"role=\"img\" aria-label=\"Add Another Activity\"/>"
+msgstr ""
+"<i data-type=\"act\" class=\"fa fa-code-fork fa-rotate-180 fa-flip-vertical "
+"o_ma_text_processed o_add_child\" title=\"Nog een activiteit toevoegen\" "
+"role=\"img\" aria-label=\"Nog een activiteit toevoegen\"/>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid ""
+"<i data-type=\"mail_open\" class=\"fa fa-envelope-open-o o_ma_text_processed o_add_child\" title=\"Mail Opened\" role=\"img\" aria-label=\"Mail Opened\"/>\n"
+"                                                            <i data-type=\"mail_not_open\" class=\"fa fa-envelope-open-o o_ma_text_rejected o_add_child\" title=\"Mail not Opened\" role=\"img\" aria-label=\"Mail not Opened\"/>\n"
+"                                                            <i data-type=\"mail_reply\" class=\"fa fa-reply o_ma_text_processed o_add_child\" title=\"Mail Replied\" role=\"img\" aria-label=\"Mail Replied\"/>\n"
+"                                                            <i data-type=\"mail_not_reply\" class=\"fa fa-reply o_ma_text_rejected o_add_child\" title=\"Mail not Replied\" role=\"img\" aria-label=\"Mail not Replied\"/>\n"
+"                                                            <i data-type=\"mail_click\" class=\"fa fa-hand-pointer-o o_ma_text_processed o_add_child\" title=\"Mail Clicked\" role=\"img\" aria-label=\"Mail Clicked\"/>\n"
+"                                                            <i data-type=\"mail_not_click\" class=\"fa fa-hand-pointer-o o_ma_text_rejected o_add_child\" title=\"Mail not Clicked\" role=\"img\" aria-label=\"Mail not Clicked\"/>\n"
+"                                                            <i data-type=\"mail_bounce\" class=\"fa fa fa-exclamation-circle o_ma_text_rejected o_add_child\" title=\"Mail Bounced\" role=\"img\" aria-label=\"Mail Bounced\"/>"
+msgstr ""
+"<i data-type=\"mail_open\" class=\"fa fa-envelope-open-o o_ma_text_processed o_add_child\" title=\"E-mail geopend\" role=\"img\" aria-label=\"E-mail geopend\"/>\n"
+"                                                            <i data-type=\"mail_not_open\" class=\"fa fa-envelope-open-o o_ma_text_rejected o_add_child\" title=\"E-mail niet geopend\" role=\"img\" aria-label=\"E-mail niet geopend\"/>\n"
+"                                                            <i data-type=\"mail_reply\" class=\"fa fa-reply o_ma_text_processed o_add_child\" title=\"Mail Replied\" role=\"img\" aria-label=\"Mail Replied\"/>\n"
+"                                                            <i data-type=\"mail_not_reply\" class=\"fa fa-reply o_ma_text_rejected o_add_child\" title=\"E-mail niet beantwoord\" role=\"img\" aria-label=\"E-mail niet beantwoord\"/>\n"
+"                                                            <i data-type=\"mail_click\" class=\"fa fa-hand-pointer-o o_ma_text_processed o_add_child\" title=\"E-mail geklikt\" role=\"img\" aria-label=\"E-mail geklikt\"/>\n"
+"                                                            <i data-type=\"mail_not_click\" class=\"fa fa-hand-pointer-o o_ma_text_rejected o_add_child\" title=\"E-mail niet geklikt\" role=\"img\" aria-label=\"E-mail niet geklikt\"/>\n"
+"                                                            <i data-type=\"mail_bounce\" class=\"fa fa fa-exclamation-circle o_ma_text_rejected o_add_child\" title=\"E-mail bounched\" role=\"img\" aria-label=\"E-mail bounched\"/>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid ""
+"<small class=\"oe_edit_only text-muted\" attrs=\"{'invisible': "
+"[('trigger_type', '=', 'begin')]}\">(save the campaign to make its "
+"activities selectable)</small>"
+msgstr ""
+"<small class=\"oe_edit_only text-muted\" attrs=\"{'invisible': "
+"[('trigger_type', '=', 'begin')]}\">(Sla de campagne op om de activiteiten "
+"te kunnen selecteren)</small>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<span class=\"ml8\">after</span>"
+msgstr "<span class=\"ml8\">na</span>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<span class=\"o_form_label\" invisible=\"1\">Warning</span>"
+msgstr "<span class=\"o_form_label\" invisible=\"1\">Waarschuwing</span>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "<span class=\"o_form_label\">Record</span>"
+msgstr "<span class=\"o_form_label\">Record</span>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<span class=\"oe_edit_only\">Name</span>"
+msgstr "<span class=\"oe_edit_only\">Naam</span>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid ""
+"<span data-mode=\"graph\" class=\"active\" role=\"img\" title=\"Graph\" "
+"aria-label=\"Graph\"><i class=\"fa fa-pie-chart\"/></span><span data-"
+"mode=\"filter\" title=\"Filter\" role=\"img\" aria-label=\"Filter\"><i "
+"class=\"fa fa-filter\"/></span>"
+msgstr ""
+"<span data-mode=\"graph\" class=\"active\" role=\"img\" title=\"Grafiek\" "
+"aria-label=\"Grafiek\"><i class=\"fa fa-pie-chart\"/></span><span data-"
+"mode=\"filter\" title=\"Filter\" role=\"img\" aria-label=\"Filter\"><i "
+"class=\"fa fa-filter\"/></span>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_kanban
+msgid "<span>Completed</span>"
+msgstr "<span>Voltooid</span>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_kanban
+msgid "<span>Running</span>"
+msgstr "<span>In uitvoering</span>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_kanban
+msgid "<span>Total</span>"
+msgstr "<span>Totaal</span>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "<strong>The workflow has been modified!</strong>"
+msgstr "<strong>De workflow is aangepast!</strong>"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__trace_ids
+msgid "Actions"
+msgstr "Acties"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__active
+msgid "Active"
+msgstr "Actief"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__marketing_activity_ids
+msgid "Activities"
+msgstr "Activiteiten"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__parent_id
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__activity_id
+msgid "Activity"
+msgstr "Activiteit"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__activity_type
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__activity_type
+msgid "Activity Type"
+msgstr "Soort activiteit"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Activity will allow to send mail or perform actions."
+msgstr "Met activiteit kunt u e-mails sturen of acties ondernemen."
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_marketing_activity__domain
+msgid "Activity will only be performed if record satisfies this domain"
+msgstr ""
+"Activiteit wordt alleen uitgevoerd als het record voldoet aan de eisen van "
+"dit domein"
+
+#. module: marketing_automation
+#: model:mail.mass_mailing,name:marketing_automation.mass_mailing_after_7_days
+#: model:utm.source,name:marketing_automation.mass_mailing_after_7_days_utm_source
+msgid "After 7 days"
+msgstr "Na 7 dagen"
+
+#. module: marketing_automation
+#: model:marketing.activity,name:marketing_automation.marketing_activity_2
+#: model:utm.source,name:marketing_automation.marketing_activity_2_utm_source
+msgid "After 7 days (if not yet customers)"
+msgstr "Na 7 dagen (indien het nog geen klant is)"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_search
+msgid "Archived"
+msgstr "Gearchiveerd"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.mass_mailing_view_form_marketing_activity
+msgid "Attach a file"
+msgstr "Bijlage toevoegen"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid ""
+"Be aware that participants that had no more activities could be reintroduced"
+" into the campaign and new traces could be created for them."
+msgstr ""
+"Deelnemers die geen activiteiten meer hebben kunnen opnieuw in de campagne "
+"worden gezet en er kunnen nieuwe traceringen voor hen worden aangemaakt."
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__bounced
+msgid "Bounced"
+msgstr "Niet verzonden"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__campaign_id
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__campaign_id
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_tree
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_search
+msgid "Campaign"
+msgstr "Campagne"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__name
+msgid "Campaign Name"
+msgstr "Campagnenaam"
+
+#. module: marketing_automation
+#: model:ir.actions.act_window,name:marketing_automation.marketing_campaign_action
+#: model:ir.ui.menu,name:marketing_automation.marketing_campaign_menu
+msgid "Campaigns"
+msgstr "Campagnes"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: marketing_automation
+#: selection:marketing.trace,state:0
+msgid "Canceled"
+msgstr "Geannuleerd"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__child_ids
+msgid "Child Activities"
+msgstr "Onderliggende activiteiten"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Click here to add new activity"
+msgstr "Klik hier om een nieuwe activiteit toe te voegen"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Click on 'Edit' button to add new activity in workflow."
+msgstr ""
+"Klik op de knop 'Bewerken' om een nieuwe activiteit toe te voegen in de "
+"workflow."
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__clicked
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Clicked"
+msgstr "Geklikt"
+
+#. module: marketing_automation
+#: model:marketing.campaign,name:marketing_automation.marketing_campaign_1
+#: model:utm.campaign,name:marketing_automation.marketing_campaign_1_utm_campaign
+msgid "Commercial prospection"
+msgstr "Commercieel voorstel"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_search
+#: selection:marketing.participant,state:0
+msgid "Completed"
+msgstr "Voltooid"
+
+#. module: marketing_automation
+#: model:ir.ui.menu,name:marketing_automation.marketing_automation_configuration_menu
+msgid "Configuration"
+msgstr "Instellingen"
+
+#. module: marketing_automation
+#: model_terms:ir.actions.act_window,help:marketing_automation.marketing_campaign_action
+msgid "Create a new campaign"
+msgstr "Nieuwe campagne aanmaken"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__create_uid
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__create_uid
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__create_uid
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__create_date
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__create_date
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__create_date
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_marketing_trace__exception
+msgid "Date of technical error leading to the email not being sent"
+msgstr "Datum van de technische fout waardoor de e-mail niet is verstuurd"
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_marketing_trace__clicked
+msgid "Date when customer clicked on at least one tracked link"
+msgstr "Datum dat klant op ten minste één getraceerde link heeft geklikt"
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_marketing_trace__opened
+msgid "Date when the email has been opened the first time"
+msgstr "Datum waarop de e-mail voor het eerst is geopend"
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_marketing_trace__sent
+msgid "Date when the email has been sent"
+msgstr "Datum waarop de e-mail is verstuurd"
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_marketing_trace__replied
+msgid "Date when this email has been replied for the first time."
+msgstr "Datum waarop de e-mail voor het eerst is beantwoord."
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_marketing_trace__bounced
+msgid "Date when this email has bounced."
+msgstr "Datum waarop de e-mail is teruggekaatst."
+
+#. module: marketing_automation
+#: selection:marketing.activity,interval_type:0
+#: selection:marketing.activity,validity_duration_type:0
+msgid "Days"
+msgstr "Dagen"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__interval_type
+msgid "Delay Type"
+msgstr "Soort vertraging"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Delete"
+msgstr "Verwijderen"
+
+#. module: marketing_automation
+#. openerp-web
+#: code:addons/marketing_automation/static/src/js/marketing_automation_one2many.js:166
+#, python-format
+msgid "Delete Activity"
+msgstr "Activiteit verwijderen"
+
+#. module: marketing_automation
+#. openerp-web
+#: code:addons/marketing_automation/static/src/js/marketing_automation_one2many.js:168
+#, python-format
+msgid "Delete All"
+msgstr "Alles verwijderen"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__child_ids
+msgid "Direct child traces"
+msgstr "Onderliggende traceringen sturen"
+
+#. module: marketing_automation
+#. openerp-web
+#: code:addons/marketing_automation/static/src/js/marketing_automation_one2many.js:173
+#, python-format
+msgid "Discard"
+msgstr "Negeren"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__display_name
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__display_name
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__display_name
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__res_id
+msgid "Document ID"
+msgstr "Document-ID"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Domain"
+msgstr "Domein"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Don't update"
+msgstr "Niet bijwerken"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Edit"
+msgstr "Bewerken"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+#: selection:marketing.activity,activity_type:0
+msgid "Email"
+msgstr "E-mail"
+
+#. module: marketing_automation
+#: model:ir.model,name:marketing_automation.model_mail_mail_statistics
+msgid "Email Statistics"
+msgstr "E-mailstatistieken"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__mass_mailing_id
+msgid "Email Template"
+msgstr "E-mailsjabloon"
+
+#. module: marketing_automation
+#: model:ir.model,name:marketing_automation.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Wizard e-mail opstellen"
+
+#. module: marketing_automation
+#: selection:marketing.trace,state:0
+msgid "Error"
+msgstr "Fout"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__state_msg
+msgid "Error message"
+msgstr "Foutmelding"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:324
+#, python-format
+msgid "Error! You can't create recursive hierarchy of Activity."
+msgstr ""
+"Fout. Het is niet toegestaan om een recursieve hiërarchie te maken van "
+"activiteit."
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:330
+#, python-format
+msgid ""
+"Error! You can't define a child activity with a trigger of type \"beginning "
+"of campaign\"."
+msgstr ""
+"Fout! U kan geen onderliggende activiteit definiëren met een een trigger van"
+" de soort 'begin van campagne\"."
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__exception
+msgid "Exception"
+msgstr "Fout"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:541
+#, python-format
+msgid "Exception in mass mailing: %s"
+msgstr "Fout bij bulkmailing: %s"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:511
+#, python-format
+msgid "Exception in server action: %s"
+msgstr "Fout bij serveractie: %s"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Execute Activities"
+msgstr "Activiteiten uitvoeren"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__domain
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__domain
+msgid "Filter"
+msgstr "Filter"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Generate Participants"
+msgstr "Deelnemers genereren"
+
+#. module: marketing_automation
+#: selection:marketing.activity,interval_type:0
+#: selection:marketing.activity,validity_duration_type:0
+msgid "Hours"
+msgstr "Uren"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__id
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__id
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__id
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__id
+msgid "ID"
+msgstr "ID"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "It will be generated automatically once you save this record."
+msgstr "Deze wordt automatisch gegenereerd wanneer u dit record opslaat."
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Last 15 Days"
+msgstr "Afgelopen 15 dagen"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity____last_update
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign____last_update
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant____last_update
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__write_uid
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__write_uid
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__write_uid
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__write_date
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__write_date
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__write_date
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__last_sync_date
+msgid "Last activities synchronization"
+msgstr "Meest recente synchronisatie van activiteiten"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Launch a Test"
+msgstr "Test starten"
+
+#. module: marketing_automation
+#: model:ir.actions.act_window,name:marketing_automation.marketing_participant_action_launch_test
+msgid "Launch a test"
+msgstr "Test starten"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.mass_mailing_view_form_marketing_activity
+msgid "Mail Body"
+msgstr "Berichttekst"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.mass_mailing_view_form_marketing_activity
+msgid "Mail Template"
+msgstr "E-mailsjabloon"
+
+#. module: marketing_automation
+#: selection:marketing.activity,trigger_type:0
+msgid "Mail: bounced"
+msgstr "E-mail: teruggekaatst"
+
+#. module: marketing_automation
+#: selection:marketing.activity,trigger_type:0
+msgid "Mail: clicked"
+msgstr "E-mail: geklikt"
+
+#. module: marketing_automation
+#: selection:marketing.activity,trigger_type:0
+msgid "Mail: not clicked"
+msgstr "E-mail: niet geklikt"
+
+#. module: marketing_automation
+#: selection:marketing.activity,trigger_type:0
+msgid "Mail: not opened"
+msgstr "E-mail: niet geopend"
+
+#. module: marketing_automation
+#: selection:marketing.activity,trigger_type:0
+msgid "Mail: not replied"
+msgstr "E-mail: niet beantwoord"
+
+#. module: marketing_automation
+#: selection:marketing.activity,trigger_type:0
+msgid "Mail: opened"
+msgstr "E-mail: geopend"
+
+#. module: marketing_automation
+#: selection:marketing.activity,trigger_type:0
+msgid "Mail: replied"
+msgstr "E-mail: beantwoord"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.mass_mailing_view_form_marketing_activity
+msgid "Mailing"
+msgstr "Mailing"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Mails sent and not bounced"
+msgstr "Mail verstuurt en niet gebounced"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_participant.py:149
+#, python-format
+msgid "Manually"
+msgstr "Handmatig"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Mark as completed"
+msgstr "Markeren als voltooid"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_participant.py:93
+#, python-format
+msgid "Marked as completed"
+msgstr "Als voltooid gemarkeerd"
+
+#. module: marketing_automation
+#: model:ir.model,name:marketing_automation.model_marketing_activity
+#: model:ir.model.fields,field_description:marketing_automation.field_account_invoice_send__marketing_activity_id
+#: model:ir.model.fields,field_description:marketing_automation.field_mail_compose_message__marketing_activity_id
+#: model:ir.model.fields,field_description:marketing_automation.field_survey_mail_compose_message__marketing_activity_id
+msgid "Marketing Activity"
+msgstr "Marketingactiviteit"
+
+#. module: marketing_automation
+#: model:ir.module.category,name:marketing_automation.module_marketing_automation_category
+#: model:ir.ui.menu,name:marketing_automation.marketing_automation_menu
+msgid "Marketing Automation"
+msgstr "Marketing"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:537
+#, python-format
+msgid "Marketing Automation: activity <%s> encountered mass mailing issue %s"
+msgstr ""
+"Marketing Automatisering: bij activiteit <%s> is een probleem bij "
+"bulkmailing opgetreden %s"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:507
+#, python-format
+msgid "Marketing Automation: activity <%s> encountered server action issue %s"
+msgstr ""
+"Marketing Automatisering: bij activiteit <%s> is een probleem bij een "
+"serveractie opgetreden %s"
+
+#. module: marketing_automation
+#: model:ir.actions.server,name:marketing_automation.ir_cron_campaign_execute_activities_ir_actions_server
+#: model:ir.cron,cron_name:marketing_automation.ir_cron_campaign_execute_activities
+#: model:ir.cron,name:marketing_automation.ir_cron_campaign_execute_activities
+msgid "Marketing Automation: execute activities"
+msgstr "Marketing Automatisering: activiteiten uitvoeren"
+
+#. module: marketing_automation
+#: model:ir.actions.server,name:marketing_automation.ir_cron_campaign_sync_participants_ir_actions_server
+#: model:ir.cron,cron_name:marketing_automation.ir_cron_campaign_sync_participants
+#: model:ir.cron,name:marketing_automation.ir_cron_campaign_sync_participants
+msgid "Marketing Automation: sync participants"
+msgstr "Marketing Automatisering: deelnemers synchroniseren"
+
+#. module: marketing_automation
+#: model:ir.model,name:marketing_automation.model_marketing_campaign
+msgid "Marketing Campaign"
+msgstr "Marketingcampagne"
+
+#. module: marketing_automation
+#: model:ir.model,name:marketing_automation.model_marketing_participant
+msgid "Marketing Participant"
+msgstr "Marketingdeelnemer"
+
+#. module: marketing_automation
+#: model:ir.model,name:marketing_automation.model_marketing_trace
+#: model:ir.model.fields,field_description:marketing_automation.field_mail_mail_statistics__marketing_trace_id
+msgid "Marketing Trace"
+msgstr "Marketingtracering"
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_mail_mass_mailing__use_in_marketing_automation
+msgid ""
+"Marketing campaigns use mass mailings with some specific behavior; this "
+"field is used to indicate its statistics may be suspicious."
+msgstr ""
+"Marketingcampagnes gebruiken bulkmailing met enkele specifieke gedragingen. "
+"Dit veld wordt gebruikt om aan te geven dat de statistieken verdacht kunnen "
+"zijn."
+
+#. module: marketing_automation
+#: model:ir.model,name:marketing_automation.model_mail_mass_mailing
+msgid "Mass Mailing"
+msgstr "Bulkmailing"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__mail_statistics_ids
+msgid "Mass mailing statistics"
+msgstr "Bulkmailstatistieken"
+
+#. module: marketing_automation
+#: model:ir.actions.server,name:marketing_automation.ir_action_server_action_message_sales_person
+#: model:marketing.activity,name:marketing_automation.marketing_activity_3
+#: model:utm.source,name:marketing_automation.marketing_activity_3_utm_source
+msgid "Message for sales person"
+msgstr "Bericht voor verkoper"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__model_id
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__model_id
+msgid "Model"
+msgstr "Model"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__model_name
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__model_name
+msgid "Model Name"
+msgstr "Modelnaam"
+
+#. module: marketing_automation
+#: selection:marketing.activity,interval_type:0
+#: selection:marketing.activity,validity_duration_type:0
+msgid "Months"
+msgstr "Maanden"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Name"
+msgstr "Naam"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_search
+#: selection:marketing.campaign,state:0
+msgid "New"
+msgstr "Nieuw"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "No activity"
+msgstr "Geen activiteit"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "No activity added"
+msgstr "Geen activiteit toegevoegd"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Non email activity"
+msgstr "Geen e-mail activiteit"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Not clicked yet"
+msgstr "Nog niet geklikt"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Not opened yet"
+msgstr "Nog niet geopend"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Not replied yet"
+msgstr "Nog niet geantwoord"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__model_id
+msgid "Object"
+msgstr "Object"
+
+#. module: marketing_automation
+#: model:mail.mass_mailing,name:marketing_automation.mass_mailing_offer_free_trial
+#: model:marketing.activity,name:marketing_automation.marketing_activity_1
+#: model:utm.source,name:marketing_automation.marketing_activity_1_utm_source
+#: model:utm.source,name:marketing_automation.mass_mailing_offer_free_trial_utm_source
+msgid "Offer free catalog"
+msgstr "Gratis catalogus aanbieden"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__opened
+msgid "Opened"
+msgstr "Geopend"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.mass_mailing_view_form_marketing_activity
+msgid "Options"
+msgstr "Opties"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__parent_id
+msgid "Parent"
+msgstr "Bovenliggend"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_participant.py:179
+#, python-format
+msgid "Parent activity mail bounced"
+msgstr "E-mail bovenliggende activiteit teruggekaatst"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_participant.py:177
+#, python-format
+msgid "Parent activity mail clicked"
+msgstr "E-mail bovenliggende activiteit aangeklikt"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_participant.py:178
+#, python-format
+msgid "Parent activity mail opened"
+msgstr "E-mail bovenliggende activiteit geopend"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_participant.py:176
+#, python-format
+msgid "Parent activity mail replied"
+msgstr "E-mail bovenliggende activiteit beantwoord"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__participant_id
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_tree
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_trace_view_form
+msgid "Participant"
+msgstr "Deelnemer"
+
+#. module: marketing_automation
+#: model:ir.actions.act_window,name:marketing_automation.marketing_participants_action
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__participant_ids
+#: model:ir.ui.menu,name:marketing_automation.marketing_participants_menu
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Participants"
+msgstr "Deelnemers"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Perform"
+msgstr "Uitvoeren"
+
+#. module: marketing_automation
+#. openerp-web
+#: code:addons/marketing_automation/static/src/js/marketing_automation_one2many.js:189
+#, python-format
+msgid "Please save the campaign to add a child activity"
+msgstr ""
+"U dient deze campagne te bewaren om een onderliggende activiteit toe te "
+"voegen"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Please save the campaign to add child activity"
+msgstr "Sla de campagne op om een onderliggende activiteit toe te voegen"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__processed
+#: selection:marketing.trace,state:0
+msgid "Processed"
+msgstr "Verwerkt"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "REJECTED"
+msgstr "AFGEWEZEN"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.mass_mailing_view_form_marketing_activity
+msgid "Recipients"
+msgstr "Ontvangers"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__resource_ref
+msgid "Record"
+msgstr "Record"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__res_id
+msgid "Record ID"
+msgstr "Record-ID"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_participant.py:106
+#, python-format
+msgid "Record deleted"
+msgstr "Record verwijderd"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__model_name
+msgid "Record model"
+msgstr "Recordmodel"
+
+#. module: marketing_automation
+#: model:ir.actions.act_window,name:marketing_automation.marketing_participant_action
+msgid "Records"
+msgstr "Records"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:313
+#: code:addons/marketing_automation/models/marketing_campaign.py:413
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__rejected
+#: selection:marketing.trace,state:0
+#, python-format
+msgid "Rejected"
+msgstr "Afgewezen"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:486
+#, python-format
+msgid "Rejected by activity filter or record deleted / archived"
+msgstr "Afgewezen door activiteitsfilter of record verwijderd / gearchiveerd"
+
+#. module: marketing_automation
+#: selection:marketing.participant,state:0
+msgid "Removed"
+msgstr "Verwijderd"
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_marketing_participant__state
+msgid "Removed means the related record does not exist anymore."
+msgstr "Verwijderd houdt in dat het gerelateerde record niet meer bestaat."
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__replied
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Replied"
+msgstr "Beantwoord"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__require_sync
+msgid "Require trace sync"
+msgstr "Traceringssynchronisatie vereist"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Resource ID"
+msgstr "Resource-ID"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_search
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_tree
+msgid "Resource Name"
+msgstr "Resourcenaam"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Run"
+msgstr "Uitvoeren"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_search
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_search
+#: selection:marketing.campaign,state:0
+#: selection:marketing.participant,state:0
+msgid "Running"
+msgstr "Actief"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "SUCCESS"
+msgstr "SUCCES"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__schedule_date
+msgid "Schedule Date"
+msgstr "Geplande datum"
+
+#. module: marketing_automation
+#: selection:marketing.trace,state:0
+msgid "Scheduled"
+msgstr "Gepland"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_search
+msgid "Search Campaign"
+msgstr "Campagne zoeken"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_search
+msgid "Search Participants"
+msgstr "Deelnemers zoeken"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__interval_number
+msgid "Send after"
+msgstr "Verzenden na"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__interval_standardized
+msgid "Send after (in hours)"
+msgstr "Verzenden na (in uren)"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__sent
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Sent"
+msgstr "Verzonden"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__server_action_id
+#: selection:marketing.activity,activity_type:0
+msgid "Server Action"
+msgstr "Serveractie"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid ""
+"Some participants are already running on this campaign. Click on 'Update' to"
+" apply the modifications you've just made."
+msgstr ""
+"Sommige deelnemers zijn al in behandeling bij deze campagne. Klik op "
+"'Bijwerken' om de aanpassingen die u net hebt gemaakt door te voeren."
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__utm_source_id
+msgid "Source"
+msgstr "Bron"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__name
+msgid "Source Name"
+msgstr "Naam van bron"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_mail_mass_mailing__use_in_marketing_automation
+msgid "Specific mailing used in marketing campaign"
+msgstr "Specifieke mailing gebruikt in marketingcampagnes"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Start"
+msgstr "Start"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__state
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__state
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__state
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_search
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_search
+msgid "State"
+msgstr "Status"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "State: #{record.state.raw_value}"
+msgstr "Status: #{record.state.raw_value}"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__statistics_graph_data
+msgid "Statistics Graph Data"
+msgstr "Gegevens statistiekgrafiek"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Stop"
+msgstr "Stoppen"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_search
+#: selection:marketing.campaign,state:0
+msgid "Stopped"
+msgstr "Gestopt"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.mass_mailing_view_form_marketing_activity
+msgid "Subject"
+msgstr "Onderwerp"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:312
+#: code:addons/marketing_automation/models/marketing_campaign.py:412
+#, python-format
+msgid "Success"
+msgstr "Succes"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__require_sync
+msgid "Sync of participants is required"
+msgstr "Synchronisatie van deelnemers is vereist"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Target Model"
+msgstr "Doelmodel"
+
+#. module: marketing_automation
+#. openerp-web
+#: code:addons/marketing_automation/static/src/js/marketing_automation_one2many.js:177
+#, python-format
+msgid ""
+"This Activity has a dependant child activity. 'DELETE ALL' will delete all "
+"child activities."
+msgstr ""
+"Deze activiteit heeft afhankelijke onderliggende activiteit. 'ALLES "
+"VERWIJDEREN'  zal alle onderliggende activiteiten verwijderen."
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:533
+#, python-format
+msgid ""
+"To use this feature you should be an administrator or belong to the "
+"marketing automation group."
+msgstr ""
+"Om deze feature te gebruiken moet je een administrator zijn of toebehoren "
+"aan de marketing automatisering groep."
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_bounce
+msgid "Total Bounce"
+msgstr "Totaal bounced"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_click
+msgid "Total Click"
+msgstr "Totaal geklikt"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_open
+msgid "Total Open"
+msgstr "Totaal geopend"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_reply
+msgid "Total Reply"
+msgstr "Totaal beantwoorde"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_sent
+msgid "Total Sent"
+msgstr "Totaal verzonden"
+
+#. module: marketing_automation
+#: model:ir.actions.act_window,name:marketing_automation.marketing_trace_action
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__trace_ids
+#: model:ir.ui.menu,name:marketing_automation.marketing_trace_menu
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_trace_view_tree
+msgid "Traces"
+msgstr "Traceringen"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__trigger_type
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__trigger_type
+msgid "Trigger Type"
+msgstr "Soort trigger"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__utm_campaign_id
+msgid "UTM Campaign"
+msgstr "UTM-campagne"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__unique_field_id
+msgid "Unique Field"
+msgstr "Uniek veld"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Update"
+msgstr "Bijwerken"
+
+#. module: marketing_automation
+#: model:ir.model.fields,help:marketing_automation.field_marketing_campaign__unique_field_id
+msgid ""
+"Used to avoid duplicates based on model field.\n"
+"e.g.\n"
+"                For model 'Customers', select email field here if you don't\n"
+"                want to process records which have the same email address"
+msgstr ""
+"Wordt gebruikt om kopieën op basis van modelveld te voorkomen.\n"
+"Bijvoorbeeld:\n"
+"                Selecteer hier voor het model Klanten een e-mailveld als u\n"
+"                geen records met hetzelfde e-mailadres wil verwerken"
+
+#. module: marketing_automation
+#: model:res.groups,name:marketing_automation.group_marketing_automation_user
+msgid "User"
+msgstr "Gebruiker"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__validity_duration_number
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Valid during"
+msgstr "Geldig voor"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__validity_duration
+msgid "Validity Duration"
+msgstr "Geldigheidsduur"
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__validity_duration_type
+msgid "Validity Duration Type"
+msgstr "Soort geldigheidsduur"
+
+#. module: marketing_automation
+#: selection:marketing.activity,interval_type:0
+#: selection:marketing.activity,validity_duration_type:0
+msgid "Weeks"
+msgstr "Weken"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Workflow"
+msgstr "Workflow"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
+msgid "Workflow Started On"
+msgstr "Workflow gestart op"
+
+#. module: marketing_automation
+#: code:addons/marketing_automation/models/marketing_campaign.py:156
+#, python-format
+msgid "You must set up at least one activity to start this campaign."
+msgstr ""
+"U moet ten minste één activiteit instellen om deze campagne te starten."
+
+#. module: marketing_automation
+#: selection:marketing.activity,trigger_type:0
+msgid "another activity"
+msgstr "andere activiteit"
+
+#. module: marketing_automation
+#: selection:marketing.activity,trigger_type:0
+msgid "beginning of campaign"
+msgstr "begin van campagne"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "e.g. eCommerce Offers"
+msgstr "Bijvoorbeeld E-commerceaanbiedingen"

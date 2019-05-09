@@ -1,0 +1,465 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_mps
+# 
+# Translators:
+# Martin Trigaux, 2019
+# Vladimir Olujić <olujic.vladimir@storm.hr>, 2019
+# Đurđica Žarković <durdica.zarkovic@storm.hr>, 2019
+# Ivica Dimjašević <ivica.dimjasevic@storm.hr>, 2019
+# Karolina Tonković <karolina.tonkovic@storm.hr>, 2019
+# Ana-Maria Olujić <ana-maria.olujic@slobodni-programi.hr>, 2019
+# Tina Milas, 2019
+# Bole <bole@dajmi5.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-15 15:18+0000\n"
+"PO-Revision-Date: 2018-08-24 11:38+0000\n"
+"Last-Translator: Bole <bole@dajmi5.com>, 2019\n"
+"Language-Team: Croatian (https://www.transifex.com/odoo/teams/41243/hr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "&lt;&amp;hellip;&lt;"
+msgstr "&lt;&amp;hellip;&lt;"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "<span class=\"fa fa-fw\">-</span> Demand Forecast"
+msgstr ""
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "<span class=\"fa fa-fw\">-</span> Indirect Demand"
+msgstr ""
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid ""
+"<span class=\"fa fa-fw\">=</span> \n"
+"                                    Forecasted Inventory"
+msgstr ""
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid ""
+"<span class=\"fa fa-map-marker text-muted fa-fw\" role=\"img\" aria-"
+"label=\"Forecasted\" title=\"Forecasted\"/>"
+msgstr ""
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "<span class=\"text-muted\"> by</span>"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product__mps_active
+msgid "Active in MPS"
+msgstr ""
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_report_view_form
+msgid "Add Product"
+msgstr "Dodaj proizvod"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:185
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+#, python-format
+msgid "Add a Product"
+msgstr "Dodaj proizvod"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "Apply"
+msgstr "Primijeni"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product__apply_active
+msgid "Apply Active"
+msgstr ""
+
+#. module: mrp_mps
+#: selection:sale.forecast,mode:0
+msgid "Automatic"
+msgstr "Automatski"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_report_view_form
+#: model_terms:ir.ui.view,arch_db:mrp_mps.product_product_view_form_mps
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report__create_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__create_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report__create_date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__create_date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__create_date
+msgid "Created on"
+msgstr "Kreirano"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:15
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:20
+#: selection:mrp.mps.report,period:0
+#: selection:res.company,manufacturing_period:0
+#, python-format
+msgid "Daily"
+msgstr "Dnevno"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__date
+msgid "Date"
+msgstr "Datum"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_sale_forecast__product_uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_res_company__manufacturing_period
+#: model:ir.model.fields,help:mrp_mps.field_res_config_settings__manufacturing_period
+msgid ""
+"Default value for the time ranges in Master Production Schedule report."
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:35
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__forecast_qty
+#, python-format
+msgid "Demand Forecast"
+msgstr "Zahtjevaj predviđanje"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report__display_name
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__display_name
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__display_name
+msgid "Display Name"
+msgstr "Naziv za prikaz"
+
+#. module: mrp_mps
+#: selection:sale.forecast,state:0
+msgid "Done"
+msgstr "Riješeno"
+
+#. module: mrp_mps
+#: selection:sale.forecast,state:0
+msgid "Forecast"
+msgstr "Predviđanje"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:50
+#, python-format
+msgid "Forecast Inventory"
+msgstr "Predvidi inventuru"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:212
+#: model_terms:ir.ui.view,arch_db:mrp_mps.product_product_view_form_mps
+#, python-format
+msgid "Forecast Product"
+msgstr "Predvidi proizvod"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product__mps_forecasted
+msgid "Forecasted Target"
+msgstr "Predviđeni cilj"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report__id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_sale_forecast__to_supply
+msgid "If mode is Manual, this is the forced value"
+msgstr "Ako je način ručno, ovo je forsirana vrijednost"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:40
+#, python-format
+msgid "Indirect Demand"
+msgstr "Indirektna potražnja"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__quantity
+msgid "Indirect Quantity"
+msgstr "Indirektna količina"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_sale_forecast_indirect
+msgid "Indirect Sales Forecast"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report____last_update
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast____last_update
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect____last_update
+msgid "Last Modified on"
+msgstr "Zadnja promjena"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report__write_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__write_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__write_uid
+msgid "Last Updated by"
+msgstr "Promijenio"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report__write_date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__write_date
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__write_date
+msgid "Last Updated on"
+msgstr "Vrijeme promjene"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product__mps_apply
+msgid "Latest Apply"
+msgstr "Posljednje primjenjeno"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "Launch Procurement"
+msgstr "Pokreni nabavu"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:6
+#, python-format
+msgid "Launch green cells"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.ui.menu,name:mrp_mps.mrp_mps_menu_planning
+msgid "MPS"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_mrp_mps_report
+msgid "MPS Report"
+msgstr ""
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "MPS in Main Warehouse"
+msgstr ""
+
+#. module: mrp_mps
+#: selection:sale.forecast,mode:0
+msgid "Manual"
+msgstr "Ručno"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period
+#: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period
+msgid "Manufacturing Period"
+msgstr "Period proizvodnje"
+
+#. module: mrp_mps
+#: model:ir.actions.client,name:mrp_mps.mrp_mps_report_action_client
+#: model:ir.ui.menu,name:mrp_mps.mrp_mps_report_menu
+msgid "Master Production Schedule"
+msgstr "Glavni raspored proizvodnje"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product__mps_max_supply
+msgid "Maximum to Supply"
+msgstr "Maksimalno za opskrbu"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product__mps_min_supply
+msgid "Minimum to Supply"
+msgstr "Minimalno za opskrbu"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__mode
+msgid "Mode"
+msgstr "Način"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:13
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:18
+#: selection:mrp.mps.report,period:0
+#: selection:res.company,manufacturing_period:0
+#, python-format
+msgid "Monthly"
+msgstr "Mjesečno"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__product_origin_id
+msgid "Origin Product"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report__period
+msgid "Period"
+msgstr "Period"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:11
+#, python-format
+msgid "Period:"
+msgstr "Razdoblje:"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__group_id
+msgid "Procurement Group"
+msgstr "Grupa nabave"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_product_product
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_report__product_id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__product_id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__product_id
+#: model_terms:ir.ui.view,arch_db:mrp_mps.product_product_view_form_mps
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__product_uom_id
+msgid "Product UoM"
+msgstr "JM proizvoda"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__warehouse_id
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast_indirect__warehouse_id
+msgid "Production Location"
+msgstr "Lokacija proizvodnje"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:24
+#, python-format
+msgid "Rows"
+msgstr "Retci"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_sale_forecast
+msgid "Sales Forecast"
+msgstr ""
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.product_product_view_form_mps
+msgid "Save"
+msgstr "Spremi"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:30
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+#, python-format
+msgid "Starting Inventory"
+msgstr "Pokrećem inventuru"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__state
+msgid "State"
+msgstr "Stanje"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_stock_rule
+msgid "Stock Rule"
+msgstr ""
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.res_config_settings_view_form
+msgid "Time Range"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:45
+#, python-format
+msgid "To Produce"
+msgstr "Za proizvesti"
+
+#. module: mrp_mps
+#: code:addons/mrp_mps/models/mrp_mps_report.py:129
+#, python-format
+msgid "To Receive / To Supply / Produce"
+msgstr ""
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_sale_forecast__to_supply
+msgid "To Supply"
+msgstr "Za opskrbiti"
+
+#. module: mrp_mps
+#: code:addons/mrp_mps/models/mrp_mps_report.py:156
+#, python-format
+msgid "Week %s"
+msgstr ""
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:14
+#: code:addons/mrp_mps/static/src/xml/mps_backend.xml:19
+#: selection:mrp.mps.report,period:0
+#: selection:res.company,manufacturing_period:0
+#, python-format
+msgid "Weekly"
+msgstr "Tjedno"
+
+#. module: mrp_mps
+#. openerp-web
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:83
+#: code:addons/mrp_mps/static/src/js/mrp_mps_report_widget.js:228
+#, python-format
+msgid "Wrong value entered!"
+msgstr "Unesena pogrešna vrijednost!"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "double click in order to empty"
+msgstr "dvaput kliknite kako bi ispraznili"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "set min-max"
+msgstr "postavi min-max"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.report_inventory
+msgid "set target"
+msgstr "postavi cilj"

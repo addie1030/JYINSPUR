@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * timesheet_grid_sale
+# 
+# Translators:
+# Martin Trigaux, 2018
+# Grzegorz Grzelak <grzegorz.grzelak@openglobe.pl>, 2018
+# Tomasz Leppich <t.leppich@gmail.com>, 2018
+# Andrzej Donczew <a.donczew@hadron.eu.com>, 2018
+# Maksym <ms@myodoo.pl>, 2018
+# Paweł Wodyński <pw@myodoo.pl>, 2018
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-19 09:13+0000\n"
+"PO-Revision-Date: 2018-08-24 11:48+0000\n"
+"Last-Translator: Paweł Wodyński <pw@myodoo.pl>, 2018\n"
+"Language-Team: Polish (https://www.transifex.com/odoo/teams/41243/pl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. module: timesheet_grid_sale
+#: model_terms:ir.ui.view,arch_db:timesheet_grid_sale.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Invoicing Policy</span>"
+msgstr ""
+
+#. module: timesheet_grid_sale
+#: selection:res.config.settings,invoiced_timesheet:0
+msgid "All recorded timesheets"
+msgstr "Wszystkie zarejestrowane karty pracy"
+
+#. module: timesheet_grid_sale
+#: model:ir.model,name:timesheet_grid_sale.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "Pozycja analityczna"
+
+#. module: timesheet_grid_sale
+#: selection:res.config.settings,invoiced_timesheet:0
+msgid "Approved timesheets only"
+msgstr "Tylko zatwierdzone karty pracy"
+
+#. module: timesheet_grid_sale
+#: model:ir.model,name:timesheet_grid_sale.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ustawienia konfiguracji"
+
+#. module: timesheet_grid_sale
+#: model:ir.model,name:timesheet_grid_sale.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Pozycja faktury"
+
+#. module: timesheet_grid_sale
+#: model_terms:ir.ui.view,arch_db:timesheet_grid_sale.res_config_settings_view_form
+msgid "Record time spent and invoice it based on:"
+msgstr "Rejestruj spędzony czas i wystaw fakturę na podstawie:"
+
+#. module: timesheet_grid_sale
+#: model:ir.model,name:timesheet_grid_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Pozycja zlecenia sprzedaży"
+
+#. module: timesheet_grid_sale
+#: model:ir.model.fields,field_description:timesheet_grid_sale.field_res_config_settings__invoiced_timesheet
+msgid "Timesheets Invoicing"
+msgstr "Fakturowanie kart pracy"

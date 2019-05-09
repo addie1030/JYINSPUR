@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_partner_form_inherit_l10n_mx_edi" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Addenda" attrs="{'invisible': [('is_company', '=', False)]}">
+                        <group>
+                            <field name="l10n_mx_edi_addenda"/>
+                            <field name="l10n_mx_edi_addenda_doc" attrs="{'invisible': [('l10n_mx_edi_addenda', '=', False)]}"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="l10n_mx_edi_curp"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_account_fiscal_position_inh_l10n_mx" model="ir.ui.view">
+            <field name="name">view.account.fiscal.position.inh.l10n.mx</field>
+            <field name="model">account.fiscal.position</field>
+            <field name="inherit_id" ref="account.view_account_position_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="l10n_mx_edi_code"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

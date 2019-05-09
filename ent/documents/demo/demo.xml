@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+
+        <!-- folders -->
+
+        <record id="documents_marketing_brand1_folder" model="documents.folder">
+            <field name="parent_folder_id" ref="documents_marketing_folder"/>
+            <field name="name">Brand 1</field>
+        </record>
+
+         <record id="documents_marketing_brand2_folder" model="documents.folder">
+            <field name="parent_folder_id" ref="documents_marketing_folder"/>
+            <field name="name">Brand 2</field>
+        </record>
+
+        <!-- Attachments -->
+
+        <record id="documents_agile_url_demo" model="ir.attachment">
+            <field name="name">Agile and Open source project management video</field>
+            <field name="datas_fname">odoo agile Video</field>
+            <field name="type">url</field>
+            <field name="folder_id" ref="documents_internal_folder"/>
+            <field name="tag_ids" eval="[(6,0,[ref('documents_internal_knowledge_other')])]"/>
+            <field name="url">https://youtu.be/ZrFMphnpYpM</field>
+        </record>
+
+        <record id="documents_image_panama" model="ir.attachment">
+            <field name="name">panama</field>
+            <field name="datas_fname">panama-sky.jpg</field>
+            <field name="datas" type="base64" file="documents/demo/files/panama-sky.jpg"/>
+            <field name="folder_id" ref="documents_marketing_folder"/>
+            <field name="tag_ids" eval="[(6,0,[ref('documents_marketing_assets_images')])]"/>
+        </record>
+
+        <record id="documents_pdf_enterprise_agreement" model="ir.attachment">
+            <field name="name">Odoo Enterprise Agreement</field>
+            <field name="datas_fname">odoo-enterprise-agreement</field>
+            <field name="type">url</field>
+            <field name="folder_id" ref="documents_internal_folder"/>
+            <field name="tag_ids" eval="[(6,0,[ref('documents_internal_template_contracts')])]"/>
+            <field name="url">https://www.odoo.com/documentation/user/12.0/odoo_enterprise_agreement.pdf</field>
+        </record>
+
+    </data>
+</odoo>

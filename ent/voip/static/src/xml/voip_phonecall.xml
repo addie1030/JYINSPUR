@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<t t-name="voip.PhonecallWidget">
+  <div t-attf-class="o_dial_phonecall #{widget.state == 'done' &amp;&amp; !widget.isRecent ? 'o_dial_phonecall_done' : ''}" t-att-data-state="widget.state" t-att-data-id="widget.id">
+    <table t-attf-class="o_form_group #{widget.state == 'done' &amp;&amp; !widget.isRecent ? 'o_dial_phonecall_done' : ''}">
+      <tr class="o_form_group_row o_phonecall_widget">
+        <t t-if="widget.isContact">
+          <td class="o_form_group_cell o_form_group_cell_label">
+            <t t-if="widget.image_small">
+              <span class="o_dial_phonecall_clip">
+                <img t-att-src="'data:image/jpg;base64,'+widget.image_small" class="o_dial_phonecall_avatar" alt="Avatar"/>
+              </span>
+            </t>
+            <t t-else="">
+              <span class="o_dial_phonecall_clip">
+                <img t-att-src='_s + "/base/static/img/avatar.png"' class="o_dial_phonecall_avatar" alt="Avatar"/>
+              </span>
+            </t>
+          </td>
+        </t>
+        <td class="o_form_group_cell">
+            <div class="o_dial_phonecall_partner">
+                <div class="o_dial_phonecall_partner_name">
+                    <span><t t-esc="widget.partner_name"/></span>
+                </div>
+                <t t-if="widget.partner_name != widget.name and widget.name">
+                    <span><small><t t-esc="widget.short_name"/></small></span>
+                </t>
+                <t t-if="!widget.isContact &amp;&amp; !widget.isRecent">
+                    <span class="o_dial_status_span">
+                        <t t-if="widget.state == 'pending'" role="img" aria-label="Pending" title="Pending">
+                            <i class="fa fa-stack o_dial_state_icon o_dial_state_icon_pending" style="width:13px; height:15px;line-height: 13px;">
+                            <i class="fa fa-phone fa-stack-1x o_dial_state_icon"></i>
+                            <i class="fa fa-times fa-stack-1x o_dial_state_icon" style="color: LightCoral;font-size: 8px;left: 4px;position: relative;bottom: 4px;"></i>
+                            </i>
+                        </t>
+                        <a href="#">
+                            <t t-if="widget.state == 'done'">
+                                <i role="img" aria-label="Remove from the queue" title="Remove from the queue" class="o_dial_remove_phonecall fa fa-close"></i>
+                            </t>
+                            <t t-else="">
+                                <i role="img" aria-label="Cancel the activity" title="Cancel the activity" class="o_dial_remove_phonecall fa fa-close"></i>
+                            </t>
+                        </a>
+                    </span>
+                </t>
+                <div class="o_call_date">
+                    <t t-if="widget.date">
+                        <span><small><t t-esc="widget.date"/></small></span>
+                    </t>
+                    <t t-if="widget.state == 'done'">
+                        <span><small> | <t t-esc="widget.minutes"/>min <t t-esc="widget.seconds"/>sec</small></span>
+                    </t>
+                </div>
+            </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</t>
+
+<t t-name="voip.PhonecallDetails">
+  <div>
+    <div>
+      <i class="o_phonecall_details_close fa fa-angle-left fa-2x text-primary mt8 mb8" role="img" aria-label="Phonecall details" title="Phonecall details"></i>
+    </div>
+    <div class="o_phonecall_details">
+        <div class="row">
+            <div class="col-lg-12 mb16 text-center">
+                <t t-if="widget.image_small">
+                    <span class="o_dial_phonecall_clip">
+                        <img t-att-src="'data:image/jpg;base64,'+widget.image_small" class="o_dial_phonecall_avatar" alt="Avatar"/>
+                    </span>
+                </t>
+                <t t-else="">
+                    <span class="o_dial_phonecall_clip">
+                        <img t-att-src='_s + "/base/static/img/avatar.png"' class="o_dial_phonecall_avatar" alt="Avatar"/>
+                    </span>
+                </t>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <div class="o_dial_phonecall_partner_name"><span><t t-esc="widget.partner_name"/></span></div>
+                <div class="o_phonecall_in_call">
+                    <span class="o_dial_timer_minutes">00</span>:<span class="o_dial_timer_seconds">00</span>
+                </div>
+                <div class="o_call_date o_phonecall_info">
+                    <t t-if="widget.date">
+                        <span><small><t t-esc="widget.date"/></small></span><br/>
+                    </t>
+                    <t t-if="widget.state == 'done'">
+                        <span><small><t t-esc="widget.minutes"/>min <t t-esc="widget.seconds"/>sec</small></span>
+                    </t>
+                </div>
+            </div>
+        </div>
+        <div class="row o_phonecall_info text-center">
+            <div class="col-lg-12">
+                <t t-if="widget.partner_name != widget.name and widget.name">
+                    <div><span><t t-esc="widget.name"/></span></div>
+                </t>
+            </div>
+        </div>
+        <div class="row o_phonecall_info text-center">
+            <div class="col-lg-12">
+                <t t-if="widget.phone">
+                    <div><a href="#" class="o_dial_call_number"><t t-esc="widget.phone"/></a><br/></div>
+                </t>
+                <t t-if="widget.mobile">
+                    <div><a href="#" class="o_dial_call_number"><t t-esc="widget.mobile"/></a><br/></div>
+                </t>
+            </div>
+        </div>
+    </div>
+    <div class="o_dial_keypad_button_container">
+        <div class="o_row">
+            <div class="o_dial_keypad_button_small text-center">
+              <a href="#" class="o_dial_email">
+                <i class="fa fa-send-o fa-2x" aria-label="Send mail"></i><p class="feature text-center">Send mail</p>
+              </a>
+            </div>
+            <div class="o_dial_keypad_button_small text-center">
+              <a href="#" class="o_dial_to_partner">
+                <i class="fa fa-user fa-2x" aria-label="Customer"></i><p class="feature text-center">Customer</p>
+              </a>
+            </div>
+            <div t-if="widget.activity_res_id &amp;&amp; widget.activity_res_id != widget.partner_id" class="o_dial_keypad_button_small text-center">
+              <a href="#" class="o_dial_to_record">
+                <i role="img" class="fa fa-circle-o fa-2x" aria-label="Activity" title="Activity"></i><p class="feature text-center"><t t-esc="widget.activity_model_name"/></p>
+              </a>
+            </div>
+            <div t-if="widget.activity_res_id" class="o_dial_keypad_button_small text-center">
+              <a href="#" class="o_dial_reschedule_activity">
+                <i class="fa fa-calendar fa-2x" aria-label="Schedule Next"></i><p class="feature text-center">Schedule <br/> Next</p>
+              </a>
+            </div>
+        </div>
+        <div class="row" t-if="widget.activity_id">
+            <div class="o_dial_keypad_button_small col-4 text-center">
+              <a href="#" class="o_dial_log">
+                <i class="fa fa-pencil fa-2x" aria-label="Log"></i><p class="feature text-center">Log</p>
+              </a>
+            </div>
+            <div class="o_dial_keypad_button_small col-4 text-center">
+              <a href="#" class="o_dial_activity_done o_phonecall_activity_button">
+                <i class="fa fa-check fa-2x" aria-label="Mark as done"></i><p class="feature text-center">Mark as done</p>
+              </a>
+            </div>
+            <div class="o_dial_keypad_button_small col-4 text-center">
+              <a href="#" class="o_dial_activity_cancel o_phonecall_activity_button">
+                <i class="fa fa-close fa-2x" aria-label="Cancel"></i><p class="feature text-center">Cancel</p>
+              </a>
+            </div>
+        </div>
+        <div class="row o_phonecall_in_call">
+            <div class="o_dial_keypad_button_small col-6 text-center">
+              <button class="o_dial_keypad_button o_dial_transfer_button" title="Transfer" aria-label="Transfer">
+                <i class="fa fa-arrows-h fa-3x"></i>
+              </button>
+            </div>
+            <div class="o_dial_keypad_button_small col-6 text-center">
+              <button class="o_dial_keypad_button o_dial_mute_button" aria-label="Mute" title="Mute">
+                <i class="fa fa-microphone fa-3x"></i>
+              </button>
+            </div>
+        </div>
+    </div>
+  </div>
+</t>
+</templates>
