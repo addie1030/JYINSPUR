@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ps_stock_move_tree" model="ir.ui.view">
+        <field name="name">stock.move.tree</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="before">
+                <field name="quantity_done"/>
+                <field name="ps_order_price"/>
+                <field name="ps_order_amount"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="stock.quantsact">
+        <field name="context">{'search_default_internal_loc': 0, 'search_default_stockable': 1, 'group_by': ['product_id', 'location_id']}</field>
+        <field name="domain">[('location_id.usage','=', 'internal')]</field>
+    </record>
+</odoo>

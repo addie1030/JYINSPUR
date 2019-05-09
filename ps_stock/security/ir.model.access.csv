@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_conversion_group,conversion_group,model_ps_stock_production_conversion,base.group_user,1,1,1,1
+access_stock_conversion_line_group,conversion_line_group,model_ps_stock_production_conversion_line,base.group_user,1,1,1,1

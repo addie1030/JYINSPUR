@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="ps_stock_conversion_tree" model="ir.ui.view">
+            <field name="name">ps.stock.conversion.tree</field>
+            <field name="model">ps.stock.production.conversion</field>
+            <field name="arch" type="xml">
+                <tree string="Production Conversion">
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="qty"/>
+                    <field name="uom_id"/>
+                    <field name="warehouse_id"/>
+                    <field name="location_id"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="ps_stock_conversion_form" model="ir.ui.view">
+            <field name="name">ps.stock.conversion.form</field>
+            <field name="model">ps.stock.production.conversion</field>
+            <field name="arch" type="xml">
+                <form string="Production Conversion">
+                    <header modifiers="{}">
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="confirmed,cancelled,draft,converted"/>
+                        <button name="action_confirm"
+                                attrs="{'invisible': [('state','!=','draft')]}"
+                                class="oe_highlight"
+                                type="object" string="Confirm"/>
+                        <button name="action_cancel"
+                                attrs="{'invisible': [('state','!=','confirmed')]}"
+                                type="object" string="Cancel"/>
+                        <button name="action_set_draft"
+                                attrs="{'invisible': [('state','!=','cancelled')]}"
+                                type="object" string="Set Draft"/>
+                        <button name="action_convert"
+                                attrs="{'invisible': [('state','!=','confirmed')]}"
+                                class="oe_highlight"
+                                type="object" string="Convert"/>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_move" type="object"
+                                    class="oe_stat_button" icon="fa-pencil-square-o"
+                                    attrs="{'invisible': [('state', '!=', 'converted')]}">
+                                <field name="converted_count" widget="statinfo" string="Stock Move"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="product_id" attrs="{'readonly': [('state','not in',('draft'))]}"
+                                       options="{'no_create_edit': True, 'no_create':True}"/>
+                                <field name="category_id" invisible="True"/>
+                                <field name="uom_id" attrs="{'readonly': [('state','not in',('draft'))]}"
+                                       domain="[('category_id', '=',category_id)]"
+                                       options="{'no_create_edit': True, 'no_create':True}"/>
+                                <field name="qty" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                            </group>
+                            <group>
+                                <field name="warehouse_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                                <field name="lot_stock_id" attrs="{'readonly': [('state','not in',('draft'))]}"
+                                       invisible="True"/>
+                                <field name="location_id" attrs="{'readonly': [('state','not in',('draft'))]}"
+                                       domain="['|', ('id', '=', lot_stock_id), ('location_id', '=', lot_stock_id)]"
+                                       required="1"
+                                       options="{'no_create_edit': True, 'no_create':True}"/>
+                                <field name="date" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                                <field name="lot_name" attrs="{'readonly': [('state','not in',('draft'))]}"
+                                       groups="stock.group_production_lot"/>
+                                <field name="package_id" groups="stock.group_tracking_lot"/>
+                                <field name="company_id" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Raw production">
+                                <field name="raw_product_ids"
+                                       context="{'type':'raw_product','lot_stock_id':lot_stock_id}"
+                                       attrs="{'readonly': [('state','not in',('draft'))]}">
+                                    <tree editable="bottom">
+                                        <field name="product_id" options="{'no_create_edit': True, 'no_create':True}"
+                                               required="1"/>
+                                        <field name="location_id"
+                                               domain="['|', ('id', '=', context.get('lot_stock_id',None)), ('location_id', '=', context.get('lot_stock_id',None))]"
+                                               required="1"
+                                               options="{'no_create_edit': True, 'no_create':True}"/>
+                                        <field name="lot_id"
+                                               domain="[('product_id', '=', product_id)]"
+                                               groups="stock.group_production_lot"
+                                               options="{'no_create_edit': True, 'no_create':True}"/>
+                                        <field name="category_id" invisible="True"/>
+                                        <field name="package_ids" invisible="True"/>
+                                        <field name="package_id" domain="[('id','in',package_ids)]"
+                                               groups="stock.group_tracking_lot"
+                                               options="{'no_create_edit': True, 'no_create':True}"/>
+                                        <field name="uom_id"
+                                               domain="[('category_id', '=',category_id)]"
+                                               options="{'no_create_edit': True, 'no_create':True}"/>
+                                        <field name="qty"/>
+                                        <field name="type" invisible="True"/>
+                                    </tree>
+                                </field>
+
+                            </page>
+                            <page string="By Production">
+                                <field name="by_product_ids" options="{'no_create_edit': True, 'no_create':True}"
+                                       context="{'type':'by_product','lot_stock_id':lot_stock_id}"
+                                       attrs="{'readonly': [('state','not in',('draft'))]}">
+                                    <tree editable="bottom">
+                                        <field name="product_id" required="1"
+                                               options="{'no_create_edit': True, 'no_create':True}"/>
+                                        <field name="location_id"
+                                               domain="['|', ('id', '=', context.get('lot_stock_id',None)), ('location_id', '=', context.get('lot_stock_id',None))]"
+                                               required="1"
+                                               options="{'no_create_edit': True, 'no_create':True}"/>
+                                        <field name="lot_id" invisible="True"/>
+                                        <field name="lot_name" groups="stock.group_production_lot"/>
+                                        <field name="category_id" invisible="True"/>
+                                        <field name="package_id"
+                                               groups="stock.group_tracking_lot"
+                                               options="{'no_create_edit': True, 'no_create':True}"/>
+                                        <field name="uom_id"
+                                               domain="[('category_id', '=',category_id)]"
+                                               options="{'no_create_edit': True, 'no_create':True}"/>
+                                        <field name="qty"/>
+                                        <field name="type" invisible="True"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="ps_stock_conversion_search" model="ir.ui.view">
+            <field name="name">ps.stock.conversion.search</field>
+            <field name="model">ps.stock.production.conversion</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="product_id"/>
+                    <field name="raw_product_ids"/>
+                    <field name="by_product_ids"/>
+                    <filter name="raw_product_ids" string="Raw Production"/>
+                    <filter name="raw_product_ids" string="By Production"/>
+                    <filter name="product_id" string="Main Production"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_ps_stock_conversion" model="ir.actions.act_window">
+            <field name="name">Production Conversion</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ps.stock.production.conversion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="ps_stock_conversion_search"/>
+        </record>
+
+        <menuitem id="menu_ps_stock_conversion"
+                  name="Production Conversion"
+                  parent="stock.menu_stock_warehouse_mgmt"
+                  action="action_ps_stock_conversion"
+                  sequence="201"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,492 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ps_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 06:20+0000\n"
+"PO-Revision-Date: 2019-01-22 06:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__product_id
+msgid " Main Product"
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:80
+#, python-format
+msgid "%s Insufficient stock"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__by_product_ids
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_search
+#: selection:ps.stock.production.conversion.line,type:0
+msgid "By Production"
+msgstr ""
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Cancel"
+msgstr ""
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__category_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__category_id
+msgid "Category"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__company_id
+msgid "Company"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_stock_move__ps_order_amount
+msgid "Complete Order Amount"
+msgstr ""
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Confirm"
+msgstr ""
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,state:0
+msgid "Confirmed"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__conversion_id
+msgid "Conversion"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__category_id
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion_line__category_id
+msgid "Conversion between Units of Measure can only occur if they belong to the same category. The conversion will be made based on the ratios."
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:234
+#, python-format
+msgid "Conversion from Product UoM %s to Default UoM %s is not possible as they both belong to different Category!."
+msgstr ""
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Convert"
+msgstr ""
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,state:0
+msgid "Converted"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__converted_count
+msgid "Converted Count"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__create_uid
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__create_date
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__date
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__date
+msgid "Date"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__display_name
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__id
+msgid "ID"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion____last_update
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__write_uid
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__write_date
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__location_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__location_id
+msgid "Location"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__lot_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__lot_id
+msgid "Lot"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__lot_name
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__lot_name
+msgid "Lot Name"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__lot_stock_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__lot_stock_id
+msgid "Lot Stock Id"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_search
+msgid "Main Production"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:86
+#: code:addons/ps_stock/models/ps_stock_conversion.py:89
+#, python-format
+msgid "Must add some raw-production!"
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:22
+#: code:addons/ps_stock/models/ps_stock_conversion.py:98
+#: code:addons/ps_stock/models/ps_stock_conversion.py:101
+#: code:addons/ps_stock/models/ps_stock_conversion.py:103
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__name
+msgid "Number"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_has_error_counter
+msgid "Number of error"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_stock_move__ps_order_price
+msgid "Order Price"
+msgstr ""
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__package_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__package_id
+msgid "Package"
+msgstr ""
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__product_id
+msgid "Product"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.actions.act_window,name:ps_stock.action_ps_stock_conversion
+#: model:ir.ui.menu,name:ps_stock.menu_ps_stock_conversion
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_tree
+msgid "Production Conversion"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__qty
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__qty
+msgid "Quantity"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__raw_product_ids
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_search
+#: selection:ps.stock.production.conversion.line,type:0
+msgid "Raw Production"
+msgstr ""
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Raw production"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model,name:ps_stock.model_stock_return_picking
+msgid "Return Picking"
+msgstr ""
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_search
+msgid "Search"
+msgstr ""
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Set Draft"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__state
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__state
+msgid "State"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:220
+#: model:ir.model,name:ps_stock.model_stock_move
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+#, python-format
+msgid "Stock Move"
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:75
+#, python-format
+msgid "The number of by production (%s) cannot be less than or equal to zero."
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:71
+#, python-format
+msgid "The number of main production (%s) cannot be less than or equal to zero."
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:78
+#, python-format
+msgid "The number of raw production (%s) cannot be less than or equal to zero."
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_move.py:73
+#, python-format
+msgid "The quantity of returns cannot be more than that in source document."
+msgstr ""
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__type
+msgid "Type"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__uom_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__uom_id
+msgid "Uom"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:65
+#, python-format
+msgid "You can't delete no-draft's Order!"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model,name:ps_stock.model_ps_stock_production_conversion
+msgid "ps.stock.production.conversion"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model,name:ps_stock.model_ps_stock_production_conversion_line
+msgid "ps.stock.production.conversion.line"
+msgstr ""
+

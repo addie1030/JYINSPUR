@@ -1,0 +1,503 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ps_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-22 06:20+0000\n"
+"PO-Revision-Date: 2019-01-22 14:22+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2.1\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__product_id
+msgid " Main Product"
+msgstr "主产品"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:80
+#, python-format
+msgid "%s Insufficient stock"
+msgstr "%s 库存数量不足！"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_needaction
+msgid "Action Needed"
+msgstr "前置操作"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数量"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__by_product_ids
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_search
+#: selection:ps.stock.production.conversion.line,type:0
+msgid "By Production"
+msgstr "副产品"
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,state:0
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__category_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__category_id
+msgid "Category"
+msgstr "类别"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_stock_move__ps_order_amount
+msgid "Complete Order Amount"
+msgstr "完成订单金额"
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Confirm"
+msgstr "确认"
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,state:0
+msgid "Confirmed"
+msgstr "已确认"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__conversion_id
+msgid "Conversion"
+msgstr "转换"
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__category_id
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion_line__category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr "计量单位转换只能基于转换比例对同一个类型进行转换。"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:234
+#, python-format
+msgid ""
+"Conversion from Product UoM %s to Default UoM %s is not possible as they "
+"both belong to different Category!."
+msgstr " 产品单位 %s 与 默认单位 %s 不为同一种类，不可以进行转换！"
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Convert"
+msgstr "转换"
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,state:0
+msgid "Converted"
+msgstr "已转换"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__converted_count
+msgid "Converted Count"
+msgstr "转换数量"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__create_uid
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__create_date
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__date
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__date
+msgid "Date"
+msgstr "日期"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__display_name
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "关注者(渠道)"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者(业务伙伴)"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_unread
+msgid "If checked new messages require your attention."
+msgstr "查看是否有需要留意的新消息。"
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "确认后, 出现提示消息."
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾选此项， 某些消息将会产生传递错误。"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_is_follower
+msgid "Is Follower"
+msgstr "关注者"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion____last_update
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line____last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__write_uid
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__write_date
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__location_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__location_id
+msgid "Location"
+msgstr "位置"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__lot_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__lot_id
+msgid "Lot"
+msgstr "批次"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__lot_name
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__lot_name
+msgid "Lot Name"
+msgstr "批次名称"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__lot_stock_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__lot_stock_id
+msgid "Lot Stock Id"
+msgstr "批次id"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "附件"
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_search
+msgid "Main Production"
+msgstr "主产品"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_has_error
+msgid "Message Delivery error"
+msgstr "消息递送错误"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:86
+#: code:addons/ps_stock/models/ps_stock_conversion.py:89
+#, python-format
+msgid "Must add some raw-production!"
+msgstr "必须添加源产品！"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:22
+#: code:addons/ps_stock/models/ps_stock_conversion.py:98
+#: code:addons/ps_stock/models/ps_stock_conversion.py:101
+#: code:addons/ps_stock/models/ps_stock_conversion.py:103
+#, python-format
+msgid "New"
+msgstr "新建"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活动截止日期"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活动摘要"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活动类型"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__name
+msgid "Number"
+msgstr "号码"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作次数"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_has_error_counter
+msgid "Number of error"
+msgstr "错误个数"
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要操作消息数量"
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "递送错误消息数量"
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读消息数量"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_stock_move__ps_order_price
+msgid "Order Price"
+msgstr "订单价格"
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,activity_state:0
+msgid "Overdue"
+msgstr "逾期"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__package_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__package_id
+msgid "Package"
+msgstr "包裹"
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,activity_state:0
+msgid "Planned"
+msgstr "已计划"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__product_id
+msgid "Product"
+msgstr "产品"
+
+#. module: ps_stock
+#: model:ir.actions.act_window,name:ps_stock.action_ps_stock_conversion
+#: model:ir.ui.menu,name:ps_stock.menu_ps_stock_conversion
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_tree
+msgid "Production Conversion"
+msgstr "产品转换"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__qty
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__qty
+msgid "Quantity"
+msgstr "数量"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__raw_product_ids
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_search
+#: selection:ps.stock.production.conversion.line,type:0
+msgid "Raw Production"
+msgstr "源产品"
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Raw production"
+msgstr "源产品"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__activity_user_id
+msgid "Responsible User"
+msgstr "责任用户"
+
+#. module: ps_stock
+#: model:ir.model,name:ps_stock.model_stock_return_picking
+msgid "Return Picking"
+msgstr "退回拣货"
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_search
+msgid "Search"
+msgstr "搜索"
+
+#. module: ps_stock
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+msgid "Set Draft"
+msgstr "设置草稿"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__state
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__state
+msgid "State"
+msgstr "状态"
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态 \n"
+" 逾期：已经超过截止日期 \n"
+" 现今：活动日期是当天 \n"
+" 计划：未来活动。"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:220
+#: model:ir.model,name:ps_stock.model_stock_move
+#: model_terms:ir.ui.view,arch_db:ps_stock.ps_stock_conversion_form
+#, python-format
+msgid "Stock Move"
+msgstr "调拨"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:75
+#, python-format
+msgid "The number of by production (%s) cannot be less than or equal to zero."
+msgstr "副产品(%s)数量不能少于零个！"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:71
+#, python-format
+msgid ""
+"The number of main production (%s) cannot be less than or equal to zero."
+msgstr "主产品(%s)数量不能少于零个！"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:78
+#, python-format
+msgid "The number of raw production (%s) cannot be less than or equal to zero."
+msgstr "源产品(%s)数量不能少于零个！"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_move.py:73
+#, python-format
+msgid "The quantity of returns cannot be more than that in source document."
+msgstr "退回数量不能超过源单据上的数量。"
+
+#. module: ps_stock
+#: selection:ps.stock.production.conversion,activity_state:0
+msgid "Today"
+msgstr ""
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__type
+msgid "Type"
+msgstr "类型"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_unread
+msgid "Unread Messages"
+msgstr "未读消息"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读消息计数器"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__uom_id
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion_line__uom_id
+msgid "Uom"
+msgstr "单位"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__warehouse_id
+msgid "Warehouse"
+msgstr "仓库"
+
+#. module: ps_stock
+#: model:ir.model.fields,field_description:ps_stock.field_ps_stock_production_conversion__website_message_ids
+msgid "Website Messages"
+msgstr "网站信息"
+
+#. module: ps_stock
+#: model:ir.model.fields,help:ps_stock.field_ps_stock_production_conversion__website_message_ids
+msgid "Website communication history"
+msgstr "网站沟通记录"
+
+#. module: ps_stock
+#: code:addons/ps_stock/models/ps_stock_conversion.py:65
+#, python-format
+msgid "You can't delete no-draft's Order!"
+msgstr "不允许删除非草稿转换的单据！"
+
+#. module: ps_stock
+#: model:ir.model,name:ps_stock.model_ps_stock_production_conversion
+msgid "ps.stock.production.conversion"
+msgstr "ps.stock.production.conversion"
+
+#. module: ps_stock
+#: model:ir.model,name:ps_stock.model_ps_stock_production_conversion_line
+msgid "ps.stock.production.conversion.line"
+msgstr "ps.stock.production.conversion.line"
