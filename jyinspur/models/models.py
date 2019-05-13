@@ -34,7 +34,8 @@ class soft(models.Model):
     @api.multi
     def button_confirm(self):
         self.write({'state': 'processing'})、
-        
+    
+    #取消审批方法
     @api.multi
     def button_cancel(self):
         self.write({'state': 'draft'})
