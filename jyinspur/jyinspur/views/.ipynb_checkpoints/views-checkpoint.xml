@@ -3,7 +3,7 @@
     <!-- explicit list view definition -->
     
     <record model="ir.ui.view" id="soft_list">
-      <field name="name">jyinspur list</field>
+      <field name="name">产品新增</field>
       <field name="model">jyinspur.soft</field>
       <field name="arch" type="xml">
           <form string='cp_add'>
@@ -31,6 +31,22 @@
         </form>
       </field>
     </record>
+      
+      <record id="cp_tree" model="ir.ui.view">
+            <field name="name">产品List</field>
+            <field name="model">jyinspur.soft</field>
+            <field name="arch" type="xml">
+                <tree string="产品List">
+                  <field name="name"/>
+          <field name="ggxh"/>
+          <field name="soft_type"/>
+                    <field name="price"/>
+          <field name="jldw"/>  
+          <field name="description"/>
+          <field name="qm"/>
+                </tree>
+            </field>
+        </record>
     
 
     <!-- actions opening views on models -->
