@@ -8,7 +8,7 @@
       <field name="arch" type="xml">
          <form string='cp_add'>
             <header>
-                <button name="confirm" string="提交">
+                <button name="confirm" string="提交"/>
                 <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
             </header>
           <sheet>
