@@ -11,6 +11,7 @@
                     <button name="button_draft" states="processing" string="取消提交" type="object" />
                     <button name="button_processing" states="draft" string="提交" type="object" />
                     <button name="button_done" type="object" string="审批通过" states="processing"/>
+                    <button name="button_cancledone" type="object" string="取消审批" states="done"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
                 </header>
                 <sheet>

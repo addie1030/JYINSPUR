@@ -38,3 +38,9 @@ class soft(models.Model):
     def button_processing(self):
         self.write({'state': 'processing'})
         return {}
+    
+    
+    @api.multi
+    def button_cancledone(self):
+        self.write({'state': 'processing'})
+        return {}
