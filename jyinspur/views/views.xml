@@ -8,6 +8,7 @@
       <field name="arch" type="xml">
          <form string='cp_add'>
             <header>
+                <button name="confirm" string="提交">
                 <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
             </header>
           <sheet>
@@ -24,6 +25,23 @@
         </form>         
       </field>
     </record>
+      
+      <record id="soft_tree" model="ir.ui.view">
+            <field name="name">软件产品LIST</field>
+            <field name="model">jyinspur.soft</field>
+            <field name="arch" type="xml">
+                <tree string="softOrder">
+                  <field name="name"/>
+                  <field name="ggxh"/>
+                  <field name="soft_type"/>  
+                  <field name="price"/>
+                  <field name="jldw"/>  
+                  <field name="description"/>
+                  <field name="qm"/>
+                  <field name="state"/>
+                </tree>
+            </field>
+        </record>
     
 
     <!-- actions opening views on models -->
@@ -53,7 +71,7 @@
 
     <!-- Top menu item -->
     
-    <menuitem name="jyinspur" id="jyinspur_menu_root"/>
+    <menuitem name="产品" id="jyinspur_menu_root"/>
     
     <!-- menu categories -->
     
