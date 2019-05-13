@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ps_product_template_version,ps_production_data_mrp_plm.ps_product_template_version,ps_production_data_mrp_plm.model_ps_product_template_version,base.group_user,1,1,1,1

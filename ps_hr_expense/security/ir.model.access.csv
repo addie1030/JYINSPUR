@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ps_hr_expense,ps_hr_expense.ps_hr_expense_request,ps_hr_expense.model_ps_hr_expense_request,hr_expense.group_hr_expense_user,1,1,1,1
-access_ps_hr_expense_request,ps.hr.expense.request,model_ps_hr_expense_request,base.group_user,1,1,1,1
-access_ps_hr_expense_request_line,ps.hr.expense.request.line,model_ps_hr_expense_request_line,base.group_user,1,1,1,1

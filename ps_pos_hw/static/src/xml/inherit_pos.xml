@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<templates id="template" inherit_id="point_of_sale.template">
-    <!--客户信息添加会员卡管理-->
-    <t t-extend="ClientDetails">
-        <t t-jquery=".client-name" t-operation="after">
-            <button id="rfid_card_manage" style="position: absolute; top: 14px; right: 60px; line-height: 24px;">Membership card management</button>
-        </t>
-    </t>
-</templates>

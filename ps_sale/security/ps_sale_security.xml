@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <data noupdate="0">
-        <record model="res.groups" id="group_price_change_user">
-            <field name="name">Enable Price Change Order</field>
-            <field name="category_id" ref="base.module_category_hidden"/>
-        </record>
-    </data>
-</odoo>

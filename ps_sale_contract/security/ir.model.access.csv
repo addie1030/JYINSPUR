@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ps_sale_contract,ps.sale.contract,model_ps_sale_contract,sales_team.group_sale_salesman,1,1,1,1
-access_ps_sale_order_contract_line,ps.sale.contract.line,model_ps_sale_contract_line,sales_team.group_sale_salesman,1,1,1,1
-access_ps_sale_order_contract_term,ps.sale.contract.term,model_ps_sale_contract_term,sales_team.group_sale_salesman,1,1,1,1

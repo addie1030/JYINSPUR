@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_purchase_order_change_user,ps.purchase.order.change,model_ps_purchase_order_change,purchase.group_purchase_user,1,1,1,1
-access_purchase_order_change_manager,ps.purchase.order.change,model_ps_purchase_order_change,purchase.group_purchase_manager,1,1,1,1
-access_purchase_order_change_line_user,ps.purchase.order.change.line,model_ps_purchase_order_change_line,purchase.group_purchase_user,1,1,1,1
-access_purchase_order_change_line_manager,ps.purchase.order.change.line,model_ps_purchase_order_change_line,purchase.group_purchase_manager,1,1,1,1

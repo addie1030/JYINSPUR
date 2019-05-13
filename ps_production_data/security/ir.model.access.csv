@@ -1,9 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ps_bom_tree_user,ps.bom.tree.user,model_ps_bom_tree,ps_production_data.group_production_data_user,1,0,0,0
-access_ps_bom_tree_manager,ps.bom.tree.manager,model_ps_bom_tree,ps_production_data.group_production_data_manager,1,1,1,1
-access_production_calendar_resource_line_user,ps.resource.calendar.line.user,model_ps_resource_calendar_line,ps_production_data.group_production_data_user,1,1,1,1
-access_production_calendar_resource_line_manager,ps.resource.calendar.line.manager,model_ps_resource_calendar_line,ps_production_data.group_production_data_manager,1,1,1,1
-access_query_routing_line_user,ps.query.routing.line.user,model_ps_mrp_routing_query,ps_production_data.group_production_data_user,1,1,1,1
-access_query_routing_line_manager,ps.query.routing.line.manager,model_ps_mrp_routing_query,ps_production_data.group_production_data_manager,1,1,1,1
-access_return_query_routing_line_user,ps.mrp.query.return.user,model_ps_mrp_query_return,ps_production_data.group_production_data_user,1,1,1,1
-access_return_query_routing_line_manager,ps.mrp.query.return.manager,model_ps_mrp_query_return,ps_production_data.group_production_data_manager,1,1,1,1

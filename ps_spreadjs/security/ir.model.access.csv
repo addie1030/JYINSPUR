@@ -1,6 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ps_statement_month_end,access_ps_statement_month_end,model_ps_statement_month_end,base.group_user,1,0,0,0 
-access_ps_statement_base,access_ps_statement_base,model_ps_statement_base,base.group_user,1,0,0,0 
-access_ps_statement_sheet_rows,access_ps_statement_sheet_rows,model_ps_statement_sheet_rows,base.group_user,1,0,0,0 
-access_ps_statement_functions,access_ps_statement_functions,model_ps_statement_functions,base.group_user,1,0,0,0 
-access_ps_statement_system_variables,access_ps_statement_system_variables,model_ps_statement_system_variables,base.group_user,1,0,0,0 

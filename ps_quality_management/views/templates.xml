@@ -1,8 +1,0 @@
-<data>
-    <template id="assets_backend" name="quality management assets" inherit_id="web.assets_backend">
-        <xpath expr="." position="inside">
-            <script type="text/javascript" src="/ps_quality_management/static/src/js/ps_sampling_code.js"></script>
-        </xpath>
-    </template>
-</data>
-

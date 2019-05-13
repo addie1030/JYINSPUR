@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ps_sale_invoice_analysis,ps.sale.invoice.analysis,model_ps_sale_invoice_analysis,base.group_user,1,1,1,1
-access_ps_sale_order_analysis,ps.sale.order.analysis,model_ps_sale_order_analysis,base.group_user,1,1,1,1
-
