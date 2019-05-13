@@ -8,12 +8,12 @@
       <field name="arch" type="xml">
           <form string='cp_add'>
               <header>
-                  <button name="button_draft" states="cancel" string="取消提交" type="object" />
-                    <button name="button_processing" states="draft,to approve,sent,purchase" string="提交" type="object" />
-                    <button name="button_done" type="object" string="审批通过" states="purchase"/>
+                  <button name="button_draft" states="draft" string="取消提交" type="object" />
+                    <button name="button_processing" states="processing" string="提交" type="object" />
+                    <button name="button_done" type="object" string="审批通过" states="done"/>
                   <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
               </header>
-        <sheet>
+             <sheet>
             <group>
                 <group>
           <field name="name"/>
@@ -27,7 +27,7 @@
           <field name="qm"/>
                     </group>
                 </group>
-        </sheet>
+             </sheet>
         </form>
       </field>
     </record>
