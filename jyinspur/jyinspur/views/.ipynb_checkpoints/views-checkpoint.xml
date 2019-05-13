@@ -2,35 +2,38 @@
   <data>
     <!-- explicit list view definition -->
     
-    <record model="ir.ui.view" id="soft_list">
-      <field name="name">产品新增</field>
-      <field name="model">jyinspur.soft</field>
-      <field name="arch" type="xml">
-          <form string='cp_add'>
-              <header>
-                  <button name="button_draft" states="draft" string="取消提交" type="object" />
-                    <button name="button_processing" states="processing" string="提交" type="object" />
-                    <button name="button_done" type="object" string="审批通过" states="done"/>
-                  <field name="state" widget="statusbar"  readonly="1"/>
-              </header>
-             <sheet>
-            <group>
-                <group>
-          <field name="name"/>
-          <field name="ggxh"/>
-          <field name="soft_type"/> 
+     <record id="cp_form" model="ir.ui.view">
+            <field name="name">cp_form</field>
+            <field name="model">jyinspur.soft</field>
+            <field name="arch" type="xml">
+                <form string="cp_form">
+                <header>
+                    <button name="button_draft" states="draft" string="Set to Draft" type="object" />
+                    <button name="button_processing" states="draft,processing,done" string="Cancel" type="object" />
+                    <button name="button_done" type="object" string="Lock" states="done"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
+                </header>
+                <sheet>
+                    
+                    
+                    <group>
+                        <field name="name"/>
+                        <field name="ggxh"/>
+                        <field name="soft_type"/>
+                        <field name="price"/>
+                        <field name="jldw"/>  
+                        <field name="description"/>
+                        <field name="qm"/>
+                            
                     </group>
-                <group>
-          <field name="price"/>
-          <field name="jldw"/>  
-          <field name="description"/>
-          <field name="qm"/>
-                    </group>
-                </group>
-             </sheet>
-        </form>
-      </field>
-    </record>
+                    
+                </sheet>
+                
+                </form>
+            </field>
+        </record>
+
+       
       
       <record id="cp_tree" model="ir.ui.view">
             <field name="name">产品List</field>
