@@ -6,15 +6,22 @@
       <field name="name">软件产品</field>
       <field name="model">jyinspur.soft</field>
       <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="ggxh"/>
-          <field name="soft_type"/>  
-          <field name="price"/>
-          <field name="jldw"/>  
-          <field name="description"/>
-          <field name="qm"/>
-        </tree>
+         <form string='cp_add'>
+            <header>
+                <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
+            </header>
+          <sheet>
+              <group>
+                  <field name="name"/>
+                  <field name="ggxh"/>
+                  <field name="soft_type"/>  
+                  <field name="price"/>
+                  <field name="jldw"/>  
+                  <field name="description"/>
+                  <field name="qm"/>
+              </group>
+          </sheet>
+        </form>         
       </field>
     </record>
     
