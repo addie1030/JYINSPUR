@@ -10,6 +10,7 @@
             <header>
                 <button name="button_confirm" string="提交" type="object"/>
                 <button name="button_done" string="通过" type="object"/>
+                <button name="button_cancel" string="取消提交" type="object"/>
                 <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
             </header>
           <sheet>
