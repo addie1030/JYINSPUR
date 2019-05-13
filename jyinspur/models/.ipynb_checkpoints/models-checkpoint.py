@@ -22,3 +22,11 @@ class soft(models.Model):
     #@api.depends('value')
     #def _value_pc(self):
         #self.value2 = float(self.value) / 100
+        
+    @api.multi
+    def button_done(self):
+        self.write({'state': 'done'})
+        
+    @api.multi
+    def button_confirm(self):
+        self.write({'state': 'processing'})
