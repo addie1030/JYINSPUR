@@ -23,7 +23,7 @@
                         <field name="price"/>
                         <field name="jldw"/>  
                         <field name="description"/>
-                        <field name="qm"/>
+                        
                             
                     </group>
                     
@@ -46,7 +46,7 @@
                     <field name="price"/>
           <field name="jldw"/>  
           <field name="description"/>
-          <field name="qm"/>
+        
                 </tree>
             </field>
         </record>
