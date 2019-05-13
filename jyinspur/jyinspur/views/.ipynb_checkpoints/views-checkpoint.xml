@@ -10,7 +10,7 @@
                 <header>
                     <button name="button_draft" states="draft" string="取消提交" type="object" />
                     <button name="button_processing" states="draft,processing,done" string="提交" type="object" />
-                    <button name="button_done" type="object" string="审批通过" states="processing,done"/>
+                    <button name="button_done" type="object" string="审批通过" states="draft,processing,done"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,processing,done" readonly="1"/>
                 </header>
                 <sheet>
